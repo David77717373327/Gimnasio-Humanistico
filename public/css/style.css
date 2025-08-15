@@ -1,0 +1,357 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+    color: #1f2a44;
+}
+
+body.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.dark-mode body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #004d00;
+    font-weight: 600;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+    color: #ffd700;
+}
+
+/* HEADER MEJORADO */
+.main-header {
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    min-height: 80px; /* Aumentado para acomodar logo más grande */
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode .main-header {
+    background-color: #2c2c2c;
+}
+
+/* Contenedor principal del header */
+.main-header .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px; /* Aumentado para mejor distribución */
+}
+
+/* Sección izquierda - Logo y menú hamburguesa */
+.main-header .flex.items-center.space-x-8 {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Espacio más profesional entre logo y menú */
+    flex-shrink: 0; /* Evita que se comprima */
+}
+
+.AcomodarLasNavegaciones {
+    margin-left: 630px;
+}
+
+/* LOGO MEJORADO */
+.main-header img[alt*="Logo"] {
+    height: 70px; /* Logo más grande */
+    width: 140px; /* Mantiene proporciones */
+    max-width: 300px; /* Límite máximo de ancho */
+    padding-left: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect en el logo */
+.main-header img[alt*="Logo"]:hover {
+    transform: scale(1.05);
+}
+
+/* Botón hamburguesa mejorado */
+.main-header button[data-widget="pushmenu"] {
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.main-header button[data-widget="pushmenu"]:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+    transform: translateY(-1px);
+}
+
+.dark-mode .main-header button[data-widget="pushmenu"]:hover {
+    background-color: #374151;
+    border-color: #4b5563;
+}
+
+/* SECCIÓN DERECHA - Barra de búsqueda y controles */
+.main-header .flex.items-center.space-x-4 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+/* Barra de búsqueda mejorada */
+.main-header .input-group {
+    flex-grow: 0; /* No crece automáticamente */
+    width: 280px; /* Ancho fijo para consistencia */
+    max-width: 300px;
+    min-width: 200px; /* Ancho mínimo */
+}
+
+.main-header .form-control-navbar {
+    height: 38px; /* Altura consistente */
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease;
+}
+
+.main-header .form-control-navbar:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.main-header .btn-outline-secondary {
+    height: 38px; /* Misma altura que el input */
+    border-color: #d1d5db;
+    transition: all 0.3s ease;
+}
+
+/* Iconos de notificaciones y usuario mejorados */
+.main-header .nav-item {
+    position: relative;
+}
+
+.main-header .nav-link {
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.main-header .nav-link:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-1px);
+}
+
+.dark-mode .main-header .nav-link:hover {
+    background-color: #374151;
+}
+
+/* Imagen de usuario mejorada */
+.main-header .nav-link img {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.main-header .nav-link img:hover {
+    border-color: #10b981;
+    transform: scale(1.1);
+}
+
+/* Badge de notificaciones mejorado */
+.main-header .badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive para el header */
+@media (max-width: 768px) {
+    .main-header {
+        min-height: 60px;
+        padding: 0 1rem;
+    }
+    
+    .main-header img[alt*="Logo"] {
+        height: 50px; /* Reducido para pantallas medianas */
+        width: 100px;
+        max-width: 120px;
+    }
+    
+    .main-header .input-group {
+        width: 200px;
+        min-width: 150px;
+    }
+    
+    .main-header .flex.items-center.space-x-8 {
+        gap: 1rem;
+    }
+    
+    .main-header .flex.items-center.space-x-4 {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header .input-group {
+        display: none; /* Oculta la búsqueda en móviles muy pequeños */
+    }
+    
+    .main-header img[alt*="Logo"] {
+        height: 40px; /* Más pequeño para móviles */
+        width: 80px;
+        max-width: 100px;
+    }
+}
+
+/* RESTO DE LOS ESTILOS ORIGINALES */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    z-index: 1030;
+    overflow-y: auto;
+    background: linear-gradient(180deg, #006400, #004d00);
+    color: #ffffff;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+}
+
+.sidebar-collapse .sidebar {
+    width: 80px;
+    overflow-x: hidden;
+}
+
+.sidebar-collapse .sidebar .user-panel .info,
+.sidebar-collapse .sidebar .nav-link span {
+    opacity: 0;
+}
+
+.sidebar .nav-link {
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #ffd700;
+    color: #004d00;
+}
+
+.sidebar .nav-icon {
+    margin-right: 0.75rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sidebar .right {
+    display: none;
+}
+
+.sidebar-collapse .nav-link .right {
+    display: none;
+}
+
+.group:hover .right {
+    display: none;
+}
+
+.menu-item:hover .nav-link span {
+    display: block;
+}
+
+.user-panel {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-panel .image img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode .card {
+    background-color: #2c2c2c;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.main-content {
+    min-height: calc(100vh - 80px); /* Ajustado para el nuevo header */
+    background-color: #f8fafc;
+    padding: 2rem;
+    margin-left: 230px;
+    margin-top: 80px; /* Espacio para el header más grande */
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar-collapse .main-content {
+    margin-left: 80px;
+}
+
+.dark-mode .main-content {
+    background-color: #121212;
+}
+
+.submenu {
+    display: none;
+}
+
+.submenu.block {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-260px);
+    }
+    .sidebar-collapse .sidebar {
+        transform: translateX(0);
+        width: 260px;
+    }
+    .main-content {
+        margin-left: 0;
+        margin-top: 60px;
+    }
+    .sidebar-collapse .main-content {
+        margin-left: 260px;
+    }
+}
