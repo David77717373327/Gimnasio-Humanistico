@@ -15,4 +15,8 @@ class RutasController extends Controller
     {
         return view('admin.index');
     }
+    public function mostrarContenidoEstudiante()
+    {
+        return view('student.index');
+    }
 }

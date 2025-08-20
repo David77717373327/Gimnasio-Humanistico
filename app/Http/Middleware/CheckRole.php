@@ -8,13 +8,17 @@ use Illuminate\Support\Facades\Auth;
 
 class CheckRole
 {
-    public function handle(Request $request, Closure $next, $role)
+    public function handle(Request $request, Closure $next, $roles)
     {
         if (! Auth::check()) {
-            return redirect()->route('login'); // o donde quieras
+            return redirect()->route('login'); 
         }
 
-        if (Auth::user()->role !== $role) {
+        // Convertimos la cadena en un array (ej: "admin,student")
+        $roles = explode(',', $roles);
+
+        // Verificamos si el usuario tiene uno de esos roles
+        if (! in_array(Auth::user()->role, $roles)) {
             abort(403, 'No autorizado');
         }
 

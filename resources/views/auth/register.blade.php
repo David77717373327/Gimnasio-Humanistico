@@ -1,60 +1,76 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+@extends('layouts.auth')
 
-        <x-validation-errors class="mb-4" />
+@section('content')
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8">
+            <div class="card d-flex mx-auto my-5">
+                <div class="row">
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+                    {{-- Lado izquierdo: Formulario (sin fondo) --}}
+                    <div class="col-md-7 register-form">
 
-            <div>
-                <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            </div>
+                        {{-- Flecha de regreso
+    <a href="{{ route('login') }}" class="back-arrow">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+    </a> --}}
 
-            <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            </div>
+                        <div class="row mb-5 m-3"> 
+                            <a href="#">
+                                <img src="{{ asset('images/Logo_tipo.png')}}" width="40%" height="auto" alt="SICEFA">
+                            </a> 
+                        </div>
+                        
+                        <h3 class="font-weight-bold mb-3 title">Registrarse</h3>
+                        
+                        <form method="POST" action="{{ route('register') }}">
+                            @csrf
+                            
+                            {{-- Documento --}}
+                             <div class="mb-3">
+                                <label for="document" class="col-form-label">Número de documento</label>
+                                <input id="document" type="text" class="form-control input" name="document" required>
+                            </div> 
 
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
+                            {{-- Email --}}
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">Correo electrónico</label>
+                                <input id="email" type="email" class="form-control input" name="email" required>
+                            </div>
 
-            <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
+                            {{-- Password --}}
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label">Contraseña</label>
+                                <input id="password" type="password" class="form-control input" name="password" required>
+                            </div>
 
-            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                <div class="mt-4">
-                    <x-label for="terms">
-                        <div class="flex items-center">
-                            <x-checkbox name="terms" id="terms" required />
+                            <input type="hidden" name="role" value="student">
+                            
+                            <button type="submit" class="btlogin">Solicitar Usuario</button>
+                        </form>
+                    </div>
 
-                            <div class="ms-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Terms of Service').'</a>',
-                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Privacy Policy').'</a>',
-                                ]) !!}
+                    {{-- Lado derecho: Ilustración con fondo degradado verde claro --}}
+                    <div class="col-md-5 c1 p-5">
+                        <div id="hero" class="bg-transparent h-auto">
+                            <img src="{{ asset('images/Logo_inicio.png') }}" class="img-fluid animated" alt="Registro">
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="w-75 mx-md-5 mx-1 mx-sm-2 mb-5 mt-4 px-sm-5 px-md-2 px-xl-1 px-2">
+                                <h1 class="wlcm">{{ __('Welcome') }}</h1>
+                                <span class="sp1">
+                                    <span style="margin-right: 2px;" class="px-3 "></span>
+                                    <span style="margin-right: 2px;" class="ml-2 px-1 rounded-circle"></span>
+                                    <span class="ml-2 px-1 rounded-circle"></span>
+                                </span>
                             </div>
                         </div>
-                    </x-label>
+                    </div>
                 </div>
-            @endif
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ms-4">
-                    {{ __('Register') }}
-                </x-button>
             </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+        </div>
+    </div>
+</div>
+@endsection

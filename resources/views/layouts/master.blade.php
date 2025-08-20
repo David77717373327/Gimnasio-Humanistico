@@ -20,242 +20,383 @@
 </head>
 
 <body class="min-h-screen flex flex-col bg-gray-100 text-gray-800 font-inter">
-    <!-- Top Navbar -->
-    <header class="main-header bg-white border-b shadow-sm fixed w-full z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center py-2">
-                <!-- Logo a la izquierda -->
-                <div class="flex-shrink-0">
-                    <img src="{{ asset('images/Logo.png') }}" alt="Logo del Colegio" class="logo-colegio">
+    <!-- Header Principal Reorganizado -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Sección Izquierda: Logo -->
+            <div class="header-left">
+                <div class="logo-container">
+                    <img src="{{ asset('images/Logo.png') }}" alt="Logo del Colegio" class="header-logo">
+                    <div class="brand-text">
+                        <h2 class="brand-title">Sistema Escolar</h2>
+                        <span class="brand-subtitle">Gestión Educativa</span>
+                    </div>
                 </div>
+            </div>
 
+            <!-- Sección Central: Navegación Principal -->
+            <nav class="header-navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-users nav-icon"></i>
+                            <span>Estudiantes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                            <span>Profesores</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-book nav-icon"></i>
+                            <span>Materias</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fas fa-cog nav-icon"></i>
+                            <span>Gestión</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu nav-dropdown">
+                            <li><a href="#" class="dropdown-item">
+                                <i class="fas fa-calendar-alt"></i>Horarios
+                            </a></li>
+                            <li><a href="#" class="dropdown-item">
+                                <i class="fas fa-clipboard-list"></i>Calificaciones
+                            </a></li>
+                            <li><a href="#" class="dropdown-item">
+                                <i class="fas fa-tasks"></i>Actividades
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
 
-                <div class="AcomodarLasNavegaciones">
-                    <!-- Espacio flexible para empujar el resto a la derecha -->
-                    <div class="flex-grow"></div>
-                    <!-- Elementos a la derecha: búsqueda, notificaciones, usuario, dark mode -->
-                    <div class="flex items-center space-x-6">
-
-                        <!-- Notifications Dropdown Menu -->
-                        <div class="nav-item dropdown">
-                            <a class="nav-link text-gray-700 hover:text-gray-900" data-bs-toggle="dropdown"
-                                href="#" role="button">
-                                <i class="far fa-bell"></i>
-                                <span class="badge bg-yellow-400 text-white text-xs ml-1">15</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-2">
-                                <h6 class="dropdown-header text-sm font-semibold">15 Notificaciones</h6>
-                                <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item text-sm py-1">
-                                    <i class="fas fa-envelope mr-2"></i> 4 nuevos mensajes
-                                    <span class="float-right text-gray-500 text-xs">3 mins</span>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item dropdown-footer text-sm">Ver todas las
-                                    notificaciones</a>
-                            </div>
-                        </div>
-                        <!-- User Dropdown Menu -->
-                        <div class="nav-item dropdown">
-                            <a class="nav-link text-gray-700 hover:text-gray-900" data-bs-toggle="dropdown"
-                                href="#" role="button">
-                                <img src="{{ asset('images/Usuario.png') }}" class="rounded-full w-8 h-8 object-cover"
-                                    alt="User Image">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-2">
-                                <h6 class="dropdown-header text-sm font-semibold">Perfil de Usuario</h6>
-                                <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item text-sm py-1">
-                                    <i class="fas fa-user mr-2"></i> Perfil
-                                </a>
-                                <a href="#" class="dropdown-item text-sm py-1">
-                                    <i class="fas fa-cog mr-2"></i> Configuraciones
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a href="{{ route('logout') }}"
-                                    class="dropdown-item text-sm py-1 text-red-600 hover:bg-red-100"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <i class="fas fa-sign-out-alt mr-2"></i> Cerrar Sesión
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Dark Mode Toggle -->
-                        <div class="nav-item">
-                            <a class="nav-link text-gray-700 hover:text-gray-900" id="darkModeToggle" href="#"
-                                role="button">
-                                <i class="fas fa-moon"></i>
-                            </a>
-                        </div>
-                        <!-- SEARCH FORM -->
-                        <form class="form-inline">
-                            <div class="input-group input-group-sm">
-                                <input
-                                    class="form-control form-control-navbar border-gray-300 rounded-l focus:ring-2 focus:ring-green-500"
-                                    type="search" placeholder="Buscar" aria-label="Buscar">
-                                <button
-                                    class="btn btn-outline-secondary border-gray-300 rounded-r hover:bg-gray-200 focus:ring-2 focus:ring-green-500"
-                                    type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </form>
-                        <!-- Botón hamburguesa junto al logo -->
-                        <div class="ml-4">
-                            <button class="nav-link text-gray-700 hover:text-gray-900 focus:outline-none"
-                                data-widget="pushmenu">
-                                <i class="fas fa-bars"></i>
+            <!-- Sección Derecha: Controles de Usuario -->
+            <div class="header-right">
+                <!-- Búsqueda Mejorada -->
+                <div class="search-container">
+                    <form class="search-form">
+                        <div class="search-input-group">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="search" class="search-input" placeholder="Buscar..." aria-label="Buscar">
+                            <button type="button" class="search-clear" style="display: none;">
+                                <i class="fas fa-times"></i>
                             </button>
                         </div>
+                    </form>
+                </div>
+
+                <!-- Controles de Usuario -->
+                <div class="user-controls">
+                    <!-- Notificaciones -->
+                    <div class="control-item dropdown">
+                        <button class="control-btn notification-btn" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <div class="dropdown-menu notification-dropdown">
+                            <div class="dropdown-header">
+                                <h6>Notificaciones</h6>
+                                <span class="badge">3 nuevas</span>
+                            </div>
+                            <div class="dropdown-body">
+                                <a href="#" class="notification-item">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <p>Nuevo estudiante registrado</p>
+                                        <span class="notification-time">Hace 5 min</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="notification-item">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-calendar"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <p>Horario actualizado</p>
+                                        <span class="notification-time">Hace 10 min</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="notification-item">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <p>Calificaciones subidas</p>
+                                        <span class="notification-time">Hace 1 hora</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#" class="btn-view-all">Ver todas</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Perfil de Usuario -->
+                    <div class="control-item dropdown">
+                        <button class="control-btn user-btn" data-bs-toggle="dropdown">
+                            <img src="{{ asset('images/Usuario.png') }}" class="user-avatar" alt="Usuario">
+                            <div class="user-info">
+                                <span class="user-name">@auth {{ Auth::user()->name }} @endauth</span>
+                                <span class="user-role">Administrador</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu user-dropdown">
+                            <div class="dropdown-header">
+                                <div class="user-card">
+                                    <img src="{{ asset('images/Usuario.png') }}" class="user-card-avatar" alt="Usuario">
+                                    <div>
+                                        <h6>@auth {{ Auth::user()->name }} @endauth</h6>
+                                        <p>admin@colegio.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-body">
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-user"></i>Mi Perfil
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-cog"></i>Configuración
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-question-circle"></i>Ayuda
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="{{ route('logout') }}" class="dropdown-item logout-item"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-sign-out-alt"></i>Cerrar Sesión
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modo Oscuro -->
+                    <div class="control-item">
+                        <button class="control-btn theme-toggle" id="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+
+                    <!-- Menú Móvil Toggle -->
+                    <div class="control-item mobile-menu-toggle">
+                        <button class="control-btn menu-btn" data-widget="pushmenu">
+                            <i class="fas fa-bars"></i>
+                        </button>
                     </div>
                 </div>
             </div>
+        </div>
     </header>
 
-    <!-- Main Content Area -->
-    <div class="flex flex-1 pt-16"> <!-- Padding-top to account for fixed header -->
-        <!-- Sidebar -->
-        <aside
-            class="sidebar bg-gradient-to-b from-green-800 to-green-900 shadow-lg flex flex-col transition-all duration-300 fixed h-screen z-40">
-            <div class="sidebar-content">
-                <!-- User Panel -->
-                <div class="user-panel mt-3 pb-3 mb-3 flex items-center px-4 border-b border-green-700">
-                    <div class="image">
-                        <img src="{{ asset('images/Usuario.png') }}" class="rounded-full w-10 h-10 object-cover shadow"
-                            alt="User Image">
-                    </div>
-                    <div class="info ml-3">
-                        <a href="#" class="block text-white font-semibold">@auth {{ Auth::user()->name }} @endauth
-                        </a>
-                    </div>
-                </div>
-                <nav class="flex-1 p-4">
-                    <a href="#"
-                        class="menu-item block mb-2 nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-2 transition flex items-center group">
-                        <i class="fa-solid fa-home nav-icon mr-3 text-green-300"></i> Dashboard
-                    </a>
-                    <a href="#"
-                        class="menu-item block mb-2 nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-2 transition flex items-center group">
-                        <i class="fa-solid fa-calendar-days nav-icon mr-3 text-green-300"></i> Horarios
-                    </a>
-                    <a href="#"
-                        class="menu-item block mb-2 nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-2 transition flex items-center group">
-                        <i class="fa-solid fa-tasks nav-icon mr-3 text-green-300"></i> Actividades de Clases
-                    </a>
-                    <a href="#"
-                        class="menu-item block mb-2 nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-2 transition flex items-center group">
-                        <i class="fa-solid fa-chalkboard-teacher nav-icon mr-3 text-green-300"></i> Profesores
-                    </a>
-                    <a href="#"
-                        class="menu-item block mb-2 nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-2 transition flex items-center group">
-                        <i class="fa-solid fa-users nav-icon mr-3 text-green-300"></i> Alumnos
-                    </a>
-                    <a href="#"
-                        class="menu-item block mb-2 nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-2 transition flex items-center group">
-                        <i class="fa-solid fa-clipboard-list nav-icon mr-3 text-green-300"></i> Calificaciones
-                    </a>
-                    <a href="#"
-                        class="menu-item block mb-2 nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-2 transition flex items-center group">
-                        <i class="fa-solid fa-book nav-icon mr-3 text-green-300"></i> Materias
-                    </a>
-                    <a href="#"
-                        class="menu-item submenu-toggle block mb-2 nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-2 transition flex items-center group"
-                        onclick="toggleSubmenu(event, 'configuraciones-submenu')">
-                        <i class="fa-solid fa-cog nav-icon mr-3 text-green-300"></i> Configuraciones
-                        <i class="fa-solid fa-chevron-down arrow ml-auto text-white transition-transform"></i>
-                    </a>
-                    <div class="submenu nav-treeview hidden" id="configuraciones-submenu">
-                        <ul class="submenu-list pl-4">
-                            <li><a href="#"
-                                    class="nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-1 transition flex items-center text-sm"><i
-                                        class="far fa-circle nav-icon mr-2"></i> Gestionar Usuarios</a></li>
-                            <li><a href="#"
-                                    class="nav-link text-white hover:bg-yellow-300 hover:text-green-900 rounded p-1 transition flex items-center text-sm"><i
-                                        class="far fa-circle nav-icon mr-2"></i> Roles y Permisos</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </aside>
-        <!-- Main Content -->
-        <main class="flex-1 main-content ml-[260px] p-8">
-            @yield('content')
-        </main>
+    <!-- Sidebar Mejorado -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+    <div class="sidebar-brand d-flex align-items-center">
+        <!-- Icono en vez de imagen -->
+        <i class="fa-solid fa-gear fa-2x text-success me-2"></i>
+
+        <div class="sidebar-brand-text">
+            <h5>Panel Admin</h5>
+            <p>Gestión Escolar</p>
+        </div>
     </div>
+</div>
+
+
+        <div class="sidebar-body">
+            <!-- Perfil Usuario en Sidebar -->
+            <div class="sidebar-user">
+                <img src="{{ asset('images/Usuario.png') }}" class="sidebar-user-avatar" alt="Usuario">
+                <div class="sidebar-user-info">
+                    <h6>@auth {{ Auth::user()->name }} @endauth</h6>
+                    <p>Administrador</p>
+                </div>
+                <div class="sidebar-user-status">
+                    <span class="status-dot online"></span>
+                </div>
+            </div>
+
+            <!-- Navegación Sidebar -->
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h6 class="nav-section-title">Principal</h6>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="fas fa-tachometer-alt nav-icon"></i>
+                                <span class="nav-text">Dashboard</span>
+                                <span class="nav-badge">5</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-chart-line nav-icon"></i>
+                                <span class="nav-text">Estadísticas</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h6 class="nav-section-title">Académico</h6>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-user-graduate nav-icon"></i>
+                                <span class="nav-text">Estudiantes</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                                <span class="nav-text">Profesores</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-book-open nav-icon"></i>
+                                <span class="nav-text">Materias</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-calendar-alt nav-icon"></i>
+                                <span class="nav-text">Horarios</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h6 class="nav-section-title">Evaluación</h6>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-clipboard-list nav-icon"></i>
+                                <span class="nav-text">Calificaciones</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-tasks nav-icon"></i>
+                                <span class="nav-text">Actividades</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-file-alt nav-icon"></i>
+                                <span class="nav-text">Reportes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h6 class="nav-section-title">Sistema</h6>
+                    <ul class="nav-list">
+                        <li class="nav-item has-submenu">
+                            <a href="#" class="nav-link submenu-toggle" onclick="toggleSubmenu(this)">
+                                <i class="fas fa-cogs nav-icon"></i>
+                                <span class="nav-text">Configuración</span>
+                                <i class="fas fa-chevron-down nav-arrow"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="#" class="submenu-link">
+                                    <i class="fas fa-users-cog"></i>Usuarios
+                                </a></li>
+                                <li><a href="#" class="submenu-link">
+                                    <i class="fas fa-shield-alt"></i>Permisos
+                                </a></li>
+                                <li><a href="#" class="submenu-link">
+                                    <i class="fas fa-database"></i>Respaldo
+                                </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        @yield('content')
+    </main>
 
     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
         @csrf
     </form>
 
-    <!-- JavaScript Enhancements -->
+    <!-- JavaScript Mejorado -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Sidebar Toggle
             const sidebarToggle = document.querySelector('[data-widget="pushmenu"]');
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('.main-content');
+            
             if (sidebarToggle) {
                 sidebarToggle.addEventListener('click', function(e) {
                     e.preventDefault();
-                    document.body.classList.toggle('sidebar-collapse');
-                    const sidebar = document.querySelector('.sidebar');
-                    const mainContent = document.querySelector('.main-content');
-                    if (document.body.classList.contains('sidebar-collapse')) {
-                        sidebar.style.width = '80px';
-                        mainContent.style.marginLeft = '80px';
-                    } else {
-                        sidebar.style.width = '260px';
-                        mainContent.style.marginLeft = '260px';
-                    }
+                    document.body.classList.toggle('sidebar-collapsed');
                 });
             }
 
-            // Auto-expand Sidebar on Hover
-            const sidebar = document.querySelector('.sidebar');
-            const mainContent = document.querySelector('.main-content');
-            sidebar.addEventListener('mouseenter', function() {
-                if (document.body.classList.contains('sidebar-collapse')) {
-                    sidebar.style.width = '260px';
-                    mainContent.style.marginLeft = '260px';
-                    document.querySelectorAll('.sidebar .nav-link span').forEach(span => {
-                        span.style.opacity = '1';
-                    });
+            // Submenu Toggle
+            function toggleSubmenu(element) {
+                const submenu = element.nextElementSibling;
+                const arrow = element.querySelector('.nav-arrow');
+                const isOpen = submenu.style.display === 'block';
+                
+                // Cerrar otros submenus
+                document.querySelectorAll('.submenu').forEach(menu => {
+                    menu.style.display = 'none';
+                });
+                document.querySelectorAll('.nav-arrow').forEach(arr => {
+                    arr.style.transform = 'rotate(0deg)';
+                });
+                
+                if (!isOpen) {
+                    submenu.style.display = 'block';
+                    arrow.style.transform = 'rotate(180deg)';
                 }
-            });
-            sidebar.addEventListener('mouseleave', function() {
-                if (document.body.classList.contains('sidebar-collapse')) {
-                    sidebar.style.width = '80px';
-                    mainContent.style.marginLeft = '80px';
-                    document.querySelectorAll('.sidebar .nav-link span').forEach(span => {
-                        span.style.opacity = '0';
-                    });
-                }
-            });
+            }
+            
+            window.toggleSubmenu = toggleSubmenu;
 
-            // Submenu Toggle with Hover
-            document.querySelectorAll('.menu-item').forEach(item => {
-                item.addEventListener('mouseenter', function(e) {
-                    const submenu = this.querySelector('.submenu');
-                    if (submenu) {
-                        document.querySelectorAll('.submenu').forEach(sub => sub.classList.add(
-                            'hidden'));
-                        document.querySelectorAll('.submenu-toggle').forEach(toggle => {
-                            toggle.classList.remove('menu-open');
-                            toggle.querySelector('.arrow').classList.remove('rotate-180');
-                        });
-                        submenu.classList.remove('hidden');
-                        submenu.classList.add('block');
-                        this.classList.add('menu-open');
-                        this.querySelector('.arrow').classList.add('rotate-180');
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            const searchClear = document.querySelector('.search-clear');
+            
+            if (searchInput && searchClear) {
+                searchInput.addEventListener('input', function() {
+                    if (this.value.length > 0) {
+                        searchClear.style.display = 'block';
+                    } else {
+                        searchClear.style.display = 'none';
                     }
                 });
-                item.addEventListener('mouseleave', function(e) {
-                    const submenu = this.querySelector('.submenu');
-                    if (submenu) {
-                        submenu.classList.add('hidden');
-                        submenu.classList.remove('block');
-                        this.classList.remove('menu-open');
-                        this.querySelector('.arrow').classList.remove('rotate-180');
-                    }
+                
+                searchClear.addEventListener('click', function() {
+                    searchInput.value = '';
+                    this.style.display = 'none';
+                    searchInput.focus();
                 });
-            });
+            }
 
             // Dark Mode Toggle
             const darkModeToggle = document.getElementById('darkModeToggle');
@@ -266,8 +407,7 @@
                     const icon = this.querySelector('i');
                     icon.classList.toggle('fa-moon');
                     icon.classList.toggle('fa-sun');
-                    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ?
-                        'enabled' : 'disabled');
+                    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
                 });
             }
 
@@ -278,6 +418,16 @@
                     darkModeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
                 }
             }
+
+            // Active nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Remove active class from all links
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                });
+            });
         });
     </script>
     @stack('scripts')
