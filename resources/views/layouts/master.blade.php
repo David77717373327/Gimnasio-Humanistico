@@ -111,7 +111,7 @@
                                 <span class="badge">3 nuevas</span>
                             </div>
                             <div class="dropdown-body">
-                                <a href="#" class="notification-item">
+                                <a href="{{ route('admin.estudiantes.index') }}" class="notification-item">
                                     <div class="notification-icon">
                                         <i class="fas fa-user-graduate"></i>
                                     </div>
@@ -129,7 +129,7 @@
                                         <span class="notification-time">Hace 10 min</span>
                                     </div>
                                 </a>
-                                <a href="#" class="notification-item">
+                                <a href="{{ route('admin.estudiantes.eliminados') }}" class="notification-item">
                                     <div class="notification-icon">
                                         <i class="fas fa-clipboard-check"></i>
                                     </div>
@@ -255,7 +255,7 @@
                     <h6 class="nav-section-title">Académico</h6>
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('admin.pendientes') }}" class="nav-link">
                                 <i class="fas fa-user-graduate nav-icon"></i>
                                 <span class="nav-text">Estudiantes</span>
                             </a>

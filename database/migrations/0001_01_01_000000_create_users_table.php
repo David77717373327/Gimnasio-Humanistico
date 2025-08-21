@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->nullable(); // si no usas name, puedes poner nullable
+            $table->string('document')->unique(); // 👈 campo documento
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('role')->default('student');
+            $table->boolean('is_approved')->default(false);
             $table->rememberToken();
+            $table->softDeletes(); // 👈 para soft deletes
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
@@ -49,4 +52,6 @@ return new class extends Migration
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
     }
+
+    
 };

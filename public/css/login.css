@@ -480,3 +480,69 @@ label {
         margin-top: 30px;
     }
 }
+
+
+/* Estilos para SweetAlert2 */
+.swal-custom {
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.swal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50; /* Color oscuro para el título */
+    margin-bottom: 10px;
+}
+
+.swal-text {
+    font-size: 1rem;
+    color: #34495e; /* Color suave para el texto */
+    line-height: 1.5;
+}
+
+.swal-button {
+    background-color: #28a745 !important; /* Verde profesional para el botón de éxito */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.swal-button:hover {
+    background-color: #218838 !important; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Ajustar el ícono de éxito */
+.swal2-success .swal2-icon {
+    border-color: #28a745 !important;
+    color: #28a745 !important;
+}
+
+/* Ajustar el ícono de advertencia */
+.swal2-warning .swal2-icon {
+    border-color: #f1c40f !important;
+    color: #f1c40f !important;
+}
+
+/* Barra de progreso del temporizador */
+.swal2-timer-progress-bar {
+    background-color: #28a745 !important; /* Verde para éxito */
+}
+
+/* Personalizar la advertencia */
+.swal2-warning + .swal-custom .swal-button {
+    background-color: #f1c40f !important; /* Amarillo para advertencia */
+}
+
+.swal2-warning + .swal-custom .swal-button:hover {
+    background-color: #d4ac0d !important; /* Amarillo más oscuro */
+}
+
+.swal2-warning + .swal-custom .swal2-timer-progress-bar {
+    background-color: #f1c40f !important; /* Amarillo para advertencia */
+}
