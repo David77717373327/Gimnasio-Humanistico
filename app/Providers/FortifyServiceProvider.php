@@ -15,7 +15,6 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
 use Laravel\Fortify\Fortify;
-use App\Http\Controllers\Auth\RegisteredUserController; // 👈 Añadir esta línea
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -41,13 +40,18 @@ class FortifyServiceProvider extends ServiceProvider
                     return $user;
                 }
 
+                // Si es profesor → entra normal (sin aprobación)
+                if ($user->role === 'professor') {
+                    return $user;
+                }
+
                 // Si es estudiante y está aprobado → entra
                 if ($user->role === 'student' && $user->is_approved) {
                     return $user;
                 }
 
                 // Si es estudiante pero no aprobado → rechazamos
-                if ($user->role === 'student' && !$user->is_approved) {
+                if ($user->role === 'student' && ! $user->is_approved) {
                     session()->flash('auth_error', 'Tu cuenta está pendiente de aprobación por un administrador.');
                     return null;
                 }
@@ -55,7 +59,6 @@ class FortifyServiceProvider extends ServiceProvider
 
             return null; // credenciales inválidas
         });
-
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);

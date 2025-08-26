@@ -32,7 +32,7 @@ class User extends Authenticatable
         'email',
         'password',
         'document',    // nuevo campo
-        'role',        // estudiante | admin
+        'role',        // estudiante | admin | professor
         'is_approved', // nuevo campo
         
     ];

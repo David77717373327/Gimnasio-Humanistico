@@ -68,7 +68,7 @@
                             <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <ul class="dropdown-menu nav-dropdown">
-                            <li><a href="#" class="dropdown-item">
+                            <li><a href="{{ route('admin.horarios.index') }}" class="dropdown-item">
                                 <i class="fas fa-calendar-alt"></i>Horarios
                             </a></li>
                             <li><a href="#" class="dropdown-item">
@@ -255,7 +255,7 @@
                     <h6 class="nav-section-title">Académico</h6>
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="{{ route('admin.pendientes') }}" class="nav-link">
+                            <a href="{{ route('admin.estudiantes.pendientes') }}" class="nav-link">
                                 <i class="fas fa-user-graduate nav-icon"></i>
                                 <span class="nav-text">Estudiantes</span>
                             </a>
