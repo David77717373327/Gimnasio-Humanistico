@@ -212,3 +212,11 @@ password123
 Estudiante:
 jhonburgos@gmail.com
 12345678
+
+
+
+php artisan view:clear
+php artisan route:clear
+php artisan config:clear
+php artisan cache:clear
+php artisan serve

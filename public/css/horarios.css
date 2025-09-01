@@ -1,0 +1,238 @@
+/* ===============================================
+   ESTILOS PARA SISTEMA DE HORARIOS ESCOLARES
+   =============================================== */
+
+:root {
+  --primary: #1E88E5;
+  --success: #43A047;
+  --warn: #FB8C00;
+  --bg: #F7FAFF;
+  --chip-blue: #90CAF9;
+  --chip-green: #A5D6A7;
+  --chip-yellow: #FFE082;
+  --lock: #546E7A;
+}
+
+body {
+  background: var(--bg);
+}
+
+/* ===== CHIPS ARRASTRABLES ===== */
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 14px;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  user-select: none;
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.chip:active {
+  cursor: grabbing;
+  transform: scale(0.98);
+}
+
+.chip.asignatura {
+  background: linear-gradient(135deg, var(--chip-green), #C8E6C9);
+}
+
+.chip.profesor {
+  background: linear-gradient(135deg, var(--chip-yellow), #FFF3CD);
+}
+
+/* ===== TABLA DE HORARIO - EDITOR ===== */
+#tabla-horario thead th {
+  background: linear-gradient(135deg, #64B5F6, #1E88E5);
+  color: #fff;
+  font-weight: 800;
+  padding: 14px 8px;
+}
+
+.hora-cell {
+  background: #E3F2FD;
+  color: #1565C0;
+  font-weight: 600;
+}
+
+/* ===== DROPZONES ===== */
+.dropzone {
+  min-height: 82px;
+  background: #FAFAFA;
+  border: 2px dashed #CFD8DC;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  position: relative;
+  padding: 6px;
+}
+
+.dropzone:not(.locked):hover {
+  background: #F1F8E9;
+  border-color: #9CCC65;
+}
+
+.dropzone.dragover {
+  background: #E8F5E9;
+  border-color: #43A047;
+  transform: scale(1.01);
+}
+
+.dropzone.has-existing {
+  background: #FFF3E0;
+  border-color: #FF9800;
+}
+
+.slot-placeholder {
+  color: #B0BEC5;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 8px;
+}
+
+/* ===== TARJETAS DE HORARIO ===== */
+.slot-card {
+  background: linear-gradient(135deg, #42A5F5, #66BB6A);
+  color: #fff;
+  border-radius: 14px;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  animation: pop 0.18s ease-out;
+  position: relative;
+  min-height: 60px;
+}
+
+.slot-card.existing {
+  background: linear-gradient(135deg, #8E24AA, #5E35B1);
+  border-left: 4px solid #4CAF50;
+}
+
+.slot-card.pending {
+  border-left: 4px solid #FF9800;
+}
+
+.slot-card.saved {
+  border-left: 4px solid #4CAF50;
+}
+
+.slot-card.error {
+  border-left: 4px solid #F44336;
+}
+
+.slot-title {
+  font-weight: 800;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+
+.slot-subtitle {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* ===== ACCIONES DE SLOT ===== */
+.slot-actions {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.slot-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 0.7rem;
+  transition: all 0.2s ease;
+}
+
+.slot-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.lock-badge {
+  position: absolute;
+  left: 8px;
+  bottom: 6px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  padding: 2px 6px;
+  color: #333;
+}
+
+/* ===== DESCANSO ===== */
+.row-break td {
+  background: #FFEBEE;
+}
+
+.break-pill {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: #EF9A9A;
+  color: #B71C1C;
+  font-weight: 800;
+  display: inline-block;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes pop {
+  from {
+    transform: scale(0.96);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== SPINNER ===== */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #1E88E5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .chip {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+  }
+  
+  .slot-card {
+    padding: 0.4rem 0.5rem;
+    min-height: 50px;
+  }
+  
+  .slot-title {
+    font-size: 0.8rem;
+  }
+  
+  .slot-subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .dropzone {
+    min-height: 60px;
+  }
+}

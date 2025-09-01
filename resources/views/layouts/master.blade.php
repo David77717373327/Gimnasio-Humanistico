@@ -17,6 +17,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
 </head>
 
 <body class="min-h-screen flex flex-col bg-gray-100 text-gray-800 font-inter">
@@ -44,7 +46,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('admin.estudiantes.index') }}" class="nav-link">
                             <i class="fas fa-users nav-icon"></i>
                             <span>Estudiantes</span>
                         </a>
@@ -56,7 +58,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('admin.asignaturas.index') }}" class="nav-link">
                             <i class="fas fa-book nav-icon"></i>
                             <span>Materias</span>
                         </a>
@@ -267,7 +269,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('admin.asignaturas.index') }}" class="nav-link">
                                 <i class="fas fa-book-open nav-icon"></i>
                                 <span class="nav-text">Materias</span>
                             </a>

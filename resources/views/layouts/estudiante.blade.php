@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -685,4 +684,184 @@
     <!-- Scripts adicionales específicos de cada página -->
     @stack('scripts')
     
+    <!-- Script para mensajes Flash -->
+    @if(session('success') || session('error') || session('warning'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            @if(session('success'))
+                showToast('success', '{{ session('success') }}');
+            @elseif(session('error'))
+                showToast('error', '{{ session('error') }}');
+            @elseif(session('warning'))
+                showToast('warning', '{{ session('warning') }}');
+            @endif
+        });
+        
+        function showToast(type, message) {
+            const colors = {
+                success: 'var(--edu-green)',
+                error: 'var(--edu-danger)',
+                warning: 'var(--edu-yellow)'
+            };
+            
+            const icons = {
+                success: 'fas fa-check-circle',
+                error: 'fas fa-exclamation-circle',
+                warning: 'fas fa-exclamation-triangle'
+            };
+            
+            // Crear toast dinámicamente con estilos institucionales
+            const toast = document.createElement('div');
+            toast.className = 'toast show position-fixed';
+            toast.style.cssText = `
+                top: 90px; right: 20px; z-index: 9999;
+                background: white; border-left: 4px solid ${colors[type]};
+                border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                min-width: 300px; max-width: 400px;
+            `;
+            
+            toast.innerHTML = `
+                <div class="d-flex align-items-center p-3">
+                    <i class="${icons[type]} me-3" style="color: ${colors[type]}; font-size: 1.2rem;"></i>
+                    <div class="flex-grow-1">
+                        <strong style="color: var(--edu-green-dark);">
+                            ${type.charAt(0).toUpperCase() + type.slice(1)}
+                        </strong>
+                        <div style="color: var(--edu-gray-700); font-size: 0.9rem;">
+                            ${message}
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close ms-2" onclick="this.parentElement.parentElement.remove()"></button>
+                </div>
+            `;
+            
+            document.body.appendChild(toast);
+            
+            // Auto-remover después de 5 segundos
+            setTimeout(() => {
+                if (toast.parentElement) {
+                    toast.remove();
+                }
+            }, 5000);
+        }
+    </script>
+    @endif
     
+    <!-- CSS adicional para animaciones -->
+    <style>
+        /* Animaciones de entrada */
+        .animate-in {
+            animation: slideInUp 0.6s ease forwards;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Estados de búsqueda */
+        .search-input-group.searching .search-input {
+            border-color: var(--edu-green);
+            background: var(--edu-white);
+            box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+        }
+        
+        /* Sidebar responsive */
+        @media (max-width: 767.98px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .sidebar.show {
+                transform: translateX(0);
+            }
+            
+            .sidebar-overlay {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1024;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .sidebar-overlay.show {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+        }
+        
+        /* Efectos hover mejorados */
+        .control-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .control-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(46, 139, 87, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.6s ease;
+        }
+        
+        .control-btn:hover::before {
+            width: 100px;
+            height: 100px;
+        }
+        
+        /* Mejoras de accesibilidad */
+        .nav-link:focus,
+        .control-btn:focus {
+            outline: 2px solid var(--edu-yellow);
+            outline-offset: 2px;
+        }
+        
+        /* Indicadores de carga */
+        .loading {
+            position: relative;
+            pointer-events: none;
+        }
+        
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--edu-gray-300);
+            border-top: 2px solid var(--edu-green);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    </style>
+</body>
+</html>
+                        

@@ -2,86 +2,198 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\Horario;
 use App\Models\Grado;
-use App\Models\User;
 use App\Models\Asignatura;
+use App\Models\User;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class HorarioController extends Controller
 {
-    // Listado de horarios
-    public function index()
-    {
-        try {
-            $horarios = Horario::with(['grado', 'asignatura', 'user'])->get();
-            Log::info('Horarios cargados', ['count' => $horarios->count()]);
-            return view('admin.horarios.index', compact('horarios'));
-        } catch (\Exception $e) {
-            Log::error('Error en index de HorarioController', [
-                'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ]);
-            return redirect()->back()->with('error', 'Error al cargar los horarios.');
+    public function index(Request $request)
+{
+    // Si es una petición JSON (desde el calendario), devolver directamente
+    if($request->format === 'json') {
+        $query = Horario::with(['grado', 'asignatura', 'user']);
+        if($request->grado_id) {
+            $query->where('grado_id', $request->grado_id);
         }
+        return response()->json($query->get());
     }
+    
+    try {
+        // Query base para la paginación (tabla de edición)
+        $query = Horario::with(['grado', 'asignatura', 'user']);
+        
+        // Aplicar filtros
+        if($request->grado_id) {
+            $query->where('grado_id', $request->grado_id);
+        }
+        
+        if($request->dia) {
+            $query->where('dia', $request->dia);
+        }
+        
+        if($request->asignatura_id) {
+            $query->where('asignatura_id', $request->asignatura_id);
+        }
+        
+        // Obtener horarios paginados para la tabla de edición
+        $horarios = $query->orderBy('dia')
+                         ->orderBy('hora_inicio')
+                         ->paginate(15);
+        
+        // Para la vista de grilla semanal, obtener TODOS los horarios del grado seleccionado
+        $todosHorarios = collect();
+        if($request->grado_id) {
+            $todosHorarios = Horario::with(['grado', 'asignatura', 'user'])
+                                   ->where('grado_id', $request->grado_id)
+                                   ->orderBy('dia')
+                                   ->orderBy('hora_inicio')
+                                   ->get()
+                                   ->map(function($horario) {
+                                       // Normalizar formato de hora para la vista
+                                       $horario->hora_inicio_formato = substr($horario->hora_inicio, 0, 5);
+                                       return $horario;
+                                   });
+        }
+        // NUEVO: Para la vista general (sin filtros), obtener TODOS los horarios agrupados por grado
+        $todosLosHorarios = collect();
+        if(!$request->grado_id && !$request->dia && !$request->asignatura_id) {
+            $todosLosHorarios = Horario::with(['grado', 'asignatura', 'user'])
+                                      ->orderBy('grado_id')
+                                      ->orderBy('dia')
+                                      ->orderBy('hora_inicio')
+                                      ->get();
+        }
+        // Obtener datos de referencia
+        $grados = Grado::orderBy('nombre')->get();
+        $asignaturas = Asignatura::orderBy('nombre')->get();
+        $profesores = User::where('role', 'professor')
+                          ->whereNull('deleted_at')
+                          ->orderBy('name')
+                          ->get();
+        return view('admin.horarios.index', compact(
+            'horarios',
+            'todosHorarios', 
+            'todosLosHorarios',  // NUEVA VARIABLE
+            'grados',
+            'asignaturas',
+            'profesores'
+        ));
+        
+    } catch (\Exception $e) {
+        Log::error('Error en index de HorarioController', [
+            'error' => $e->getMessage(),
+            'trace' => $e->getTraceAsString(),
+            'grado_id' => $request->grado_id
+        ]);
+        return redirect()->back()->with('error', 'Error al cargar los horarios: ' . $e->getMessage());
+    }
+}
 
-    // Formulario de creación
     public function create()
     {
-        Log::info('Accediendo al método create de HorarioController', [
-            'user_id' => Auth::id()
-        ]);
-        try {
-            $grados = Grado::orderBy('nombre')->get();
-            $asignaturas = Asignatura::orderBy('nombre')->get();
-            $profesores = User::where('role', 'professor')
-                             ->whereNull('deleted_at')
-                             ->orderBy('name')
-                             ->get();
+        $grados = Grado::orderBy('nombre')->get();
+        $asignaturas = Asignatura::orderBy('nombre')->get();
+        $profesores = User::where('role', 'professor')
+                         ->whereNull('deleted_at')
+                         ->orderBy('name')
+                         ->get();
 
-            Log::info('Datos cargados para create', [
-                'grados_count' => $grados->count(),
-                'asignaturas_count' => $asignaturas->count(),
-                'profesores_count' => $profesores->count()
-            ]);
+        $horarios = Horario::with(['grado', 'asignatura', 'user'])->get();
 
-            if ($grados->isEmpty()) {
-                Log::warning('No hay grados registrados, redirigiendo a grados.create');
-                return redirect()->route('grados.create')
-                    ->with('error', 'Primero crea al menos un Grado.');
-            }
-            if ($asignaturas->isEmpty()) {
-                Log::warning('No hay asignaturas registradas, redirigiendo a asignaturas.create');
-                return redirect()->route('asignaturas.create')
-                    ->with('error', 'Primero crea al menos una Asignatura.');
-            }
-            if ($profesores->isEmpty()) {
-                Log::warning('No hay profesores registrados, pero cargando vista de creación');
-                // Permitir carga de la vista incluso sin profesores
-            }
+        $eventos = $horarios->map(function($h){
+            return [
+                'id'    => $h->id,
+                'title' => ($h->asignatura->nombre ?? 'Sin asignatura') 
+                           . ' - ' . ($h->user->name ?? 'Sin profe'),
+                'start' => $h->dia . 'T' . $h->hora_inicio,
+                'end'   => $h->dia . 'T' . $h->hora_fin,
+            ];
+        })->toArray();
 
-            return view('admin.horarios.create', compact('grados', 'asignaturas', 'profesores'));
-        } catch (\Exception $e) {
-            Log::error('Error en create de HorarioController', [
-                'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ]);
-            return redirect()->route('admin.horarios.index')
-                ->with('error', 'Error al cargar el formulario de creación.');
-        }
+        return view('admin.horarios.calendar', compact(
+            'grados',
+            'asignaturas',
+            'profesores',
+            'eventos'
+        ));
     }
 
-    // Guardar horario
+    /**
+     * Validar conflictos de horarios de manera inteligente
+     */
+    private function validarConflictos($gradoId, $dia, $horaInicio, $profesorId = null, $excludeId = null)
+    {
+        $conflictos = [];
+
+        // 1. Verificar si ya existe un horario para el mismo grado, día y hora
+        $horarioMismoGrado = Horario::where('grado_id', $gradoId)
+                                   ->where('dia', $dia)
+                                   ->where('hora_inicio', $horaInicio)
+                                   ->when($excludeId, function($query, $excludeId) {
+                                       return $query->where('id', '!=', $excludeId);
+                                   })
+                                   ->with(['asignatura'])
+                                   ->first();
+
+        if ($horarioMismoGrado) {
+            $conflictos[] = [
+                'tipo' => 'grado_ocupado',
+                'mensaje' => "Este grado ya tiene {$horarioMismoGrado->asignatura->nombre} programado para {$dia} a las {$horaInicio}",
+                'severidad' => 'error',
+                'sugerencia' => 'Selecciona otra hora o reemplaza el horario existente'
+            ];
+        }
+
+        // 2. Verificar si el profesor ya está ocupado en esa franja (solo si se proporciona profesor)
+        if ($profesorId) {
+            $profesorOcupado = Horario::where('user_id', $profesorId)
+                                     ->where('dia', $dia)
+                                     ->where('hora_inicio', $horaInicio)
+                                     ->when($excludeId, function($query, $excludeId) {
+                                         return $query->where('id', '!=', $excludeId);
+                                     })
+                                     ->with(['grado'])
+                                     ->first();
+
+            if ($profesorOcupado) {
+                $conflictos[] = [
+                    'tipo' => 'profesor_ocupado',
+                    'mensaje' => "Este profesor ya tiene clases con {$profesorOcupado->grado->nombre} el {$dia} a las {$horaInicio}",
+                    'severidad' => 'warning',
+                    'sugerencia' => 'Puedes continuar si es intencional (ej: profesor itinerante) o selecciona otro profesor'
+                ];
+            }
+        }
+
+        return $conflictos;
+    }
+
     public function store(Request $request)
     {
-        Log::info('Accediendo al método store de HorarioController', [
-            'input' => $request->all()
-        ]);
         try {
-            $request->validate([
+            // Log para debugging
+            Log::info('Petición store recibida', [
+                'content_type' => $request->header('Content-Type'),
+                'is_json' => $request->isJson(),
+                'data' => $request->all()
+            ]);
+
+            // Detectar si es JSON y procesar los datos
+            if ($request->isJson()) {
+                $data = $request->json()->all();
+                $request->merge($data);
+                Log::info('Datos JSON procesados', ['merged_data' => $request->all()]);
+            }
+
+            // Validación básica
+            $validatedData = $request->validate([
                 'grado_id' => 'required|exists:grados,id',
                 'asignatura_id' => 'required|exists:asignaturas,id',
                 'user_id' => 'nullable|exists:users,id',
@@ -90,187 +202,296 @@ class HorarioController extends Controller
                 'hora_fin' => 'required|date_format:H:i|after:hora_inicio',
             ]);
 
-            if ($request->user_id) {
-                $conflicto = Horario::where('user_id', $request->user_id)
-                    ->where('dia', $request->dia)
-                    ->where(function ($query) use ($request) {
-                        $query->whereBetween('hora_inicio', [$request->hora_inicio, $request->hora_fin])
-                              ->orWhereBetween('hora_fin', [$request->hora_inicio, $request->hora_fin])
-                              ->orWhere(function ($q) use ($request) {
-                                  $q->where('hora_inicio', '<=', $request->hora_inicio)
-                                    ->where('hora_fin', '>=', $request->hora_fin);
-                              });
-                    })
-                    ->exists();
+            Log::info('Datos validados correctamente', ['validated' => $validatedData]);
 
-                if ($conflicto) {
-                    Log::warning('Conflicto de horario detectado', [
-                        'user_id' => $request->user_id,
-                        'dia' => $request->dia,
-                        'hora_inicio' => $request->hora_inicio,
-                        'hora_fin' => $request->hora_fin
-                    ]);
-                    return back()->withErrors(['user_id' => 'El profesor ya tiene un horario asignado en ese día y hora.']);
+            // Validar conflictos usando la función mejorada
+            $conflictos = $this->validarConflictos(
+                $validatedData['grado_id'],
+                $validatedData['dia'],
+                $validatedData['hora_inicio'],
+                $validatedData['user_id'] ?? null
+            );
+
+            // Separar conflictos por severidad
+            $errores = collect($conflictos)->where('severidad', 'error')->values();
+            $advertencias = collect($conflictos)->where('severidad', 'warning')->values();
+
+            // Si hay errores críticos, no permitir creación
+            if ($errores->isNotEmpty()) {
+                $mensajeError = $errores->first()['mensaje'];
+                $sugerencia = $errores->first()['sugerencia'] ?? '';
+                
+                Log::warning('Conflicto crítico detectado', [
+                    'mensaje' => $mensajeError,
+                    'sugerencia' => $sugerencia
+                ]);
+
+                if ($request->expectsJson() || $request->ajax()) {
+                    return response()->json([
+                        'success' => false,
+                        'error' => $mensajeError,
+                        'sugerencia' => $sugerencia,
+                        'tipo_error' => 'conflicto_critico'
+                    ], 409);
                 }
+                
+                return redirect()->back()
+                    ->withErrors(['horario' => $mensajeError])
+                    ->with('sugerencia', $sugerencia)
+                    ->withInput();
             }
 
-            $horario = Horario::create([
-                'grado_id' => $request->grado_id,
-                'asignatura_id' => $request->asignatura_id,
-                'user_id' => $request->user_id,
-                'dia' => $request->dia,
-                'hora_inicio' => $request->hora_inicio,
-                'hora_fin' => $request->hora_fin,
-            ]);
+            // Si hay advertencias pero no errores críticos, permitir creación con aviso
+            if ($advertencias->isNotEmpty()) {
+                Log::info('Advertencias detectadas pero permitiendo creación', [
+                    'advertencias' => $advertencias->toArray()
+                ]);
+            }
+
+            Log::info('Intentando crear horario...', ['data_to_create' => $validatedData]);
+
+            // Crear el horario
+            $horario = Horario::create($validatedData);
 
             Log::info('Horario creado exitosamente', [
-                'horario_id' => $horario->id
+                'horario_id' => $horario->id,
+                'grado' => $horario->grado_id,
+                'dia' => $horario->dia,
+                'hora' => $horario->hora_inicio,
             ]);
 
-            return redirect()->route('admin.horarios.index')->with('success', 'Horario registrado correctamente.');
+            // Respuesta según el tipo de petición
+            if ($request->expectsJson() || $request->ajax()) {
+                $horario->load(['grado', 'asignatura', 'user']);
+                
+                $response = [
+                    'success' => true, 
+                    'message' => 'Horario registrado correctamente',
+                    'horario' => $horario
+                ];
+
+                // Incluir advertencias si las hay
+                if ($advertencias->isNotEmpty()) {
+                    $response['advertencias'] = $advertencias->pluck('mensaje')->toArray();
+                }
+
+                return response()->json($response);
+            }
+
+            // Respuesta tradicional para formularios
+            $successMessage = 'Horario registrado correctamente.';
+            if ($advertencias->isNotEmpty()) {
+                $successMessage .= ' Nota: ' . $advertencias->first()['mensaje'];
+            }
+
+            return redirect()->route('admin.horarios.index')
+                             ->with('success', $successMessage);
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            Log::warning('Error de validación en store', [
+                'errors' => $e->errors(),
+                'input' => $request->all()
+            ]);
+
+            if ($request->expectsJson() || $request->ajax()) {
+                return response()->json([
+                    'success' => false,
+                    'errors' => $e->errors(),
+                    'tipo_error' => 'validacion'
+                ], 422);
+            }
+
+            throw $e;
+
         } catch (\Exception $e) {
-            Log::error('Error en store de HorarioController', [
+            Log::error('Error general en store de HorarioController', [
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
                 'input' => $request->all()
             ]);
-            return back()->with('error', 'Error al registrar el horario.');
+
+            if ($request->expectsJson() || $request->ajax()) {
+                return response()->json([
+                    'success' => false,
+                    'error' => 'Error interno del servidor: ' . $e->getMessage(),
+                    'tipo_error' => 'servidor'
+                ], 500);
+            }
+
+            return redirect()->back()
+                             ->with('error', 'Error al crear el horario: ' . $e->getMessage())
+                             ->withInput();
         }
     }
 
-    // Formulario de edición
     public function edit(Horario $horario)
     {
-        Log::info('Accediendo al método edit de HorarioController', [
-            'horario_id' => $horario->id,
-            'user_id' => Auth::id()
-        ]);
-        try {
-            $grados = Grado::orderBy('nombre')->get();
-            $asignaturas = Asignatura::orderBy('nombre')->get();
-            $profesores = User::where('role', 'professor')
-                             ->whereNull('deleted_at')
-                             ->orderBy('name')
-                             ->get();
+        $grados = Grado::orderBy('nombre')->get();
+        $asignaturas = Asignatura::orderBy('nombre')->get();
+        $profesores = User::where('role', 'professor')->get();
 
-            Log::info('Datos cargados para edit', [
-                'grados_count' => $grados->count(),
-                'asignaturas_count' => $asignaturas->count(),
-                'profesores_count' => $profesores->count()
-            ]);
-
-            if ($grados->isEmpty()) {
-                Log::warning('No hay grados registrados, redirigiendo a grados.create');
-                return redirect()->route('grados.create')
-                    ->with('error', 'Primero crea al menos un Grado.');
-            }
-            if ($asignaturas->isEmpty()) {
-                Log::warning('No hay asignaturas registradas, redirigiendo a asignaturas.create');
-                return redirect()->route('asignaturas.create')
-                    ->with('error', 'Primero crea al menos una Asignatura.');
-            }
-            if ($profesores->isEmpty()) {
-                Log::warning('No hay profesores registrados, pero cargando vista de edición');
-            }
-
-            return view('admin.horarios.edit', compact('horario', 'grados', 'asignaturas', 'profesores'));
-        } catch (\Exception $e) {
-            Log::error('Error en edit de HorarioController', [
-                'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ]);
-            return redirect()->route('admin.horarios.index')
-                ->with('error', 'Error al cargar el formulario de edición.');
-        }
+        return view('admin.horarios.edit', compact('horario', 'grados', 'asignaturas', 'profesores'));
     }
 
-    // Actualizar horario
     public function update(Request $request, Horario $horario)
-{
-    Log::info('Accediendo al método update de HorarioController', [
-        'horario_id' => $horario->id,
-        'input' => $request->all()
-    ]);
-    try {
-        $request->validate([
-            'grado_id' => 'required|exists:grados,id',
-            'asignatura_id' => 'required|exists:asignaturas,id',
-            'user_id' => 'nullable|exists:users,id',
-            'dia' => 'required|string|in:Lunes,Martes,Miércoles,Jueves,Viernes,Sábado',
-            'hora_inicio' => 'required|date_format:H:i:s,H:i', // Aceptar ambos formatos
-            'hora_fin' => 'required|date_format:H:i:s,H:i|after:hora_inicio',
-        ]);
-
-        // Normalizar hora_inicio y hora_fin a H:i
-        $horaInicio = date('H:i', strtotime($request->hora_inicio));
-        $horaFin = date('H:i', strtotime($request->hora_fin));
-
-        if ($request->user_id) {
-            $conflicto = Horario::where('user_id', $request->user_id)
-                ->where('dia', $request->dia)
-                ->where('id', '!=', $horario->id)
-                ->where(function ($query) use ($horaInicio, $horaFin) {
-                    $query->whereBetween('hora_inicio', [$horaInicio, $horaFin])
-                          ->orWhereBetween('hora_fin', [$horaInicio, $horaFin])
-                          ->orWhere(function ($q) use ($horaInicio, $horaFin) {
-                              $q->where('hora_inicio', '<=', $horaInicio)
-                                ->where('hora_fin', '>=', $horaFin);
-                          });
-                })
-                ->exists();
-
-            if ($conflicto) {
-                Log::warning('Conflicto de horario detectado al actualizar', [
-                    'user_id' => $request->user_id,
-                    'dia' => $request->dia,
-                    'hora_inicio' => $horaInicio,
-                    'hora_fin' => $horaFin
-                ]);
-                return back()->withErrors(['user_id' => 'El profesor ya tiene un horario asignado en ese día y hora.']);
+    {
+        try {
+            // Detectar si es JSON y procesar los datos
+            if ($request->isJson()) {
+                $data = $request->json()->all();
+                $request->merge($data);
             }
+
+            // Validación básica
+            $validatedData = $request->validate([
+                'grado_id' => 'required|exists:grados,id',
+                'asignatura_id' => 'required|exists:asignaturas,id',
+                'user_id' => 'nullable|exists:users,id',
+                'dia' => 'required|string|in:Lunes,Martes,Miércoles,Jueves,Viernes,Sábado',
+                'hora_inicio' => 'required|date_format:H:i',
+                'hora_fin' => 'required|date_format:H:i|after:hora_inicio',
+            ]);
+
+            // Validar conflictos (excluyendo el horario actual)
+            $conflictos = $this->validarConflictos(
+                $validatedData['grado_id'],
+                $validatedData['dia'],
+                $validatedData['hora_inicio'],
+                $validatedData['user_id'] ?? null,
+                $horario->id // Excluir el horario actual
+            );
+
+            $errores = collect($conflictos)->where('severidad', 'error')->values();
+            $advertencias = collect($conflictos)->where('severidad', 'warning')->values();
+
+            // Si hay errores críticos, no permitir actualización
+            if ($errores->isNotEmpty()) {
+                $mensajeError = $errores->first()['mensaje'];
+                $sugerencia = $errores->first()['sugerencia'] ?? '';
+                
+                if ($request->expectsJson() || $request->ajax()) {
+                    return response()->json([
+                        'success' => false,
+                        'error' => $mensajeError,
+                        'sugerencia' => $sugerencia,
+                        'tipo_error' => 'conflicto_critico'
+                    ], 409);
+                }
+                
+                return redirect()->back()
+                    ->withErrors(['horario' => $mensajeError])
+                    ->with('sugerencia', $sugerencia)
+                    ->withInput();
+            }
+
+            $horario->update($validatedData);
+
+            if ($request->expectsJson() || $request->ajax()) {
+                $horario->load(['grado', 'asignatura', 'user']);
+                
+                $response = [
+                    'success' => true,
+                    'message' => 'Horario actualizado correctamente',
+                    'horario' => $horario
+                ];
+
+                if ($advertencias->isNotEmpty()) {
+                    $response['advertencias'] = $advertencias->pluck('mensaje')->toArray();
+                }
+
+                return response()->json($response);
+            }
+
+            $successMessage = 'Horario actualizado correctamente.';
+            if ($advertencias->isNotEmpty()) {
+                $successMessage .= ' Nota: ' . $advertencias->first()['mensaje'];
+            }
+
+            return redirect()->route('admin.horarios.index')
+                             ->with('success', $successMessage);
+
+        } catch (\Exception $e) {
+            Log::error('Error en update de HorarioController', [
+                'error' => $e->getMessage(),
+                'horario_id' => $horario->id
+            ]);
+
+            if ($request->expectsJson() || $request->ajax()) {
+                return response()->json([
+                    'success' => false,
+                    'error' => 'Error al actualizar: ' . $e->getMessage(),
+                    'tipo_error' => 'servidor'
+                ], 500);
+            }
+
+            return redirect()->back()
+                             ->with('error', 'Error al actualizar el horario: ' . $e->getMessage());
         }
-
-        $horario->update([
-            'grado_id' => $request->grado_id,
-            'asignatura_id' => $request->asignatura_id,
-            'user_id' => $request->user_id,
-            'dia' => $request->dia,
-            'hora_inicio' => $horaInicio,
-            'hora_fin' => $horaFin,
-        ]);
-
-        Log::info('Horario actualizado exitosamente', [
-            'horario_id' => $horario->id
-        ]);
-
-        return redirect()->route('admin.horarios.index')->with('success', 'Horario actualizado correctamente.');
-    } catch (\Exception $e) {
-        Log::error('Error en update de HorarioController', [
-            'error' => $e->getMessage(),
-            'trace' => $e->getTraceAsString(),
-            'input' => $request->all()
-        ]);
-        return back()->with('error', 'Error al actualizar el horario: ' . $e->getMessage());
     }
-}
 
-// Eliminar horario
-public function destroy(Horario $horario)
-{
-    Log::info('Accediendo al método destroy de HorarioController', [
-        'horario_id' => $horario->id,
-            'user_id' => Auth::id()
-        ]);
+    public function destroy(Horario $horario)
+    {
         try {
             $horario->delete();
-            Log::info('Horario eliminado exitosamente', ['horario_id' => $horario->id]);
-            return redirect()->route('admin.horarios.index')->with('success', 'Horario eliminado correctamente.');
+
+            if (request()->expectsJson() || request()->ajax()) {
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Horario eliminado correctamente'
+                ]);
+            }
+
+            return redirect()->route('admin.horarios.index')
+                             ->with('success', 'Horario eliminado correctamente.');
         } catch (\Exception $e) {
             Log::error('Error en destroy de HorarioController', [
                 'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
+                'horario_id' => $horario->id
             ]);
-            return redirect()->route('admin.horarios.index')->with('error', 'Error al eliminar el horario.');
+
+            if (request()->expectsJson() || request()->ajax()) {
+                return response()->json([
+                    'success' => false,
+                    'error' => 'Error al eliminar: ' . $e->getMessage()
+                ], 500);
+            }
+            return redirect()->back()
+                             ->with('error', 'Error al eliminar el horario: ' . $e->getMessage());
         }
+    }
+
+    public function verHorarioEstudiante()
+    {
+        $estudiante = Auth::user();
+
+        if (!$estudiante->grado_id) {
+            return back()->with('error', 'No tienes un grado asignado.');
+        }
+
+        $horarios = Horario::with(['asignatura', 'user'])
+            ->where('grado_id', $estudiante->grado_id)
+            ->orderBy('dia')
+            ->orderBy('hora_inicio')
+            ->get();
+
+        return view('student.horarios.horario', compact('horarios'));
+    }
+
+    public function descargarHorarioEstudiante()
+    {
+        $estudiante = Auth::user();
+
+        if (!$estudiante->grado_id) {
+            return back()->with('error', 'No tienes un grado asignado.');
+        }
+
+        $horarios = Horario::with(['asignatura', 'user'])
+                    ->where('grado_id', $estudiante->grado_id)
+                    ->orderBy('dia')
+                    ->orderBy('hora_inicio')
+                    ->get();
+
+        $pdf = Pdf::loadView('student.horario_pdf', compact('horarios', 'estudiante'));
+        return $pdf->download('Horario_'.$estudiante->name.'.pdf');
     }
 }

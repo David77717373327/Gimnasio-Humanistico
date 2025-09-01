@@ -1,0 +1,895 @@
+/* ============================================
+   VARIABLES CSS - Mejoradas para America Style
+============================================ */
+:root {
+    --primary-green: #1B5E20;
+    --secondary-green: #2E7D32;
+    --light-green: #4CAF50;
+    --primary-yellow: #FFC107;
+    --secondary-yellow: #FFD54F;
+    --dark-yellow: #FF8F00;
+    --white: #FFFFFF;
+    --light-gray: #F8F9FA;
+    --medium-gray: #E0E0E0;
+    --dark-gray: #424242;
+    --text-dark: #212121;
+    --text-light: #666666;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.16);
+    --overlay-dark: rgba(118, 212, 113, 0.4);
+}
+
+/* ============================================
+   RESET Y CONFIGURACIÓN GENERAL
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* ============================================
+   HEADER SUPERIOR - Estilo América
+============================================ */
+.top-header {
+    background: var(--primary-green);
+    color: white;
+    padding: 8px 0;
+    font-size: 12px;
+    position: relative;
+    z-index: 1001;
+    border-bottom: 3px solid var(--primary-yellow);
+}
+
+.top-header .container-fluid {
+    max-width: 1400px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.contact-item i {
+    font-size: 11px;
+    width: 14px;
+}
+
+.top-right-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.social-link {
+    color: white;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.social-link:hover {
+    background: var(--primary-yellow);
+    color: var(--primary-green);
+    transform: translateY(-1px);
+}
+
+.btn-admission-top {
+    background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
+    color: var(--primary-green);
+    padding: 6px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+}
+
+.btn-admission-top:hover {
+    background: var(--secondary-yellow);
+    color: var(--primary-green);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+}
+
+/* ============================================
+   LOGO BAR - BARRA INSTITUCIONAL PROFESIONAL
+============================================ */
+.logo-bar {
+    background: var(--primary-green);
+    padding: 35px 0;
+    box-shadow: 
+        0 8px 32px rgba(27, 94, 32, 0.12),
+        0 2px 16px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 999;
+    border-bottom: 6px solid transparent;
+    border-image: linear-gradient(90deg, var(--primary-green), var(--primary-yellow), var(--primary-green)) 1;
+    overflow: hidden;
+}
+
+/* Imagen de fondo sutil para profesionalismo educativo */
+.logo-bar::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(31, 27, 94, 0.03) 0%, transparent 20%),
+        radial-gradient(circle at 80% 80%, rgba(109, 84, 9, 0.03) 0%, transparent 20%),
+        url("../images/Logo.png");
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.logo-bar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(248, 249, 250, 0.6);
+    backdrop-filter: blur(1px);
+    z-index: -1;
+}
+
+.institutional-header {
+    background: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1800px;
+    margin: 0 0;
+    padding: 0 0px;
+    position: relative;
+}
+
+/* ============================================
+   LOGOTIPOS LATERALES - MAYOR PROTAGONISMO
+============================================ */
+.logo-left, .logo-right {
+    flex: 0 0 auto;
+    padding: 0 90px;
+    position: relative;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.institutional-logo {
+    width: 160px;
+    height: 160px;
+    
+    border-radius: 50%;
+    border: 4px solid var(--primary-green);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 
+        0 12px 40px rgba(27, 94, 32, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 0 20px rgba(27, 94, 32, 0.1));
+}
+
+.logo-glow {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        var(--primary-green),
+        var(--primary-yellow),
+        var(--secondary-green),
+        var(--primary-yellow),
+        var(--primary-green)
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    filter: blur(8px);
+}
+
+.institutional-logo:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 
+        0 16px 50px rgba(27, 94, 32, 0.3),
+        0 6px 16px rgba(0, 0, 0, 0.12),
+        inset 0 2px 4px rgba(255, 255, 255, 0.9);
+    border-color: var(--primary-yellow);
+    border-width: 5px;
+}
+
+.institutional-logo:hover + .logo-glow {
+    opacity: 0.3;
+}
+
+/* ============================================
+   TÍTULO CENTRAL - TIPOGRAFÍA PROFESIONAL
+============================================ */
+.institutional-title {
+    flex: 1;
+    text-align: center;
+    padding: 0 60px;
+    position: relative;
+}
+
+.college-main-title {
+    margin: 0;
+    line-height: 1.1;
+    font-weight: 900;
+    color: var(--primary-yellow);
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(27, 94, 32, 0.1);
+    font-family: 'Playfair Display', 'Georgia', serif;
+    position: relative;
+    letter-spacing: -1px;
+}
+
+.title-line-1 {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.title-line-2 {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: var(--primary-yellow);
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+}
+
+.title-line-3 {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--primary-yellow);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.title-line-3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-yellow), var(--dark-yellow));
+    border-radius: 2px;
+}
+
+/* ============================================
+   LEMA INSTITUCIONAL MEJORADO
+============================================ */
+
+/* ==========================================
+   NAVEGACIÓN PRINCIPAL - Mejorada
+============================================ */
+.main-navigation {
+    background: var(--primary-green);
+    box-shadow: 0 4px 12px var(--shadow-medium);
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    transition: all 0.3s ease;
+}
+
+.main-navigation.scrolled {
+    box-shadow: 0 6px 20px var(--shadow-medium);
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav {
+    gap: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 16px 20px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background: var(--secondary-green);
+    color: var(--primary-yellow) !important;
+    border-bottom-color: var(--primary-yellow);
+}
+
+.nav-link.active {
+    background: var(--secondary-green);
+    border-bottom-color: var(--primary-yellow);
+}
+
+.nav-link i {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+/* ============================================
+   DROPDOWNS MEJORADOS
+============================================ */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    border-radius: 0 0 8px 8px;
+    padding: 0;
+    margin-top: 0;
+    min-width: 250px;
+    background: white;
+    overflow: hidden;
+}
+
+.mega-dropdown {
+    min-width: 700px;
+    padding: 30px;
+}
+
+.dropdown-header {
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 10px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary-yellow);
+    padding: 15px 20px 8px;
+    background: var(--light-gray);
+}
+
+.dropdown-item {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-weight: 500;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background: var(--primary-green);
+    color: white;
+    padding-left: 25px;
+}
+
+.dropdown-item i {
+    width: 14px;
+    color: var(--primary-yellow);
+    font-size: 11px;
+}
+
+/* ============================================
+   HERO SECTION - Más parecido a América
+============================================ */
+.hero-banner {
+    position: relative;
+    height: 85vh;
+    min-height: 650px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.9;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-dark);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--secondary-yellow);
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px 25px;
+    text-align: center;
+    min-width: 140px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--secondary-yellow);
+    display: block;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+}
+
+.hero-cta {
+    margin-top: 40px;
+}
+
+.btn-hero-primary {
+    background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
+    color: var(--primary-green);
+    border: none;
+    padding: 15px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    margin: 0 10px;
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.6);
+    color: var(--primary-green);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN PROFESIONAL
+============================================ */
+@media (max-width: 1200px) {
+    .institutional-header {
+        padding: 0 30px;
+    }
+    
+    .title-line-1 { font-size: 2.4rem; }
+    .title-line-2 { font-size: 2rem; }
+    .title-line-3 { font-size: 1.5rem; }
+    
+    .institutional-logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .logo-bar {
+        padding: 25px 0;
+    }
+    
+    .institutional-header {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 20px;
+    }
+    
+    .logo-left, .logo-right {
+        display: none;
+    }
+    
+    .institutional-title {
+        padding: 0 20px;
+    }
+    
+    .title-line-1 { font-size: 2rem; }
+    .title-line-2 { font-size: 1.7rem; }
+    .title-line-3 { font-size: 1.3rem; }
+    
+    .institutional-motto {
+        font-size: 0.85rem;
+        padding: 10px 25px;
+        letter-spacing: 1px;
+    }
+    
+    .logo-right-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .accreditation-badges {
+        gap: 10px;
+    }
+    
+    .college-name {
+        font-size: 1.6rem;
+    }
+    
+    .hero-stats {
+        gap: 20px;
+    }
+    
+    .mega-dropdown {
+        min-width: 400px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-header {
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .contact-info {
+        justify-content: center;
+        margin-bottom: 8px;
+        gap: 15px;
+    }
+    
+    .top-right-info {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .logo-bar {
+        padding: 20px 0;
+    }
+    
+    .institutional-header {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .title-line-1 { font-size: 1.6rem; }
+    .title-line-2 { font-size: 1.4rem; }
+    .title-line-3 { font-size: 1.1rem; letter-spacing: 1px; }
+    
+    .institutional-motto {
+        font-size: 0.75rem;
+        padding: 8px 20px;
+        gap: 10px;
+        letter-spacing: 0.5px;
+    }
+    
+    .decorative-line {
+        margin: 15px 0;
+        gap: 15px;
+    }
+    
+    .line-center {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .main-logo-section {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .main-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .college-name {
+        font-size: 1.4rem;
+    }
+    
+    .college-motto {
+        font-size: 0.8rem;
+    }
+    
+    .logo-right-section {
+        display: none;
+    }
+    
+    .hero-banner {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .stat-card {
+        min-width: 120px;
+        padding: 15px 20px;
+    }
+    
+    .nav-link {
+        padding: 12px 15px !important;
+        text-align: center;
+    }
+    
+    .dropdown-menu {
+        min-width: 100%;
+    }
+    
+    .mega-dropdown {
+        min-width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-bar {
+        padding: 15px 0;
+    }
+    
+    .institutional-title {
+        padding: 0 10px;
+    }
+    
+    .title-line-1 { font-size: 1.3rem; }
+    .title-line-2 { font-size: 1.1rem; }
+    .title-line-3 { font-size: 0.9rem; }
+    
+    .institutional-motto {
+        font-size: 0.65rem;
+        padding: 6px 15px;
+        gap: 8px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .motto-icon {
+        font-size: 0.9rem;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .btn-hero-primary {
+        padding: 12px 25px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   ANIMACIONES SOFISTICADAS
+============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content > * {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-title { animation-delay: 0.2s; }
+.hero-subtitle { animation-delay: 0.4s; }
+.hero-stats { animation-delay: 0.6s; }
+.hero-cta { animation-delay: 0.8s; }
+
+.college-main-title {
+    animation: slideInFromTop 0.8s ease-out;
+}
+
+.institutional-motto {
+    animation: fadeInScale 0.8s ease-out 0.3s both;
+}
+
+.decorative-line {
+    animation: fadeInScale 0.8s ease-out 0.5s both;
+}
+
+.institutional-logo {
+    animation: fadeInScale 0.8s ease-out 0.2s both;
+}
+
+/* ============================================
+   EFECTOS HOVER ADICIONALES
+============================================ */
+.institutional-title:hover .title-line-1 {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.institutional-title:hover .title-line-3::after {
+    width: 120px;
+    transition: width 0.3s ease;
+}
+
+/* ============================================
+   NAVBAR TOGGLE PERSONALIZADO
+============================================ */
+.navbar-toggler {
+    border: none;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.navbar-toggler-icon span {
+    width: 20px;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+    border-radius: 1px;
+}

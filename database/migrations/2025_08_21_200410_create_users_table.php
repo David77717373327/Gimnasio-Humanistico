@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('password');
             $table->string('role')->default('student');
             $table->boolean('is_approved')->default(false);
+            // relación con grados
+            $table->foreignId('grado_id')->nullable()->constrained('grados')->onDelete('set null');
             $table->rememberToken();
             $table->softDeletes(); // 👈 para soft deletes
             $table->foreignId('current_team_id')->nullable();

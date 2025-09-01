@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Horario extends Model
 {
     protected $fillable = [
-        'grado_id',
+        'grado_id',                                 
         'asignatura_id',
         'user_id',
         'dia',
         'hora_inicio',
-        'hora_fin'
+        'hora_fin'  
     ];
 
     public function grado()

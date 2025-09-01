@@ -70,4 +70,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function grado()
+    {
+        return $this->belongsTo(Grado::class);
+    }
 }

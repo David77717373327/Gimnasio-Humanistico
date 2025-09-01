@@ -26,3 +26,4 @@ class RutasController extends Controller
         return view('professor.index');
     }
 }
+

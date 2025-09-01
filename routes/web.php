@@ -6,7 +6,7 @@ use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\GradoController;
 use App\Http\Controllers\HorarioController;
 use App\Http\Controllers\RutasController;
-use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -37,8 +37,8 @@ Route::post('/register', [RegisteredUserController::class, 'store']);
 // Ruta protegida (admin)
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [RutasController::class, 'mostrarContenidoAdmin'])->name('admin.index');
-      Route::get('/admin/dashboard', [RutasController::class, 'mostrarContenidoAdmin'])->name('admin.index');
-    
+    Route::get('/admin/dashboard', [RutasController::class, 'mostrarContenidoAdmin'])->name('admin.index');
+
     //Rutas para gestionar horarios (CRUD)
     Route::get('/admin/horarios', [HorarioController::class, 'index'])->name('admin.horarios.index');
     Route::get('/admin/horarios/create', [HorarioController::class, 'create'])->name('admin.horarios.create');
@@ -46,6 +46,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/horarios/{horario}/edit', [HorarioController::class, 'edit'])->name('admin.horarios.edit');
     Route::put('/admin/horarios/{horario}', [HorarioController::class, 'update'])->name('admin.horarios.update');
     Route::delete('/admin/horarios/{horario}', [HorarioController::class, 'destroy'])->name('admin.horarios.destroy');
+
+    
 
     //Rutas para gestionar los grados (CRUD)
     Route::get('/admin/grados', [GradoController::class, 'index'])->name('admin.grados.index');
@@ -55,25 +57,38 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::put('/admin/grados/{grado}', [GradoController::class, 'update'])->name('admin.grados.update');
     Route::delete('/admin/grados/{grado}', [GradoController::class, 'destroy'])->name('admin.grados.destroy');
 
+    // Rutas adicionales para AJAX (opcional - si prefieres endpoints específicos)
+    Route::post('/admin/grados/{grado}', [GradoController::class, 'update'])->name('admin.grados.update.ajax'); // Para manejar PATCH/PUT via POST
+
+    // Añadir estas rutas a tu web.php busqueda grados 
+    Route::get('/admin/grados/search', [GradoController::class, 'search'])->name('admin.grados.search');
+    Route::get('/admin/grados/export', [GradoController::class, 'export'])->name('admin.grados.export');
+    Route::post('/admin/grados/import', [GradoController::class, 'import'])->name('admin.grados.import');
+    Route::post('/admin/grados/{grado}/duplicate', [GradoController::class, 'duplicate'])->name('admin.grados.duplicate');
+    Route::patch('/admin/grados/{grado}/toggle-status', [GradoController::class, 'toggleStatus'])->name('admin.grados.toggle-status');
+    Route::get('/admin/grados/stats', [GradoController::class, 'stats'])->name('admin.grados.stats');
+
+
+
     //Rutas para Gestionar Asignaturas (CRUD)
     Route::get('/admin/asignaturas', [AsignaturaController::class, 'index'])->name('admin.asignaturas.index');
     Route::get('/admin/asignaturas/create', [AsignaturaController::class, 'create'])->name('admin.asignaturas.create');
     Route::post('/admin/asignaturas', [AsignaturaController::class, 'store'])->name('admin.asignaturas.store');
-    Route::get('/admin/asignaturas/{id}/edit', [AsignaturaController::class, 'edit'])->name('admin.asignaturas.edit');
-    Route::put('/admin/asignaturas/{id}', [AsignaturaController::class, 'update'])->name('admin.asignaturas.update');
-    Route::delete('/admin/asignaturas/{id}', [AsignaturaController::class, 'destroy'])->name('admin.asignaturas.destroy');
+    Route::get('/admin/asignaturas/{asignatura}/edit', [AsignaturaController::class, 'edit'])->name('admin.asignaturas.edit');
+    Route::put('/admin/asignaturas/{asignatura}', [AsignaturaController::class, 'update'])->name('admin.asignaturas.update');
+    Route::delete('/admin/asignaturas/{asignatura}', [AsignaturaController::class, 'destroy'])->name('admin.asignaturas.destroy');
 
+    // Agregar esta ruta para AJAX
+    Route::get('/admin/asignaturas/{asignatura}', [AsignaturaController::class, 'show'])->name('admin.asignaturas.show');
 
-
-// Listar estudiantes pendientes
+    // Listar estudiantes pendientes
     Route::get('/admin/pendientes', [EstudianteController::class, 'listarPendientes'])->name('admin.estudiantes.pendientes');
     // Aprobar estudiante
     Route::post('/admin/aprobar/{id}', [EstudianteController::class, 'aprobar'])->name('admin.estudiantes.aprobar');
     // Rechazar estudiante
     Route::post('/admin/rechazar/{id}', [EstudianteController::class, 'rechazar'])->name('admin.estudiantes.rechazar');
 
-
-        //Rutas para gestionar estudiantes(CRUD)
+    //Rutas para gestionar estudiantes(CRUD)
     Route::get('/admin/estudiantes', [EstudianteController::class, 'index'])->name('admin.estudiantes.index');
     Route::get('/admin/estudiantes/eliminados', [EstudianteController::class, 'listarUsuariosEliminados'])->name('admin.estudiantes.eliminados');
     Route::post('/admin/estudiantes/{id}/eliminar', [EstudianteController::class, 'eliminarUsuario'])->name('admin.estudiantes.eliminar');
@@ -86,10 +101,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::post('/admin/remover-profesor/{id}', [EstudianteController::class, 'removerProfesor'])->name('admin.removerProfesor');
     Route::get('/profesor/dashboard', [RutasController::class, 'mostrarContenidoProfesor'])->name('professor.index');
     Route::post('/admin/asignar-profesor/{id}', [EstudianteController::class, 'asignarProfesor'])->name('admin.asignarProfesor')->middleware(['auth', 'role:admin']);
-
 });
-
-
 
 //Rutas protegidas para el profesor 
 Route::middleware(['auth', 'role:professor'])->group(function () {
@@ -97,12 +109,11 @@ Route::middleware(['auth', 'role:professor'])->group(function () {
 });
 
 
-
-
 // Ruta protegida (estudiante)
 Route::middleware(['auth', 'role:student'])->group(function () {
     Route::get('/estudiante/dashboard', [RutasController::class, 'mostrarContenidoEstudiante'])->name('student.index');
-
-
-    
+    // Ver horario
+    Route::get('/estudiante/horario', [HorarioController::class, 'verHorarioEstudiante'])->name('student.horario.index');
+    // Descargar horario en PDF
+    Route::get('/estudiante/horario/descargar', [HorarioController::class, 'descargarHorarioEstudiante'])->name('student.horario.descargar');
 });

@@ -11,21 +11,26 @@ return new class extends Migration
      */
     public function up(): void
     {
-    Schema::create('horarios', function (Blueprint $table) {
-        $table->id();
+        Schema::create('horarios', function (Blueprint $table) {
+            $table->id();
 
-        // Llaves foráneas
-        $table->foreignId('grado_id')->constrained()->onDelete('cascade');
-        $table->foreignId('asignatura_id')->constrained()->onDelete('cascade');
-        $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Profesor
+            // Llaves foráneas explícitas
+            $table->unsignedBigInteger('grado_id');
+            $table->unsignedBigInteger('asignatura_id');
+            $table->unsignedBigInteger('user_id'); // Profesor
 
-        // Datos del horario
-        $table->string('dia'); 
-        $table->time('hora_inicio');
-        $table->time('hora_fin');
+            // Datos del horario
+            $table->string('dia'); 
+            $table->time('hora_inicio');
+            $table->time('hora_fin');
 
-        $table->timestamps();
-    });
+            $table->timestamps();
+
+            // Definición de claves foráneas
+            $table->foreign('grado_id')->references('id')->on('grados')->onDelete('cascade');
+            $table->foreign('asignatura_id')->references('id')->on('asignaturas')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
     }
 
     /**
