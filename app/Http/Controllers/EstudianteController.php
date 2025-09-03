@@ -91,4 +91,7 @@ public function rechazar($id)
     return back()->with('error', 'Solo se pueden rechazar estudiantes.');
 }
 
+
+
+
 }

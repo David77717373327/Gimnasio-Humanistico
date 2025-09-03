@@ -29,17 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Funciones para indicadores de estado
+  // Funciones para indicadores de estado mejoradas
   function mostrarIndicadorCarga(mostrar) {
     const indicator = document.getElementById('loading-indicator');
     if(mostrar) {
       indicator.classList.remove('d-none');
+      // Agregar mensaje más claro
+      indicator.querySelector('span').textContent = 'Cargando horarios existentes y verificando asignaciones...';
     } else {
       indicator.classList.add('d-none');
     }
   }
 
-  function mostrarEstadoHorarios(count) {
+  function mostrarEstadoHorarios(count, gradoNombre = '') {
     const statusDiv = document.getElementById('horarios-status');
     const countSpan = document.getElementById('horarios-count');
     
@@ -47,9 +49,39 @@ document.addEventListener('DOMContentLoaded', () => {
       countSpan.textContent = count;
       statusDiv.classList.remove('d-none');
       statusDiv.querySelector('.alert').className = 'alert alert-success';
-      statusDiv.querySelector('strong').innerHTML = '✅ Horarios cargados:';
+      statusDiv.querySelector('strong').innerHTML = `✅ Horarios cargados para ${gradoNombre}:`;
+      
+      // Agregar información adicional
+      const alertDiv = statusDiv.querySelector('.alert');
+      let infoExtra = alertDiv.querySelector('.info-extra');
+      if (!infoExtra) {
+        infoExtra = document.createElement('div');
+        infoExtra.className = 'info-extra small mt-2';
+        alertDiv.appendChild(infoExtra);
+      }
+      infoExtra.innerHTML = `
+        <i class="fas fa-info-circle me-1"></i>
+        Los horarios existentes se muestran con borde verde. 
+        Puedes agregar nuevos horarios o modificar los existentes.
+      `;
     } else {
-      statusDiv.classList.add('d-none');
+      statusDiv.classList.remove('d-none');
+      statusDiv.querySelector('.alert').className = 'alert alert-info';
+      statusDiv.querySelector('strong').innerHTML = `📅 Grado ${gradoNombre} seleccionado:`;
+      countSpan.textContent = '0';
+      
+      // Mostrar mensaje para grado sin horarios
+      const alertDiv = statusDiv.querySelector('.alert');
+      let infoExtra = alertDiv.querySelector('.info-extra');
+      if (!infoExtra) {
+        infoExtra = document.createElement('div');
+        infoExtra.className = 'info-extra small mt-2';
+        alertDiv.appendChild(infoExtra);
+      }
+      infoExtra.innerHTML = `
+        <i class="fas fa-plus-circle me-1"></i>
+        No hay horarios asignados. Comienza arrastrando asignaturas y profesores a las casillas.
+      `;
     }
   }
 
@@ -209,18 +241,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Inicializar drag & drop
+  // Inicializar drag & drop con feedback visual mejorado
   document.querySelectorAll('.draggable').forEach(el => {
     el.addEventListener('dragstart', ev => {
+      // Agregar clase al body para indicar que se está arrastrando
+      document.body.classList.add('dragging');
+      
       ev.dataTransfer.setData('text/plain', JSON.stringify({
         type: el.dataset.type,
         id: el.dataset.id,
         text: el.dataset.text || el.querySelector('.chip-text')?.textContent.trim()
       }));
     });
+
+    el.addEventListener('dragend', () => {
+      // Remover clase del body al terminar el arrastre
+      document.body.classList.remove('dragging');
+    });
   });
 
-  // Dropzones mejorados
+  // Dropzones mejorados con mejor visualización de horarios existentes
   document.querySelectorAll('.dropzone').forEach(zone => {
     zone.addEventListener('dragover', ev => {
       if(zone.classList.contains('locked')) return;
@@ -238,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       ev.preventDefault();
       zone.classList.remove('dragover');
+      document.body.classList.remove('dragging');
 
       const raw = ev.dataTransfer.getData('text/plain') || '{}';
       let data;
@@ -250,13 +291,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const dia = diasMap[Number(zone.dataset.dia)];
         const hora = zone.dataset.inicio;
         
+        let mensajeDetallado = `<p><strong>${gradoNombre}</strong> ya tiene un horario asignado para <strong>${dia}</strong> a las <strong>${hora}</strong>.</p>`;
+        
+        // Mostrar información del horario existente
+        if (zone.dataset.asignaturaId && zone.dataset.userId) {
+          const asignaturaActual = getAsignaturaName(zone.dataset.asignaturaId);
+          const profesorActual = getProfesosName(zone.dataset.userId);
+          mensajeDetallado += `<div class="alert alert-info mt-2 mb-2">
+            <strong>Horario actual:</strong><br>
+             ${asignaturaActual}<br>
+             ${profesorActual}
+          </div>`;
+        }
+        mensajeDetallado += `<p>¿Qué deseas hacer?</p>`;
+        
         const accion = await mostrarModalConfirmacion(
           'Casilla ocupada',
-          `<p><strong>${gradoNombre}</strong> ya tiene un horario asignado para <strong>${dia}</strong> a las <strong>${hora}</strong>.</p>
-           <p>¿Qué deseas hacer?</p>`,
+          mensajeDetallado,
           {
             cancelText: 'Cancelar',
-            confirmText: '➕ Agregar aquí',
+            confirmText: '➕ Mantener y agregar',
             showReplace: true
           }
         );
@@ -328,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Agregar a pendientes
       addToPending(horarioData);
 
-      // Render visual
+      // Render visual mejorado
       renderSlot(zone, {
         asignaturaId: asignaturaId,
         profesorId: profesorId,
@@ -371,6 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Función renderSlot mejorada para mostrar mejor los horarios existentes vs nuevos
   function renderSlot(zone, info) {
     // Guardar meta data
     if(info.asignaturaId) zone.dataset.asignaturaId = info.asignaturaId;
@@ -378,34 +433,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
     zone.innerHTML = '';
     const card = document.createElement('div');
-    card.className = `slot-card ${info.isExisting ? 'existing saved' : 'pending'}`;
+    
+    // Aplicar estilos diferentes según el tipo de horario
+    if (info.isExisting) {
+      card.className = 'slot-card existing saved';
+      // Agregar borde verde para horarios existentes
+      card.style.borderLeft = '4px solid #28a745';
+      card.style.backgroundColor = '#f8fff9';
+    } else {
+      card.className = 'slot-card pending';
+      // Borde naranja para pendientes
+      card.style.borderLeft = '4px solid #ffc107';
+      card.style.backgroundColor = '#fffdf0';
+    }
 
-    // Título principal
+    // Agregar indicador de estado
+    const statusIndicator = document.createElement('div');
+    statusIndicator.className = `status-indicator ${info.isExisting ? 'existing' : 'pending'}`;
+    card.appendChild(statusIndicator);
+
+    // Título principal con icono más claro
     const title = document.createElement('div');
     title.className = 'slot-title';
-    title.textContent = info.asignaturaText || 'Asignatura';
+    title.innerHTML = ` ${info.asignaturaText || 'Asignatura'}`;
 
-    // Subtítulo
+    // Subtítulo con profesor
     const subtitle = document.createElement('div');
     subtitle.className = 'slot-subtitle';
-    subtitle.textContent = `🧑‍🏫 ${info.profesorText || 'Profesor'}`;
+    subtitle.innerHTML = ` ${info.profesorText || 'Profesor'}`;
 
     // Botones de acción
     const actions = document.createElement('div');
     actions.className = 'slot-actions';
+    
+    // Botón editar (solo para horarios existentes)
+    if (info.isExisting) {
+      const editBtn = document.createElement('button');
+      editBtn.className = 'slot-btn slot-btn-edit';
+      editBtn.innerHTML = '✏️';
+      editBtn.title = 'Editar horario';
+      editBtn.onclick = () => editarHorario(zone);
+      actions.appendChild(editBtn);
+    }
     
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'slot-btn';
     deleteBtn.innerHTML = '🗑';
     deleteBtn.title = 'Eliminar';
     deleteBtn.onclick = () => removeSlot(zone);
-
     actions.appendChild(deleteBtn);
 
-    // Badge de estado
+    // Badge de estado mejorado
     const badge = document.createElement('div');
     badge.className = 'lock-badge';
-    badge.innerHTML = info.isExisting ? '✅ Guardado' : '⏳ Pendiente';
+    if (info.isExisting) {
+      badge.innerHTML = '✅ Guardado';
+      badge.style.backgroundColor = '#28a745';
+      badge.style.color = 'white';
+    } else {
+      badge.innerHTML = '⏳ Pendiente';
+      badge.style.backgroundColor = '#ffc107';
+      badge.style.color = '#000';
+    }
 
     card.appendChild(title);
     card.appendChild(subtitle);
@@ -413,6 +502,48 @@ document.addEventListener('DOMContentLoaded', () => {
     card.appendChild(badge);
 
     zone.appendChild(card);
+  }
+
+  // Nueva función para editar horarios existentes
+  async function editarHorario(zone) {
+    const asignaturaActual = zone.dataset.asignaturaId;
+    const profesorActual = zone.dataset.userId;
+    
+    const accion = await mostrarModalConfirmacion(
+      'Editar horario',
+      `
+      <p><strong>¿Qué deseas modificar?</strong></p>
+      <div class="alert alert-info">
+        <strong>Horario actual:</strong><br>
+        📚 ${getAsignaturaName(asignaturaActual)}<br>
+        👨‍🏫 ${getProfesosName(profesorActual)}
+      </div>
+      <p><em>Arrastra una nueva asignatura o profesor sobre esta casilla para reemplazarla.</em></p>
+      `,
+      {
+        confirmText: '👌 Entendido',
+        cancelText: 'Cancelar'
+      }
+    );
+    
+    if (accion === 'continuar') {
+      // Temporalmente quitar el lock para permitir drag & drop
+      zone.classList.add('editing');
+      zone.classList.remove('locked');
+      zone.querySelector('.slot-card').style.opacity = '0.7';
+      
+      mostrarMensaje('info', 'Modo edición activado', 
+        'Ahora puedes arrastrar una nueva asignatura o profesor sobre esta casilla.',
+        'La edición se cancelará automáticamente en 30 segundos.');
+      
+      // Restaurar después de 30 segundos
+      setTimeout(() => {
+        zone.classList.remove('editing');
+        zone.classList.add('locked');
+        const card = zone.querySelector('.slot-card');
+        if (card) card.style.opacity = '1';
+      }, 30000);
+    }
   }
 
   // Nueva función para remover de arrays
@@ -434,12 +565,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // Función mejorada para remover slots
   async function removeSlot(zone) {
     const hasExistingHorario = zone.dataset.horarioId;
+    const asignaturaActual = getAsignaturaName(zone.dataset.asignaturaId);
+    const profesorActual = getProfesosName(zone.dataset.userId);
     
+    let mensaje = '';
+    if (hasExistingHorario) {
+      mensaje = `
+        <p>¿Eliminar permanentemente este horario?</p>
+        <div class="alert alert-warning">
+          <strong>Se eliminará:</strong><br>
+          📚 ${asignaturaActual}<br>
+          👨‍🏫 ${profesorActual}
+        </div>
+        <p><strong>⚠️ Esta acción no se puede deshacer.</strong></p>
+      `;
+    } else {
+      mensaje = `
+        <p>¿Eliminar esta asignación pendiente?</p>
+        <div class="alert alert-info">
+          <strong>Se eliminará:</strong><br>
+          📚 ${asignaturaActual}<br>
+          👨‍🏫 ${profesorActual}
+        </div>
+      `;
+    }
+
     const accion = await mostrarModalConfirmacion(
       'Confirmar eliminación',
-      hasExistingHorario ? 
-        '¿Eliminar esta asignación? Se eliminará permanentemente de la base de datos.' :
-        '¿Eliminar esta asignación pendiente?',
+      mensaje,
       { 
         confirmText: hasExistingHorario ? '🗑️ Eliminar permanentemente' : '🗑️ Eliminar',
         cancelText: 'Cancelar'
@@ -488,7 +641,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Actualizar contador de horarios
     const totalHorarios = existingHorarios.length + savedHorarios.length;
-    mostrarEstadoHorarios(totalHorarios);
+    const gradoNombre = getGradoName(CURRENT_GRADO_ID);
+    mostrarEstadoHorarios(totalHorarios, gradoNombre);
     
     mostrarMensaje('success', 'Eliminado correctamente', 
       hasExistingHorario ? 'El horario ha sido eliminado de la base de datos.' : 'Asignación eliminada.');
@@ -498,12 +652,52 @@ document.addEventListener('DOMContentLoaded', () => {
     zone.classList.add('locked'); 
   }
   
+  // FUNCIÓN MEJORADA: clearCell con contexto visual
   function clearCell(zone) {
-    zone.classList.remove('locked', 'has-existing');
+    zone.classList.remove('locked', 'has-existing', 'editing');
     delete zone.dataset.asignaturaId;
     delete zone.dataset.userId;
     delete zone.dataset.horarioId;
-    zone.innerHTML = '<div class="slot-placeholder">Arrastra aquí</div>';
+    
+    // En lugar del placeholder genérico, mostrar información de la franja horaria
+    const dia = diasMap[Number(zone.dataset.dia)] || 'Día';
+    const hora = zone.dataset.inicio || 'Hora';
+    
+    zone.innerHTML = `
+      <div class="slot-placeholder-contextual">
+        <div class="placeholder-info">
+          <div class="placeholder-day">${dia}</div>
+          <div class="placeholder-time">${hora}</div>
+          <div class="placeholder-action">Arrastra aquí</div>
+        </div>
+      </div>
+    `;
+  }
+
+  // NUEVA FUNCIÓN: Mostrar placeholders informativos para grados sin horarios
+  function mostrarPlaceholdersVacios() {
+    document.querySelectorAll('.dropzone').forEach(zone => {
+      if (!zone.classList.contains('locked')) {
+        const dia = diasMap[Number(zone.dataset.dia)];
+        const hora = zone.dataset.inicio;
+        
+        zone.classList.add('empty-grade');
+        zone.innerHTML = `
+          <div class="slot-empty-info">
+            <div class="empty-info-header">
+              <span class="day-badge">${dia}</span>
+              <span class="time-badge">${hora}</span>
+            </div>
+            <div class="empty-info-body">
+              <div class="drag-hint">
+                <span class="hint-icon">🎯</span>
+                <span class="hint-text">Arrastra materia + profesor</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    });
   }
 
   function getAsignaturaName(id) {
@@ -566,13 +760,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const resultado = await guardarHorario(horario);
         if(resultado.success) {
           exitosos++;
-          // Marcar como guardado
+          // Marcar como guardado y cambiar apariencia
           const card = horario.zone.querySelector('.slot-card');
           if(card) {
             card.classList.remove('pending');
-            card.classList.add('saved');
+            card.classList.add('saved', 'existing');
+            card.style.borderLeft = '4px solid #ffffff';
+            card.style.backgroundColor = '#f8fff9';
             const badge = card.querySelector('.lock-badge');
-            if(badge) badge.innerHTML = '✅ Guardado';
+            if(badge) {
+              badge.innerHTML = '✅ Guardado';
+              badge.style.backgroundColor = '#28a745';
+              badge.style.color = 'white';
+            }
           }
           savedHorarios.push(horario);
 
@@ -587,8 +787,14 @@ document.addEventListener('DOMContentLoaded', () => {
           if(card) {
             card.classList.remove('pending');
             card.classList.add('error');
+            card.style.borderLeft = '4px solid #dc3545';
+            card.style.backgroundColor = '#fff5f5';
             const badge = card.querySelector('.lock-badge');
-            if(badge) badge.innerHTML = '❌ Error';
+            if(badge) {
+              badge.innerHTML = '❌ Error';
+              badge.style.backgroundColor = '#dc3545';
+              badge.style.color = 'white';
+            }
           }
         }
       } catch(error) {
@@ -609,7 +815,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Actualizar contador
     const totalHorarios = existingHorarios.length + savedHorarios.length;
-    mostrarEstadoHorarios(totalHorarios);
+    const gradoNombre = getGradoName(CURRENT_GRADO_ID);
+    mostrarEstadoHorarios(totalHorarios, gradoNombre);
 
     // Mostrar resultado
     if(errores === 0) {
@@ -681,6 +888,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Si el horario se guardó, almacenar el ID para futuras actualizaciones
       if(json.success && json.horario && json.horario.id) {
         horarioData.zone.dataset.horarioId = json.horario.id;
+        // FIX: Normalizar hora_inicio después de guardar, por si el servidor devuelve con segundos
+        horarioData.hora_inicio = json.horario.hora_inicio.substring(0, 5);
       }
 
       return {
@@ -698,7 +907,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // FUNCIÓN MEJORADA: Cargar horario existente
+  // FUNCIÓN MEJORADA: Cargar horario existente con mejor feedback visual
   async function cargarHorarioExistente(gradoId) {
     try {
       limpiarHorario();
@@ -708,21 +917,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       
       mostrarIndicadorCarga(false);
+      const gradoNombre = getGradoName(gradoId);
       
       if(response.ok) {
         const horarios = await response.json();
         if(horarios && horarios.length > 0) {
           cargarHorariosEnTabla(horarios);
-          mostrarEstadoHorarios(horarios.length);
+          mostrarEstadoHorarios(horarios.length, gradoNombre);
           
           mostrarMensaje('success', 'Horarios cargados', 
-            `Se encontraron ${horarios.length} clases programadas para ${getGradoName(gradoId)}.`,
-            'Puedes agregar nuevas clases o modificar las existentes.');
+            `Se encontraron ${horarios.length} clases programadas para ${gradoNombre}.`,
+            'Las casillas con borde verde son horarios existentes. Puedes agregar nuevas clases o modificar las existentes.');
         } else {
-          mostrarEstadoHorarios(0);
-          mostrarMensaje('info', 'Sin horarios', 
-            `No se encontraron horarios para ${getGradoName(gradoId)}.`,
-            'Comienza arrastrando asignaturas y profesores a las casillas.');
+          mostrarEstadoHorarios(0, gradoNombre);
+          mostrarMensaje('info', 'Grado sin horarios', 
+            `${gradoNombre} no tiene horarios asignados.`,
+            'Comienza arrastrando asignaturas y profesores a las casillas para crear el horario.');
         }
       } else {
         mostrarMensaje('warning', 'Error al cargar', 
@@ -741,42 +951,57 @@ document.addEventListener('DOMContentLoaded', () => {
   function cargarHorariosEnTabla(horarios) {
     const invDias = {'Lunes':1,'Martes':2,'Miércoles':3,'Jueves':4,'Viernes':5};
     
-    // Limpiar horarios existentes almacenados
+    console.log('Horarios recibidos:', horarios);
+    
     existingHorarios = [];
     savedHorarios = [];
     
     horarios.forEach(h => {
-      const diaNum = invDias[h.dia];
-      if(!diaNum) return;
-      
-      const selector = `.dropzone[data-dia="${diaNum}"][data-inicio="${h.hora_inicio}"]`;
-      const zone = document.querySelector(selector);
-      
-      if(zone && !zone.classList.contains('locked')) {
-        // Almacenar ID del horario existente para futuras operaciones
-        zone.dataset.horarioId = h.id;
+        const diaNum = invDias[h.dia];
+        // Normalizar hora_inicio para eliminar segundos
+        const horaInicioNormalizada = h.hora_inicio.substring(0, 5);
+        console.log('Procesando horario:', h, 'Dia num:', diaNum, 'Hora normalizada:', horaInicioNormalizada);
         
-        // Marcar zona como que tiene horario existente
-        zone.classList.add('has-existing');
+        if(!diaNum) {
+            console.warn(`Día inválido: ${h.dia}`);
+            return;
+        }
         
-        renderSlot(zone, {
-          asignaturaId: h.asignatura_id,
-          profesorId: h.user_id,
-          asignaturaText: h.asignatura?.nombre || getAsignaturaName(h.asignatura_id),
-          profesorText: h.user?.name || getProfesosName(h.user_id),
-          isExisting: true
-        });
+        const selector = `.dropzone[data-dia="${diaNum}"][data-inicio="${horaInicioNormalizada}"]`;
+        const zone = document.querySelector(selector);
         
-        lockCell(zone);
+        console.log('Selector:', selector, 'Zone encontrada:', !!zone);
         
-        // Agregar a horarios existentes
-        existingHorarios.push({...h, zone: zone});
-      }
+        if(zone && !zone.classList.contains('locked')) {
+            zone.dataset.horarioId = h.id;
+            zone.classList.add('has-existing');
+            
+            console.log('Renderizando slot con:', {
+                asignaturaId: h.asignatura_id,
+                profesorId: h.user_id,
+                asignaturaText: h.asignatura?.nombre || getAsignaturaName(h.asignatura_id),
+                profesorText: h.user?.name || getProfesosName(h.user_id)
+            });
+            
+            renderSlot(zone, {
+                asignaturaId: h.asignatura_id,
+                profesorId: h.user_id,
+                asignaturaText: h.asignatura?.nombre || getAsignaturaName(h.asignatura_id),
+                profesorText: h.user?.name || getProfesosName(h.user_id),
+                isExisting: true
+            });
+            
+            lockCell(zone);
+            
+            // FIX: Guardar con hora normalizada en el array para consistencia en PDF
+            existingHorarios.push({...h, hora_inicio: horaInicioNormalizada, zone: zone});
+        } else {
+            console.warn(`No se encontró zona para dia=${h.dia}, hora_inicio=${horaInicioNormalizada}`);
+        }
     });
-
-    // Actualizar PDF con horarios existentes
+    
     actualizarHorarioPDF();
-  }
+}
 
   function limpiarHorario() {
     document.querySelectorAll('.dropzone').forEach(clearCell);
@@ -788,162 +1013,230 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // FUNCIONES PARA PDF MEJORADO
-  function actualizarHorarioPDF() {
-    // Actualizar nombre del grado en PDF
-    const pdfGradoNombre = document.getElementById('pdf-grado-nombre');
-    if(pdfGradoNombre && CURRENT_GRADO_ID) {
-      pdfGradoNombre.textContent = `Grado: ${getGradoName(CURRENT_GRADO_ID)}`;
-    }
-
-    // Limpiar tabla PDF primero
-    limpiarHorarioPDF();
-    
-    const invDias = {'Lunes':1,'Martes':2,'Miércoles':3,'Jueves':4,'Viernes':5};
-    const todosLosHorarios = [...existingHorarios, ...savedHorarios];
-    const coloresAsignaturas = {};
-    let colorIndex = 1;
-    
-    todosLosHorarios.forEach(horario => {
-      const diaNum = invDias[horario.dia];
-      if(!diaNum) return;
-      
-      // Asignar color a la asignatura si no tiene uno
-      const asignaturaId = horario.asignatura_id;
-      if(!coloresAsignaturas[asignaturaId]) {
-        coloresAsignaturas[asignaturaId] = colorIndex;
-        colorIndex = (colorIndex % 6) + 1; // Rotar entre 6 colores
-      }
-      
-      const selector = `.pdf-clase-cell[data-pdf-dia="${diaNum}"][data-pdf-inicio="${horario.hora_inicio}"]`;
-      const pdfCell = document.querySelector(selector);
-      
-      if(pdfCell) {
-        const asignaturaTexto = horario.asignatura?.nombre || getAsignaturaName(horario.asignatura_id);
-        const profesorTexto = horario.user?.name || getProfesosName(horario.user_id);
-        
-        pdfCell.innerHTML = `
-          <div class="pdf-clase-ocupada color-${coloresAsignaturas[asignaturaId]}">
-            <span class="pdf-asignatura">${asignaturaTexto}</span>
-            <span class="pdf-profesor">👨‍🏫 ${profesorTexto}</span>
-          </div>
-        `;
-      }
-    });
+function actualizarHorarioPDF() {
+  console.log('Iniciando actualizarHorarioPDF con CURRENT_GRADO_ID:', CURRENT_GRADO_ID);
+  
+  // Actualizar nombre del grado en PDF
+  const pdfGradoNombre = document.getElementById('pdf-grado-nombre');
+  if (pdfGradoNombre && CURRENT_GRADO_ID) {
+    const gradoName = getGradoName(CURRENT_GRADO_ID);
+    pdfGradoNombre.textContent = `Grado: ${gradoName}`;
+    console.log('Nombre del grado actualizado en PDF:', gradoName);
+  } else {
+    console.warn('No se pudo actualizar el nombre del grado, pdfGradoNombre o CURRENT_GRADO_ID no disponible');
   }
 
-  function limpiarHorarioPDF() {
-    document.querySelectorAll('.pdf-clase-cell').forEach(cell => {
-      cell.innerHTML = `
-        <div class="pdf-clase-vacia">
-          <span class="pdf-placeholder">Libre</span>
+  // Limpiar tabla PDF primero
+  limpiarHorarioPDF();
+  console.log('Tabla PDF limpiada');
+
+  const invDias = {'Lunes':1,'Martes':2,'Miércoles':3,'Jueves':4,'Viernes':5};
+  const todosLosHorarios = [...existingHorarios, ...savedHorarios];
+  console.log('Todos los horarios a procesar:', todosLosHorarios);
+
+  const coloresAsignaturas = {};
+  let colorIndex = 1;
+
+  todosLosHorarios.forEach(horario => {
+    const diaNum = invDias[horario.dia];
+    if (!diaNum) {
+      console.warn('Día inválido encontrado, skipping horario:', horario);
+      return;
+    }
+
+    // FIX: Normalizar hora_inicio para eliminar segundos si existen (consistencia con data-pdf-inicio="HH:MM")
+    const horaInicioNormalizada = horario.hora_inicio.substring(0, 5);
+
+    // Asignar color a la asignatura si no tiene uno
+    const asignaturaId = horario.asignatura_id;
+    if (!coloresAsignaturas[asignaturaId]) {
+      coloresAsignaturas[asignaturaId] = colorIndex;
+      colorIndex = (colorIndex % 6) + 1; // Rotar entre 6 colores
+      console.log('Asignado color', colorIndex, 'a asignatura ID:', asignaturaId);
+    }
+
+    // FIX: Usar hora normalizada en el selector
+    const selector = `.pdf-clase-cell[data-pdf-dia="${diaNum}"][data-pdf-inicio="${horaInicioNormalizada}"]`;
+    const pdfCell = document.querySelector(selector);
+
+    if (pdfCell) {
+      const asignaturaTexto = horario.asignatura?.nombre || getAsignaturaName(horario.asignatura_id);
+      const profesorTexto = horario.user?.name || getProfesosName(horario.user_id);
+      console.log('Rellenando celda PDF:', { diaNum, horaInicio: horaInicioNormalizada, asignaturaTexto, profesorTexto });
+
+      pdfCell.innerHTML = `
+        <div class="pdf-clase-ocupada color-${coloresAsignaturas[asignaturaId]}">
+          <span class="pdf-asignatura">${asignaturaTexto}</span>
+          <span class="pdf-profesor">${profesorTexto}</span>
         </div>
       `;
-    });
+    } else {
+      console.warn('No se encontró celda PDF para selector:', selector, 'con horario:', horario);
+    }
+  });
+  console.log('Finalizado actualizarHorarioPDF');
+}
+
+function limpiarHorarioPDF() {
+  console.log('Iniciando limpiarHorarioPDF');
+  document.querySelectorAll('.pdf-clase-cell').forEach(cell => {
+    cell.innerHTML = `
+      <div class="pdf-clase-vacia">
+        <span class="pdf-placeholder">Libre</span>
+      </div>
+    `;
+  });
+  console.log('Tabla PDF limpiada con éxito');
+}
+
+// Botones adicionales mejorados
+document.getElementById('resetHorario').onclick = async () => {
+  const totalHorarios = existingHorarios.length + savedHorarios.length + pendingHorarios.length;
+
+  const accion = await mostrarModalConfirmacion(
+    'Reiniciar horario',
+    `¿Reiniciar todo el horario? Se limpiarán ${totalHorarios} clases programadas.<br><strong>⚠️ Los horarios guardados en la base de datos NO se eliminarán.</strong>`,
+    { confirmText: '🔄 Reiniciar vista' }
+  );
+
+  if (accion === 'continuar') {
+    limpiarHorario();
+    ocultarIndicadores();
+    mostrarMensaje('info', 'Vista reiniciada', 
+      'El horario ha sido reiniciado. Selecciona un grado para cargar sus horarios.');
+  }
+};
+
+// FUNCIÓN MEJORADA: Descargar PDF
+document.getElementById('downloadHorario').onclick = async () => {
+  console.log('Iniciando descarga de PDF con CURRENT_GRADO_ID:', CURRENT_GRADO_ID);
+
+  if (!CURRENT_GRADO_ID) {
+    mostrarMensaje('warning', 'Selecciona un grado', 'Debes seleccionar un grado para descargar su horario.');
+    console.warn('Descarga cancelada: No hay CURRENT_GRADO_ID');
+    return;
   }
 
-  // Botones adicionales mejorados
-  document.getElementById('resetHorario').onclick = async () => {
-    const totalHorarios = existingHorarios.length + savedHorarios.length + pendingHorarios.length;
-    
+  // FIX: Verificar si hay pendientes y sugerir guardar primero (mejor UX)
+  if (pendingHorarios.length > 0) {
     const accion = await mostrarModalConfirmacion(
-      'Reiniciar horario',
-      `¿Reiniciar todo el horario? Se limpiarán ${totalHorarios} clases programadas.<br><strong>⚠️ Los horarios guardados en la base de datos NO se eliminarán.</strong>`,
-      { confirmText: '🔄 Reiniciar vista' }
+      'Cambios pendientes',
+      `Tienes ${pendingHorarios.length} cambios sin guardar. El PDF solo incluirá datos guardados en el servidor.<br><em>¿Guardar ahora o continuar sin ellos?</em>`,
+      { 
+        cancelText: 'Cancelar',
+        confirmText: '📥 Descargar sin cambios',
+        showReplace: true, // Usamos "reemplazar" como "Guardar y descargar"
+        cancelText: 'Cancelar',
+        confirmText: '📥 Descargar sin guardar',
+      }
     );
     
-    if(accion === 'continuar') {
-      limpiarHorario();
-      ocultarIndicadores();
-      mostrarMensaje('info', 'Vista reiniciada', 
-        'El horario ha sido reiniciado. Selecciona un grado para cargar sus horarios.');
+    if (accion === 'reemplazar') {
+      // Guardar pendientes primero
+      await guardarTodosPendientes();
+    } else if (accion !== 'continuar') {
+      console.log('Descarga cancelada por cambios pendientes');
+      return;
     }
-  };
+  }
 
-  // FUNCIÓN MEJORADA: Descargar PDF
-  document.getElementById('downloadHorario').onclick = async () => {
-    if(!CURRENT_GRADO_ID) {
-      mostrarMensaje('warning', 'Selecciona un grado', 'Debes seleccionar un grado para descargar su horario.');
+  // Verificar si hay horarios para mostrar
+  const totalHorarios = existingHorarios.length + savedHorarios.length;
+  console.log('Total horarios locales:', totalHorarios, 'existingHorarios:', existingHorarios.length, 'savedHorarios:', savedHorarios.length);
+
+  if (totalHorarios === 0) {
+    mostrarMensaje('warning', 'Sin horarios', 
+      'No hay clases programadas para descargar.',
+      'Agrega algunas clases antes de generar el PDF.');
+    console.warn('Descarga cancelada: No hay horarios locales');
+    return;
+  }
+
+  try {
+    console.log('Iniciando generación de PDF');
+    mostrarMensaje('info', 'Generando PDF', 'Se está preparando tu horario escolar...');
+
+    // Recargar horarios desde el servidor para asegurar que estén actualizados
+    mostrarIndicadorCarga(true);
+    const response = await fetch(`${window.Laravel.routes.horarios_index}?grado_id=${CURRENT_GRADO_ID}&format=json`, {
+      headers: { 'X-Requested-With': 'XMLHttpRequest' }
+    });
+    console.log('Respuesta de fetch recibida, status:', response.status);
+
+    mostrarIndicadorCarga(false);
+
+    if (response.ok) {
+      const horarios = await response.json();
+      console.log('Horarios cargados desde el servidor:', horarios);
+
+      limpiarHorario(); // Limpiar arrays locales
+      console.log('Arrays locales limpiados');
+      cargarHorariosEnTabla(horarios); // Recargar todos los horarios
+      console.log('Horarios recargados en tabla');
+    } else {
+      const errorText = await response.text();
+      mostrarMensaje('warning', 'Error al cargar', 
+        'No se pudieron cargar los horarios para el PDF.',
+        'Intenta nuevamente.');
+      console.error('Error en respuesta fetch, status:', response.status, 'texto:', errorText);
       return;
     }
 
-    // Verificar si hay horarios para mostrar
-    const totalHorarios = existingHorarios.length + savedHorarios.length;
-    if(totalHorarios === 0) {
-      mostrarMensaje('warning', 'Sin horarios', 
-        'No hay clases programadas para descargar.',
-        'Agrega algunas clases antes de generar el PDF.');
-      return;
-    }
+    // Actualizar PDF con todos los horarios recargados
+    actualizarHorarioPDF();
+    console.log('PDF actualizado con horarios');
 
-    if(pendingHorarios.length > 0) {
-      const accion = await mostrarModalConfirmacion(
-        'Cambios pendientes',
-        `Tienes ${pendingHorarios.length} cambios sin guardar. ¿Deseas continuar con la descarga?<br><em>Los cambios pendientes NO aparecerán en el PDF.</em>`,
-        { 
-          confirmText: '📥 Descargar sin cambios pendientes',
-          cancelText: 'Cancelar'
-        }
-      );
-      
-      if(accion !== 'continuar') return;
-    }
+    // Ocultar editor y mostrar PDF
+    document.getElementById('horario-editor').classList.add('d-none');
+    document.getElementById('editor-help').classList.add('d-none');
+    document.getElementById('horario-pdf').classList.remove('d-none');
+    console.log('Vista PDF mostrada temporalmente');
 
-    try {
-      mostrarMensaje('info', 'Generando PDF', 'Se está preparando tu horario escolar...');
-      
-      // Actualizar PDF con datos actuales
-      actualizarHorarioPDF();
-      
-      // Ocultar editor y mostrar PDF
-      document.getElementById('horario-editor').classList.add('d-none');
-      document.getElementById('editor-help').classList.add('d-none');
-      document.getElementById('horario-pdf').classList.remove('d-none');
-      
-      // Generar PDF con configuración mejorada
-      const element = document.getElementById('horario-pdf');
-      const opt = {
-        margin: [0.5, 0.5, 0.5, 0.5],
-        filename: `Horario_${getGradoName(CURRENT_GRADO_ID)}_${new Date().toISOString().split('T')[0]}.pdf`,
-        image: { type: 'jpeg', quality: 0.95 },
-        html2canvas: { 
-          scale: 2,
-          useCORS: true,
-          allowTaint: true,
-          backgroundColor: '#ffffff'
-        },
-        jsPDF: { 
-          unit: 'in', 
-          format: 'letter', 
-          orientation: 'landscape',
-          compress: true
-        }
-      };
-      
-      await html2pdf().set(opt).from(element).save();
-      
-      // Restaurar vista de editor
-      document.getElementById('horario-pdf').classList.add('d-none');
-      document.getElementById('horario-editor').classList.remove('d-none');
-      document.getElementById('editor-help').classList.remove('d-none');
-      
-      mostrarMensaje('success', 'PDF descargado', 
-        `Horario de ${getGradoName(CURRENT_GRADO_ID)} descargado exitosamente.`,
-        'El archivo incluye todas las clases guardadas con un diseño profesional.');
-      
-    } catch(error) {
-      console.error('Error generando PDF:', error);
-      
-      // Asegurar que la vista vuelva al editor
-      document.getElementById('horario-pdf').classList.add('d-none');
-      document.getElementById('horario-editor').classList.remove('d-none');
-      document.getElementById('editor-help').classList.remove('d-none');
-      
-      mostrarMensaje('error', 'Error al generar PDF', 
-        'No se pudo generar el archivo PDF.',
-        'Intenta nuevamente o contacta al soporte técnico.');
-    }
-  };
+    const element = document.getElementById('horario-pdf');
+    const opt = {
+      margin: [0.5, 0.5, 0.5, 0.5],
+      filename: `Horario_${getGradoName(CURRENT_GRADO_ID)}_${new Date().toISOString().split('T')[0]}.pdf`,
+      image: { type: 'jpeg', quality: 0.95 },
+      html2canvas: { 
+        scale: 2,
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: '#ffffff'
+      },
+      jsPDF: { 
+        unit: 'in', 
+        format: 'letter', 
+        orientation: 'landscape',
+        compress: true
+      }
+    };
+    
+    console.log('Iniciando conversión a PDF con html2pdf');
+    await html2pdf().set(opt).from(element).save();
+    console.log('PDF generado y descargado');
 
+    // Restaurar vista de editor
+    document.getElementById('horario-pdf').classList.add('d-none');
+    document.getElementById('horario-editor').classList.remove('d-none');
+    document.getElementById('editor-help').classList.remove('d-none');
+    console.log('Vista de editor restaurada');
+
+    mostrarMensaje('success', 'PDF descargado', 
+      `Horario de ${getGradoName(CURRENT_GRADO_ID)} descargado exitosamente.`,
+      'El archivo incluye todas las clases guardadas con un diseño profesional.');
+    
+  } catch (error) {
+    console.error('Error general generando PDF:', error);
+
+    document.getElementById('horario-pdf').classList.add('d-none');
+    document.getElementById('horario-editor').classList.remove('d-none');
+    document.getElementById('editor-help').classList.remove('d-none');
+
+    mostrarMensaje('error', 'Error al generar PDF', 
+      'No se pudo generar el archivo PDF.',
+      'Intenta nuevamente o contacta al soporte técnico.');
+  }
+};
   // Cargar horario inicial si hay grado seleccionado
   if(CURRENT_GRADO_ID) {
     mostrarIndicadorCarga(true);
@@ -976,18 +1269,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.dropzone').forEach(zone => {
     observer.observe(zone, { childList: true, subtree: true });
   });
-
-  // Mensaje de bienvenida mejorado
-  if(!localStorage.getItem('horario_welcome_shown_v2')) {
-    setTimeout(() => {
-      if(existingHorarios.length === 0) {
-        mostrarMensaje('info', '¡Bienvenido al editor de horarios!', 
-          'Arrastra asignaturas y profesores a las casillas para crear horarios. Los horarios existentes se cargan automáticamente.',
-          'Selecciona un grado para comenzar o ver horarios existentes.');
-      }
-      localStorage.setItem('horario_welcome_shown_v2', 'true');
-    }, 1500);
-  }
 
   // Funciones de utilidad adicionales
   window.horarioUtils = {

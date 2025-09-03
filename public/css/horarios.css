@@ -1,238 +1,261 @@
-/* ===============================================
-   ESTILOS PARA SISTEMA DE HORARIOS ESCOLARES
-   =============================================== */
-
+/* Paleta de colores pastel para asignaturas */
 :root {
-  --primary: #1E88E5;
-  --success: #43A047;
-  --warn: #FB8C00;
-  --bg: #F7FAFF;
-  --chip-blue: #90CAF9;
-  --chip-green: #A5D6A7;
-  --chip-yellow: #FFE082;
-  --lock: #546E7A;
+  --color-1: #E6F0FA; /* Azul claro */
+  --color-2: #E6F3E6; /* Verde menta */
+  --color-3: #FCE4EC; /* Rosa suave */
+  --color-4: #FFF3E0; /* Naranja claro */
+  --color-5: #EDE7F6; /* Púrpura suave */
+  --color-6: #E0F7FA; /* Cian claro */
+  --text-contrast: #333333; /* Texto oscuro para contraste */
+  --delete-red: #DC3545; /* Rojo para eliminar */
+  --delete-red-hover: #C82333; /* Rojo más oscuro al hover */
 }
 
-body {
-  background: var(--bg);
+/* Estilos generales para la tabla */
+#tabla-horario {
+  background: #FFFFFF;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
 }
 
-/* ===== CHIPS ARRASTRABLES ===== */
-.chip {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 0.8rem;
-  border-radius: 14px;
-  font-weight: 600;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  user-select: none;
-  cursor: grab;
-  transition: all 0.2s ease;
-}
-
-.chip:active {
-  cursor: grabbing;
-  transform: scale(0.98);
-}
-
-.chip.asignatura {
-  background: linear-gradient(135deg, var(--chip-green), #C8E6C9);
-}
-
-.chip.profesor {
-  background: linear-gradient(135deg, var(--chip-yellow), #FFF3CD);
-}
-
-/* ===== TABLA DE HORARIO - EDITOR ===== */
-#tabla-horario thead th {
-  background: linear-gradient(135deg, #64B5F6, #1E88E5);
-  color: #fff;
-  font-weight: 800;
-  padding: 14px 8px;
+.thead-row th {
+  background: #F1F8E9;
+  color: #2E7D32;
+  font-weight: 700;
+  padding: 0.75rem;
+  border-bottom: 2px solid #C8E6C9;
+  text-align: center;
 }
 
 .hora-cell {
-  background: #E3F2FD;
-  color: #1565C0;
+  background: #F5F5F5;
+  color: #424242;
   font-weight: 600;
+  padding: 0.5rem;
+  width: 100px;
+  border-right: 1px solid #E0E0E0;
 }
 
-/* ===== DROPZONES ===== */
 .dropzone {
-  min-height: 82px;
+  min-height: 80px;
+  padding: 0.5rem;
   background: #FAFAFA;
-  border: 2px dashed #CFD8DC;
-  border-radius: 12px;
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
   transition: all 0.2s ease;
-  position: relative;
-  padding: 6px;
 }
 
-.dropzone:not(.locked):hover {
-  background: #F1F8E9;
-  border-color: #9CCC65;
+/* Placeholder para slots vacíos */
+.slot-placeholder-contextual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 70px;
+  background: #F5F7FA;
+  border: 1px dashed #B0BEC5;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
-.dropzone.dragover {
-  background: #E8F5E9;
-  border-color: #43A047;
-  transform: scale(1.01);
+.slot-placeholder-contextual:hover {
+  background: #E3F2FD;
+  border-color: #2196F3;
 }
 
-.dropzone.has-existing {
-  background: #FFF3E0;
-  border-color: #FF9800;
-}
-
-.slot-placeholder {
-  color: #B0BEC5;
-  font-weight: 600;
+.placeholder-info {
   text-align: center;
-  padding: 20px 8px;
+  line-height: 1.3;
 }
 
-/* ===== TARJETAS DE HORARIO ===== */
+.placeholder-day {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #455A64;
+}
+
+.placeholder-time {
+  font-size: 0.75rem;
+  color: #78909C;
+}
+
+.placeholder-action {
+  font-size: 0.7rem;
+  color: #2196F3;
+  font-weight: 600;
+  padding: 2px 6px;
+  background: rgba(33, 150, 243, 0.1);
+  border-radius: 4px;
+}
+
+/* Slots ocupados */
 .slot-card {
-  background: linear-gradient(135deg, #42A5F5, #66BB6A);
-  color: #fff;
-  border-radius: 14px;
-  padding: 0.6rem 0.75rem;
-  text-align: left;
-  animation: pop 0.18s ease-out;
   position: relative;
-  min-height: 60px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-contrast);
+  transition: all 0.2s ease;
 }
 
 .slot-card.existing {
-  background: linear-gradient(135deg, #8E24AA, #5E35B1);
   border-left: 4px solid #4CAF50;
 }
 
 .slot-card.pending {
-  border-left: 4px solid #FF9800;
-}
-
-.slot-card.saved {
-  border-left: 4px solid #4CAF50;
+  border-left: 4px solid #FFB300;
+  background: rgba(255, 179, 0, 0.1);
 }
 
 .slot-card.error {
-  border-left: 4px solid #F44336;
+  border-left: 4px solid var(--delete-red);
+  background: rgba(220, 53, 69, 0.1);
 }
 
 .slot-title {
-  font-weight: 800;
   font-size: 0.9rem;
-  line-height: 1.2;
+  font-weight: 600;
   margin-bottom: 0.2rem;
 }
 
 .slot-subtitle {
-  font-size: 0.75rem;
-  opacity: 0.9;
+  font-size: 0.8rem;
+  color: #616161;
 }
 
-/* ===== ACCIONES DE SLOT ===== */
-.slot-actions {
-  position: absolute;
-  top: 6px;
-  right: 8px;
-  display: flex;
-  gap: 0.2rem;
-}
-
+/* Botón de eliminación (X roja) */
 .slot-btn {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: none;
   border: none;
+  color: var(--delete-red);
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.3);
-  color: #fff;
-  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
   transition: all 0.2s ease;
 }
 
 .slot-btn:hover {
-  background: rgba(255, 255, 255, 0.5);
-  transform: scale(1.1);
+  color: var(--delete-red-hover);
+  background: rgba(220, 53, 69, 0.1);
 }
 
+/* Badge de estado */
 .lock-badge {
   position: absolute;
-  left: 8px;
-  bottom: 6px;
-  font-size: 0.75rem;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 8px;
+  bottom: 4px;
+  right: 4px;
+  font-size: 0.65rem;
   padding: 2px 6px;
-  color: #333;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
-/* ===== DESCANSO ===== */
-.row-break td {
-  background: #FFEBEE;
+.lock-badge.existing {
+  background: #4CAF50;
+  color: white;
 }
 
-.break-pill {
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  background: #EF9A9A;
-  color: #B71C1C;
-  font-weight: 800;
-  display: inline-block;
+.lock-badge.pending {
+  background: #FFB300;
+  color: #333333;
 }
 
-/* ===== ANIMACIONES ===== */
-@keyframes pop {
-  from {
-    transform: scale(0.96);
-    opacity: 0.7;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+/* Estilos para PDF */
+.pdf-clase-cell {
+  padding: 0.5rem;
+  border: 1px solid #E0E0E0;
+  min-height: 60px;
+  text-align: center;
 }
 
-/* ===== SPINNER ===== */
-.spinner {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #1E88E5;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  display: inline-block;
+.pdf-clase-ocupada {
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--text-contrast);
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.pdf-clase-vacia {
+  font-size: 0.8rem;
+  color: #78909C;
 }
 
-/* ===== RESPONSIVE ===== */
+.pdf-asignatura {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.pdf-profesor {
+  font-size: 0.75rem;
+}
+
+/* Colores pastel para asignaturas en tabla y PDF */
+.color-1 { background: var(--color-1); }
+.color-2 { background: var(--color-2); }
+.color-3 { background: var(--color-3); }
+.color-4 { background: var(--color-4); }
+.color-5 { background: var(--color-5); }
+.color-6 { background: var(--color-6); }
+
+/* Mejoras responsivas */
 @media (max-width: 768px) {
-  .chip {
-    padding: 0.4rem 0.6rem;
+  .slot-card {
+    min-height: 60px;
+    padding: 0.4rem;
+  }
+
+  .slot-title {
     font-size: 0.85rem;
   }
-  
-  .slot-card {
-    padding: 0.4rem 0.5rem;
-    min-height: 50px;
+
+  .slot-subtitle {
+    font-size: 0.75rem;
   }
-  
-  .slot-title {
+
+  .slot-btn {
+    font-size: 0.9rem;
+  }
+
+  .lock-badge {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+  }
+
+  .placeholder-day {
     font-size: 0.8rem;
   }
-  
-  .slot-subtitle {
+
+  .placeholder-time {
     font-size: 0.7rem;
   }
-  
-  .dropzone {
-    min-height: 60px;
+
+  .placeholder-action {
+    font-size: 0.65rem;
   }
+}
+
+/* Feedback de arrastre */
+body.dragging .dropzone:not(.locked) {
+  border: 2px solid #2196F3;
+  background: rgba(33, 150, 243, 0.1);
+}
+
+body.dragging .dropzone.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Transiciones suaves */
+.dropzone, .slot-card, .slot-placeholder-contextual {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

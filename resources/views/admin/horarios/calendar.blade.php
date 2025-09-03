@@ -12,7 +12,6 @@
     </div>
   </div>
 
-  {{-- Selector de Grado --}}
   <div class="row mb-3">
     <div class="col-md-4">
       <label class="form-label fw-bold">Seleccionar Grado:</label>
@@ -26,14 +25,12 @@
       </select>
     </div>
     <div class="col-md-8">
-      {{-- Indicador de estado de carga --}}
       <div id="loading-indicator" class="d-none">
         <div class="alert alert-info d-flex align-items-center">
           <div class="spinner me-2"></div>
-          <span>Cargando horarios existentes...</span>
+          <span>Cargando horarios...</span>
         </div>
       </div>
-      {{-- Indicador de horarios cargados --}}
       <div id="horarios-status" class="d-none">
         <div class="alert alert-success">
           <strong>✅ Horarios cargados:</strong> <span id="horarios-count">0</span> clases programadas
@@ -43,7 +40,6 @@
   </div>
 
   <div class="row g-3">
-    <!-- Panel izquierdo: asignaturas y profesores -->
     <div class="col-12 col-lg-3">
       <div class="card shadow-sm border-0 rounded-4 mb-3">
         <div class="card-body">
@@ -82,11 +78,9 @@
       </div>
     </div>
 
-    <!-- Panel derecho: tabla de horario -->
     <div class="col-12 col-lg-9">
       <div id="wrap-horario" class="card shadow-sm border-0 rounded-4 overflow-hidden">
         <div class="card-body p-0">
-          <!-- Versión para edición (visible por defecto) -->
           <div id="horario-editor" class="table-responsive">
             <table id="tabla-horario" class="table m-0 table-borderless align-middle text-center">
               <thead>
@@ -101,7 +95,7 @@
               </thead>
               <tbody>
                 @php
-                  $inicio = 7; $fin = 13; // 7:00 a 13:00
+                  $inicio = 7; $fin = 13;
                 @endphp
 
                 @for ($h = $inicio; $h < $fin; $h++)
@@ -112,12 +106,17 @@
                           data-dia="{{ $d }}"
                           data-inicio="{{ sprintf('%02d:00', $h) }}"
                           data-fin="{{ sprintf('%02d:00', $h+1) }}">
-                        <div class="slot-placeholder">Arrastra aquí</div>
+                        <div class="slot-placeholder-contextual">
+                          <div class="placeholder-info">
+                            <div class="placeholder-day">{{ ['Lunes','Martes','Miércoles','Jueves','Viernes'][$d-1] }}</div>
+                            <div class="placeholder-time">{{ sprintf('%02d:00', $h) }}</div>
+                            <div class="placeholder-action">Arrastra aquí</div>
+                          </div>
+                        </div>
                       </td>
                     @endfor
                   </tr>
 
-                  {{-- Descanso a las 9:00–9:30 --}}
                   @if ($h == 9)
                     <tr class="row-break">
                       <td colspan="6" class="break-cell">
@@ -130,11 +129,10 @@
             </table>
           </div>
 
-          <!-- Incluir la vista PDF separada -->
           @include('admin.horarios.horarios-pdf')
 
           <div class="p-3 small text-muted" id="editor-help">
-            💡 Consejo: Arrastra una <b>asignatura</b> o un <b>profesor</b> a la casilla. Usa el botón 💾 <b>Guardar Horario</b> para guardar todos los cambios. Usa 🗑 para borrar casillas individuales.
+            💡 Consejo: Arrastra una <b>asignatura</b> o un <b>profesor</b> a las casillas. Usa <b>💾 Guardar Horario</b> para guardar cambios. Usa la <b>X</b> roja para eliminar horarios.
           </div>
         </div>
       </div>
@@ -142,7 +140,6 @@
   </div>
 </div>
 
-<!-- Modal para seleccionar profesor -->
 <div id="modal-profesor" class="modal fade" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
@@ -161,7 +158,6 @@
   </div>
 </div>
 
-<!-- Modal de confirmación para guardar -->
 <div id="modal-confirm-save" class="modal fade" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -182,10 +178,10 @@
 </div>
 @endsection
 
+
+
 @push('styles')
-{{-- Incluir estilos principales --}}
 <link rel="stylesheet" href="{{ asset('css/horarios.css') }}">
-{{-- Incluir estilos del PDF --}}
 <link rel="stylesheet" href="{{ asset('css/horarios-pdf.css') }}">
 @endpush
 

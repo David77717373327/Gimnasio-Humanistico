@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\GradoController;
 use App\Http\Controllers\HorarioController;
+use App\Http\Controllers\ProfesorController;
 use App\Http\Controllers\RutasController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -37,7 +38,8 @@ Route::post('/register', [RegisteredUserController::class, 'store']);
 // Ruta protegida (admin)
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [RutasController::class, 'mostrarContenidoAdmin'])->name('admin.index');
-    Route::get('/admin/dashboard', [RutasController::class, 'mostrarContenidoAdmin'])->name('admin.index');
+
+
 
     //Rutas para gestionar horarios (CRUD)
     Route::get('/admin/horarios', [HorarioController::class, 'index'])->name('admin.horarios.index');
@@ -47,7 +49,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::put('/admin/horarios/{horario}', [HorarioController::class, 'update'])->name('admin.horarios.update');
     Route::delete('/admin/horarios/{horario}', [HorarioController::class, 'destroy'])->name('admin.horarios.destroy');
 
-    
 
     //Rutas para gestionar los grados (CRUD)
     Route::get('/admin/grados', [GradoController::class, 'index'])->name('admin.grados.index');
@@ -56,18 +57,16 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/grados/{grado}/edit', [GradoController::class, 'edit'])->name('admin.grados.edit');
     Route::put('/admin/grados/{grado}', [GradoController::class, 'update'])->name('admin.grados.update');
     Route::delete('/admin/grados/{grado}', [GradoController::class, 'destroy'])->name('admin.grados.destroy');
-
     // Rutas adicionales para AJAX (opcional - si prefieres endpoints específicos)
     Route::post('/admin/grados/{grado}', [GradoController::class, 'update'])->name('admin.grados.update.ajax'); // Para manejar PATCH/PUT via POST
 
-    // Añadir estas rutas a tu web.php busqueda grados 
-    Route::get('/admin/grados/search', [GradoController::class, 'search'])->name('admin.grados.search');
-    Route::get('/admin/grados/export', [GradoController::class, 'export'])->name('admin.grados.export');
-    Route::post('/admin/grados/import', [GradoController::class, 'import'])->name('admin.grados.import');
-    Route::post('/admin/grados/{grado}/duplicate', [GradoController::class, 'duplicate'])->name('admin.grados.duplicate');
-    Route::patch('/admin/grados/{grado}/toggle-status', [GradoController::class, 'toggleStatus'])->name('admin.grados.toggle-status');
-    Route::get('/admin/grados/stats', [GradoController::class, 'stats'])->name('admin.grados.stats');
-
+    // // Añadir estas rutas a tu web.php busqueda grados 
+    // Route::get('/admin/grados/search', [GradoController::class, 'search'])->name('admin.grados.search');
+    // Route::get('/admin/grados/export', [GradoController::class, 'export'])->name('admin.grados.export');
+    // Route::post('/admin/grados/import', [GradoController::class, 'import'])->name('admin.grados.import');
+    // Route::post('/admin/grados/{grado}/duplicate', [GradoController::class, 'duplicate'])->name('admin.grados.duplicate');
+    // Route::patch('/admin/grados/{grado}/toggle-status', [GradoController::class, 'toggleStatus'])->name('admin.grados.toggle-status');
+    // Route::get('/admin/grados/stats', [GradoController::class, 'stats'])->name('admin.grados.stats');
 
 
     //Rutas para Gestionar Asignaturas (CRUD)
@@ -80,12 +79,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
     // Agregar esta ruta para AJAX
     Route::get('/admin/asignaturas/{asignatura}', [AsignaturaController::class, 'show'])->name('admin.asignaturas.show');
-
-    // Listar estudiantes pendientes
     Route::get('/admin/pendientes', [EstudianteController::class, 'listarPendientes'])->name('admin.estudiantes.pendientes');
-    // Aprobar estudiante
     Route::post('/admin/aprobar/{id}', [EstudianteController::class, 'aprobar'])->name('admin.estudiantes.aprobar');
-    // Rechazar estudiante
     Route::post('/admin/rechazar/{id}', [EstudianteController::class, 'rechazar'])->name('admin.estudiantes.rechazar');
 
     //Rutas para gestionar estudiantes(CRUD)
@@ -99,9 +94,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::post('/admin/asignar-profesor/{id}', [EstudianteController::class, 'asignarProfesor'])->name('admin.asignarProfesor');
     //Rutas para remover el profesor
     Route::post('/admin/remover-profesor/{id}', [EstudianteController::class, 'removerProfesor'])->name('admin.removerProfesor');
-    Route::get('/profesor/dashboard', [RutasController::class, 'mostrarContenidoProfesor'])->name('professor.index');
-    Route::post('/admin/asignar-profesor/{id}', [EstudianteController::class, 'asignarProfesor'])->name('admin.asignarProfesor')->middleware(['auth', 'role:admin']);
+
+    //Rutas para gestionar profesores (CRUD)
+    Route::get('/admin/profesores', [ProfesorController::class, 'listarProfesores'])->name('admin.profesores.index');
+    Route::post('/admin/profesores', [ProfesorController::class, 'crearProfesor'])->name('admin.profesores.store');
+    Route::put('/admin/profesores/{id}', [ProfesorController::class, 'editarProfesor'])->name('admin.profesores.update');
+    Route::delete('/admin/profesores/{id}', [ProfesorController::class, 'eliminarProfesor'])->name('admin.profesores.destroy');
 });
+
 
 //Rutas protegidas para el profesor 
 Route::middleware(['auth', 'role:professor'])->group(function () {

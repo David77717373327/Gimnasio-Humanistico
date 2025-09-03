@@ -220,3 +220,63 @@ php artisan route:clear
 php artisan config:clear
 php artisan cache:clear
 php artisan serve
+
+
+
+<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fas fa-door-open"></i>
+                            ADMISIÓN
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#proceso">
+                                <i class="fas fa-info-circle"></i>
+                                Proceso de Admisión
+                            </a>
+                            <a class="dropdown-item" href="#cronograma">
+                                <i class="fas fa-calendar-alt"></i>
+                                Cronograma 2025
+                            </a>
+                            <a class="dropdown-item" href="#requisitos">
+                                <i class="fas fa-file-alt"></i>
+                                Requisitos
+                            </a>
+                            <a class="dropdown-item" href="#costos">
+                                <i class="fas fa-dollar-sign"></i>
+                                Costos y Pensiones
+                            </a>
+                            <a class="dropdown-item" href="#becas">
+                                <i class="fas fa-hand-holding-usd"></i>
+                                Becas y Descuentos
+                            </a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fas fa-smile"></i>
+                            VIDA ESTUDIANTIL
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#actividades">
+                                <i class="fas fa-calendar-check"></i>
+                                Actividades Extracurriculares
+                            </a>
+                            <a class="dropdown-item" href="#eventos">
+                                <i class="fas fa-calendar-star"></i>
+                                Eventos y Celebraciones
+                            </a>
+                            <a class="dropdown-item" href="#cafeteria">
+                                <i class="fas fa-utensils"></i>
+                                Servicio de Alimentación
+                            </a>
+                            <a class="dropdown-item" href="#transporte">
+                                <i class="fas fa-bus"></i>
+                                Transporte Escolar
+                            </a>
+                            <a class="dropdown-item" href="#pastoral">
+                                <i class="fas fa-praying-hands"></i>
+                                Pastoral Estudiantil
+                            </a>
+                        </div>
+                    </li>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +51,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('admin.profesores.index') }}" class="nav-link">
                             <i class="fas fa-chalkboard-teacher nav-icon"></i>
                             <span>Profesores</span>
                         </a>
@@ -217,8 +216,6 @@
         </div>
     </div>
 </div>
-
-
         <div class="sidebar-body">
             <!-- Perfil Usuario en Sidebar -->
             <div class="sidebar-user">
