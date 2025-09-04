@@ -39,7 +39,9 @@
                             </div>
                             <div class="col-md-7 col-sm-12 col-xs-12 c2 px-5 pt-5">
                                 <div class="row mb-5 m-3">
-                                    <h2 class="institutional-name">Gimnasio Humanístico Neiva-Huila</h2>
+                                    <div class="institutional-header-with-logo">
+                                        <h2 class="institutional-name-with-logo">Gimnasio Humanístico Neiva-Huila</h2>
+                                    </div>
                                 </div>
                                 <form method="POST" action="{{ route('login') }}" class="px-5 pb-5">
                                     @csrf

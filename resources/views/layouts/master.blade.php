@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,12 +45,30 @@
                             <span>Inicio</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ route('admin.estudiantes.index') }}" class="nav-link">
-                            <i class="fas fa-users nav-icon"></i>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle d-flex align-items-center"
+                            data-bs-toggle="dropdown">
+                            <i class="fas fa-users nav-icon me-2"></i>
                             <span>Estudiantes</span>
+                            <i class="fas fa-chevron-down ms-auto"></i>
                         </a>
+                        <ul class="dropdown-menu nav-dropdown">
+                            <li>
+                                <a href="{{ route('admin.estudiantes.index') }}"
+                                    class="dropdown-item d-flex align-items-center">
+                                    <i class="fas fa-home me-2"></i> Inicio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('admin.estudiantes.pendientes') }}" class="dropdown-item d-flex align-items-center">
+                                    <i class="fas fa-clock me-2"></i> Pendientes
+                                </a>
+                            </li>
+                        </ul>
                     </li>
+
+
                     <li class="nav-item">
                         <a href="{{ route('admin.profesores.index') }}" class="nav-link">
                             <i class="fas fa-chalkboard-teacher nav-icon"></i>
@@ -70,33 +89,19 @@
                         </a>
                         <ul class="dropdown-menu nav-dropdown">
                             <li><a href="{{ route('admin.horarios.index') }}" class="dropdown-item">
-                                <i class="fas fa-calendar-alt"></i>Horarios
-                            </a></li>
+                                    <i class="fas fa-calendar-alt"></i>Horarios
+                                </a></li>
                             <li><a href="#" class="dropdown-item">
-                                <i class="fas fa-clipboard-list"></i>Calificaciones
-                            </a></li>
+                                    <i class="fas fa-clipboard-list"></i>Calificaciones
+                                </a></li>
                             <li><a href="#" class="dropdown-item">
-                                <i class="fas fa-tasks"></i>Actividades
-                            </a></li>
+                                    <i class="fas fa-tasks"></i>Actividades
+                                </a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
 
-            <!-- Sección Derecha: Controles de Usuario -->
-            <div class="header-right">
-                <!-- Búsqueda Mejorada -->
-                <div class="search-container">
-                    <form class="search-form">
-                        <div class="search-input-group">
-                            <i class="fas fa-search search-icon"></i>
-                            <input type="search" class="search-input" placeholder="Buscar..." aria-label="Buscar">
-                            <button type="button" class="search-clear" style="display: none;">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
 
                 <!-- Controles de Usuario -->
                 <div class="user-controls">
@@ -151,7 +156,8 @@
                         <button class="control-btn user-btn" data-bs-toggle="dropdown">
                             <img src="{{ asset('images/Usuario.png') }}" class="user-avatar" alt="Usuario">
                             <div class="user-info">
-                                <span class="user-name">@auth {{ Auth::user()->name }} @endauth</span>
+                                <span class="user-name">@auth {{ Auth::user()->name }} @endauth
+                                </span>
                                 <span class="user-role">Administrador</span>
                             </div>
                             <i class="fas fa-chevron-down"></i>
@@ -159,9 +165,11 @@
                         <div class="dropdown-menu user-dropdown">
                             <div class="dropdown-header">
                                 <div class="user-card">
-                                    <img src="{{ asset('images/Usuario.png') }}" class="user-card-avatar" alt="Usuario">
+                                    <img src="{{ asset('images/Usuario.png') }}" class="user-card-avatar"
+                                        alt="Usuario">
                                     <div>
-                                        <h6>@auth {{ Auth::user()->name }} @endauth</h6>
+                                        <h6>@auth {{ Auth::user()->name }} @endauth
+                                        </h6>
                                         <p>admin@colegio.com</p>
                                     </div>
                                 </div>
@@ -206,22 +214,23 @@
     <!-- Sidebar Mejorado -->
     <aside class="sidebar">
         <div class="sidebar-header">
-    <div class="sidebar-brand d-flex align-items-center">
-        <!-- Icono en vez de imagen -->
-        <i class="fa-solid fa-gear fa-2x text-success me-2"></i>
+            <div class="sidebar-brand d-flex align-items-center">
+                <!-- Icono en vez de imagen -->
+                <i class="fa-solid fa-gear fa-2x text-success me-2"></i>
 
-        <div class="sidebar-brand-text">
-            <h5>Panel Admin</h5>
-            <p>Gestión Escolar</p>
+                <div class="sidebar-brand-text">
+                    <h5>Panel Admin</h5>
+                    <p>Gestión Escolar</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
         <div class="sidebar-body">
             <!-- Perfil Usuario en Sidebar -->
             <div class="sidebar-user">
                 <img src="{{ asset('images/Usuario.png') }}" class="sidebar-user-avatar" alt="Usuario">
                 <div class="sidebar-user-info">
-                    <h6>@auth {{ Auth::user()->name }} @endauth</h6>
+                    <h6>@auth {{ Auth::user()->name }} @endauth
+                    </h6>
                     <p>Administrador</p>
                 </div>
                 <div class="sidebar-user-status">
@@ -315,14 +324,14 @@
                             </a>
                             <ul class="submenu">
                                 <li><a href="#" class="submenu-link">
-                                    <i class="fas fa-users-cog"></i>Usuarios
-                                </a></li>
+                                        <i class="fas fa-users-cog"></i>Usuarios
+                                    </a></li>
                                 <li><a href="#" class="submenu-link">
-                                    <i class="fas fa-shield-alt"></i>Permisos
-                                </a></li>
+                                        <i class="fas fa-shield-alt"></i>Permisos
+                                    </a></li>
                                 <li><a href="#" class="submenu-link">
-                                    <i class="fas fa-database"></i>Respaldo
-                                </a></li>
+                                        <i class="fas fa-database"></i>Respaldo
+                                    </a></li>
                             </ul>
                         </li>
                     </ul>
@@ -347,7 +356,7 @@
             const sidebarToggle = document.querySelector('[data-widget="pushmenu"]');
             const sidebar = document.querySelector('.sidebar');
             const mainContent = document.querySelector('.main-content');
-            
+
             if (sidebarToggle) {
                 sidebarToggle.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -360,7 +369,7 @@
                 const submenu = element.nextElementSibling;
                 const arrow = element.querySelector('.nav-arrow');
                 const isOpen = submenu.style.display === 'block';
-                
+
                 // Cerrar otros submenus
                 document.querySelectorAll('.submenu').forEach(menu => {
                     menu.style.display = 'none';
@@ -368,19 +377,19 @@
                 document.querySelectorAll('.nav-arrow').forEach(arr => {
                     arr.style.transform = 'rotate(0deg)';
                 });
-                
+
                 if (!isOpen) {
                     submenu.style.display = 'block';
                     arrow.style.transform = 'rotate(180deg)';
                 }
             }
-            
+
             window.toggleSubmenu = toggleSubmenu;
 
             // Search functionality
             const searchInput = document.querySelector('.search-input');
             const searchClear = document.querySelector('.search-clear');
-            
+
             if (searchInput && searchClear) {
                 searchInput.addEventListener('input', function() {
                     if (this.value.length > 0) {
@@ -389,7 +398,7 @@
                         searchClear.style.display = 'none';
                     }
                 });
-                
+
                 searchClear.addEventListener('click', function() {
                     searchInput.value = '';
                     this.style.display = 'none';
@@ -406,7 +415,8 @@
                     const icon = this.querySelector('i');
                     icon.classList.toggle('fa-moon');
                     icon.classList.toggle('fa-sun');
-                    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+                    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ?
+                        'enabled' : 'disabled');
                 });
             }
 
@@ -422,7 +432,8 @@
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', function(e) {
                     // Remove active class from all links
-                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove(
+                        'active'));
                     // Add active class to clicked link
                     this.classList.add('active');
                 });

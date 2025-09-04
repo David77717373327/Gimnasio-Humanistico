@@ -101,7 +101,7 @@ body {
 .institutional-header .college-name {
     font-size: 16px;
     font-weight: 700;
-    color: var(--primary-green);
+    --dark-gold: #E6A835;
     margin: 0;
     line-height: 1.2;
 }
@@ -112,6 +112,11 @@ body {
     font-weight: 500;
     margin: 0;
 }
+
+
+
+
+
 
 /* Logo en el panel izquierdo (sutil) */
 .c1::after {
@@ -621,7 +626,7 @@ h3 {
 .btlogin {
     width: 45%;
     height: 40px;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #165a3a 0%, #134e32 50%, #0f3d26 100%);
     border: none;
     border-radius: 12px;
     font-size: 14px;
