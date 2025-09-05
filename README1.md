@@ -222,6 +222,13 @@ php artisan cache:clear
 php artisan serve
 
 
+@push('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="{{ asset('js/horario.js') }}"></script>
+
+
+
+
 <style>
         /* Variables de diseño empresarial */
         :root {
