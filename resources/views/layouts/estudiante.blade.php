@@ -1,867 +1,535 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestión Escolar - @yield('title', 'Dashboard')</title>
-    <!-- Google Fonts for Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <title>Panel de Administrador - EduConnect</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Font Awesome for dropdown icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS con paleta institucional -->
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/estudiante.css') }}">
-    <!-- Meta tags adicionales -->
-    <meta name="description" content="Sistema de Gestión Escolar - Administración educativa moderna y eficiente">
-    <meta name="theme-color" content="#2E8B57">
 </head>
+<body>
+    <!-- Floating School Emojis -->
+    <div class="floating-emojis" style="font-size: 2rem;">📚</div>
+    <div class="floating-emojis" style="font-size: 1.5rem;">✏️</div>
+    <div class="floating-emojis" style="font-size: 2.5rem;">🎓</div>
+    <div class="floating-emojis" style="font-size: 1.8rem;">📖</div>
 
-<body class="min-h-screen font-inter">
-    <!-- Header Principal con Colores Institucionales -->
-    <header class="main-header">
-        <div class="header-container">
-            <!-- Sección Izquierda: Logo Institucional -->
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <i class="bi bi-mortarboard-fill"></i>
+                <span>EduConnect</span>
+            </div>
+        </div>
+        <div class="sidebar-nav">
+            <a href="#" class="nav-link active">
+                <i class="bi bi-house-fill"></i>
+                <span>Inicio</span>
+                <div class="tooltip-text">Inicio</div>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="bi bi-book-fill"></i>
+                <span>Cursos</span>
+                <div class="tooltip-text">Cursos</div>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="bi bi-list-task"></i>
+                <span>Tareas</span>
+                <div class="tooltip-text">Tareas</div>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="bi bi-bar-chart-fill"></i>
+                <span>Calificaciones</span>
+                <div class="tooltip-text">Calificaciones</div>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="bi bi-person-fill"></i>
+                <span>Perfil</span>
+                <div class="tooltip-text">Perfil</div>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="bi bi-gear-fill"></i>
+                <span>Configuración</span>
+                <div class="tooltip-text">Configuración</div>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Header -->
+        <header class="header">
             <div class="header-left">
-                <div class="logo-container">
-                    <!-- Logo con borde verde institucional -->
-                    <img src="{{ asset('images/Logo.png') }}" alt="Logo del Colegio" class="header-logo">
-                    <div class="brand-text">
-                        <!-- Título en verde institucional -->
-                        <h2 class="brand-title">Sistema Escolar</h2>
-                        <span class="brand-subtitle">Gestión Educativa</span>
-                    </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="header-title">
+                    @auth
+                        {{ Auth::user()->gender === 'female' ? 'Bienvenida' : 'Bienvenido' }} {{ Auth::user()->name }} 🎓
+                    @else
+                        Bienvenido/a Invitado/a 🎓
+                    @endauth
                 </div>
             </div>
-
-            <!-- Sección Central: Navegación Principal -->
-            <nav class="header-navigation">
-                <ul class="nav-menu">
-                    <!-- Enlaces con efectos hover en verde y amarillo -->
-                    <li class="nav-item">
-                        <a href="{{ route('admin.estudiantes.index') }}" class="nav-link {{ Request::routeIs('admin.estudiantes.*') ? 'active' : '' }}">
-                            <i class="fas fa-users nav-icon"></i>
-                            <span>Estudiantes</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-chalkboard-teacher nav-icon"></i>
-                            <span>Profesores</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-book nav-icon"></i>
-                            <span>Materias</span>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fas fa-cog nav-icon"></i>
-                            <span>Gestión</span>
-                            <i class="fas fa-chevron-down dropdown-arrow"></i>
-                        </a>
-                        <!-- Dropdown con colores institucionales -->
-                        <ul class="dropdown-menu nav-dropdown">
-                            <li><a href="{{ route('admin.horarios.index') }}" class="dropdown-item">
-                                <i class="fas fa-calendar-alt text-edu-green"></i>Horarios
-                            </a></li>
-                            <li><a href="#" class="dropdown-item">
-                                <i class="fas fa-clipboard-list text-edu-green"></i>Calificaciones
-                            </a></li>
-                            <li><a href="#" class="dropdown-item">
-                                <i class="fas fa-tasks text-edu-green"></i>Actividades
-                            </a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Sección Derecha: Controles de Usuario -->
             <div class="header-right">
-                <!-- Búsqueda con estilo institucional -->
-                <div class="search-container">
-                    <form class="search-form">
-                        <div class="search-input-group">
-                            <i class="fas fa-search search-icon"></i>
-                            <input type="search" class="search-input" placeholder="Buscar estudiantes, profesores..." aria-label="Buscar">
-                            <button type="button" class="search-clear" style="display: none;">
-                                <i class="fas fa-times"></i>
-                            </button>
+                
+                <!-- Perfil de Usuario -->
+                <div class="control-item dropdown">
+                    <button class="control-btn user-btn" data-bs-toggle="dropdown">
+                        <img src="{{ asset('images/Usuario.png') }}" class="user-avatar" alt="Usuario">
+                        <div class="user-info">
+                            <span class="user-name">@auth {{ Auth::user()->name }} @endauth</span>
+                            <span class="user-role">@auth {{ Auth::user()->role }} @endauth</span>
                         </div>
-                    </form>
-                </div>
-
-                <!-- Controles de Usuario con colores institucionales -->
-                <div class="user-controls">
-                    <!-- Notificaciones con badge amarillo -->
-                    <div class="control-item dropdown">
-                        <button class="control-btn notification-btn" data-bs-toggle="dropdown" aria-label="Notificaciones">
-                            <i class="fas fa-bell"></i>
-                            <span class="notification-badge">3</span>
-                        </button>
-                        <div class="dropdown-menu notification-dropdown">
-                            <div class="dropdown-header">
-                                <h6 class="text-edu-green">Notificaciones</h6>
-                                <span class="badge bg-edu-yellow text-edu-green">3 nuevas</span>
-                            </div>
-                            <div class="dropdown-body">
-                                <a href="{{ route('admin.estudiantes.index') }}" class="notification-item dropdown-item">
-                                    <div class="notification-icon">
-                                        <i class="fas fa-user-graduate text-edu-green"></i>
-                                    </div>
-                                    <div class="notification-content">
-                                        <p class="mb-1 fw-semibold">Nuevo estudiante registrado</p>
-                                        <span class="notification-time text-muted small">Hace 5 min</span>
-                                    </div>
-                                </a>
-                                <a href="#" class="notification-item dropdown-item">
-                                    <div class="notification-icon">
-                                        <i class="fas fa-calendar text-edu-yellow"></i>
-                                    </div>
-                                    <div class="notification-content">
-                                        <p class="mb-1 fw-semibold">Horario actualizado</p>
-                                        <span class="notification-time text-muted small">Hace 10 min</span>
-                                    </div>
-                                </a>
-                                <a href="{{ route('admin.estudiantes.eliminados') }}" class="notification-item dropdown-item">
-                                    <div class="notification-icon">
-                                        <i class="fas fa-clipboard-check text-edu-green"></i>
-                                    </div>
-                                    <div class="notification-content">
-                                        <p class="mb-1 fw-semibold">Calificaciones actualizadas</p>
-                                        <span class="notification-time text-muted small">Hace 1 hora</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="dropdown-footer">
-                                <a href="#" class="btn-view-all text-edu-green fw-semibold">Ver todas las notificaciones</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Perfil de Usuario con diseño institucional -->
-                    <div class="control-item dropdown">
-                        <button class="control-btn user-btn" data-bs-toggle="dropdown" aria-label="Menú de usuario">
-                            <img src="{{ asset('images/Usuario.png') }}" class="user-avatar" alt="Avatar del usuario">
-                            <div class="user-info">
-                                <span class="user-name">@auth {{ Auth::user()->name }} @endauth</span>
-                                <span class="user-role">Administrador</span>
-                            </div>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="dropdown-menu user-dropdown">
-                            <div class="dropdown-header">
-                                <div class="user-card d-flex align-items-center">
-                                    <img src="{{ asset('images/Usuario.png') }}" class="user-card-avatar me-3" alt="Usuario" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--edu-green);">
-                                    <div>
-                                        <h6 class="mb-1 text-edu-green">@auth {{ Auth::user()->name }} @endauth</h6>
-                                        <p class="mb-0 small text-muted">admin@colegio.com</p>
-                                    </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu user-dropdown">
+                        <div class="dropdown-header">
+                            <div class="user-card">
+                                <img src="{{ asset('images/Usuario.png') }}" class="user-card-avatar" alt="Usuario">
+                                <div>
+                                    <h6>@auth {{ Auth::user()->name }} @endauth</h6>
+                                    <p>@auth {{ Auth::user()->email }} @endauth</p>
                                 </div>
                             </div>
-                            <div class="dropdown-body">
-                                <a href="#" class="dropdown-item">
-                                    <i class="fas fa-user text-edu-green me-2"></i>Mi Perfil
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <i class="fas fa-cog text-edu-green me-2"></i>Configuración
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <i class="fas fa-question-circle text-edu-yellow me-2"></i>Centro de Ayuda
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a href="{{ route('logout') }}" class="dropdown-item logout-item text-danger"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
-                                </a>
-                            </div>
+                        </div>
+                        <div class="dropdown-body">
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-user"></i>Mi Perfil
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-cog"></i>Configuración
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-question-circle"></i>Ayuda
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="{{ route('logout') }}" class="dropdown-item logout-item"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="fas fa-sign-out-alt"></i>Cerrar Sesión
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </div>
                     </div>
+                </div>
+            </div>
+        </header>
 
-                    <!-- Toggle Modo Oscuro -->
-                    <div class="control-item">
-                        <button class="control-btn theme-toggle" id="darkModeToggle" aria-label="Cambiar tema">
-                            <i class="fas fa-moon"></i>
-                        </button>
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <h1 class="page-title">Dashboard Estudiantil</h1>
+            <p class="page-subtitle">¡Bienvenida a tu espacio de aprendizaje! Aquí puedes ver tu progreso académico</p>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Materias Activas</div>
+                        <div class="stat-icon blue">
+                            <i class="bi bi-book"></i>
+                        </div>
                     </div>
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Este semestre</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 85%;"></div>
+                    </div>
+                </div>
 
-                    <!-- Menú Móvil Toggle -->
-                    <div class="control-item mobile-menu-toggle d-md-none">
-                        <button class="control-btn menu-btn" data-widget="pushmenu" aria-label="Abrir menú">
-                            <i class="fas fa-bars"></i>
-                        </button>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Tareas Pendientes</div>
+                        <div class="stat-icon orange">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Por entregar esta semana</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 60%;"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Promedio General</div>
+                        <div class="stat-icon green">
+                            <i class="bi bi-trophy-fill"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">8.7</div>
+                    <div class="stat-label">¡Excelente desempeño!</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 87%;"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Próximos Eventos</div>
+                        <div class="stat-icon purple">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Exámenes esta semana</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 40%;"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
 
-    <!-- Sidebar con Diseño Institucional -->
-    <aside class="sidebar">
-        <!-- Header del Sidebar con gradiente institucional -->
-        <div class="sidebar-header">
-            <div class="sidebar-brand d-flex align-items-center">
-                <!-- Icono en verde institucional -->
-                <i class="fa-solid fa-graduation-cap fa-2x me-3" style="color: var(--edu-white);"></i>
-                <div class="sidebar-brand-text">
-                    <h5 class="mb-1">Panel Administrativo</h5>
-                    <p class="mb-0 opacity-90">Gestión Escolar</p>
+            <!-- Quick Actions Section -->
+            <div class="quick-actions-section">
+                <div class="section-title">
+                    <h3>🚀 Acciones Rápidas</h3>
                 </div>
-            </div>
-        </div>
-
-        <div class="sidebar-body">
-            <!-- Perfil Usuario en Sidebar con colores institucionales -->
-            <div class="sidebar-user">
-                <img src="{{ asset('images/Usuario.png') }}" class="sidebar-user-avatar" alt="Avatar del usuario">
-                <div class="sidebar-user-info">
-                    <h6 class="mb-1">@auth {{ Auth::user()->name }} @endauth</h6>
-                    <p class="mb-0">Administrador</p>
-                </div>
-                <div class="sidebar-user-status">
-                    <span class="status-dot online" title="En línea"></span>
+                <div class="quick-actions-grid">
+                    <button class="quick-action-btn" data-action="homework">
+                        <i class="bi bi-pencil-square"></i>
+                        <span>Nueva Tarea</span>
+                    </button>
+                    <button class="quick-action-btn" data-action="schedule">
+                        <i class="bi bi-calendar-plus"></i>
+                        <span>Ver Horario</span>
+                    </button>
+                    <button class="quick-action-btn" data-action="grades">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Calificaciones</span>
+                    </button>
+                    <button class="quick-action-btn" data-action="resources">
+                        <i class="bi bi-folder-fill"></i>
+                        <span>Recursos</span>
+                    </button>
                 </div>
             </div>
 
-            <!-- Navegación Sidebar con secciones organizadas -->
-            <nav class="sidebar-nav">
-                <!-- Sección Principal -->
-                <div class="nav-section">
-                    <h6 class="nav-section-title">Panel Principal</h6>
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="{{ route('dashboard') }}" class="nav-link {{ Request::routeIs('dashboard') ? 'active' : '' }}">
-                                <i class="fas fa-tachometer-alt nav-icon"></i>
-                                <span class="nav-text">Dashboard</span>
-                                <span class="nav-badge bg-edu-yellow text-edu-green">5</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-chart-line nav-icon"></i>
-                                <span class="nav-text">Estadísticas</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-bell nav-icon"></i>
-                                <span class="nav-text">Notificaciones</span>
-                                <span class="nav-badge bg-edu-yellow text-edu-green">3</span>
-                            </a>
-                        </li>
-                    </ul>
+            <!-- Upcoming Events -->
+            <div class="upcoming-events">
+                <div class="section-title">
+                    <h3>📅 Próximos Eventos</h3>
                 </div>
-
-                <!-- Sección Académica -->
-                <div class="nav-section">
-                    <h6 class="nav-section-title">Gestión Académica</h6>
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="{{ route('admin.estudiantes.pendientes') }}" class="nav-link {{ Request::routeIs('admin.estudiantes.*') ? 'active' : '' }}">
-                                <i class="fas fa-user-graduate nav-icon"></i>
-                                <span class="nav-text">Estudiantes</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-chalkboard-teacher nav-icon"></i>
-                                <span class="nav-text">Profesores</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-book-open nav-icon"></i>
-                                <span class="nav-text">Materias</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('admin.horarios.index') }}" class="nav-link {{ Request::routeIs('admin.horarios.*') ? 'active' : '' }}">
-                                <i class="fas fa-calendar-alt nav-icon"></i>
-                                <span class="nav-text">Horarios</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="events-grid">
+                    <div class="event-card math">
+                        <div class="event-date">
+                            <div class="day">15</div>
+                            <div class="month">Mar</div>
+                        </div>
+                        <div class="event-info">
+                            <h4>Examen de Matemáticas 📐</h4>
+                            <p>Álgebra y Geometría</p>
+                            <span class="event-time">09:00 AM</span>
+                        </div>
+                    </div>
+                    <div class="event-card science">
+                        <div class="event-date">
+                            <div class="day">17</div>
+                            <div class="month">Mar</div>
+                        </div>
+                        <div class="event-info">
+                            <h4>Proyecto de Biología 🔬</h4>
+                            <p>Presentación final</p>
+                            <span class="event-time">02:30 PM</span>
+                        </div>
+                    </div>
+                    <div class="event-card literature">
+                        <div class="event-date">
+                            <div class="day">20</div>
+                            <div class="month">Mar</div>
+                        </div>
+                        <div class="event-info">
+                            <h4>Club de Lectura 📚</h4>
+                            <p>Discusión: "Cien años de soledad"</p>
+                            <span class="event-time">03:00 PM</span>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Sección Evaluación -->
-                <div class="nav-section">
-                    <h6 class="nav-section-title">Evaluación</h6>
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-clipboard-list nav-icon"></i>
-                                <span class="nav-text">Calificaciones</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-tasks nav-icon"></i>
-                                <span class="nav-text">Actividades</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-file-alt nav-icon"></i>
-                                <span class="nav-text">Reportes</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-award nav-icon"></i>
-                                <span class="nav-text">Certificados</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Sección Sistema -->
-                <div class="nav-section">
-                    <h6 class="nav-section-title">Configuración</h6>
-                    <ul class="nav-list">
-                        <li class="nav-item has-submenu">
-                            <a href="#" class="nav-link submenu-toggle" onclick="toggleSubmenu(this)">
-                                <i class="fas fa-cogs nav-icon"></i>
-                                <span class="nav-text">Sistema</span>
-                                <i class="fas fa-chevron-down nav-arrow"></i>
-                            </a>
-                            <ul class="submenu">
-                                <li><a href="#" class="submenu-link">
-                                    <i class="fas fa-users-cog text-edu-green"></i>Gestión de Usuarios
-                                </a></li>
-                                <li><a href="#" class="submenu-link">
-                                    <i class="fas fa-shield-alt text-edu-yellow"></i>Permisos y Roles
-                                </a></li>
-                                <li><a href="#" class="submenu-link">
-                                    <i class="fas fa-database text-edu-green"></i>Respaldo de Datos
-                                </a></li>
-                                <li><a href="#" class="submenu-link">
-                                    <i class="fas fa-palette text-edu-yellow"></i>Personalización
-                                </a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-life-ring nav-icon"></i>
-                                <span class="nav-text">Soporte</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <!-- Widget de progreso institucional (opcional) -->
-            <div class="sidebar-widget mt-4 p-3" style="background: var(--edu-gray-100); border-radius: var(--border-radius-md); border-left: 4px solid var(--edu-yellow);">
-                <h6 class="text-edu-green mb-2">
-                    <i class="fas fa-chart-pie me-2"></i>Progreso del Período
-                </h6>
-                <div class="progress mb-2" style="height: 8px;">
-                    <div class="progress-bar" style="background: var(--gradient-primary); width: 75%;" role="progressbar"></div>
-                </div>
-                <small class="text-muted">75% completado</small>
             </div>
-        </div>
-    </aside>
-
-    <!-- Contenido Principal -->
-    <main class="main-content">
-        <!-- Overlay para móvil -->
-        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
-        
-        <!-- Breadcrumb con estilo institucional -->
-        @if(!empty($breadcrumb))
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb bg-edu-white p-3 rounded shadow-sm">
-                @foreach($breadcrumb as $item)
-                    @if($loop->last)
-                        <li class="breadcrumb-item active text-edu-green fw-semibold" aria-current="page">
-                            <i class="{{ $item['icon'] ?? 'fas fa-circle' }} me-1"></i>{{ $item['title'] }}
-                        </li>
-                    @else
-                        <li class="breadcrumb-item">
-                            <a href="{{ $item['url'] }}" class="text-edu-green text-decoration-none">
-                                <i class="{{ $item['icon'] ?? 'fas fa-home' }} me-1"></i>{{ $item['title'] }}
-                            </a>
-                        </li>
-                    @endif
-                @endforeach
-            </ol>
-        </nav>
-        @endif
-
-        <!-- Contenido de la página -->
-        <div class="content-wrapper">
-            @yield('content')
         </div>
     </main>
 
-    <!-- Footer Institucional -->
-    <footer class="footer mt-5 py-4" style="background: var(--gradient-primary); color: var(--edu-white);">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="mb-2 mb-md-0">
-                        <i class="fas fa-graduation-cap me-2"></i>
-                        <strong>Sistema de Gestión Escolar</strong> - Educación de Calidad
-                    </p>
-                    <small class="opacity-75">© {{ date('Y') }} Colegio. Todos los derechos reservados.</small>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="footer-links">
-                        <a href="#" class="text-white text-decoration-none me-3 opacity-75 hover:opacity-100">
-                            <i class="fas fa-question-circle me-1"></i>Ayuda
-                        </a>
-                        <a href="#" class="text-white text-decoration-none me-3 opacity-75 hover:opacity-100">
-                            <i class="fas fa-phone me-1"></i>Contacto
-                        </a>
-                        <a href="#" class="text-white text-decoration-none opacity-75 hover:opacity-100">
-                            <i class="fas fa-shield-alt me-1"></i>Privacidad
-                        </a>
-                    </div>
-                    <small class="d-block mt-2 opacity-75">
-                        Versión 2.1.0 | 
-                        <span class="text-warning fw-semibold">
-                            <i class="fas fa-heart me-1"></i>Hecho con dedicación
-                        </span>
-                    </small>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Form de logout -->
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-        @csrf
-    </form>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     
-    <!-- JavaScript Mejorado con Funcionalidades Institucionales -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Variables globales
-            const sidebar = document.querySelector('.sidebar');
-            const sidebarOverlay = document.querySelector('.sidebar-overlay');
-            const mainContent = document.querySelector('.main-content');
-            
-            /**
-             * FUNCIONALIDAD DEL SIDEBAR
-             * Manejo responsive del menú lateral
-             */
-            const sidebarToggle = document.querySelector('[data-widget="pushmenu"]');
-            
-            if (sidebarToggle) {
-                sidebarToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    toggleSidebar();
-                });
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+        sidebarToggle.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle('mobile-visible');
+                sidebarOverlay.classList.toggle('active');
+            } else {
+                sidebar.classList.toggle('collapsed');
+                mainContent.classList.toggle('collapsed');
             }
-            
-            // Función global para toggle del sidebar
-            window.toggleSidebar = function() {
-                document.body.classList.toggle('sidebar-open');
-                sidebar?.classList.toggle('show');
-                sidebarOverlay?.classList.toggle('show');
-            };
-            
-            // Cerrar sidebar al hacer clic en overlay
-            if (sidebarOverlay) {
-                sidebarOverlay.addEventListener('click', function() {
-                    toggleSidebar();
-                });
-            }
-            
-            /**
-             * FUNCIONALIDAD DE SUBMENÚS
-             * Control de menús desplegables en el sidebar
-             */
-            window.toggleSubmenu = function(element) {
-                const submenu = element.nextElementSibling;
-                const arrow = element.querySelector('.nav-arrow');
-                const isOpen = submenu?.style.display === 'block';
-                
-                // Cerrar todos los otros submenús
-                document.querySelectorAll('.submenu').forEach(menu => {
-                    if (menu !== submenu) {
-                        menu.style.display = 'none';
-                    }
-                });
-                document.querySelectorAll('.nav-arrow').forEach(arr => {
-                    if (arr !== arrow) {
-                        arr.style.transform = 'rotate(0deg)';
-                    }
-                });
-                
-                // Toggle del submenú actual
-                if (submenu) {
-                    if (!isOpen) {
-                        submenu.style.display = 'block';
-                        arrow.style.transform = 'rotate(180deg)';
-                    } else {
-                        submenu.style.display = 'none';
-                        arrow.style.transform = 'rotate(0deg)';
-                    }
-                }
-            };
-            
-            /**
-             * FUNCIONALIDAD DE BÚSQUEDA
-             * Búsqueda mejorada con limpieza
-             */
-            const searchInput = document.querySelector('.search-input');
-            const searchClear = document.querySelector('.search-clear');
-            
-            if (searchInput && searchClear) {
-                searchInput.addEventListener('input', function() {
-                    const hasValue = this.value.length > 0;
-                    searchClear.style.display = hasValue ? 'block' : 'none';
-                    
-                    // Agregar clase de búsqueda activa
-                    this.parentElement.classList.toggle('searching', hasValue);
-                });
-                
-                searchClear.addEventListener('click', function() {
-                    searchInput.value = '';
-                    this.style.display = 'none';
-                    searchInput.focus();
-                    searchInput.parentElement.classList.remove('searching');
-                });
-            }
-            
-            /**
-             * MODO OSCURO
-             * Toggle entre tema claro y oscuro
-             */
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-            
-            if (darkModeToggle) {
-                // Cargar preferencia guardada
-                const currentTheme = localStorage.getItem('theme') || 
-                    (prefersDarkScheme.matches ? 'dark' : 'light');
-                
-                if (currentTheme === 'dark') {
-                    document.body.classList.add('dark-mode');
-                    darkModeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
-                }
-                
-                darkModeToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.body.classList.toggle('dark-mode');
-                    
-                    const icon = this.querySelector('i');
-                    const isDark = document.body.classList.contains('dark-mode');
-                    
-                    if (isDark) {
-                        icon.classList.replace('fa-moon', 'fa-sun');
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        icon.classList.replace('fa-sun', 'fa-moon');
-                        localStorage.setItem('theme', 'light');
-                    }
-                    
-                    // Animación suave
-                    this.style.transform = 'scale(0.9)';
-                    setTimeout(() => {
-                        this.style.transform = 'scale(1)';
-                    }, 150);
-                });
-            }
-            
-            /**
-             * NAVEGACIÓN ACTIVA
-             * Manejo de estados activos en los enlaces
-             */
-            document.querySelectorAll('.nav-link:not(.submenu-toggle)').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    // Solo para enlaces que no son submenús
-                    if (!this.classList.contains('submenu-toggle')) {
-                        // Remover clase activa de todos los enlaces del mismo nivel
-                        const navLinks = this.closest('.nav-list')?.querySelectorAll('.nav-link') || 
-                                        this.closest('.nav-menu')?.querySelectorAll('.nav-link') || [];
-                        
-                        navLinks.forEach(l => l.classList.remove('active'));
-                        this.classList.add('active');
-                    }
-                });
-            });
-            
-            /**
-             * NOTIFICACIONES
-             * Manejo de notificaciones en tiempo real
-             */
-            function updateNotificationBadge(count) {
-                const badges = document.querySelectorAll('.notification-badge');
-                badges.forEach(badge => {
-                    badge.textContent = count;
-                    badge.style.display = count > 0 ? 'flex' : 'none';
-                });
-            }
-            
-            /**
-             * TOOLTIPS Y MEJORAS UX
-             * Inicialización de tooltips de Bootstrap
-             */
-            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-            
-            /**
-             * RESPONSIVE BEHAVIOR
-             * Comportamiento responsive mejorado
-             */
-            function handleResize() {
-                const isMobile = window.innerWidth < 768;
-                const isTablet = window.innerWidth >= 768 && window.innerWidth < 992;
-                
-                if (!isMobile && document.body.classList.contains('sidebar-open')) {
-                    document.body.classList.remove('sidebar-open');
-                    sidebar?.classList.remove('show');
-                    sidebarOverlay?.classList.remove('show');
-                }
-            }
-            
-            window.addEventListener('resize', handleResize);
-            handleResize(); // Ejecutar al cargar
-            
-            /**
-             * ANIMACIONES Y EFECTOS
-             * Mejoras visuales con animaciones suaves
-             */
-            
-            // Efecto de carga para las cards
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in');
-                    }
-                });
-            }, observerOptions);
-            
-            // Observar elementos con animación
-            document.querySelectorAll('.card, .sidebar-widget').forEach(el => {
-                observer.observe(el);
-            });
-            
-            /**
-             * ACCESIBILIDAD
-             * Mejoras de accesibilidad
-             */
-            
-            // Navegación por teclado en el sidebar
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        this.click();
-                    }
-                });
-            });
-            
-            // Focus trapping en dropdowns abiertos
-            document.querySelectorAll('.dropdown').forEach(dropdown => {
-                dropdown.addEventListener('shown.bs.dropdown', function() {
-                    const firstFocusable = this.querySelector('.dropdown-menu a, .dropdown-menu button');
-                    if (firstFocusable) {
-                        firstFocusable.focus();
-                    }
-                });
-            });
-            
-            console.log('✅ Sistema de Gestión Escolar inicializado correctamente');
-            console.log('🎨 Paleta institucional: Verde (#2E8B57), Amarillo (#FFCC33), Blanco (#FFFFFF)');
         });
-    </script>
-    
-    <!-- Scripts adicionales específicos de cada página -->
-    @stack('scripts')
-    
-    <!-- Script para mensajes Flash -->
-    @if(session('success') || session('error') || session('warning'))
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            @if(session('success'))
-                showToast('success', '{{ session('success') }}');
-            @elseif(session('error'))
-                showToast('error', '{{ session('error') }}');
-            @elseif(session('warning'))
-                showToast('warning', '{{ session('warning') }}');
-            @endif
+
+        sidebarOverlay.addEventListener('click', function() {
+            sidebar.classList.remove('mobile-visible');
+            sidebarOverlay.classList.remove('active');
         });
-        
-        function showToast(type, message) {
-            const colors = {
-                success: 'var(--edu-green)',
-                error: 'var(--edu-danger)',
-                warning: 'var(--edu-yellow)'
-            };
-            
-            const icons = {
-                success: 'fas fa-check-circle',
-                error: 'fas fa-exclamation-circle',
-                warning: 'fas fa-exclamation-triangle'
-            };
-            
-            // Crear toast dinámicamente con estilos institucionales
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('mobile-visible');
+                    sidebarOverlay.classList.remove('active');
+                }
+                const icon = this.querySelector('i');
+                icon.style.transform = 'scale(1.3) rotate(360deg)';
+                setTimeout(() => {
+                    icon.style.transform = '';
+                }, 300);
+            });
+        });
+
+        const notificationBtn = document.getElementById('notificationBtn');
+        notificationBtn.addEventListener('click', function() {
+            const notifications = [
+                '📚 Nueva tarea de Matemáticas disponible',
+                '⭐ Calificación disponible en Historia: 9.2/10',
+                '⏰ Recordatorio: Proyecto de Ciencias vence en 3 días',
+                '🎉 ¡Felicitaciones! Eres estudiante del mes'
+            ];
+            const randomNotif = notifications[Math.floor(Math.random() * notifications.length)];
             const toast = document.createElement('div');
-            toast.className = 'toast show position-fixed';
             toast.style.cssText = `
-                top: 90px; right: 20px; z-index: 9999;
-                background: white; border-left: 4px solid ${colors[type]};
-                border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                min-width: 300px; max-width: 400px;
-            `;
-            
-            toast.innerHTML = `
-                <div class="d-flex align-items-center p-3">
-                    <i class="${icons[type]} me-3" style="color: ${colors[type]}; font-size: 1.2rem;"></i>
-                    <div class="flex-grow-1">
-                        <strong style="color: var(--edu-green-dark);">
-                            ${type.charAt(0).toUpperCase() + type.slice(1)}
-                        </strong>
-                        <div style="color: var(--edu-gray-700); font-size: 0.9rem;">
-                            ${message}
-                        </div>
-                    </div>
-                    <button type="button" class="btn-close ms-2" onclick="this.parentElement.parentElement.remove()"></button>
-                </div>
-            `;
-            
-            document.body.appendChild(toast);
-            
-            // Auto-remover después de 5 segundos
-            setTimeout(() => {
-                if (toast.parentElement) {
-                    toast.remove();
-                }
-            }, 5000);
-        }
-    </script>
-    @endif
-    
-    <!-- CSS adicional para animaciones -->
-    <style>
-        /* Animaciones de entrada */
-        .animate-in {
-            animation: slideInUp 0.6s ease forwards;
-        }
-        
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Estados de búsqueda */
-        .search-input-group.searching .search-input {
-            border-color: var(--edu-green);
-            background: var(--edu-white);
-            box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
-        }
-        
-        /* Sidebar responsive */
-        @media (max-width: 767.98px) {
-            .sidebar {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-            }
-            
-            .sidebar.show {
-                transform: translateX(0);
-            }
-            
-            .sidebar-overlay {
                 position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 1024;
-                opacity: 0;
-                visibility: hidden;
+                top: 100px;
+                right: 20px;
+                background: linear-gradient(135deg, var(--primary-blue), var(--purple));
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 12px;
+                box-shadow: var(--shadow-hover);
+                z-index: 9999;
+                transform: translateX(400px);
                 transition: all 0.3s ease;
+                max-width: 300px;
+                font-weight: 500;
+            `;
+            toast.textContent = randomNotif;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.transform = 'translateX(0)';
+            }, 100);
+            setTimeout(() => {
+                toast.style.transform = 'translateX(400px)';
+                setTimeout(() => document.body.removeChild(toast), 300);
+            }, 4000);
+        });
+
+        const quickActionBtns = document.querySelectorAll('.quick-action-btn');
+        quickActionBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const action = this.dataset.action;
+                const actions = {
+                    homework: '📝 Abriendo sección de tareas...',
+                    schedule: '📅 Mostrando tu horario semanal...',
+                    grades: '📊 Cargando tus calificaciones...',
+                    resources: '📁 Accediendo a recursos de estudio...'
+                };
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1.05)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }, 150);
+                const toast = document.createElement('div');
+                toast.style.cssText = `
+                    position: fixed;
+                    bottom: 30px;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(100px);
+                    background: var(--white);
+                    color: var(--dark-text);
+                    padding: 1rem 2rem;
+                    border-radius: 25px;
+                    box-shadow: var(--shadow-hover);
+                    z-index: 9999;
+                    transition: all 0.3s ease;
+                    font-weight: 600;
+                    border: 2px solid rgba(59, 130, 246, 0.2);
+                `;
+                toast.textContent = actions[action];
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.style.transform = 'translateX(-50%) translateY(0)';
+                }, 100);
+                setTimeout(() => {
+                    toast.style.transform = 'translateX(-50%) translateY(100px)';
+                    setTimeout(() => document.body.removeChild(toast), 300);
+                }, 2000);
+            });
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                sidebarOverlay.classList.remove('active');
+                sidebar.classList.remove('mobile-visible');
+                mainContent.classList.remove('mobile-full');
+            } else {
+                sidebar.classList.remove('collapsed');
+                mainContent.classList.remove('collapsed');
+                mainContent.classList.add('mobile-full');
             }
-            
-            .sidebar-overlay.show {
-                opacity: 1;
-                visibility: visible;
+        });
+
+        if (window.innerWidth <= 768) {
+            mainContent.classList.add('mobile-full');
+        }
+
+        const ctx = document.getElementById('performanceChart')?.getContext('2d');
+        if (ctx) {
+            const performanceChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                    datasets: [{
+                        label: 'Promedio General',
+                        data: [8.2, 8.5, 8.3, 8.8, 8.6, 8.7],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        borderWidth: 4,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#3b82f6',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 3,
+                        pointRadius: 8,
+                        pointHoverRadius: 12
+                    }, {
+                        label: 'Matemáticas 📐',
+                        data: [8.0, 8.3, 8.1, 8.9, 8.4, 8.8],
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        borderWidth: 3,
+                        fill: false,
+                        tension: 0.4,
+                        pointBackgroundColor: '#10b981',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 10
+                    }, {
+                        label: 'Historia 🏛️',
+                        data: [8.5, 8.7, 8.9, 8.6, 9.0, 8.9],
+                        borderColor: '#8b5cf6',
+                        backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                        borderWidth: 3,
+                        fill: false,
+                        tension: 0.4,
+                        pointBackgroundColor: '#8b5cf6',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20,
+                                font: { size: 13, weight: '600' }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: 'white',
+                            bodyColor: 'white',
+                            cornerRadius: 8,
+                            padding: 12,
+                            displayColors: true
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 7,
+                            max: 10,
+                            grid: { color: 'rgba(0, 0, 0, 0.05)', drawBorder: false },
+                            ticks: { font: { size: 12, weight: '500' }, color: '#64748b' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { size: 12, weight: '500' }, color: '#64748b' }
+                        }
+                    },
+                    elements: { point: { hoverRadius: 12 } },
+                    animation: { duration: 2000, easing: 'easeInOutQuart' }
+                }
+            });
+        }
+
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const progressBars = document.querySelectorAll('.stat-progress-bar');
+                progressBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 500);
+                });
+            }, 1000);
+        });
+
+        function addSparkleEffect(element) {
+            const sparkle = document.createElement('div');
+            sparkle.innerHTML = '✨';
+            sparkle.style.cssText = `
+                position: absolute;
+                pointer-events: none;
+                font-size: 1.2rem;
+                animation: sparkle 1s ease-out forwards;
+            `;
+            element.appendChild(sparkle);
+            setTimeout(() => {
+                element.removeChild(sparkle);
+            }, 1000);
+        }
+
+        const sparkleStyle = document.createElement('style');
+        sparkleStyle.textContent = `
+            @keyframes sparkle {
+                0% { opacity: 0; transform: scale(0) rotate(0deg); }
+                50% { opacity: 1; transform: scale(1) rotate(180deg); }
+                100% { opacity: 0; transform: scale(0) rotate(360deg); }
             }
-            
-            .main-content {
-                margin-left: 0;
-            }
-        }
-        
-        /* Efectos hover mejorados */
-        .control-btn {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .control-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(46, 139, 87, 0.2);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.6s ease;
-        }
-        
-        .control-btn:hover::before {
-            width: 100px;
-            height: 100px;
-        }
-        
-        /* Mejoras de accesibilidad */
-        .nav-link:focus,
-        .control-btn:focus {
-            outline: 2px solid var(--edu-yellow);
-            outline-offset: 2px;
-        }
-        
-        /* Indicadores de carga */
-        .loading {
-            position: relative;
-            pointer-events: none;
-        }
-        
-        .loading::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--edu-gray-300);
-            border-top: 2px solid var(--edu-green);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-    </style>
+        `;
+        document.head.appendChild(sparkleStyle);
+    </script>
 </body>
 </html>
-                        
