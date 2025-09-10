@@ -1455,3 +1455,116 @@
     }
 </script>
 @endpush
+
+
+
+async downloadPDF() {
+        if (!this.CURRENT_GRADO_ID) {
+            notificationManager.show('warning', 'Selecciona un grado', 'Debes seleccionar un grado para descargar su horario.');
+            console.warn('Descarga cancelada: No hay CURRENT_GRADO_ID');
+            return;
+        }
+
+        const totalSchedules = this.existingHorarios.length + this.savedHorarios.length;
+        console.log('Horarios existentes:', this.existingHorarios.length, 'Guardados:', this.savedHorarios.length, 'Pendientes:', this.pendingHorarios.length);
+
+        if (totalSchedules === 0) {
+            notificationManager.show('warning', 'Sin horarios', 
+                'No hay clases programadas para descargar.',
+                'Agrega algunas clases antes de generar el PDF.');
+            console.warn('Descarga cancelada: No hay horarios locales');
+            return;
+        }
+
+        if (this.pendingHorarios.length > 0) {
+            const action = await modalManager.show(
+                'Cambios pendientes',
+                `Tienes ${this.pendingHorarios.length} cambios sin guardar. El PDF solo incluirá datos guardados.<br><em>¿Guardar ahora o continuar sin ellos?</em>`,
+                `<button type="button" class="btn-enterprise secondary" data-action="cancel">Cancelar</button>
+                 <button type="button" class="btn-enterprise warning" data-action="save">💾 Guardar y descargar</button>
+                 <button type="button" class="btn-enterprise primary" data-action="continue">📥 Descargar sin guardar</button>`
+            );
+            
+            if (action === 'save') {
+                await this.saveAllPending();
+            } else if (action !== 'continue') {
+                return;
+            }
+        }
+
+        try {
+            notificationManager.show('info', 'Generando PDF', 'Se está preparando tu horario escolar...');
+
+            this.showLoadingStatus();
+            const response = await fetch(`${ROUTES.horarios_index}?grado_id=${this.CURRENT_GRADO_ID}&format=json`, {
+                headers: { 'X-Requested-With': 'XMLHttpRequest' }
+            });
+
+            console.log('Respuesta del servidor:', response.status);
+            if (response.ok) {
+                const horarios = await response.json();
+                console.log('Horarios devueltos por el servidor:', horarios);
+                this.clearSchedule();
+                this.loadSchedulesIntoTable(horarios);
+            } else {
+                const errorText = await response.text();
+                notificationManager.show('warning', 'Error al cargar', 
+                    'No se pudieron cargar los horarios para el PDF.',
+                    'Intenta nuevamente.');
+                console.error('Error en respuesta fetch, status:', response.status, 'texto:', errorText);
+                this.hideLoadingStatus();
+                return;
+            }
+
+            this.hideLoadingStatus();
+            this.updatePDFSchedule();
+
+            // Agregar un retraso para asegurar que el DOM se renderice
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            const editorView = document.getElementById('horario-editor') || document.querySelector('.schedule-table-wrapper');
+            const editorHelp = document.getElementById('editor-help');
+            const pdfView = document.getElementById('horario-pdf');
+            
+            if (editorView) editorView.style.display = 'none';
+            if (editorHelp) editorHelp.style.display = 'none';
+            if (pdfView) pdfView.style.display = 'block';
+
+            console.log('Contenido de #horario-pdf antes de generar PDF:', pdfView ? pdfView.innerHTML : 'No encontrado');
+
+            const element = pdfView || document.querySelector('.schedule-container');
+            const opt = {
+                margin: [0.5, 0.5, 0.5, 0.5],
+                filename: `Horario_${this.getGradeName(this.CURRENT_GRADO_ID)}_${new Date().toISOString().split('T')[0]}.pdf`,
+                image: { type: 'jpeg', quality: 0.95 },
+                html2canvas: { 
+                    scale: 2,
+                    useCORS: true,
+                    allowTaint: true,
+                    backgroundColor: '#ffffff'
+                },
+                jsPDF: { 
+                    unit: 'in', 
+                    format: 'letter', 
+                    orientation: 'landscape',
+                    compress: true
+                }
+            };
+            
+            await html2pdf().set(opt).from(element).save();
+
+            if (pdfView) pdfView.style.display = 'none';
+            if (editorView) editorView.style.display = 'block';
+            if (editorHelp) editorHelp.style.display = 'block';
+
+            notificationManager.show('success', 'PDF descargado', 
+                `Horario de ${this.getGradeName(this.CURRENT_GRADO_ID)} descargado exitosamente.`,
+                'El archivo incluye todas las clases guardadas con un diseño profesional.');
+            
+        } catch (error) {
+            console.error('Error generando PDF:', error);
+            notificationManager.show('error', 'Error al generar PDF', 
+                'No se pudo generar el archivo PDF.',
+                'Intenta nuevamente o contacta al soporte técnico.');
+        }
+    }

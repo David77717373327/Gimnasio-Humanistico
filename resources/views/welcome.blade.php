@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -270,7 +269,7 @@
         <div class="hero-background">
             <!-- Imagen de fondo más inspiradora -->
             <div class="hero-image-container">
-                <img src="{{ asset('images/Header_2.jpg') }}" alt="Estudiantes exitosos del Colegio"
+                <img src="{{ asset('images/Header_3.jpg') }}" alt="Estudiantes exitosos del Colegio"
                     class="hero-bg-image">
             </div>
             <div class="hero-overlay"></div>

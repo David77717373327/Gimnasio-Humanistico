@@ -1,11 +1,7 @@
-
-  /* ========================================
-   ENTERPRISE SCHEDULE SYSTEM - CSS
-   Sistema de Horarios Académicos Empresarial
-   ======================================== */
-
+<style>
 /* Variables CSS */
 :root {
+  --primary-green: #1B5E3F;
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
     --accent-color: #3498db;
@@ -24,57 +20,52 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset y Base */
-* {
+/* IMPORTANTE: Encapsular todo dentro de .enterprise-schedule-system */
+.enterprise-schedule-system {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--light-bg);
+    min-height: 100vh;
+    position: relative;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    margin: 0;
-    line-height: 1.6;
+.enterprise-schedule-system *,
+.enterprise-schedule-system *::before,
+.enterprise-schedule-system *::after {
+    box-sizing: border-box;
 }
 
-.enterprise-schedule-system {
-    min-height: 100vh;
-    background: var(--light-bg);
-}
-
-/* ========================================
-   HEADER EMPRESARIAL
-   ======================================== */
-.app-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+/* Header empresarial */
+.enterprise-schedule-system .app-header {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
     color: white;
     padding: 1.5rem 0;
     box-shadow: var(--shadow);
     position: relative;
     overflow: hidden;
+    margin: -1rem -1rem 0 -1rem; /* Compensar el padding del container padre */
 }
 
-.app-header::before {
+.enterprise-schedule-system .app-header::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><polygon points="30 0 60 30 30 60 0 30"/></g></g></svg>') repeat;
     opacity: 0.1;
     z-index: 1;
 }
 
-.app-header .container-fluid,
-.app-header .row,
-.app-header .col,
-.app-header .col-auto {
+.enterprise-schedule-system .app-header .container-fluid,
+.enterprise-schedule-system .app-header .row,
+.enterprise-schedule-system .app-header .col,
+.enterprise-schedule-system .app-header .col-auto {
     position: relative;
     z-index: 2;
 }
 
-.app-title {
+.enterprise-schedule-system .app-title {
     font-size: 2rem;
     font-weight: 700;
     margin: 0;
@@ -83,23 +74,21 @@ body {
     gap: 0.75rem;
 }
 
-.app-title i {
+.enterprise-schedule-system .app-title i {
     font-size: 1.8rem;
-    color: var(--accent-color);
+    color: var(--primary-green);
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
-.app-subtitle {
+.enterprise-schedule-system .app-subtitle {
     font-size: 0.95rem;
     opacity: 0.8;
     margin-top: 0.25rem;
     font-weight: 400;
 }
 
-/* ========================================
-   BOTONES EMPRESARIALES
-   ======================================== */
-.btn-enterprise {
+/* Botones empresariales */
+.enterprise-schedule-system .btn-enterprise {
     border: none;
     border-radius: var(--border-radius);
     padding: 0.75rem 1.5rem;
@@ -115,7 +104,7 @@ body {
     overflow: hidden;
 }
 
-.btn-enterprise::before {
+.enterprise-schedule-system .btn-enterprise::before {
     content: '';
     position: absolute;
     top: 0;
@@ -127,56 +116,54 @@ body {
     z-index: 1;
 }
 
-.btn-enterprise:hover::before {
+.enterprise-schedule-system .btn-enterprise:hover::before {
     left: 100%;
 }
 
-.btn-enterprise:hover {
+.enterprise-schedule-system .btn-enterprise:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
 
-.btn-enterprise.primary {
+.enterprise-schedule-system .btn-enterprise.primary {
     background: linear-gradient(135deg, var(--accent-color), #2980b9);
     color: white;
 }
 
-.btn-enterprise.secondary {
+.enterprise-schedule-system .btn-enterprise.secondary {
     background: linear-gradient(135deg, #95a5a6, #7f8c8d);
     color: white;
 }
 
-.btn-enterprise.success {
+.enterprise-schedule-system .btn-enterprise.success {
     background: linear-gradient(135deg, var(--success-color), #229954);
     color: white;
 }
 
-.btn-enterprise.warning {
+.enterprise-schedule-system .btn-enterprise.warning {
     background: linear-gradient(135deg, var(--warning-color), #e67e22);
     color: white;
 }
 
-.btn-enterprise.danger {
+.enterprise-schedule-system .btn-enterprise.danger {
     background: linear-gradient(135deg, var(--error-color), #c0392b);
     color: white;
 }
 
-.btn-enterprise.info {
+.enterprise-schedule-system .btn-enterprise.info {
     background: linear-gradient(135deg, var(--info-color), #138496);
     color: white;
 }
 
-.btn-enterprise:disabled {
+.enterprise-schedule-system .btn-enterprise:disabled {
     opacity: 0.6;
     cursor: not-allowed;
     transform: none !important;
     box-shadow: none !important;
 }
 
-/* ========================================
-   BARRA DE CONTROL
-   ======================================== */
-.control-bar {
+/* Barra de control */
+.enterprise-schedule-system .control-bar {
     background: white;
     border-radius: var(--border-radius-lg);
     padding: 2rem;
@@ -185,7 +172,7 @@ body {
     border: 1px solid rgba(0,0,0,0.08);
 }
 
-.grade-selector {
+.enterprise-schedule-system .grade-selector {
     background: white;
     border: 2px solid var(--border-color);
     border-radius: var(--border-radius);
@@ -195,14 +182,14 @@ body {
     transition: var(--transition);
 }
 
-.grade-selector:focus {
+.enterprise-schedule-system .grade-selector:focus {
     border-color: var(--accent-color);
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
     outline: none;
 }
 
 /* Indicadores de estado */
-.status-indicator {
+.enterprise-schedule-system .status-indicator {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
@@ -213,39 +200,39 @@ body {
     transition: var(--transition);
 }
 
-.status-loading {
+.enterprise-schedule-system .status-loading {
     background: linear-gradient(135deg, #e8f4f8, #d4edda);
     border-color: rgba(23, 162, 184, 0.3);
     color: var(--info-color);
 }
 
-.status-success {
+.enterprise-schedule-system .status-success {
     background: linear-gradient(135deg, #d4edda, #c3e6cb);
     border-color: rgba(39, 174, 96, 0.3);
     color: var(--success-color);
 }
 
-.status-info {
+.enterprise-schedule-system .status-info {
     background: linear-gradient(135deg, #d1ecf1, #bee5eb);
     border-color: rgba(23, 162, 184, 0.3);
     color: var(--info-color);
 }
 
-.loading-spinner {
+.enterprise-schedule-system .loading-spinner {
     width: 20px;
     height: 20px;
     border: 2px solid var(--info-color);
     border-top: 2px solid transparent;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: schedule-spin 1s linear infinite;
 }
 
-@keyframes spin {
+@keyframes schedule-spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-.info-extra {
+.enterprise-schedule-system .info-extra {
     margin-top: 0.5rem;
     opacity: 0.8;
     display: flex;
@@ -253,10 +240,8 @@ body {
     gap: 0.5rem;
 }
 
-/* ========================================
-   LAYOUT PRINCIPAL
-   ======================================== */
-.main-layout {
+/* Layout principal */
+.enterprise-schedule-system .main-layout {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 2rem;
@@ -264,23 +249,21 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .main-layout {
+    .enterprise-schedule-system .main-layout {
         grid-template-columns: 280px 1fr;
         gap: 1.5rem;
     }
 }
 
 @media (max-width: 992px) {
-    .main-layout {
+    .enterprise-schedule-system .main-layout {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 }
 
-/* ========================================
-   SIDEBAR
-   ======================================== */
-.sidebar {
+/* Sidebar */
+.enterprise-schedule-system .sidebar {
     position: sticky;
     top: 2rem;
     display: flex;
@@ -288,7 +271,7 @@ body {
     gap: 1.5rem;
 }
 
-.enterprise-card {
+.enterprise-schedule-system .enterprise-card {
     background: white;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
@@ -297,16 +280,17 @@ body {
     transition: var(--transition);
 }
 
-.enterprise-card:hover {
+.enterprise-schedule-system .enterprise-card:hover {
     box-shadow: var(--shadow-hover);
     transform: translateY(-2px);
 }
 
-.sidebar-section .card-body {
+.enterprise-schedule-system .sidebar-section .card-body {
     padding: 1.5rem;
+    
 }
 
-.sidebar-title {
+.enterprise-schedule-system .sidebar-title {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--dark-text);
@@ -318,13 +302,13 @@ body {
     border-bottom: 2px solid var(--light-bg);
 }
 
-.sidebar-title i {
+.enterprise-schedule-system .sidebar-title i {
     font-size: 1.2rem;
     color: var(--accent-color);
 }
 
 /* Chips de recursos */
-.resource-chip {
+.enterprise-schedule-system .resource-chip {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -341,7 +325,7 @@ body {
     overflow: hidden;
 }
 
-.resource-chip::before {
+.enterprise-schedule-system .resource-chip::before {
     content: '';
     position: absolute;
     top: 0;
@@ -353,31 +337,31 @@ body {
     z-index: 1;
 }
 
-.resource-chip:hover::before {
+.enterprise-schedule-system .resource-chip:hover::before {
     left: 100%;
 }
 
-.resource-chip:hover {
+.enterprise-schedule-system .resource-chip:hover {
     background: white;
     border-color: var(--accent-color);
     transform: translateX(5px);
     box-shadow: var(--shadow);
 }
 
-.resource-chip:active {
+.enterprise-schedule-system .resource-chip:active {
     cursor: grabbing;
     transform: scale(0.98);
 }
 
-.resource-chip.subject {
+.enterprise-schedule-system .resource-chip.subject {
     border-left: 4px solid var(--success-color);
 }
 
-.resource-chip.teacher {
+.enterprise-schedule-system .resource-chip.teacher {
     border-left: 4px solid var(--warning-color);
 }
 
-.chip-icon {
+.enterprise-schedule-system .chip-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -390,24 +374,22 @@ body {
     z-index: 2;
 }
 
-.resource-chip.subject .chip-icon {
+.enterprise-schedule-system .resource-chip.subject .chip-icon {
     background: rgba(39, 174, 96, 0.1);
     color: var(--success-color);
 }
 
-.resource-chip.teacher .chip-icon {
+.enterprise-schedule-system .resource-chip.teacher .chip-icon {
     background: rgba(243, 156, 18, 0.1);
     color: var(--warning-color);
 }
 
-/* ========================================
-   ÁREA DE HORARIOS
-   ======================================== */
-.schedule-area {
+/* Área de horarios */
+.enterprise-schedule-system .schedule-area {
     position: relative;
 }
 
-.schedule-container {
+.enterprise-schedule-system .schedule-container {
     background: white;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
@@ -415,7 +397,7 @@ body {
     overflow: hidden;
 }
 
-.schedule-header {
+.enterprise-schedule-system .schedule-header {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     padding: 1.5rem 2rem;
     border-bottom: 1px solid var(--border-color);
@@ -426,26 +408,27 @@ body {
     gap: 1rem;
 }
 
-.schedule-header h2 {
+.enterprise-schedule-system .schedule-header h2 {
     color: var(--dark-text);
     font-weight: 700;
     font-size: 1.5rem;
+    margin: 0;
 }
 
-.schedule-header small {
+.enterprise-schedule-system .schedule-header small {
     color: var(--light-text);
     font-size: 0.9rem;
     display: block;
     margin-top: 0.25rem;
 }
 
-.schedule-table-wrapper {
+.enterprise-schedule-system .schedule-table-wrapper {
     padding: 0;
     overflow-x: auto;
     background: white;
 }
 
-.schedule-table {
+.enterprise-schedule-system .schedule-table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
@@ -453,7 +436,7 @@ body {
     background: white;
 }
 
-.schedule-table th {
+.enterprise-schedule-system .schedule-table th {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 1rem;
@@ -466,15 +449,7 @@ body {
     z-index: 10;
 }
 
-.schedule-table th:first-child {
-    border-top-left-radius: 0;
-}
-
-.schedule-table th:last-child {
-    border-top-right-radius: 0;
-}
-
-.time-cell {
+.enterprise-schedule-system .time-cell {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     border-right: 1px solid var(--border-color);
     padding: 1rem;
@@ -487,7 +462,7 @@ body {
     z-index: 5;
 }
 
-.schedule-cell {
+.enterprise-schedule-system .schedule-cell {
     padding: 0.5rem;
     border: 1px solid var(--border-color);
     border-top: none;
@@ -501,33 +476,33 @@ body {
     transition: var(--transition);
 }
 
-.schedule-cell:hover {
+.enterprise-schedule-system .schedule-cell:hover {
     background: rgba(52, 152, 219, 0.02);
 }
 
-.schedule-cell.dragover {
+.enterprise-schedule-system .schedule-cell.dragover {
     background: rgba(52, 152, 219, 0.1);
     border-color: var(--accent-color);
     box-shadow: inset 0 0 0 2px var(--accent-color);
 }
 
-.schedule-cell.occupied {
+.enterprise-schedule-system .schedule-cell.occupied {
     background: rgba(39, 174, 96, 0.02);
 }
 
-.schedule-cell.editing {
+.enterprise-schedule-system .schedule-cell.editing {
     background: rgba(243, 156, 18, 0.1);
     border-color: var(--warning-color);
-    animation: pulse 2s infinite;
+    animation: schedule-pulse 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes schedule-pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.7; }
 }
 
 /* Placeholders de slots */
-.slot-placeholder {
+.enterprise-schedule-system .slot-placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -539,30 +514,30 @@ body {
     transition: var(--transition);
 }
 
-.schedule-cell:hover .slot-placeholder {
+.enterprise-schedule-system .schedule-cell:hover .slot-placeholder {
     opacity: 1;
     color: var(--accent-color);
 }
 
-.placeholder-day {
+.enterprise-schedule-system .placeholder-day {
     font-weight: 600;
     font-size: 0.75rem;
     margin-bottom: 2px;
 }
 
-.placeholder-time {
+.enterprise-schedule-system .placeholder-time {
     font-weight: 500;
     font-size: 0.7rem;
     margin-bottom: 4px;
 }
 
-.placeholder-action {
+.enterprise-schedule-system .placeholder-action {
     font-size: 0.65rem;
     font-style: italic;
 }
 
 /* Slots de clases ocupadas */
-.class-slot {
+.enterprise-schedule-system .class-slot {
     position: relative;
     height: 100%;
     display: flex;
@@ -577,25 +552,25 @@ body {
     min-height: 70px;
 }
 
-.class-slot.existing {
+.enterprise-schedule-system .class-slot.existing {
     background: linear-gradient(135deg, #d4edda, #c3e6cb);
     border-color: var(--success-color);
     border-left: 4px solid var(--success-color);
 }
 
-.class-slot.pending {
+.enterprise-schedule-system .class-slot.pending {
     background: linear-gradient(135deg, #fff3cd, #ffeaa7);
     border-color: var(--warning-color);
     border-left: 4px solid var(--warning-color);
 }
 
-.class-slot.error {
+.enterprise-schedule-system .class-slot.error {
     background: linear-gradient(135deg, #f8d7da, #f5c6cb);
     border-color: var(--error-color);
     border-left: 4px solid var(--error-color);
 }
 
-.slot-status {
+.enterprise-schedule-system .slot-status {
     position: absolute;
     top: 4px;
     right: 4px;
@@ -605,28 +580,28 @@ body {
     z-index: 3;
 }
 
-.slot-status.existing {
+.enterprise-schedule-system .slot-status.existing {
     background: var(--success-color);
     box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.3);
 }
 
-.slot-status.pending {
+.enterprise-schedule-system .slot-status.pending {
     background: var(--warning-color);
     box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.3);
-    animation: blink 2s infinite;
+    animation: schedule-blink 2s infinite;
 }
 
-.slot-status.error {
+.enterprise-schedule-system .slot-status.error {
     background: var(--error-color);
     box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.3);
 }
 
-@keyframes blink {
+@keyframes schedule-blink {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0.5; }
 }
 
-.slot-content {
+.enterprise-schedule-system .slot-content {
     text-align: center;
     flex-grow: 1;
     display: flex;
@@ -635,21 +610,21 @@ body {
     gap: 2px;
 }
 
-.slot-subject {
+.enterprise-schedule-system .slot-subject {
     font-weight: 600;
     font-size: 0.8rem;
     color: var(--dark-text);
     line-height: 1.2;
 }
 
-.slot-teacher {
+.enterprise-schedule-system .slot-teacher {
     font-size: 0.7rem;
     color: var(--light-text);
     font-weight: 500;
     line-height: 1.1;
 }
 
-.slot-actions {
+.enterprise-schedule-system .slot-actions {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -659,11 +634,11 @@ body {
     transition: var(--transition);
 }
 
-.class-slot:hover .slot-actions {
+.enterprise-schedule-system .class-slot:hover .slot-actions {
     opacity: 1;
 }
 
-.slot-btn {
+.enterprise-schedule-system .slot-btn {
     width: 20px;
     height: 20px;
     border: none;
@@ -678,18 +653,18 @@ body {
     justify-content: center;
 }
 
-.slot-btn:hover {
+.enterprise-schedule-system .slot-btn:hover {
     background: var(--error-color);
     transform: scale(1.1);
 }
 
 /* Filas de descanso */
-.break-row td {
+.enterprise-schedule-system .break-row td {
     background: linear-gradient(135deg, #fff8e1, #ffecb3);
     border-color: rgba(243, 156, 18, 0.3);
 }
 
-.break-indicator {
+.enterprise-schedule-system .break-indicator {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -700,48 +675,12 @@ body {
     font-size: 0.95rem;
 }
 
-.break-indicator i {
+.enterprise-schedule-system .break-indicator i {
     font-size: 1.1rem;
 }
 
-/* ========================================
-   ESTADO VACÍO
-   ======================================== */
-.empty-state {
-    text-align: center;
-    padding: 3rem 2rem;
-    color: var(--light-text);
-    background: white;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(0,0,0,0.08);
-}
-
-.empty-state-icon {
-    font-size: 4rem;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    opacity: 0.6;
-}
-
-.empty-state-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--dark-text);
-    margin-bottom: 1rem;
-}
-
-.empty-state-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-/* ========================================
-   BARRA DE ACCIONES FLOTANTE
-   ======================================== */
-.action-bar {
+/* Barra de acciones flotante */
+.enterprise-schedule-system .action-bar {
     position: fixed;
     bottom: 2rem;
     left: 2rem;
@@ -760,7 +699,7 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.action-bar::before {
+.enterprise-schedule-system .action-bar::before {
     content: '';
     position: absolute;
     top: 0;
@@ -773,19 +712,7 @@ body {
     z-index: -1;
 }
 
-@media (max-width: 768px) {
-    .action-bar {
-        left: 1rem;
-        right: 1rem;
-        bottom: 1rem;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-}
-
-/* ========================================
-   NOTIFICACIONES
-   ======================================== */
+/* Notificaciones */
 .notification-container {
     position: fixed;
     top: 2rem;
@@ -948,9 +875,7 @@ body {
     to { width: 0%; }
 }
 
-/* ========================================
-   MODALES EMPRESARIALES
-   ======================================== */
+/* Modales empresariales */
 .enterprise-modal .modal-content {
     border: none;
     border-radius: var(--border-radius-lg);
@@ -992,30 +917,25 @@ body {
     border-top: 1px solid var(--border-color);
 }
 
-/* ========================================
-   EFECTOS DE ARRASTRE
-   ======================================== */
-body.dragging {
-    cursor: grabbing !important;
+/* Efectos de arrastre */
+.enterprise-schedule-system.dragging {
     user-select: none;
 }
 
-body.dragging .schedule-cell {
+.enterprise-schedule-system.dragging .schedule-cell {
     transition: all 0.1s ease;
 }
 
-body.dragging .schedule-cell:not(.dragover) {
+.enterprise-schedule-system.dragging .schedule-cell:not(.dragover) {
     opacity: 0.7;
 }
 
-body.dragging .resource-chip {
+.enterprise-schedule-system.dragging .resource-chip {
     opacity: 0.5;
 }
 
-/* ========================================
-   BADGES Y CHIPS
-   ======================================== */
-.badge {
+/* Badges y chips adicionales */
+.enterprise-schedule-system .badge {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-weight: 500;
@@ -1025,86 +945,82 @@ body.dragging .resource-chip {
     gap: 0.5rem;
 }
 
-/* ========================================
-   UTILIDADES
-   ======================================== */
-.d-none {
+/* Utilidades dentro del contenedor */
+.enterprise-schedule-system .d-none {
     display: none !important;
 }
 
-.d-flex {
+.enterprise-schedule-system .d-flex {
     display: flex !important;
 }
 
-.align-items-center {
+.enterprise-schedule-system .align-items-center {
     align-items: center !important;
 }
 
-.justify-content-between {
+.enterprise-schedule-system .justify-content-between {
     justify-content: space-between !important;
 }
 
-.gap-2 {
+.enterprise-schedule-system .gap-2 {
     gap: 0.5rem !important;
 }
 
-.gap-3 {
+.enterprise-schedule-system .gap-3 {
     gap: 1rem !important;
 }
 
-.text-muted {
+.enterprise-schedule-system .text-muted {
     color: var(--light-text) !important;
 }
 
-.text-truncate {
+.enterprise-schedule-system .text-truncate {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.fw-bold {
+.enterprise-schedule-system .fw-bold {
     font-weight: 700 !important;
 }
 
-.fw-600 {
-    font-weight: 600 !important;
-}
-
-.small {
+.enterprise-schedule-system .small {
     font-size: 0.875rem;
 }
 
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
+/* Responsive design */
 @media (max-width: 768px) {
-    .app-title {
+    .enterprise-schedule-system .app-title {
         font-size: 1.5rem;
     }
     
-    .control-bar {
+    .enterprise-schedule-system .control-bar {
         padding: 1.5rem;
     }
     
-    .main-layout {
+    .enterprise-schedule-system .main-layout {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
     
-    .sidebar {
+    .enterprise-schedule-system .sidebar {
         position: static;
     }
     
-    .schedule-table-wrapper {
+    .enterprise-schedule-system .schedule-table-wrapper {
         overflow-x: auto;
     }
     
-    .schedule-table {
+    .enterprise-schedule-system .schedule-table {
         min-width: 700px;
     }
     
-    .enterprise-modal .modal-dialog {
-        margin: 1rem;
+    .enterprise-schedule-system .action-bar {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        flex-direction: column;
+        gap: 0.75rem;
     }
     
     .notification-container {
@@ -1114,64 +1030,55 @@ body.dragging .resource-chip {
     }
 }
 
-/* ========================================
-   ANIMACIONES ADICIONALES
-   ======================================== */
-.fade-in {
-    animation: fadeIn 0.3s ease-in-out;
+/* Estado vacío */
+.enterprise-schedule-system .empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--light-text);
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0,0,0,0.08);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+.enterprise-schedule-system .empty-state-icon {
+    font-size: 4rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
 }
 
-.bounce-in {
-    animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+.enterprise-schedule-system .empty-state-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
 }
 
-@keyframes bounceIn {
-    0% { transform: scale(0.3); opacity: 0; }
-    50% { transform: scale(1.05); }
-    70% { transform: scale(0.9); }
-    100% { transform: scale(1); opacity: 1; }
+.enterprise-schedule-system .empty-state-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* ========================================
-   SCROLLBAR PERSONALIZADA
-   ======================================== */
-::-webkit-scrollbar {
+/* Scrollbar personalizada solo dentro del sistema */
+.enterprise-schedule-system ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
-::-webkit-scrollbar-track {
+.enterprise-schedule-system ::-webkit-scrollbar-track {
     background: var(--light-bg);
     border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb {
+.enterprise-schedule-system ::-webkit-scrollbar-thumb {
     background: var(--border-color);
     border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.enterprise-schedule-system ::-webkit-scrollbar-thumb:hover {
     background: var(--light-text);
 }
-
-/* ========================================
-   PRINT STYLES
-   ======================================== */
-@media print {
-    .action-bar,
-    .notification-container,
-    .btn-enterprise,
-    .app-header {
-        display: none !important;
-    }
-    
-    .schedule-container {
-        box-shadow: none;
-        border: 1px solid #000;
-    }
-}
+</style>
