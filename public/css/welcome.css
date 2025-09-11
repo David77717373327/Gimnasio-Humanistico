@@ -3,7 +3,7 @@
 ============================================ */
 :root {
     /* Paleta de colores modernizada y balanceada */
-    --primary-green: #1B5E3F;
+    --primary-green: #0d3f27;
     --secondary-green: #7ddfac;
     --light-green: #4CAF50;
     --accent-gold: #F4B942;
@@ -560,14 +560,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     /* Gradiente más sutil para mantener la imagen visible */
-    background: linear-gradient(
-        135deg,
-        rgba(39, 139, 92, 0.3) 0%,
-        rgba(39, 139, 92, 0.3) 0%,
-        rgba(39, 139, 92, 0.5) 70%,
-        rgba(39, 139, 92, 0.6) 100%
-    );
-    z-index: 2;
+    
 }
 
 /* Contenido del hero con mejor posicionamiento */
@@ -905,11 +898,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
-
-
-
-
 /* Contenido textual del hero */
 .hero-text-content {
     padding-right: 2rem;
@@ -1019,94 +1007,6 @@ h1, h2, h3, h4, h5, h6 {
     border-color: rgba(255, 255, 255, 0.9);
     transform: translateY(-2px);
 }
-
-/* ============================================
-   PANEL DE ESTADÍSTICAS MODERNO
-============================================ */
-.stats-panel {
-    background: rgba(82, 78, 78, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--border-radius-xl);
-    padding: 2rem;
-    box-shadow: var(--shadow-xl);
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
-
-.stat-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--border-radius-md);
-    transition: var(--transition-normal);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.stat-item:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-.stat-icon {
-    width: 50px;
-    height: 50px;
-    background: #ffffff;
-    border-radius: var(--border-radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: #2c3e50;
-    box-shadow: var(--shadow-sm);
-    flex-shrink: 0;
-}
-
-.stat-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-number {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color:  #fff;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1;
-    margin-bottom: 0.25rem;
-}
-
-.stat-label {
-    font-size: 0.8rem;
-    font-weight: 500;
-    /*color blanco al 80%*/
-    color: rgba(255, 255, 255, 0.8);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: 1.2;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

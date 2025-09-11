@@ -10,12 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <!-- Bootstrap y Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ asset('images/Logo.png') }}">
-
     <!-- CSS personalizado -->
     <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
 </head>
@@ -269,7 +267,7 @@
         <div class="hero-background">
             <!-- Imagen de fondo más inspiradora -->
             <div class="hero-image-container">
-                <img src="{{ asset('images/Header_3.jpg') }}" alt="Estudiantes exitosos del Colegio"
+                <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Estudiantes exitosos del Colegio"
                     class="hero-bg-image">
             </div>
             <div class="hero-overlay"></div>
@@ -302,53 +300,6 @@
                                     <i class="fas fa-play"></i>
                                     Tour Virtual
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <!-- Panel de estadísticas moderno -->
-                        <div class="stats-panel">
-                            <div class="stats-grid">
-                                <div class="stat-item">
-                                    <div class="stat-icon">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <span class="stat-number" data-count="1500">0</span>
-                                        <span class="stat-label">Estudiantes Activos</span>
-                                    </div>
-                                </div>
-
-                                <div class="stat-item">
-                                    <div class="stat-icon">
-                                        <i class="fas fa-university"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <span class="stat-number" data-count="98">0</span>
-                                        <span class="stat-label">% Ingreso Universitario</span>
-                                    </div>
-                                </div>
-
-                                <div class="stat-item">
-                                    <div class="stat-icon">
-                                        <i class="fas fa-award"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <span class="stat-number" data-count="50">0</span>
-                                        <span class="stat-label">Reconocimientos</span>
-                                    </div>
-                                </div>
-
-                                <div class="stat-item">
-                                    <div class="stat-icon">
-                                        <i class="fas fa-chalkboard-teacher"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <span class="stat-number" data-count="120">0</span>
-                                        <span class="stat-label">Docentes Especializados</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
