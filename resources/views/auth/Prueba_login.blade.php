@@ -809,3 +809,60 @@ body {
         border-width: 3px;
     }
 }
+
+
+
+
+
+
+<!-- Header Section -->
+                <header class="form-header">
+                    <div class="institution-identity">
+                        <img src="{{ asset('images/Logo.png') }}" alt="Logo institucional" class="institution-logo">
+                        <div class="institution-details">
+                            <h2 class="institution-name">Gimnasio Humanístico</h2>
+                            <p class="institution-location">Neiva, Huila</p>
+                        </div>
+                    </div>
+                </header>
+
+
+
+/* Header del formulario */
+.form-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.institution-identity {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--gray-100);
+}
+
+.institution-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(13, 63, 39, 0.1));
+}
+
+.institution-details {
+    flex: 1;
+}
+
+.institution-name {
+    font-family: var(--font-family-secondary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin: 0 0 var(--spacing-xs) 0;
+    line-height: 1.3;
+}
+
+.institution-location {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin: 0;
+}

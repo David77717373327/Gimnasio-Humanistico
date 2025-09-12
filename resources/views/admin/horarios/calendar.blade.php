@@ -6,7 +6,6 @@
 <style>
 /* Variables CSS */
 :root {
-  --primary-green: #1B5E3F;
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
     --accent-color: #3498db;
@@ -1012,6 +1011,7 @@
         position: static;
     }
     
+    
     .enterprise-schedule-system .schedule-table-wrapper {
         overflow-x: auto;
     }
@@ -1146,7 +1146,7 @@
         <!-- Layout principal -->
         <div class="main-layout">
             <!-- Sidebar con recursos -->
-            <div class="sidebar">
+            <div class="sidebar" style="background: #fff;">
                 <!-- Asignaturas -->
                 <div class="enterprise-card sidebar-section">
                     <div class="card-body">

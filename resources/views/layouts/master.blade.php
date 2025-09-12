@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +30,7 @@
                 <div class="logo-container">
                     <img src="{{ asset('images/Logo.png') }}" alt="Logo del Colegio" class="header-logo">
                     <div class="brand-text">
-                        <h2 class="brand-title">Sistema Escolar</h2>
+                        <h2 class="brand-title">Gimnasio Humanistico</h2>
                         <span class="brand-subtitle">Gestión Educativa</span>
                     </div>
                 </div>
@@ -193,20 +192,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Modo Oscuro -->
-                    <div class="control-item">
-                        <button class="control-btn theme-toggle" id="darkModeToggle">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </div>
-
-                    <!-- Menú Móvil Toggle -->
-                    <div class="control-item mobile-menu-toggle">
-                        <button class="control-btn menu-btn" data-widget="pushmenu">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -217,8 +202,7 @@
         <div class="sidebar-header">
             <div class="sidebar-brand d-flex align-items-center">
                 <!-- Icono en vez de imagen -->
-                <i class="fa-solid fa-gear fa-2x text-success me-2"></i>
-
+                <i class="fa-solid fa-gear fa-2x text-white"></i>
                 <div class="sidebar-brand-text">
                     <h5>Panel Admin</h5>
                     <p>Gestión Escolar</p>
@@ -234,9 +218,7 @@
                     </h6>
                     <p>Administrador</p>
                 </div>
-                <div class="sidebar-user-status">
-                    <span class="status-dot online"></span>
-                </div>
+                
             </div>
 
             <!-- Navegación Sidebar -->
@@ -251,15 +233,8 @@
                                 <span class="nav-badge">5</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-chart-line nav-icon"></i>
-                                <span class="nav-text">Estadísticas</span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
-
                 <div class="nav-section">
                     <h6 class="nav-section-title">Académico</h6>
                     <ul class="nav-list">
@@ -285,30 +260,6 @@
                             <a href="#" class="nav-link">
                                 <i class="fas fa-calendar-alt nav-icon"></i>
                                 <span class="nav-text">Horarios</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="nav-section">
-                    <h6 class="nav-section-title">Evaluación</h6>
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-clipboard-list nav-icon"></i>
-                                <span class="nav-text">Calificaciones</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-tasks nav-icon"></i>
-                                <span class="nav-text">Actividades</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-file-alt nav-icon"></i>
-                                <span class="nav-text">Reportes</span>
                             </a>
                         </li>
                     </ul>
@@ -443,5 +394,4 @@
     </script>
     @stack('scripts')
 </body>
-
 </html>
