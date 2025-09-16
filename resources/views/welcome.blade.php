@@ -308,6 +308,9 @@
         </div>
     </section>
 
+
+
+
 <!-- ============================================
      SECCIÓN DE BIENVENIDA INSTITUCIONAL
      Insertar este código DESPUÉS de la hero section (después del </section> de .hero-banner)
@@ -476,579 +479,423 @@
     </div>
 </section>
 
-
 <!-- ============================================
-     ESTILOS CSS - Agregar al archivo CSS existente
+     SECCIÓN QUIÉNES SOMOS
+     Insertar este código DESPUÉS de la sección de bienvenida
 ============================================ -->
-<style>
-/* Sección de Bienvenida */
-.welcome-section {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafb 50%, #ffffff 100%);
-    position: relative;
-    overflow: hidden;
-}
 
-.welcome-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 20%, rgba(244, 185, 66, 0.03) 0%, transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(13, 63, 39, 0.02) 0%, transparent 40%);
-    z-index: 1;
-}
+<!-- Sección Quiénes Somos Mejorada -->
+    <section class="about-us-section" id="quienes-somos">
+        <div class="container">
+            <!-- Header de la Sección -->
+            <div class="about-header text-center mb-5">
+                
+                <h1 class="about-main-title" data-aos="fade-up" data-aos-delay="200">
+                    Quiénes Somos
+                </h1>
+                <p class="about-main-subtitle" data-aos="fade-up" data-aos-delay="400">
+                    Más de 25 años forjando el futuro de Colombia a través de una educación integral, 
+                    innovadora y fundamentada en valores cristianos que transforman vidas.
+                </p>
+            </div>
+
+            <!-- Grid de Información Institucional -->
+            <div class="row g-4 mb-5">
+                <!-- Historia -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="about-card history-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-number">01</div>
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h3>Nuestra Historia</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">
+                                Fundado en 1999, el Colegio Gimnasio Humanístico ha sido pionero en 
+                                educación integral, formando generaciones de líderes comprometidos 
+                                con la excelencia académica.
+                            </p>
+                            <div class="card-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>25+ años de experiencia</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Tradición educativa sólida</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Legado de excelencia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Misión y Visión -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="about-card mission-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-number">02</div>
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Misión y Visión</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">
+                                Formar ciudadanos íntegros con pensamiento crítico, competencias 
+                                globales y valores cristianos, preparados para liderar la 
+                                transformación positiva de la sociedad.
+                            </p>
+                            <div class="card-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Formación integral</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Liderazgo responsable</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Impacto social positivo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Valores -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="about-card values-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-number">03</div>
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Nuestros Valores</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">
+                                Respeto, responsabilidad, honestidad, solidaridad y fe cristiana 
+                                son los pilares que guían cada decisión y acción en nuestra 
+                                comunidad educativa.
+                            </p>
+                            <div class="card-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Valores cristianos</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Ética profesional</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Compromiso social</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filosofía Educativa -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="about-card philosophy-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-number">04</div>
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>Filosofía Educativa</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">
+                                Metodología humanística que integra tecnología, innovación 
+                                pedagógica y formación en valores, desarrollando el potencial 
+                                único de cada estudiante.
+                            </p>
+                            <div class="card-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Metodología innovadora</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Enfoque humanístico</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span>Desarrollo individual</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- Sección Oferta Académica Mejorada - Nivel Empresarial -->
+<section class="academic-levels-section" id="niveles-educativos">
+    <div class="container">
+        <!-- Header de la Sección -->
+        <div class="levels-header text-center mb-5">
+            <h1 class="levels-main-title" data-aos="fade-up">
+                Oferta Académica
+            </h1>
+            <p class="levels-main-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Formación integral desde los primeros años hasta la preparación universitaria, 
+                con metodologías innovadoras y enfoque en el desarrollo de competencias para el siglo XXI.
+            </p>
+        </div>
+
+        <!-- Grid de Niveles Educativos -->
+        <div class="row g-4">
+            <!-- Preescolar -->
+            <div class="col-lg-3 col-md-6">
+                <div class="level-card preescolar-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image-wrapper">
+                        <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Educación Preescolar" class="level-image">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-icon">
+                                    <i class="fas fa-child"></i>
+                                </div>
+                                <h4 class="overlay-title">Preescolar</h4>
+                                <p class="overlay-description">
+                                    Primeros pasos hacia el aprendizaje con amor, creatividad y desarrollo integral
+                                </p>
+                                <div class="overlay-features">
+                                    <span class="feature-item"><i class="fas fa-check"></i> Jardín y Transición</span>
+                                    <span class="feature-item"><i class="fas fa-check"></i> Desarrollo psicomotor</span>
+                                    <span class="feature-item"><i class="fas fa-check"></i> Estimulación temprana</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="level-badge preescolar-badge">
+                            <i class="fas fa-child"></i>
+                            <span>3-5 años</span>
+                        </div>
+                        <h3 class="level-title">Educación Preescolar</h3>
+                        <p class="level-description">
+                            Desarrollamos las habilidades fundamentales a través del juego, 
+                            la exploración y actividades que estimulan la creatividad y el pensamiento crítico.
+                        </p>
+                        <div class="level-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-palette"></i>
+                                <span>Arte y Creatividad</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-music"></i>
+                                <span>Música y Movimiento</span>
+                            </div>
+                        </div>
+                        <a href="#preescolar-detalle" class="level-link">
+                            <span>Ver más información</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-decoration preescolar-decoration"></div>
+                </div>
+            </div>
+
+            <!-- Primaria -->
+            <div class="col-lg-3 col-md-6">
+                <div class="level-card primaria-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image-wrapper">
+                        <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Educación Primaria" class="level-image">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <h4 class="overlay-title">Primaria</h4>
+                                <p class="overlay-description">
+                                    Consolidación de competencias básicas con enfoque bilingüe y tecnológico
+                                </p>
+                                <div class="overlay-features">
+                                    <span class="feature-item"><i class="fas fa-check"></i> Grados 1° a 5°</span>
+                                    <span class="feature-item"><i class="fas fa-check"></i> Educación bilingüe</span>
+                                    <span class="feature-item"><i class="fas fa-check"></i> Competencias STEM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="level-badge primaria-badge">
+                            <i class="fas fa-book"></i>
+                            <span>6-10 años</span>
+                        </div>
+                        <h3 class="level-title">Educación Básica Primaria</h3>
+                        <p class="level-description">
+                            Fortalecemos las competencias comunicativas, matemáticas y científicas 
+                            con metodologías activas y enfoque en el aprendizaje colaborativo.
+                        </p>
+                        <div class="level-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-globe"></i>
+                                <span>Bilingüismo Intensivo</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-laptop"></i>
+                                <span>Tecnología Educativa</span>
+                            </div>
+                        </div>
+                        <a href="#primaria-detalle" class="level-link">
+                            <span>Ver más información</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-decoration primaria-decoration"></div>
+                </div>
+            </div>
+
+            <!-- Secundaria -->
+            <div class="col-lg-3 col-md-6">
+                <div class="level-card secundaria-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image-wrapper">
+                        <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Educación Secundaria" class="level-image">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4 class="overlay-title">Secundaria</h4>
+                                <p class="overlay-description">
+                                    Fortalecimiento del pensamiento crítico y preparación para la media académica
+                                </p>
+                                <div class="overlay-features">
+                                    <span class="feature-item"><i class="fas fa-check"></i> Grados 6° a 9°</span>
+                                    <span class="feature-item"><i class="fas fa-check"></i> Proyectos de investigación</span>
+                                    <span class="feature-item"><i class="fas fa-check"></i> Liderazgo estudiantil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="level-badge secundaria-badge">
+                            <i class="fas fa-users"></i>
+                            <span>11-14 años</span>
+                        </div>
+                        <h3 class="level-title">Educación Básica Secundaria</h3>
+                        <p class="level-description">
+                            Desarrollo del pensamiento crítico y analítico a través de proyectos 
+                            interdisciplinarios que preparan para los desafíos de la educación media.
+                        </p>
+                        <div class="level-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-flask"></i>
+                                <span>Laboratorios Especializados</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Proyectos de Investigación</span>
+                            </div>
+                        </div>
+                        <a href="#secundaria-detalle" class="level-link">
+                            <span>Ver más información</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-decoration secundaria-decoration"></div>
+                </div>
+            </div>
+
+            <!-- Media -->
+            <div class="col-lg-3 col-md-6">
+                <div class="level-card media-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-image-wrapper">
+                        <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Educación Media" class="level-image">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4 class="overlay-title">Media Académica</h4>
+                                <p class="overlay-description">
+                                    Preparación integral para la educación superior y el proyecto de vida
+                                </p>
+                                <div class="overlay-features">
+                                    <span class="feature-item"><i class="fas fa-check"></i> Grados 10° y 11°</span>
+                                    <span class="feature-item"><i class="fas fa-check"></i> Orientación vocacional</span>
+                                    <span class="feature-item"><i class="fas fa-check"></i> Preparación ICFES</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="level-badge media-badge">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>15-17 años</span>
+                        </div>
+                        <h3 class="level-title">Educación Media Académica</h3>
+                        <p class="level-description">
+                            Preparación integral para la educación superior con énfasis en el desarrollo 
+                            del proyecto de vida y competencias para el siglo XXI.
+                        </p>
+                        <div class="level-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-university"></i>
+                                <span>Preparación Universitaria</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Certificaciones Internacionales</span>
+                            </div>
+                        </div>
+                        <a href="#media-detalle" class="level-link">
+                            <span>Ver más información</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-decoration media-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-.welcome-section .container {
-    position: relative;
-    z-index: 2;
-}
 
-/* Header de Bienvenida */
-.welcome-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: linear-gradient(135deg, rgba(244, 185, 66, 0.1), rgba(244, 185, 66, 0.05));
-    color: var(--primary-green);
-    padding: 1rem 2rem;
-    border-radius: var(--border-radius-full);
-    border: 1px solid rgba(244, 185, 66, 0.2);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 20px rgba(244, 185, 66, 0.1);
-}
 
-.welcome-badge i {
-    color: var(--accent-gold);
-    font-size: 1.1rem;
-}
 
-.welcome-main-title {
-    font-size: clamp(2.5rem, 5vw, 3.8rem);
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    font-family: 'Montserrat', sans-serif;
-}
 
-.welcome-main-title .highlight-text {
-    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-}
 
-.welcome-main-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.7;
-    font-weight: 400;
-}
 
-/* Welcome Intro */
-.welcome-intro {
-    margin-bottom: 3rem;
-}
 
-.intro-subtitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-green);
-    margin-bottom: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.3;
-}
-
-.intro-description {
-    font-size: 1rem;
-    color: var(--text-light);
-    line-height: 1.8;
-    font-weight: 400;
-    text-align: justify;
-}
-
-/* Stats Mini */
-.welcome-stats-mini {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-}
-
-.stat-mini-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: var(--white);
-    padding: 1.25rem;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--medium-gray);
-    transition: var(--transition-normal);
-    flex: 1;
-    min-width: 200px;
-}
-
-.stat-mini-item:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent-gold);
-}
-
-.stat-mini-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--gradient-primary);
-    border-radius: var(--border-radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.2rem;
-    flex-shrink: 0;
-}
-
-.stat-mini-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-mini-number {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-green);
-    line-height: 1;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.stat-mini-label {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-/* Feature Points */
-.welcome-features {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.feature-point {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: var(--border-radius-md);
-    border: 1px solid transparent;
-    transition: var(--transition-normal);
-}
-
-.feature-point:hover {
-    background: var(--white);
-    border-color: var(--accent-gold);
-    transform: translateX(5px);
-    box-shadow: var(--shadow-sm);
-}
-
-.feature-point-icon {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--success-green);
-    font-size: 1rem;
-    flex-shrink: 0;
-}
-
-.feature-point span {
-    font-weight: 500;
-    color: var(--text-dark);
-    font-size: 0.95rem;
-}
-
-/* Imagen Principal */
-.welcome-image-container {
-    position: relative;
-}
-
-.main-image-wrapper {
-    position: relative;
-    border-radius: var(--border-radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-    background: var(--white);
-}
-
-.welcome-main-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    transition: var(--transition-slow);
-}
-
-.main-image-wrapper:hover .welcome-main-image {
-    transform: scale(1.02);
-}
-
-.image-overlay-content {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    z-index: 3;
-}
-
-.overlay-badge {
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--primary-green);
-    padding: 1rem 1.5rem;
-    border-radius: var(--border-radius-lg);
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    box-shadow: var(--shadow-lg);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(244, 185, 66, 0.2);
-}
-
-.overlay-badge i {
-    color: var(--accent-gold);
-    font-size: 1.1rem;
-}
-
-/* Elementos Flotantes */
-.floating-element {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-dark);
-    font-size: 1.5rem;
-    box-shadow: var(--shadow-lg);
-    animation: float 6s ease-in-out infinite;
-    opacity: 0.9;
-}
-
-.element-1 {
-    top: -20px;
-    left: -20px;
-    animation-delay: 0s;
-}
-
-.element-2 {
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation-delay: 2s;
-}
-
-.element-3 {
-    top: 50%;
-    right: -20px;
-    transform: translateY(-50%);
-    animation-delay: 4s;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
-}
-
-/* Galería */
-.facilities-gallery {
-    margin-top: 5rem;
-}
-
-.gallery-header {
-    margin-bottom: 3rem;
-}
-
-.gallery-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--primary-green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 1rem;
-}
-
-.title-decorator {
-    width: 60px;
-    height: 3px;
-    background: var(--gradient-gold);
-    border-radius: 2px;
-}
-
-.gallery-subtitle {
-    color: var(--text-light);
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    height: 100%;
-    transition: var(--transition-normal);
-}
-
-.gallery-image-wrapper {
-    position: relative;
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    background: var(--white);
-    box-shadow: var(--shadow-sm);
-    height: 250px;
-    transition: var(--transition-normal);
-}
-
-.gallery-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition-slow);
-}
-
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(13, 63, 39, 0.8), rgba(13, 63, 39, 0.6));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: var(--transition-normal);
-}
-
-.gallery-image-wrapper:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-}
-
-.gallery-image-wrapper:hover .gallery-overlay {
-    opacity: 1;
-}
-
-.gallery-image-wrapper:hover .gallery-image {
-    transform: scale(1.05);
-}
-
-.gallery-content {
-    text-align: center;
-    color: var(--white);
-    padding: 1.5rem;
-}
-
-.gallery-content h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.gallery-content p {
-    font-size: 0.9rem;
-    opacity: 0.9;
-    margin-bottom: 1rem;
-}
-
-.gallery-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--gradient-gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    font-size: 1.3rem;
-    color: var(--text-dark);
-    box-shadow: var(--shadow-md);
-}
-
-/* CTA Final */
-.welcome-cta {
-    margin-top: 4rem;
-}
-
-.cta-wrapper {
-    background: linear-gradient(135deg, var(--white), var(--light-gray));
-    padding: 3rem 2rem;
-    border-radius: var(--border-radius-xl);
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--medium-gray);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cta-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--primary-green);
-    margin-bottom: 1rem;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.cta-subtitle {
-    color: var(--text-light);
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn-cta-primary, .btn-cta-secondary {
-    padding: 1rem 2rem;
-    border-radius: var(--border-radius-lg);
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.85rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: var(--transition-normal);
-    font-family: 'Montserrat', sans-serif;
-}
-
-.btn-cta-primary {
-    background: var(--gradient-gold);
-    color: var(--text-dark);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-cta-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-xl);
-    color: var(--text-dark);
-}
-
-.btn-cta-secondary {
-    background: transparent;
-    color: var(--primary-green);
-    border: 2px solid var(--primary-green);
-}
-
-.btn-cta-secondary:hover {
-    background: var(--primary-green);
-    color: var(--white);
-    transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .welcome-stats-mini {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .stat-mini-item {
-        min-width: auto;
-    }
-    
-    .floating-element {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .welcome-section {
-        padding: 4rem 0;
-    }
-    
-    .welcome-main-image {
-        height: 300px;
-    }
-    
-    .image-overlay-content {
-        top: 1rem;
-        right: 1rem;
-    }
-    
-    .overlay-badge {
-        padding: 0.75rem 1rem;
-        font-size: 0.8rem;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn-cta-primary, .btn-cta-secondary {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-}
-
-/* Animaciones AOS */
-[data-aos="fade-up"] {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-[data-aos="fade-right"] {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-[data-aos="fade-left"] {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-[data-aos="zoom-in"] {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-[data-aos].aos-animate {
-    opacity: 1;
-    transform: translate(0) scale(1);
-}
-</style>
 
 <!-- Script para Animaciones AOS (Agregar antes del cierre de </body>) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -1100,35 +947,6 @@
         }
     });
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
 
     <!-- Scripts -->
