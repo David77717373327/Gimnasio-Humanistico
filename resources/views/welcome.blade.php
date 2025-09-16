@@ -323,7 +323,7 @@
         <div class="welcome-header text-center mb-5">
             
             <h1 class="welcome-main-title" data-aos="fade-up" data-aos-delay="200">
-                Bienvenidos al <span class="highlight-text">Colegio Gimnasio Humanístico</span>
+               <span class="highlight-text"> Bienvenidos al Colegio Gimnasio Humanístico</span>
             </h1>
             <div class="welcome-badge" data-aos="fade-up">
                 <i class="fas fa-graduation-cap"></i>
@@ -890,17 +890,142 @@
 </section>
 
 
+<!-- FOOTER PRINCIPAL - CÓDIGO CORREGIDO -->
+    <footer class="main-footer">
+        <div class="footer-decoration"></div>
+        
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Información de la Institución -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-section footer-brand" data-aos="fade-up" data-aos-delay="100">
+                            <a href="#" class="footer-logo">
+                                <div class="footer-logo-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <span>Gimnasio Humanístico</span>
+                            </a>
+                            <p class="footer-description">
+                                Formando ciudadanos íntegros con excelencia académica, valores cristianos y 
+                                compromiso social desde hace más de 25 años. Construyendo el futuro de Colombia 
+                                a través de una educación transformadora.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-link whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Enlaces Rápidos -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                            <h5 class="footer-title">Enlaces Rápidos</h5>
+                            <ul class="footer-links">
+                                <li><a href="#inicio" class="footer-link"><i class="fas fa-chevron-right"></i>Inicio</a></li>
+                                <li><a href="#quienes-somos" class="footer-link"><i class="fas fa-chevron-right"></i>Quiénes Somos</a></li>
+                                <li><a href="#niveles-educativos" class="footer-link"><i class="fas fa-chevron-right"></i>Oferta Académica</a></li>
+                                <li><a href="#admisiones" class="footer-link"><i class="fas fa-chevron-right"></i>Admisiones</a></li>
+                                <li><a href="#noticias" class="footer-link"><i class="fas fa-chevron-right"></i>Noticias</a></li>
+                                <li><a href="#contacto" class="footer-link"><i class="fas fa-chevron-right"></i>Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <!-- Servicios -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+                            <h5 class="footer-title">Servicios</h5>
+                            <ul class="footer-links">
+                                <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Educación Preescolar</a></li>
+                                <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Básica Primaria</a></li>
+                                <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Básica Secundaria</a></li>
+                                <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Media Académica</a></li>
+                                <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Bilingüismo</a></li>
+                                <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Orientación Vocacional</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <!-- Información de Contacto -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-section" data-aos="fade-up" data-aos-delay="400">
+                            <h5 class="footer-title">Contacto</h5>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <div class="contact-label">Dirección</div>
+                                    <p class="contact-text">Calle 23 #45-67<br>Neiva, Huila - Colombia</p>
+                                </div>
+                            </div>
 
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <div class="contact-label">Teléfono</div>
+                                    <p class="contact-text">(+57) 8 875 2345<br>(+57) 300 123 4567</p>
+                                </div>
+                            </div>
 
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <div class="contact-label">Email</div>
+                                    <p class="contact-text">info@gimnasiohumanistico.edu.co<br>admisiones@gimnasiohumanistico.edu.co</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom - SECCIÓN CORREGIDA -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content" data-aos="fade-up" data-aos-delay="500">
+                    <p class="copyright">
+                        © 2024 Gimnasio Humanístico. Todos los derechos reservados.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Política de Privacidad</a>
+                        <a href="#" class="footer-bottom-link">Términos y Condiciones</a>
+                        <a href="#" class="footer-bottom-link">Manual de Convivencia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 <!-- Script para Animaciones AOS (Agregar antes del cierre de </body>) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <script>
+    
+
+
+
+
+
     // Inicializar AOS
     AOS.init({
         duration: 800,
@@ -908,6 +1033,105 @@
         once: true,
         offset: 100
     });
+
+    // JavaScript mejorado para el footer
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Observer para efectos adicionales
+            const footerObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        
+                        // Animación escalonada para los enlaces
+                        const footerLinks = entry.target.querySelectorAll('.footer-link');
+                        footerLinks.forEach((link, index) => {
+                            setTimeout(() => {
+                                link.style.opacity = '1';
+                                link.style.transform = 'translateX(0)';
+                            }, index * 100);
+                        });
+
+                        // Efecto para los iconos sociales
+                        const socialLinks = entry.target.querySelectorAll('.social-link');
+                        socialLinks.forEach((social, index) => {
+                            setTimeout(() => {
+                                social.style.opacity = '1';
+                                social.style.transform = 'scale(1)';
+                            }, 300 + (index * 100));
+                        });
+
+                        // Animación especial para el footer-bottom
+                        const footerBottom = entry.target.querySelector('.footer-bottom-content');
+                        if (footerBottom) {
+                            setTimeout(() => {
+                                footerBottom.style.opacity = '1';
+                                footerBottom.style.transform = 'translateY(0)';
+                            }, 500);
+                        }
+
+                        footerObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            // Observar el footer
+            const footer = document.querySelector('.main-footer');
+            if (footer) {
+                footerObserver.observe(footer);
+            }
+
+            // Inicializar estilos de los elementos animados
+            document.querySelectorAll('.footer-link').forEach(link => {
+                link.style.opacity = '0';
+                link.style.transform = 'translateX(-20px)';
+                link.style.transition = 'all 0.3s ease-out';
+            });
+
+            document.querySelectorAll('.social-link').forEach(social => {
+                social.style.opacity = '0';
+                social.style.transform = 'scale(0.8)';
+                social.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+
+            // Inicializar footer-bottom-content
+            const footerBottomContent = document.querySelector('.footer-bottom-content');
+            if (footerBottomContent) {
+                footerBottomContent.style.opacity = '0';
+                footerBottomContent.style.transform = 'translateY(30px)';
+                footerBottomContent.style.transition = 'all 0.6s ease-out';
+            }
+
+            // Efectos hover adicionales
+            document.querySelectorAll('.footer-link').forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.textShadow = '0 0 10px rgba(244, 185, 66, 0.5)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.textShadow = 'none';
+                });
+            });
+
+            // Parallax sutil para la decoración
+            let ticking = false;
+            
+            function updateParallax() {
+                const scrolled = window.pageYOffset;
+                const decoration = document.querySelector('.footer-decoration');
+                if (decoration) {
+                    const speed = scrolled * 0.1;
+                    decoration.style.transform = `translateY(${speed}px) rotate(${scrolled * 0.05}deg)`;
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            });
+        });
 
     // Animación adicional para contadores
     function animateWelcomeCounters() {
