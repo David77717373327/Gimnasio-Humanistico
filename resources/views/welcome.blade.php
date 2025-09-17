@@ -479,192 +479,134 @@
     </div>
 </section>
 
+
+
+
+
+
+
+
 <!-- ============================================
      SECCIÓN QUIÉNES SOMOS
      Insertar este código DESPUÉS de la sección de bienvenida
 ============================================ -->
 
-<!-- Sección Quiénes Somos Mejorada -->
-    <section class="about-us-section" id="quienes-somos">
-        <div class="container">
-            <!-- Header de la Sección -->
-            <div class="about-header text-center mb-5">
-                
-                <h1 class="about-main-title" data-aos="fade-up" data-aos-delay="200">
-                    Quiénes Somos
-                </h1>
-                <p class="about-main-subtitle" data-aos="fade-up" data-aos-delay="400">
-                    Más de 25 años forjando el futuro de Colombia a través de una educación integral, 
-                    innovadora y fundamentada en valores cristianos que transforman vidas.
-                </p>
+<<!-- Sección Quiénes Somos Mejorada -->
+<section class="about-us-section" id="quienes-somos">
+    <div class="container">
+        <!-- Header de la Sección -->
+        <div class="about-header text-center mb-5">
+            <h1 class="about-main-title" data-aos="fade-up" data-aos-delay="200">
+                Quiénes Somos
+            </h1>
+            <p class="about-main-subtitle" data-aos="fade-up" data-aos-delay="400">
+                Más de 25 años forjando el futuro de Colombia a través de una educación integral, 
+                innovadora y fundamentada en valores cristianos que transforman vidas.
+            </p>
+        </div>
+
+        <!-- Grid de Información Institucional -->
+        <div class="row g-4 mb-5">
+            <!-- Historia -->
+            <div class="col-lg-3 col-md-6">
+                <div class="about-card history-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>Nuestra Historia</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Fundado en 1999, el Colegio Gimnasio Humanístico ha sido pionero en 
+                            educación integral, formando generaciones de líderes comprometidos 
+                            con la excelencia académica y el desarrollo humano integral.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Grid de Información Institucional -->
-            <div class="row g-4 mb-5">
-                <!-- Historia -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="about-card history-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-number">01</div>
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i class="fas fa-history"></i>
-                            </div>
-                            <h3>Nuestra Historia</h3>
+            <!-- Misión y Visión -->
+            <div class="col-lg-3 col-md-6">
+                <div class="about-card mission-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
                         </div>
-                        <div class="card-body">
-                            <p class="card-description">
-                                Fundado en 1999, el Colegio Gimnasio Humanístico ha sido pionero en 
-                                educación integral, formando generaciones de líderes comprometidos 
-                                con la excelencia académica.
-                            </p>
-                            <div class="card-features">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>25+ años de experiencia</span>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Tradición educativa sólida</span>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Legado de excelencia</span>
-                                </div>
-                            </div>
-                        </div>
+                        <h3>Misión y Visión</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Formar ciudadanos íntegros con pensamiento crítico, competencias 
+                            globales y valores cristianos, preparados para liderar la 
+                            transformación positiva de la sociedad colombiana.
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Misión y Visión -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="about-card mission-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-number">02</div>
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <h3>Misión y Visión</h3>
+            <!-- Valores -->
+            <div class="col-lg-3 col-md-6">
+                <div class="about-card values-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
                         </div>
-                        <div class="card-body">
-                            <p class="card-description">
-                                Formar ciudadanos íntegros con pensamiento crítico, competencias 
-                                globales y valores cristianos, preparados para liderar la 
-                                transformación positiva de la sociedad.
-                            </p>
-                            <div class="card-features">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Formación integral</span>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Liderazgo responsable</span>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Impacto social positivo</span>
-                                </div>
-                            </div>
-                        </div>
+                        <h3>Nuestros Valores</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Respeto, responsabilidad, honestidad, solidaridad y fe cristiana 
+                            son los pilares fundamentales que guían cada decisión y acción 
+                            en nuestra comunidad educativa.
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Valores -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="about-card values-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-number">03</div>
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <h3>Nuestros Valores</h3>
+            <!-- Filosofía Educativa -->
+            <div class="col-lg-3 col-md-6">
+                <div class="about-card philosophy-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
-                        <div class="card-body">
-                            <p class="card-description">
-                                Respeto, responsabilidad, honestidad, solidaridad y fe cristiana 
-                                son los pilares que guían cada decisión y acción en nuestra 
-                                comunidad educativa.
-                            </p>
-                            <div class="card-features">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Valores cristianos</span>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Ética profesional</span>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Compromiso social</span>
-                                </div>
-                            </div>
-                        </div>
+                        <h3>Filosofía Educativa</h3>
                     </div>
-                </div>
-
-                <!-- Filosofía Educativa -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="about-card philosophy-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-number">04</div>
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <h3>Filosofía Educativa</h3>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-description">
-                                Metodología humanística que integra tecnología, innovación 
-                                pedagógica y formación en valores, desarrollando el potencial 
-                                único de cada estudiante.
-                            </p>
-                            <div class="card-features">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Metodología innovadora</span>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Enfoque humanístico</span>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <span>Desarrollo individual</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Metodología humanística que integra tecnología, innovación 
+                            pedagógica y formación en valores, desarrollando el potencial 
+                            único de cada estudiante para su crecimiento integral.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============================================
+     SECCIÓN OFERTA ACADÉMICA - NIVELES EDUCATIVOS
+     Insertar este código DESPUÉS de la sección Quiénes Somos
+============================================ -->
 
 <!-- Sección Oferta Académica Mejorada - Nivel Empresarial -->
 <section class="academic-levels-section" id="niveles-educativos">
@@ -1020,18 +962,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <script>
-    
-
-
-
 
 
     // Inicializar AOS
     AOS.init({
-        duration: 800,
+        duration: 600,
         easing: 'ease-out',
         once: true,
-        offset: 100
+        offset: 50
     });
 
     // JavaScript mejorado para el footer
