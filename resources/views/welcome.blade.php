@@ -389,7 +389,6 @@
                                 <span>Instalaciones Modernas</span>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -484,36 +483,25 @@
 
 
 
+<!-- Sección Quiénes Somos - HTML DE LA SEGUNDA PLANTILLA + ATRIBUTOS AOS -->
+    <section class="about-us-section" id="quienes-somos">
+        <div class="container">
+            <!-- Header de la Sección -->
+            <div class="about-header text-center mb-5">
+                <h1 class="about-main-title" data-aos="fade-up" data-aos-delay="200">
+                    Quiénes Somos
+                </h1>
+                <p class="about-main-subtitle" data-aos="fade-up" data-aos-delay="400">
+                    Más de 25 años forjando el futuro de Colombia a través de una educación integral, 
+                    innovadora y fundamentada en valores cristianos que transforman vidas.
+                </p>
+            </div>
 
-
-<!-- ============================================
-     SECCIÓN QUIÉNES SOMOS
-     Insertar este código DESPUÉS de la sección de bienvenida
-============================================ -->
-
-<<!-- Sección Quiénes Somos Mejorada -->
-<section class="about-us-section" id="quienes-somos">
-    <div class="container">
-        <!-- Header de la Sección -->
-        <div class="about-header text-center mb-5">
-            <h1 class="about-main-title" data-aos="fade-up" data-aos-delay="200">
-                Quiénes Somos
-            </h1>
-            <p class="about-main-subtitle" data-aos="fade-up" data-aos-delay="400">
-                Más de 25 años forjando el futuro de Colombia a través de una educación integral, 
-                innovadora y fundamentada en valores cristianos que transforman vidas.
-            </p>
-        </div>
-
-        <!-- Grid de Información Institucional -->
-        <div class="row g-4 mb-5">
-            <!-- Historia -->
-            <div class="col-lg-3 col-md-6">
+            <!-- Grid de Cards Profesional: 2x2 -->
+            <div class="cards-grid">
+                <!-- Historia -->
                 <div class="about-card history-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-history"></i>
-                        </div>
                         <h3>Nuestra Historia</h3>
                     </div>
                     <div class="card-body">
@@ -524,53 +512,38 @@
                         </p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Misión y Visión -->
-            <div class="col-lg-3 col-md-6">
+                <!-- Misión -->
                 <div class="about-card mission-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3>Misión y Visión</h3>
+                        <h3>Nuestra Misión</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-description">
-                            Formar ciudadanos íntegros con pensamiento crítico, competencias 
-                            globales y valores cristianos, preparados para liderar la 
-                            transformación positiva de la sociedad colombiana.
+                            Formar ciudadanos íntegros con pensamiento crítico y competencias 
+                            globales, fundamentados en valores cristianos, capaces de liderar 
+                            la transformación positiva de nuestra sociedad.
                         </p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Valores -->
-            <div class="col-lg-3 col-md-6">
-                <div class="about-card values-card" data-aos="fade-up" data-aos-delay="300">
+                <!-- Visión -->
+                <div class="about-card vision-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3>Nuestros Valores</h3>
+                        <h3>Nuestra Visión</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-description">
-                            Respeto, responsabilidad, honestidad, solidaridad y fe cristiana 
-                            son los pilares fundamentales que guían cada decisión y acción 
-                            en nuestra comunidad educativa.
+                            Ser reconocidos como institución líder en educación humanística 
+                            e innovadora, formando graduados que impacten positivamente 
+                            en el desarrollo social, económico y cultural del país.
                         </p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Filosofía Educativa -->
-            <div class="col-lg-3 col-md-6">
+                <!-- Filosofía Educativa -->
                 <div class="about-card philosophy-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
                         <h3>Filosofía Educativa</h3>
                     </div>
                     <div class="card-body">
@@ -583,8 +556,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -628,7 +600,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="level-card preescolar-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-image-wrapper">
-                        <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Educación Preescolar" class="level-image">
+                        <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Educación Preescolar" class="level-image">
                         <div class="card-overlay">
                             <div class="overlay-content">
                                 <div class="overlay-icon">
@@ -679,7 +651,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="level-card primaria-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-image-wrapper">
-                        <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Educación Primaria" class="level-image">
+                        <img src="{{ asset('images/segundariaaa.jpeg') }}" alt="Educación Primaria" class="level-image">
                         <div class="card-overlay">
                             <div class="overlay-content">
                                 <div class="overlay-icon">
@@ -832,6 +804,21 @@
 </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- FOOTER PRINCIPAL - CÓDIGO CORREGIDO -->
     <footer class="main-footer">
         <div class="footer-decoration"></div>
@@ -963,12 +950,11 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <script>
 
-
     // Inicializar AOS
     AOS.init({
         duration: 600,
         easing: 'ease-out',
-        once: true,
+        once: false,
         offset: 50
     });
 
