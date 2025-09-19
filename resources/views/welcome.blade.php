@@ -311,6 +311,15 @@
 
 
 
+
+
+
+
+
+
+
+    
+
 <!-- ============================================
      SECCIÓN DE BIENVENIDA INSTITUCIONAL
      Insertar este código DESPUÉS de la hero section (después del </section> de .hero-banner)
@@ -502,7 +511,7 @@
                 <!-- Historia -->
                 <div class="about-card history-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-header">
-                        <h3>Nuestra Historia</h3>
+                        <h3>Misión</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-description">
@@ -516,7 +525,7 @@
                 <!-- Misión -->
                 <div class="about-card mission-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-header">
-                        <h3>Nuestra Misión</h3>
+                        <h3>Visión</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-description">
@@ -530,7 +539,7 @@
                 <!-- Visión -->
                 <div class="about-card vision-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="card-header">
-                        <h3>Nuestra Visión</h3>
+                        <h3>Historia</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-description">
@@ -819,7 +828,7 @@
 
 
 
-<!-- FOOTER PRINCIPAL - CÓDIGO CORREGIDO -->
+<!-- FOOTER PRINCIPAL - OPTIMIZADO CON MAPA -->
     <footer class="main-footer">
         <div class="footer-decoration"></div>
         
@@ -827,7 +836,7 @@
             <div class="container">
                 <div class="row g-4">
                     <!-- Información de la Institución -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="footer-section footer-brand" data-aos="fade-up" data-aos-delay="100">
                             <a href="#" class="footer-logo">
                                 <div class="footer-logo-icon">
@@ -837,8 +846,7 @@
                             </a>
                             <p class="footer-description">
                                 Formando ciudadanos íntegros con excelencia académica, valores cristianos y 
-                                compromiso social desde hace más de 25 años. Construyendo el futuro de Colombia 
-                                a través de una educación transformadora.
+                                compromiso social desde hace más de 25 años.
                             </p>
                             <div class="social-links">
                                 <a href="#" class="social-link facebook">
@@ -866,14 +874,12 @@
                                 <li><a href="#quienes-somos" class="footer-link"><i class="fas fa-chevron-right"></i>Quiénes Somos</a></li>
                                 <li><a href="#niveles-educativos" class="footer-link"><i class="fas fa-chevron-right"></i>Oferta Académica</a></li>
                                 <li><a href="#admisiones" class="footer-link"><i class="fas fa-chevron-right"></i>Admisiones</a></li>
-                                <li><a href="#noticias" class="footer-link"><i class="fas fa-chevron-right"></i>Noticias</a></li>
-                                <li><a href="#contacto" class="footer-link"><i class="fas fa-chevron-right"></i>Contacto</a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Servicios -->
-                    <div class="col-lg-3 col-md-6">
+                    <!-- Servicios Académicos -->
+                    <div class="col-lg-2 col-md-6">
                         <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
                             <h5 class="footer-title">Servicios</h5>
                             <ul class="footer-links">
@@ -881,14 +887,12 @@
                                 <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Básica Primaria</a></li>
                                 <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Básica Secundaria</a></li>
                                 <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Media Académica</a></li>
-                                <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Bilingüismo</a></li>
-                                <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Orientación Vocacional</a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Información de Contacto -->
-                    <div class="col-lg-3 col-md-6">
+                    <!-- Información de Contacto Completa -->
+                    <div class="col-lg-2 col-md-6">
                         <div class="footer-section" data-aos="fade-up" data-aos-delay="400">
                             <h5 class="footer-title">Contacto</h5>
                             
@@ -918,8 +922,19 @@
                                 </div>
                                 <div class="contact-content">
                                     <div class="contact-label">Email</div>
-                                    <p class="contact-text">info@gimnasiohumanistico.edu.co<br>admisiones@gimnasiohumanistico.edu.co</p>
+                                    <p class="contact-text">informacios@gmail.com<br>gimnasiohumanistico.edu.co</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa de Ubicación - NUEVA SECCIÓN -->
+                    <div class="col-lg-3 col-md-12">
+                        <div class="footer-section" data-aos="fade-up" data-aos-delay="500">
+                            <h5 class="footer-title">Nuestra Ubicación</h5>
+                            <div class="footer-map">
+                                <!-- Reemplaza esta URL con la ubicación real de tu colegio -->
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.5980542106286!2d-75.29349652622278!3d2.9312627970450427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b74649b7ec0f3%3A0x6bd869e2c80a8862!2sGimnasio%20Human%C3%ADstico%20del%20Alto%20Magdalena!5e0!3m2!1ses!2sco!4v1758286578845!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -927,10 +942,10 @@
             </div>
         </div>
 
-        <!-- Footer Bottom - SECCIÓN CORREGIDA -->
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="container">
-                <div class="footer-bottom-content" data-aos="fade-up" data-aos-delay="500">
+                <div class="footer-bottom-content" data-aos="fade-up" data-aos-delay="600">
                     <p class="copyright">
                         © 2024 Gimnasio Humanístico. Todos los derechos reservados.
                     </p>
