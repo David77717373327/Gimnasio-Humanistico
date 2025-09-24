@@ -31,6 +31,11 @@ Route::get('/dashboard', function () {
 // Ruta pública (usuario)
 Route::get('/usuario/inicio', [RutasController::class, 'mostrarContenidoUsuario'])->name('usuario.welcome');
 
+
+//Rutas para vistas de Quines Somos
+
+Route::get('/quienes-somos', [RutasController::class, 'mostrarQuienesSomos'])->name('quienes-somos');
+
 // Sobreescribir la ruta de registro de Fortify
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
 Route::post('/register', [RegisteredUserController::class, 'store']);

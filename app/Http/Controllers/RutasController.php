@@ -25,5 +25,28 @@ class RutasController extends Controller
     {
         return view('professor.index');
     }
+
+
+
+
+    //Rutas para mostrar contenido de Quienes Somos
+    public function mostrarQuienesSomos()
+    {
+        return view('Institucion.quienes_somos');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 

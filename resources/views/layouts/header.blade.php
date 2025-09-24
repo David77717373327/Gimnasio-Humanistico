@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIMNASIO HUMANÍSTICO</title>
-    <!-- Google Fonts - Tipografía moderna -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Bootstrap y Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="{{ asset('images/Logo.png') }}">
-    <!-- CSS personalizado -->
-    <link href="{{ asset('css/quienes_somos.css') }}" rel="stylesheet">
-</head>
 
-<body>
     <!-- Header Institucional Mejorado -->
     <div class="logo-bar">
         <div class="container-fluid">
@@ -242,6 +222,8 @@
                         </div>
                     </li>
 
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">
                             <i class="fas fa-envelope"></i>
@@ -259,86 +241,4 @@
             </div>
         </div>
     </nav>
-        <!-- Scripts -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-        <script>
-            // Navegación con scroll mejorada
-            window.addEventListener('scroll', function() {
-                const scrolled = window.pageYOffset;
-                const navigation = document.querySelector('.main-navigation');
-
-                if (scrolled > 50) {
-                    navigation.classList.add('scrolled');
-                } else {
-                    navigation.classList.remove('scrolled');
-                }
-            });
-
-            // Animación de contadores mejorada
-            function animateCounters() {
-                const counters = document.querySelectorAll('.stat-number');
-                counters.forEach(counter => {
-                    const target = parseInt(counter.getAttribute('data-count'));
-                    const duration = 2000;
-                    const increment = target / (duration / 16);
-                    let current = 0;
-
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= target) {
-                            current = target;
-                            clearInterval(timer);
-                        }
-                        counter.textContent = Math.floor(current);
-                    }, 16);
-                });
-            }
-
-            // Observer para activar animaciones
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        if (entry.target.classList.contains('stats-panel')) {
-                            animateCounters();
-                        }
-                        entry.target.classList.add('animate-in');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            // Observar elementos para animación
-            document.querySelectorAll('.stats-panel, .feature-card').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Smooth scroll mejorado
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const offsetTop = target.offsetTop - 80;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Mejorar navegación móvil
-            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    const navbarCollapse = document.querySelector('.navbar-collapse');
-                    if (navbarCollapse.classList.contains('show')) {
-                        const toggler = document.querySelector('.navbar-toggler');
-                        toggler.click();
-                    }
-                });
-            });
-        </script>
-    </body>
 </html>
