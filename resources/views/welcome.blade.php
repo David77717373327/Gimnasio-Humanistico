@@ -24,7 +24,6 @@
 @include('layouts.header')
 
 
-
 <body>
     <!-- Hero Section Completamente Rediseñado -->
     <section class="hero-banner" id="inicio">
@@ -367,13 +366,6 @@
 
 
 
-
-
-
-
-
-
-
     <!-- ============================================
      SECCIÓN OFERTA ACADÉMICA - NIVELES EDUCATIVOS
      Insertar este código DESPUÉS de la sección Quiénes Somos
@@ -689,5 +681,4 @@
         });
     </script>
 </body>
-
 </html>

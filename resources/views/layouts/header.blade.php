@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#inicio">
+                        <a class="nav-link active" href="/">
                             <i class="fas fa-home"></i>
                             INICIO
                         </a>
