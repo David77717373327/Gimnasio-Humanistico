@@ -52,11 +52,11 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h6 class="dropdown-header">Institución</h6>
-                                        <a class="dropdown-item" href="{{ route('quienes-somos') }}">
+                                        <a class="dropdown-item" href="{{ route('Historia') }}">
                                             <i class="fas fa-history"></i>
                                             Nuestra Historia
                                         </a>
-                                        <a class="dropdown-item" href="#mision">
+                                        <a class="dropdown-item" href="{{ 'mision-vision'}}">
                                             <i class="fas fa-eye"></i>
                                             Misión y Visión
                                         </a>

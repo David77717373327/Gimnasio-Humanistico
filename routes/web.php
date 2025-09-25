@@ -32,9 +32,10 @@ Route::get('/dashboard', function () {
 Route::get('/usuario/inicio', [RutasController::class, 'mostrarContenidoUsuario'])->name('usuario.welcome');
 
 
-//Rutas para vistas de Quines Somos
-
-Route::get('/quienes-somos', [RutasController::class, 'mostrarQuienesSomos'])->name('quienes-somos');
+//Ruta para mostrar contenido de historia
+Route::get('/Historia', [RutasController::class, 'mostrarcontenidohistoria'])->name('Historia');
+//Ruta para mostrar contenido de mision y vision
+Route::get('/mision-vision', [RutasController::class, 'mostrarcontenidomisionyvision'])->name('mision-vision');
 
 // Sobreescribir la ruta de registro de Fortify
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');

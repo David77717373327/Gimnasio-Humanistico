@@ -30,9 +30,14 @@ class RutasController extends Controller
 
 
     //Rutas para mostrar contenido de Quienes Somos
-    public function mostrarQuienesSomos()
+    public function mostrarcontenidohistoria()
     {
         return view('Institucion.quienes_somos');
+    }
+
+    public function mostrarcontenidomisionyvision()
+    {
+        return view('Institucion.Mision_vision');
     }
 
 
