@@ -60,11 +60,8 @@
                                             <i class="fas fa-eye"></i>
                                             Misión y Visión
                                         </a>
-                                        <a class="dropdown-item" href="#valores">
-                                            <i class="fas fa-heart"></i>
-                                            Valores Institucionales
-                                        </a>
-                                        <a class="dropdown-item" href="#filosofia">
+                                        
+                                        <a class="dropdown-item" href="{{  route('filosofia_institucional') }}">
                                             <i class="fas fa-lightbulb"></i>
                                             Filosofía Educativa
                                         </a>
@@ -164,33 +161,11 @@
                         </div>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <i class="fas fa-door-open"></i>
-                            ADMISIÓN
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ 'admision' }}">
+                            <i class="fas fa-envelope"></i>
+                            ADMISION
                         </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#proceso">
-                                <i class="fas fa-info-circle"></i>
-                                Proceso de Admisión
-                            </a>
-                            <a class="dropdown-item" href="#cronograma">
-                                <i class="fas fa-calendar-alt"></i>
-                                Cronograma 2025
-                            </a>
-                            <a class="dropdown-item" href="#requisitos">
-                                <i class="fas fa-file-alt"></i>
-                                Requisitos
-                            </a>
-                            <a class="dropdown-item" href="#costos">
-                                <i class="fas fa-dollar-sign"></i>
-                                Costos y Pensiones
-                            </a>
-                            <a class="dropdown-item" href="#becas">
-                                <i class="fas fa-hand-holding-usd"></i>
-                                Becas y Descuentos
-                            </a>
-                        </div>
                     </li>
 
                     <li class="nav-item dropdown">

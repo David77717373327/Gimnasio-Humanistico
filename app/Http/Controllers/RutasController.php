@@ -41,15 +41,15 @@ class RutasController extends Controller
     }
 
 
+    public function mostrarcontenidofilosofiainstitucional()
+    {
+        return view('Institucion.Filosofia_institucional');
+    }
 
-
-
-
-
-
-
-
-
+    public function mostrarcontenidoadmision()
+    {
+        return view('admision.admision');
+    }
 
 
 

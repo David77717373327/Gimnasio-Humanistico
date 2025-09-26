@@ -36,6 +36,17 @@ Route::get('/usuario/inicio', [RutasController::class, 'mostrarContenidoUsuario'
 Route::get('/Historia', [RutasController::class, 'mostrarcontenidohistoria'])->name('Historia');
 //Ruta para mostrar contenido de mision y vision
 Route::get('/mision-vision', [RutasController::class, 'mostrarcontenidomisionyvision'])->name('mision-vision');
+//rutas para msotra contenido de Filosofia institucional 
+Route::get('/filosofia-institucional', [RutasController::class, 'mostrarcontenidofilosofiainstitucional'])->name('filosofia_institucional');
+
+
+
+
+//Rutas de admnisones
+Route::get('/admnision', [RutasController::class, 'mostrarcontenidoadmision'])->name('admision');
+
+
+
 
 // Sobreescribir la ruta de registro de Fortify
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
