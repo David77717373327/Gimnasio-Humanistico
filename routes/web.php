@@ -43,7 +43,7 @@ Route::get('/filosofia-institucional', [RutasController::class, 'mostrarcontenid
 
 
 //Rutas de admnisones
-Route::get('/admnision', [RutasController::class, 'mostrarcontenidoadmision'])->name('admision');
+Route::get('/admision', [RutasController::class, 'mostrarcontenidoadmision'])->name('admision');
 
 
 

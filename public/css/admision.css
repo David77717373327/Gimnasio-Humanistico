@@ -1,0 +1,1010 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;  
+    /* Azul oscuro - elegancia */
+    --dark-blue: #264653;  
+    /* Azul profundo (similar al que mostraste) */
+    --deep-blue: #003366;  
+    /* Azul intermedio - contraste suave */
+    --soft-blue: #07346e;  
+    /* Azul grisáceo - texto y detalles */
+    --slate-blue: #3A506B;  
+    /* Complemento claro (fondos suaves) */
+    --light-blue: #E0ECF7;  
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+
+
+/* ============================================
+   HERO SECTION AVANZADO - ADMISION
+============================================ */
+
+.hero-advanced {
+    position: relative;
+    height: 65vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+     margin-bottom: -60px;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
+    url('../images/Mision1.jpg') center/cover no-repeat;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 40%, rgba(244, 185, 66, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(125, 223, 172, 0.08) 0%, transparent 50%);
+}
+
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+}
+
+/* TÍTULO MEJORADO PARA ADAPTARSE A CUALQUIER LONGITUD */
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out 0.3s both;
+    
+    /* Tamaño base más grande para títulos normales y cortos */
+    font-size: clamp(8rem, 7vw, 6rem);
+    
+    
+    /* Centrado perfecto para títulos largos */
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    
+    /* Espacio para que respire el texto */
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+/* Clase automática para títulos largos */
+.hero-title.auto-long {
+    font-size: clamp(4.2rem, 4.5vw, 4.2rem);
+    line-height: 1.3;
+    /* Mejor espaciado para títulos largos */
+    letter-spacing: -0.02em;
+}
+
+/* Clase automática para títulos cortos - MÁS GRANDES */
+.hero-title.auto-short {
+    font-size: clamp(8.5rem, 8vw, 7rem);
+    line-height: 1.05;
+}
+
+.title-highlight {
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.title-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    transform: scaleX(0);
+    animation: expandLine 1s ease-out 1.5s both;
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@keyframes expandLine {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Responsive mejorado */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: clamp(2.5rem, 7vw, 4rem);
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
+    
+    .hero-title.auto-long {
+        font-size: clamp(1.8rem, 6vw, 3rem);
+        line-height: 1.4;
+    }
+    
+    .hero-title.auto-short {
+        font-size: clamp(3rem, 8.5vw, 4.5rem);
+    }
+    
+    .hero-scroll-indicator {
+        bottom: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        max-width: 100%;
+        font-size: clamp(2rem, 8.5vw, 3.5rem);
+        padding: 0 0.25rem;
+    }
+    
+    .hero-title.auto-long {
+        font-size: clamp(1.6rem, 7.5vw, 2.8rem);
+        line-height: 1.4;
+    }
+    
+    .hero-title.auto-short {
+        font-size: clamp(2.5rem, 9vw, 4rem);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   NAVEGACIÓN INTERNA DE ADMISIÓN - VERSIÓN OPTIMIZADA UX
+============================================ */
+
+.admision-nav-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 4rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.admision-nav-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(30, 58, 95, 0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.admision-nav-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(13, 63, 39, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.admision-nav-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admision-nav-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #0a2f1d; /* Verde más oscuro para mejor contraste */
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    letter-spacing: -0.5px;
+}
+
+.admision-nav-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-green);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.2);
+}
+
+.admision-nav-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #141516; /* Color más oscuro para mejor legibilidad */
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+
+/* Grid de navegación */
+.admision-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Tarjetas de navegación con animación de entrada */
+.admision-nav-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+    border: 2px solid rgba(30, 58, 95, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Animación escalonada para cada tarjeta */
+.admision-nav-card:nth-child(1) { animation-delay: 0.1s; }
+.admision-nav-card:nth-child(2) { animation-delay: 0.2s; }
+.admision-nav-card:nth-child(3) { animation-delay: 0.3s; }
+.admision-nav-card:nth-child(4) { animation-delay: 0.4s; }
+.admision-nav-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admision-nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--deep-blue) 0%, var(--primary-blue) 100%);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de brillo sutil en hover */
+.admision-nav-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 58, 95, 0.02) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.admision-nav-card:hover::before {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.admision-nav-card:hover::after {
+    opacity: 1;
+}
+
+.admision-nav-card:hover {
+    transform: translateY(-6px); /* Mayor elevación */
+    box-shadow: 0 12px 32px rgba(30, 58, 95, 0.18); /* Sombra más pronunciada */
+    border-color: rgba(30, 58, 95, 0.15); /* Borde más visible */
+}
+
+.admision-nav-card:active {
+    transform: translateY(-3px);
+}
+
+/* Icono de la tarjeta */
+.nav-card-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--deep-blue) 0%, var(--primary-blue) 100%);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.6rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.15); /* Sombra permanente */
+}
+
+
+.admision-nav-card:hover .nav-card-icon::before {
+    width: 150%;
+    height: 150%;
+}
+
+/* Contenido de la tarjeta */
+.nav-card-content {
+    flex: 1;
+}
+
+.nav-card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--deep-blue);
+    margin-bottom: 0.4rem;
+    transition: all 0.3s ease;
+    letter-spacing: -0.2px;
+}
+
+.admision-nav-card:hover .nav-card-title {
+    letter-spacing: 0px; /* Expansión sutil del texto */
+}
+
+.nav-card-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #6b7280; /* Color más oscuro para mejor legibilidad */
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Flecha de la tarjeta - MEJORADA */
+.nav-card-arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: rgba(30, 58, 95, 0.08); /* Más contraste */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--deep-blue);
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(30, 58, 95, 0.1);
+}
+
+.admision-nav-card:hover .nav-card-arrow {
+    transform: translateX(5px);
+    background: rgba(30, 58, 95, 0.12);
+    border-color: rgba(30, 58, 95, 0.2);
+}
+
+/* Detalle decorativo adicional */
+.nav-card-icon i {
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Estados de foco para accesibilidad */
+.admision-nav-card:focus {
+    outline: 3px solid rgba(30, 58, 95, 0.3);
+    outline-offset: 2px;
+}
+
+.admision-nav-card:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admision-nav-section {
+        padding: 3rem 0 4rem;
+    }
+
+    .admision-nav-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .admision-nav-card {
+        padding: 1.5rem 1.3rem;
+    }
+
+    .nav-card-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+    }
+
+    .nav-card-title {
+        font-size: 1.05rem;
+    }
+
+    .nav-card-description {
+        font-size: 0.85rem;
+    }
+
+    .admision-nav-title {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .admision-nav-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admision-nav-card {
+        padding: 1.3rem 1rem;
+        gap: 1.2rem;
+    }
+
+    .nav-card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Mejora para modo reducido de movimiento (accesibilidad) */
+@media (prefers-reduced-motion: reduce) {
+    .admision-nav-card,
+    .admision-nav-header,
+    .nav-card-icon,
+    .nav-card-arrow {
+        animation: none;
+        transition: none;
+    }
+}
+
+
+
+
+/* ============================================
+   SECCIÓN HORARIOS DE ATENCIÓN
+   Diseño profesional y moderno
+============================================ */
+
+.horarios-atencion-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--warm-white) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.horarios-atencion-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(13, 63, 39, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Header de la sección */
+.horarios-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.horarios-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.horarios-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--dark-gold));
+    border-radius: 2px;
+}
+
+.horarios-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-top: 1.5rem;
+}
+
+/* Grid de horarios */
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Cards de horario */
+.horario-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.horario-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+}
+
+.horario-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Card destacada */
+.horario-card-featured {
+    border: 2px solid var(--accent-gold);
+    background: linear-gradient(135deg, var(--white) 0%, #fffef8 100%);
+}
+
+.horario-card-featured::before {
+    background: linear-gradient(90deg, var(--accent-gold), var(--dark-gold));
+}
+
+.featured-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gradient-gold);
+    color: var(--white);
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--border-radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.featured-badge i {
+    font-size: 0.75rem;
+}
+
+/* Header de la card */
+.horario-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--medium-gray);
+}
+
+.horario-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-bottom));
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal);
+}
+
+
+
+.horario-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+/* Body de la card */
+.horario-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.horario-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: var(--light-gray);
+    border-radius: var(--border-radius-sm);
+    transition: background var(--transition-fast);
+}
+
+.horario-item:hover {
+    background: var(--soft-gold);
+}
+
+.horario-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.horario-time {
+    font-weight: 600;
+    color: var(--primary-green);
+    font-size: 1rem;
+}
+
+/* Footer de la card */
+.horario-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--medium-gray);
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.horario-card-footer i {
+    color: var(--accent-gold);
+    font-size: 1rem;
+}
+
+/* Información adicional */
+.horarios-info-adicional {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+}
+
+.info-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
+}
+
+.info-card i {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    flex-shrink: 0;
+}
+
+.info-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.3rem;
+}
+
+.info-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Nota importante */
+.horarios-nota {
+    background: linear-gradient(135deg, #fff9e6 0%, #fffef8 100%);
+    border: 2px solid var(--accent-gold);
+    border-radius: var(--border-radius-md);
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.horarios-nota i {
+    font-size: 1.5rem;
+    color: var(--dark-gold);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.horarios-nota p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.horarios-nota strong {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .horarios-atencion-section {
+        padding: 3rem 0;
+    }
+
+    .horarios-title {
+        font-size: 2rem;
+    }
+
+    .horarios-subtitle {
+        font-size: 1rem;
+    }
+
+    .horarios-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .horario-card {
+        padding: 1.5rem;
+    }
+
+    .horario-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .horario-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .featured-badge {
+        top: 0.8rem;
+        right: 0.8rem;
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .horarios-info-adicional {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 1.2rem;
+    }
+
+    .horarios-nota {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .horarios-title {
+        font-size: 1.75rem;
+    }
+
+    .horario-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .horario-time {
+        font-size: 0.95rem;
+    }
+}

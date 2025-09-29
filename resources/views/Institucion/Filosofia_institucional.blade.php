@@ -63,7 +63,7 @@
                     Nuestra <span class="highlight-text">Identidad Educativa</span>
                 </h1>
                 <p class="header-subtitle">
-                    Formando líderes íntegros con valores humanísticos y visión transformadora del territorio
+                    Nos educamos en el trabajo humanísticamente para un nuevo país.
                 </p>
                 <div class="header-divider"></div>
             </div>

@@ -46,7 +46,7 @@
                                             class="fas fa-chevron-right"></i>Quiénes Somos</a></li>
                                 <li><a href="#niveles-educativos" class="footer-link"><i
                                             class="fas fa-chevron-right"></i>Oferta Académica</a></li>
-                                <li><a href="#admisiones" class="footer-link"><i
+                                <li><a href="{{ 'admision'}}" class="footer-link"><i
                                             class="fas fa-chevron-right"></i>Admisiones</a></li>
                             </ul>
                         </div>

@@ -158,7 +158,7 @@ h6 {
     /* Aparece más rápido */
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
     /* Sombra más pronunciada */
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Playfair Display', serif;
     text-align: center;
     letter-spacing: -0.02em;
     /* Espaciado tipográfico profesional */
@@ -192,22 +192,7 @@ h6 {
     /* Espaciado adicional desde el título */
 }
 
-.home-button:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
-    color: white;
-    text-decoration: none;
-}
 
-.home-button i {
-    font-size: 1.1rem;
-    color: white;
-}
-
-.title-home {
-    font-size: 0.95rem;
-    font-weight: 500;
-}
 
 /* INDICADOR DE SCROLL - Más elegante y visible */
 .scroll-indicator {
@@ -325,7 +310,7 @@ h6 {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     opacity: 0.6;
-    animation: floatUp 20s infinite linear;
+    animation: floatUp 15s infinite linear;
 }
 
 .particle:nth-child(odd) {
@@ -367,10 +352,16 @@ h6 {
 
 
 
+
+
+
+
+
+
 /* Timeline Section con fondo sutil y toques de amarillo */
 .timeline-section {
     min-height: 100vh;
-    padding: 3rem 0;
+    padding: 0.23rem 0;
     position: relative;
     background: linear-gradient(135deg, var(--bg-light) 0%, #FFFBF0 100%);
 }
@@ -420,6 +411,7 @@ h6 {
     background-color: var(--primary-green);
     transform: translateX(-50%);
     box-shadow: 0 0 15px rgba(13, 79, 60, 0.3);
+    z-index: 0;
 }
 
 .timeline-item {
@@ -427,9 +419,10 @@ h6 {
     margin: 2.5rem 0;
     opacity: 0;
     transform: translateY(20px);
-    /* Reducido de 40px a 20px para transición más sutil */
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    /* Reducido de 0.8s a 0.4s */
+    display: flex;
+    align-items: center;
+    min-height: 250px;
 }
 
 .timeline-item.visible {
@@ -437,14 +430,24 @@ h6 {
     transform: translateY(0);
 }
 
+.timeline-item:nth-child(even) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
 .timeline-item:nth-child(even) .timeline-content {
-    margin-left: 55%;
+    margin-left: auto;
     text-align: left;
+    width: 45%;
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
-    margin-right: 55%;
+    margin-right: auto;
     text-align: right;
+    width: 45%;
 }
 
 .timeline-marker {
@@ -464,19 +467,18 @@ h6 {
     background: var(--bg-white);
     border: 1px solid rgba(13, 79, 60, 0.1);
     border-radius: 16px;
-    padding: 3rem;
+    padding: 2.5rem; /* en lugar de 3rem */
     position: relative;
     box-shadow: var(--shadow-md);
     transition: all 0.4s ease-out;
-    /* Más rápido y suave */
     z-index: 2;
+    margin-top: 40px;
 }
 
 .timeline-content:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
     border-color: rgba(13, 79, 60, 0.2);
-
 }
 
 .timeline-year {
@@ -499,50 +501,115 @@ h6 {
 .timeline-text {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: var(--text-dark);
     font-family: 'times new roman', 'Inter', 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* Contenedor de imagen al lado del card */
+.timeline-image-side {
+    position: relative;
+    width: 430px;
+    height: 400px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(13, 79, 60, 0.15);
+    transition: all 0.4s ease;
+    z-index: 3;
+    background: var(--bg-white);
+    border: 3px solid rgba(13, 79, 60, 0.1);
+    flex-shrink: 0;
+    margin-top: 30px;
+}
+
+/* Posicionamiento para items impares (izquierda) */
+.timeline-item:nth-child(odd) .timeline-image-side {
+    margin-left: 3rem;
+}
+
+/* Posicionamiento para items pares (derecha) */
+.timeline-item:nth-child(even) .timeline-image-side {
+    margin-right: 3rem;
+}
+
+.timeline-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(15%) brightness(0.75);
+    transition: all 0.4s ease;
+}
+
+/* Overlay oscuro sobre la imagen */
+.timeline-image-side::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+
+
+
+/* ============================================
+   OPCIÓN 3: Sin hover (imagen estática)
+   Efecto: La imagen no cambia al pasar el cursor
+   ============================================ */
+/*
+.timeline-item:hover .timeline-image-side::before {
+    background: linear-gradient(135deg, rgba(13, 79, 60, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.timeline-item:hover .timeline-image-side img {
+    filter: grayscale(15%) brightness(0.75);
+}
+*/
+
+
+
+
+
+
+
+
+
+/* Animación de entrada para imágenes */
+.timeline-item .timeline-image-side {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.timeline-item.visible .timeline-image-side {
+    opacity: 1;
+}
+
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero-content {
-        padding: 2rem 1.5rem;
-        margin: 1rem;
+@media (max-width: 992px) {
+    .timeline-image-side {
+        width: 350px;
+        height: 280px;
     }
-
-    .hero-title {
-        font-size: 2.5rem;
+    
+    .timeline-item:nth-child(odd) .timeline-image-side {
+        margin-left: 2rem;
     }
-
-    .hero-description {
-        font-size: 1rem;
-    }
-
-    .timeline-item:nth-child(even) .timeline-content,
-    .timeline-item:nth-child(odd) .timeline-content {
-        margin-left: 0;
-        margin-right: 0;
-        text-align: left;
-        margin-left: 3rem;
-    }
-
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-marker {
-        left: 20px;
-    }
-
-    .timeline-content {
-        padding: 2rem;
-    }
-
-    .timeline-year {
-        font-size: 2rem;
-    }
-
-    .timeline-title {
-        font-size: 1.3rem;
+    
+    .timeline-item:nth-child(even) .timeline-image-side {
+        margin-right: 2rem;
     }
 }
+
+@media (max-width: 768px) {
+    .timeline-image-side {
+        display: none;
+    }
+}
+
+
+

@@ -162,7 +162,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ 'admision' }}">
+                        <a class="nav-link" href=" {{ 'admision' }}">
                             <i class="fas fa-envelope"></i>
                             ADMISION
                         </a>
