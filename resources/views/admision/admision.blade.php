@@ -50,87 +50,116 @@
 
 
     <!-- NAVEGACIÓN INTERNA DE ADMISIÓN -->
-<section class="admision-nav-section"  id="nav_Interna">
+<section class="admision-nav-section" id="nav_Interna">
     <div class="container">
         <div class="admision-nav-header">
-            <h2 class="admision-nav-title">Información de Admisión</h2>
-            <p class="admision-nav-subtitle">Encuentra toda la información necesaria
-                 para el proceso de inscripción y matrícula.</p>
+            <div class="header-label">
+                <span class="label-icon">✦</span>
+                <span class="label-text">Proceso de Admisión</span>
+            </div>
+            <h2 class="admision-nav-title">Información Clave para Tu Inscripción</h2>
+            <p class="admision-nav-subtitle">Accede de manera ágil y transparente a toda la información necesaria para iniciar tu proceso educativo.</p>
         </div>
 
-        <div class="admision-nav-grid">
-            <!-- Horarios de atención -->
-            <a href="#horarios-atencion" class="admision-nav-card">
-                <div class="nav-card-icon">
-                    <i class="far fa-clock"></i>
-                </div>
-                <div class="nav-card-content">
-                    <h3 class="nav-card-title">Horarios de Atención</h3>
-                    <p class="nav-card-description">Conoce nuestros horarios disponibles</p>
-                </div>
-                <div class="nav-card-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </a>
+        <div class="admision-nav-layout">
+            <!-- Grid Principal -->
+            <div class="nav-grid-main">
+                <!-- Requisitos de inscripción -->
+                <a href="#requisitos-inscripcion" class="nav-card-featured nav-card-featured--primary">
+                    <div class="featured-header">
+                        <div class="featured-icon featured-icon--green">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <span class="featured-badge">Esencial</span>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Requisitos de Inscripción</h3>
+                        <p class="featured-description">Documentación y procedimientos necesarios para tu matrícula.</p>
+                        <div class="featured-action">
+                            <span class="action-text">Ver requisitos</span>
+                            <div class="action-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-            <!-- Requisitos de inscripción -->
-            <a href="#requisitos-inscripcion" class="admision-nav-card">
-                <div class="nav-card-icon">
-                    <i class="fas fa-file-alt"></i>
-                </div>
-                <div class="nav-card-content">
-                    <h3 class="nav-card-title">Requisitos de Inscripción</h3>
-                    <p class="nav-card-description">Documentos y requisitos necesarios</p>
-                </div>
-                <div class="nav-card-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </a>
+                <!-- Costos educativos -->
+                <a href="#costos-educativos" class="nav-card-featured nav-card-featured--gold">
+                    <div class="featured-header">
+                        <div class="featured-icon featured-icon--gold">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <span class="featured-badge featured-badge--gold">Esencial</span>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Costos Educativos</h3>
+                        <p class="featured-description">Inversión educativa, planes de pago y opciones de financiamiento.</p>
+                        <div class="featured-action">
+                            <span class="action-text">Ver información</span>
+                            <div class="action-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-            <!-- Costos educativos -->
-            <a href="#costos-educativos" class="admision-nav-card">
-                <div class="nav-card-icon">
-                    <i class="fas fa-dollar-sign"></i>
-                </div>
-                <div class="nav-card-content">
-                    <h3 class="nav-card-title">Costos Educativos</h3>
-                    <p class="nav-card-description">Información sobre inversión educativa</p>
-                </div>
-                <div class="nav-card-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </a>
+            <!-- Grid Secundario -->
+            <div class="nav-grid-secondary">
+                <!-- Horarios de atención -->
+                <a href="#horarios-atencion" class="nav-card-compact">
+                    <div class="compact-left">
+                        <div class="compact-icon">
+                            <i class="far fa-clock"></i>
+                        </div>
+                        <div class="compact-content">
+                            <h3 class="compact-title">Horarios de Atención</h3>
+                            <p class="compact-description">Agenda tu visita personalizada</p>
+                        </div>
+                    </div>
+                    <div class="compact-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
 
-            <!-- Formación complementaria -->
-            <a href="#formacion-complementaria" class="admision-nav-card">
-                <div class="nav-card-icon">
-                    <i class="fas fa-star"></i>
-                </div>
-                <div class="nav-card-content">
-                    <h3 class="nav-card-title">Formación Complementaria</h3>
-                    <p class="nav-card-description">Inglés, Informática, Natación y más</p>
-                </div>
-                <div class="nav-card-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </a>
+                <!-- Formación complementaria -->
+                <a href="#formacion-complementaria" class="nav-card-compact">
+                    <div class="compact-left">
+                        <div class="compact-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="compact-content">
+                            <h3 class="compact-title">Formación Complementaria</h3>
+                            <p class="compact-description">Inglés, informática y deportes</p>
+                        </div>
+                    </div>
+                    <div class="compact-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
 
-            <!-- Modalidades -->
-            <a href="#modalidades" class="admision-nav-card">
-                <div class="nav-card-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="nav-card-content">
-                    <h3 class="nav-card-title">Modalidades</h3>
-                    <p class="nav-card-description">Preescolar, Primaria y Secundaria</p>
-                </div>
-                <div class="nav-card-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </a>
+                <!-- Modalidades -->
+                <a href="#modalidades" class="nav-card-compact">
+                    <div class="compact-left">
+                        <div class="compact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="compact-content">
+                            <h3 class="compact-title">Modalidades Educativas</h3>
+                            <p class="compact-description">Preescolar, primaria y secundaria</p>
+                        </div>
+                    </div>
+                    <div class="compact-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </section>
+
+
 
 
 <!-- SECCIÓN HORARIOS DE ATENCIÓN -->
