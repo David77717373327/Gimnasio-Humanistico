@@ -63,7 +63,7 @@
                     Nuestra <span class="highlight-text">Identidad Educativa</span>
                 </h1>
                 <p class="header-subtitle">
-                    Nos educamos en el trabajo humanísticamente para un nuevo país.
+                    Nos educamos en el trabajo humanízante para un nuevo país.
                 </p>
                 <div class="header-divider"></div>
             </div>

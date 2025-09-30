@@ -163,7 +163,9 @@
 
 
 
-
+<!-- ====================================
+ Quiero un diseño más limpio, menos "encajonado",
+ ========================================-->
 
 
         <!-- SECCIÓN PRINCIPIOS Y VALORES -->

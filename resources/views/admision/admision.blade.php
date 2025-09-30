@@ -50,240 +50,516 @@
 
 
     <!-- NAVEGACIÓN INTERNA DE ADMISIÓN -->
-<section class="admision-nav-section" id="nav_Interna">
-    <div class="container">
-        <div class="admision-nav-header">
-            <div class="header-label">
-                <span class="label-icon">✦</span>
-                <span class="label-text">Proceso de Admisión</span>
+    <section class="admision-nav-section" id="nav_Interna">
+        <div class="container">
+            <div class="admision-nav-header">
+                <div class="header-label">
+                    <span class="label-icon">✦</span>
+                    <span class="label-text">Proceso de Admisión</span>
+                </div>
+                <h2 class="admision-nav-title">Información Clave para Tu Inscripción</h2>
+                <p class="admision-nav-subtitle">Accede de manera ágil y transparente a toda la información necesaria
+                    para iniciar tu proceso educativo.</p>
             </div>
-            <h2 class="admision-nav-title">Información Clave para Tu Inscripción</h2>
-            <p class="admision-nav-subtitle">Accede de manera ágil y transparente a toda la información necesaria para iniciar tu proceso educativo.</p>
-        </div>
 
-        <div class="admision-nav-layout">
-            <!-- Grid Principal -->
-            <div class="nav-grid-main">
-                <!-- Requisitos de inscripción -->
-                <a href="#requisitos-inscripcion" class="nav-card-featured nav-card-featured--primary">
-                    <div class="featured-header">
-                        <div class="featured-icon featured-icon--green">
+            <div class="admision-nav-layout">
+                <!-- Grid Principal -->
+                <div class="nav-grid-main">
+                    <!-- Requisitos de inscripción -->
+                    <a href="#requisitos-inscripcion" class="nav-card-featured nav-card-featured--primary">
+                        <div class="featured-header">
+                            <div class="featured-icon featured-icon--green">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <h3 class="featured-title">Requisitos de Inscripción</h3>
+                            <p class="featured-description">Documentación y procedimientos necesarios para tu matrícula.
+                            </p>
+                            <div class="featured-action">
+                                <span class="action-text">Ver requisitos</span>
+                                <div class="action-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Costos educativos -->
+                    <a href="#costos-educativos" class="nav-card-featured nav-card-featured--gold">
+                        <div class="featured-header">
+                            <div class="featured-icon featured-icon--gold">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <h3 class="featured-title">Costos Educativos</h3>
+                            <p class="featured-description">Inversión educativa, planes de pago y opciones de
+                                financiamiento.</p>
+                            <div class="featured-action">
+                                <span class="action-text">Ver información</span>
+                                <div class="action-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Grid Secundario -->
+                <div class="nav-grid-secondary">
+                    <!-- Horarios de atención -->
+                    <a href="#horarios-atencion" class="nav-card-featured">
+                        <div class="featured-header">
+                            <div class="featured-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <h3 class="featured-title">Horarios de Atención</h3>
+                            <p class="featured-description">Agenda tu visita personalizada y conoce nuestras
+                                instalaciones.</p>
+                            <div class="featured-action">
+                                <span class="action-text">Ver horarios</span>
+                                <div class="action-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Formación complementaria -->
+                    <a href="#formacion-complementaria" class="nav-card-featured">
+                        <div class="featured-header">
+                            <div class="featured-icon">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <h3 class="featured-title">Formación Complementaria</h3>
+                            <p class="featured-description">Programas de inglés, informática y actividades deportivas.
+                            </p>
+                            <div class="featured-action">
+                                <span class="action-text">Ver programas</span>
+                                <div class="action-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Modalidades -->
+                    <a href="#modalidades" class="nav-card-featured">
+                        <div class="featured-header">
+                            <div class="featured-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <h3 class="featured-title">Modalidades Educativas</h3>
+                            <p class="featured-description">Niveles de preescolar, primaria y secundaria disponibles.
+                            </p>
+                            <div class="featured-action">
+                                <span class="action-text">Ver modalidades</span>
+                                <div class="action-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- SECCIÓN HORARIOS DE ATENCIÓN -->
+    <section class="horarios-atencion-section" id="horarios-atencion">
+        <div class="container">
+            <!-- Header de la sección -->
+            <div class="horarios-header">
+                <h2 class="horarios-title">Horarios de Atención</h2>
+                <p class="horarios-subtitle">Estamos disponibles para atenderte en los siguientes horarios.
+                    </p>
+            </div>
+
+            <!-- Grid de horarios -->
+            <div class="horarios-grid">
+                <!-- Card: Oficina Administrativa -->
+                <div class="horario-card">
+                    <div class="horario-card-header">
+                        <div class="horario-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="horario-card-title">Oficina Administrativa</h3>
+                    </div>
+                    <div class="horario-card-body">
+                        <div class="horario-item">
+                            <span class="horario-label">Lunes a Viernes</span>
+                            <span class="horario-time">7:00 AM - 4:00 PM</span>
+                        </div>
+                        <div class="horario-item">
+                            <span class="horario-label">Sábados</span>
+                            <span class="horario-time">8:00 AM - 12:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="horario-card-footer">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Atención presencial y telefónica</span>
+                    </div>
+                </div>
+
+                <!-- Card: Coordinación Académica -->
+                <div class="horario-card horario-card-featured">
+                    <div class="featured-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Preferencial</span>
+                    </div>
+                    <div class="horario-card-header">
+                        <div class="horario-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="horario-card-title">Coordinación Académica</h3>
+                    </div>
+                    <div class="horario-card-body">
+                        <div class="horario-item">
+                            <span class="horario-label">Lunes a Viernes</span>
+                            <span class="horario-time">7:30 AM - 3:30 PM</span>
+                        </div>
+                        <div class="horario-item">
+                            <span class="horario-label">Agendamiento</span>
+                            <span class="horario-time">Cita previa requerida</span>
+                        </div>
+                    </div>
+                    <div class="horario-card-footer">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Agendar con 24 horas de anticipación</span>
+                    </div>
+                </div>
+
+                <!-- Card: Proceso de Admisión -->
+                <div class="horario-card">
+                    <div class="horario-card-header">
+                        <div class="horario-icon">
                             <i class="fas fa-clipboard-check"></i>
                         </div>
-                        <span class="featured-badge">Esencial</span>
+                        <h3 class="horario-card-title">Proceso de Admisión</h3>
                     </div>
-                    <div class="featured-content">
-                        <h3 class="featured-title">Requisitos de Inscripción</h3>
-                        <p class="featured-description">Documentación y procedimientos necesarios para tu matrícula.</p>
-                        <div class="featured-action">
-                            <span class="action-text">Ver requisitos</span>
-                            <div class="action-arrow">
-                                <i class="fas fa-arrow-right"></i>
+                    <div class="horario-card-body">
+                        <div class="horario-item">
+                            <span class="horario-label">Lunes a Viernes</span>
+                            <span class="horario-time">8:00 AM - 3:00 PM</span>
+                        </div>
+                        <div class="horario-item">
+                            <span class="horario-label">Asesoría personalizada</span>
+                            <span class="horario-time">Con cita previa</span>
+                        </div>
+                    </div>
+                    <div class="horario-card-footer">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Llamar para agendar cita</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información adicional -->
+            <div class="horarios-info-adicional">
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <div class="info-content">
+                        <h4>Teléfono</h4>
+                        <p>(+57) 315 2296832</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <div class="info-content">
+                        <h4>Correo Electrónico</h4>
+                        <p>gimnasiohumanistico@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="info-content">
+                        <h4>Dirección</h4>
+                        <p>CLL.13 4-53 Neiva, Huila - Colombia</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nota importante -->
+            <div class="horarios-nota">
+                <i class="fas fa-exclamation-circle"></i>
+                <p><strong>Nota importante:</strong> Los horarios pueden variar durante períodos de vacaciones o fechas
+                    especiales.
+                    Te recomendamos contactarnos previamente para confirmar disponibilidad.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- SECCIÓN COSTOS EDUCATIVOS -->
+    <section class="costos-educativos-section" id="costos-educativos">
+        <div class="container">
+            <!-- Header de la sección -->
+            <div class="admision-nav-header">
+                <div class="header-label">
+                    <span class="label-icon">✦</span>
+                    <span class="label-text">Proceso de Admisión</span>
+                </div>
+                <h2 class="admision-nav-title">Costos y Requisitos De Admision</h2>
+                <p class="admision-nav-subtitle">Accede de manera ágil y transparente a toda la información necesaria
+                para iniciar tu proceso educativo.</p>
+            </div>
+
+            <!-- PREESCOLAR -->
+            <div class="modalidad-container">
+                <div class="modalidad-header">
+                    <div class="modalidad-icon">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo Gimnasio Humanístico">
+                    </div>
+                    <h3 class="modalidad-title">PRESCOLAR</h3>
+                    <span class="modalidad-badge">Pre-jardín, Jardín y Transición</span>
+                </div>
+
+                <div class="modalidad-content">
+                    <!-- Tabla de costos -->
+                    <div class="costos-table-wrapper">
+                        <table class="costos-table">
+                            <thead>
+                                <tr>
+                                    <th>Concepto</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Matrícula</td>
+                                    <td class="precio">$536.500</td>
+                                </tr>
+                                <tr>
+                                    <td>Pensión Mensual</td>
+                                    <td class="precio">$335.250</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Card de información -->
+                    <div class="info-card">
+                        <div class="info-section">
+                            <div class="info-header">
+                                <i class="far fa-clock"></i>
+                                <h4>Horario</h4>
                             </div>
+                            <p class="info-detail">7:00 a.m. - 11:30 a.m.</p>
                         </div>
-                    </div>
-                </a>
 
-                <!-- Costos educativos -->
-                <a href="#costos-educativos" class="nav-card-featured nav-card-featured--gold">
-                    <div class="featured-header">
-                        <div class="featured-icon featured-icon--gold">
-                            <i class="fas fa-hand-holding-usd"></i>
-                        </div>
-                        <span class="featured-badge featured-badge--gold">Esencial</span>
-                    </div>
-                    <div class="featured-content">
-                        <h3 class="featured-title">Costos Educativos</h3>
-                        <p class="featured-description">Inversión educativa, planes de pago y opciones de financiamiento.</p>
-                        <div class="featured-action">
-                            <span class="action-text">Ver información</span>
-                            <div class="action-arrow">
-                                <i class="fas fa-arrow-right"></i>
+                        <div class="info-section">
+                            <div class="info-header">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Requisitos de Matrícula</h4>
                             </div>
+                            <ul class="requisitos-list">
+                                <li>Fotocopia documento de identidad ampliado</li>
+                                <li>Boletín final</li>
+                                <li>Paz y salvo</li>
+                                <li>Retiro del Simat</li>
+                                <li>1 carpeta azul colgante</li>
+                                <li>Fotocopia cédula de los padres o acudiente</li>
+                            </ul>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
 
-            <!-- Grid Secundario -->
-            <div class="nav-grid-secondary">
-                <!-- Horarios de atención -->
-                <a href="#horarios-atencion" class="nav-card-compact">
-                    <div class="compact-left">
-                        <div class="compact-icon">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div class="compact-content">
-                            <h3 class="compact-title">Horarios de Atención</h3>
-                            <p class="compact-description">Agenda tu visita personalizada</p>
-                        </div>
+            <!-- PRIMARIA -->
+            <div class="modalidad-container">
+                <div class="modalidad-header">
+                    <div class="modalidad-icon">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo Gimnasio Humanístico">
                     </div>
-                    <div class="compact-arrow">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                </a>
+                    <h3 class="modalidad-title">PRIMARIA</h3>
+                    <span class="modalidad-badge">Grados 1° a 5°</span>
+                </div>
 
-                <!-- Formación complementaria -->
-                <a href="#formacion-complementaria" class="nav-card-compact">
-                    <div class="compact-left">
-                        <div class="compact-icon">
-                            <i class="fas fa-puzzle-piece"></i>
-                        </div>
-                        <div class="compact-content">
-                            <h3 class="compact-title">Formación Complementaria</h3>
-                            <p class="compact-description">Inglés, informática y deportes</p>
-                        </div>
+                <div class="modalidad-content">
+                    <!-- Tabla de costos -->
+                    <div class="costos-table-wrapper">
+                        <table class="costos-table">
+                            <thead>
+                                <tr>
+                                    <th>Concepto</th>
+                                    <th>Grado 1°</th>
+                                    <th>Grados 2° y 3°</th>
+                                    <th>Grado 4°</th>
+                                    <th>Grado 5°</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Matrícula</td>
+                                    <td class="precio">$536.500</td>
+                                    <td class="precio">$536.100</td>
+                                    <td class="precio">$532.900</td>
+                                    <td class="precio">$531.500</td>
+                                </tr>
+                                <tr>
+                                    <td>Pensión Mensual</td>
+                                    <td class="precio">$335.250</td>
+                                    <td class="precio">$334.900</td>
+                                    <td class="precio">$332.000</td>
+                                    <td class="precio">$330.800</td>
+                                </tr>
+                                <tr>
+                                    <td>Textos (Anual)</td>
+                                    <td class="precio">$700.000</td>
+                                    <td class="precio">$700.000</td>
+                                    <td class="precio">$700.000</td>
+                                    <td class="precio">$700.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="compact-arrow">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                </a>
 
-                <!-- Modalidades -->
-                <a href="#modalidades" class="nav-card-compact">
-                    <div class="compact-left">
-                        <div class="compact-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                    <!-- Card de información -->
+                    <div class="info-card">
+                        <div class="info-section">
+                            <div class="info-header">
+                                <i class="far fa-clock"></i>
+                                <h4>Horario</h4>
+                            </div>
+                            <p class="info-detail">6:00 a.m. - 12:00 p.m.</p>
                         </div>
-                        <div class="compact-content">
-                            <h3 class="compact-title">Modalidades Educativas</h3>
-                            <p class="compact-description">Preescolar, primaria y secundaria</p>
+
+                        <div class="info-section">
+                            <div class="info-header">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Requisitos de Matrícula</h4>
+                            </div>
+                            <ul class="requisitos-list">
+                                <li>Fotocopia documento de identidad ampliado</li>
+                                <li>Certificados de estudio del grado anterior</li>
+                                <li>Paz y salvo</li>
+                                <li>Retiro del Simat</li>
+                                <li>1 carpeta azul colgante</li>
+                                <li>Fotocopia cédula de los padres o acudiente</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="compact-arrow">
-                        <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <!-- SECUNDARIA -->
+            <div class="modalidad-container">
+                <div class="modalidad-header">
+                    <div class="modalidad-icon">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo Gimnasio Humanístico">
                     </div>
-                </a>
+                    <h3 class="modalidad-title">SEGUNDARIA</h3>
+                    <span class="modalidad-badge">Grados 6° a 11°</span>
+                </div>
+
+                <div class="modalidad-content">
+                    <!-- Tabla de costos -->
+                    <div class="costos-table-wrapper">
+                        <table class="costos-table">
+                            <thead>
+                                <tr>
+                                    <th>Concepto</th>
+                                    <th>Grado 6°</th>
+                                    <th>Grados 7° y 8°</th>
+                                    <th>Grado 9°</th>
+                                    <th>Grados 10° y 11°</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Matrícula</td>
+                                    <td class="precio">$532.200</td>
+                                    <td class="precio">$528.400</td>
+                                    <td class="precio">$510.600</td>
+                                    <td class="precio">$502.450</td>
+                                </tr>
+                                <tr>
+                                    <td>Pensión Mensual</td>
+                                    <td class="precio">$331.400</td>
+                                    <td class="precio">$327.900</td>
+                                    <td class="precio">$312.000</td>
+                                    <td class="precio">$304.600</td>
+                                </tr>
+                                <tr>
+                                    <td>Textos (Anual)</td>
+                                    <td class="precio">$700.000</td>
+                                    <td class="precio">$700.000</td>
+                                    <td class="precio">$700.000</td>
+                                    <td class="precio">$700.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Card de información -->
+                    <div class="info-card">
+                        <div class="info-section">
+                            <div class="info-header">
+                                <i class="far fa-clock"></i>
+                                <h4>Horario</h4>
+                            </div>
+                            <p class="info-detail">6:00 a.m. - 12:30 p.m.</p>
+                        </div>
+
+                        <div class="info-section">
+                            <div class="info-header">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Requisitos de Matrícula</h4>
+                            </div>
+                            <ul class="requisitos-list">
+                                <li>Fotocopia documento de identidad ampliado</li>
+                                <li>Certificados de estudio de los grados anteriores</li>
+                                <li>Paz y salvo</li>
+                                <li>Retiro del Simat</li>
+                                <li>1 carpeta azul colgante</li>
+                                <li>Fotocopia cédula de los padres o acudiente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Nota informativa final -->
+            <div class="costos-nota-final">
+                <i class="fas fa-info-circle"></i>
+                <div class="nota-content">
+                    <h4>Información Importante</h4>
+                    <p>Los costos educativos están aprobados por la Secretaría de Educación y pueden estar sujetos a
+                        actualización anual.
+                        Para mayor información sobre planes de pago y descuentos, contáctenos directamente.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
+    
 
 
 
-
-<!-- SECCIÓN HORARIOS DE ATENCIÓN -->
-<section class="horarios-atencion-section" id="horarios-atencion">
-    <div class="container">
-        <!-- Header de la sección -->
-        <div class="horarios-header">
-            <h2 class="horarios-title">Horarios de Atención</h2>
-            <p class="horarios-subtitle">Estamos disponibles para atenderte en los siguientes horarios. 
-                Te recomendamos agendar tu cita con anticipación.</p>
-        </div>
-
-        <!-- Grid de horarios -->
-        <div class="horarios-grid">
-            <!-- Card: Oficina Administrativa -->
-            <div class="horario-card">
-                <div class="horario-card-header">
-                    <div class="horario-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="horario-card-title">Oficina Administrativa</h3>
-                </div>
-                <div class="horario-card-body">
-                    <div class="horario-item">
-                        <span class="horario-label">Lunes a Viernes</span>
-                        <span class="horario-time">7:00 AM - 4:00 PM</span>
-                    </div>
-                    <div class="horario-item">
-                        <span class="horario-label">Sábados</span>
-                        <span class="horario-time">8:00 AM - 12:00 PM</span>
-                    </div>
-                </div>
-                <div class="horario-card-footer">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Atención presencial y telefónica</span>
-                </div>
-            </div>
-
-            <!-- Card: Coordinación Académica -->
-            <div class="horario-card horario-card-featured">
-                <div class="featured-badge">
-                    <i class="fas fa-star"></i>
-                    <span>Preferencial</span>
-                </div>
-                <div class="horario-card-header">
-                    <div class="horario-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3 class="horario-card-title">Coordinación Académica</h3>
-                </div>
-                <div class="horario-card-body">
-                    <div class="horario-item">
-                        <span class="horario-label">Lunes a Viernes</span>
-                        <span class="horario-time">7:30 AM - 3:30 PM</span>
-                    </div>
-                    <div class="horario-item">
-                        <span class="horario-label">Agendamiento</span>
-                        <span class="horario-time">Cita previa requerida</span>
-                    </div>
-                </div>
-                <div class="horario-card-footer">
-                    <i class="fas fa-calendar-check"></i>
-                    <span>Agendar con 24 horas de anticipación</span>
-                </div>
-            </div>
-
-            <!-- Card: Proceso de Admisión -->
-            <div class="horario-card">
-                <div class="horario-card-header">
-                    <div class="horario-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3 class="horario-card-title">Proceso de Admisión</h3>
-                </div>
-                <div class="horario-card-body">
-                    <div class="horario-item">
-                        <span class="horario-label">Lunes a Viernes</span>
-                        <span class="horario-time">8:00 AM - 3:00 PM</span>
-                    </div>
-                    <div class="horario-item">
-                        <span class="horario-label">Asesoría personalizada</span>
-                        <span class="horario-time">Con cita previa</span>
-                    </div>
-                </div>
-                <div class="horario-card-footer">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>Llamar para agendar cita</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Información adicional -->
-        <div class="horarios-info-adicional">
-            <div class="info-card">
-                <i class="fas fa-phone"></i>
-                <div class="info-content">
-                    <h4>Teléfono</h4>
-                    <p>(+57) 315 2296832</p>
-                </div>
-            </div>
-            <div class="info-card">
-                <i class="fas fa-envelope"></i>
-                <div class="info-content">
-                    <h4>Correo Electrónico</h4>
-                    <p>gimnasiohumanistico@gmail.com</p>
-                </div>
-            </div>
-            <div class="info-card">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="info-content">
-                    <h4>Dirección</h4>
-                    <p>CLL.13 4-53 Neiva, Huila - Colombia</p>          
-                </div>
-            </div>
-        </div>
-
-        <!-- Nota importante -->
-        <div class="horarios-nota">
-            <i class="fas fa-exclamation-circle"></i>
-            <p><strong>Nota importante:</strong> Los horarios pueden variar durante períodos de vacaciones o fechas especiales. 
-            Te recomendamos contactarnos previamente para confirmar disponibilidad.</p>
-        </div>
-    </div>
-</section>
 
 
 
@@ -296,7 +572,7 @@
 
     <script>
         // Scroll suave para navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="navbarNav"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
@@ -353,7 +629,7 @@
 
 
 
-        
+
 
         // Scroll suave al timeline
         function scrollToTimeline() {
