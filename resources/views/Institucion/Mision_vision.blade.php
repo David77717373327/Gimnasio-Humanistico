@@ -42,7 +42,7 @@
                             <span class="title-highlight">Misión</span> y
                             <span class="title-highlight">Visión</span>
                         </h1>
-                        
+
 
                         <div class="hero-scroll-indicator" onclick="scrollToTimeline()">
                             <i class="fas fa-chevron-down"></i>
@@ -63,110 +63,109 @@
 
 
         <!-- SECCIÓN MISIÓN -->
-    <section class="section-mision" id="mision">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 d-flex align-items-center">
-                    <div class="content-wrapper">
-                        <div class="section-header">
-                            <h2 class="section-title">
-                                <span class="title-decoration"></span>
-                                Nuestra Misión
-                            </h2>
-                        </div>
-                        <div class="section-content">
-                            <p class="lead-paragraph">
-                                En el <strong>Gimnasio Humanístico del Alto Magdalena</strong>, nuestra misión es
-                                transformar vidas a través de una educación de excelencia.
-                            </p>
-                            <p>
-                                Nos comprometemos a promover el desarrollo holístico de cada estudiante
-                                (intelectual, espiritual, social, físico y mental), mediante el cultivo de un
-                                pensamiento científico, crítico y ambiental; basados en un enfoque humanístico,
-                                inclusivo y emprendedor, e impulsados por un equipo docente altamente cualificado y
-                                apasionado, para preparar ciudadanos capaces de innovar, liderar y contribuir a una
-                                sociedad más digna y sostenible.
-                            </p>
-                        </div>
-                        <div class="pillars-grid">
-                            <div class="pillar-item">
-                                <i class="fas fa-brain pillar-icon"></i>
-                                <span>Desarrollo Intelectual</span>
+        <section class="section-mision" id="mision">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <div class="content-wrapper">
+                            <div class="section-header">
+                                <h2 class="section-title">
+                                    <span class="title-decoration"></span>
+                                    Nuestra Misión
+                                </h2>
                             </div>
-                            <div class="pillar-item">
-                                <i class="fas fa-heart pillar-icon"></i>
-                                <span>Crecimiento Espiritual</span>
+                            <div class="section-content">
+                                <p class="lead-paragraph">
+                                    En el <strong>Gimnasio Humanístico del Alto Magdalena</strong>, nuestra misión es
+                                    transformar vidas a través de una educación de excelencia.
+                                </p>
+                                <p>
+                                    Nos comprometemos a promover el desarrollo holístico de cada estudiante
+                                    (intelectual, espiritual, social, físico y mental), mediante el cultivo de un
+                                    pensamiento científico, crítico y ambiental; basados en un enfoque humanístico,
+                                    inclusivo y emprendedor, e impulsados por un equipo docente altamente cualificado y
+                                    apasionado, para preparar ciudadanos capaces de innovar, liderar y contribuir a una
+                                    sociedad más digna y sostenible.
+                                </p>
                             </div>
-                            <div class="pillar-item">
-                                <i class="fas fa-users pillar-icon"></i>
-                                <span>Formación Social</span>
-                            </div>
-                            <div class="pillar-item">
-                                <i class="fas fa-running pillar-icon"></i>
-                                <span>Bienestar Físico</span>
+                            <div class="pillars-grid">
+                                <div class="pillar-item">
+                                    <i class="fas fa-brain pillar-icon"></i>
+                                    <span>Desarrollo Intelectual</span>
+                                </div>
+                                <div class="pillar-item">
+                                    <i class="fas fa-heart pillar-icon"></i>
+                                    <span>Crecimiento Espiritual</span>
+                                </div>
+                                <div class="pillar-item">
+                                    <i class="fas fa-users pillar-icon"></i>
+                                    <span>Formación Social</span>
+                                </div>
+                                <div class="pillar-item">
+                                    <i class="fas fa-running pillar-icon"></i>
+                                    <span>Bienestar Físico</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Imagen profesional sin íconos flotantes -->
-                <div class="col-lg-6">
-                    <div class="visual-element mision-visual">
-                        <!-- Eliminados todos los íconos flotantes como solicitaste -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN VISIÓN -->
-    <section class="section-vision" id="vision">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 order-lg-2 d-flex align-items-center">
-                    <div class="content-wrapper">
-                        <div class="section-header">
-                            <h2 class="section-title">
-                                <span class="title-decoration"></span>
-                                Nuestra Visión
-                            </h2>
-                        </div>
-                        <div class="section-content">
-                            <div class="vision-year">2035</div>
-                            <p class="lead-paragraph">
-                                Para el <strong>2035</strong>, el Gimnasio Humanístico del Alto Magdalena será
-                                reconocido como un referente en innovación educativa.
-                            </p>
-                            <p>
-                                Consolidado por un Proyecto Educativo Institucional que ofrece una formación de
-                                excelencia. Nuestro modelo se distinguirá por su enfoque humanista, inclusivo,
-                                científico, ecológico y tecnológico, que prepara a las nuevas generaciones con una
-                                mentalidad global y las habilidades y competencias necesarias para impactar
-                                positivamente en la sociedad.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Imagen profesional con timeline mejorado - SIN íconos flotantes -->
-                <div class="col-lg-6 order-lg-1">
-                    <div class="visual-element vision-visual">
-                        <div class="timeline-container">
-
+                    <!-- Imagen profesional sin íconos flotantes -->
+                    <div class="col-lg-6">
+                        <div class="mision-visual">
+                            <!-- Eliminados todos los íconos flotantes como solicitaste -->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- SECCIÓN VISIÓN -->
+        <section class="section-vision" id="vision">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-2 d-flex align-items-center">
+                        <div class="content-wrapper">
+                            <div class="section-header">
+                                <h2 class="section-title">
+                                    <span class="title-decoration"></span>
+                                    Nuestra Visión
+                                </h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="vision-year">2035</div>
+                                <p class="lead-paragraph">
+                                    Para el <strong>2035</strong>, el Gimnasio Humanístico del Alto Magdalena será
+                                    reconocido como un referente en innovación educativa.
+                                </p>
+                                <p>
+                                    Consolidado por un Proyecto Educativo Institucional que ofrece una formación de
+                                    excelencia. Nuestro modelo se distinguirá por su enfoque humanista, inclusivo,
+                                    científico, ecológico y tecnológico, que prepara a las nuevas generaciones con una
+                                    mentalidad global y las habilidades y competencias necesarias para impactar
+                                    positivamente en la sociedad.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagen profesional con timeline mejorado - SIN íconos flotantes -->
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="vision-visual">
+                            <div class="timeline-container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
 
-<!-- ====================================
- Quiero un diseño más limpio, menos "encajonado",
- ========================================-->
-
+        <!-- ====================================
+        Quiero un diseño más limpio, menos "encajonado",
+        ========================================-->
 
         <!-- SECCIÓN PRINCIPIOS Y VALORES -->
         <section class="section-valores" id="valores">
@@ -208,7 +207,8 @@
                                         con los desafíos globales y los fines de la educación colombiana. Nuestro lema,
                                         <strong>"Nos educamos en el trabajo humanizante para un nuevo país"</strong>,
                                         encapsula nuestro compromiso con la construcción de un futuro más justo y
-                                        próspero para todos.</p>
+                                        próspero para todos.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -391,6 +391,15 @@
                 </div>
             </div>
         </section>
+
+
+
+
+
+
+
+
+        
     </main>
 
     <!-- Incluir el footer -->
@@ -418,6 +427,10 @@
         document.querySelectorAll('.valor-block, .content-wrapper, .visual-element').forEach(el => {
             observer.observe(el);
         });
+                             /*  
+                <           div class="col-lg-6">
+                            <div class="visual-element mision-visual
+                            */
 
         // Scroll suave para navegación
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -452,7 +465,7 @@
         // Inicializar partículas
         createParticles();
 
-        
+
         // Scroll suave para el indicador de scroll del hero
         document.addEventListener('DOMContentLoaded', function() {
             const scrollIndicator = document.querySelector('.scroll-indicator');

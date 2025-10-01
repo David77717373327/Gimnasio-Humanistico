@@ -157,92 +157,81 @@
                 </div>
             </div>
 
+
+
+
+
+
+
             <!-- Galería de Instalaciones -->
-            <div class="facilities-gallery" data-aos="fade-up">
-                <div class="gallery-header text-center mb-4">
-                    <h2 class="gallery-title">
-                        <span class="title-decorator"></span>
-                        Nuestras Instalaciones
-                        <span class="title-decorator"></span>
-                    </h2>
-                    <p class="gallery-subtitle">Espacios diseñados para potenciar el aprendizaje y el desarrollo
-                        integral</p>
-                </div>
+<div class="facilities-gallery" data-aos="fade-up">
+    <div class="gallery-header text-center mb-4">
+        <h2 class="gallery-title">
+            <span class="title-decorator"></span>
+            Nuestras Instalaciones
+            <span class="title-decorator"></span>
+        </h2>
+        <p class="gallery-subtitle">Espacios diseñados para potenciar el aprendizaje y el desarrollo integral</p>
+    </div>
 
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="gallery-image-wrapper">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Laboratorios de Ciencias"
-                                    class="gallery-image">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-content">
-                                        <h4>Laboratorios de Ciencias</h4>
-                                        <p>Equipamiento científico de última generación</p>
-                                        <div class="gallery-icon">
-                                            <i class="fas fa-flask"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-image-wrapper">
+                    <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Laboratorios de Ciencias" class="gallery-image">
+                    <div class="gallery-title-overlay">
+                        <h4 class="facility-title">Laboratorios de Ciencias</h4>
                     </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="gallery-image-wrapper">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Aulas Inteligentes"
-                                    class="gallery-image">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-content">
-                                        <h4>Aulas Inteligentes</h4>
-                                        <p>Tecnología interactiva para el aprendizaje</p>
-                                        <div class="gallery-icon">
-                                            <i class="fas fa-chalkboard-teacher"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="gallery-image-wrapper">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Biblioteca Digital"
-                                    class="gallery-image">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-content">
-                                        <h4>Biblioteca Digital</h4>
-                                        <p>Recursos educativos digitales y físicos</p>
-                                        <div class="gallery-icon">
-                                            <i class="fas fa-book-open"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="gallery-image-wrapper">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Espacios Deportivos"
-                                    class="gallery-image">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-content">
-                                        <h4>Espacios Deportivos</h4>
-                                        <p>Instalaciones para el desarrollo físico</p>
-                                        <div class="gallery-icon">
-                                            <i class="fas fa-running"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="gallery-icon-container">
+                        <i class="fas fa-flask"></i>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="gallery-image-wrapper">
+                    <img src="{{ asset('images/Mision3.jpg') }}" alt="Aulas Inteligentes" class="gallery-image">
+                    <div class="gallery-title-overlay">
+                        <h4 class="facility-title">Aulas Inteligentes</h4>
+                    </div>
+                    <div class="gallery-icon-container">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="gallery-image-wrapper">
+                    <img src="{{ asset('images/Mision1.jpg') }}" alt="Biblioteca Digital" class="gallery-image">
+                    <div class="gallery-title-overlay">
+                        <h4 class="facility-title">Biblioteca Digital</h4>
+                    </div>
+                    <div class="gallery-icon-container">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                <div class="gallery-image-wrapper">
+                    <img src="{{ asset('images/Mision1.jpg') }}" alt="Espacios Deportivos" class="gallery-image">
+                    <div class="gallery-title-overlay">
+                        <h4 class="facility-title">Espacios Deportivos</h4>
+                    </div>
+                    <div class="gallery-icon-container">
+                        <i class="fas fa-running"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
     </section>
 
@@ -362,6 +351,11 @@
             </div>
         </div>
     </section>
+
+
+
+
+
 
 
 
@@ -498,7 +492,6 @@
                             </div>
                         </div>
                         <div class="card-content">
-
                             <h3 class="level-title">Educación Básica Secundaria</h3>
                             <p class="level-description">
                                 Desarrollo del pensamiento crítico y analítico a través de proyectos

@@ -1341,7 +1341,22 @@ h6 {
     font-size: 1.15rem;
 }
 
-/* Galería - TÍTULOS MODERNIZADOS */
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   GALERÍA DE INSTALACIONES - DISEÑO EMPRESARIAL
+============================================ */
+
+/* Contenedor principal */
 .facilities-gallery {
     margin-top: 6rem;
 }
@@ -1383,6 +1398,7 @@ h6 {
     font-family: 'Inter', sans-serif;
 }
 
+/* CARDS - DISEÑO CUADRADO Y EMPRESARIAL */
 .gallery-item {
     height: 100%;
     transition: var(--transition-normal);
@@ -1390,11 +1406,11 @@ h6 {
 
 .gallery-image-wrapper {
     position: relative;
-    border-radius: var(--border-radius-lg);
+    border-radius: 0; /* Bordes completamente cuadrados */
     overflow: hidden;
     background: var(--white);
     box-shadow: var(--shadow-sm);
-    height: 270px;
+    height: 320px;
     transition: var(--transition-normal);
 }
 
@@ -1405,66 +1421,126 @@ h6 {
     transition: var(--transition-slow);
 }
 
-.gallery-overlay {
+/* TÍTULO EN LA PARTE SUPERIOR CON OVERLAY MÁS FUERTE */
+.gallery-title-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-   
+    padding: 1.5rem 1.2rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
+    z-index: 2;
+}
+
+.facility-title {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700; /* Aumentado de 600 a 700 */
+    color: var(--white);
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 4px 12px rgba(0, 0, 0, 0.6); /* Doble sombra */
+    letter-spacing: 0.02em; /* Ligeramente más espaciado */
+    line-height: 1.3;
+}
+
+
+/* ÍCONO EN LA PARTE INFERIOR IZQUIERDA */
+.gallery-icon-container {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    z-index: 2;
     transition: var(--transition-normal);
+    border-radius: 50px;
 }
 
+/* EFECTOS HOVER PROFESIONALES */
 .gallery-image-wrapper:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
-}
-
-.gallery-image-wrapper:hover .gallery-overlay {
-    opacity: 1;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-image-wrapper:hover .gallery-image {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
-.gallery-content {
-    text-align: center;
+.gallery-image-wrapper:hover .gallery-icon-container {
+    background: var(--primary-green);
     color: var(--white);
-    padding: 2rem;
+    transform: scale(1.1);
 }
 
-.gallery-content h4 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 0.8rem;
-    font-family: 'Poppins', 'Montserrat', sans-serif;
+.gallery-image-wrapper:hover .facility-title {
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
 }
 
-.gallery-content p {
-    font-size: 0.95rem;
-    opacity: 0.92;
-    margin-bottom: 1.5rem;
-    font-family: 'Inter', sans-serif;
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .gallery-title {
+        font-size: 2.2rem;
+        gap: 1.2rem;
+    }
+    
+    .title-decorator {
+        width: 60px;
+    }
+    
+    .gallery-subtitle {
+        font-size: 1rem;
+    }
+    
+    .gallery-image-wrapper {
+        height: 280px;
+    }
+    
+    .facility-title {
+        font-size: 1.2rem;
+    }
+    
+    .gallery-icon-container {
+        width: 45px;
+        height: 45px;
+        font-size: 1.15rem;
+    }
 }
 
-.gallery-icon {
-    width: 55px;
-    height: 55px;
-    background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    font-size: 1.4rem;
-    color: var(--text-dark);
-    box-shadow: var(--shadow-md);
+@media (max-width: 576px) {
+    .facilities-gallery {
+        margin-top: 4rem;
+    }
+    
+    .gallery-header {
+        margin-bottom: 3rem;
+    }
+    
+    .gallery-image-wrapper {
+        height: 240px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* CTA Final - MODERNIZADO */
 .welcome-cta {
@@ -2250,7 +2326,6 @@ h6 {
     flex-direction: column;
 }
 
-
 .academic-levels-section .level-title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -2347,10 +2422,8 @@ h6 {
 
 .academic-levels-section .level-link:hover {
     color: var(--white);
-    background: var(--gradient-gold);
     transform: translateX(5px) scale(1.05);
     box-shadow: var(--shadow-md);
-    border-color: var(--accent-gold);
 }
 
 .academic-levels-section .level-link i {
@@ -2587,7 +2660,7 @@ h6 {
 /* Focus states mejorados */
 .academic-levels-section .level-card:focus,
 .academic-levels-section .level-link:focus {
-    outline: 3px solid var(--accent-gold);
+    outline: 3px solid var(--primary-green);
     outline-offset: 2px;
 }
 
