@@ -363,6 +363,16 @@
             flex-shrink: 0;
         }
 
+
+
+
+
+
+
+
+
+        
+
         /* ============================================
            IMAGEN PROFESIONAL MISIÓN (SIN OVERLAYS OSCUROS)
         ============================================ */
@@ -553,6 +563,151 @@
 /* ============================================
    SECCIÓN VALORES
 ============================================ */
+
+/* ============================================
+No tocar lso estilos del header lo demas si por favor
+============================================ */
+
+/* Header Section */
+.admision-nav-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, rgba(244, 185, 66, 0.12) 0%, rgba(244, 185, 66, 0.08) 100%);
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(244, 185, 66, 0.25);
+    box-shadow: 0 2px 8px rgba(244, 185, 66, 0.1);
+}
+
+.label-icon {
+    color: #f4b942;
+    font-size: 0.85rem;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.75; transform: scale(1.08); }
+}
+
+.label-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-green, #0d3f27);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.admision-nav-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 4vw, 3.8rem);
+    font-weight: 700;
+    color: var(--primary-green, #0d3f27);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.admision-nav-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.09rem;
+    color: var(--text-darkk);
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* Wrapper para logo y contenido */
+.header-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.13rem;
+    max-width: 900px;
+    margin-left: 70px;
+}
+
+/* Logo del colegio */
+.header-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 20px;
+    margin-right: 90px;
+}
+
+/* Contenedor del texto */
+.header-text-content {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+/* Responsive: en pantallas pequeñas, ocultar logo o ajustar layout */
+@media (max-width: 768px) {
+    .header-content-wrapper {
+        gap: 1rem;
+    }
+    
+    .header-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-logo {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section-valores {
     padding: var(--section-padding);
     background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
@@ -602,8 +757,8 @@
 }
 
 .valor-main-icon {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background: var(--gradient-primary);
     border-radius: 50%;
     display: inline-flex;
@@ -615,7 +770,6 @@
     box-shadow: var(--shadow-medium);
     position: relative;
 }
-
 
 
 .valor-title {
@@ -658,8 +812,8 @@
 }
 
 .valor-item-header h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-green);
     margin: 0;
@@ -668,7 +822,7 @@
 .valor-item p {
     margin: 0;
     line-height: 1.7;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 
@@ -903,3 +1057,7 @@
 .lead-paragraph {
     color: #2d3748;
 }
+
+
+
+

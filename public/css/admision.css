@@ -349,6 +349,20 @@
     pointer-events: none;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Header Section */
 .admision-nav-header {
     text-align: center;
@@ -420,6 +434,71 @@
     max-width: 620px;
     margin: 0 auto;
 }
+
+/* Wrapper para logo y contenido */
+.header-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin-left: 70px;
+}
+
+/* Logo del colegio */
+.header-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 20px;
+    margin-right: 90px;
+}
+
+/* Contenedor del texto */
+.header-text-content {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+/* Responsive: en pantallas pequeñas, ocultar logo o ajustar layout */
+@media (max-width: 768px) {
+    .header-content-wrapper {
+        gap: 1rem;
+    }
+    
+    .header-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-logo {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Layout Principal - HORIZONTAL */
 .admision-nav-layout {
@@ -543,9 +622,9 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: #ffffff;
+    color: var(--white);
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    background: linear-gradient(135deg, var(--primary-green, #0d3f27) 0%, #0a5522 100%);
+    background: var(--primary-green);
     box-shadow: 0 6px 18px rgba(13, 63, 39, 0.2);
     flex-shrink: 0;
 }
@@ -904,6 +983,18 @@
 .featured-badge i {
     font-size: 0.75rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Header de la card */
 .horario-card-header {

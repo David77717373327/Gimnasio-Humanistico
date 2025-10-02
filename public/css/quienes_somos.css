@@ -505,6 +505,80 @@ h6 {
     font-family: 'times new roman', 'Inter', 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+
+
+.timeline-year {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: black;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', 'Inter', 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timeline-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.timeline-year span {
+    white-space: nowrap;
+}
+
+/* ===== ITEMS IMPARES (Cards IZQUIERDAS) - Logo a la IZQUIERDA ===== */
+.timeline-item:nth-child(odd) .timeline-year {
+    justify-content: flex-end;
+}
+
+.timeline-item:nth-child(odd) .timeline-logo {
+    margin-right: 250px;
+}
+
+.timeline-item:nth-child(odd) .timeline-year-long .timeline-logo {
+    margin-right: 180px;
+}
+
+/* ===== ITEMS PARES (Cards DERECHAS) - Logo a la DERECHA ===== */
+.timeline-item:nth-child(even) .timeline-year {
+    justify-content: flex-start;
+}
+
+.timeline-item:nth-child(even) .timeline-logo {
+    order: 2;
+    margin-left: 250px;
+}
+
+.timeline-item:nth-child(even) .timeline-year span {
+    order: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-year-long .timeline-logo {
+    margin-left: 180px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Contenedor de imagen al lado del card */
 .timeline-image-side {
     position: relative;

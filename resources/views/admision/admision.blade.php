@@ -52,15 +52,33 @@
     <!-- NAVEGACIÓN INTERNA DE ADMISIÓN -->
     <section class="admision-nav-section" id="nav_Interna">
         <div class="container">
+            
+            
+            
+            <!-- Header de la sección con logo -->
             <div class="admision-nav-header">
-                <div class="header-label">
-                    <span class="label-icon">✦</span>
-                    <span class="label-text">Proceso de Admisión</span>
+                <div class="header-content-wrapper">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
+                    <div class="header-text-content">
+                        <div class="header-label">
+                            <span class="label-icon">✦</span>
+                            <span class="label-text">Comunicate con nosotros</span>
+                        </div>
+                        <h2 class="admision-nav-title">Horarios De Atencion</h2>
+                        <p class="admision-nav-subtitle">Estamos disponibles para atenderte en los siguientes horarios.
+                        </p>
+                    </div>
                 </div>
-                <h2 class="admision-nav-title">Información Clave para Tu Inscripción</h2>
-                <p class="admision-nav-subtitle">Accede de manera ágil y transparente a toda la información necesaria
-                    para iniciar tu proceso educativo.</p>
             </div>
+
+
+            
+
+
+
+
+
+
 
             <div class="admision-nav-layout">
                 <!-- Grid Principal -->
@@ -174,19 +192,24 @@
 
 
 
-
     <!-- SECCIÓN HORARIOS DE ATENCIÓN -->
     <section class="horarios-atencion-section" id="horarios-atencion">
         <div class="container">
-            
-            <!-- Header de la sección -->
+
+            <!-- Header de la sección con logo -->
             <div class="admision-nav-header">
-                <div class="header-label">
-                    <span class="label-icon">✦</span>
-                    <span class="label-text">Comunicate con nosotros</span>
+                <div class="header-content-wrapper">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
+                    <div class="header-text-content">
+                        <div class="header-label">
+                            <span class="label-icon">✦</span>
+                            <span class="label-text">Comunicate con nosotros</span>
+                        </div>
+                        <h2 class="admision-nav-title">Horarios De Atencion</h2>
+                        <p class="admision-nav-subtitle">Estamos disponibles para atenderte en los siguientes horarios.
+                        </p>
+                    </div>
                 </div>
-                <h2 class="admision-nav-title">Horarios De Atencion</h2>
-                <p class="admision-nav-subtitle">Estamos disponibles para atenderte en los siguientes horarios.</p>
             </div>
 
             <!-- Grid de horarios -->
@@ -329,7 +352,7 @@
                 </div>
                 <h2 class="admision-nav-title">Costos y Requisitos De Admision</h2>
                 <p class="admision-nav-subtitle">Accede de manera ágil y transparente a toda la información necesaria
-                para iniciar tu proceso educativo.</p>
+                    para iniciar tu proceso educativo.</p>
             </div>
 
             <!-- PREESCOLAR -->
@@ -577,203 +600,210 @@
 
 
 
-    
 
-<!-- SECCIÓN FORMACIÓN COMPLEMENTARIA -->
-<section class="formacion-complementaria-section" id="formacion-complementaria">
-    <div class="container">
-        
-        <!-- Header de la sección -->
-        <div class="admision-nav-header">
-            <div class="header-label">
-                <span class="label-icon">✦</span>
-                <span class="label-text">Desarrollo Integral</span>
+
+    <!-- SECCIÓN FORMACIÓN COMPLEMENTARIA -->
+    <section class="formacion-complementaria-section" id="formacion-complementaria">
+        <div class="container">
+
+            <!-- Header de la sección con logo -->
+            <div class="admision-nav-header">
+                <div class="header-content-wrapper">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
+                    <div class="header-text-content">
+                        <div class="header-label">
+                            <span class="label-icon">✦</span>
+                            <span class="label-text">Desarrollo Integral</span>
+                        </div>
+                        <h2 class="admision-nav-title">Formación Complementaria</h2>
+                        <p class="admision-nav-subtitle">Programas especializados diseñados para complementar la
+                            formación
+                            académica, potenciando las habilidades y talentos .</p>
+                    </div>
+                </div>
             </div>
-            <h2 class="admision-nav-title">Formación Complementaria</h2>
-            <p class="admision-nav-subtitle">Programas especializados diseñados para complementar la formación académica, potenciando las habilidades y talentos de nuestros estudiantes en horario vespertino.</p>
+
+            <!-- Grid de programas -->
+            <div class="formacion-grid">
+
+                <!-- Inglés -->
+                <div class="formacion-card">
+                    <div class="formacion-image-wrapper">
+                        <img src="{{ asset('images/Mision1.jpg') }}" alt="Programa de Inglés"
+                            class="formacion-image">
+                        <div class="formacion-icon-badge">
+                            <i class="fas fa-language"></i>
+                        </div>
+                    </div>
+                    <div class="formacion-body">
+                        <h3 class="formacion-title">Inglés</h3>
+                        <p class="formacion-description">Desarrollo de competencias comunicativas con énfasis en
+                            conversación, comprensión auditiva y lectora para un manejo fluido del idioma.</p>
+
+                        <div class="formacion-divider"></div>
+
+                        <div class="formacion-schedule">
+                            <div class="schedule-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="schedule-info">
+                                <div class="schedule-days">Lunes y Miércoles</div>
+                                <div class="schedule-hours">2:00 p.m. - 4:00 p.m.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informática -->
+                <div class="formacion-card">
+                    <div class="formacion-image-wrapper">
+                        <img src="{{ asset('images/Mision3.jpg') }}" alt="Programa de Informática"
+                            class="formacion-image">
+                        <div class="formacion-icon-badge">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <div class="formacion-body">
+                        <h3 class="formacion-title">Informática</h3>
+                        <p class="formacion-description">Formación en herramientas ofimáticas, fundamentos de
+                            programación y uso responsable de tecnologías digitales aplicadas al entorno educativo.</p>
+
+                        <div class="formacion-divider"></div>
+
+                        <div class="formacion-schedule">
+                            <div class="schedule-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="schedule-info">
+                                <div class="schedule-days">Martes y Jueves</div>
+                                <div class="schedule-hours">2:30 p.m. - 4:30 p.m.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manualidades -->
+                <div class="formacion-card">
+                    <div class="formacion-image-wrapper">
+                        <img src="{{ asset('images/Mision1.jpg') }}" alt="Programa de Manualidades"
+                            class="formacion-image">
+                        <div class="formacion-icon-badge">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                    </div>
+                    <div class="formacion-body">
+                        <h3 class="formacion-title">Manualidades</h3>
+                        <p class="formacion-description">Estimulación de la creatividad y desarrollo de motricidad fina
+                            mediante técnicas artísticas, proyectos manuales y expresión plástica.</p>
+
+                        <div class="formacion-divider"></div>
+
+                        <div class="formacion-schedule">
+                            <div class="schedule-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="schedule-info">
+                                <div class="schedule-days">Viernes</div>
+                                <div class="schedule-hours">2:00 p.m. - 4:30 p.m.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Natación -->
+                <div class="formacion-card">
+                    <div class="formacion-image-wrapper">
+                        <img src="{{ asset('images/Mision2.jpg') }}" alt="Programa de Natación"
+                            class="formacion-image">
+                        <div class="formacion-icon-badge">
+                            <i class="fas fa-swimmer"></i>
+                        </div>
+                    </div>
+                    <div class="formacion-body">
+                        <h3 class="formacion-title">Natación</h3>
+                        <p class="formacion-description">Aprendizaje progresivo de técnicas de natación,
+                            fortalecimiento físico integral y desarrollo de confianza y seguridad acuática.</p>
+
+                        <div class="formacion-divider"></div>
+
+                        <div class="formacion-schedule">
+                            <div class="schedule-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="schedule-info">
+                                <div class="schedule-days">Miércoles y Viernes</div>
+                                <div class="schedule-hours">3:00 p.m. - 5:00 p.m.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Danzas -->
+                <div class="formacion-card">
+                    <div class="formacion-image-wrapper">
+                        <img src="{{ asset('images/Dansas.jpg') }}" alt="Programa de Danzas"
+                            class="formacion-image">
+                        <div class="formacion-icon-badge">
+                            <i class="fas fa-music"></i>
+                        </div>
+                    </div>
+                    <div class="formacion-body">
+                        <h3 class="formacion-title">Danzas</h3>
+                        <p class="formacion-description">Expresión corporal y cultural mediante danzas folclóricas y
+                            contemporáneas, fortaleciendo coordinación, ritmo y apreciación artística.</p>
+
+                        <div class="formacion-divider"></div>
+
+                        <div class="formacion-schedule">
+                            <div class="schedule-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="schedule-info">
+                                <div class="schedule-days">Martes</div>
+                                <div class="schedule-hours">2:30 p.m. - 5:00 p.m.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fútbol -->
+                <div class="formacion-card">
+                    <div class="formacion-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&q=80"
+                            alt="Programa de Fútbol" class="formacion-image">
+                        <div class="formacion-icon-badge">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                    </div>
+                    <div class="formacion-body">
+                        <h3 class="formacion-title">Fútbol</h3>
+                        <p class="formacion-description">Entrenamiento deportivo enfocado en valores de trabajo en
+                            equipo, disciplina y desarrollo técnico-táctico del fútbol como deporte formativo.</p>
+
+                        <div class="formacion-divider"></div>
+
+                        <div class="formacion-schedule">
+                            <div class="schedule-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="schedule-info">
+                                <div class="schedule-days">Lunes y Jueves</div>
+                                <div class="schedule-hours">3:00 p.m. - 5:30 p.m.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
         </div>
-
-        <!-- Grid de programas -->
-        <div class="formacion-grid">
-            
-            <!-- Inglés -->
-            <div class="formacion-card">
-                <div class="formacion-image-wrapper">
-                    <img src="{{ asset('images/Mision1.jpg') }}" 
-                         alt="Programa de Inglés" 
-                         class="formacion-image">
-                    <div class="formacion-icon-badge">
-                        <i class="fas fa-language"></i>
-                    </div>
-                </div>
-                <div class="formacion-body">
-                    <h3 class="formacion-title">Inglés</h3>
-                    <p class="formacion-description">Desarrollo de competencias comunicativas con énfasis en conversación, comprensión auditiva y lectora para un manejo fluido del idioma.</p>
-                    
-                    <div class="formacion-divider"></div>
-                    
-                    <div class="formacion-schedule">
-                        <div class="schedule-icon">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div class="schedule-info">
-                            <div class="schedule-days">Lunes y Miércoles</div>
-                            <div class="schedule-hours">2:00 p.m. - 4:00 p.m.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Informática -->
-            <div class="formacion-card">
-                <div class="formacion-image-wrapper">
-                    <img src="{{ asset('images/Mision3.jpg') }}" 
-                         alt="Programa de Informática" 
-                         class="formacion-image">
-                    <div class="formacion-icon-badge">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                </div>
-                <div class="formacion-body">
-                    <h3 class="formacion-title">Informática</h3>
-                    <p class="formacion-description">Formación en herramientas ofimáticas, fundamentos de programación y uso responsable de tecnologías digitales aplicadas al entorno educativo.</p>
-                    
-                    <div class="formacion-divider"></div>
-                    
-                    <div class="formacion-schedule">
-                        <div class="schedule-icon">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div class="schedule-info">
-                            <div class="schedule-days">Martes y Jueves</div>
-                            <div class="schedule-hours">2:30 p.m. - 4:30 p.m.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Manualidades -->
-            <div class="formacion-card">
-                <div class="formacion-image-wrapper">
-                    <img src="{{ asset('images/Mision1.jpg') }}" 
-                         alt="Programa de Manualidades" 
-                         class="formacion-image">
-                    <div class="formacion-icon-badge">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                </div>
-                <div class="formacion-body">
-                    <h3 class="formacion-title">Manualidades</h3>
-                    <p class="formacion-description">Estimulación de la creatividad y desarrollo de motricidad fina mediante técnicas artísticas, proyectos manuales y expresión plástica.</p>
-                    
-                    <div class="formacion-divider"></div>
-                    
-                    <div class="formacion-schedule">
-                        <div class="schedule-icon">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div class="schedule-info">
-                            <div class="schedule-days">Viernes</div>
-                            <div class="schedule-hours">2:00 p.m. - 4:30 p.m.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Natación -->
-            <div class="formacion-card">
-                <div class="formacion-image-wrapper">
-                    <img src="{{ asset('images/Mision2.jpg') }}" 
-                         alt="Programa de Natación" 
-                         class="formacion-image">
-                    <div class="formacion-icon-badge">
-                        <i class="fas fa-swimmer"></i>
-                    </div>
-                </div>
-                <div class="formacion-body">
-                    <h3 class="formacion-title">Natación</h3>
-                    <p class="formacion-description">Aprendizaje progresivo de técnicas de natación, fortalecimiento físico integral y desarrollo de confianza y seguridad acuática.</p>
-                    
-                    <div class="formacion-divider"></div>
-                    
-                    <div class="formacion-schedule">
-                        <div class="schedule-icon">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div class="schedule-info">
-                            <div class="schedule-days">Miércoles y Viernes</div>
-                            <div class="schedule-hours">3:00 p.m. - 5:00 p.m.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Danzas -->
-            <div class="formacion-card">
-                <div class="formacion-image-wrapper">
-                    <img src="{{ asset('images/Dansas.jpg') }}" 
-                         alt="Programa de Danzas" 
-                         class="formacion-image">
-                    <div class="formacion-icon-badge">
-                        <i class="fas fa-music"></i>
-                    </div>
-                </div>
-                <div class="formacion-body">
-                    <h3 class="formacion-title">Danzas</h3>
-                    <p class="formacion-description">Expresión corporal y cultural mediante danzas folclóricas y contemporáneas, fortaleciendo coordinación, ritmo y apreciación artística.</p>
-                    
-                    <div class="formacion-divider"></div>
-                    
-                    <div class="formacion-schedule">
-                        <div class="schedule-icon">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div class="schedule-info">
-                            <div class="schedule-days">Martes</div>
-                            <div class="schedule-hours">2:30 p.m. - 5:00 p.m.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Fútbol -->
-            <div class="formacion-card">
-                <div class="formacion-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&q=80" 
-                         alt="Programa de Fútbol" 
-                         class="formacion-image">
-                    <div class="formacion-icon-badge">
-                        <i class="fas fa-futbol"></i>
-                    </div>
-                </div>
-                <div class="formacion-body">
-                    <h3 class="formacion-title">Fútbol</h3>
-                    <p class="formacion-description">Entrenamiento deportivo enfocado en valores de trabajo en equipo, disciplina y desarrollo técnico-táctico del fútbol como deporte formativo.</p>
-                    
-                    <div class="formacion-divider"></div>
-                    
-                    <div class="formacion-schedule">
-                        <div class="schedule-icon">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div class="schedule-info">
-                            <div class="schedule-days">Lunes y Jueves</div>
-                            <div class="schedule-hours">3:00 p.m. - 5:30 p.m.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        
-
-    </div>
-</section>
+    </section>
 
 
-    
-    
+
+
 
 
 

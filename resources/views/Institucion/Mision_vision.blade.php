@@ -163,26 +163,26 @@
 
 
 
-        <!-- ====================================
-        Quiero un diseño más limpio, menos "encajonado",
-        ========================================-->
+        
 
         <!-- SECCIÓN PRINCIPIOS Y VALORES -->
         <section class="section-valores" id="valores">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center mb-5">
-                        <div class="section-header">
-                            <h2 class="section-title centered">
-                                <span class="title-decoration"></span>
-                                Principios y Valores Institucionales
-                            </h2>
-                            <p class="section-subtitle">
-                                Los pilares fundamentales que guían nuestro proyecto educativo hacia la excelencia
-                            </p>
+                
+                
+                <!-- Header de la sección con logo -->
+            <div class="admision-nav-header">
+                <div class="header-content-wrapper">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
+                    <div class="header-text-content">
+                        <div class="header-label">
+                            <span class="label-icon">✦</span>
+                            <span class="label-text">proyecto educativo </span>
                         </div>
+                        <h2 class="admision-nav-title">Principios y Valores Institucionales</h2>
                     </div>
                 </div>
+            </div>
 
                 <!-- Principio 1: Visión Compartida -->
                 <div class="valor-block">
