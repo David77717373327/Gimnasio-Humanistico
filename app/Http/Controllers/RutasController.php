@@ -16,7 +16,7 @@ class RutasController extends Controller
     {
         return view('admin.index');
     }
-    
+
     public function mostrarContenidoEstudiante()
     {
         return view('student.index');
@@ -51,7 +51,8 @@ class RutasController extends Controller
         return view('admision.admision');
     }
 
-
-
+    public function mostrarcontenidoprecolar()
+    {
+        return view('niveles.prescolar');
+    }
 }
-

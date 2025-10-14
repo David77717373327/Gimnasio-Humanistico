@@ -142,7 +142,7 @@
                             NIVELES
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#prescolar">
+                            <a class="dropdown-item" href="{{  route('prescolar') }}">
                                 <i class="fas fa-child"></i>
                                 Educación Prescolar
                             </a>

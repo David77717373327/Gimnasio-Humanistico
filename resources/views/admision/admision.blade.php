@@ -192,140 +192,162 @@
 
 
 
-    <!-- SECCIÓN HORARIOS DE ATENCIÓN -->
-    <section class="horarios-atencion-section" id="horarios-atencion">
-        <div class="container">
+    <!-- ============================================
+     CÓDIGO HTML - SECCIÓN HORARIOS DE ATENCIÓN
+============================================ -->
 
-            <!-- Header de la sección con logo -->
-            <div class="admision-nav-header">
-                <div class="header-content-wrapper">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
-                    <div class="header-text-content">
-                        <div class="header-label">
-                            <span class="label-icon">✦</span>
-                            <span class="label-text">Comunicate con nosotros</span>
-                        </div>
-                        <h2 class="admision-nav-title">Horarios De Atencion</h2>
-                        <p class="admision-nav-subtitle">Estamos disponibles para atenderte en los siguientes horarios.
-                        </p>
-                    </div>
-                </div>
-            </div>
+<!-- SECCIÓN HORARIOS DE ATENCIÓN -->
+<section class="horarios-atencion-section" id="horarios-atencion">
+    <div class="container">
 
-            <!-- Grid de horarios -->
-            <div class="horarios-grid">
-                <!-- Card: Oficina Administrativa -->
-                <div class="horario-card">
-                    <div class="horario-card-header">
-                        <div class="horario-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3 class="horario-card-title">Oficina Administrativa</h3>
+        <!-- Header de la sección con logo -->
+        <div class="admision-nav-header">
+            <div class="header-content-wrapper">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
+                <div class="header-text-content">
+                    <div class="header-label">
+                        <span class="label-icon">✦</span>
+                        <span class="label-text">Comunicate con nosotros</span>
                     </div>
-                    <div class="horario-card-body">
-                        <div class="horario-item">
-                            <span class="horario-label">Lunes a Viernes</span>
-                            <span class="horario-time">7:00 AM - 4:00 PM</span>
-                        </div>
-                        <div class="horario-item">
-                            <span class="horario-label">Sábados</span>
-                            <span class="horario-time">8:00 AM - 12:00 PM</span>
-                        </div>
-                    </div>
-                    <div class="horario-card-footer">
-                        <i class="fas fa-info-circle"></i>
-                        <span>Atención presencial y telefónica</span>
-                    </div>
+                    <h2 class="admision-nav-title">Horarios De Atención</h2>
+                    <p class="admision-nav-subtitle">Estamos disponibles para atenderte en los siguientes horarios.
+                    </p>
                 </div>
-
-                <!-- Card: Coordinación Académica -->
-                <div class="horario-card horario-card-featured">
-                    <div class="featured-badge">
-                        <i class="fas fa-star"></i>
-                        <span>Preferencial</span>
-                    </div>
-                    <div class="horario-card-header">
-                        <div class="horario-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3 class="horario-card-title">Coordinación Académica</h3>
-                    </div>
-                    <div class="horario-card-body">
-                        <div class="horario-item">
-                            <span class="horario-label">Lunes a Viernes</span>
-                            <span class="horario-time">7:30 AM - 3:30 PM</span>
-                        </div>
-                        <div class="horario-item">
-                            <span class="horario-label">Agendamiento</span>
-                            <span class="horario-time">Cita previa requerida</span>
-                        </div>
-                    </div>
-                    <div class="horario-card-footer">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>Agendar con 24 horas de anticipación</span>
-                    </div>
-                </div>
-
-                <!-- Card: Proceso de Admisión -->
-                <div class="horario-card">
-                    <div class="horario-card-header">
-                        <div class="horario-icon">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h3 class="horario-card-title">Proceso de Admisión</h3>
-                    </div>
-                    <div class="horario-card-body">
-                        <div class="horario-item">
-                            <span class="horario-label">Lunes a Viernes</span>
-                            <span class="horario-time">8:00 AM - 3:00 PM</span>
-                        </div>
-                        <div class="horario-item">
-                            <span class="horario-label">Asesoría personalizada</span>
-                            <span class="horario-time">Con cita previa</span>
-                        </div>
-                    </div>
-                    <div class="horario-card-footer">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>Llamar para agendar cita</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Información adicional -->
-            <div class="horarios-info-adicional">
-                <div class="info-card">
-                    <i class="fas fa-phone"></i>
-                    <div class="info-content">
-                        <h4>Teléfono</h4>
-                        <p>(+57) 315 2296832</p>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-envelope"></i>
-                    <div class="info-content">
-                        <h4>Correo Electrónico</h4>
-                        <p>gimnasiohumanistico@gmail.com</p>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="info-content">
-                        <h4>Dirección</h4>
-                        <p>CLL.13 4-53 Neiva, Huila - Colombia</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nota importante -->
-            <div class="horarios-nota">
-                <i class="fas fa-exclamation-circle"></i>
-                <p><strong>Nota importante:</strong> Los horarios pueden variar durante períodos de vacaciones o fechas
-                    especiales.
-                    Te recomendamos contactarnos previamente para confirmar disponibilidad.</p>
             </div>
         </div>
-    </section>
 
+        <!-- Grid de horarios -->
+        <div class="horarios-grid">
+            
+            <!-- Card: Coordinación Académica -->
+            <div class="horario-card">
+                <div class="horario-card-header">
+                    <div class="horario-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="horario-card-title">Coordinación Académica</h3>
+                </div>
+                <div class="horario-card-body">
+                    <div class="horario-item">
+                        <span class="horario-label">Mañana</span>
+                        <span class="horario-time">6:00 AM - 12:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="horario-label">Tarde</span>
+                        <span class="horario-time">2:00 PM - 6:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="horario-label">Días de atención</span>
+                        <span class="horario-time">Lunes a Viernes</span>
+                    </div>
+                </div>
+                <div class="horario-card-footer">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Agendar con 24 horas de anticipación</span>
+                </div>
+            </div>
+
+
+
+                <!-- Card: Oficina Administrativa (PREFERENCIAL) -->
+            <div class="horario-card horario-card-featured">
+                <div class="featured-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Preferencial</span>
+                </div>
+                <div class="horario-card-header">
+                    <div class="horario-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="horario-card-title">Oficina Administrativa</h3>
+                </div>
+                <div class="horario-card-body">
+                    <div class="horario-item">
+                        <span class="horario-label">Mañana</span>
+                        <span class="horario-time">6:00 AM - 12:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="horario-label">Tarde</span>
+                        <span class="horario-time">2:00 PM - 6:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="horario-label">Días de atención</span>
+                        <span class="horario-time">Lunes a Viernes</span>
+                    </div>
+                </div> 
+                <div class="horario-card-footer">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Atención presencial y telefónica</span>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Card: Proceso de Admisión -->
+            <div class="horario-card">
+                <div class="horario-card-header">
+                    <div class="horario-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="horario-card-title">Proceso de Admisión</h3>
+                </div>
+                <div class="horario-card-body">
+                    <div class="horario-item">
+                        <span class="horario-label">Mañana</span>
+                        <span class="horario-time">6:00 AM - 12:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="horario-label">Tarde</span>
+                        <span class="horario-time">2:00 PM - 6:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="horario-label">Días de atención</span>
+                        <span class="horario-time">Lunes a Viernes</span>
+                    </div>
+                </div>
+                <div class="horario-card-footer">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Llamar para agendar cita</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="horarios-info-adicional">
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <div class="info-content">
+                    <h4>Teléfono</h4>
+                    <p>(+57) 315 2296832</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <div class="info-content">
+                    <h4>Correo Electrónico</h4>
+                    <p>gimnasiohumanistico@gmail.com</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info-content">
+                    <h4>Dirección</h4>
+                    <p>CLL.13 4-53 Neiva, Huila - Colombia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nota importante -->
+        <div class="horarios-nota">
+            <i class="fas fa-exclamation-circle"></i>
+            <p><strong>Nota importante:</strong> Los horarios pueden variar durante períodos de vacaciones o fechas
+                especiales.
+                Te recomendamos contactarnos previamente para confirmar disponibilidad.</p>
+        </div>
+    </div>
+</section>
 
 
 

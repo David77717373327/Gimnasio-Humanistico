@@ -202,6 +202,10 @@
     transition: var(--transition-normal);
 }
 
+.titulo-footer-colegio{
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+}
+
 .footer-title::after {
     content: '';
     position: absolute;

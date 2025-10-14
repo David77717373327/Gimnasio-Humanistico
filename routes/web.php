@@ -40,6 +40,9 @@ Route::get('/mision-vision', [RutasController::class, 'mostrarcontenidomisionyvi
 Route::get('/filosofia-institucional', [RutasController::class, 'mostrarcontenidofilosofiainstitucional'])->name('filosofia_institucional');
 
 
+//Tutas para mostrar contenido de niveles educativos
+Route::get('/Prescolar', [RutasController::class, 'mostrarcontenidoprecolar'])->name('prescolar');
+
 
 
 //Rutas de admnisones

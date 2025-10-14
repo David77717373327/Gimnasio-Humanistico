@@ -26,3 +26,5 @@
                             </a>
                         </div>
                     </li>
+
+font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;

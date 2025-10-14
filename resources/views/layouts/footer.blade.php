@@ -12,7 +12,7 @@
                                 <div class="footer-logo-icon">
                                     <i class="fas fa-graduation-cap"></i>
                                 </div>
-                                <span>Gimnasio Humanístico</span>
+                                <span class="titulo-footer-colegio">Gimnasio Humanístico</span>
                             </a>
                             <p class="footer-description">
                                 Formando ciudadanos íntegros con excelencia académica, valores cristianos y

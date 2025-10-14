@@ -1,0 +1,1348 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;  
+    /* Azul oscuro - elegancia */
+    --dark-blue: #264653;  
+    /* Azul profundo (similar al que mostraste) */
+    --deep-blue: #003366;  
+    /* Azul intermedio - contraste suave */
+    --soft-blue: #07346e;  
+    /* Azul grisáceo - texto y detalles */
+    --slate-blue: #3A506B;  
+    /* Complemento claro (fondos suaves) */
+    --light-blue: #E0ECF7;  
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+
+/* ============================================
+   HERO SECTION PREESCOLAR - DISEÑO PROFESIONAL
+============================================ */
+
+.hero-preescolar {
+    background: linear-gradient(180deg, #ffffff 0%, #fffbf0 50%, #f0fdf4 100%);
+    padding: 120px 0 100px;
+    position: relative;
+    overflow: hidden;
+    padding: 50px;
+}
+
+/* Formas flotantes decorativas */
+.floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 20s infinite ease-in-out;
+    opacity: 0.19;
+}
+
+.shape-1 {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    top: -100px;
+    right: 10%;
+}
+
+.shape-2 {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    bottom: -50px;
+    left: 5%;
+}
+
+.shape-3 {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #0d3f27, #065e35);
+    top: 40%;
+    right: -50px;
+}
+
+.shape-4 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #FFEB3B, #FFC107);
+    bottom: 20%;
+    left: -70px;
+}
+
+.shape-5 {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #7ddfac, #4CAF50);
+    top: 15%;
+    left: 15%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(20px, 20px) rotate(5deg); }
+    50% { transform: translate(10px, -10px) rotate(-5deg); }
+    75% { transform: translate(-10px, 10px) rotate(3deg); }
+}
+
+/* Partículas decorativas */
+.particle {
+    position: absolute;
+    font-size: 24px;
+    color: #FFD700;
+    animation: twinkle 3s infinite ease-in-out;
+    opacity: 0.4;
+}
+
+.particle-1 { top: 15%; left: 20%; animation-delay: 0s; }
+.particle-2 { top: 30%; right: 15%; animation-delay: 0.5s; }
+.particle-3 { bottom: 25%; left: 10%; animation-delay: 1s; }
+.particle-4 { top: 60%; right: 25%; animation-delay: 1.5s; }
+.particle-5 { bottom: 40%; right: 8%; animation-delay: 2s; }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+/* Container */
+.hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* ===== LADO IZQUIERDO - MEJORADO ===== */
+.hero-text-section {
+    position: relative;
+    z-index: 2;
+}
+
+/* Tag superior - Más profesional */
+.hero-tag {
+    display: inline-block;
+    background: #f0fdf4;
+    color: #065e35;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-bottom: 32px;
+    border: 2px solid #7ddfac;
+    box-shadow: 0 2px 8px rgba(13, 63, 39, 0.1);
+}
+
+/* Título - Un solo color, jerarquía clara */
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 900;
+    color: #0d3f27;
+    line-height: 1.2;
+    margin-bottom: 28px;
+    letter-spacing: -1px;
+}
+
+/* Eliminar el color dorado del span */
+.title-bright {
+    color: #0d3f27;
+    position: relative;
+}
+
+/* Descripción - Mejor contraste */
+.hero-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111213;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Lista de highlights */
+.hero-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+}
+
+/* Íconos de highlights - Color verde corporativo */
+.highlight-icon {
+    width: 32px;
+    height: 32px;
+    background: #0d3f27;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+}
+
+/* Botones */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Botones - Ajustes mínimos de profesionalismo */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #0d3f27 0%, #065e35 100%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 36px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(13, 63, 39, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(13, 63, 39, 0.35);
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    background: white;
+    color: #0d3f27;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 36px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid #0d3f27;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #0d3f27;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(13, 63, 39, 0.2);
+}
+
+/* ===== LADO DERECHO - VISUAL ===== */
+.hero-visual-section {
+    position: relative;
+    z-index: 2;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+/* Elementos decorativos */
+.deco-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.deco-1 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    top: -30px;
+    right: -30px;
+    opacity: 0.2;
+}
+
+.deco-2 {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #4CAF50, #7ddfac);
+    bottom: -30px;
+    left: -30px;
+    opacity: 0.25;
+}
+
+.deco-square {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #0d3f27, #065e35);
+    bottom: 50px;
+    right: -40px;
+    border-radius: 20px;
+    transform: rotate(15deg);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.deco-line {
+    position: absolute;
+    width: 4px;
+    height: 180px;
+    background: linear-gradient(180deg, #FFD700, transparent);
+    top: 80px;
+    left: -20px;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+/* Imagen principal */
+.main-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+    border: 8px solid white;
+    z-index: 1;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badges flotantes */
+.floating-badge {
+    position: absolute;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 2;
+    animation: floatBadge 3s infinite ease-in-out;
+}
+
+.badge-1 {
+    top: 60px;
+    left: -40px;
+    border-left: 5px solid #FFD700;
+}
+
+.badge-2 {
+    bottom: 80px;
+    right: -50px;
+    border-left: 5px solid #4CAF50;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.badge-emoji {
+    font-size: 32px;
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.badge-text strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1F2937;
+}
+
+.badge-text span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #6B7280;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .hero-text-section {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .hero-tag {
+        display: inline-block;
+    }
+
+    .hero-highlights {
+        align-items: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .image-container {
+        height: 550px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .badge-1 {
+        left: -20px;
+    }
+
+    .badge-2 {
+        right: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-preescolar {
+        padding: 80px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .image-container {
+        height: 480px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-preescolar {
+        padding: 60px 0 40px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .image-container {
+        height: 420px;
+    }
+
+    .badge-1,
+    .badge-2 {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        top: auto;
+        margin-top: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Header Section */
+.admision-nav-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, rgba(244, 185, 66, 0.12) 0%, rgba(244, 185, 66, 0.08) 100%);
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(244, 185, 66, 0.25);
+    box-shadow: 0 2px 8px rgba(244, 185, 66, 0.1);
+}
+
+.label-icon {
+    color: #f4b942;
+    font-size: 0.85rem;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.75; transform: scale(1.08); }
+}
+
+.label-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-green, #0d3f27);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+
+.admision-nav-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.09rem;
+    color: var(--text-darkk);
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+
+.admision-nav-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--primary-green, #0d3f27);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+
+/* Wrapper para logo y contenido */
+.header-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin-left: 70px;
+}
+
+/* Logo del colegio */
+.header-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 20px;
+    margin-right: 90px;
+}
+
+/* Contenedor del texto */
+.header-text-content {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+/* Responsive: en pantallas pequeñas, ocultar logo o ajustar layout */
+@media (max-width: 768px) {
+    .header-content-wrapper {
+        gap: 1rem;
+    }
+    
+    .header-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-logo {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   SECCIÓN HORARIOS Y AULAS - GRID 2x2 CUADRADO
+============================================ */
+
+.horarios-aulas-section {
+    padding: 3.5rem 0 2.5rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);
+}
+
+.horarios-aulas-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.admision-nav-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(3rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: var(--primary-green, #0d3f27);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.modalidad-badge {
+    display: inline-block;
+    background: var(--dark-gold-fondo);
+    color: var(--text-dark);
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--border-radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--medium-gray);
+    margin-left: auto;
+    margin-left: 77%;
+    margin-top: 0%;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.section-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0d3f27;
+    opacity: 0.85;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1F2937;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* TÍTULO HORARIOS - SUPERIOR DERECHA */
+.horarios-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0d3f27;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-left: 4px solid #0d3f27;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section-intro {
+    font-size: 0.975rem;
+    color: #6B7280;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 700px;
+}
+
+/* GRID DE AULAS - 2 FILAS x 2 COLUMNAS */
+.aulas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* ITEM DE AULA - SIN BORDES REDONDEADOS */
+.aula-item {
+    background: white;
+    border-radius: 0; /* Eliminado completamente */
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.aula-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* WRAPPER DE IMAGEN - SIN BORDES REDONDEADOS */
+.aula-image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 35%; /* Reducido 50% de altura */
+    overflow: hidden;
+    background: #f0f0f0;
+    border-radius: 0; /* Eliminado completamente */
+}
+
+.aula-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 0; /* Eliminado completamente */
+}
+
+.aula-item:hover .aula-image img {
+    transform: scale(1.05);
+}
+
+/* OVERLAY CON NIVEL */
+.aula-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(13, 63, 39, 0.3) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.25rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.aula-item:hover .aula-overlay {
+    opacity: 1;
+}
+
+.aula-nivel {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: white;
+}
+
+/* HORARIO GENERAL - ESQUINA SUPERIOR DERECHA */
+.horario-general {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0d3f27;
+    border-left: 4px solid #0d3f27;
+    border-bottom: 1px solid #E5E7EB;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+}
+
+/* TAG DE HORARIO (PRIMER ITEM) */
+.horario-tag {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    padding: 0.5rem 0.875rem;
+    border-radius: 0; /* Eliminado bordes redondeados */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0d3f27;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.horario-tag svg {
+    flex-shrink: 0;
+    color: #0d3f27;
+}
+
+.horario-tag-first {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.aula-item:first-child:hover .horario-tag-first {
+    opacity: 1;
+}
+
+.aula-item:first-child .horario-tag-first {
+    opacity: 1;
+    bottom: 0.5rem;
+    left: 0.5rem;
+}
+
+/* CONTENIDO DE AULA */
+.aula-info {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.aula-info h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin: 0 0 0.5rem 0;
+}
+
+.aula-info p {
+    font-size: 0.98rem;
+    color: #1F2937;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* INDICADOR DE HORARIO GENERAL */
+.horario-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: white;
+    border-radius: 0; /* Eliminado bordes redondeados */
+    border-left: 3px solid #0d3f27;
+    font-size: 0.95rem;
+    color: #374151;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    width: fit-content;
+}
+
+.horario-indicator svg {
+    color: #0d3f27;
+    flex-shrink: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .aulas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .horarios-title {
+        font-size: 1.25rem;
+        padding: 0.875rem 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .horarios-aulas-section {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .horario-general {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        border-left: none;
+        border-top: 4px solid #0d3f27;
+        border-bottom: none;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-intro {
+        font-size: 0.9rem;
+    }
+
+    .aulas-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .horarios-title {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.125rem;
+        padding: 0.75rem 1rem;
+        border-left: none;
+        border-top: 4px solid #0d3f27;
+    }
+
+    .aula-info {
+        padding: 1rem;
+    }
+
+    .aula-info h4 {
+        font-size: 1rem;
+    }
+
+    .aula-info p {
+        font-size: 0.85rem;
+    }
+
+    .horario-indicator {
+        font-size: 0.9rem;
+        padding: 0.875rem 1rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .horarios-aulas-section {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .section-intro {
+        font-size: 0.85rem;
+    }
+
+    .aulas-grid {
+        gap: 1rem;
+    }
+
+    .aula-image {
+        padding-bottom: 30%; /* Ajustado para móviles */
+    }
+
+    .aula-info {
+        padding: 0.875rem;
+    }
+
+    .horario-indicator {
+        width: 100%;
+        font-size: 0.85rem;
+        padding: 0.75rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   METODOLOGÍA ACTIVA
+============================================ */
+.metodologia-section {
+    padding: 2rem 0;
+    background: var(--light-gray);
+}
+
+.metodologia-content {
+    padding-left: 2rem;
+}
+
+.metodologia-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.metodologia-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.metodologia-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: var(--border-radius-md);
+    color: var(--accent-gold);
+}
+
+.metodologia-text h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.metodologia-text p {
+    font-size: 0.9375rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.metodologia-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+}
+
+.metodologia-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   EXPERIENCIAS POR NIVEL - Accordion Moderno
+============================================ */
+.experiencias-nivel-section {
+    padding: 20px 0;
+    background: var(--white);
+}
+
+.niveles-accordion {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.nivel-accordion-item {
+    background: var(--white);
+    border: 2px solid rgba(30, 58, 95, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.nivel-logo {
+    width: 50px;           /* tamaño del logo */
+    height: 50px;          /* ajusta según el diseño */
+    object-fit: contain;   /* mantiene proporciones */
+    position: absolute;
+    right: 15px;           /* lo coloca en la esquina derecha */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.nivel-accordion-item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.nivel-header-modern {
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    position: relative;
+    border-bottom: solid 1px rgba(30, 58, 95, 0.1);
+}
+
+.nivel-info h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin: 0;
+}
+
+.nivel-color-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+}
+
+.parvulos-color {
+    background: var(--primary-green);
+}
+
+.prejardin-color {
+    background: var(--primary-green);
+}
+
+.jardin-color {
+    background: var(--primary-green);
+}
+
+.transicion-color {
+    background: var(--primary-green);
+}
+
+.nivel-body-modern {
+    padding: 0 36px 36px 36px;
+    border-top: 1px solid rgba(30, 58, 95, 0.05);
+}
+
+.nivel-intro {
+    font-size: 1.0625rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin: 24px 0 28px;
+}
+
+.nivel-activities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.activity-point {
+    padding: 16px 20px;
+    background: rgba(30, 58, 95, 0.03);
+    border-left: 3px solid var(--accent-blue);
+    font-size: 0.9375rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.activity-point:hover {
+    background: rgba(30, 58, 95, 0.06);
+    transform: translateX(4px);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+@media (max-width: 991px) {
+    .content-text-area {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .section-heading {
+        font-size: 2.25rem;
+    }
+    
+    .image-box,
+    .image-box.reverse {
+        padding: 20px 0;
+    }
+    
+    .primeros-aprendizajes-section,
+    .aprender-jugando-section,
+    .horarios-espacios-section,
+    .experiencias-nivel-section {
+        padding: 80px 0;
+    }
+    
+    .activity-modern-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 24px;
+    }
+    
+    .activity-visual {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-heading {
+        font-size: 1.875rem;
+    }
+    
+    .section-lead {
+        font-size: 1.125rem;
+    }
+    
+    .horarios-modern-grid,
+    .aulas-modern-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nivel-header-modern {
+        padding: 24px 20px;
+    }
+    
+    .nivel-body-modern {
+        padding: 0 20px 24px 20px;
+    }
+    
+    .nivel-activities-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+ 
+

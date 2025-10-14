@@ -435,6 +435,8 @@
     margin: 0 auto;
 }
 
+
+
 /* Wrapper para logo y contenido */
 .header-content-wrapper {
     display: flex;
@@ -915,8 +917,6 @@
     pointer-events: none;
 }
 
-
-
 /* Grid de horarios */
 .horarios-grid {
     display: grid;
@@ -954,7 +954,7 @@
     box-shadow: var(--shadow-xl);
 }
 
-/* Card destacada */
+/* Card destacada - OFICINA ADMINISTRATIVA */
 .horario-card-featured {
     border: 2px solid var(--accent-gold);
     background: linear-gradient(135deg, var(--white) 0%, #fffef8 100%);
@@ -984,18 +984,6 @@
     font-size: 0.75rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Header de la card */
 .horario-card-header {
     display: flex;
@@ -1020,8 +1008,6 @@
     box-shadow: var(--shadow-sm);
     transition: transform var(--transition-normal);
 }
-
-
 
 .horario-card-title {
     font-size: 1.25rem;
@@ -1228,12 +1214,6 @@
         font-size: 0.95rem;
     }
 }
-
-
-
-
-
-
 
 
 
