@@ -146,7 +146,7 @@
                                 <i class="fas fa-child"></i>
                                 Educación Prescolar
                             </a>
-                            <a class="dropdown-item" href="#primaria">
+                            <a class="dropdown-item" href="{{ route('basica_primaria') }}">
                                 <i class="fas fa-book"></i>
                                 Educación Básica Primaria
                             </a>

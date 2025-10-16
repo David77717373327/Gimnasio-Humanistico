@@ -50,7 +50,7 @@
                 </div>
                 
                 <h1 class="hero-title">
-                    EDUCACIÓN PREESCOLAR 
+                    PREESCOLAR 
                 </h1>
                 
                 <p class="hero-description">
@@ -270,10 +270,10 @@
 
 
     <!-- Experiencias por Nivel -->
-    <div class="experiencias-nivel-section">
-        <div class="container">
+<div class="experiencias-nivel-section">
+    <div class="container">
 
-            <!-- Header de la sección con logo -->
+        <!-- Header de la sección con logo -->
         <div class="admision-nav-header">
             <div class="header-content-wrapper">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
@@ -291,106 +291,161 @@
             </div>
         </div>
 
-            <div class="niveles-accordion">
-    <!-- Párvulos -->
-    <div class="nivel-accordion-item">
-        <div class="nivel-header-modern">
-            <div class="nivel-info">
-                <h3>Párvulos</h3>
+        <div class="niveles-accordion">
+            <!-- Párvulos -->
+            <div class="nivel-accordion-item">
+                <div class="nivel-header-modern">
+                    <div class="nivel-info">
+                        <div class="nivel-number">01</div>
+                        <h3>Párvulos</h3>
+                    </div>
+
+                    <!-- Logo a la derecha -->
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Párvulos" class="nivel-logo">
+                    <div class="nivel-color-bar parvulos-color"></div>
+                </div>
+                <div class="nivel-body-modern">
+                    <div class="nivel-divider"></div>
+                    <p class="nivel-intro">
+                        Es el primer acercamiento del niño al entorno escolar, donde se promueve el desarrollo sensorial, 
+                        emocional y social mediante experiencias lúdicas y de exploración.
+                    </p>
+                    <div class="nivel-activities-list">
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Adaptación al entorno escolar con acompañamiento afectivo
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Desarrollo de la motricidad gruesa y coordinación
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Exploración sensorial mediante juegos con texturas y sonidos
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Fomento de la comunicación y expresión emocional
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Logo a la derecha -->
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Párvulos" class="nivel-logo">
-            <div class="nivel-color-bar parvulos-color"></div>
-        </div>
-        <div class="nivel-body-modern">
-            <p class="nivel-intro">
-                Es el primer acercamiento del niño al entorno escolar, donde se promueve el desarrollo sensorial, 
-                emocional y social mediante experiencias lúdicas y de exploración.
-            </p>
-            <div class="nivel-activities-list">
-                <div class="activity-point">Adaptación al entorno escolar con acompañamiento afectivo</div>
-                <div class="activity-point">Desarrollo de la motricidad gruesa y coordinación</div>
-                <div class="activity-point">Exploración sensorial mediante juegos con texturas y sonidos</div>
-                <div class="activity-point">Fomento de la comunicación y expresión emocional</div>
+            <!-- Prejardín -->
+            <div class="nivel-accordion-item">
+                <div class="nivel-header-modern">
+                    <div class="nivel-info">
+                        <div class="nivel-number">02</div>
+                        <h3>Prejardín</h3>
+                    </div>
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Prejardín" class="nivel-logo">
+                    <div class="nivel-color-bar prejardin-color"></div>
+                </div>
+                <div class="nivel-body-modern">
+                    <div class="nivel-divider"></div>
+                    <p class="nivel-intro">
+                        En esta etapa los niños fortalecen su autonomía, lenguaje y habilidades sociales a través 
+                        de experiencias significativas de juego, arte y movimiento.
+                    </p>
+                    <div class="nivel-activities-list">
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Desarrollo de hábitos de orden y responsabilidad
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Estimulación del lenguaje y la comunicación oral
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Actividades artísticas y de expresión corporal
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Reconocimiento de colores, formas y objetos del entorno
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Prejardín -->
-    <div class="nivel-accordion-item">
-        <div class="nivel-header-modern">
-            <div class="nivel-info">
-                <h3>Prejardín</h3>
+            <!-- Jardín -->
+            <div class="nivel-accordion-item">
+                <div class="nivel-header-modern">
+                    <div class="nivel-info">
+                        <div class="nivel-number">03</div>
+                        <h3>Jardín</h3>
+                    </div>
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Jardín" class="nivel-logo">
+                    <div class="nivel-color-bar jardin-color"></div>
+                </div>
+                <div class="nivel-body-modern">
+                    <div class="nivel-divider"></div>
+                    <p class="nivel-intro">
+                        En este nivel se promueve la curiosidad, la creatividad y el pensamiento lógico. 
+                        Los niños comienzan a construir aprendizajes previos a la lectura, escritura y matemáticas.
+                    </p>
+                    <div class="nivel-activities-list">
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Iniciación en la lectura a través de cuentos y juegos de palabras
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Conceptos matemáticos: conteo, clasificación y seriación
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Exploración del entorno natural y social
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Actividades que fortalecen la autonomía y el trabajo en grupo
+                        </div>
+                    </div>
+                </div>
             </div>
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Párvulos" class="nivel-logo">
-            <div class="nivel-color-bar prejardin-color"></div>
-        </div>
-        <div class="nivel-body-modern">
-            <p class="nivel-intro">
-                En esta etapa los niños fortalecen su autonomía, lenguaje y habilidades sociales a través 
-                de experiencias significativas de juego, arte y movimiento.
-            </p>
-            <div class="nivel-activities-list">
-                <div class="activity-point">Desarrollo de hábitos de orden y responsabilidad</div>
-                <div class="activity-point">Estimulación del lenguaje y la comunicación oral</div>
-                <div class="activity-point">Actividades artísticas y de expresión corporal</div>
-                <div class="activity-point">Reconocimiento de colores, formas y objetos del entorno</div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Jardín -->
-    <div class="nivel-accordion-item">
-        <div class="nivel-header-modern">
-            <div class="nivel-info">
-                <h3>Jardín</h3>
-            </div>
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Párvulos" class="nivel-logo">
-            <div class="nivel-color-bar jardin-color"></div>
-        </div>
-        <div class="nivel-body-modern">
-            <p class="nivel-intro">
-                En este nivel se promueve la curiosidad, la creatividad y el pensamiento lógico. 
-                Los niños comienzan a construir aprendizajes previos a la lectura, escritura y matemáticas.
-            </p>
-            <div class="nivel-activities-list">
-                <div class="activity-point">Iniciación en la lectura a través de cuentos y juegos de palabras</div>
-                <div class="activity-point">Conceptos matemáticos: conteo, clasificación y seriación</div>
-                <div class="activity-point">Exploración del entorno natural y social</div>
-                <div class="activity-point">Actividades que fortalecen la autonomía y el trabajo en grupo</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Transición -->
-    <div class="nivel-accordion-item featured-nivel">
-        <div class="nivel-header-modern">
-            <div class="nivel-info">
-                <h3>Transición</h3>
-            </div>
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Párvulos" class="nivel-logo">
-            <div class="nivel-color-bar transicion-color"></div>
-        </div>
-        <div class="nivel-body-modern">
-            <p class="nivel-intro">
-                Es la etapa final del preescolar. Los niños consolidan su autonomía, fortalecen 
-                habilidades académicas básicas y se preparan para ingresar a la educación primaria.
-            </p>
-            <div class="nivel-activities-list">
-                <div class="activity-point">Lectura y escritura inicial de palabras y oraciones simples</div>
-                <div class="activity-point">Comprensión de nociones matemáticas básicas</div>
-                <div class="activity-point">Desarrollo del pensamiento lógico y la resolución de problemas</div>
-                <div class="activity-point">Participación en proyectos integrados de aprendizaje</div>
+            <!-- Transición -->
+            <div class="nivel-accordion-item featured-nivel">
+                <div class="nivel-header-modern">
+                    <div class="nivel-info">
+                        <div class="nivel-number">04</div>
+                        <h3>Transición</h3>
+                    </div>
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Transición" class="nivel-logo">
+                    <div class="nivel-color-bar transicion-color"></div>
+                </div>
+                <div class="nivel-body-modern">
+                    <div class="nivel-divider"></div>
+                    <p class="nivel-intro">
+                        Es la etapa final del preescolar. Los niños consolidan su autonomía, fortalecen 
+                        habilidades académicas básicas y se preparan para ingresar a la educación primaria.
+                    </p>
+                    <div class="nivel-activities-list">
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Lectura y escritura inicial de palabras y oraciones simples
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Comprensión de nociones matemáticas básicas
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Desarrollo del pensamiento lógico y la resolución de problemas
+                        </div>
+                        <div class="activity-point">
+                            <span class="activity-bullet"></span>
+                            Participación en proyectos integrados de aprendizaje
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-
-</section>
-
-     <!-- Incluir el footer -->
+    <!-- Incluir el footer -->
 @include('layouts.footer')
 
 <!-- Scripts -->

@@ -55,4 +55,10 @@ class RutasController extends Controller
     {
         return view('niveles.prescolar');
     }
+
+    public function mostrarcontenidobasicaprimaria()
+    {
+        return view('niveles.basica_primaria');
+    }
+
 }

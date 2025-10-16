@@ -43,6 +43,8 @@ Route::get('/filosofia-institucional', [RutasController::class, 'mostrarcontenid
 //Tutas para mostrar contenido de niveles educativos
 Route::get('/Prescolar', [RutasController::class, 'mostrarcontenidoprecolar'])->name('prescolar');
 
+Route::get('/BasicaPrimaria', [RutasController::class, 'mostrarcontenidobasicaprimaria'])->name('basica_primaria');
+
 
 
 //Rutas de admnisones

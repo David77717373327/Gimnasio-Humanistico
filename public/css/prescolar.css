@@ -77,7 +77,7 @@
 ============================================ */
 
 .hero-preescolar {
-    background: linear-gradient(180deg, #ffffff 0%, #fffbf0 50%, #f0fdf4 100%);
+    background: linear-gradient(135deg, #d8ede0 0%, #f2f2f2 50%, #f0ead6 100%);
     padding: 120px 0 100px;
     position: relative;
     overflow: hidden;
@@ -179,6 +179,8 @@
 .hero-text-section {
     position: relative;
     z-index: 2;
+    margin-top: 0%;
+    padding-top: 0%;
 }
 
 /* Tag superior - Más profesional */
@@ -198,9 +200,9 @@
 
 /* Título - Un solo color, jerarquía clara */
 .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 45px;
-    font-weight: 900;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+    font-size: 50px;
+    font-weight: 600;
     color: #0d3f27;
     line-height: 1.2;
     margin-bottom: 28px;
@@ -540,10 +542,10 @@
 
 
 
+/* ============================================
+   HEADER SECTION PREESCOLAR - DISEÑO PROFESIONAL
+============================================ */
 
-
-
-/* Header Section */
 .admision-nav-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -608,7 +610,7 @@
 
 
 .admision-nav-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 700;
     color: var(--primary-green, #0d3f27);
@@ -737,9 +739,10 @@
 }
 
 .section-title {
-    font-size: 1.875rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
     font-weight: 700;
-    color: #1F2937;
+    color: var(--primary-green);
     line-height: 1.2;
     margin: 0;
 }
@@ -838,8 +841,8 @@
 }
 
 .aula-nivel {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.875rem;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+    font-size: 1.375rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -909,16 +912,16 @@
 }
 
 .aula-info h4 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
     font-size: 1.9rem;
     font-weight: 700;
-    color: #1F2937;
+    color: var(--primary-green);
     margin: 0 0 0.5rem 0;
 }
 
 .aula-info p {
     font-size: 0.98rem;
-    color: #1F2937;
+    color: black;
     line-height: 1.5;
     margin: 0;
 }
@@ -1126,15 +1129,16 @@
 }
 
 .metodologia-text h4 {
-    font-size: 1.125rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.425rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--primary-green);
     margin-bottom: 0.5rem;
 }
 
 .metodologia-text p {
     font-size: 0.9375rem;
-    color: var(--text-light);
+    color: black;
     line-height: 1.6;
     margin: 0;
 }
@@ -1151,14 +1155,6 @@
     height: 100%;
     object-fit: cover;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -1191,15 +1187,14 @@
 }
 
 .nivel-logo {
-    width: 50px;           /* tamaño del logo */
-    height: 50px;          /* ajusta según el diseño */
-    object-fit: contain;   /* mantiene proporciones */
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
     position: absolute;
-    right: 15px;           /* lo coloca en la esquina derecha */
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
 }
-
 
 .nivel-accordion-item:hover {
     box-shadow: var(--shadow-md);
@@ -1212,11 +1207,37 @@
     gap: 24px;
     cursor: pointer;
     position: relative;
-    border-bottom: solid 1px rgba(30, 58, 95, 0.1);
+    border-bottom: solid 1px rgba(30, 58, 95, 0.1);   
 }
 
+/* NUMERACIÓN EDITORIAL PROFESIONAL - DORADO */
+.nivel-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nivel-number {
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+    font-size: 2.5rem;
+    font-weight: 400;
+    background: var(--dark-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 60px;
+    transition: all 0.3s ease;
+    letter-spacing: -0.02em;
+    opacity: 0.85;
+    position: relative;
+}
+
+
+
 .nivel-info h3 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
     font-size: 1.85rem;
     font-weight: 700;
     color: var(--primary-green);
@@ -1252,11 +1273,22 @@
     border-top: 1px solid rgba(30, 58, 95, 0.05);
 }
 
+/* Divisor decorativo con acento dorado */
+.nivel-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--primary-green);
+    margin: 24px 0 0 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(212, 175, 55, 0.2);
+}
+
+/* Espaciado ajustado */
 .nivel-intro {
     font-size: 1.0625rem;
     color: var(--text-dark);
     line-height: 1.8;
-    margin: 24px 0 28px;
+    margin: 32px 0 28px;
 }
 
 .nivel-activities-list {
@@ -1265,8 +1297,9 @@
     gap: 16px;
 }
 
+/* Bullets minimalistas profesionales */
 .activity-point {
-    padding: 16px 20px;
+    padding: 16px 20px 16px 16px;
     background: rgba(30, 58, 95, 0.03);
     border-left: 3px solid var(--accent-blue);
     font-size: 0.9375rem;
@@ -1274,11 +1307,31 @@
     line-height: 1.6;
     border-radius: 4px;
     transition: all 0.2s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.activity-bullet {
+    width: 4px;
+    height: 4px;
+    background: var(--primary-green);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 9px;
+    opacity: 0.6;
+    transition: all 0.2s ease;
 }
 
 .activity-point:hover {
     background: rgba(30, 58, 95, 0.06);
     transform: translateX(4px);
+}
+
+.activity-point:hover .activity-bullet {
+    opacity: 1;
+    transform: scale(1.6);
+    box-shadow: 0 0 8px rgba(30, 58, 95, 0.3);
 }
 
 /* ============================================
@@ -1341,6 +1394,24 @@
     
     .nivel-activities-list {
         grid-template-columns: 1fr;
+    }
+    
+    .nivel-number {
+        font-size: 2rem;
+        min-width: 50px;
+    }
+    
+    .nivel-info {
+        gap: 16px;
+    }
+    
+    .nivel-divider {
+        width: 50px;
+        margin: 20px 0 0 0;
+    }
+    
+    .nivel-intro {
+        margin: 28px 0 24px;
     }
 }
 
