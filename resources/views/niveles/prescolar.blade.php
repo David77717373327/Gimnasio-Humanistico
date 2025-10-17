@@ -96,91 +96,87 @@
 <!-- Sección Principal de Contenido Preescolar -->
 <section class="preescolar-content">
     
-    
 
     <!-- Metodología Activa - Rediseño -->
     <div class="metodologia-section">
         <div class="container">
 
             <!-- Header de la sección con logo -->
-        <div class="admision-nav-header">
-            <div class="header-content-wrapper">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
-                <div class="header-text-content">
-                    <div class="header-label">
-                        <span class="label-icon">✦</span>
-                        <span class="label-text">Comunicate con nosotros</span>
-                    </div>
-                    <h2 class="admision-nav-title">Metodología Activa</h2>
-                    <p class="admision-nav-subtitle">Estamos disponibles para atenderte en los siguientes horarios.
-                    </p>
-                </div>
+<div class="admision-nav-header">
+    <div class="header-content-wrapper">
+        <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
+        <div class="header-text-content">
+            <div class="header-label">
+                <span class="label-icon">✦</span>
+                <span class="label-text">Comunícate con nosotros</span>
             </div>
+            <h2 class="admision-nav-title">Propósitos Educación Inicial</h2>
+            <p class="admision-nav-subtitle">
+                Nuestro enfoque pedagógico se basa en los propósitos establecidos por el Ministerio de Educación Nacional de Colombia.
+            </p>
         </div>
+    </div>
+</div>
 
+<div class="row align-items-center g-5">
+    <div class="col-lg-6 order-lg-1 order-2">
+        <div class="metodologia-image">
+            <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Educación Inicial">
+        </div>
+    </div>
+    <div class="col-lg-6 order-lg-2 order-1">
+        <div class="metodologia-content">    
+            <h2 class="section-title">Educamos desde los 3 Propósitos Fundamentales</h2>
+            <p class="section-description">
+                La educación inicial busca que los niños se reconozcan como sujetos activos de su aprendizaje, 
+                desarrollando sus capacidades mediante experiencias de exploración, comunicación, juego y convivencia.
+            </p>
+            
+            <div class="metodologia-list">
 
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 order-lg-1 order-2">
-                    <div class="metodologia-image">
-                        <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aprender jugando">
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-2 order-1">
-                    <div class="metodologia-content">    
-                        <h2 class="section-title">Aprender Jugando es Nuestra Filosofía</h2>
-                        <p class="section-description">
-                            El juego es nuestra principal herramienta pedagógica, donde cada actividad 
-                            está diseñada para que los niños exploren, experimenten y construyan conocimientos.
+                <!-- Propósito 1 -->
+                <div class="metodologia-item">
+                    <div class="metodologia-number">01</div>
+                    
+                    <div class="metodologia-text">
+                        <h4>Construir su identidad en relación con los otros</h4>
+                        <p>
+                            Promovemos que los niños se reconozcan como personas únicas, capaces de convivir, compartir y construir vínculos afectivos 
+                            con su familia, sus compañeros y su entorno.
                         </p>
-                        
-                        <div class="metodologia-list">
-                            <div class="metodologia-item">
-                                <div class="metodologia-icon">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 2L2 7L12 12L22 7L12 2Z"></path>
-                                        <path d="M2 17L12 22L22 17"></path>
-                                        <path d="M2 12L12 17L22 12"></path>
-                                    </svg>
-                                </div>
-                                <div class="metodologia-text">
-                                    <h4>Arte y Creatividad</h4>
-                                    <p>Expresión artística mediante pintura, modelado y técnicas plásticas que desarrollan la motricidad fina y la imaginación.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="metodologia-item">
-                                <div class="metodologia-icon">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 18V5L16 7V20"></path>
-                                        <circle cx="6" cy="18" r="3"></circle>
-                                        <circle cx="18" cy="20" r="3"></circle>
-                                    </svg>
-                                </div>
-                                <div class="metodologia-text">
-                                    <h4>Música y Movimiento</h4>
-                                    <p>Estimulación sensorial, desarrollo del ritmo y coordinación a través de actividades musicales y expresión corporal.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="metodologia-item">
-                                <div class="metodologia-icon">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <path d="M12 16V12"></path>
-                                        <path d="M12 8H12.01"></path>
-                                    </svg>
-                                </div>
-                                <div class="metodologia-text">
-                                    <h4>Exploración Científica</h4>
-                                    <p>Juegos didácticos y experimentos que promueven la curiosidad, el descubrimiento y el pensamiento lógico.</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
+
+                <!-- Propósito 2 -->
+                <div class="metodologia-item">
+                    <div class="metodologia-number">02</div>
+                    
+                    <div class="metodologia-text">
+                        <h4>Ser comunicadores activos de sus ideas, sentimientos y emociones</h4>
+                        <p>
+                            Fomentamos diversas formas de expresión —oral, corporal, artística y simbólica— 
+                            que les permitan comunicar su manera de ver y sentir el mundo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Propósito 3 -->
+                <div class="metodologia-item">
+                    <div class="metodologia-number">03</div>
+                    
+                    <div class="metodologia-text">
+                        <h4>Disfrutar aprender explorando y relacionándose con el mundo</h4>
+                        <p>
+                            A través del juego, la curiosidad y la exploración del entorno, 
+                            los niños descubren, experimentan y construyen conocimiento de forma significativa y placentera.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+</div>
 
 
 
@@ -269,27 +265,34 @@
 </div>
 
 
-    <!-- Experiencias por Nivel -->
+    <!-- Propósito por Nivel -->
 <div class="experiencias-nivel-section">
     <div class="container">
 
         <!-- Header de la sección con logo -->
-        <div class="admision-nav-header">
-            <div class="header-content-wrapper">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
-                <div class="header-text-content">
-                    <div class="header-label">
-                        <span class="label-icon">✦</span>
-                        <span class="label-text">Programa Académico</span>
-                    </div>
-                    <h2 class="admision-nav-title">Aprendizaje por Nivel</h2>
-                    <p class="admision-nav-subtitle">Cada nivel desarrolla un programa específico que responde
-                         a las características propias,
-                         de cada edad, garantizando un proceso educativo coherente, progresivo y significativo.                                                        
-                    </p>
+<div class="admision-nav-header">
+    <div class="header-content-wrapper">
+        <!-- Logo -->
+        <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
+        
+        <!-- Contenido central -->
+        <div class="header-text-content">
+            <div class="header-top-row">
+                <div class="header-label">
+                    <span class="label-icon">✦</span>
+                    <span class="label-text">Programa Académico</span>
                 </div>
             </div>
+            
+            <h2 class="admision-nav-title">Propósito y experiencias </h2>
+            
+            <p class="admision-nav-subtitle">
+                Los propósitos de la educación inicial, orientados por el Ministerio de Educación Nacional,
+                promueven el desarrollo integral de los niños según su edad y nivel educativo.
+            </p>
         </div>
+    </div>
+</div>
 
         <div class="niveles-accordion">
             <!-- Párvulos -->
@@ -299,33 +302,27 @@
                         <div class="nivel-number">01</div>
                         <h3>Párvulos</h3>
                     </div>
-
-                    <!-- Logo a la derecha -->
                     <img src="{{ asset('images/logo.png') }}" alt="Logo Párvulos" class="nivel-logo">
                     <div class="nivel-color-bar parvulos-color"></div>
                 </div>
                 <div class="nivel-body-modern">
                     <div class="nivel-divider"></div>
                     <p class="nivel-intro">
-                        Es el primer acercamiento del niño al entorno escolar, donde se promueve el desarrollo sensorial, 
-                        emocional y social mediante experiencias lúdicas y de exploración.
+                        Los propósitos del nivel Párvulos se enfocan en el reconocimiento del cuerpo, las emociones y la interacción social**, 
+                        fortaleciendo la confianza y el vínculo con el entorno a través del juego y la exploración sensorial.
                     </p>
                     <div class="nivel-activities-list">
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Adaptación al entorno escolar con acompañamiento afectivo
+                            Reconocimiento de sí mismo, sus emociones y las de los demás.
                         </div>
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Desarrollo de la motricidad gruesa y coordinación
+                            Desarrollo de la motricidad gruesa mediante juegos de movimiento y equilibrio.
                         </div>
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Exploración sensorial mediante juegos con texturas y sonidos
-                        </div>
-                        <div class="activity-point">
-                            <span class="activity-bullet"></span>
-                            Fomento de la comunicación y expresión emocional
+                            Exploración sensorial del entorno a través de sonidos, texturas y colores.
                         </div>
                     </div>
                 </div>
@@ -344,25 +341,21 @@
                 <div class="nivel-body-modern">
                     <div class="nivel-divider"></div>
                     <p class="nivel-intro">
-                        En esta etapa los niños fortalecen su autonomía, lenguaje y habilidades sociales a través 
-                        de experiencias significativas de juego, arte y movimiento.
+                        En Prejardín los propósitos se orientan al fortalecimiento de la autonomía, el lenguaje y la expresión artística**, 
+                        promoviendo la comunicación y la participación activa dentro del grupo.
                     </p>
                     <div class="nivel-activities-list">
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Desarrollo de hábitos de orden y responsabilidad
+                            Fomento de la autonomía y hábitos de convivencia y responsabilidad.
                         </div>
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Estimulación del lenguaje y la comunicación oral
+                            Expresión oral y corporal a través de juegos, canto y dramatizaciones.
                         </div>
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Actividades artísticas y de expresión corporal
-                        </div>
-                        <div class="activity-point">
-                            <span class="activity-bullet"></span>
-                            Reconocimiento de colores, formas y objetos del entorno
+                            Reconocimiento de su entorno natural y social mediante actividades exploratorias.
                         </div>
                     </div>
                 </div>
@@ -381,25 +374,21 @@
                 <div class="nivel-body-modern">
                     <div class="nivel-divider"></div>
                     <p class="nivel-intro">
-                        En este nivel se promueve la curiosidad, la creatividad y el pensamiento lógico. 
-                        Los niños comienzan a construir aprendizajes previos a la lectura, escritura y matemáticas.
+                        En el grado Jardín se fortalecen los procesos de pensamiento lógico, la creatividad y la expresión comunicativa**, 
+                        integrando el arte, la literatura y las experiencias científicas iniciales.
                     </p>
                     <div class="nivel-activities-list">
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Iniciación en la lectura a través de cuentos y juegos de palabras
+                            Desarrollo de habilidades comunicativas mediante cuentos, relatos y diálogos.
                         </div>
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Conceptos matemáticos: conteo, clasificación y seriación
+                            Iniciación en el pensamiento lógico a través de juegos de clasificación y seriación.
                         </div>
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Exploración del entorno natural y social
-                        </div>
-                        <div class="activity-point">
-                            <span class="activity-bullet"></span>
-                            Actividades que fortalecen la autonomía y el trabajo en grupo
+                            Creación artística libre que fomente la imaginación y la autoexpresión.
                         </div>
                     </div>
                 </div>
@@ -418,25 +407,21 @@
                 <div class="nivel-body-modern">
                     <div class="nivel-divider"></div>
                     <p class="nivel-intro">
-                        Es la etapa final del preescolar. Los niños consolidan su autonomía, fortalecen 
-                        habilidades académicas básicas y se preparan para ingresar a la educación primaria.
+                        En Transición, los propósitos se centran en la consolidación de la autonomía, el pensamiento lógico y la comunicación, 
+                        preparando al niño para asumir con éxito los retos de la educación básica primaria.
                     </p>
                     <div class="nivel-activities-list">
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Lectura y escritura inicial de palabras y oraciones simples
+                            Comprensión y uso del lenguaje escrito mediante juegos de palabras y lecturas iniciales.
                         </div>
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Comprensión de nociones matemáticas básicas
+                            Desarrollo del pensamiento lógico-matemático a través de situaciones cotidianas.
                         </div>
                         <div class="activity-point">
                             <span class="activity-bullet"></span>
-                            Desarrollo del pensamiento lógico y la resolución de problemas
-                        </div>
-                        <div class="activity-point">
-                            <span class="activity-bullet"></span>
-                            Participación en proyectos integrados de aprendizaje
+                            Participación en proyectos de grupo que fomenten la responsabilidad y el trabajo cooperativo.
                         </div>
                     </div>
                 </div>
@@ -444,6 +429,7 @@
         </div>
     </div>
 </div>
+</section>
 
     <!-- Incluir el footer -->
 @include('layouts.footer')

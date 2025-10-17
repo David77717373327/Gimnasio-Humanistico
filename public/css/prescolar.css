@@ -542,16 +542,25 @@
 
 
 
+
+
+
+
+
+
 /* ============================================
-   HEADER SECTION PREESCOLAR - DISEÑO PROFESIONAL
+   HEADER SECTION PREESCOLAR - DISEÑO EMPRESARIAL REFINADO
 ============================================ */
 
 .admision-nav-header {
     text-align: center;
+    
     margin-bottom: 2rem;
     position: relative;
     z-index: 2;
     animation: fadeInDown 0.6s ease-out;
+    padding: 2rem 0 1.5rem;
+    background: linear-gradient(180deg, rgba(244, 185, 66, 0.02) 0%, transparent 100%);
 }
 
 @keyframes fadeInDown {
@@ -565,110 +574,227 @@
     }
 }
 
-.header-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 1rem;
-    background: linear-gradient(135deg, rgba(244, 185, 66, 0.12) 0%, rgba(244, 185, 66, 0.08) 100%);
-    border-radius: 50px;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(244, 185, 66, 0.25);
-    box-shadow: 0 2px 8px rgba(244, 185, 66, 0.1);
-}
-
-.label-icon {
-    color: #f4b942;
-    font-size: 0.85rem;
-    animation: pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.75; transform: scale(1.08); }
-}
-
-.label-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--primary-green, #0d3f27);
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-}
-
-
-.admision-nav-subtitle {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.09rem;
-    color: var(--text-darkk);
-    font-weight: 400;
-    line-height: 1.8;
-    max-width: 620px;
-    margin: 0 auto;
-}
-
-
-.admision-nav-title {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 700;
-    color: var(--primary-green, #0d3f27);
-    margin-bottom: 0.8rem;
-    letter-spacing: -0.5px;
-    line-height: 1.2;
-}
-
-
-/* Wrapper para logo y contenido */
+/* Wrapper principal - Centrado vertical perfecto */
 .header-content-wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    gap: 2rem;
-    max-width: 900px;
-    margin-left: 70px;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* Logo del colegio */
+/* Logo del colegio - Posicionamiento elegante */
 .header-logo {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
     object-fit: contain;
     flex-shrink: 0;
-    margin-top: 20px;
-    margin-right: 90px;
+    filter: drop-shadow(0 4px 12px rgba(13, 63, 39, 0.12));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Contenedor del texto */
+.header-logo:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 6px 16px rgba(13, 63, 39, 0.18));
+}
+
+/* Contenedor del texto - Centrado profesional */
 .header-text-content {
     flex: 1;
     text-align: center;
     min-width: 0;
+    max-width: 750px;
 }
 
-/* Responsive: en pantallas pequeñas, ocultar logo o ajustar layout */
-@media (max-width: 768px) {
+/* Fila superior con badge */
+.header-top-row {
+    margin-bottom: 1rem;
+}
+
+/* Badge empresarial refinado */
+.header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.1rem;
+    background: linear-gradient(135deg, 
+        rgba(244, 185, 66, 0.08) 0%, 
+        rgba(244, 185, 66, 0.12) 50%,
+        rgba(244, 185, 66, 0.08) 100%);
+    border-radius: 50px;
+    border: 1.5px solid rgba(244, 185, 66, 0.3);
+    box-shadow: 
+        0 2px 8px rgba(244, 185, 66, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.header-label:hover {
+    transform: translateY(-1px);
+    box-shadow: 
+        0 4px 12px rgba(244, 185, 66, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.label-icon {
+    color: #f4b942;
+    font-size: 0.8rem;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.1); 
+    }
+}
+
+.label-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-green, #0d3f27);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Título principal - Elegancia serif */
+.admision-nav-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1rem, 1vw, 1.6rem);
+    font-weight: 700;
+    color: var(--primary-green, #0d3f27);
+    margin-bottom: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+    text-shadow: 0 1px 2px rgba(13, 63, 39, 0.05);
+}
+
+/* Descripción profesional */
+.admision-nav-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #4a5568;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.92;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN EMPRESARIAL
+============================================ */
+
+/* Tablets landscape */
+@media (max-width: 1024px) {
     .header-content-wrapper {
-        gap: 1rem;
+        gap: 2.5rem;
     }
     
     .header-logo {
-        width: 60px;
-        height: 60px;
+        width: 85px;
+        height: 85px;
     }
 }
 
-@media (max-width: 576px) {
+/* Tablets portrait */
+@media (max-width: 768px) {
+    .admision-nav-header {
+        padding: 1.5rem 0 1rem;
+        margin-bottom: 2.5rem;
+    }
+    
     .header-content-wrapper {
         flex-direction: column;
-        align-items: center;
+        gap: 1.5rem;
+        padding: 0 1.5rem;
     }
     
     .header-logo {
+        width: 80px;
+        height: 80px;
         margin-bottom: 0.5rem;
     }
+    
+    .header-text-content {
+        max-width: 100%;
+    }
+    
+    .admision-nav-title {
+        font-size: clamp(1.75rem, 4vw, 2.2rem);
+        margin-bottom: 0.8rem;
+    }
+    
+    .admision-nav-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
 }
+
+/* Móviles */
+@media (max-width: 576px) {
+    .admision-nav-header {
+        padding: 1.2rem 0 0.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .header-content-wrapper {
+        gap: 1.2rem;
+        padding: 0 1rem;
+    }
+    
+    .header-logo {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .header-label {
+        padding: 0.4rem 1rem;
+    }
+    
+    .label-text {
+        font-size: 0.7rem;
+        letter-spacing: 1.2px;
+    }
+    
+    .label-icon {
+        font-size: 0.75rem;
+    }
+    
+    .admision-nav-title {
+        font-size: 1.65rem;
+        margin-bottom: 0.7rem;
+        line-height: 1.3;
+    }
+    
+    .admision-nav-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 400px) {
+    .header-logo {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .admision-nav-title {
+        font-size: 1.5rem;
+    }
+    
+    .admision-nav-subtitle {
+        font-size: 0.88rem;
+    }
+}
+
 
 
 
@@ -686,7 +812,7 @@
 ============================================ */
 
 .horarios-aulas-section {
-    padding: 3.5rem 0 2.5rem;
+    padding: 0.45rem 0 0.45rem;
     background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);
 }
 
@@ -717,7 +843,7 @@
     font-weight: 500;
     border: 1px solid var(--medium-gray);
     margin-left: auto;
-    margin-left: 77%;
+    margin-left: 75%;
     margin-top: 0%;
     margin-bottom: 30px;
 }
@@ -1077,25 +1203,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ============================================
    METODOLOGÍA ACTIVA
 ============================================ */
 .metodologia-section {
-    padding: 2rem 0;
+    padding: 0.45rem 0;
     background: var(--light-gray);
 }
 
@@ -1116,17 +1228,44 @@
     align-items: flex-start;
 }
 
-.metodologia-icon {
-    flex-shrink: 0;
-    width: 56px;
-    height: 56px;
+.metodologia-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.8rem;
+    gap: 1rem;
+}
+
+.metodologia-number {
+    background-color: #0d6336; /* tono verde institucional */
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--white);
-    border-radius: var(--border-radius-md);
-    color: var(--accent-gold);
+    font-size: 1rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
+.metodologia-icon {
+    color: #0d6336;
+    flex-shrink: 0;
+}
+
+.metodologia-text h4 {
+    margin: 0 0 0.3rem 0;
+    color: #0d6336;
+    font-weight: 600;
+}
+
+
+
+
+
+
 
 .metodologia-text h4 {
     font-family: 'Times New Roman', Times, serif;
@@ -1166,7 +1305,7 @@
    EXPERIENCIAS POR NIVEL - Accordion Moderno
 ============================================ */
 .experiencias-nivel-section {
-    padding: 20px 0;
+    padding: 10px 0;
     background: var(--white);
 }
 

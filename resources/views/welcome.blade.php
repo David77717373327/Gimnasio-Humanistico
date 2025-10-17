@@ -43,18 +43,21 @@
                     <div class="col-lg-6">
                         <!-- Contenido principal del hero -->
                         <div class="hero-text-content">
-                            <span class="hero-badge">25 años de excelencia educativa</span>
+                            
                             <h1 class="hero-title">
-                                Formando
-                                <span class="highlight">Líderes</span>
-                                del Mañana
-                            </h1>
+                                Nos educamos en el trabajo humanizante para un nuevo país
+                            </h1><br><br><br><br><br><br><br><br><br><br>
                             <p class="hero-subtitle">
-                                Educación integral con valores cristianos, tecnología de vanguardia y metodologías
-                                innovadoras que preparan a nuestros estudiantes para un futuro exitoso.
+                                En nuestras aulas se fortalece el vuelo de la creatividad, la imaginacion, el humanismo y el conocimiento.<br>
+                                 ¡Ven y alza el veulo con nosotros; el futuro nos inspira!  
                             </p>
 
-                            <!-- Botones de acción modernos -->
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Botones de acción modernos -->
                             <div class="hero-actions">
                                 <a href="#admision" class="btn-primary-modern">
                                     <i class="fas fa-rocket"></i>
@@ -65,9 +68,6 @@
                                     Tour Virtual
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -103,7 +103,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="welcome-content" data-aos="fade-right">
                         <div class="welcome-intro">
-                            <h2 class="intro-subtitle">Formación Integral con Excelencia</h2>
+                            <h2 class="intro-subtitle">Educación con Excelencia</h2>
                             <p class="intro-description">
                                 En el Colegio Gimnasio Humanístico del Alto Magdalena, nos comprometemos con el
                                 desarrollo pleno de nuestros estudiantes a través de una educación de calidad que
@@ -391,7 +391,7 @@
                         </div>
                         <div class="card-content">
 
-                            <h3 class="level-title">Educación Preescolar</h3>
+                            <h3 class="level-title">Educación Inicial - Preescolar</h3>
                             <p class="level-description">
                                 Desarrollamos las habilidades fundamentales a través del juego,
                                 la exploración y actividades que estimulan la creatividad y el pensamiento crítico.

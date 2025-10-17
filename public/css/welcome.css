@@ -308,7 +308,7 @@ h6 {
 .hero-badge {
     display: inline-block;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-    color: var(--accent-gold);
+    color: var(--primary-green);
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -343,6 +343,7 @@ h6 {
 .hero-title {
     font-size: clamp(2.8rem, 5.5vw, 4.5rem);
     font-weight: 900;
+    
     margin-bottom: 2rem;
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -512,18 +513,18 @@ h6 {
 }
 
 .hero-title {
-    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-    font-weight: 700;
+    font-size: clamp(3.2rem, 2.1vw, 2.5rem);
+    font-weight: 2000;
     margin-bottom: 1.5rem;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-title .highlight {
-    color: #f39c12;
+    color: var(--primary-green);
     background: none;
     -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
