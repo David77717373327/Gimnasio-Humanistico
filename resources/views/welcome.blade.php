@@ -46,7 +46,7 @@
                             
                             <h1 class="hero-title">
                                 Nos educamos en el trabajo humanizante para un nuevo país
-                            </h1><br><br><br><br><br><br><br><br><br><br>
+                            </h1>
                             <p class="hero-subtitle">
                                 En nuestras aulas se fortalece el vuelo de la creatividad, la imaginacion, el humanismo y el conocimiento.<br>
                                  ¡Ven y alza el veulo con nosotros; el futuro nos inspira!  
