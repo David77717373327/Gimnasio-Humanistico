@@ -312,7 +312,7 @@
 ============================================ */
 
 .componente-filosofico-section {
-    padding: 120px 0;
+    margin-top: 100px;
     background: linear-gradient(135deg, #f8fafb 0%, #ffffff 50%, #f8fafb 100%);
     position: relative;
     overflow: hidden;
@@ -345,24 +345,20 @@
 /* ============================================
    CONTENIDO PRINCIPAL - HOVER MINIMALISTA
 ============================================ */
+
 .filosofia-content {
     position: relative;
 }
 
 .content-card {
-    background: var(--white);
-    border-radius: var(--border-radius-xl);
-    box-shadow: var(--shadow-xl);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
     padding: 60px;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: none;
     transition: all var(--transition-normal);
-}
-
-.content-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.12);
 }
 
 .card-decoration {
@@ -371,8 +367,8 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-green), var(--accent-gold), var(--primary-green));
-    border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+    background: var(--primary-green);
+    border-radius: 0;
 }
 
 /* Declaración de Apertura */
@@ -412,11 +408,12 @@
     align-items: flex-start;
     gap: 24px;
     padding: 35px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
-    border-radius: var(--border-radius-lg);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: transparent;
+    border-radius: 0;
+    border: none;
     position: relative;
     overflow: hidden;
+    box-shadow: none;
 }
 
 /* Línea minimalista desde la izquierda */
@@ -428,7 +425,6 @@
     width: 0;
     height: 100%;
     background: linear-gradient(180deg, var(--primary-green) 0%, var(--accent-gold) 50%, var(--primary-blue) 100%);
-    
     z-index: 1;
 }
 
@@ -446,21 +442,6 @@
         var(--primary-blue) 70%, 
         var(--primary-green) 100%
     );
-
-}
-
-.philosophy-block:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-    background: linear-gradient(135deg, #ffffff 0%, rgba(30, 58, 95, 0.02) 100%);
-}
-
-.philosophy-block:hover::before {
-    width: 3px;
-}
-
-.philosophy-block:hover::after {
-    height: 2px;
 }
 
 /* ============================================
@@ -470,33 +451,20 @@
     flex-shrink: 0;
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-bottom));
+    background: var(--primary-green);
     color: var(--white);
-    border-radius: var(--border-radius-md);
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    transition: all var(--transition-normal);
     position: relative;
     z-index: 2;
-    box-shadow: var(--shadow-md);
+    box-shadow: none;
 }
 
 .block-icon i {
-    transition: transform var(--transition-fast);
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-/* Hover sutil en el ícono */
-.philosophy-block:hover .block-icon {
-    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
-    transform: scale(1.02);
-    box-shadow: var(--shadow-lg);
-}
-
-.philosophy-block:hover .block-icon i {
-    transform: scale(1.05);
 }
 
 /* ============================================
@@ -514,41 +482,21 @@
     font-weight: 700;
     color: var(--primary-green);
     margin-bottom: 12px;
-    transition: color var(--transition-normal);
     position: relative;
 }
 
-/* Subrayado elegante en el título */
 .block-content h4::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-gold), var(--primary-blue));
-    transition: width 0.3s ease-out 0.1s;
-}
-
-.philosophy-block:hover .block-content h4 {
-    color: var(--primary-blue);
-}
-
-.philosophy-block:hover .block-content h4::after {
-    width: 60px;
+    display: none;
 }
 
 .block-content p {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-    color: var(--text-light);
+    color: black;
     line-height: 1.7;
     margin-bottom: 0;
-    transition: color var(--transition-fast);
-}
-
-.philosophy-block:hover .block-content p {
-    color: var(--text-dark);
+    text-align: justify;
+    hyphens: auto;
 }
 
 /* ============================================
@@ -612,6 +560,10 @@
     .block-icon {
         align-self: center;
         margin-bottom: 15px;
+    }
+    
+    .block-content p {
+        text-align: center;
     }
 }
 

@@ -26,51 +26,58 @@
 
 <body>
     <!-- Hero Section Completamente Rediseñado -->
-    <section class="hero-banner" id="inicio">
-        <!-- Fondo con gradiente mejorado -->
-        <div class="hero-background">
-            <!-- Imagen de fondo más inspiradora -->
-            <div class="hero-image-container">
-                <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Estudiantes exitosos del Colegio"
-                    class="hero-bg-image">
-            </div>
-            <div class="hero-overlay"></div>
+    <!-- Hero Section Profesional - Estilo Los Andes -->
+<section class="hero-banner" id="inicio">
+    <!-- Fondo con imagen y degradados sutiles -->
+    <div class="hero-background">
+        <div class="hero-image-container">
+            <img src="{{ asset('images/iniciooo2.jpeg') }}" 
+                 alt="Estudiantes exitosos del Colegio"
+                 class="hero-bg-image">
         </div>
+        <!-- Degradado 20% arriba y 20% abajo -->
+        <div class="hero-gradient-overlay"></div>
+    </div>
 
-        <div class="hero-content">
-            <div class="container">
-                <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-6">
-                        <!-- Contenido principal del hero -->
-                        <div class="hero-text-content">
-                            
-                            <h1 class="hero-title">
-                                Nos educamos en el trabajo humanizante para un nuevo país
-                            </h1>
+    <div class="hero-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-10 col-xl-9">
+                    <!-- Título -->
+                    <div class="hero-title-section">
+                        <h1 class="hero-title">
+                            Nos educamos en el trabajo humanizante para un nuevo país
+                        </h1>
+                    </div>
+
+                    <!-- Subtítulo y botones en columna vertical -->
+                    <div class="hero-bottom-section">
+                        <!-- Subtítulo -->
+                        <div class="hero-subtitle-wrapper">
                             <p class="hero-subtitle">
-                                En nuestras aulas se fortalece el vuelo de la creatividad, la imaginacion, el humanismo y el conocimiento.<br>
-                                 ¡Ven y alza el veulo con nosotros; el futuro nos inspira!  
+                                En nuestras aulas se fortalece el vuelo de la creatividad, la imaginación, 
+                                el humanismo y el conocimiento.<br>
+                                ¡Ven y alza el vuelo con nosotros; el futuro nos inspira!
                             </p>
-
-
-                            
+                        </div>
+                        
+                        <!-- Botones en fila -->
+                        <div class="hero-buttons-wrapper">
+                            <a href="#admision" class="btn-primary-modern">
+                                <i class="fas fa-rocket"></i>
+                                Solicitar Admisión
+                            </a>
+                            <a href="#virtual-tour" class="btn-secondary-modern">
+                                <i class="fas fa-play"></i>
+                                Tour Virtual
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Botones de acción modernos -->
-                            <div class="hero-actions">
-                                <a href="#admision" class="btn-primary-modern">
-                                    <i class="fas fa-rocket"></i>
-                                    Solicitar Admisión
-                                </a>
-                                <a href="#virtual-tour" class="btn-secondary-modern">
-                                    <i class="fas fa-play"></i>
-                                    Tour Virtual
-                                </a>
-                            </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 <!-- ============================================
@@ -258,8 +265,6 @@
                 <!-- Historia -->
                 <div class="about-card history-card" data-aos="fade-up" data-aos-delay="100">
 
-
-
                     <div class="card-header">
                         <h3>MISIÓN</h3>
                     </div>
@@ -311,7 +316,7 @@
 
 
                     <div class="card-header">
-                        <h3>Historia</h3>
+                        <h3>HISTORIA</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-description">

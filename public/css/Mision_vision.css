@@ -254,10 +254,10 @@
 
 
  /* ============================================
-           SECCIÓN MISIÓN - AJUSTES SOLICITADOS
+           SECCIÓN MISIÓN - OPTIMIZADA
         ============================================ */
         .section-mision {
-            padding: 3rem 0 5rem 0; /* Reducido padding superior como solicitaste */
+            padding: 3rem 0 5rem 0;
             background: linear-gradient(to bottom, var(--white) 0%, var(--light-gray) 100%);
             position: relative;
             margin-top: 0%;
@@ -269,7 +269,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 100px; /* Reducido para menos separación */
+            height: 100px;
             background: linear-gradient(to bottom, rgba(13, 63, 39, 0.05) 0%, transparent 100%);
         }
 
@@ -277,6 +277,8 @@
             opacity: 0;
             transform: translateY(50px);
             transition: var(--transition-smooth);
+            max-width: 100%;
+            
         }
 
         .content-wrapper.animate-in {
@@ -285,14 +287,14 @@
         }
 
         .section-header {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
         
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.2rem, 4vw, 3.5rem);
             font-weight: 600;
-            color: var(--text-dark);
+            color: var(--primary-green);
             margin-bottom: 1rem;
             position: relative;
             display: flex;
@@ -315,30 +317,44 @@
 
         .section-content {
             font-size: 1.1rem;
-            line-height: 1.8;
+            line-height: 1.9;
             color: var(--text-light);
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         .lead-paragraph {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 500;
             color: var(--text-dark);
             margin-bottom: 1.5rem;
-            line-height: 1.6;
+            line-height: 1.7;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .section-content p {
+            margin-bottom: 1.2rem;
+            hyphens: auto;
+            word-spacing: 0.05em;
+        }
+
+        .section-content p:last-of-type {
+            margin-bottom: 0;
         }
 
         .pillars-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 2.5rem;
         }
 
         .pillar-item {
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1rem;
+            padding: 1.2rem 1rem;
             background: var(--white);
             border-radius: 12px;
             box-shadow: var(--shadow-subtle);
@@ -363,18 +379,15 @@
             flex-shrink: 0;
         }
 
-
-
-
-
-
-
-
-
-        
+        .pillar-item span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
 
         /* ============================================
-           IMAGEN PROFESIONAL MISIÓN (SIN OVERLAYS OSCUROS)
+           IMAGEN PROFESIONAL MISIÓN
         ============================================ */
         .visual-element {
             position: relative;
@@ -393,11 +406,10 @@
         }
 
         /* ============================================
-           SECCIÓN VISIÓN
+           SECCIÓN VISIÓN - OPTIMIZADA
         ============================================ */
         .section-vision {
-            padding: 3rem 0 5rem 0; /* Reducido padding superior como solicitaste */
-            padding: var(--section-padding);
+            padding: 3rem 0 5rem 0;
             background: var(--primary-green);
             color: var(--white);
             position: relative;
@@ -417,15 +429,19 @@
 
         .section-vision .section-title {
             color: var(--white);
-             margin-bottom: 0rem;
+            margin-bottom: 0rem;
         }
 
         .section-vision .section-content {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.95);
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         .section-vision .lead-paragraph {
             color: var(--white);
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         .vision-year {
@@ -435,8 +451,9 @@
             color: var(--accent-gold);
             text-align: center;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-             margin-top: 0.5rem;  /* Ajusta espacio superior */
-            margin-bottom: 0.5rem; /* Ajusta espacio inferior */
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1;
         }
 
         .vision-features {
@@ -454,13 +471,44 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
-        
         /* ============================================
-           RESPONSIVE DESIGN
+           ALINEACIÓN Y SIMETRÍA DE COLUMNAS
         ============================================ */
+        .section-mision .row,
+        .section-vision .row {
+            align-items: center;
+        }
+
+        .section-mision .col-lg-6,
+        .section-vision .col-lg-6 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN OPTIMIZADO
+        ============================================ */
+        @media (max-width: 991px) {
+            .section-content {
+                text-align: left;
+            }
+
+            .section-vision .section-content,
+            .lead-paragraph,
+            .section-vision .lead-paragraph {
+                text-align: left;
+            }
+
+            .content-wrapper {
+                padding: 0;
+            }
+        }
+
         @media (max-width: 768px) {
             .pillars-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
             }
             
             .vision-features {
@@ -471,6 +519,11 @@
             .section-title {
                 flex-direction: column;
                 text-align: center;
+                gap: 0.5rem;
+            }
+
+            .title-decoration {
+                width: 60px;
             }
             
             .mision-visual,
@@ -481,6 +534,7 @@
             
             .vision-year {
                 font-size: 3rem;
+                margin-bottom: 1rem;
             }
 
             .timeline-container {
@@ -497,6 +551,34 @@
 
             .feature-icon {
                 font-size: 2rem;
+            }
+
+            .section-content {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+
+            .lead-paragraph {
+                font-size: 1.15rem;
+            }
+
+            .section-mision,
+            .section-vision {
+                padding: 2rem 0 3rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .pillar-item {
+                padding: 1rem 0.8rem;
+            }
+
+            .pillar-item span {
+                font-size: 0.95rem;
+            }
+
+            .section-header {
+                margin-bottom: 1.5rem;
             }
         }
 
@@ -522,6 +604,25 @@
             }
             to {
                 transform: rotate(360deg);
+            }
+        }
+
+        /* ============================================
+           MEJORAS DE LEGIBILIDAD
+        ============================================ */
+        @media (min-width: 1200px) {
+            .content-wrapper {
+                padding: 0 2rem;
+            }
+
+            .section-content {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .section-content {
+                max-width: 92%;
             }
         }
 
