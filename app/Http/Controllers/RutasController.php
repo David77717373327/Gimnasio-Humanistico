@@ -35,6 +35,11 @@ class RutasController extends Controller
         return view('Institucion.quienes_somos');
     }
 
+    public function mostrarcontenidosimbolosinstitucionales()
+    {
+        return view('Institucion.Simbolos');
+    }
+
     public function mostrarcontenidomisionyvision()
     {
         return view('Institucion.Mision_vision');

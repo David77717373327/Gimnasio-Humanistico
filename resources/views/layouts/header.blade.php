@@ -45,11 +45,11 @@
                             <a class="dropdown-item" href="{{ route('Historia') }}">Nuestra Historia</a>
                             <a class="dropdown-item" href="{{ route('mision-vision') }}">Misión y Visión</a>
                             <a class="dropdown-item" href="{{ route('filosofia_institucional') }}">Filosofía Educativa</a>
+                            <a class="dropdown-item" href="{{ route('simbolos') }}">Símbolos Institucionales</a>
                         </div>
                         <div class="dropdown-section">
                             <h6 class="dropdown-header">Organización</h6>
-                            <a class="dropdown-item" href="#directorio">Directorio</a>
-                            <a class="dropdown-item" href="#plana-docente">Símbolos Institucionales</a>
+                            <a class="dropdown-item" href="#directorio">Directorio</a>                            
                             <a class="dropdown-item" href="#organigrama">Organigrama</a>
                         </div>
                     </div>

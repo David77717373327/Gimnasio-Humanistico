@@ -212,12 +212,20 @@
 
 
 
+
+
+
+
+
+
+
+
 /* Línea blanca animada que persigue el cursor */
 .nav-indicator {
     position: absolute;
     bottom: 0;
     height: 5px;
-    background: #ffffff;
+    background: #e6e3e3;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
     margin-left: 12px;
@@ -302,33 +310,32 @@
 
 /* Dropdowns de UNA columna - CORREGIDO */
 .dropdown-menu.single-column {
-    min-width: 220px;
-    max-width: 220px;
+    min-width: 235px;
+    max-width: 235px;
     flex-direction: column;
     padding: 1rem 0;
+    background-color: #f0f0f0;
 }
 
 .dropdown-menu.single-column .dropdown-item {
     padding: 0.65rem 1.5rem;
-    font-size: 0.875rem;
+    font-size: 0.925rem;
 }
 
-.dropdown-menu.single-column .dropdown-item:hover {
-    padding-left: 2rem;
-}
+
 
 /* Dropdowns de DOS columnas */
 .dropdown-menu:not(.single-column) {
     min-width: 550px;
     display: flex;
-
 }
 
 .dropdown-section {
     flex: 1;
-    padding: 2rem 2.5rem;
-    border-right: 1px solid #e5e7eb;
+    padding: 1rem 2.5rem;
+    border-right: 1px solid #aaacaf;
     min-width: 0;
+    background-color: #f0f0f0;
 }
 
 .dropdown-section:last-child {
@@ -338,7 +345,7 @@
 .dropdown-header {
     color: #000000;
     font-weight: 700;
-    font-size: 0.80rem;
+    font-size: 0.82rem;
     margin-bottom: 1.25rem;
     text-decoration: none;
     letter-spacing: 0.1em;
@@ -349,25 +356,24 @@
 
 .dropdown-item {
     padding: 0.65rem 0;
-    border-radius: 0;
+    border-radius: 0; 
     transition: all 0.3s ease;
-    color: #374151;
-    font-size: 0.875rem;
+    color: black;
+    font-size: 0.915rem;
     font-weight: 500;
     margin: 0;
     position: relative;
     display: block;
     cursor: pointer;
     text-decoration: none;
-    background: transparent;
 }
 
 .dropdown-item:hover {
-    color: var(--primary-green);
-    background: rgba(27, 94, 63, 0.05);
-    text-decoration: underline;
-    padding-left: 0.5rem;
+    color: black;
+    background: #f0f0f0;
+    text-decoration: underline; 
 }
+
 
 /* ============================================
    ANIMACIONES ORIGINALES
@@ -428,6 +434,7 @@
     animation: slideInFromRight 0.8s ease-out 0.2s both;
 }
 
+
 /* ============================================
    NAVBAR TOGGLE
 ============================================ */
@@ -468,6 +475,15 @@
 .navbar-toggler:hover .navbar-toggler-icon span {
     background: #ffffff;
 }
+
+
+
+
+
+
+
+
+
 
 /* ============================================
    RESTO DEL CSS ORIGINAL SIN MODIFICACIONES

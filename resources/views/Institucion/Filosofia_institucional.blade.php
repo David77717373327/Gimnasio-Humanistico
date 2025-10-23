@@ -119,7 +119,7 @@
                                             <i class="fas fa-leaf"></i>
                                         </div>
                                         <div class="block-content">
-                                            <h4>Sostenibilidad Ambiental</h4>
+                                            <h4>Cultura Ambiental</h4>
                                             <p>Nos comprometemos con la preservación de la naturaleza y la
                                                 sostenibilidad ambiental, reconociendo nuestra responsabilidad con el
                                                 territorio.</p>

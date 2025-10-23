@@ -137,12 +137,7 @@
                                 </div>
                                 <span>Tecnología educativa de vanguardia</span>
                             </div>
-                            <div class="feature-point" data-aos="fade-up" data-aos-delay="400">
-                                <div class="feature-point-icon">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                                <span>Valores cristianos y formación integral</span>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

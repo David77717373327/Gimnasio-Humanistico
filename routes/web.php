@@ -38,6 +38,8 @@ Route::get('/Historia', [RutasController::class, 'mostrarcontenidohistoria'])->n
 Route::get('/mision-vision', [RutasController::class, 'mostrarcontenidomisionyvision'])->name('mision-vision');
 //rutas para msotra contenido de Filosofia institucional 
 Route::get('/filosofia-institucional', [RutasController::class, 'mostrarcontenidofilosofiainstitucional'])->name('filosofia_institucional');
+//Rutas para mostrar contenido de Simbolos y idnos institucionales
+Route::get('/simbolos-institucionales', [RutasController::class, 'mostrarcontenidosimbolosinstitucionales'])->name('simbolos');
 
 
 //Tutas para mostrar contenido de niveles educativos

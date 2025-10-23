@@ -50,7 +50,7 @@
                 </div>
                 
                 <h1 class="hero-title">
-                    PREESCOLAR 
+                     EDUCACION INICIAL - PREESCOLAR 
                 </h1>
                 
                 <p class="hero-description">
@@ -206,9 +206,7 @@
 
         <!-- Aulas por Nivel -->
         <div class="aulas-grid">
-            
             <div class="aula-item">
-                
                 <div class="aula-image">
                     <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Párvulos">
                     <div class="aula-overlay">
@@ -231,7 +229,8 @@
                 </div>
                 <div class="aula-info">
                     <h4>Prejardín</h4>
-                    <p>Ambientes coloridos diseñados para promover la creatividad, con zonas de arte, lectura y juego dirigido.</p>
+                    <p>Ambientes coloridos diseñados para promover la creatividad, con zonas de arte,
+                         lectura y juego dirigido.</p>
                 </div>
             </div>
 
@@ -244,7 +243,8 @@
                 </div>
                 <div class="aula-info">
                     <h4>Jardín</h4>
-                    <p>Salones equipados con recursos para el desarrollo de habilidades pre-académicas en lectoescritura y matemáticas.</p>
+                    <p>Salones equipados con recursos para el desarrollo de habilidades pre-académicas
+                         en lectoescritura y matemáticas.</p>
                 </div>
             </div>
 
@@ -268,7 +268,6 @@
     <!-- Propósito por Nivel -->
 <div class="experiencias-nivel-section">
     <div class="container">
-
         <!-- Header de la sección con logo -->
 <div class="admision-nav-header">
     <div class="header-content-wrapper">
@@ -308,7 +307,8 @@
                 <div class="nivel-body-modern">
                     <div class="nivel-divider"></div>
                     <p class="nivel-intro">
-                        Los propósitos del nivel Párvulos se enfocan en el reconocimiento del cuerpo, las emociones y la interacción social**, 
+                        Los propósitos del nivel Párvulos se enfocan en el reconocimiento del cuerpo, 
+                        las emociones y la interacción social, 
                         fortaleciendo la confianza y el vínculo con el entorno a través del juego y la exploración sensorial.
                     </p>
                     <div class="nivel-activities-list">
@@ -341,7 +341,8 @@
                 <div class="nivel-body-modern">
                     <div class="nivel-divider"></div>
                     <p class="nivel-intro">
-                        En Prejardín los propósitos se orientan al fortalecimiento de la autonomía, el lenguaje y la expresión artística**, 
+                        En Prejardín los propósitos se orientan al fortalecimiento de la autonomía, 
+                        el lenguaje y la expresión artística, 
                         promoviendo la comunicación y la participación activa dentro del grupo.
                     </p>
                     <div class="nivel-activities-list">
@@ -374,7 +375,8 @@
                 <div class="nivel-body-modern">
                     <div class="nivel-divider"></div>
                     <p class="nivel-intro">
-                        En el grado Jardín se fortalecen los procesos de pensamiento lógico, la creatividad y la expresión comunicativa**, 
+                        En el grado Jardín se fortalecen los procesos de pensamiento lógico,
+                         la creatividad y la expresión comunicativa, 
                         integrando el arte, la literatura y las experiencias científicas iniciales.
                     </p>
                     <div class="nivel-activities-list">
@@ -431,8 +433,9 @@
 </div>
 </section>
 
-    <!-- Incluir el footer -->
+<!-- Incluir el footer -->
 @include('layouts.footer')
+
 
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>

@@ -231,6 +231,8 @@
 }
 
 .hero-description-primaria {
+    text-align: justify;
+    hyphens: auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     font-weight: 400;
@@ -520,7 +522,7 @@
 .admision-nav-subtitle {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.09rem;
-    color: var(--text-darkk);
+    color: black;
     font-weight: 400;
     line-height: 1.8;
     max-width: 620px;
@@ -564,6 +566,7 @@
     flex: 1;
     text-align: center;
     min-width: 0;
+    
 }
 
 /* Responsive: en pantallas pequeñas, ocultar logo o ajustar layout */
@@ -719,7 +722,6 @@
     background: var(--primary-green);
     color: white;
     padding: 12px 28px;
-    border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 50px;
@@ -729,8 +731,8 @@
 .aulas-grid-primaria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 1000px;
+    gap: 35px;
+    max-width: 1150px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -738,23 +740,16 @@
 /* Centrar la última card (quinta) */
 .aula-card-centrada {
     grid-column: 1 / -1;
-    max-width: 520px;
+    max-width: 550px;
     margin: 0 auto;
     width: 100%;
 }
 
 .aula-card-primaria {
-    background: white;
-    border: 2px solid rgba(13, 63, 39, 0.15);
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
-.aula-card-primaria:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(13, 63, 39, 0.15);
-
-}
 
 .aula-image-primaria {
     position: relative;
@@ -795,7 +790,7 @@
 }
 
 .aula-info-primaria {
-    padding: 24px;
+    margin-top: 28px;
 }
 
 .aula-info-primaria h4 {
@@ -803,12 +798,13 @@
     font-size: 1.65rem;
     font-weight: 700;
     color: var(--primary-green);
-    margin-bottom: 12px;
+    margin-bottom: 1px;
+    margin-right: 70px;
 }
 
 .aula-info-primaria p {
     font-size: 0.9rem;
-    color: var(--text-darkk);
+    color: black;
     line-height: 1.6;
     margin: 0;
 }
@@ -852,9 +848,17 @@
 
 
 
+
+
+
+
+
+
+
+
 /* ============================================
            TIMELINE DE GRADOS - DISEÑO PROFESIONAL
-           ============================================ */
+============================================ */
 .timeline-primaria {
     padding: 70px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -912,7 +916,7 @@
 
 .admision-nav-subtitle {
     font-size: 1.1rem;
-    color: #6c757d;
+    color: black;
 }
 
 .timeline-container-primaria {
