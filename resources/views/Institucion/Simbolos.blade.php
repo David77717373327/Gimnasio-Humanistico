@@ -54,15 +54,20 @@
     
 
 
-    <!-- SECCIÓN HIMNO -->
-    <section class="himno-section" id="himno-section">
-        <div class="himno-container">
-            <div class="himno-header">
-                <h2 class="himno-title">Himno del Colegio</h2>
-                <p class="himno-subtitle">Gimnasio Humanístico de Neiva</p>
-            </div>
+    <!-- ============================================
+     HTML - SECCIÓN HIMNO
+     ============================================ -->
+<section class="himno-section"  id="himno-section">
+    <div class="himno-container">
+        <div class="himno-header">
+            <h2 class="himno-title">Himno del Colegio</h2>
+            <p class="himno-subtitle">Gimnasio Humanístico de Neiva</p>
+        </div>
 
+        <div class="himno-main-content">
+            <!-- COLUMNA IZQUIERDA: Introducción -->
             <div class="himno-intro">
+                <h3 class="himno-intro-title">Composición</h3>
                 <p class="himno-intro-text">
                     Compuesto por el Magíster <strong>JESÚS MARÍA VIDAL ARIAS</strong>, quien, inspirado en su amplia trayectoria 
                     pedagógica y folclorista, imprimió a este himno todo el amor a un territorio, por una institución, 
@@ -77,6 +82,7 @@
                 </p>
             </div>
 
+            <!-- COLUMNA DERECHA: Himno -->
             <div class="himno-content">
                 <!-- Coro -->
                 <div class="himno-stanza">
@@ -87,7 +93,7 @@
                     <p class="himno-verse">Del Gimnasio Humanístico soy. (Bis)</p>
                 </div>
 
-                <div class="himno-divider"></div>
+                
 
                 <!-- Estrofa I -->
                 <div class="himno-stanza">
@@ -98,7 +104,7 @@
                     <p class="himno-verse">Y un encuadre mestizo hecho de amor.</p>
                 </div>
 
-                <div class="himno-divider"></div>
+                
 
                 <!-- Estrofa II -->
                 <div class="himno-stanza">
@@ -109,7 +115,7 @@
                     <p class="himno-verse">De justicia, de paz y libertad.</p>
                 </div>
 
-                <div class="himno-divider"></div>
+                
 
                 <!-- Estrofa III -->
                 <div class="himno-stanza">
@@ -120,8 +126,6 @@
                     <p class="himno-verse">Ciudadanos del mundo, hijos de Dios.</p>
                 </div>
 
-                <div class="himno-divider"></div>
-
                 <!-- Coro Final -->
                 <div class="himno-stanza">
                     <h3 class="himno-stanza-title">Coro</h3>
@@ -131,12 +135,11 @@
                     <p class="himno-verse">Del Gimnasio Humanístico soy.</p>
                 </div>
             </div>
-
-            <div class="himno-author">
-                <p class="author-text">Letra y música de <strong>Jesús María Vidal Arias</strong></p>
-            </div>
         </div>
-    </section>
+
+        
+    </div>
+</section>
 
 
 
@@ -160,7 +163,7 @@
             <div class="simbolo-item">
                 <div class="simbolo-row">
                     <div class="simbolo-image-container">
-                        <img src="{{ asset('images/logo.png') }}" alt="Escudo del Colegio" class="simbolo-image">
+                        <img src="{{ asset('images/logoo.png') }}" alt="Escudo del Colegio" class="simbolo-image">
                     </div>
                     <div class="simbolo-content">
                         <h3 class="simbolo-name">Escudo Institucional</h3>
@@ -199,6 +202,74 @@
             </div>
         </div>
     </section>
+
+
+    <!-- ============================================
+     NAVEGACIÓN VISUAL INSTITUCIONAL
+     ============================================ -->
+
+<section class="institutional-nav-section">
+    <div class="institutional-nav-container">
+        
+        <!-- Grid de navegación - 4 columnas pegadas -->
+        <div class="institutional-nav-grid">
+            
+            <!-- Card 1: Misión y Visión -->
+            <a href="{{ route('mision-vision') }}" class="nav-card-inst">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="nav-title-inst">Misión y Visión</h3>
+                </div>
+            </a>
+
+            <!-- Card 2: Filosofía -->
+            <a href="{{ route('filosofia_institucional') }}" class="nav-card-inst filosofia">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="nav-title-inst">Filosofía</h3>
+                </div>
+            </a>
+
+            <!-- Card 3: Principios -->
+            <a href="#principios" class="nav-card-inst principios">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="nav-title-inst">Principios</h3>
+                </div>
+            </a>
+
+            <!-- Card 4: Símbolos -->
+            <a href="{{ route('simbolos') }}" class="nav-card-inst simbolos">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="nav-title-inst">Símbolos</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- Incluir el footer -->
@@ -271,7 +342,7 @@
 
         // Scroll suave al timeline
         function scrollToTimeline() {
-            document.getElementById('componente-filosofico').scrollIntoView({
+            document.getElementById('himno-section').scrollIntoView({
                 behavior: 'smooth'
             });
         }

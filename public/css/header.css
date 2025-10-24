@@ -225,7 +225,7 @@
     position: absolute;
     bottom: 0;
     height: 5px;
-    background: #e6e3e3;
+    background: #afaeae;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
     margin-left: 12px;
@@ -314,7 +314,7 @@
     max-width: 235px;
     flex-direction: column;
     padding: 1rem 0;
-    background-color: #f0f0f0;
+    background-color: white;
 }
 
 .dropdown-menu.single-column .dropdown-item {
@@ -335,7 +335,7 @@
     padding: 1rem 2.5rem;
     border-right: 1px solid #aaacaf;
     min-width: 0;
-    background-color: #f0f0f0;
+    background-color: white;
 }
 
 .dropdown-section:last-child {
@@ -370,7 +370,7 @@
 
 .dropdown-item:hover {
     color: black;
-    background: #f0f0f0;
+    background: white;
     text-decoration: underline; 
 }
 

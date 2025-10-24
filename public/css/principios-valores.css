@@ -304,297 +304,253 @@
 
 
 
-
-
-
 /* ============================================
-   COMPONENTE FILOSÓFICO DE IDENTIDAD INSTITUCIONAL - REDISEÑADO
+   SECCIÓN DE PRINCIPIOS
 ============================================ */
 
-.componente-filosofico-section {
-    margin-top: 100px;
-    background: linear-gradient(135deg, #f8fafb 0%, #ffffff 50%, #f8fafb 100%);
+.principios-section {
+    padding: 5rem 0 6rem 0;
+    background: linear-gradient(180deg, var(--light-gray) 0%, var(--white) 100%);
     position: relative;
-    overflow: hidden;
 }
 
-.componente-filosofico-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 80%, rgba(13, 63, 39, 0.02) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(30, 58, 95, 0.02) 0%, transparent 50%);
-    pointer-events: none;
+.principios-container-custom {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* ============================================
-   HEADER INSTITUCIONAL - NUEVO
-============================================ */
-.institutional-header {
-    margin-top: 0%;
-    padding-top: 0%;
+/* Encabezado de la sección */
+.principios-header {
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
     text-align: center;
-    margin-bottom: 5px;  /* 👈 Cambié de 20px a 5px */
-    position: relative;
 }
 
-
-/* ============================================
-   CONTENIDO PRINCIPAL - HOVER MINIMALISTA
-============================================ */
-
-.filosofia-content {
-    position: relative;
-}
-
-.content-card {
-    background: transparent;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 60px;
-    position: relative;
-    overflow: hidden;
-    border: none;
-    transition: all var(--transition-normal);
-}
-
-.card-decoration {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--primary-green);
-    border-radius: 0;
-}
-
-/* Declaración de Apertura */
-.opening-statement {
-    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-    font-weight: 500;
-    color: var(--text-dark);
-    line-height: 1.6;
-    margin-bottom: 50px;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
-    padding: 35px;
-    background: linear-gradient(135deg, var(--light-blue) 0%, rgba(235, 248, 255, 0.3) 100%);
-    border-radius: var(--border-radius-lg);
-    border-left: 4px solid var(--primary-green);
-    box-shadow: var(--shadow-sm);
-}
-
-.opening-statement strong {
-    color: var(--primary-green);
+.principios-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
-/* ============================================
-   BLOQUES DE FILOSOFÍA - HOVER MINIMALISTA
-============================================ */
-.philosophy-blocks {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 30px;
-    margin-top: 0;
+.principios-intro {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: black;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0 auto;
 }
 
-.philosophy-block {
+/* Navegación de Principios */
+.principios-navigation {
     display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    padding: 35px;
-    background: transparent;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.principio-tab {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: 600;
+    padding: 1rem 1.75rem;
+    background: var(--white);
+    color: black;
+    border: 2px solid var(--primary-green);
     border-radius: 0;
-    border: none;
-    position: relative;
-    overflow: hidden;
-    box-shadow: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-align: center;
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 280px;
+    max-width: 450px;
 }
 
-/* Línea minimalista desde la izquierda */
-.philosophy-block::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(180deg, var(--primary-green) 0%, var(--accent-gold) 50%, var(--primary-blue) 100%);
-    z-index: 1;
-}
-
-/* Línea sutil desde abajo */
-.philosophy-block::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 0;
-    background: linear-gradient(90deg, 
-        var(--primary-green) 0%, 
-        var(--accent-gold) 30%, 
-        var(--primary-blue) 70%, 
-        var(--primary-green) 100%
-    );
-}
-
-/* ============================================
-   ICONOS - SIN ANIMACIONES COMPLEJAS
-============================================ */
-.block-icon {
-    flex-shrink: 0;
-    width: 64px;
-    height: 64px;
+.principio-tab:hover {
     background: var(--primary-green);
     color: var(--white);
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    position: relative;
-    z-index: 2;
-    box-shadow: none;
+    transform: translateY(-2px);
 }
 
-.block-icon i {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+.principio-tab.active {
+    background: var(--primary-green);
+    color: var(--white);
 }
 
-/* ============================================
-   CONTENIDO DE LOS BLOQUES
-============================================ */
-.block-content {
-    flex: 1;
-    position: relative;
-    z-index: 2;
+/* Contenido de Principios */
+.principios-content {
+    margin: 0 auto;
 }
 
-.block-content h4 {
+.principio-item {
+    display: none;
+    opacity: 0;
+    animation: fadeInContent 0.5s ease-out forwards;
+}
+
+.principio-item.active {
+    display: block;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grid de Principios */
+.principio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* Ajuste automático para 1 card */
+.principio-grid:has(.principio-card:only-child) {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Ajuste automático para 3 cards (2 arriba, 1 abajo centrado) */
+.principio-grid:has(.principio-card:nth-child(3):last-child) .principio-card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 1.25rem);
+    margin: 0 auto;
+}
+
+/* Ajuste automático para 4 cards (2x2) */
+.principio-grid:has(.principio-card:nth-child(4)) {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.principio-card {
+    background: transparent;
+    padding: 0;
+}
+
+.principio-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
     font-weight: 700;
     color: var(--primary-green);
-    margin-bottom: 12px;
-    position: relative;
+    margin-bottom: 1rem;
+    line-height: 1.3;
 }
 
-.block-content h4::after {
-    display: none;
-}
-
-.block-content p {
+.principio-text {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
     color: black;
-    line-height: 1.7;
-    margin-bottom: 0;
+    line-height: 1.8;
     text-align: justify;
-    hyphens: auto;
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-============================================ */
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .principios-container-custom {
+        max-width: 92%;
+        padding: 0 1.5rem;
+    }
+}
+
 @media (max-width: 992px) {
-    .content-card {
-        padding: 40px;
+    .principios-section {
+        padding: 4rem 0 5rem 0;
     }
     
-    .philosophy-blocks {
-        grid-template-columns: 1fr;
-        gap: 25px;
+    .principios-container-custom {
+        max-width: 90%;
+        padding: 0 1rem;
     }
     
-    .philosophy-block {
-        padding: 28px;
-        gap: 20px;
+    .principios-header {
+        margin-bottom: 3rem;
     }
     
-    .block-icon {
-        width: 56px;
-        height: 56px;
-        font-size: 1.3rem;
+    .principio-tab {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .principio-grid {
+        gap: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .componente-filosofico-section {
-        padding: 80px 0;
+    .principios-section {
+        padding: 3rem 0 4rem 0;
     }
     
-    .content-card {
-        padding: 30px 20px;
+    .principios-container-custom {
+        max-width: 100%;
+        padding: 0 1rem;
     }
     
-    .institutional-header {
-        margin-bottom: 30px;
+    .principios-header {
+        margin-bottom: 2.5rem;
     }
     
-    .main-title {
-        margin-bottom: 14px;
+    .principios-main-title {
+        margin-bottom: 1rem;
     }
     
-    .header-subtitle {
-        margin-bottom: 20px;
+    .principios-navigation {
+        gap: 0.75rem;
+        margin-bottom: 2rem;
     }
     
-    .header-badge {
-        padding: 8px 16px;
-        font-size: 0.8rem;
-        margin-bottom: 16px;
+    .principio-tab {
+        padding: 0.875rem 1.25rem;
+        min-width: 100%;
     }
     
-    .philosophy-block {
-        flex-direction: column;
-        text-align: center;
-        padding: 25px;
+    .principio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
-    .block-icon {
-        align-self: center;
-        margin-bottom: 15px;
-    }
-    
-    .block-content p {
-        text-align: center;
+    /* En móvil, todos los cards ocupan el ancho completo */
+    .principio-grid:has(.principio-card:nth-child(3):last-child) .principio-card:nth-child(3) {
+        grid-column: auto;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .philosophy-blocks {
-        grid-template-columns: 1fr;
+    .principios-section {
+        padding: 2.5rem 0 3.5rem 0;
     }
     
-    .institutional-header {
-        margin-bottom: 40px;
+    .principios-intro {
+        text-align: left;
     }
     
-    .main-title {
-        font-size: 2.5rem;
-        margin-bottom: 16px;
+    .principio-tab {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
     }
     
-    .header-subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 24px;
+    .principio-text {
+        text-align: left;
     }
     
-    .header-badge {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-        margin-bottom: 20px;
+    .principio-grid {
+        gap: 1.5rem;
     }
 }
-
-
-
 
 
 /* ============================================
@@ -789,6 +745,11 @@
         text-align: left;
     }
 }
+
+
+
+
+
 
 
 

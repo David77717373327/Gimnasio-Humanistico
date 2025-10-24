@@ -46,6 +46,7 @@
                             <a class="dropdown-item" href="{{ route('mision-vision') }}">Misión y Visión</a>
                             <a class="dropdown-item" href="{{ route('filosofia_institucional') }}">Filosofía Educativa</a>
                             <a class="dropdown-item" href="{{ route('simbolos') }}">Símbolos Institucionales</a>
+                            <a class="dropdown-item" href="{{ route('principios-valores') }}">principios y valores</a>
                         </div>
                         <div class="dropdown-section">
                             <h6 class="dropdown-header">Organización</h6>

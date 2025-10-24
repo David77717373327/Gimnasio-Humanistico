@@ -50,7 +50,7 @@
                 </div>
                 
                 <h1 class="hero-title">
-                     EDUCACION INICIAL - PREESCOLAR 
+                     EDUCACION INICIAL PREESCOLAR 
                 </h1>
                 
                 <p class="hero-description">
@@ -136,8 +136,7 @@
 
                 <!-- Propósito 1 -->
                 <div class="metodologia-item">
-                    <div class="metodologia-number">01</div>
-                    
+                    <div class="metodologia-number">01</div>     
                     <div class="metodologia-text">
                         <h4>Construir su identidad en relación con los otros</h4>
                         <p>

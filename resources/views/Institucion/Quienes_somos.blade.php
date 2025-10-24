@@ -187,32 +187,7 @@
                         </p>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-image-side">
-                        <img src="{{ asset('images/Historiaa2.jpeg') }}" alt="Nueva Administración 1997">
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">
-                            <img src="{{ asset('images/Logo.png') }}" alt="Logo Colegio" class="timeline-logo">
-                            <span>1997</span>
-                        </div>
-                        <h3 class="timeline-title">Nueva Administración y Expansión Estratégica</h3>
-                        <p class="timeline-text">
-                            Los nuevos propietarios Esperanza Campos, Gloria Carvajal de Valderrama, Jesús María
-                            Vidal Arias y Jaime Puentes Camero asumieron la administración, reconociendo la valiosa obra
-                            de los fundadores y
-                            comprometiéndose a continuar con el legado humanístico. Se realizó la fusión estratégica con
-                            el Instituto Integral
-                            Neivano (INSEIN) y se reorganizaron las sedes de preescolar, primaria y bachillerato para
-                            optimizar la gestión
-                            educativa. Jesús María Vidal Arias y Gloria Carvajal de Valderrama asumieron como rector y
-                            vicerrectora
-                            respectivamente, iniciando un período de consolidación y crecimiento sostenido.
-                        </p>
-                    </div>
-                </div>
+                
 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
@@ -352,6 +327,75 @@
             </div>
         </div>
     </section>
+
+
+
+    <!-- ============================================
+     NAVEGACIÓN VISUAL INSTITUCIONAL
+     ============================================ -->
+
+<section class="institutional-nav-section">
+    <div class="institutional-nav-container">
+        
+        <!-- Grid de navegación - 4 columnas pegadas -->
+        <div class="institutional-nav-grid">
+            
+            <!-- Card 1: Misión y Visión -->
+            <a href="{{ route('mision-vision') }}" class="nav-card-inst">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="nav-title-inst">Misión y Visión</h3>
+                </div>
+            </a>
+
+            <!-- Card 2: Filosofía -->
+            <a href="{{ route('filosofia_institucional') }}" class="nav-card-inst filosofia">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="nav-title-inst">Filosofía</h3>
+                </div>
+            </a>
+
+            <!-- Card 3: Principios -->
+            <a href="#principios" class="nav-card-inst principios">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="nav-title-inst">Principios</h3>
+                </div>
+            </a>
+
+            <!-- Card 4: Símbolos -->
+            <a href="{{ route('simbolos') }}" class="nav-card-inst simbolos">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="nav-title-inst">Símbolos</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
 
     <!-- Incluir el  -->
     @include('layouts.footer')

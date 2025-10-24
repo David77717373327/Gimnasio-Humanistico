@@ -160,240 +160,64 @@
             </div>
         </section>
 
-
-
-
         
 
-        <!-- SECCIÓN PRINCIPIOS Y VALORES -->
-        <section class="section-valores" id="valores">
-            <div class="container">
-                
-                
-                <!-- Header de la sección con logo -->
-            <div class="admision-nav-header">
-                <div class="header-content-wrapper">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
-                    <div class="header-text-content">
-                        <div class="header-label">
-                            <span class="label-icon">✦</span>
-                            <span class="label-text">proyecto educativo </span>
-                        </div>
-                        <h2 class="admision-nav-title">Principios y Valores Institucionales</h2>
+<!-- ============================================
+     NAVEGACIÓN VISUAL INSTITUCIONAL
+     ============================================ -->
+
+<section class="institutional-nav-section">
+    <div class="institutional-nav-container">
+        
+        <!-- Grid de navegación - 4 columnas pegadas -->
+        <div class="institutional-nav-grid">
+            
+            <!-- Card 1: Misión y Visión -->
+            <a href="{{ route('mision-vision') }}" class="nav-card-inst">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-landmark"></i>
                     </div>
+                    <h3 class="nav-title-inst">Misión y Visión</h3>
                 </div>
-            </div>
+            </a>
 
-                <!-- Principio 1: Visión Compartida -->
-                <div class="valor-block">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3">
-                            <div class="valor-icon-container">
-                                <div class="valor-main-icon">
-                                    <i class="fas fa-eye"></i>
-                                </div>
-                                <h3 class="valor-title">Visión Compartida y Propósito Transformador</h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <div class="valor-content">
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-bullseye"></i>
-                                        <h4>Identidad y Propósito Claro</h4>
-                                    </div>
-                                    <p>Nos movemos por la convicción de ofrecer una educación de la más alta calidad,
-                                        que sea inclusiva, emprendedora, humanista y arraigada en la ciencia, alineada
-                                        con los desafíos globales y los fines de la educación colombiana. Nuestro lema,
-                                        <strong>"Nos educamos en el trabajo humanizante para un nuevo país"</strong>,
-                                        encapsula nuestro compromiso con la construcción de un futuro más justo y
-                                        próspero para todos.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Card 2: Filosofía -->
+            <a href="{{ route('filosofia_institucional') }}" class="nav-card-inst filosofia">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
+                    <h3 class="nav-title-inst">Filosofía</h3>
                 </div>
+            </a>
 
-                <!-- Principio 2: Ciudadanía Activa -->
-                <div class="valor-block">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3">
-                            <div class="valor-icon-container">
-                                <div class="valor-main-icon">
-                                    <i class="fas fa-globe"></i>
-                                </div>
-                                <h3 class="valor-title">Ciudadanía Activa y Sostenibilidad</h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <div class="valor-content">
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-vote-yea"></i>
-                                        <h4>Participación Democrática</h4>
-                                    </div>
-                                    <p>Se fomenta un espíritu de democracia activa y participación cívica a través de
-                                        nuestro gobierno escolar y todas las instancias de decisión, empoderando a la
-                                        comunidad para construir un entorno justo y equitativo.</p>
-                                </div>
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-leaf"></i>
-                                        <h4>Conciencia Ambiental y Sostenibilidad</h4>
-                                    </div>
-                                    <p>Se inculca un profundo respeto y amor por la naturaleza; se promueve un
-                                        pensamiento y una cultura ambiental que impulsen acciones concretas para la
-                                        preservación, el disfrute sostenible y la responsabilidad ecológica de nuestro
-                                        planeta.</p>
-                                </div>
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-handshake"></i>
-                                        <h4>Transformación Social y Convivencia</h4>
-                                    </div>
-                                    <p>Se busca el cultivo de un espíritu crítico y constructivo hacia nuestro entorno
-                                        social, buscando la innovación y el liderazgo para construir comunidades más
-                                        justas, equitativas y con una convivencia armónica.</p>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Card 3: Principios -->
+            <a href="#principios" class="nav-card-inst principios">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-user-friends"></i>
                     </div>
+                    <h3 class="nav-title-inst">Principios</h3>
                 </div>
+            </a>
 
-                <!-- Principio 3: Crecimiento Personal -->
-                <div class="valor-block">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3">
-                            <div class="valor-icon-container">
-                                <div class="valor-main-icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                </div>
-                                <h3 class="valor-title">Crecimiento Personal y Relacional</h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <div class="valor-content">
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-heart"></i>
-                                        <h4>Bienestar y Relaciones Humanas</h4>
-                                    </div>
-                                    <p>Se valora y promueve relaciones humanas basadas en el respeto, la empatía y la
-                                        afectividad, para crear un ambiente cálido y seguro donde se prioriza la salud
-                                        emocional y física, y el bienestar integral de todos.</p>
-                                </div>
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-compass"></i>
-                                        <h4>Autonomía y Autorregulación</h4>
-                                    </div>
-                                    <p>Se impulsa la autodisciplina y la autodirección como pilares para el aprendizaje
-                                        autónomo y el desarrollo personal. Se capacita a los estudiantes para tomar
-                                        decisiones conscientes y responsables, al fomentar su autodeterminación
-                                        individual y colectiva.</p>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Card 4: Símbolos -->
+            <a href="{{ route('simbolos') }}" class="nav-card-inst simbolos">
+                <div class="nav-card-overlay-inst"></div>
+                <div class="nav-card-content-inst">
+                    <div class="nav-icon-inst">
+                        <i class="fas fa-trophy"></i>
                     </div>
+                    <h3 class="nav-title-inst">Símbolos</h3>
                 </div>
-
-                <!-- Principio 4: Excelencia Académica -->
-                <div class="valor-block">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3">
-                            <div class="valor-icon-container">
-                                <div class="valor-main-icon">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <h3 class="valor-title">Excelencia Académica e Innovación</h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <div class="valor-content">
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-search"></i>
-                                        <h4>Curiosidad, Investigación y Creatividad</h4>
-                                    </div>
-                                    <p>Prioriza la indagación, el pensamiento crítico y la creatividad en todos los
-                                        procesos de aprendizaje. Se motiva la búsqueda activa de conocimiento, la
-                                        experimentación y la generación de soluciones innovadoras a través de la
-                                        investigación y la praxis.</p>
-                                </div>
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-brain"></i>
-                                        <h4>Desarrollo Pleno de Potencialidades</h4>
-                                    </div>
-                                    <p>Se estimula el desarrollo integral de las múltiples inteligencias y talentos de
-                                        cada estudiante a través de estrategias pedagógicas y programas que celebran la
-                                        diversidad de capacidades.</p>
-                                </div>
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-chart-line"></i>
-                                        <h4>Cultura de Mejora Continua</h4>
-                                    </div>
-                                    <p>Se adopta la evaluación como una herramienta esencial para la mejora constante de
-                                        nuestros procesos de aprendizajes educativos, garantizando un aprendizaje
-                                        significativo y un desarrollo humano inclusivo para todos.</p>
-                                </div>
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-star"></i>
-                                        <h4>Búsqueda de la Excelencia</h4>
-                                    </div>
-                                    <p>Nos comprometemos con el desarrollo de las máximas capacidades humanas, aspirando
-                                        a la excelencia académica y personal como un camino para aportar
-                                        significativamente al progreso social y científico.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Principio 5: Libertad y Trascendencia -->
-                <div class="valor-block">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3">
-                            <div class="valor-icon-container">
-                                <div class="valor-main-icon">
-                                    <i class="fas fa-dove"></i>
-                                </div>
-                                <h3 class="valor-title">Libertad y Sentido de Trascendencia</h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <div class="valor-content">
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-feather-alt"></i>
-                                        <h4>Libertad y Autenticidad</h4>
-                                    </div>
-                                    <p>Como el fin último de la educación es formar seres libres, plenos e íntegros,
-                                        capaces de desarrollar su personalidad al máximo. La búsqueda de la libertad y
-                                        la plenitud del ser son los horizontes que guían nuestro proyecto educativo.</p>
-                                </div>
-                                <div class="valor-item">
-                                    <div class="valor-item-header">
-                                        <i class="fas fa-praying-hands"></i>
-                                        <h4>Espiritualidad y Sentido de Vida</h4>
-                                    </div>
-                                    <p>Se promueve la reflexión sobre la interconexión entre el ser humano, el mundo y
-                                        la trascendencia, ofreciendo una dimensión espiritual que enriquece la
-                                        interpretación de la realidad y dota de sentido a la existencia, en el marco de
-                                        los valores católicos que nos inspiran.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
+            </a>
+        </div>
+    </div>
+</section>
 
 
 
