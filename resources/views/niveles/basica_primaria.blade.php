@@ -152,70 +152,245 @@
                                 <span class="label-icon">✦</span>
                                 <span class="label-text">Comunicate con nosotros</span>
                             </div>
-                            <h2 class="admision-nav-title">Metodología Activa</h2>
-                            <p class="admision-nav-subtitle">Estamos disponibles para atenderte en los siguientes
-                                horarios.
+                            <h2 class="admision-nav-title">Objetivos Primaria</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- SECCIÓN DE OBJETIVOS PRIMARIA -->
+    <section class="objetivos-section" id="contenido-primaria">
+        <div class="container-fluid objetivos-container-custom">
+           
+            <!-- Encabezado de la sección -->
+            <div class="objetivos-header">
+                
+                <p class="objetivos-intro">
+                    "Nuestro programa de primaria está 
+                    diseñado para desarrollar integralmente a nuestros estudiantes
+                     a través de 4 pilares fundamentales:"
+                </p>
+            </div>
+
+
+
+            <!-- Navegación de Categorías -->
+            <div class="objetivos-navigation">
+                <button class="objetivo-tab active" data-categoria="formacion">
+                    Formación en Valores y Ciudadanía
+                </button>
+                <button class="objetivo-tab" data-categoria="academico">
+                    Desarrollo Académico y Cognitivo
+                </button>
+                <button class="objetivo-tab" data-categoria="fisico">
+                    Desarrollo Físico y Artístico
+                </button>
+                <button class="objetivo-tab" data-categoria="social">
+                    Habilidades Sociales y Autonomía
+                </button>
+            </div>
+
+            <!-- Contenido de Objetivos -->
+            <div class="objetivos-content">
+                <!-- Formación en Valores y Ciudadanía -->
+                <div class="objetivo-item active" id="objetivo-formacion">
+                    <div class="objetivo-grid">
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Valores para la Convivencia</h3>
+                            <p class="objetivo-text">
+                                La formación de los valores fundamentales para la convivencia de una sociedad democrática, 
+                                participativa y pluralista.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Valores Cívicos y Morales</h3>
+                            <p class="objetivo-text">
+                                El desarrollo de valores civiles y morales de organización social y de convivencia humana.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Educación Constitucional</h3>
+                            <p class="objetivo-text">
+                                La iniciación en el conocimiento de la constitución política.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Participación Infantil</h3>
+                            <p class="objetivo-text">
+                                La formación para la participación y organización infantil y la utilización adecuada del tiempo libre.
                             </p>
                         </div>
                     </div>
                 </div>
 
-
-
-
-
-
-
-                <div class="metodologia-grid-primaria">
-                    <div class="metodologia-image-primaria">
-                        <img src="images/Primariaa.jpeg" alt="Metodología Primaria">
+                <!-- Desarrollo Académico y Cognitivo -->
+                <div class="objetivo-item" id="objetivo-academico">
+                    <div class="objetivo-grid">
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Deseo de Saber</h3>
+                            <p class="objetivo-text">
+                                El fomento del deseo del saber, de la iniciativa personal frente al conocimiento y frente a 
+                                la realidad social, así como el espíritu crítico.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Habilidades Comunicativas</h3>
+                            <p class="objetivo-text">
+                                El desarrollo de las habilidades comunicativas básicas para leer, comprender, escribir, escuchar, 
+                                hablar y expresarse correctamente en lengua castellana, así como el fomento de la afición por la lectura.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-feather-alt"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Expresión Estética</h3>
+                            <p class="objetivo-text">
+                                El desarrollo de la capacidad para apreciar y utilizar la lengua como medio de expresión estética.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Pensamiento Matemático</h3>
+                            <p class="objetivo-text">
+                                El desarrollo de los conocimientos matemáticos necesarios para manejar y utilizar operaciones simples 
+                                de cálculo y procedimientos lógicos elementales en diferentes situaciones, así como la capacidad para 
+                                solucionar problemas que impliquen conocimientos.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Comprensión del Medio</h3>
+                            <p class="objetivo-text">
+                                La comprensión básica del medio físico, social y cultural en el nivel local, nacional y universal, 
+                                de acuerdo con el desarrollo intelectual correspondiente a su edad.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Asimilación de Conceptos</h3>
+                            <p class="objetivo-text">
+                                La asimilación de conceptos en áreas del conocimiento que sean objeto de estudio, de acuerdo con 
+                                el desarrollo intelectual y la edad.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Lengua Extranjera</h3>
+                            <p class="objetivo-text">
+                                La adquisición de elementos de conversación y de lectura al menos en una lengua extranjera.
+                            </p>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="metodologia-content-primaria">
-                        <h2>Aprendizaje Significativo</h2>
-                        <p>
-                            Nuestro enfoque pedagógico se centra en el estudiante como protagonista
-                            de su proceso de aprendizaje, desarrollando habilidades del siglo XXI.
-                        </p>
-
-                        <div class="metodologia-list-primaria">
-                            <div class="metodologia-item-primaria">
-                                <div class="metodologia-icon-primaria">
-                                    <i class="fas fa-brain"></i>
-                                </div>
-                                <div class="metodologia-text-primaria">
-                                    <h4>Pensamiento Crítico</h4>
-                                    <p>Estrategias que estimulan el análisis, la argumentación y la toma de decisiones
-                                        fundamentadas.</p>
-                                </div>
+                <!-- Desarrollo Físico y Artístico -->
+                <div class="objetivo-item" id="objetivo-fisico">
+                    <div class="objetivo-grid">
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-heartbeat"></i>
                             </div>
-
-                            <div class="metodologia-item-primaria">
-                                <div class="metodologia-icon-primaria">
-                                    <i class="fas fa-project-diagram"></i>
-                                </div>
-                                <div class="metodologia-text-primaria">
-                                    <h4>Aprendizaje por Proyectos</h4>
-                                    <p>Integración de áreas del conocimiento mediante proyectos interdisciplinarios y
-                                        colaborativos.</p>
-                                </div>
+                            <h3 class="objetivo-subtitle">Salud y Cuidado Personal</h3>
+                            <p class="objetivo-text">
+                                La valoración de la higiene y la salud del propio cuerpo y la formación para la protección de 
+                                la naturaleza y el ambiente.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-running"></i>
                             </div>
-
-                            <div class="metodologia-item-primaria">
-                                <div class="metodologia-icon-primaria">
-                                    <i class="fas fa-flask"></i>
-                                </div>
-                                <div class="metodologia-text-primaria">
-                                    <h4>Experimentación Científica</h4>
-                                    <p>Desarrollo del método científico a través de prácticas de laboratorio y proyectos
-                                        de investigación.</p>
-                                </div>
+                            <h3 class="objetivo-subtitle">Educación Física y Deportes</h3>
+                            <p class="objetivo-text">
+                                El conocimiento y ejercitación del propio cuerpo mediante la práctica de la educación física, 
+                                la recreación y los deportes adecuados a su edad y conducentes a un desarrollo físico armónico.
+                            </p>
+                        </div>
+                        
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-palette"></i>
                             </div>
+                            <h3 class="objetivo-subtitle">Formación Artística</h3>
+                            <p class="objetivo-text">
+                                La formación artística mediante la expresión corporal, la representación, la música, la plástica 
+                                y la literatura.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Habilidades Sociales y Autonomía -->
+                <div class="objetivo-item" id="objetivo-social">
+                    <div class="objetivo-grid">
+                        <div class="objetivo-card">
+                            <div class="objetivo-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h3 class="objetivo-subtitle">Autonomía Personal</h3>
+                            <p class="objetivo-text">
+                                La adquisición de habilidades para desempeñarse con autonomía en la sociedad.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+
+
+
+
+
 
 
 
@@ -248,10 +423,7 @@
                     <!-- Aula 1 -->
                     <div class="aula-card-primaria">
                         <div class="aula-image-primaria">
-                            <img src="images/Primariaa.jpeg" alt="Aula 1">
-                            <div class="aula-overlay-primaria">
-                                <span class="aula-numero-primaria">Aula 1</span>
-                            </div>
+                            <img src="images/Primariaa.jpeg" alt="Aula 1">                            
                         </div>
                         <div class="aula-info-primaria">
                             <h4>Aula de Primero</h4>
@@ -266,9 +438,7 @@
                     <div class="aula-card-primaria">
                         <div class="aula-image-primaria">
                             <img src="images/Primariaa.jpeg" alt="Aula 2">
-                            <div class="aula-overlay-primaria">
-                                <span class="aula-numero-primaria">Aula 2</span>
-                            </div>
+                            
                         </div>
                         <div class="aula-info-primaria">
                             <h4>Aula de Segundo</h4>
@@ -283,9 +453,7 @@
                     <div class="aula-card-primaria">
                         <div class="aula-image-primaria">
                             <img src="images/Primariaa.jpeg" alt="Aula 3">
-                            <div class="aula-overlay-primaria">
-                                <span class="aula-numero-primaria">Aula 3</span>
-                            </div>
+                            
                         </div>
                         <div class="aula-info-primaria">
                             <h4>Aula de Tercero</h4>
@@ -300,9 +468,7 @@
                     <div class="aula-card-primaria">
                         <div class="aula-image-primaria">
                             <img src="images/Primariaa.jpeg" alt="Aula 4">
-                            <div class="aula-overlay-primaria">
-                                <span class="aula-numero-primaria">Aula 4</span>
-                            </div>
+                            
                         </div>
                         <div class="aula-info-primaria">
                             <h4>Aula de Cuarto</h4>
@@ -317,9 +483,6 @@
                     <div class="aula-card-primaria aula-card-centrada">
                         <div class="aula-image-primaria">
                             <img src="images/Primariaa.jpeg" alt="Aula 5">
-                            <div class="aula-overlay-primaria">
-                                <span class="aula-numero-primaria">Aula 5</span>
-                            </div>
                         </div>
                         <div class="aula-info-primaria">
                             <h4>Aula de Quinto</h4>
@@ -331,175 +494,16 @@
                     </div>
                 </div>
             </div>
+            </div>
         </section>
 
 
 
 
+            
 
 
-
- <!-- TIMELINE DE GRADOS -->
-<section class="timeline-primaria">
-    <div class="container">
-        <!-- Header de la sección con logo -->
-        <div class="admision-nav-header">
-            <div class="header-content-wrapper">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
-                <div class="header-text-content">
-                    <div class="header-label">
-                        <span class="label-icon">✦</span>
-                        <span class="label-text">Comunicate con nosotros</span>
-                    </div>
-                    <h2 class="admision-nav-title">Niveles Académicos</h2>
-                    <p class="admision-nav-subtitle">Desarrollo progresivo y formación integral en cada etapa educativa.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="timeline-container-primaria">
-            <div class="timeline-line-primaria"></div>
-
-            <!-- Primero -->
-            <div class="timeline-item-primaria">
-                <div class="timeline-content-left-primaria">
-                    <div class="timeline-card-header">
-                        <span class="timeline-badge-primaria">Primaria</span>
-                        <h3 class="timeline-grade-primaria">Grado Primero</h3>
-                    </div>
-                    <p class="timeline-description-primaria">
-                        En primer grado iniciamos el proceso formal de aprendizaje con fundamentos sólidos 
-                        en lectura, escritura y operaciones matemáticas básicas. Nuestro enfoque pedagógico 
-                        busca fortalecer las habilidades comunicativas y el desarrollo del pensamiento lógico. 
-                    </p>
-                    <div class="timeline-features-primaria">
-                        <div class="timeline-feature-primaria">
-                            
-                            <span class="feature-text-primaria">•  Proceso lectoescritor consolidado mediante técnicas de fonética y comprensión textual</span>
-                        </div>
-                        <div class="timeline-feature-primaria">
-                            <span class="feature-text-primaria">•  Operaciones de suma y resta con material concreto y representaciones gráficas</span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="timeline-marker-primaria">1°</div>
-                <div></div>
-            </div>
-
-            <!-- Segundo -->
-            <div class="timeline-item-primaria">
-                <div></div>
-                <div class="timeline-marker-primaria">2°</div>
-                <div class="timeline-content-right-primaria">
-                    <div class="timeline-card-header">
-                        <span class="timeline-badge-primaria">Primaria</span>
-                        <h3 class="timeline-grade-primaria">Grado Segundo</h3>
-                    </div>
-                    <p class="timeline-description-primaria">
-                        El segundo grado representa una etapa crucial en el fortalecimiento de competencias 
-                        comunicativas y el desarrollo del pensamiento lógico-matemático. Los estudiantes 
-                        consolidan sus habilidades de lectura y escritura.
-                    </p>
-                    <div class="timeline-features-primaria">
-                        <div class="timeline-feature-primaria">
-                            <span class="feature-text-primaria">•  Comprensión lectora avanzada con análisis de textos narrativos y descriptivos</span>
-                        </div>
-                        <div class="timeline-feature-primaria">
-                            <span class="feature-text-primaria">•  Multiplicación y división básica aplicada a situaciones cotidianas</span>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tercero -->
-            <div class="timeline-item-primaria">
-                <div class="timeline-content-left-primaria">
-                    <div class="timeline-card-header">
-                        <span class="timeline-badge-primaria">Primaria</span>
-                        <h3 class="timeline-grade-primaria">Grado Tercero</h3>
-                    </div>
-                    <p class="timeline-description-primaria">
-                        Tercer grado marca el desarrollo del pensamiento crítico y habilidades investigativas 
-                        iniciales. Los estudiantes aprenden a cuestionar, analizar y proponer soluciones a 
-                        problemas de su entorno. 
-                    </p>
-                    <div class="timeline-features-primaria">
-                        <div class="timeline-feature-primaria">
-
-                            <span class="feature-text-primaria">•  Producción textual estructurada con coherencia, cohesión y propósito comunicativo claro</span>
-                        </div>
-                        <div class="timeline-feature-primaria">
-
-                            <span class="feature-text-primaria">•  Resolución de problemas matemáticos aplicando estrategias de razonamiento lógico</span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="timeline-marker-primaria">3°</div>
-                <div></div>
-            </div>
-
-            <!-- Cuarto -->
-            <div class="timeline-item-primaria">
-                <div></div>
-                <div class="timeline-marker-primaria">4°</div>
-                <div class="timeline-content-right-primaria">
-                    <div class="timeline-card-header">
-                        <span class="timeline-badge-primaria">Primaria</span>
-                        <h3 class="timeline-grade-primaria">Grado Cuarto</h3>
-                    </div>
-                    <p class="timeline-description-primaria">
-                        En cuarto grado profundizamos en las áreas del conocimiento y desarrollamos la 
-                        autonomía académica de nuestros estudiantes. Se introduce el análisis e interpretación 
-                        textual más complejo, geometría avanzada y estadística básica. 
-                    </p>
-                    <div class="timeline-features-primaria">
-                        <div class="timeline-feature-primaria">
-
-                            <span class="feature-text-primaria">•  Análisis e interpretación textual de diversos géneros literarios y académicos</span>
-                        </div>
-                        <div class="timeline-feature-primaria">
-
-                            <span class="feature-text-primaria">•  Geometría plana, estadística básica y análisis de datos en contextos reales</span>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quinto -->
-            <div class="timeline-item-primaria">
-                <div class="timeline-content-left-primaria">
-                    <div class="timeline-card-header">
-                        <span class="timeline-badge-primaria">Primaria</span>
-                        <h3 class="timeline-grade-primaria">Grado Quinto</h3>
-                    </div>
-                    <p class="timeline-description-primaria">
-                        Quinto grado representa la consolidación de conocimientos y la preparación integral 
-                        para la educación secundaria. Los estudiantes desarrollan habilidades de argumentación, 
-                        pensamiento crítico avanzado y razonamiento matemático complejo.
-                    </p>
-                    <div class="timeline-features-primaria">
-                        <div class="timeline-feature-primaria">
-
-                            <span class="feature-text-primaria">•  Argumentación oral y escrita con fundamentos sólidos y pensamiento crítico reflexivo</span>
-                        </div>
-                        <div class="timeline-feature-primaria">
-
-                            <span class="feature-text-primaria">•  Argumentación oral y escrita con fundamentos sólidos y pensamiento crítico reflexivo</span>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-                <div class="timeline-marker-primaria">5°</div>
-                <div></div>
-            </div>
-        </div>
-    </div>
-</section>
+ 
 
 
         <!-- Incluir el footer -->
@@ -507,6 +511,42 @@
 
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+           <script>
+        // Funcionalidad de navegación de objetivos
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.objetivo-tab');
+            const items = document.querySelectorAll('.objetivo-item');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const categoriaId = this.getAttribute('data-categoria');
+                    
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    items.forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    setTimeout(() => {
+                        const targetItem = document.getElementById('objetivo-' + categoriaId);
+                        if (targetItem) {
+                            targetItem.classList.add('active');
+                            
+                            if (window.innerWidth <= 768) {
+                                targetItem.scrollIntoView({ 
+                                    behavior: 'smooth', 
+                                    block: 'nearest' 
+                                });
+                            }
+                        }
+                    }, 150);
+                });
+            });
+        });
+    </script>
+
     </body>
 
 </html>

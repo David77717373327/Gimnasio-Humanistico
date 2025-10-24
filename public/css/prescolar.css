@@ -276,7 +276,7 @@
     font-size: 16px;
     font-weight: 700;
     padding: 18px 36px;
-    border-radius: 12px;
+   
     text-decoration: none;
     box-shadow: 0 8px 24px rgba(13, 63, 39, 0.25);
     transition: all 0.3s ease;
@@ -375,7 +375,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 24px;
+    
     overflow: hidden;
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
     border: 8px solid white;
@@ -539,6 +539,16 @@
         margin-top: 16px;
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1286,259 +1296,4 @@
 
 
 
-
-/* ============================================
-   EXPERIENCIAS POR NIVEL - Accordion Moderno
-============================================ */
-.experiencias-nivel-section {
-    padding: 10px 0;
-    background: var(--white);
-}
-
-.niveles-accordion {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.nivel-accordion-item {
-    background: var(--white);
-    border: 2px solid rgba(30, 58, 95, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.nivel-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.nivel-accordion-item:hover {
-    box-shadow: var(--shadow-md);
-}
-
-.nivel-header-modern {
-    padding: 22px 26px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    cursor: pointer;
-    position: relative;
-    border-bottom: solid 1px rgba(30, 58, 95, 0.1);   
-}
-
-/* NUMERACIÓN EDITORIAL PROFESIONAL - DORADO */
-.nivel-info {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.nivel-number {
-    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
-    font-size: 2.5rem;
-    font-weight: 400;
-    background: var(--dark-gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
-    flex-shrink: 0;
-    min-width: 60px;
-    transition: all 0.3s ease;
-    letter-spacing: -0.02em;
-    opacity: 0.85;
-    position: relative;
-}
-
-
-
-.nivel-info h3 {
-    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
-    font-size: 1.85rem;
-    font-weight: 700;
-    color: var(--primary-green);
-    margin: 0;
-}
-
-.nivel-color-bar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 5px;
-    height: 100%;
-}
-
-.parvulos-color {
-    background: var(--primary-green);
-}
-
-.prejardin-color {
-    background: var(--primary-green);
-}
-
-.jardin-color {
-    background: var(--primary-green);
-}
-
-.transicion-color {
-    background: var(--primary-green);
-}
-
-.nivel-body-modern {
-    padding: 0 36px 36px 36px;
-    border-top: 1px solid rgba(30, 58, 95, 0.05);
-}
-
-/* Divisor decorativo con acento dorado */
-.nivel-divider {
-    width: 60px;
-    height: 3px;
-    background: var(--primary-green);
-    margin: 24px 0 0 0;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(212, 175, 55, 0.2);
-}
-
-/* Espaciado ajustado */
-.nivel-intro {
-    font-size: 1.0625rem;
-    color: var(--text-dark);
-    line-height: 1.8;
-    margin: 32px 0 28px;
-}
-
-.nivel-activities-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-}
-
-/* Bullets minimalistas profesionales */
-.activity-point {
-    padding: 16px 20px 16px 16px;
-    background: rgba(30, 58, 95, 0.03);
-    border-left: 3px solid var(--accent-blue);
-    font-size: 0.9375rem;
-    color: var(--text-dark);
-    line-height: 1.6;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.activity-bullet {
-    width: 4px;
-    height: 4px;
-    background: var(--primary-green);
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 9px;
-    opacity: 0.6;
-    transition: all 0.2s ease;
-}
-
-.activity-point:hover {
-    background: rgba(30, 58, 95, 0.06);
-    transform: translateX(4px);
-}
-
-.activity-point:hover .activity-bullet {
-    opacity: 1;
-    transform: scale(1.6);
-    box-shadow: 0 0 8px rgba(30, 58, 95, 0.3);
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
-============================================ */
-@media (max-width: 991px) {
-    .content-text-area {
-        padding-right: 0;
-        margin-bottom: 40px;
-    }
-    
-    .section-heading {
-        font-size: 2.25rem;
-    }
-    
-    .image-box,
-    .image-box.reverse {
-        padding: 20px 0;
-    }
-    
-    .primeros-aprendizajes-section,
-    .aprender-jugando-section,
-    .horarios-espacios-section,
-    .experiencias-nivel-section {
-        padding: 80px 0;
-    }
-    
-    .activity-modern-item {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 24px;
-    }
-    
-    .activity-visual {
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 767px) {
-    .section-heading {
-        font-size: 1.875rem;
-    }
-    
-    .section-lead {
-        font-size: 1.125rem;
-    }
-    
-    .horarios-modern-grid,
-    .aulas-modern-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .nivel-header-modern {
-        padding: 24px 20px;
-    }
-    
-    .nivel-body-modern {
-        padding: 0 20px 24px 20px;
-    }
-    
-    .nivel-activities-list {
-        grid-template-columns: 1fr;
-    }
-    
-    .nivel-number {
-        font-size: 2rem;
-        min-width: 50px;
-    }
-    
-    .nivel-info {
-        gap: 16px;
-    }
-    
-    .nivel-divider {
-        width: 50px;
-        margin: 20px 0 0 0;
-    }
-    
-    .nivel-intro {
-        margin: 28px 0 24px;
-    }
-}
-
- 
 
