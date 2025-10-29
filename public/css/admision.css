@@ -319,7 +319,7 @@
 ============================================ */
 
 .admision-nav-section {
-    background: linear-gradient(180deg, #f8fafb 0%, #ffffff 100%);
+   background-color: white;
     padding: 6rem 0 1rem;
     position: relative;
     overflow: hidden;
@@ -540,8 +540,8 @@
 .nav-card-compact {
     text-decoration: none;
     color: inherit;
-    background: #ffffff;
-    border-radius: 16px;
+    
+    background: #f0f7e6; 
     padding: 2rem 1.8rem;
     position: relative;
     overflow: hidden;
@@ -554,7 +554,6 @@
     min-width: 300px;
     flex-shrink: 0;
 }
-
 
 
 .nav-card-featured:hover::after,
@@ -574,17 +573,6 @@
     pointer-events: none;
 }
 
-.nav-card-featured:hover::before,
-.nav-card-compact:hover::before {
-    background: linear-gradient(135deg, rgba(13, 63, 39, 0.03) 0%, rgba(13, 63, 39, 0.04) 100%);
-}
-
-.nav-card-featured:hover,
-.nav-card-compact:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06), 0 14px 40px rgba(13, 63, 39, 0.08);
-    border-color: rgba(13, 63, 39, 0.12);
-}
 
 /* Badge en AMARILLO para destacar solo elementos esenciales */
 .featured-badge {
@@ -594,7 +582,6 @@
     background: linear-gradient(135deg, #f4b942 0%, #d89d2a 100%);
     color: #ffffff;
     padding: 0.4rem 0.85rem;
-    border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
     font-weight: 800;
@@ -619,7 +606,6 @@
 .compact-icon {
     width: 56px;
     height: 56px;
-    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -632,8 +618,6 @@
 }
 
 
-
-
 /* Contenido unificado */
 .featured-content,
 .compact-content {
@@ -644,7 +628,6 @@
     gap: 0.4rem;
     flex: 1;
 }
-
 
 
 .featured-title,
@@ -668,6 +651,7 @@
     font-weight: 400;
 }
 
+
 /* Action unificado con fondo amarillo */
 .featured-action,
 .compact-arrow {
@@ -680,7 +664,6 @@
     margin-top: auto;
     border-top: 1px solid rgba(13, 63, 39, 0.06);
 }
-
 
 
 .action-arrow {
@@ -697,6 +680,7 @@
     flex-shrink: 0;
     position: relative;
 }
+
 
 .nav-card-featured:hover .action-arrow,
 .nav-card-compact:hover .action-arrow {
@@ -858,6 +842,8 @@
         transition: none;
     }
 }
+
+
 
 
 

@@ -596,8 +596,7 @@
 .simbolos-section {
     margin-bottom: 0px;
     padding: 0.12rem 0;
-    background: var(--white);
-    
+    background: var(--white);   
 }
 
 .simbolos-container {

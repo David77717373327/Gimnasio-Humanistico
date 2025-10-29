@@ -283,7 +283,7 @@
             </a>
 
             <!-- Card 4: Símbolos -->
-            <a href="{{ route('simbolos') }}" class="nav-card-inst simbolos">
+            <a href="{{ route('principios-valores') }}" class="nav-card-inst simbolos">
                 <div class="nav-card-overlay-inst"></div>
                 <div class="nav-card-content-inst">
                     <div class="nav-icon-inst">

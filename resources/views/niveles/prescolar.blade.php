@@ -25,76 +25,47 @@
     <!-- Incluir el header -->
     @include('layouts.header')
 
-        <!-- Hero Section - Educación Preescolar -->
-<section class="hero-preescolar">
-    <!-- Formas decorativas animadas -->
-    <div class="floating-shape shape-1"></div>
-    <div class="floating-shape shape-2"></div>
-    <div class="floating-shape shape-3"></div>
-    <div class="floating-shape shape-4"></div>
-    <div class="floating-shape shape-5"></div>
-    
-    <!-- Partículas decorativas -->
-    <div class="particle particle-1">★</div>
-    <div class="particle particle-2">✦</div>
-    <div class="particle particle-3">●</div>
-    <div class="particle particle-4">★</div>
-    <div class="particle particle-5">✦</div>
-    
-    <div class="hero-container">
-        <div class="hero-content">
-            <!-- Lado izquierdo: Contenido -->
-            <div class="hero-text-section">
-                <div class="hero-tag">
-                    <span>🎈 Nivel Preescolar</span>
-                </div>
-                
-                <h1 class="hero-title">
-                     EDUCACION INICIAL PREESCOLAR 
-                </h1>
-                
-                <p class="hero-description">
-                    En nuestro preescolar, cada niño descubre su potencial único a través de experiencias 
-                    de aprendizaje significativas, creativas y llenas de alegría. Creamos un ambiente donde 
-                    los pequeños desarrollan habilidades fundamentales mientras se divierten y exploran el mundo.
-                </p>
-                
-                
-                <div class="hero-buttons">
-                    <a href="#informacion" class="btn-primary">
-                        Conocer el programa
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Lado derecho: Visual -->
-            <div class="hero-visual-section">
-                <div class="image-container">
-                    <!-- Elementos decorativos alrededor de la imagen -->
-                    <div class="deco-circle deco-1"></div>
-                    <div class="deco-circle deco-2"></div>
-                    <div class="deco-square"></div>
-                    <div class="deco-line"></div>
-                    
-                    <!-- Imagen principal -->
-                    <div class="main-image-wrapper">
-                        <img src="{{ asset('images/Primariaa.jpeg') }}" 
-                             alt="Niños felices en preescolar" class="main-image">
-                    </div>
+
+
+
+
+ <!-- HERO SECTION AVANZADO -->
+    <section class="hero-advanced">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-10 offset-lg-1 text-center">
+
+                    <h1 class="hero-title">
+                        <span class="title-highlight">Educación Inicial</span> -
+                        <span class="title-highlight">Preescolar</span>
+                    </h1>
+                    <div class="hero-scroll-indicator" onclick="scrollToTimeline()">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
+        
+    
+
+    
+
+
+
+
+
 
 
 
 <!-- Sección Principal de Contenido Preescolar -->
-<section class="preescolar-content">
+<section class="preescolar-content" id="preescolar-content">
     
 
     <!-- Metodología Activa - Rediseño -->
@@ -181,6 +152,12 @@
 
 
 
+
+
+
+
+
+
    <!-- Horarios y Aulas - Rediseño Ultra Compacto -->
 <div class="horarios-aulas-section">
     <div class="container">
@@ -262,8 +239,6 @@
         </div>
     </div>
 </div>
-
-
 </section>
 
 <!-- Incluir el footer -->
@@ -272,3 +247,113 @@
 
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+        // Scroll suave para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animación de partículas en el hero (MODIFICADO para funcionar con ambas clases)
+        function createParticles() {
+            const particles = document.querySelector('.hero-particles') ||
+                document.querySelector('.floating-particles');
+            if (particles) {
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 20 + 's';
+                    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                    particles.appendChild(particle);
+                }
+            }
+        }
+
+        // Inicializar partículas
+        createParticles();
+
+
+        // Scroll suave para el indicador de scroll del hero
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', function() {
+                    const nextSection = document.querySelector('.historia-hero').nextElementSibling;
+                    if (nextSection) {
+                        nextSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    } else {
+                        window.scrollBy({
+                            top: window.innerHeight * 0.7,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        });
+
+
+
+
+        
+
+        // Scroll suave al timeline
+        function scrollToTimeline() {
+            document.getElementById('preescolar-content').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+
+
+
+        // Script para adaptar automáticamente el tamaño del título
+        // Agregar este script al final del body o en tu archivo JS principal
+
+        function adaptHeroTitle() {
+            const heroTitle = document.querySelector('.hero-title');
+            if (!heroTitle) return;
+
+            const titleText = heroTitle.textContent.trim();
+            const characterCount = titleText.length;
+            const wordCount = titleText.split(' ').length;
+
+            // Remover clases previas
+            heroTitle.classList.remove('auto-long', 'auto-short');
+
+            // Aplicar clase según la longitud del texto
+            if (characterCount > 35 || wordCount > 5) {
+                // Título largo como "Componente Filosófico De Identidad"
+                heroTitle.classList.add('auto-long');
+            } else if (characterCount < 15 || wordCount < 3) {
+                // Título corto
+                heroTitle.classList.add('auto-short');
+            }
+            // Si está en el rango medio, usa el estilo por defecto
+        }
+
+        // Ejecutar cuando la página cargue
+        document.addEventListener('DOMContentLoaded', function() {
+            adaptHeroTitle();
+        });
+
+        // Re-evaluar si cambia el tamaño de ventana
+        window.addEventListener('resize', function() {
+            adaptHeroTitle();
+        });
+    </script>
+
+</body>
+</html>

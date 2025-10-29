@@ -152,12 +152,14 @@ h6 {
     width: 100%;
     height: 100%;
     background: linear-gradient(     
-        rgba(0, 0, 0, 0.4) 75%,     /* comienza a oscurecer más arriba */
-        rgba(0, 0, 0, 0.9) 90%,     /* más oscuro hacia el final */
-        rgba(0, 0, 0, 1) 100%       /* totalmente oscuro abajo */
+        rgba(0, 0, 0, 0.1) 60%,     /* comienza a oscurecer más arriba */
+        rgba(0, 0, 0, 0.8) 90%,     /* más oscuro hacia el final */
+        rgba(0, 0, 0, 8) 100%       /* totalmente oscuro abajo */
     );
     z-index: 2;
 }
+
+
 
 /* Contenido del hero */
 .hero-content {
@@ -179,7 +181,7 @@ h6 {
 
 .hero-title {
     font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
-    font-size: clamp(2rem, 2.67vw, 2rem);
+    font-size: clamp(2.1rem, 2.97vw, 2rem);
     font-weight: 700;
     color: #ffffff;
     line-height: 1.1;
@@ -1570,34 +1572,32 @@ h6 {
 
         
 
-        .card-header {
-            /* Degradado moderno y sofisticado */
-            background-color: var(--primary-green);
-            color: var(--white);
-            padding: 0.43rem 1rem;
-            text-align: center;
-            position: relative;
-            flex-shrink: 0;
-            overflow: hidden;
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px 12px 0 0;
-        }
+       .card-header {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 0.43rem 1rem;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    border-radius: 12px 12px 0 0;
+}
 
-        .card-header h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0;
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.8;
-            letter-spacing: -0.005em;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.15);
-            position: relative;
-            z-index: 2;
-            color: var(--white);
-        }
+.card-header h3 {
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-left: 1.9rem; /* Margen suave desde la izquierda */
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.8;
+    letter-spacing: -0.005em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+}
+
 
         .card-body {
             /* Fondo transparente sin márgenes ni bordes - MODIFICACIÓN PRINCIPAL */
@@ -1862,7 +1862,7 @@ h6 {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafb 25%, #ffffff 50%, #f1f5f9 75%, #ffffff 100%);
     position: relative;
     overflow: hidden;
-    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 
@@ -1987,67 +1987,25 @@ h6 {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
     text-align: justify;
-    
-
     font-weight: 400;
     flex-grow: 1;
 }
 
-.academic-levels-section .level-highlights {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-}
-
-.academic-levels-section .level-highlights .highlight-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
-    background: linear-gradient(135deg, rgba(13, 63, 39, 0.04), rgba(13, 63, 39, 0.02));
-    border-radius: var(--border-radius-md);
-    transition: var(--transition-fast);
-    border: 1px solid rgba(13, 63, 39, 0.06);
-}
-
-
-
-.academic-levels-section .level-highlights .highlight-item i {
-    width: 36px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent-gold);
-    font-size: 0.9rem;
-    background: rgba(244, 185, 66, 0.1);
-    border-radius: 50%;
-    transition: var(--transition-fast);
-    flex-shrink: 0;
-}
-
-.academic-levels-section .level-highlights .highlight-item:hover i {
-    background: var(--gradient-gold);
-    color: var(--white);
-    transform: rotate(360deg);
-}
 
 
 
 
-.academic-levels-section .level-highlights .highlight-item span {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    letter-spacing: 0.02em;
-}
+
+
+
+
+
 
 .academic-levels-section .level-link {
     display: inline-flex;
     align-items: center;
     gap: 1rem;
-    color: var(--light-gray);
+    color: var(--white);
     text-decoration: none;
     font-weight: 700;
     font-size: 0.9rem;
@@ -2072,10 +2030,7 @@ h6 {
     box-shadow: var(--shadow-md);
 }
 
-.academic-levels-section .level-link i {
-    font-size: 0.85rem;
-    transition: var(--transition-normal);
-}
+
 
 .academic-levels-section .level-link:hover i {
     transform: translateX(5px);
@@ -2273,7 +2228,6 @@ h6 {
 /* Focus states mejorados */
 .academic-levels-section .level-card:focus,
 .academic-levels-section .level-link:focus {
-    outline: 3px solid var(--primary-green);
     outline-offset: 2px;
 }
 

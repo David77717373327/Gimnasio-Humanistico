@@ -69,5 +69,15 @@ class RutasController extends Controller
     {
         return view('niveles.basica_primaria');
     }
+    public function mostrarcontenidobasicasegundaria()
 
+    {
+        return view('niveles.basica_segundaria');
+    }
+
+    public function mostrarcontenidomediaacademica ()
+
+    {
+        return view('niveles.media_academica');
+    }
 }

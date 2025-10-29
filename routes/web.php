@@ -44,10 +44,14 @@ Route::get('/simbolos-institucionales', [RutasController::class, 'mostrarconteni
 Route::get('/principos-valores', [RutasController::class, 'mostrarcontenidoprincipiosyvarolres'])->name('principios-valores');
 
 
-//Tutas para mostrar contenido de niveles educativos
+//Rutas para mostrar contenido de niveles educativos
 Route::get('/Prescolar', [RutasController::class, 'mostrarcontenidoprecolar'])->name('prescolar');
 
 Route::get('/BasicaPrimaria', [RutasController::class, 'mostrarcontenidobasicaprimaria'])->name('basica_primaria');
+
+Route::get('/BasicaSegundaria', [RutasController::class, 'mostrarcontenidobasicasegundaria'])->name('basica_segundaria');
+
+Route::get('/Mediaacademica', [RutasController::class, 'mostrarcontenidomediaacademica'])->name('media_academica');
 
 
 

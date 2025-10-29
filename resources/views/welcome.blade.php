@@ -63,7 +63,7 @@
                         
                         <!-- Botones en fila -->
                         <div class="hero-buttons-wrapper">
-                            <a href="#admision" class="btn-primary-modern">
+                            <a href="{{ route('admision') }}" class="btn-primary-modern">
                                 <i class="fas fa-rocket"></i>
                                 Solicitar Admisión
                             </a>
@@ -331,7 +331,7 @@
                 <div class="about-card philosophy-card" data-aos="fade-up" data-aos-delay="400">
 
                     <div class="card-header">
-                        <h3>FILOSOFÍA INSTITUCIONAL</h3>
+                        <h3>FILOSOFÍA </h3>
                     </div>
                     <div class="card-body">
 
@@ -395,18 +395,8 @@
                             <p class="level-description">
                                 Desarrollamos las habilidades fundamentales a través del juego,
                                 la exploración y actividades que estimulan la creatividad y el pensamiento crítico.
-                            </p>
-                            <div class="level-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-palette"></i>
-                                    <span>Arte y Creatividad</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-music"></i>
-                                    <span>Música y Movimiento</span>
-                                </div>
-                            </div>
-                            <a href="#preescolar-detalle" class="level-link">
+                            </p>                         
+                            <a href="{{ route('prescolar') }}" class="level-link">
                                 <span>Ver más información</span>
                                 <i class="fas fa-arrow-right"></i>
                             </a>
@@ -447,17 +437,8 @@
                                 Fortalecemos las competencias comunicativas, matemáticas y científicas
                                 con metodologías activas y enfoque en el aprendizaje colaborativo.
                             </p>
-                            <div class="level-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-globe"></i>
-                                    <span>Bilingüismo Intensivo</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-laptop"></i>
-                                    <span>Tecnología Educativa</span>
-                                </div>
-                            </div>
-                            <a href="#primaria-detalle" class="level-link">
+                            
+                            <a href="{{ route('basica_primaria') }}" class="level-link">
                                 <span>Ver más información</span>
                                 <i class="fas fa-arrow-right"></i>
                             </a>
@@ -496,17 +477,7 @@
                             <p class="level-description">
                                 Desarrollo del pensamiento crítico y analítico a través de proyectos
                                 interdisciplinarios que preparan para los desafíos de la educación media.
-                            </p>
-                            <div class="level-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-flask"></i>
-                                    <span>Laboratorios Especializados</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span>Proyectos de Investigación</span>
-                                </div>
-                            </div>
+                            </p>                            
                             <a href="#secundaria-detalle" class="level-link">
                                 <span>Ver más información</span>
                                 <i class="fas fa-arrow-right"></i>
@@ -547,17 +518,7 @@
                             <p class="level-description">
                                 Preparación integral para la educación superior con énfasis en el desarrollo
                                 del proyecto de vida y competencias para el siglo XXI.
-                            </p>
-                            <div class="level-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-university"></i>
-                                    <span>Preparación Universitaria</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-certificate"></i>
-                                    <span>Certificaciones Internacionales</span>
-                                </div>
-                            </div>
+                            </p>                            
                             <a href="#media-detalle" class="level-link">
                                 <span>Ver más información</span>
                                 <i class="fas fa-arrow-right"></i>

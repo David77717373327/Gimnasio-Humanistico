@@ -23,17 +23,17 @@
     --text-muted: #9CA3AF;
 
     /* Azul principal - confianza */
-    --primary-blue: #1E3A5F;  
+    --primary-blue: #1E3A5F;
     /* Azul oscuro - elegancia */
-    --dark-blue: #264653;  
+    --dark-blue: #264653;
     /* Azul profundo (similar al que mostraste) */
-    --deep-blue: #003366;  
+    --deep-blue: #003366;
     /* Azul intermedio - contraste suave */
-    --soft-blue: #07346e;  
+    --soft-blue: #07346e;
     /* Azul grisáceo - texto y detalles */
-    --slate-blue: #3A506B;  
+    --slate-blue: #3A506B;
     /* Complemento claro (fondos suaves) */
-    --light-blue: #E0ECF7;  
+    --light-blue: #E0ECF7;
 
     /* Nuevos colores para modernizar */
     --soft-blue: #EBF8FF;
@@ -47,7 +47,6 @@
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
 
     /* Gradientes modernos */
     --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
@@ -70,6 +69,10 @@
     --transition-normal: 0.1s ease-out;
     --transition-slow: 0.5s ease-out;
 }
+
+
+
+
 
 
 
@@ -303,23 +306,13 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* ============================================
-   HEADER SECTION PREESCOLAR - DISEÑO EMPRESARIAL REFINADO
+   HEADER SECTION PREESCOLAR - DISEÑO PROFESIONAL
 ============================================ */
 
 .admision-nav-header {
     text-align: center;
-   margin-top: 3rem;
+   margin-top: 4rem;
     position: relative;
     z-index: 2;
     animation: fadeInDown 0.6s ease-out;
@@ -332,232 +325,444 @@
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Wrapper principal - Centrado vertical perfecto */
-.header-content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Logo del colegio - Posicionamiento elegante */
-.header-logo {
-    width: 95px;
-    height: 95px;
-    object-fit: contain;
-    flex-shrink: 0;
-    filter: drop-shadow(0 4px 12px rgba(13, 63, 39, 0.12));
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-logo:hover {
-    transform: translateY(-3px);
-    filter: drop-shadow(0 6px 16px rgba(13, 63, 39, 0.18));
-}
-
-/* Contenedor del texto - Centrado profesional */
-.header-text-content {
-    flex: 1;
-    text-align: center;
-    min-width: 0;
-    max-width: 750px;
-}
-
-/* Fila superior con badge */
-.header-top-row {
-    margin-bottom: 1rem;
-}
-
-/* Badge empresarial refinado */
 .header-label {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.45rem 1.1rem;
-    background: linear-gradient(135deg, 
-        rgba(244, 185, 66, 0.08) 0%, 
-        rgba(244, 185, 66, 0.12) 50%,
-        rgba(244, 185, 66, 0.08) 100%);
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, rgba(244, 185, 66, 0.12) 0%, rgba(244, 185, 66, 0.08) 100%);
     border-radius: 50px;
-    border: 1.5px solid rgba(244, 185, 66, 0.3);
-    box-shadow: 
-        0 2px 8px rgba(244, 185, 66, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    transition: all 0.3s ease;
-}
-
-.header-label:hover {
-    transform: translateY(-1px);
-    box-shadow: 
-        0 4px 12px rgba(244, 185, 66, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+    border: 1px solid rgba(244, 185, 66, 0.25);
+    box-shadow: 0 2px 8px rgba(244, 185, 66, 0.1);
 }
 
 .label-icon {
     color: #f4b942;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     animation: pulse 2.5s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { 
-        opacity: 1; 
-        transform: scale(1); 
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
-    50% { 
-        opacity: 0.8; 
-        transform: scale(1.1); 
+
+    50% {
+        opacity: 0.75;
+        transform: scale(1.08);
     }
 }
 
 .label-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--primary-green, #0d3f27);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 }
 
-/* Título principal - Elegancia serif */
-.admision-nav-title {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(1rem, 1vw, 1.6rem);
-    font-weight: 700;
-    color: var(--primary-green, #0d3f27);
-    margin-bottom: 1rem;
-    letter-spacing: -0.3px;
-    line-height: 1.25;
-    text-shadow: 0 1px 2px rgba(13, 63, 39, 0.05);
-}
 
-/* Descripción profesional */
 .admision-nav-subtitle {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 1.09rem;
     color: black;
     font-weight: 400;
-    line-height: 1.7;
-    margin: 0;
-    opacity: 0.92;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto;
 }
 
-/* ============================================
-   RESPONSIVE DESIGN EMPRESARIAL
-============================================ */
 
-/* Tablets landscape */
-@media (max-width: 1024px) {
-    .header-content-wrapper {
-        gap: 2.5rem;
-    }
-    
-    .header-logo {
-        width: 85px;
-        height: 85px;
-    }
+.admision-nav-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(3rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: var(--primary-green, #0d3f27);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
 }
 
-/* Tablets portrait */
+
+/* Wrapper para logo y contenido */
+.header-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin-left: 70px;
+}
+
+/* Logo del colegio */
+.header-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 20px;
+    margin-right: 90px;
+}
+
+/* Contenedor del texto */
+.header-text-content {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+
+}
+
+/* Responsive: en pantallas pequeñas, ocultar logo o ajustar layout */
 @media (max-width: 768px) {
-    .admision-nav-header {
-        padding: 1.5rem 0 1rem;
-        margin-bottom: 2.5rem;
+    .header-content-wrapper {
+        gap: 1rem;
     }
-    
+
+    .header-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
     .header-content-wrapper {
         flex-direction: column;
-        gap: 1.5rem;
-        padding: 0 1.5rem;
+        align-items: center;
     }
-    
+
     .header-logo {
-        width: 80px;
-        height: 80px;
         margin-bottom: 0.5rem;
-    }
-    
-    .header-text-content {
-        max-width: 100%;
-    }
-    
-    .admision-nav-title {
-        font-size: clamp(1.75rem, 4vw, 2.2rem);
-        margin-bottom: 0.8rem;
-    }
-    
-    .admision-nav-subtitle {
-        font-size: 0.95rem;
-        line-height: 1.65;
     }
 }
 
-/* Móviles */
-@media (max-width: 576px) {
-    .admision-nav-header {
-        padding: 1.2rem 0 0.8rem;
-        margin-bottom: 2rem;
+
+/* ============================================
+           SECCIÓN DE OBJETIVOS SECUNDARIA
+        ============================================ */
+
+.objetivos-section {
+    padding: 1rem 0 1rem 0;
+    position: relative;
+}
+
+.objetivos-container-custom {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Encabezado de la sección */
+.objetivos-header {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+.objetivos-intro {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: black;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+/* Navegación de Objetivos */
+.objetivos-navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.objetivo-tab {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    background: var(--white);
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    border-radius: 0;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-align: center;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.objetivo-tab:hover {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: black;
+    transform: translateY(-2px);
+}
+
+.objetivo-tab.active {
+    background: var(--accent-gold);
+    color: black;
+}
+
+/* Contenido de Objetivos */
+.objetivos-content {
+    margin: 0 auto;
+}
+
+.objetivo-item {
+    display: none;
+    opacity: 0;
+}
+
+.objetivo-item.active {
+    display: block;
+    animation: fadeInContent 0.5s ease-out forwards;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
-    
-    .header-content-wrapper {
-        gap: 1.2rem;
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grid de Objetivos */
+.objetivo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* Ajuste automático para 1 card */
+.objetivo-grid:has(.objetivo-card:only-child) {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Ajuste automático para 3 cards */
+.objetivo-grid:has(.objetivo-card:nth-child(3):last-child) .objetivo-card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 1.25rem);
+    margin: 0 auto;
+}
+
+/* Ajuste automático para 5 cards */
+.objetivo-grid:has(.objetivo-card:nth-child(5):last-child) .objetivo-card:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 1.25rem);
+    margin: 0 auto;
+}
+
+.objetivo-card {
+    background: #F5FAEE;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    border: solid 1px var(--primary-green);
+}
+
+.objetivo-icon {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: none;
+}
+
+.objetivo-icon i {
+    font-size: 2rem;
+    color: black;
+}
+
+.objetivo-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.objetivo-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
+    color: black;
+    line-height: 1.7;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .objetivos-container-custom {
+        max-width: 92%;
+        padding: 0 1.5rem;
+    }
+
+    .objetivos-navigation {
+        gap: 0.75rem;
+    }
+
+    .objetivo-tab {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .objetivos-section {
+        padding: 4rem 0 5rem 0;
+    }
+
+    .objetivos-container-custom {
+        max-width: 90%;
         padding: 0 1rem;
     }
-    
-    .header-logo {
+
+    .objetivos-header {
+        margin-bottom: 3rem;
+    }
+
+    .objetivos-navigation {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .objetivo-tab {
+        flex: 1 1 calc(50% - 0.375rem);
+        min-width: 200px;
+    }
+
+    .objetivo-grid {
+        gap: 2rem;
+    }
+
+    .objetivo-icon {
         width: 70px;
         height: 70px;
     }
-    
-    .header-label {
-        padding: 0.4rem 1rem;
-    }
-    
-    .label-text {
-        font-size: 0.7rem;
-        letter-spacing: 1.2px;
-    }
-    
-    .label-icon {
-        font-size: 0.75rem;
-    }
-    
-    .admision-nav-title {
-        font-size: 1.65rem;
-        margin-bottom: 0.7rem;
-        line-height: 1.3;
-    }
-    
-    .admision-nav-subtitle {
-        font-size: 0.9rem;
-        line-height: 1.6;
+
+    .objetivo-icon i {
+        font-size: 1.75rem;
     }
 }
 
-/* Móviles muy pequeños */
-@media (max-width: 400px) {
-    .header-logo {
+@media (max-width: 768px) {
+    .objetivos-section {
+        padding: 3rem 0 4rem 0;
+    }
+
+    .objetivos-container-custom {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .objetivos-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .objetivos-navigation {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .objetivo-tab {
+        flex: 1 1 100%;
+        padding: 0.875rem 1.25rem;
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .objetivo-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .objetivo-grid:has(.objetivo-card:nth-child(3):last-child) .objetivo-card:nth-child(3),
+    .objetivo-grid:has(.objetivo-card:nth-child(5):last-child) .objetivo-card:nth-child(5) {
+        grid-column: auto;
+        max-width: 100%;
+    }
+
+    .objetivo-icon {
         width: 65px;
         height: 65px;
     }
-    
-    .admision-nav-title {
+
+    .objetivo-icon i {
         font-size: 1.5rem;
     }
-    
-    .admision-nav-subtitle {
-        font-size: 0.88rem;
+}
+
+@media (max-width: 480px) {
+    .objetivos-section {
+        padding: 2.5rem 0 3.5rem 0;
+    }
+
+    .objetivos-intro {
+        text-align: left;
+    }
+
+    .objetivo-tab {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .objetivo-text {
+        text-align: left;
+    }
+
+    .objetivo-grid {
+        gap: 1.5rem;
+    }
+
+    .objetivo-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .objetivo-icon i {
+        font-size: 1.4rem;
     }
 }
+
+
+
+
+
 
 
 
@@ -602,7 +807,7 @@
     background: var(--primary-green);
     color: white;
     padding: 12px 28px;
-    
+
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 50px;
@@ -673,10 +878,12 @@
 .aula-image {
     position: relative;
     width: 100%;
-    padding-bottom: 35%; /* Reducido 50% de altura */
+    padding-bottom: 35%;
+    /* Reducido 50% de altura */
     overflow: hidden;
     background: #f0f0f0;
-    border-radius: 0; /* Eliminado completamente */
+    border-radius: 0;
+    /* Eliminado completamente */
 }
 
 .aula-image img {
@@ -687,7 +894,8 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    border-radius: 0; /* Eliminado completamente */
+    border-radius: 0;
+    /* Eliminado completamente */
 }
 
 .aula-item:hover .aula-image img {
@@ -746,7 +954,8 @@
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(12px);
     padding: 0.5rem 0.875rem;
-    border-radius: 0; /* Eliminado bordes redondeados */
+    border-radius: 0;
+    /* Eliminado bordes redondeados */
     display: flex;
     align-items: center;
     gap: 20px;
@@ -806,7 +1015,8 @@
     gap: 0.75rem;
     padding: 1rem 1.25rem;
     background: white;
-    border-radius: 0; /* Eliminado bordes redondeados */
+    border-radius: 0;
+    /* Eliminado bordes redondeados */
     border-left: 3px solid #0d3f27;
     font-size: 0.95rem;
     color: #374151;
@@ -825,7 +1035,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
-    
+
     .horarios-title {
         font-size: 1.25rem;
         padding: 0.875rem 1.25rem;
@@ -911,7 +1121,8 @@
     }
 
     .aula-image {
-        padding-bottom: 30%; /* Ajustado para móviles */
+        padding-bottom: 30%;
+        /* Ajustado para móviles */
     }
 
     .aula-info {
@@ -924,129 +1135,3 @@
         padding: 0.75rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================
-   METODOLOGÍA ACTIVA
-============================================ */
-.metodologia-section {
-    padding: 0.45rem 0;
-    background: var(--light-gray);
-}
-
-.metodologia-content {
-    padding-left: 2rem;
-}
-
-.metodologia-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.12rem;
-    margin-top: 2rem;
-}
-
-.metodologia-item {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-}
-
-.metodologia-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1.8rem;
-    gap: 1rem;
-}
-
-.metodologia-number {
-    background-color: #0d6336; /* tono verde institucional */
-    color: #fff;
-    font-weight: 700;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    flex-shrink: 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.metodologia-icon {
-    color: #0d6336;
-    flex-shrink: 0;
-}
-
-.metodologia-text h4 {
-    margin: 0 0 0.3rem 0;
-    color: #0d6336;
-    font-weight: 600;
-}
-
-
-
-
-
-
-
-.metodologia-text h4 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.425rem;
-    font-weight: 600;
-    color: var(--primary-green);
-    margin-bottom: 0.5rem;
-}
-
-.metodologia-text p {
-    font-size: 0.9375rem;
-    color: black;
-    line-height: 1.6;
-    margin: 0;
-    text-align: justify;
-    hyphens: auto;
-}
-
-.metodologia-image {
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-   
-}
-
-.metodologia-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-
-
-
-

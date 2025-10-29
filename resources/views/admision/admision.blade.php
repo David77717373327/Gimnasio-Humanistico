@@ -49,6 +49,10 @@
     </section>
 
 
+
+
+
+    
     <!-- NAVEGACIÓN INTERNA DE ADMISIÓN -->
     <section class="admision-nav-section" id="nav_Interna">
         <div class="container">
@@ -73,8 +77,6 @@
 
 
             
-
-
 
 
 
@@ -189,6 +191,18 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

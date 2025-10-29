@@ -87,7 +87,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-     margin-bottom: -60px;
+    margin-bottom: -60px;
 }
 
 .hero-background {
@@ -97,7 +97,7 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
-    url('../images/Mision1.jpg') center/cover no-repeat;
+        url('../images/Mision1.jpg') center/cover no-repeat;
     z-index: 1;
 }
 
@@ -108,7 +108,7 @@
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 30% 40%, rgba(244, 185, 66, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 60%, rgba(125, 223, 172, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 70% 60%, rgba(125, 223, 172, 0.08) 0%, transparent 50%);
 }
 
 .hero-particles {
@@ -134,12 +134,15 @@
         transform: translateY(100vh) rotate(0deg);
         opacity: 0;
     }
+
     10% {
         opacity: 1;
     }
+
     90% {
         opacity: 1;
     }
+
     100% {
         transform: translateY(-100px) rotate(360deg);
         opacity: 0;
@@ -160,11 +163,11 @@
     line-height: 1.1;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 1s ease-out 0.3s both;
-    
+
     /* Tamaño base más grande para títulos normales y cortos */
     font-size: clamp(8rem, 7vw, 6rem);
-    
-    
+
+
     /* Centrado perfecto para títulos largos */
     text-align: center;
     max-width: 100%;
@@ -174,7 +177,7 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-    
+
     /* Espacio para que respire el texto */
     padding: 0 1rem;
     box-sizing: border-box;
@@ -234,6 +237,7 @@
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -241,12 +245,19 @@
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
+
     40% {
         transform: translateX(-50%) translateY(-10px);
     }
+
     60% {
         transform: translateX(-50%) translateY(-5px);
     }
@@ -265,16 +276,16 @@
         max-width: 100%;
         padding: 0 0.5rem;
     }
-    
+
     .hero-title.auto-long {
         font-size: clamp(1.8rem, 6vw, 3rem);
         line-height: 1.4;
     }
-    
+
     .hero-title.auto-short {
         font-size: clamp(3rem, 8.5vw, 4.5rem);
     }
-    
+
     .hero-scroll-indicator {
         bottom: 15px;
         width: 45px;
@@ -289,23 +300,16 @@
         font-size: clamp(2rem, 8.5vw, 3.5rem);
         padding: 0 0.25rem;
     }
-    
+
     .hero-title.auto-long {
         font-size: clamp(1.6rem, 7.5vw, 2.8rem);
         line-height: 1.4;
     }
-    
+
     .hero-title.auto-short {
         font-size: clamp(2.5rem, 9vw, 4rem);
     }
 }
-
-
-
-
-
-
-
 
 
 
@@ -319,7 +323,7 @@
 
 .admision-nav-header {
     text-align: center;
-   margin-top: 4rem;
+    margin-top: 4rem;
     position: relative;
     z-index: 2;
     animation: fadeInDown 0.6s ease-out;
@@ -428,7 +432,7 @@
     flex: 1;
     text-align: center;
     min-width: 0;
-    
+
 }
 
 /* Responsive: en pantallas pequeñas, ocultar logo o ajustar layout */
@@ -456,19 +460,13 @@
 
 
 
-
-
-
-
-
-
 /* ============================================
-   SECCIÓN DE OBJETIVOS PRIMARIA
-============================================ */
+           SECCIÓN DE OBJETIVOS SECUNDARIA
+        ============================================ */
+
 .objetivos-section {
     padding: 1rem 0 1rem 0;
     position: relative;
-   
 }
 
 .objetivos-container-custom {
@@ -484,15 +482,6 @@
     text-align: center;
 }
 
-.objetivos-main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 700;
-    color: var(--primary-green);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
 .objetivos-intro {
     font-family: 'Open Sans', sans-serif;
     font-size: clamp(1rem, 2vw, 1.125rem);
@@ -502,7 +491,7 @@
     margin: 0 auto;
 }
 
-/* Navegación de Objetivos - UNA SOLA FILA */
+/* Navegación de Objetivos */
 .objetivos-navigation {
     display: flex;
     flex-wrap: nowrap;
@@ -532,7 +521,7 @@
 
 .objetivo-tab:hover {
     background: var(--accent-gold);
-    border: var(--accent-gold);
+    border-color: var(--accent-gold);
     color: black;
     transform: translateY(-2px);
 }
@@ -550,7 +539,6 @@
 .objetivo-item {
     display: none;
     opacity: 0;
-    animation: fadeInContent 0.5s ease-out forwards;
 }
 
 .objetivo-item.active {
@@ -563,6 +551,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -575,7 +564,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     align-items: start;
-    
 }
 
 /* Ajuste automático para 1 card */
@@ -583,24 +571,17 @@
     grid-template-columns: 1fr;
     max-width: 900px;
     margin: 0 auto;
-    
 }
 
-/* Ajuste automático para 3 cards (2 arriba, 1 abajo centrado) */
+/* Ajuste automático para 3 cards */
 .objetivo-grid:has(.objetivo-card:nth-child(3):last-child) .objetivo-card:nth-child(3) {
     grid-column: 1 / -1;
     max-width: calc(50% - 1.25rem);
     margin: 0 auto;
-    
 }
 
-/* Ajuste automático para 4 cards (2x2) */
-.objetivo-grid:has(.objetivo-card:nth-child(4)) {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-/* Ajuste para 7 cards (2+2+2+1 centrado) */
-.objetivo-grid:has(.objetivo-card:nth-child(7):last-child) .objetivo-card:nth-child(7) {
+/* Ajuste automático para 5 cards */
+.objetivo-grid:has(.objetivo-card:nth-child(5):last-child) .objetivo-card:nth-child(5) {
     grid-column: 1 / -1;
     max-width: calc(50% - 1.25rem);
     margin: 0 auto;
@@ -618,11 +599,9 @@
     border: solid 1px var(--primary-green);
 }
 
-/* Íconos - Sin hover, sin verde, sin border-radius */
 .objetivo-icon {
     width: 80px;
     height: 80px;
-    
     background: transparent;
     border-radius: 0;
     display: flex;
@@ -634,12 +613,6 @@
 .objetivo-icon i {
     font-size: 2rem;
     color: black;
-}
-
-/* Eliminar efecto hover del ícono */
-.objetivo-card:hover .objetivo-icon {
-    transform: none;
-    box-shadow: none;
 }
 
 .objetivo-subtitle {
@@ -669,11 +642,11 @@
         max-width: 92%;
         padding: 0 1.5rem;
     }
-    
+
     .objetivos-navigation {
         gap: 0.75rem;
     }
-    
+
     .objetivo-tab {
         padding: 0.875rem 1.25rem;
         font-size: 0.875rem;
@@ -684,35 +657,35 @@
     .objetivos-section {
         padding: 4rem 0 5rem 0;
     }
-    
+
     .objetivos-container-custom {
         max-width: 90%;
         padding: 0 1rem;
     }
-    
+
     .objetivos-header {
         margin-bottom: 3rem;
     }
-    
+
     .objetivos-navigation {
         flex-wrap: wrap;
         gap: 0.75rem;
     }
-    
+
     .objetivo-tab {
         flex: 1 1 calc(50% - 0.375rem);
         min-width: 200px;
     }
-    
+
     .objetivo-grid {
         gap: 2rem;
     }
-    
+
     .objetivo-icon {
         width: 70px;
         height: 70px;
     }
-    
+
     .objetivo-icon i {
         font-size: 1.75rem;
     }
@@ -722,50 +695,45 @@
     .objetivos-section {
         padding: 3rem 0 4rem 0;
     }
-    
+
     .objetivos-container-custom {
         max-width: 100%;
         padding: 0 1rem;
     }
-    
+
     .objetivos-header {
         margin-bottom: 2.5rem;
     }
-    
-    .objetivos-main-title {
-        margin-bottom: 1rem;
-    }
-    
+
     .objetivos-navigation {
         flex-direction: column;
         gap: 0.75rem;
         margin-bottom: 2rem;
     }
-    
+
     .objetivo-tab {
         flex: 1 1 100%;
         padding: 0.875rem 1.25rem;
         min-width: 100%;
         width: 100%;
     }
-    
+
     .objetivo-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
-    /* En móvil, todos los cards ocupan el ancho completo */
+
     .objetivo-grid:has(.objetivo-card:nth-child(3):last-child) .objetivo-card:nth-child(3),
-    .objetivo-grid:has(.objetivo-card:nth-child(7):last-child) .objetivo-card:nth-child(7) {
+    .objetivo-grid:has(.objetivo-card:nth-child(5):last-child) .objetivo-card:nth-child(5) {
         grid-column: auto;
         max-width: 100%;
     }
-    
+
     .objetivo-icon {
         width: 65px;
         height: 65px;
     }
-    
+
     .objetivo-icon i {
         font-size: 1.5rem;
     }
@@ -775,29 +743,29 @@
     .objetivos-section {
         padding: 2.5rem 0 3.5rem 0;
     }
-    
+
     .objetivos-intro {
         text-align: left;
     }
-    
+
     .objetivo-tab {
         padding: 0.75rem 1rem;
         font-size: 0.875rem;
     }
-    
+
     .objetivo-text {
         text-align: left;
     }
-    
+
     .objetivo-grid {
         gap: 1.5rem;
     }
-    
+
     .objetivo-icon {
         width: 60px;
         height: 60px;
     }
-    
+
     .objetivo-icon i {
         font-size: 1.4rem;
     }
@@ -823,15 +791,132 @@
 
 
 
+
 /* ============================================
-   HORARIOS Y AULAS - DISTRIBUCIÓN 2x2 + 1
-   ============================================ */
-.horarios-primaria {
-    padding: 20px 0;
-    background: white;
+           HEADER SECTION
+        ============================================ */
+.admision-nav-header {
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 0.6s ease-out;
+    padding: 2rem 0 1.5rem;
+    background: linear-gradient(180deg, rgba(244, 185, 66, 0.02) 0%, transparent 100%);
 }
 
-.modalidad-badge-primaria {
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin-left: 70px;
+}
+
+.header-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 20px;
+    margin-right: 90px;
+}
+
+.header-text-content {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+.header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, rgba(244, 185, 66, 0.12) 0%, rgba(244, 185, 66, 0.08) 100%);
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(244, 185, 66, 0.25);
+    box-shadow: 0 2px 8px rgba(244, 185, 66, 0.1);
+}
+
+.label-icon {
+    color: #f4b942;
+    font-size: 0.85rem;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.75;
+        transform: scale(1.08);
+    }
+}
+
+.label-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.admision-nav-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(3rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.admision-nav-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.09rem;
+    color: black;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* ============================================
+           SECCIÓN HORARIOS Y AULAS
+        ============================================ */
+.horarios-aulas-section {
+    padding: 0.45rem 0 3rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);
+}
+
+.horarios-aulas-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.modalidad-badge {
     display: inline-block;
     background: var(--primary-green);
     color: white;
@@ -839,139 +924,200 @@
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 50px;
+    margin-left: 36%;
 }
 
-/* Grid 2 columnas con última card centrada */
-.aulas-grid-primaria {
+/* GRID DE AULAS - 1 FILA x 2 COLUMNAS */
+.aulas-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 0 20px;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-/* Centrar la última card (quinta) */
-.aula-card-centrada {
-    grid-column: 1 / -1;
-    max-width: 550px;
-    margin: 0 auto;
-    width: 100%;
+.aula-item {
+    position: relative;
 }
 
-.aula-card-primaria {
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-
-.aula-image-primaria {
+/* WRAPPER DE IMAGEN */
+.aula-image {
     position: relative;
     width: 100%;
-    height: 200px;
+    padding-bottom: 35%;
     overflow: hidden;
+    background: #f0f0f0;
+    border-radius: 0;
 }
 
-.aula-image-primaria img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.aula-card-primaria:hover .aula-image-primaria img {
-    transform: scale(1.08);
-}
-
-.aula-overlay-primaria {
+.aula-image img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(13, 63, 39, 0.45) 100%);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 0;
+}
+
+.aula-item:hover .aula-image img {
+    transform: scale(1.05);
+}
+
+/* OVERLAY CON NIVEL */
+.aula-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(13, 63, 39, 0.3) 100%);
     display: flex;
     align-items: flex-end;
-    padding: 20px;
+    padding: 1.25rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.aula-info-primaria {
-    margin-top: 28px;
+.aula-item:hover .aula-overlay {
+    opacity: 1;
 }
 
-.aula-info-primaria h4 {
+.aula-nivel {
     font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
-    font-size: 1.65rem;
+    font-size: 1.375rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: white;
+}
+
+/* CONTENIDO DE AULA */
+.aula-info {
+    margin-top: 28px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.aula-info h4 {
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+    font-size: 1.9rem;
     font-weight: 700;
     color: var(--primary-green);
-    margin-bottom: 1px;
-    margin-right: 70px;
+    margin: 0 0 0.5rem 0;
 }
 
-.aula-info-primaria p {
-    font-size: 0.9rem;
+.aula-info p {
+    font-size: 0.98rem;
     color: black;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .aulas-grid-primaria {
-        grid-template-columns: 1fr;
-        gap: 25px;
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .aulas-grid {
+        gap: 1.5rem;
     }
 
-    .aula-card-centrada {
-        grid-column: 1;
-        max-width: 100%;
+    .header-content-wrapper {
+        margin-left: 0;
+    }
+
+    .header-logo {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .horarios-aulas-section {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .header-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header-logo {
+        margin: 0 0 0.5rem 0;
+        width: 80px;
+        height: 80px;
+    }
+
+    .modalidad-badge {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .aulas-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .aula-info h4 {
+        font-size: 1.5rem;
+    }
+
+    .aula-info p {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 576px) {
-    .aulas-grid-primaria {
-        gap: 20px;
-        padding: 0 15px;
+    .admision-nav-header {
+        margin-top: 2rem;
     }
 
-    .aula-image-primaria {
-        height: 200px;
+    .header-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .admision-nav-title {
+        font-size: 2rem;
+    }
+
+    .admision-nav-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .modalidad-badge {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .aula-image {
+        padding-bottom: 45%;
+    }
+
+    .aula-info h4 {
+        font-size: 1.3rem;
+    }
+
+    .aula-info p {
+        font-size: 0.85rem;
     }
 }
 
+@media (max-width: 480px) {
+    .horarios-aulas-section {
+        padding: 2rem 0 1.5rem;
+    }
 
+    .aulas-grid {
+        gap: 1rem;
+    }
 
+    .aula-image {
+        padding-bottom: 50%;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .aula-info {
+        padding: 0.875rem;
+    }
+}

@@ -135,9 +135,7 @@
                     <p class="himno-verse">Del Gimnasio Humanístico soy.</p>
                 </div>
             </div>
-        </div>
-
-        
+        </div>    
     </div>
 </section>
 
@@ -237,7 +235,7 @@
             </a>
 
             <!-- Card 3: Principios -->
-            <a href="#principios" class="nav-card-inst principios">
+            <a href="{{ route('principios-valores') }}" class="nav-card-inst principios">
                 <div class="nav-card-overlay-inst"></div>
                 <div class="nav-card-content-inst">
                     <div class="nav-icon-inst">
