@@ -73,6 +73,24 @@
 
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+
+
 /* ============================================
    HERO SECTION AVANZADO Mision-Vision
 ============================================ */

@@ -1,11 +1,25 @@
 /* ============================================
    VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
 ============================================ */
+
+/* Variables CSS modernizadas */
 :root {
+    /* Paleta de colores profesional y equilibrada */
+    --primary-blue: #1E3A5F;
+    --secondary-blue: #2C5282;
+    --accent-blue: #3182CE;
+    --light-blue: #E6F3FF;
+
+    --text-primary: #1A202C;
+    --text-secondary: #4A5568;
+    --text-muted: #718096;
+    --text-white: #FFFFFF;
+
     /* Paleta de colores modernizada y balanceada */
     --primary-green: #0d3f27;
     --primary-green-bottom: #065e35;
     --secondary-green: #7ddfac;
+
     --light-green: #4CAF50;
     --accent-gold: #F4B942;
     --dark-gold: #E6A835;
@@ -22,19 +36,6 @@
     --text-light: #6B7280;
     --text-muted: #9CA3AF;
 
-    /* Azul principal - confianza */
-    --primary-blue: #1E3A5F;  
-    /* Azul oscuro - elegancia */
-    --dark-blue: #264653;  
-    /* Azul profundo (similar al que mostraste) */
-    --deep-blue: #003366;  
-    /* Azul intermedio - contraste suave */
-    --soft-blue: #07346e;  
-    /* Azul grisáceo - texto y detalles */
-    --slate-blue: #3A506B;  
-    /* Complemento claro (fondos suaves) */
-    --light-blue: #E0ECF7;  
-
     /* Nuevos colores para modernizar */
     --soft-blue: #EBF8FF;
     --accent-blue: #3B82F6;
@@ -47,7 +48,6 @@
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
 
     /* Gradientes modernos */
     --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
@@ -67,9 +67,32 @@
 
     /* Transiciones */
     --transition-fast: 0.15s ease-out;
-    --transition-normal: 0.1s ease-out;
+    --transition-normal: 0.3s ease-out;
     --transition-slow: 0.5s ease-out;
 }
+
+/* ============================================
+   RESET Y CONFIGURACIÓN GENERAL MEJORADA
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+
+
+
 
 
 

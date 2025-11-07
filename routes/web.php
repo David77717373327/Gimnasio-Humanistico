@@ -44,6 +44,18 @@ Route::get('/simbolos-institucionales', [RutasController::class, 'mostrarconteni
 Route::get('/principos-valores', [RutasController::class, 'mostrarcontenidoprincipiosyvarolres'])->name('principios-valores');
 
 
+
+
+
+
+
+
+//Rutas para mostrar contenido de ORGANIZACION
+Route::get('/organigrama', [RutasController::class, 'mostrarcontenidoorganigrama'])->name('organigrama');
+Route::get('/Grupo-humanistico', [RutasController::class, 'mostrarcontenidoGrupohumanistico'])->name('Grupo_humanistico');
+
+
+
 //Rutas para mostrar contenido de niveles educativos
 Route::get('/Prescolar', [RutasController::class, 'mostrarcontenidoprecolar'])->name('prescolar');
 
@@ -52,6 +64,16 @@ Route::get('/BasicaPrimaria', [RutasController::class, 'mostrarcontenidobasicapr
 Route::get('/BasicaSegundaria', [RutasController::class, 'mostrarcontenidobasicasegundaria'])->name('basica_segundaria');
 
 Route::get('/Mediaacademica', [RutasController::class, 'mostrarcontenidomediaacademica'])->name('media_academica');
+
+
+
+
+
+
+//Rutas para la navegacion de vida estudantil
+Route::get('/tranporte', [RutasController::class, 'mostrarcontenidotranporte'])->name('transporte');
+
+
 
 
 

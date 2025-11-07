@@ -55,6 +55,29 @@ class RutasController extends Controller
         return view('Institucion.Filosofia_institucional');
     }
 
+
+
+
+
+
+    //Rutas para mostras contenido de ORGANIZACION 
+
+        public function mostrarcontenidoorganigrama()
+    {
+        return view('Organización.organigrama');
+    }    
+
+
+     public function mostrarcontenidoGrupohumanistico()
+    {
+        return view('Organización.Grupo_humanistico');
+    } 
+
+
+
+
+
+
     public function mostrarcontenidoadmision()
     {
         return view('admision.admision');
@@ -80,4 +103,13 @@ class RutasController extends Controller
     {
         return view('niveles.media_academica');
     }
+ 
+
+        public function mostrarcontenidotranporte ()
+        {
+            return view('Vida_Estudiantil.transporte');
+        }
+
+
+
 }

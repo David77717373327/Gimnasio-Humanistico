@@ -74,244 +74,222 @@
 
 
 
-
-
-
-
-                
-
-
-
                 <!-- SECCIÓN DE OBJETIVOS PRIMARIA -->
-                <section class="objetivos-section" id="contenido-primaria">
-                    <div class="container-fluid objetivos-container-custom">
+<section class="objetivos-section" id="contenido-primaria">
+    <div class="container-fluid objetivos-container-custom">
 
-                        <!-- Encabezado de la sección -->
-                        <div class="objetivos-header">
+        
 
-                            <p class="objetivos-intro">
-                                "Nuestro programa de primaria está
-                                diseñado para desarrollar integralmente a nuestros estudiantes
-                                a través de 4 pilares fundamentales:"
+        <!-- Navegación de Categorías -->
+<nav class="objetivos-navigation">
+    <button class="objetivo-tab active" data-categoria="formacion">
+        Formación en Valores y Ciudadanía
+    </button>
+    <button class="objetivo-tab" data-categoria="academico">
+        Desarrollo Académico y Cognitivo
+    </button>
+    <button class="objetivo-tab" data-categoria="fisico">
+        Desarrollo Físico y Artístico
+    </button>
+    <button class="objetivo-tab" data-categoria="social">
+        Habilidades Sociales y Autonomía
+    </button>
+</nav>
+
+
+        <!-- Contenido de Objetivos -->
+        <div class="objetivos-content">
+            <!-- Formación en Valores y Ciudadanía -->
+            <div class="objetivo-item active" id="objetivo-formacion">
+                <div class="objetivo-grid">
+                    <div class="objetivo-card" data-bg="valores-convivencia">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Valores para la Convivencia</h3>
+                            <p class="objetivo-text">
+                                La formación de los valores fundamentales para la convivencia de una
+                                sociedad democrática, participativa y pluralista.
                             </p>
                         </div>
-                        <!-- Navegación de Categorías -->
-                        <div class="objetivos-navigation">
-                            <button class="objetivo-tab active" data-categoria="formacion">
-                                Formación en Valores y Ciudadanía
-                            </button>
-                            <button class="objetivo-tab" data-categoria="academico">
-                                Desarrollo Académico y Cognitivo
-                            </button>
-                            <button class="objetivo-tab" data-categoria="fisico">
-                                Desarrollo Físico y Artístico
-                            </button>
-                            <button class="objetivo-tab" data-categoria="social">
-                                Habilidades Sociales y Autonomía
-                            </button>
-                        </div>
+                    </div>
 
-                        <!-- Contenido de Objetivos -->
-                        <div class="objetivos-content">
-                            <!-- Formación en Valores y Ciudadanía -->
-                            <div class="objetivo-item active" id="objetivo-formacion">
-                                <div class="objetivo-grid">
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-users"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Valores para la Convivencia</h3>
-                                        <p class="objetivo-text">
-                                            La formación de los valores fundamentales para la convivencia de una
-                                            sociedad democrática,
-                                            participativa y pluralista.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-balance-scale"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Valores Cívicos y Morales</h3>
-                                        <p class="objetivo-text">
-                                            El desarrollo de valores civiles y morales de organización social y de
-                                            convivencia humana.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-landmark"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Educación Constitucional</h3>
-                                        <p class="objetivo-text">
-                                            La iniciación en el conocimiento de la constitución política.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-child"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Participación Infantil</h3>
-                                        <p class="objetivo-text">
-                                            La formación para la participación y organización infantil y la utilización
-                                            adecuada del tiempo libre.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Desarrollo Académico y Cognitivo -->
-                            <div class="objetivo-item" id="objetivo-academico">
-                                <div class="objetivo-grid">
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-lightbulb"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Deseo de Saber</h3>
-                                        <p class="objetivo-text">
-                                            El fomento del deseo del saber, de la iniciativa personal frente al
-                                            conocimiento y frente a
-                                            la realidad social, así como el espíritu crítico.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-book-open"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Habilidades Comunicativas</h3>
-                                        <p class="objetivo-text">
-                                            El desarrollo de las habilidades comunicativas básicas para leer,
-                                            comprender, escribir, escuchar,
-                                            hablar y expresarse correctamente en lengua castellana, así como el fomento
-                                            de la afición por la lectura.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-feather-alt"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Expresión Estética</h3>
-                                        <p class="objetivo-text">
-                                            El desarrollo de la capacidad para apreciar y utilizar la lengua como medio
-                                            de expresión estética.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-calculator"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Pensamiento Matemático</h3>
-                                        <p class="objetivo-text">
-                                            El desarrollo de los conocimientos matemáticos necesarios para manejar y
-                                            utilizar operaciones simples
-                                            de cálculo y procedimientos lógicos elementales en diferentes situaciones,
-                                            así como la capacidad para
-                                            solucionar problemas que impliquen conocimientos.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-globe-americas"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Comprensión del Medio</h3>
-                                        <p class="objetivo-text">
-                                            La comprensión básica del medio físico, social y cultural en el nivel local,
-                                            nacional y universal,
-                                            de acuerdo con el desarrollo intelectual correspondiente a su edad.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-brain"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Asimilación de Conceptos</h3>
-                                        <p class="objetivo-text">
-                                            La asimilación de conceptos en áreas del conocimiento que sean objeto de
-                                            estudio, de acuerdo con
-                                            el desarrollo intelectual y la edad.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-language"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Lengua Extranjera</h3>
-                                        <p class="objetivo-text">
-                                            La adquisición de elementos de conversación y de lectura al menos en una
-                                            lengua extranjera.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Desarrollo Físico y Artístico -->
-                            <div class="objetivo-item" id="objetivo-fisico">
-                                <div class="objetivo-grid">
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-heartbeat"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Salud y Cuidado Personal</h3>
-                                        <p class="objetivo-text">
-                                            La valoración de la higiene y la salud del propio cuerpo y la formación para
-                                            la protección de
-                                            la naturaleza y el ambiente.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-running"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Educación Física y Deportes</h3>
-                                        <p class="objetivo-text">
-                                            El conocimiento y ejercitación del propio cuerpo mediante la práctica de la
-                                            educación física,
-                                            la recreación y los deportes adecuados a su edad y conducentes a un
-                                            desarrollo físico armónico.
-                                        </p>
-                                    </div>
-
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-palette"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Formación Artística</h3>
-                                        <p class="objetivo-text">
-                                            La formación artística mediante la expresión corporal, la representación, la
-                                            música, la plástica
-                                            y la literatura.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Habilidades Sociales y Autonomía -->
-                            <div class="objetivo-item" id="objetivo-social">
-                                <div class="objetivo-grid">
-                                    <div class="objetivo-card">
-                                        <div class="objetivo-icon">
-                                            <i class="fas fa-user-check"></i>
-                                        </div>
-                                        <h3 class="objetivo-subtitle">Autonomía Personal</h3>
-                                        <p class="objetivo-text">
-                                            La adquisición de habilidades para desempeñarse con autonomía en la
-                                            sociedad.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="objetivo-card" data-bg="valores-civicos">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Valores Cívicos y Morales</h3>
+                            <p class="objetivo-text">
+                                El desarrollo de valores civiles y morales de organización social y de
+                                convivencia humana.
+                            </p>
                         </div>
                     </div>
-                </section>
+
+                    <div class="objetivo-card" data-bg="educacion-constitucional">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Educación Constitucional</h3>
+                            <p class="objetivo-text">
+                                La iniciación en el conocimiento de la constitución política.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card" data-bg="participacion-infantil">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Participación Infantil</h3>
+                            <p class="objetivo-text">
+                                La formación para la participación y organización infantil y la utilización
+                                adecuada del tiempo libre.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desarrollo Académico y Cognitivo -->
+            <div class="objetivo-item" id="objetivo-academico">
+                <div class="objetivo-grid">
+                    <div class="objetivo-card" data-bg="deseo-saber">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Deseo de Saber</h3>
+                            <p class="objetivo-text">
+                                El fomento del deseo del saber, de la iniciativa personal frente al
+                                conocimiento y frente a la realidad social, así como el espíritu crítico.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card" data-bg="habilidades-comunicativas">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Habilidades Comunicativas</h3>
+                            <p class="objetivo-text">
+                                El desarrollo de las habilidades comunicativas básicas para leer,
+                                comprender, escribir, escuchar, hablar y expresarse correctamente en lengua castellana,
+                                así como el fomento de la afición por la lectura.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card" data-bg="expresion-estetica">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Expresión Estética</h3>
+                            <p class="objetivo-text">
+                                El desarrollo de la capacidad para apreciar y utilizar la lengua como medio
+                                de expresión estética.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card" data-bg="pensamiento-matematico">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Pensamiento Matemático</h3>
+                            <p class="objetivo-text">
+                                El desarrollo de los conocimientos matemáticos necesarios para manejar y
+                                utilizar operaciones simples de cálculo y procedimientos lógicos elementales en diferentes
+                                situaciones, así como la capacidad para solucionar problemas que impliquen conocimientos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card" data-bg="comprension-medio">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Comprensión del Medio</h3>
+                            <p class="objetivo-text">
+                                La comprensión básica del medio físico, social y cultural en el nivel local,
+                                nacional y universal, de acuerdo con el desarrollo intelectual correspondiente a su edad.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card" data-bg="asimilacion-conceptos">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Asimilación de Conceptos</h3>
+                            <p class="objetivo-text">
+                                La asimilación de conceptos en áreas del conocimiento que sean objeto de
+                                estudio, de acuerdo con el desarrollo intelectual y la edad.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card" data-bg="lengua-extranjera">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Lengua Extranjera</h3>
+                            <p class="objetivo-text">
+                                La adquisición de elementos de conversación y de lectura al menos en una
+                                lengua extranjera.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desarrollo Físico y Artístico -->
+            <div class="objetivo-item" id="objetivo-fisico">
+                <div class="objetivo-grid">
+                    <div class="objetivo-card" data-bg="salud-cuidado">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Salud y Cuidado Personal</h3>
+                            <p class="objetivo-text">
+                                La valoración de la higiene y la salud del propio cuerpo y la formación para
+                                la protección de la naturaleza y el ambiente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card" data-bg="educacion-fisica">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Educación Física y Deportes</h3>
+                            <p class="objetivo-text">
+                                El conocimiento y ejercitación del propio cuerpo mediante la práctica de la
+                                educación física, la recreación y los deportes adecuados a su edad y conducentes a un
+                                desarrollo físico armónico.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-card" data-bg="formacion-artistica">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Formación Artística</h3>
+                            <p class="objetivo-text">
+                                La formación artística mediante la expresión corporal, la representación, la
+                                música, la plástica y la literatura.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Habilidades Sociales y Autonomía -->
+            <div class="objetivo-item" id="objetivo-social">
+                <div class="objetivo-grid">
+                    <div class="objetivo-card" data-bg="autonomia-personal">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Autonomía Personal</h3>
+                            <p class="objetivo-text">
+                                La adquisición de habilidades para desempeñarse con autonomía en la
+                                sociedad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
 

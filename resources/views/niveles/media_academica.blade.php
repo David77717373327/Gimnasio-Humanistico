@@ -67,205 +67,223 @@
             </div>
         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- SECCIÓN DE OBJETIVOS MEDIA -->
-        <section class="objetivos-section" id="contenido-media">
-            <div class="container-fluid objetivos-container-custom">
-                
-                <!-- Encabezado de la sección -->
-                <div class="objetivos-header">
-                    <p class="objetivos-intro">
-                        "De acuerdo con lo estipulado en la Ley General de Educación (Ley 115 de 1994) y el Decreto 1075 de 2015, 
-                        la educación media en el Gimnasio Humanístico del Alto Magdalena se orienta a cumplir los siguientes 
-                        objetivos fundamentales para preparar a nuestros estudiantes para su futuro académico y profesional:"
-                    </p>
-                </div>
+<section class="objetivos-section" id="contenido-media">
+    <div class="container-fluid objetivos-container-custom">
+        
+        <!-- Encabezado de la sección -->
+        <div class="objetivos-header">
+            <p class="objetivos-intro">
+                "De acuerdo con lo estipulado en la Ley General de Educación (Ley 115 de 1994) y el Decreto 1075 de 2015, 
+                la educación media en el Gimnasio Humanístico del Alto Magdalena se orienta a cumplir los siguientes 
+                objetivos fundamentales para preparar a nuestros estudiantes para su futuro académico y profesional:"
+            </p>
+        </div>
 
-                <!-- Navegación de Categorías -->
-                <div class="objetivos-navigation">
-                    <button class="objetivo-tab active" data-categoria="profundizacion">
-                        Profundización Académica
-                    </button>
-                    <button class="objetivo-tab" data-categoria="superior">
-                        Preparación para Educación Superior
-                    </button>
-                    <button class="objetivo-tab" data-categoria="trabajo">
-                        Trabajo y Emprendimiento
-                    </button>
-                    <button class="objetivo-tab" data-categoria="formacion">
-                        Formación Humana y Ciudadana
-                    </button>
-                </div>
+        <!-- Navegación de Categorías -->
+        <nav class="objetivos-navigation">
+            <button class="objetivo-tab active" data-categoria="profundizacion">
+                Profundización Académica
+            </button>
+            <button class="objetivo-tab" data-categoria="superior">
+                Preparación para Educación Superior
+            </button>
+            <button class="objetivo-tab" data-categoria="trabajo">
+                Trabajo y Emprendimiento
+            </button>
+            <button class="objetivo-tab" data-categoria="formacion">
+                Formación Humana y Ciudadana
+            </button>
+        </nav>
 
-                <!-- Contenido de Objetivos -->
-                <div class="objetivos-content">
-                    <!-- Profundización Académica -->
-                    <div class="objetivo-item active" id="objetivo-profundizacion">
-                        <div class="objetivo-grid">
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-book-reader"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Consolidación de Saberes</h3>
-                                <p class="objetivo-text">
-                                    Buscamos que nuestros estudiantes consoliden sus saberes en las áreas obligatorias y fundamentales, 
-                                    fortaleciendo las competencias desarrolladas durante la educación básica para alcanzar un dominio 
-                                    profundo de cada disciplina.
-                                </p>
-                            </div>
-                            
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Exploración Personalizada</h3>
-                                <p class="objetivo-text">
-                                    Ofrecemos la oportunidad de explorar y profundizar en aquellas disciplinas que se alineen con 
-                                    los intereses, aptitudes y proyecto de vida de cada estudiante, facilitando el descubrimiento 
-                                    de su vocación profesional.
-                                </p>
-                            </div>
+        <!-- Contenido de Objetivos -->
+        <div class="objetivos-content">
+            <!-- Profundización Académica -->
+            <div class="objetivo-item active" id="objetivo-profundizacion">
+                <div class="objetivo-grid">
+                    <div class="objetivo-card" data-bg="consolidacion-saberes">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Consolidación de Saberes</h3>
+                            <p class="objetivo-text">
+                                Buscamos que nuestros estudiantes consoliden sus saberes en las áreas obligatorias y fundamentales, 
+                                fortaleciendo las competencias desarrolladas durante la educación básica para alcanzar un dominio 
+                                profundo de cada disciplina.
+                            </p>
                         </div>
                     </div>
-
-                    <!-- Preparación para Educación Superior -->
-                    <div class="objetivo-item" id="objetivo-superior">
-                        <div class="objetivo-grid">
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-university"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Competencias Académicas Universitarias</h3>
-                                <p class="objetivo-text">
-                                    Nuestro currículo y metodología están diseñados para desarrollar las competencias académicas y 
-                                    habilidades de pensamiento crítico que son indispensables para el éxito en el nivel universitario, 
-                                    garantizando una formación integral y rigurosa.
-                                </p>
-                            </div>
-                            
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Excelencia en Pruebas Saber 11</h3>
-                                <p class="objetivo-text">
-                                    Preparamos a los estudiantes para un desempeño sobresaliente en las pruebas de Estado Saber 11, 
-                                    proporcionando las herramientas y estrategias necesarias para obtener resultados destacados que 
-                                    faciliten su ingreso a instituciones de educación superior de calidad.
-                                </p>
-                            </div>
-                            
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-rocket"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Transición Exitosa</h3>
-                                <p class="objetivo-text">
-                                    Facilitamos una transición exitosa a la vida académica superior, desarrollando autonomía, 
-                                    habilidades de investigación, gestión del tiempo y todas las competencias necesarias para 
-                                    enfrentar con éxito los desafíos universitarios.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Trabajo y Emprendimiento -->
-                    <div class="objetivo-item" id="objetivo-trabajo">
-                        <div class="objetivo-grid">
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Vinculación al Mundo Laboral</h3>
-                                <p class="objetivo-text">
-                                    Capacitamos a los estudiantes con las habilidades y conocimientos necesarios para que puedan 
-                                    vincularse al mundo laboral de manera exitosa, desarrollando competencias técnicas y blandas 
-                                    valoradas en el mercado actual.
-                                </p>
-                            </div>
-                            
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-lightbulb"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Pensamiento Emprendedor</h3>
-                                <p class="objetivo-text">
-                                    Fomentamos el pensamiento emprendedor, la creatividad y la capacidad de resolver problemas, 
-                                    desarrollando habilidades esenciales para el siglo XXI que permitan a nuestros estudiantes 
-                                    crear oportunidades y generar valor en cualquier contexto.
-                                </p>
-                            </div>
-                            
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Competencias del Siglo XXI</h3>
-                                <p class="objetivo-text">
-                                    Desarrollamos competencias clave como trabajo en equipo, comunicación efectiva, adaptabilidad, 
-                                    pensamiento crítico y alfabetización digital, preparando profesionales integrales capaces de 
-                                    enfrentar los retos de un mundo en constante transformación.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Formación Humana y Ciudadana -->
-                    <div class="objetivo-item" id="objetivo-formacion">
-                        <div class="objetivo-grid">
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Formación en Valores</h3>
-                                <p class="objetivo-text">
-                                    Consolidamos la formación en valores, el respeto, la responsabilidad y la autonomía, 
-                                    fortaleciendo el carácter y la integridad de nuestros estudiantes como fundamento de 
-                                    su desarrollo personal y profesional.
-                                </p>
-                            </div>
-                            
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Ciudadanía Activa y Ética</h3>
-                                <p class="objetivo-text">
-                                    Nuestro objetivo es que los estudiantes se conviertan en ciudadanos activos, éticos y 
-                                    conscientes de su rol en la construcción de una sociedad más justa, equitativa y solidaria, 
-                                    comprometidos con el bienestar colectivo.
-                                </p>
-                            </div>
-                            
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-hands-helping"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Solidaridad y Responsabilidad Social</h3>
-                                <p class="objetivo-text">
-                                    Fomentamos la conciencia de solidaridad y la responsabilidad social, desarrollando la 
-                                    empatía y el compromiso con las comunidades vulnerables, promoviendo acciones concretas 
-                                    de servicio y transformación social.
-                                </p>
-                            </div>
-                            
-                            <div class="objetivo-card">
-                                <div class="objetivo-icon">
-                                    <i class="fas fa-globe-americas"></i>
-                                </div>
-                                <h3 class="objetivo-subtitle">Identidad Cultural y Ambiental</h3>
-                                <p class="objetivo-text">
-                                    Promovemos que los estudiantes valoren y respeten la diversidad cultural y la rica naturaleza 
-                                    de nuestro país, desarrollando una identidad cultural sólida y una conciencia ambiental que 
-                                    impulse la conservación y el desarrollo sostenible.
-                                </p>
-                            </div>
+                    
+                    <div class="objetivo-card" data-bg="exploracion-personalizada">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Exploración Personalizada</h3>
+                            <p class="objetivo-text">
+                                Ofrecemos la oportunidad de explorar y profundizar en aquellas disciplinas que se alineen con 
+                                los intereses, aptitudes y proyecto de vida de cada estudiante, facilitando el descubrimiento 
+                                de su vocación profesional.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Preparación para Educación Superior -->
+            <div class="objetivo-item" id="objetivo-superior">
+                <div class="objetivo-grid">
+                    <div class="objetivo-card" data-bg="competencias-universitarias">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Competencias Académicas Universitarias</h3>
+                            <p class="objetivo-text">
+                                Nuestro currículo y metodología están diseñados para desarrollar las competencias académicas y 
+                                habilidades de pensamiento crítico que son indispensables para el éxito en el nivel universitario, 
+                                garantizando una formación integral y rigurosa.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="objetivo-card" data-bg="excelencia-saber11">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Excelencia en Pruebas Saber 11</h3>
+                            <p class="objetivo-text">
+                                Preparamos a los estudiantes para un desempeño sobresaliente en las pruebas de Estado Saber 11, 
+                                proporcionando las herramientas y estrategias necesarias para obtener resultados destacados que 
+                                faciliten su ingreso a instituciones de educación superior de calidad.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="objetivo-card" data-bg="transicion-exitosa">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Transición Exitosa</h3>
+                            <p class="objetivo-text">
+                                Facilitamos una transición exitosa a la vida académica superior, desarrollando autonomía, 
+                                habilidades de investigación, gestión del tiempo y todas las competencias necesarias para 
+                                enfrentar con éxito los desafíos universitarios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trabajo y Emprendimiento -->
+            <div class="objetivo-item" id="objetivo-trabajo">
+                <div class="objetivo-grid">
+                    <div class="objetivo-card" data-bg="mundo-laboral">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Vinculación al Mundo Laboral</h3>
+                            <p class="objetivo-text">
+                                Capacitamos a los estudiantes con las habilidades y conocimientos necesarios para que puedan 
+                                vincularse al mundo laboral de manera exitosa, desarrollando competencias técnicas y blandas 
+                                valoradas en el mercado actual.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="objetivo-card" data-bg="pensamiento-emprendedor">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Pensamiento Emprendedor</h3>
+                            <p class="objetivo-text">
+                                Fomentamos el pensamiento emprendedor, la creatividad y la capacidad de resolver problemas, 
+                                desarrollando habilidades esenciales para el siglo XXI que permitan a nuestros estudiantes 
+                                crear oportunidades y generar valor en cualquier contexto.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="objetivo-card" data-bg="competencias-siglo21">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Competencias del Siglo XXI</h3>
+                            <p class="objetivo-text">
+                                Desarrollamos competencias clave como trabajo en equipo, comunicación efectiva, adaptabilidad, 
+                                pensamiento crítico y alfabetización digital, preparando profesionales integrales capaces de 
+                                enfrentar los retos de un mundo en constante transformación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formación Humana y Ciudadana -->
+            <div class="objetivo-item" id="objetivo-formacion">
+                <div class="objetivo-grid">
+                    <div class="objetivo-card" data-bg="formacion-valores">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Formación en Valores</h3>
+                            <p class="objetivo-text">
+                                Consolidamos la formación en valores, el respeto, la responsabilidad y la autonomía, 
+                                fortaleciendo el carácter y la integridad de nuestros estudiantes como fundamento de 
+                                su desarrollo personal y profesional.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="objetivo-card" data-bg="ciudadania-activa">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Ciudadanía Activa y Ética</h3>
+                            <p class="objetivo-text">
+                                Nuestro objetivo es que los estudiantes se conviertan en ciudadanos activos, éticos y 
+                                conscientes de su rol en la construcción de una sociedad más justa, equitativa y solidaria, 
+                                comprometidos con el bienestar colectivo.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="objetivo-card" data-bg="solidaridad-social">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Solidaridad y Responsabilidad Social</h3>
+                            <p class="objetivo-text">
+                                Fomentamos la conciencia de solidaridad y la responsabilidad social, desarrollando la 
+                                empatía y el compromiso con las comunidades vulnerables, promoviendo acciones concretas 
+                                de servicio y transformación social.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="objetivo-card" data-bg="identidad-cultural">
+                        <div class="objetivo-overlay"></div>
+                        <div class="objetivo-content-wrapper">
+                            <h3 class="objetivo-subtitle">Identidad Cultural y Ambiental</h3>
+                            <p class="objetivo-text">
+                                Promovemos que los estudiantes valoren y respeten la diversidad cultural y la rica naturaleza 
+                                de nuestro país, desarrollando una identidad cultural sólida y una conciencia ambiental que 
+                                impulse la conservación y el desarrollo sostenible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
+
+
+
+
+
+
 
 
 
@@ -335,7 +353,7 @@
             </div>
         </div>
     </div>
-
+</section>
 
 
 

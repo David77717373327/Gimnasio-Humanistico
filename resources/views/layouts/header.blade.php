@@ -50,11 +50,16 @@
                                 Educativa</a>
                             <a class="dropdown-item" href="{{ route('simbolos') }}">Símbolos Institucionales</a>
                             <a class="dropdown-item" href="{{ route('principios-valores') }}">principios y valores</a>
+                            <a class="dropdown-item" href="#directorio">Politica de Calidad</a>
                         </div>
                         <div class="dropdown-section">
                             <h6 class="dropdown-header">Organización</h6>
-                            <a class="dropdown-item" href="#directorio">Directorio</a>
-                            <a class="dropdown-item" href="#organigrama">Organigrama</a>
+                            <a class="dropdown-item" href="{{ route('organigrama') }}">Organigrama</a>
+                            <a class="dropdown-item" href="{{ route('Grupo_humanistico') }}">Grupo Humanistico S.A.S</a>                            
+                            <a class="dropdown-item" href="#directorio">Gobierno Escolar</a>Grupo-humanistico
+                            <a class="dropdown-item" href="#directorio">Directivos</a>
+                            <a class="dropdown-item" href="#directorio">Administrativos</a>
+                            <a class="dropdown-item" href="#directorio">Docentes</a>
                         </div>
                     </div>
                 </li>
@@ -85,8 +90,7 @@
                     <div class="dropdown-menu single-column">
                         <a class="dropdown-item" href="#actividades">Actividades Extracurriculares</a>
                         <a class="dropdown-item" href="#eventos">Eventos y Celebraciones</a>
-                        <a class="dropdown-item" href="#cafeteria">Servicio de Alimentación</a>
-                        <a class="dropdown-item" href="#transporte">Transporte Escolar</a>
+                        <a class="dropdown-item" href="{{ route('transporte') }}">Transporte Escolar</a>
                         <a class="dropdown-item" href="#pastoral">Pastoral Estudiantil</a>
                     </div>
                 </li>

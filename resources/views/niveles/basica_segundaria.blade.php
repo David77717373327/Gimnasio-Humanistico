@@ -72,7 +72,7 @@
            
 
 
-            <!-- SECCIÓN DE OBJETIVOS SECUNDARIA -->
+             <!-- SECCIÓN DE OBJETIVOS SECUNDARIA -->
     <section class="objetivos-section" id="contenido-secundaria">
         <div class="container-fluid objetivos-container-custom">
            
@@ -86,7 +86,7 @@
             </div>
 
             <!-- Navegación de Categorías -->
-            <div class="objetivos-navigation">
+            <nav class="objetivos-navigation">
                 <button class="objetivo-tab active" data-categoria="comunicacion">
                     Comunicación y Expresión
                 </button>
@@ -99,44 +99,44 @@
                 <button class="objetivo-tab" data-categoria="integral">
                     Desarrollo Integral y Bienestar
                 </button>
-            </div>
+            </nav>
 
             <!-- Contenido de Objetivos -->
             <div class="objetivos-content">
                 <!-- Comunicación y Expresión -->
                 <div class="objetivo-item active" id="objetivo-comunicacion">
                     <div class="objetivo-grid">
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-comments"></i>
+                        <div class="objetivo-card" data-bg="competencia-comunicativa">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Competencia Comunicativa</h3>
+                                <p class="objetivo-text">
+                                    El desarrollo de la capacidad para comprender textos y expresar correctamente mensajes complejos, 
+                                    orales y escritos en lengua castellana, así como para entender mediante un estudio sistemático 
+                                    los diferentes elementos constitutivos de la lengua.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Competencia Comunicativa</h3>
-                            <p class="objetivo-text">
-                                El desarrollo de la capacidad para comprender textos y expresar correctamente mensajes complejos, 
-                                orales y escritos en lengua castellana, así como para entender mediante un estudio sistemático 
-                                los diferentes elementos constitutivos de la lengua.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-book-open"></i>
+                        <div class="objetivo-card" data-bg="expresion-literaria">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Expresión Literaria</h3>
+                                <p class="objetivo-text">
+                                    La valoración de la lengua castellana como medio de expresión literaria y el estudio de la 
+                                    creación literaria en el país y en el mundo.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Expresión Literaria</h3>
-                            <p class="objetivo-text">
-                                La valoración de la lengua castellana como medio de expresión literaria y el estudio de la 
-                                creación literaria en el país y en el mundo.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-globe"></i>
+                        <div class="objetivo-card" data-bg="lengua-extranjera">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Lengua Extranjera</h3>
+                                <p class="objetivo-text">
+                                    La comprensión y la capacidad de expresarse en lengua extranjera.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Lengua Extranjera</h3>
-                            <p class="objetivo-text">
-                                La comprensión y la capacidad de expresarse en lengua extranjera.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -144,60 +144,60 @@
                 <!-- Desarrollo Científico y Tecnológico -->
                 <div class="objetivo-item" id="objetivo-cientifico">
                     <div class="objetivo-grid">
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-calculator"></i>
+                        <div class="objetivo-card" data-bg="razonamiento-logico">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Razonamiento Lógico-Matemático</h3>
+                                <p class="objetivo-text">
+                                    El desarrollo de las capacidades para el razonamiento lógico, mediante el dominio de los sistemas 
+                                    numéricos, geométricos, métricos, lógicos, analíticos, de conjuntos, de operaciones y relaciones, 
+                                    así como para su utilización en la solución de los problemas de la ciencia, de la tecnología y de la vida cotidiana.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Razonamiento Lógico-Matemático</h3>
-                            <p class="objetivo-text">
-                                El desarrollo de las capacidades para el razonamiento lógico, mediante el dominio de los sistemas 
-                                numéricos, geométricos, métricos, lógicos, analíticos, de conjuntos, de operaciones y relaciones, 
-                                así como para su utilización en la solución de los problemas de la ciencia, de la tecnología y de la vida cotidiana.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-flask"></i>
+                        <div class="objetivo-card" data-bg="conocimiento-cientifico">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Conocimiento Científico</h3>
+                                <p class="objetivo-text">
+                                    El avance en el conocimiento científico de los fenómenos físicos, químicos y biológicos, mediante 
+                                    la comprensión de las leyes, el planteamiento de los problemas y la observación experimental.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Conocimiento Científico</h3>
-                            <p class="objetivo-text">
-                                El avance en el conocimiento científico de los fenómenos físicos, químicos y biológicos, mediante 
-                                la comprensión de las leyes, el planteamiento de los problemas y la observación experimental.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-laptop-code"></i>
+                        <div class="objetivo-card" data-bg="tecnologia-practica">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Tecnología y Práctica</h3>
+                                <p class="objetivo-text">
+                                    La iniciativa en los campos más avanzados de la tecnología moderna y el entrenamiento en disciplinas, 
+                                    procesos y técnicas que les permitan el ejercicio de una función socialmente útil.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Tecnología y Práctica</h3>
-                            <p class="objetivo-text">
-                                La iniciativa en los campos más avanzados de la tecnología moderna y el entrenamiento en disciplinas, 
-                                procesos y técnicas que les permitan el ejercicio de una función socialmente útil.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-lightbulb"></i>
+                        <div class="objetivo-card" data-bg="teoria-practica">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Teoría y Práctica</h3>
+                                <p class="objetivo-text">
+                                    La comprensión de la dimensión práctica de los conocimientos teóricos, así como la dimensión teórica 
+                                    del conocimiento práctico y la capacidad para utilizarla en la solución de problemas.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Teoría y Práctica</h3>
-                            <p class="objetivo-text">
-                                La comprensión de la dimensión práctica de los conocimientos teóricos, así como la dimensión teórica 
-                                del conocimiento práctico y la capacidad para utilizarla en la solución de problemas.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-search"></i>
+                        <div class="objetivo-card" data-bg="busqueda-conocimiento">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Búsqueda de Conocimiento</h3>
+                                <p class="objetivo-text">
+                                    La utilización con sentido crítico de los distintos contenidos y formas de información y la búsqueda 
+                                    de nuevos conocimientos con su propio esfuerzo.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Búsqueda de Conocimiento</h3>
-                            <p class="objetivo-text">
-                                La utilización con sentido crítico de los distintos contenidos y formas de información y la búsqueda 
-                                de nuevos conocimientos con su propio esfuerzo.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -205,50 +205,50 @@
                 <!-- Formación Social y Ciudadana -->
                 <div class="objetivo-item" id="objetivo-social">
                     <div class="objetivo-grid">
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-history"></i>
+                        <div class="objetivo-card" data-bg="historia-sociedad">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Historia y Sociedad</h3>
+                                <p class="objetivo-text">
+                                    El estudio científico de la historia nacional y mundial dirigida a comprender el desarrollo de la 
+                                    sociedad y el estudio de las ciencias sociales, con miras al análisis de las condiciones actuales 
+                                    de la realidad social.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Historia y Sociedad</h3>
-                            <p class="objetivo-text">
-                                El estudio científico de la historia nacional y mundial dirigida a comprender el desarrollo de la 
-                                sociedad y el estudio de las ciencias sociales, con miras al análisis de las condiciones actuales 
-                                de la realidad social.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-earth-americas"></i>
+                        <div class="objetivo-card" data-bg="geografia-cultura">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Geografía y Cultura Mundial</h3>
+                                <p class="objetivo-text">
+                                    El estudio científico del universo, de la tierra, de su estructura física, de su división y 
+                                    organización política, del desarrollo económico de los países y de las diferentes manifestaciones 
+                                    culturales de los pueblos.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Geografía y Cultura Mundial</h3>
-                            <p class="objetivo-text">
-                                El estudio científico del universo, de la tierra, de su estructura física, de su división y 
-                                organización política, del desarrollo económico de los países y de las diferentes manifestaciones 
-                                culturales de los pueblos.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-scale-balanced"></i>
+                        <div class="objetivo-card" data-bg="formacion-constitucional">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Formación Constitucional</h3>
+                                <p class="objetivo-text">
+                                    La formación en el ejercicio de sus deberes y derechos, el conocimiento de la constitución política 
+                                    y de las relaciones internacionales.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Formación Constitucional</h3>
-                            <p class="objetivo-text">
-                                La formación en el ejercicio de sus deberes y derechos, el conocimiento de la constitución política 
-                                y de las relaciones internacionales.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-leaf"></i>
+                        <div class="objetivo-card" data-bg="conservacion-ambiental">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Conservación Ambiental</h3>
+                                <p class="objetivo-text">
+                                    El desarrollo de actitudes favorables al conocimiento, valoración y conservación de la naturaleza 
+                                    y el ambiente.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Conservación Ambiental</h3>
-                            <p class="objetivo-text">
-                                El desarrollo de actitudes favorables al conocimiento, valoración y conservación de la naturaleza 
-                                y el ambiente.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -256,42 +256,41 @@
                 <!-- Desarrollo Integral y Bienestar -->
                 <div class="objetivo-item" id="objetivo-integral">
                     <div class="objetivo-grid">
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-palette"></i>
+                        <div class="objetivo-card" data-bg="formacion-artistica">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Formación Artística</h3>
+                                <p class="objetivo-text">
+                                    La apreciación artística, la comprensión estética, la creatividad, la familiarización con los 
+                                    diferentes medios de expresión artística y el conocimiento, valoración y respeto por los bienes 
+                                    artísticos y culturales.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Formación Artística</h3>
-                            <p class="objetivo-text">
-                                La apreciación artística, la comprensión estética, la creatividad, la familiarización con los 
-                                diferentes medios de expresión artística y el conocimiento, valoración y respeto por los bienes 
-                                artísticos y culturales.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-heartbeat"></i>
+                        <div class="objetivo-card" data-bg="salud-bienestar">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Salud y Bienestar</h3>
+                                <p class="objetivo-text">
+                                    La valoración de la salud y de los hábitos relacionados con ella.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Salud y Bienestar</h3>
-                            <p class="objetivo-text">
-                                La valoración de la salud y de los hábitos relacionados con ella.
-                            </p>
                         </div>
                         
-                        <div class="objetivo-card">
-                            <div class="objetivo-icon">
-                                <i class="fas fa-running"></i>
+                        <div class="objetivo-card" data-bg="desarrollo-fisico">
+                            <div class="objetivo-overlay"></div>
+                            <div class="objetivo-content-wrapper">
+                                <h3 class="objetivo-subtitle">Desarrollo Físico y Recreación</h3>
+                                <p class="objetivo-text">
+                                    La educación física y la práctica de la recreación y los deportes, la participación y organización 
+                                    juvenil y la utilización adecuada del tiempo libre.
+                                </p>
                             </div>
-                            <h3 class="objetivo-subtitle">Desarrollo Físico y Recreación</h3>
-                            <p class="objetivo-text">
-                                La educación física y la práctica de la recreación y los deportes, la participación y organización 
-                                juvenil y la utilización adecuada del tiempo libre.
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
