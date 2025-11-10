@@ -86,6 +86,11 @@ class RutasController extends Controller
         return view('Organización.Gobierno_escolar');
     }
 
+    public function mostrarcontenidoAdministrativos()
+    {
+        return view('Organización.Administrativos');
+    }
+
 
 
 

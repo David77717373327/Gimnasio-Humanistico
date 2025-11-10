@@ -55,7 +55,7 @@
                             <a class="dropdown-item" href="{{ route('Grupo_humanistico') }}">Grupo Humanistico S.A.S</a>                            
                             <a class="dropdown-item" href="{{ route('Gobierno_escolar') }}">Gobierno Escolar</a>
                             <a class="dropdown-item" href="#directorio">Directivos</a>
-                            <a class="dropdown-item" href="#directorio">Administrativos</a>
+                            <a class="dropdown-item" href="{{ route('Administrativos') }}">Administrativos</a>
                             <a class="dropdown-item" href="#directorio">Docentes</a>
                         </div>
                     </div>
