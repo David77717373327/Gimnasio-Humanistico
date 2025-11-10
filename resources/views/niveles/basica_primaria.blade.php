@@ -72,13 +72,9 @@
                     </div>
                 </div>
 
-
-
                 <!-- SECCIÓN DE OBJETIVOS PRIMARIA -->
 <section class="objetivos-section" id="contenido-primaria">
     <div class="container-fluid objetivos-container-custom">
-
-        
 
         <!-- Navegación de Categorías -->
 <nav class="objetivos-navigation">

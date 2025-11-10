@@ -28,27 +28,31 @@
 
 
     <!-- HERO SECTION AVANZADO -->
-    <section class="hero-advanced">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-            <div class="hero-particles"></div>
-        </div>
-        <div class="container hero-container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-8 offset-lg-2 text-center">
+        <section class="hero-advanced">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <div class="hero-particles"></div>
+            </div>
+            <div class="container hero-container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-10 offset-lg-1 text-center">
 
-                    <h1 class="hero-title">
-                        <span class="title-highlight">Organigrama</span>
-                        <span class="title-highlight">Institucional</span>
-                    </h1>
-
-                    <div class="hero-scroll-indicator" onclick="scrollToTimeline()">
-                        <i class="fas fa-chevron-down"></i>
+                        <h1 class="hero-title">
+                            <span class="title-highlight">Organigrama</span>  
+                            <span class="title-highlight">Institucional</span>
+                        </h1>
+                        <div class="hero-scroll-indicator" onclick="scrollToTimeline()">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+
+
+
+
 
     <section id="organigrama-section" class="organigrama-section">
         <div class="container">

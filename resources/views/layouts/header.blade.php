@@ -32,13 +32,11 @@
                 <span></span>
             </span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="/">INICIO</a>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#">QUIÉNES SOMOS</a>
                     <div class="dropdown-menu">
@@ -46,31 +44,28 @@
                             <h6 class="dropdown-header">Institución</h6>
                             <a class="dropdown-item" href="{{ route('Historia') }}">Nuestra Historia</a>
                             <a class="dropdown-item" href="{{ route('mision-vision') }}">Misión y Visión</a>
-                            <a class="dropdown-item" href="{{ route('filosofia_institucional') }}">Filosofía
-                                Educativa</a>
+                            <a class="dropdown-item" href="{{ route('filosofia_institucional') }}">Filosofía Educativa</a>
                             <a class="dropdown-item" href="{{ route('simbolos') }}">Símbolos Institucionales</a>
                             <a class="dropdown-item" href="{{ route('principios-valores') }}">principios y valores</a>
-                            <a class="dropdown-item" href="#directorio">Politica de Calidad</a>
+                            <a class="dropdown-item" href="{{ route('politica-calidad') }}">Politica de Calidad</a>
                         </div>
-                        <div class="dropdown-section">
+                        <div class="dropdown-section"> 
                             <h6 class="dropdown-header">Organización</h6>
                             <a class="dropdown-item" href="{{ route('organigrama') }}">Organigrama</a>
                             <a class="dropdown-item" href="{{ route('Grupo_humanistico') }}">Grupo Humanistico S.A.S</a>                            
-                            <a class="dropdown-item" href="#directorio">Gobierno Escolar</a>Grupo-humanistico
+                            <a class="dropdown-item" href="{{ route('Gobierno_escolar') }}">Gobierno Escolar</a>
                             <a class="dropdown-item" href="#directorio">Directivos</a>
                             <a class="dropdown-item" href="#directorio">Administrativos</a>
                             <a class="dropdown-item" href="#directorio">Docentes</a>
                         </div>
                     </div>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#">PROPUESTA EDUCATIVA</a>
                     <div class="dropdown-menu single-column">
                         <a class="dropdown-item" href="#enfoque">Enfoque Pedagógico</a>
                     </div>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#">NIVELES</a>
                     <div class="dropdown-menu single-column">
@@ -80,7 +75,6 @@
                         <a class="dropdown-item" href="{{ route('media_academica') }}">Educación Media Académica</a>
                     </div>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admision') }}">ADMISIÓN</a>
                 </li>
@@ -94,11 +88,9 @@
                         <a class="dropdown-item" href="#pastoral">Pastoral Estudiantil</a>
                     </div>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="#contacto">CONTACTO</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link login-btn" href="{{ route('login') }}">ACCEDER</a>
                 </li>

@@ -55,6 +55,14 @@ class RutasController extends Controller
         return view('Institucion.Filosofia_institucional');
     }
 
+    public function mostrarcontenidopoliticadecalidad()
+    {
+        return view('Organización.Politica_de_calidad');
+    }
+
+
+
+
 
 
 
@@ -72,6 +80,18 @@ class RutasController extends Controller
     {
         return view('Organización.Grupo_humanistico');
     } 
+
+    public function mostrarcontenidoGobiernoescolar()
+    {
+        return view('Organización.Gobierno_escolar');
+    }
+
+
+
+
+
+
+
 
 
 
