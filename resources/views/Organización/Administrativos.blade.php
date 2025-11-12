@@ -17,7 +17,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('images/Logo.png') }}">
     <!-- CSS personalizado -->
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/Gobierno_escolar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/Administrativos.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 </head>
 
@@ -48,8 +48,184 @@
     </section>
 
 
+    <!-- Sección de Introducción -->
+    <section class="intro-section" id="intro-section">
+        <div class="equipo-grid">
+            <!-- Jefe Administrativo -->
+            <div class="equipo-column">
+                <h3 class="column-title">Jefe Administrativo</h3>
+                <p class="column-description">
+                    Líder de la planificación operativa y supervisor del personal administrativo.
+                </p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4 class="front-title">Jefe Administrativo</h4>
+                            <p class="front-subtitle">Liderazgo Operativo</p>
+                            <div class="hover-hint">Pasa el cursor →</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="back-title">Jefe Administrativo</h5>
+                            <p class="back-description">
+                                Lidera la planificación operativa (presupuesto, compras, infraestructura) alineada 
+                                con las directrices de la Rectoría. Supervisa y articula el trabajo del personal 
+                                administrativo (Contaduría, Pagaduría, Servicios Generales, Secretaría).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Incluir el footer -->
+            <!-- Contador -->
+            <div class="equipo-column">
+                <h3 class="column-title">Contador</h3>
+                <p class="column-description">
+                    Responsable del rigor contable y la transparencia financiera institucional.
+                </p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h4 class="front-title">Contador</h4>
+                            <p class="front-subtitle">Rigor Financiero</p>
+                            <div class="hover-hint">Pasa el cursor →</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="back-title">Contador</h5>
+                            <p class="back-description">
+                                Es el profesional responsable del rigor contable y la transparencia financiera, 
+                                esencial para la toma de decisiones estratégicas. Es experto en NIIF y en la 
+                                legislación tributaria colombiana, garantizando la veracidad, exactitud y oportunidad 
+                                de todos los informes contables.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secretaria Académica -->
+            <div class="equipo-column">
+                <h3 class="column-title">Secretaria Académica</h3>
+                <p class="column-description">
+                    Guardiana de la información académica y primer contacto con la comunidad.
+                </p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h4 class="front-title">Secretaria Académica</h4>
+                            <p class="front-subtitle">Gestión Académica</p>
+                            <div class="hover-hint">Pasa el cursor →</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="back-title">Secretaria Académica</h5>
+                            <p class="back-description">
+                                Es la depositaria y responsable de la información académica, procesos de matrícula 
+                                y demás funciones afines que le asigne la rectoría y el primer punto de contacto 
+                                para la comunidad, requiere precisión técnica, confidencialidad, y alta calidad humana.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagador - Tesorero -->
+            <div class="equipo-column">
+                <h3 class="column-title">Pagador - Tesorero</h3>
+                <p class="column-description">
+                    Ejecutor de transacciones financieras con exactitud y seguridad.
+                </p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-money-check-alt"></i>
+                            </div>
+                            <h4 class="front-title">Pagador - Tesorero</h4>
+                            <p class="front-subtitle">Gestión Financiera</p>
+                            <div class="hover-hint">Pasa el cursor →</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="back-title">Pagador - Tesorero</h5>
+                            <p class="back-description">
+                                Ejecuta las transacciones financieras con máxima exactitud y puntualidad. Es garante 
+                                de la seguridad en el manejo del flujo de caja y la documentación de soporte.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maestra de Apoyo -->
+            <div class="equipo-column">
+                <h3 class="column-title">Maestra de Apoyo</h3>
+                <p class="column-description">
+                    Experta en inclusión educativa y flexibilidad curricular.
+                </p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h4 class="front-title">Maestra de Apoyo</h4>
+                            <p class="front-subtitle">Inclusión Educativa</p>
+                            <div class="hover-hint">Pasa el cursor →</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="back-title">Maestra de Apoyo</h5>
+                            <p class="back-description">
+                                Es el experto técnico que materializa la inclusión educativa, trabajando como docente 
+                                y consultor para la flexibilidad curricular. Posee un profundo conocimiento del Diseño 
+                                Universal de Aprendizaje DUA y del Decreto 1421/2017. Es el experto en el diseño e 
+                                implementación de los Planes Individuales de Ajustes Razonables PIAR y la flexibilidad 
+                                curricular.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal de Servicios Generales -->
+            <div class="equipo-column">
+                <h3 class="column-title">Servicios Generales</h3>
+                <p class="column-description">
+                    Garantes de la salud, seguridad y habitabilidad institucional.
+                </p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-broom"></i>
+                            </div>
+                            <h4 class="front-title">Servicios Generales</h4>
+                            <p class="front-subtitle">Bienestar y Seguridad</p>
+                            <div class="hover-hint">Pasa el cursor →</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h5 class="back-title">Servicios Generales</h5>
+                            <p class="back-description">
+                                Es el equipo garante de la salud, seguridad y habitabilidad de la institución, 
+                                fundamental para el bienestar de toda la comunidad. Garantizan la higiene y salubridad 
+                                de todas las áreas, actuando de manera proactiva en la prevención de riesgos sanitarios. 
+                                Mantiene los estándares de orden y limpieza requeridos para un ambiente educativo de 
+                                calidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Incluir el footer -->
     @include('layouts.footer')
 
     <!-- Scripts -->

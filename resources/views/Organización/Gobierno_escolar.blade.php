@@ -50,13 +50,6 @@
 
 
 
-
-
-
-
-
-
-
     <section class="intro-section" id="intro-section">
         <p class="intro-text">
             El Gobierno Escolar está conformado por el Consejo Directivo, como órgano de máxima autoridad para la toma
@@ -229,8 +222,7 @@
                                 <div class="member-item">
                                     <span class="bullet">•</span>
                                     <p class="member-text">
-                                        <strong>Los Directivos Propietarios</strong>: Gloria Carvajal de Valderrama,
-                                        Silvia Cristina Ruiz Campos y Jaime Puentes Camero.
+                                        <strong>Los Directivos Propietarios</strong>: Un representante de los directivos propetarios 
                                     </p>
                                 </div>
                                 <div class="member-item">

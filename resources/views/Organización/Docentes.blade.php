@@ -1,342 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Docente - GIMNASIO HUMANÍSTICO</title>
+    <title>Misión y Visión - GIMNASIO HUMANÍSTICO</title>
+    <!-- Google Fonts - Tipografía moderna -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap y Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-green: #0d3f27;
-            --primary-green-bottom: #065e35;
-            --secondary-green: #7ddfac;
-            --accent-gold: #F4B942;
-            --white: #FFFFFF;
-            --text-dark: #1F2937;
-            --text-light: #6B7280;
-            --text-muted: #9CA3AF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text-dark);
-            background: var(--white);
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        .hero-advanced {
-            position: relative;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-bottom) 100%);
-            overflow: hidden;
-        }
-
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(13, 63, 39, 0.3);
-        }
-
-        .hero-particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .hero-container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .title-highlight {
-            color: var(--accent-gold);
-        }
-
-        .hero-scroll-indicator {
-            margin-top: 3rem;
-            cursor: pointer;
-            animation: bounce 2s infinite;
-        }
-
-        .hero-scroll-indicator i {
-            font-size: 2rem;
-            color: var(--white);
-            opacity: 0.8;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
-        /* Sección de Profesores */
-        .profesores-section {
-            padding: 3rem 0;
-            background: var(--white);
-        }
-
-        .section-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-
-        .section-intro h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-intro p {
-            font-size: 1.125rem;
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* Grid de Profesores */
-        .profesores-grid {
-            display: grid;
-            gap: 1.5rem 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Profesor Item */
-        .profesor-item {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .profesor-item:nth-child(even) {
-            grid-template-columns: 1fr 280px;
-        }
-
-        .profesor-item:nth-child(even) .profesor-image {
-            order: 2;
-        }
-
-        .profesor-item:nth-child(even) .profesor-info {
-            order: 1;
-            text-align: right;
-        }
-
-        /* Imagen del Profesor */
-        .profesor-image {
-            position: relative;
-        }
-
-        .profesor-image img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .profesor-image::after {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: 10px;
-            bottom: 10px;
-            border: 2px solid var(--secondary-green);
-            z-index: -1;
-            transition: all 0.3s ease;
-        }
-
-        .profesor-item:nth-child(even) .profesor-image::after {
-            left: 10px;
-            right: -10px;
-        }
-
-        .profesor-item:hover .profesor-image::after {
-            top: -15px;
-            left: -15px;
-            right: 15px;
-            bottom: 15px;
-        }
-
-        .profesor-item:nth-child(even):hover .profesor-image::after {
-            left: 15px;
-            right: -15px;
-        }
-
-        /* Información del Profesor */
-        .profesor-info {
-            padding: 0.5rem 0;
-        }
-
-        .profesor-info h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .profesor-cargo {
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--primary-green);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .profesor-descripcion {
-            font-size: 1rem;
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        .profesor-especialidades {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .profesor-item:nth-child(even) .profesor-especialidades {
-            justify-content: flex-end;
-        }
-
-        .especialidad-tag {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            padding: 0.4rem 1rem;
-            background: rgba(125, 223, 172, 0.1);
-            display: inline-block;
-        }
-
-        /* Divider entre profesores */
-        .profesor-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--text-muted) 20%, var(--text-muted) 80%, transparent);
-            opacity: 0.15;
-            margin: 0.75rem 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .profesores-grid {
-                gap: 4rem 2rem;
-            }
-
-            .profesor-item,
-            .profesor-item:nth-child(even) {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .profesor-image,
-            .profesor-item:nth-child(even) .profesor-image {
-                order: 1;
-                margin: 0 auto;
-                max-width: 280px;
-            }
-
-            .profesor-info,
-            .profesor-item:nth-child(even) .profesor-info {
-                order: 2;
-                text-align: center;
-            }
-
-            .profesor-especialidades,
-            .profesor-item:nth-child(even) .profesor-especialidades {
-                justify-content: center;
-            }
-
-            .profesor-image::after,
-            .profesor-item:nth-child(even) .profesor-image::after {
-                left: -10px;
-                right: 10px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .profesores-section {
-                padding: 3rem 0;
-            }
-
-            .section-intro {
-                margin-bottom: 3rem;
-            }
-
-            .section-intro h2 {
-                font-size: 2rem;
-            }
-
-            .profesores-grid {
-                padding: 0 1.5rem;
-            }
-
-            .profesor-item {
-                gap: 1.5rem;
-            }
-
-            .profesor-info h3 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/Logo.png') }}">
+    <!-- CSS personalizado -->
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/Docentes.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 </head>
-<body>
 
-    <!-- HERO SECTION -->
+<body>
+    <!-- Incluir el header -->
+    @include('layouts.header')
+
+
+    <!-- HERO SECTION AVANZADO -->
     <section class="hero-advanced">
         <div class="hero-background">
             <div class="hero-overlay"></div>
@@ -345,11 +35,12 @@
         <div class="container hero-container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-10 offset-lg-1 text-center">
+
                     <h1 class="hero-title">
                         <span class="title-highlight">Personal</span> -
                         <span class="title-highlight">Docente</span>
                     </h1>
-                    <div class="hero-scroll-indicator" onclick="scrollToProfesores()">
+                    <div class="hero-scroll-indicator" onclick="scrollToTimeline()">
                         <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
@@ -357,12 +48,21 @@
         </div>
     </section>
 
+
+
+    
     <!-- SECCIÓN DE PROFESORES -->
     <section class="profesores-section" id="profesores">
         <div class="container">
             <div class="section-intro">
-                <h2>Nuestro Equipo Docente</h2>
-                <p>Profesionales comprometidos con la excelencia educativa y el desarrollo integral de nuestros estudiantes.</p>
+                
+                <p> Acorde con el horizonte institucional, los maestros encarnan
+                     un liderazgo pedagógico inspirador.  Es un profesional con una 
+                     sólida formación humanista que promueve la justicia, la inclusión
+                      y el respeto por la diversidad de ritmos y estilos de aprendizaje
+                       de sus estudiantes. Posee un profundo dominio 
+                    de su disciplina y un compromiso activo con la actualización y resignificación 
+                    continua de sus saberes</p>
             </div>
 
             <div class="profesores-grid">
@@ -577,45 +277,128 @@
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        function scrollToProfesores() {
-            document.getElementById('profesores').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
 
+<!-- Incluir el footer -->
+    @include('layouts.footer')
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Scroll suave para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animación de partículas en el hero (MODIFICADO para funcionar con ambas clases)
         function createParticles() {
-            const particles = document.querySelector('.hero-particles');
+            const particles = document.querySelector('.hero-particles') ||
+                document.querySelector('.floating-particles');
             if (particles) {
                 for (let i = 0; i < 50; i++) {
                     const particle = document.createElement('div');
-                    particle.style.position = 'absolute';
-                    particle.style.width = '4px';
-                    particle.style.height = '4px';
-                    particle.style.background = 'rgba(255, 255, 255, 0.3)';
-                    particle.style.borderRadius = '50%';
+                    particle.className = 'particle';
                     particle.style.left = Math.random() * 100 + '%';
-                    particle.style.top = Math.random() * 100 + '%';
-                    particle.style.animation = `float ${Math.random() * 10 + 10}s infinite ease-in-out`;
-                    particle.style.animationDelay = Math.random() * 5 + 's';
+                    particle.style.animationDelay = Math.random() * 20 + 's';
+                    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
                     particles.appendChild(particle);
                 }
             }
         }
 
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes float {
-                0%, 100% { transform: translate(0, 0); opacity: 0; }
-                50% { opacity: 0.5; }
-                100% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
-            }
-        `;
-        document.head.appendChild(style);
-
+        // Inicializar partículas
         createParticles();
+
+
+        // Scroll suave para el indicador de scroll del hero
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', function() {
+                    const nextSection = document.querySelector('.historia-hero').nextElementSibling;
+                    if (nextSection) {
+                        nextSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    } else {
+                        window.scrollBy({
+                            top: window.innerHeight * 0.7,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        });
+
+
+        // Scroll suave al timeline
+        function scrollToTimeline() {
+            document.getElementById('preescolar-content').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Scroll suave al timeline con offset
+        function scrollToTimeline() {
+            const target = document.getElementById('intro-section');
+            if (target) {
+                const headerHeight = document.querySelector('header')?.offsetHeight || 1;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 1;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+
+        // Script para adaptar automáticamente el tamaño del título
+        // Agregar este script al final del body o en tu archivo JS principal
+
+        function adaptHeroTitle() {
+            const heroTitle = document.querySelector('.hero-title');
+            if (!heroTitle) return;
+
+            const titleText = heroTitle.textContent.trim();
+            const characterCount = titleText.length;
+            const wordCount = titleText.split(' ').length;
+
+            // Remover clases previas
+            heroTitle.classList.remove('auto-long', 'auto-short');
+
+            // Aplicar clase según la longitud del texto
+            if (characterCount > 35 || wordCount > 5) {
+                // Título largo como "Componente Filosófico De Identidad"
+                heroTitle.classList.add('auto-long');
+            } else if (characterCount < 15 || wordCount < 3) {
+                // Título corto
+                heroTitle.classList.add('auto-short');
+            }
+            // Si está en el rango medio, usa el estilo por defecto
+        }
+
+        // Ejecutar cuando la página cargue
+        document.addEventListener('DOMContentLoaded', function() {
+            adaptHeroTitle();
+        });
+
+        // Re-evaluar si cambia el tamaño de ventana
+        window.addEventListener('resize', function() {
+            adaptHeroTitle();
+        });
+
     </script>
 </body>
+
 </html>
