@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,62 +26,92 @@
 
 
 <body>
-    <!-- Hero Section Completamente Rediseñado -->
-    <!-- Hero Section Profesional - Estilo Los Andes -->
-<section class="hero-banner" id="inicio">
-    <!-- Fondo con imagen y degradados sutiles -->
-    <div class="hero-background">
-        <div class="hero-image-container">
-            <img src="{{ asset('images/iniciooo2.jpeg') }}" 
-                 alt="Estudiantes exitosos del Colegio"
-                 class="hero-bg-image">
+
+    <section class="hero-banner" id="inicio">
+        <!-- Fondo con video y overlays profesionales -->
+        <div class="hero-background">
+            <!-- Video de fondo -->
+            <div class="hero-video-container">
+                <video class="hero-bg-video" autoplay muted loop playsinline
+                    poster="{{ asset('images/video-poster.jpg') }}">
+                    <source src="{{ asset('videos/hero-background4.mp4') }}" type="video/mp4">
+                    <source src="{{ asset('videos/hero-background.webm') }}" type="video/webm">
+                    <!-- Fallback para navegadores sin soporte -->
+                    <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Estudiantes del Colegio"
+                        class="hero-fallback-image">
+                </video>
+            </div>
+
+            <!-- Overlays para mejor legibilidad -->
+            <div class="hero-video-overlay"></div>
+            <div class="hero-gradient-overlay"></div>
         </div>
-        <!-- Degradado 20% arriba y 20% abajo -->
-        <div class="hero-gradient-overlay"></div>
-    </div>
 
-    <div class="hero-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-10 col-xl-9">
-                    <!-- Título -->
-                    <div class="hero-title-section">
-                        <h1 class="hero-title">
-                            Nos educamos en el trabajo humanizante para un nuevo país
-                        </h1>
-                    </div>
-
-                    <!-- Subtítulo y botones en columna vertical -->
-                    <div class="hero-bottom-section">
-                        <!-- Subtítulo -->
-                        <div class="hero-subtitle-wrapper">
-                            <p class="hero-subtitle">
-                                En nuestras aulas se fortalece el vuelo de la creatividad, la imaginación, 
-                                el humanismo y el conocimiento.<br>
-                                ¡Ven y alza el vuelo con nosotros; el futuro nos inspira!
-                            </p>
+        <!-- Contenido del Hero -->
+        <div class="hero-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-10 col-xl-9">
+                        <!-- Título principal -->
+                        <div class="hero-title-section">
+                            <h1 class="hero-title">
+                                Nos educamos en el trabajo humanizante para un nuevo país
+                            </h1>
                         </div>
-                        
-                        <!-- Botones en fila -->
-                        <div class="hero-buttons-wrapper">
-                            <a href="{{ route('admision') }}" class="btn-primary-modern">
-                                <i class="fas fa-rocket"></i>
-                                Solicitar Admisión
-                            </a>
-                            <a href="#virtual-tour" class="btn-secondary-modern">
-                                <i class="fas fa-play"></i>
-                                Tour Virtual
-                            </a>
+
+                        <!-- Subtítulo y botones -->
+                        <div class="hero-bottom-section">
+                            <!-- Subtítulo -->
+                            <div class="hero-subtitle-wrapper">
+                                <p class="hero-subtitle">
+                                    En nuestras aulas se fortalece el vuelo de la creatividad, la imaginación,
+                                    el humanismo y el conocimiento.<br>
+                                    ¡Ven y alza el vuelo con nosotros; el futuro nos inspira!
+                                </p>
+                            </div>
+
+                            <!-- Botones de acción -->
+                            <div class="hero-buttons-wrapper">
+                                <a href="{{ route('admision') }}" class="btn-primary-modern">
+                                    <i class="fas fa-rocket"></i>
+                                    Solicitar Admisión
+                                </a>
+                                <a href="#virtual-tour" class="btn-secondary-modern">
+                                    <i class="fas fa-play"></i>
+                                    Tour Virtual
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+
+        <!-- Control de reproducción (opcional) -->
+        <button class="video-control-btn" id="videoControl" aria-label="Pausar video">
+            <i class="fas fa-pause"></i>
+        </button>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Descubre más</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
 
 
-<!-- ============================================
+
+
+
+
+
+
+
+
+
+    <!-- ============================================
      SECCIÓN DE BIENVENIDA INSTITUCIONAL
      Insertar este código DESPUÉS de la hero section (después del </section> de .hero-banner)
 ============================================ -->
@@ -137,7 +168,7 @@
                                 </div>
                                 <span>Tecnología educativa de vanguardia</span>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -166,75 +197,80 @@
 
 
             <!-- Galería de Instalaciones -->
-<div class="facilities-gallery" data-aos="fade-up">
-    <div class="gallery-header text-center mb-4">
-        <h2 class="gallery-title">
-            <span class="title-decorator"></span>
-            Nuestras Instalaciones
-            <span class="title-decorator"></span>
-        </h2>
-        <p class="gallery-subtitle">Espacios diseñados para potenciar el aprendizaje y el desarrollo integral</p>
-    </div>
+            <div class="facilities-gallery" data-aos="fade-up">
+                <div class="gallery-header text-center mb-4">
+                    <h2 class="gallery-title">
+                        <span class="title-decorator"></span>
+                        Nuestras Instalaciones
+                        <span class="title-decorator"></span>
+                    </h2>
+                    <p class="gallery-subtitle">Espacios diseñados para potenciar el aprendizaje y el desarrollo
+                        integral</p>
+                </div>
 
-    <div class="row g-4">
-        <div class="col-lg-3 col-md-6">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                <div class="gallery-image-wrapper">
-                    <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Laboratorios de Ciencias" class="gallery-image">
-                    <div class="gallery-title-overlay">
-                        <h4 class="facility-title">Laboratorios de Ciencias</h4>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="gallery-image-wrapper">
+                                <img src="{{ asset('images/iniciooo2.jpeg') }}" alt="Laboratorios de Ciencias"
+                                    class="gallery-image">
+                                <div class="gallery-title-overlay">
+                                    <h4 class="facility-title">Laboratorios de Ciencias</h4>
+                                </div>
+                                <div class="gallery-icon-container">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-icon-container">
-                        <i class="fas fa-flask"></i>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="gallery-image-wrapper">
+                                <img src="{{ asset('images/Mision3.jpg') }}" alt="Aulas Inteligentes"
+                                    class="gallery-image">
+                                <div class="gallery-title-overlay">
+                                    <h4 class="facility-title">Aulas Inteligentes</h4>
+                                </div>
+                                <div class="gallery-icon-container">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="gallery-image-wrapper">
+                                <img src="{{ asset('images/Mision1.jpg') }}" alt="Biblioteca Digital"
+                                    class="gallery-image">
+                                <div class="gallery-title-overlay">
+                                    <h4 class="facility-title">Biblioteca Digital</h4>
+                                </div>
+                                <div class="gallery-icon-container">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="gallery-image-wrapper">
+                                <img src="{{ asset('images/Mision1.jpg') }}" alt="Espacios Deportivos"
+                                    class="gallery-image">
+                                <div class="gallery-title-overlay">
+                                    <h4 class="facility-title">Espacios Deportivos</h4>
+                                </div>
+                                <div class="gallery-icon-container">
+                                    <i class="fas fa-running"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-lg-3 col-md-6">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                <div class="gallery-image-wrapper">
-                    <img src="{{ asset('images/Mision3.jpg') }}" alt="Aulas Inteligentes" class="gallery-image">
-                    <div class="gallery-title-overlay">
-                        <h4 class="facility-title">Aulas Inteligentes</h4>
-                    </div>
-                    <div class="gallery-icon-container">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                <div class="gallery-image-wrapper">
-                    <img src="{{ asset('images/Mision1.jpg') }}" alt="Biblioteca Digital" class="gallery-image">
-                    <div class="gallery-title-overlay">
-                        <h4 class="facility-title">Biblioteca Digital</h4>
-                    </div>
-                    <div class="gallery-icon-container">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                <div class="gallery-image-wrapper">
-                    <img src="{{ asset('images/Mision1.jpg') }}" alt="Espacios Deportivos" class="gallery-image">
-                    <div class="gallery-title-overlay">
-                        <h4 class="facility-title">Espacios Deportivos</h4>
-                    </div>
-                    <div class="gallery-icon-container">
-                        <i class="fas fa-running"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
     </section>
 
 
@@ -395,7 +431,7 @@
                             <p class="level-description">
                                 Desarrollamos las habilidades fundamentales a través del juego,
                                 la exploración y actividades que estimulan la creatividad y el pensamiento crítico.
-                            </p>                         
+                            </p>
                             <a href="{{ route('prescolar') }}" class="level-link">
                                 <span>Ver más información</span>
                                 <i class="fas fa-arrow-right"></i>
@@ -437,7 +473,7 @@
                                 Fortalecemos las competencias comunicativas, matemáticas y científicas
                                 con metodologías activas y enfoque en el aprendizaje colaborativo.
                             </p>
-                            
+
                             <a href="{{ route('basica_primaria') }}" class="level-link">
                                 <span>Ver más información</span>
                                 <i class="fas fa-arrow-right"></i>
@@ -477,7 +513,7 @@
                             <p class="level-description">
                                 Desarrollo del pensamiento crítico y analítico a través de proyectos
                                 interdisciplinarios que preparan para los desafíos de la educación media.
-                            </p>                            
+                            </p>
                             <a href="#secundaria-detalle" class="level-link">
                                 <span>Ver más información</span>
                                 <i class="fas fa-arrow-right"></i>
@@ -518,7 +554,7 @@
                             <p class="level-description">
                                 Preparación integral para la educación superior con énfasis en el desarrollo
                                 del proyecto de vida y competencias para el siglo XXI.
-                            </p>                            
+                            </p>
                             <a href="#media-detalle" class="level-link">
                                 <span>Ver más información</span>
                                 <i class="fas fa-arrow-right"></i>
@@ -556,63 +592,104 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Navegación con scroll mejorada
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const navigation = document.querySelector('.main-navigation');
+    /**
+     * ============================================
+     * SCRIPT PRINCIPAL - SCROLL INDICATOR SIEMPRE VISIBLE
+     * ============================================
+     */
 
-            if (scrolled > 50) {
-                navigation.classList.add('scrolled');
-            } else {
-                navigation.classList.remove('scrolled');
+    // ============================================
+    // NAVEGACIÓN CON SCROLL
+    // ============================================
+    let scrollTicking = false;
+
+    window.addEventListener('scroll', function() {
+        if (!scrollTicking) {
+            window.requestAnimationFrame(function() {
+                const scrolled = window.pageYOffset;
+                const navigation = document.querySelector('.main-navigation');
+
+                // Navegación sticky
+                if (navigation) {
+                    if (scrolled > 50) {
+                        navigation.classList.add('scrolled');
+                    } else {
+                        navigation.classList.remove('scrolled');
+                    }
+                }
+
+                // EL SCROLL INDICATOR NUNCA SE OCULTA
+                // No hay código aquí que lo oculte
+
+                scrollTicking = false;
+            });
+
+            scrollTicking = true;
+        }
+    });
+
+    // ============================================
+    // ANIMACIÓN DE CONTADORES
+    // ============================================
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-count'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = Math.floor(current);
+            }, 16);
+        });
+    }
+
+    // ============================================
+    // INTERSECTION OBSERVER PARA ANIMACIONES
+    // ============================================
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('stats-panel')) {
+                    animateCounters();
+                }
+                entry.target.classList.add('animate-in');
             }
         });
+    }, {
+        threshold: 0.1
+    });
 
-        // Animación de contadores mejorada
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-count'));
-                const duration = 2000;
-                const increment = target / (duration / 16);
-                let current = 0;
-
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
-                    }
-                    counter.textContent = Math.floor(current);
-                }, 16);
-            });
-        }
-
-        // Observer para activar animaciones
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('stats-panel')) {
-                        animateCounters();
-                    }
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        // Observar elementos para animación
+    // Observar elementos para animación
+    document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.stats-panel, .feature-card').forEach(el => {
             observer.observe(el);
         });
+    });
 
-        // Smooth scroll mejorado
+    // ============================================
+    // SMOOTH SCROLL PARA ENLACES
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href');
+
+                // Ignorar enlaces vacíos o solo con #
+                if (!href || href === '#') {
+                    e.preventDefault();
+                    return;
+                }
+
+                const target = document.querySelector(href);
                 if (target) {
+                    e.preventDefault();
                     const offsetTop = target.offsetTop - 80;
                     window.scrollTo({
                         top: offsetTop,
@@ -621,18 +698,350 @@
                 }
             });
         });
+    });
 
-        // Mejorar navegación móvil
+    // ============================================
+    // NAVEGACIÓN MÓVIL
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function() {
         const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse.classList.contains('show')) {
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
                     const toggler = document.querySelector('.navbar-toggler');
-                    toggler.click();
+                    if (toggler) {
+                        toggler.click();
+                    }
                 }
             });
         });
-    </script>
+    });
+
+    /**
+     * ============================================
+     * HERO VIDEO CONTROLLER
+     * ============================================
+     */
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.querySelector('.hero-bg-video');
+        const videoControlBtn = document.getElementById('videoControl');
+        let isPlaying = false;
+
+        // ============================================
+        // REPRODUCCIÓN AUTOMÁTICA DEL VIDEO
+        // ============================================
+        function forceVideoPlay() {
+            if (!video) return;
+
+            video.muted = true;
+            video.playsInline = true;
+            video.autoplay = true;
+
+            const playPromise = video.play();
+
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(function() {
+                        console.log('✅ Video reproduciendo automáticamente');
+                        isPlaying = true;
+                        if (videoControlBtn) {
+                            videoControlBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                            videoControlBtn.setAttribute('aria-label', 'Pausar video');
+                        }
+                    })
+                    .catch(function(error) {
+                        console.warn('Primer intento falló:', error.message);
+                        setTimeout(function() {
+                            video.play()
+                                .then(function() {
+                                    console.log('✅ Video reproduciendo (segundo intento)');
+                                    isPlaying = true;
+                                    if (videoControlBtn) {
+                                        videoControlBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                                    }
+                                })
+                                .catch(function(err) {
+                                    console.error('❌ No se pudo reproducir:', err.message);
+                                    if (videoControlBtn) {
+                                        videoControlBtn.innerHTML = '<i class="fas fa-play"></i>';
+                                    }
+                                });
+                        }, 500);
+                    });
+            }
+        }
+
+        // Múltiples puntos de inicio
+        if (video) {
+            forceVideoPlay();
+
+            video.addEventListener('loadedmetadata', function() {
+                if (video.paused && !isPlaying) {
+                    forceVideoPlay();
+                }
+            });
+
+            video.addEventListener('canplay', function() {
+                if (video.paused && !isPlaying) {
+                    forceVideoPlay();
+                }
+            });
+
+            setTimeout(function() {
+                if (video.paused) {
+                    console.log('🔄 Iniciando video (intento de respaldo)');
+                    forceVideoPlay();
+                }
+            }, 1000);
+
+            video.addEventListener('loadeddata', function() {
+                video.style.opacity = '1';
+            });
+
+            video.addEventListener('error', function(e) {
+                console.error('Error de video:', e);
+            });
+        }
+
+        // ============================================
+        // CONTROL MANUAL DEL VIDEO
+        // ============================================
+        if (videoControlBtn && video) {
+            videoControlBtn.addEventListener('click', function() {
+                if (video.paused) {
+                    video.play()
+                        .then(function() {
+                            videoControlBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                            videoControlBtn.setAttribute('aria-label', 'Pausar video');
+                            isPlaying = true;
+                        })
+                        .catch(function(error) {
+                            console.error('Error al reproducir:', error);
+                        });
+                } else {
+                    video.pause();
+                    videoControlBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    videoControlBtn.setAttribute('aria-label', 'Reproducir video');
+                    isPlaying = false;
+                }
+            });
+        }
+
+        // ============================================
+        // VISIBILIDAD DE PÁGINA
+        // ============================================
+        document.addEventListener('visibilitychange', function() {
+            if (!video) return;
+
+            if (document.hidden) {
+                video.pause();
+            } else if (isPlaying) {
+                video.play().catch(function(err) {
+                    console.log('No se pudo reanudar:', err);
+                });
+            }
+        });
+
+        // ============================================
+        // OBSERVER PARA EL VIDEO
+        // ============================================
+        if ('IntersectionObserver' in window && video) {
+            const videoObserver = new IntersectionObserver(
+                function(entries) {
+                    entries.forEach(function(entry) {
+                        if (!entry.isIntersecting && !video.paused) {
+                            video.pause();
+                        } else if (entry.isIntersecting && isPlaying && video.paused) {
+                            video.play().catch(function(err) {
+                                console.log('No se pudo reproducir al volver visible:', err);
+                            });
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                }
+            );
+
+            videoObserver.observe(video);
+        }
+
+        // ============================================
+        // CALIDAD ADAPTATIVA EN MÓVILES
+        // ============================================
+        function adjustVideoForMobile() {
+            if (!video) return;
+
+            if (window.innerWidth < 768) {
+                const mobileSrc = video.getAttribute('data-mobile-src');
+                if (mobileSrc && video.currentSrc.indexOf(mobileSrc) === -1) {
+                    video.src = mobileSrc;
+                    if (isPlaying) {
+                        video.play();
+                    }
+                }
+            }
+        }
+
+        adjustVideoForMobile();
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(adjustVideoForMobile, 250);
+        });
+
+        // ============================================
+        // CONEXIONES LENTAS
+        // ============================================
+        if ('connection' in navigator) {
+            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+            if (connection && (connection.effectiveType === 'slow-2g' ||
+                    connection.effectiveType === '2g' ||
+                    connection.saveData)) {
+                console.log('⚠️ Conexión lenta detectada');
+            }
+        }
+
+        // ============================================
+        // SCROLL INDICATOR - SIEMPRE VISIBLE
+        // ============================================
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+
+        if (scrollIndicator) {
+            console.log('✅ Scroll indicator encontrado y configurado (siempre visible)');
+
+            // Asegurar propiedades CSS desde JavaScript
+            scrollIndicator.style.cursor = 'pointer';
+            scrollIndicator.style.pointerEvents = 'auto';
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.visibility = 'visible';
+
+            // Event listener principal con máxima prioridad
+            scrollIndicator.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                console.log('🖱️ Click en scroll indicator detectado');
+
+                // Buscar sección de bienvenida
+                const welcomeSection = document.getElementById('bienvenida');
+
+                if (welcomeSection) {
+                    console.log('✅ Navegando a sección de bienvenida');
+
+                    // Calcular posición con offset para navbar
+                    const navbar = document.querySelector('.main-navigation');
+                    const navbarHeight = navbar ? navbar.offsetHeight : 80;
+                    const targetPosition = welcomeSection.offsetTop - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    console.log('⚠️ Sección bienvenida no encontrada, buscando alternativa');
+
+                    // Buscar por clase
+                    const welcomeAlt = document.querySelector('.welcome-section');
+                    if (welcomeAlt) {
+                        const navbar = document.querySelector('.main-navigation');
+                        const navbarHeight = navbar ? navbar.offsetHeight : 80;
+                        const targetPosition = welcomeAlt.offsetTop - navbarHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // Último recurso: scroll una pantalla completa
+                        console.log('⚠️ Usando scroll por defecto');
+                        window.scrollTo({
+                            top: window.innerHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }, true); // useCapture = true para mayor prioridad
+
+            // Listener adicional para dispositivos táctiles
+            scrollIndicator.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                
+                const welcomeSection = document.getElementById('bienvenida') || 
+                                      document.querySelector('.welcome-section');
+                
+                if (welcomeSection) {
+                    const navbar = document.querySelector('.main-navigation');
+                    const navbarHeight = navbar ? navbar.offsetHeight : 80;
+                    const targetPosition = welcomeSection.offsetTop - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            }, { passive: false });
+
+        } else {
+            console.error('❌ Scroll indicator NO encontrado en el DOM');
+        }
+
+        // ============================================
+        // ANIMACIONES DE ENTRADA
+        // ============================================
+        const heroElements = document.querySelectorAll('.hero-title-section, .hero-bottom-section');
+
+        if ('IntersectionObserver' in window && heroElements.length > 0) {
+            const animationObserver = new IntersectionObserver(
+                function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                }
+            );
+
+            heroElements.forEach(function(element) {
+                animationObserver.observe(element);
+            });
+        }
+
+        // ============================================
+        // PREFERENCIAS DE ACCESIBILIDAD
+        // ============================================
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        if (prefersReducedMotion.matches && video) {
+            console.log('ℹ️ Usuario prefiere reducir movimiento');
+            video.pause();
+            video.removeAttribute('autoplay');
+            isPlaying = false;
+            if (videoControlBtn) {
+                videoControlBtn.innerHTML = '<i class="fas fa-play"></i>';
+                videoControlBtn.setAttribute('aria-label', 'Reproducir video');
+            }
+        }
+
+        prefersReducedMotion.addEventListener('change', function(e) {
+            if (e.matches && video) {
+                video.pause();
+                isPlaying = false;
+                if (videoControlBtn) {
+                    videoControlBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>

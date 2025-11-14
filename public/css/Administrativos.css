@@ -15,13 +15,20 @@
 
     /* Variables de Colores Suaves por Rol */
     /* Colores suaves institucionales */
-    --jefe-color: #073558;          /* Azul suave */
-    --contador-color: #0d3f27;       /* Verde suave */
-    --secretaria-color: #ee6666;     /* Rosa suave */
-    --pagador-color: #a56725;        /* Naranja suave */
-    --apoyo-color: #9b87b8;          /* Morado suave */
-    --servicios-color: #6fb3b8;      /* Turquesa suave */
-    --docentes-color: #b8936b;       /* Café suave */
+    --jefe-color: #073558;
+    /* Azul suave */
+    --contador-color: #0d3f27;
+    /* Verde suave */
+    --secretaria-color: #ee6666;
+    /* Rosa suave */
+    --pagador-color: #a56725;
+    /* Naranja suave */
+    --apoyo-color: #9b87b8;
+    /* Morado suave */
+    --servicios-color: #6fb3b8;
+    /* Turquesa suave */
+    --docentes-color: #b8936b;
+    /* Café suave */
 
 
 
@@ -392,12 +399,11 @@ body {
     flex-direction: column;
 }
 
-    
 .column-title {
     font-family: 'Playfair Display', serif;
     font-size: clamp(1.5rem, 2.5vw, 1.85rem);
     font-weight: 700;
-    color: var(--text-dark);
+    color: black;
     margin-bottom: 0.75rem;
     text-align: center;
 }
@@ -451,14 +457,34 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Contenedor de Logo */
+.card-logo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-white);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-logo img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.flip-card:hover .card-logo img {
+    transform: scale(1.1);
+}
 
 /* Jefe de Administración */
 .equipo-column:nth-child(1) .flip-card-front {
-     border: 1px solid var(--medium-gray);
-}
-
-.equipo-column:nth-child(1) .card-icon i {
-    color: var(--jefe-color);
+    border: 1px solid var(--medium-gray);
 }
 
 .equipo-column:nth-child(1) .hover-hint {
@@ -469,15 +495,9 @@ body {
     border: 1px solid var(--medium-gray);
 }
 
-
-
 /* Contador */
 .equipo-column:nth-child(2) .flip-card-front {
-     border: 1px solid var(--medium-gray);
-}
-
-.equipo-column:nth-child(2) .card-icon i {
-    color: var(--contador-color);
+    border: 1px solid var(--medium-gray);
 }
 
 .equipo-column:nth-child(2) .hover-hint {
@@ -488,18 +508,9 @@ body {
     border: 1px solid var(--medium-gray);
 }
 
-
-
-
-
 /* Secretaria Académica */
 .equipo-column:nth-child(3) .flip-card-front {
-     border: 1px solid var(--medium-gray);
-}
-
-
-.equipo-column:nth-child(3) .card-icon i {
-    color: var(--secretaria-color);
+    border: 1px solid var(--medium-gray);
 }
 
 .equipo-column:nth-child(3) .hover-hint {
@@ -510,18 +521,9 @@ body {
     border: 1px solid var(--medium-gray);
 }
 
-
-
-
-
 /* Pagador - Tesorero */
 .equipo-column:nth-child(4) .flip-card-front {
-     border: 1px solid var(--medium-gray);
-}
-
-
-.equipo-column:nth-child(4) .card-icon i {
-    color: var(--pagador-color);
+    border: 1px solid var(--medium-gray);
 }
 
 .equipo-column:nth-child(4) .hover-hint {
@@ -529,19 +531,12 @@ body {
 }
 
 .equipo-column:nth-child(4) .flip-card-back {
-     border: 1px solid var(--medium-gray);
+    border: 1px solid var(--medium-gray);
 }
-
-
-
 
 /* Maestra de Apoyo */
 .equipo-column:nth-child(5) .flip-card-front {
-     border: 1px solid var(--medium-gray);
-}
-
-.equipo-column:nth-child(5) .card-icon i {
-    color: var(--apoyo-color);
+    border: 1px solid var(--medium-gray);
 }
 
 .equipo-column:nth-child(5) .hover-hint {
@@ -549,22 +544,12 @@ body {
 }
 
 .equipo-column:nth-child(5) .flip-card-back {
-     border: 1px solid var(--medium-gray);
+    border: 1px solid var(--medium-gray);
 }
-
-
-
-
-
 
 /* Servicios Generales */
 .equipo-column:nth-child(6) .flip-card-front {
-     border: 1px solid var(--medium-gray);
-}
-
-
-.equipo-column:nth-child(6) .card-icon i {
-    color: var(--servicios-color);
+    border: 1px solid var(--medium-gray);
 }
 
 .equipo-column:nth-child(6) .hover-hint {
@@ -572,26 +557,11 @@ body {
 }
 
 .equipo-column:nth-child(6) .flip-card-back {
-     border: 1px solid var(--medium-gray);
+    border: 1px solid var(--medium-gray);
 }
 
 .flip-card:hover .flip-card-front {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.card-icon {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    margin-bottom: 1.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-white);
-}
-
-.card-icon i {
-    font-size: 3rem;
 }
 
 .front-title {
@@ -650,13 +620,6 @@ body {
     flex: 1;
 }
 
-
-
-
-
-
-
-
 /* RESPONSIVE */
 @media (max-width: 1200px) {
     .equipo-grid {
@@ -683,7 +646,7 @@ body {
         gap: 2rem;
         padding: 0 1.5rem 3rem;
     }
-
+    
     .equipo-column.full-width {
         grid-column: 1;
     }
@@ -692,39 +655,9 @@ body {
         height: 380px;
     }
 
-    .equipo-column.full-width .flip-card,
-    .static-card {
-        height: auto;
-        min-height: 280px;
-    }
-
-    .static-card-inner {
-        flex-direction: column;
-        padding: 2rem 1.5rem;
-        text-align: center;
-        gap: 1.5rem;
-    }
-
-    .static-card-icon {
-        width: 90px;
-        height: 90px;
-    }
-
-    .static-card-icon i {
-        font-size: 2.2rem;
-    }
-
-    .static-card-title {
-        font-size: 1.5rem;
-    }
-
-    .card-icon {
-        width: 100px;
-        height: 100px;
-    }
-
-    .card-icon i {
-        font-size: 2.5rem;
+    .card-logo {
+        width: 120px;
+        height: 120px;
     }
 
     .front-title {
@@ -753,13 +686,9 @@ body {
         height: 360px;
     }
 
-    .card-icon {
-        width: 85px;
-        height: 85px;
-    }
-
-    .card-icon i {
-        font-size: 2.2rem;
+    .card-logo {
+        width: 100px;
+        height: 100px;
     }
 
     .front-title {
@@ -769,9 +698,5 @@ body {
     .hover-hint {
         font-size: 0.75rem;
         bottom: 20px;
-    }
-
-    .static-card-inner {
-        padding: 1.75rem 1.25rem;
     }
 }

@@ -55,6 +55,7 @@ Route::get('/Grupo-humanistico', [RutasController::class, 'mostrarcontenidoGrupo
 Route::get('/Gobierno-escolar', [RutasController::class, 'mostrarcontenidoGobiernoescolar'])->name('Gobierno_escolar');
 Route::get('/Administrativos', [RutasController::class, 'mostrarcontenidoAdministrativos'])->name('Administrativos');
 Route::get('/Docentes', [RutasController::class, 'mostrarcontenidoDocentes'])->name('Docentes');
+Route::get('/Directivos', [RutasController::class, 'mostrarcontenidoDirectivos'])->name('Directivos');
 
 
 //Rutas para mostrar contenido de niveles educativos

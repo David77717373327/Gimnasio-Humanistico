@@ -1,621 +1,598 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Docente - GIMNASIO HUMANÍSTICO</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-green: #0d3f27;
-            --primary-green-bottom: #065e35;
-            --secondary-green: #7ddfac;
-            --accent-gold: #F4B942;
-            --white: #FFFFFF;
-            --text-dark: #1F2937;
-            --text-light: #6B7280;
-            --text-muted: #9CA3AF;
-        }
+<!-- Navegación Principal Mejorada -->
+<nav class="main-navigation navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">INICIO</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        QUIÉNES SOMOS
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <h6 class="dropdown-header">Institución</h6>
+                            <a class="dropdown-item" href="{{ route('Historia') }}">Nuestra Historia</a>
+                            <a class="dropdown-item" href="{{ route('mision-vision') }}">Misión y Visión</a>
+                            <a class="dropdown-item" href="{{ route('filosofia_institucional') }}">Filosofía Educativa</a>
+                            <a class="dropdown-item" href="{{ route('simbolos') }}">Símbolos Institucionales</a>
+                            <a class="dropdown-item" href="{{ route('principios-valores') }}">Principios y Valores</a>
+                            <a class="dropdown-item" href="{{ route('politica-calidad') }}">Política de Calidad</a>
+                        </div>
+                        <div class="dropdown-section"> 
+                            <h6 class="dropdown-header">Organización</h6>
+                            <a class="dropdown-item" href="{{ route('organigrama') }}">Organigrama</a>
+                            <a class="dropdown-item" href="{{ route('Grupo_humanistico') }}">Grupo Humanístico S.A.S</a>                            
+                            <a class="dropdown-item" href="{{ route('Gobierno_escolar') }}">Gobierno Escolar</a>
+                            <a class="dropdown-item" href="{{ route('Directivos') }}">Directivos</a>
+                            <a class="dropdown-item" href="{{ route('Administrativos') }}">Administrativos</a>
+                            <a class="dropdown-item" href="{{ route('Docentes') }}">Docentes</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        PROPUESTA EDUCATIVA
+                    </a>
+                    <div class="dropdown-menu single-column">
+                        <a class="dropdown-item" href="#enfoque">Enfoque Pedagógico</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        NIVELES
+                    </a>
+                    <div class="dropdown-menu single-column">
+                        <a class="dropdown-item" href="{{ route('prescolar') }}">Educación Inicial Prescolar</a>
+                        <a class="dropdown-item" href="{{ route('basica_primaria') }}">Educación Básica Primaria</a>
+                        <a class="dropdown-item" href="{{ route('basica_segundaria') }}">Educación Básica Secundaria</a>
+                        <a class="dropdown-item" href="{{ route('media_academica') }}">Educación Media Académica</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admision') }}">ADMISIÓN</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        VIDA ESTUDIANTIL
+                    </a>
+                    <div class="dropdown-menu single-column">
+                        <a class="dropdown-item" href="#actividades">Actividades Extracurriculares</a>
+                        <a class="dropdown-item" href="#eventos">Eventos y Celebraciones</a>
+                        <a class="dropdown-item" href="{{ route('transporte') }}">Transporte Escolar</a>
+                        <a class="dropdown-item" href="#pastoral">Pastoral Estudiantil</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">CONTACTO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link login-btn" href="{{ route('login') }}">ACCEDER</a>
+                </li>
+            </ul>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text-dark);
-            background: var(--white);
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        .hero-advanced {
-            position: relative;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-bottom) 100%);
-            overflow: hidden;
-        }
-
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(13, 63, 39, 0.3);
-        }
-
-        .hero-particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .hero-container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .title-highlight {
-            color: var(--accent-gold);
-        }
-
-        .hero-scroll-indicator {
-            margin-top: 3rem;
-            cursor: pointer;
-            animation: bounce 2s infinite;
-        }
-
-        .hero-scroll-indicator i {
-            font-size: 2rem;
-            color: var(--white);
-            opacity: 0.8;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
-        /* Sección de Profesores */
-        .profesores-section {
-            padding: 3rem 0;
-            background: var(--white);
-        }
-
-        .section-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-
-        .section-intro h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-intro p {
-            font-size: 1.125rem;
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* Grid de Profesores */
-        .profesores-grid {
-            display: grid;
-            gap: 1.5rem 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Profesor Item */
-        .profesor-item {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .profesor-item:nth-child(even) {
-            grid-template-columns: 1fr 280px;
-        }
-
-        .profesor-item:nth-child(even) .profesor-image {
-            order: 2;
-        }
-
-        .profesor-item:nth-child(even) .profesor-info {
-            order: 1;
-            text-align: right;
-        }
-
-        /* Imagen del Profesor */
-        .profesor-image {
-            position: relative;
-        }
-
-        .profesor-image img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .profesor-image::after {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: 10px;
-            bottom: 10px;
-            border: 2px solid var(--secondary-green);
-            z-index: -1;
-            transition: all 0.3s ease;
-        }
-
-        .profesor-item:nth-child(even) .profesor-image::after {
-            left: 10px;
-            right: -10px;
-        }
-
-        .profesor-item:hover .profesor-image::after {
-            top: -15px;
-            left: -15px;
-            right: 15px;
-            bottom: 15px;
-        }
-
-        .profesor-item:nth-child(even):hover .profesor-image::after {
-            left: 15px;
-            right: -15px;
-        }
-
-        /* Información del Profesor */
-        .profesor-info {
-            padding: 0.5rem 0;
-        }
-
-        .profesor-info h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .profesor-cargo {
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--primary-green);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .profesor-descripcion {
-            font-size: 1rem;
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        .profesor-especialidades {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .profesor-item:nth-child(even) .profesor-especialidades {
-            justify-content: flex-end;
-        }
-
-        .especialidad-tag {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            padding: 0.4rem 1rem;
-            background: rgba(125, 223, 172, 0.1);
-            display: inline-block;
-        }
-
-        /* Divider entre profesores */
-        .profesor-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--text-muted) 20%, var(--text-muted) 80%, transparent);
-            opacity: 0.15;
-            margin: 0.75rem 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .profesores-grid {
-                gap: 4rem 2rem;
-            }
-
-            .profesor-item,
-            .profesor-item:nth-child(even) {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .profesor-image,
-            .profesor-item:nth-child(even) .profesor-image {
-                order: 1;
-                margin: 0 auto;
-                max-width: 280px;
-            }
-
-            .profesor-info,
-            .profesor-item:nth-child(even) .profesor-info {
-                order: 2;
-                text-align: center;
-            }
-
-            .profesor-especialidades,
-            .profesor-item:nth-child(even) .profesor-especialidades {
-                justify-content: center;
-            }
-
-            .profesor-image::after,
-            .profesor-item:nth-child(even) .profesor-image::after {
-                left: -10px;
-                right: 10px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .profesores-section {
-                padding: 3rem 0;
-            }
-
-            .section-intro {
-                margin-bottom: 3rem;
-            }
-
-            .section-intro h2 {
-                font-size: 2rem;
-            }
-
-            .profesores-grid {
-                padding: 0 1.5rem;
-            }
-
-            .profesor-item {
-                gap: 1.5rem;
-            }
-
-            .profesor-info h3 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- HERO SECTION -->
-    <section class="hero-advanced">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-            <div class="hero-particles"></div>
+            <!-- Línea blanca que persigue el cursor (FUERA del ul) -->
+            <div class="nav-indicator"></div>
         </div>
-        <div class="container hero-container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-10 offset-lg-1 text-center">
-                    <h1 class="hero-title">
-                        <span class="title-highlight">Personal</span> -
-                        <span class="title-highlight">Docente</span>
-                    </h1>
-                    <div class="hero-scroll-indicator" onclick="scrollToProfesores()">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</nav>
 
-    <!-- SECCIÓN DE PROFESORES -->
-    <section class="profesores-section" id="profesores">
-        <div class="container">
-            <div class="section-intro">
-                <h2>Nuestro Equipo Docente</h2>
-                <p>Profesionales comprometidos con la excelencia educativa y el desarrollo integral de nuestros estudiantes.</p>
-            </div>
 
-            <div class="profesores-grid">
-                <!-- Profesor 1 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=500&fit=crop" alt="María González">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>María González</h3>
-                        <p class="profesor-cargo">Coordinadora Académica</p>
-                        <p class="profesor-descripcion">
-                            Licenciada en Pedagogía con más de 15 años de experiencia en educación humanística. Especialista en desarrollo curricular y metodologías innovadoras de enseñanza.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Pedagogía</span>
-                            <span class="especialidad-tag">Currículo</span>
-                            <span class="especialidad-tag">Liderazgo</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="profesor-divider"></div>
+<style>
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+@media (max-width: 1200px) {
+    .institutional-header {
+        gap: 1.5rem;
+    }
 
-                <!-- Profesor 2 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=500&fit=crop" alt="Carlos Rodríguez">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>Carlos Rodríguez</h3>
-                        <p class="profesor-cargo">Docente de Matemáticas</p>
-                        <p class="profesor-descripcion">
-                            Ingeniero con maestría en Educación Matemática. Apasionado por hacer de las matemáticas una experiencia comprensible y aplicable a la vida cotidiana.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Matemáticas</span>
-                            <span class="especialidad-tag">Física</span>
-                            <span class="especialidad-tag">Robótica</span>
-                        </div>
-                    </div>
-                </div>
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
 
-                <div class="profesor-divider"></div>
+@media (max-width: 992px) {
+    .logo-bar {
+        padding: 1rem 0;
+    }
 
-                <!-- Profesor 3 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=500&fit=crop" alt="Ana Martínez">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>Ana Martínez</h3>
-                        <p class="profesor-cargo">Docente de Lengua y Literatura</p>
-                        <p class="profesor-descripcion">
-                            Filóloga con doctorado en Literatura Latinoamericana. Promotora de la lectura crítica y la expresión creativa como herramientas de desarrollo personal.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Literatura</span>
-                            <span class="especialidad-tag">Redacción</span>
-                            <span class="especialidad-tag">Oratoria</span>
-                        </div>
-                    </div>
-                </div>
+    .institutional-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
 
-                <div class="profesor-divider"></div>
+    .institutional-logo {
+        margin-left: 0;
+    }
 
-                <!-- Profesor 4 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop" alt="Diego Herrera">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>Diego Herrera</h3>
-                        <p class="profesor-cargo">Docente de Ciencias Naturales</p>
-                        <p class="profesor-descripcion">
-                            Biólogo con maestría en Educación Ambiental. Enfocado en desarrollar conciencia ecológica y pensamiento científico en los estudiantes.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Biología</span>
-                            <span class="especialidad-tag">Química</span>
-                            <span class="especialidad-tag">Ecología</span>
-                        </div>
-                    </div>
-                </div>
+    .contact-info {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
 
-                <div class="profesor-divider"></div>
+    .hero-banner {
+        min-height: 100vh;
+    }
 
-                <!-- Profesor 5 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop" alt="Laura Ramírez">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>Laura Ramírez</h3>
-                        <p class="profesor-cargo">Docente de Inglés</p>
-                        <p class="profesor-descripcion">
-                            Licenciada en Lenguas Extranjeras con certificación internacional TESOL. Especialista en metodologías comunicativas y aprendizaje inmersivo.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Inglés</span>
-                            <span class="especialidad-tag">Francés</span>
-                            <span class="especialidad-tag">TESOL</span>
-                        </div>
-                    </div>
-                </div>
+    .hero-text-content {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
 
-                <div class="profesor-divider"></div>
+    .stats-panel {
+        margin-top: 2rem;
+    }
 
-                <!-- Profesor 6 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop" alt="Juan Pérez">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>Juan Pérez</h3>
-                        <p class="profesor-cargo">Docente de Educación Física</p>
-                        <p class="profesor-descripcion">
-                            Profesional en Ciencias del Deporte con énfasis en formación integral. Promotor de hábitos saludables y valores deportivos.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Deportes</span>
-                            <span class="especialidad-tag">Salud</span>
-                            <span class="especialidad-tag">Liderazgo</span>
-                        </div>
-                    </div>
-                </div>
+    /* Navbar móvil mejorado */
+    .main-navigation .container-fluid {
+        padding: 0.75rem 1rem;
+    }
 
-                <div class="profesor-divider"></div>
+    .navbar-toggler {
+        display: block;
+        position: relative;
+        z-index: 1001;
+        margin-left: auto;
+    }
 
-                <!-- Profesor 7 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&h=500&fit=crop" alt="Sofía Vargas">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>Sofía Vargas</h3>
-                        <p class="profesor-cargo">Docente de Arte</p>
-                        <p class="profesor-descripcion">
-                            Licenciada en Artes Plásticas con experiencia en técnicas mixtas. Fomenta la creatividad y expresión artística como medio de desarrollo personal.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Pintura</span>
-                            <span class="especialidad-tag">Escultura</span>
-                            <span class="especialidad-tag">Arte Digital</span>
-                        </div>
-                    </div>
-                </div>
+    .navbar-collapse {
+        background: var(--primary-green);
+        padding: 0;
+        margin-top: 0.75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
 
-                <div class="profesor-divider"></div>
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+        display: block;
+    }
 
-                <!-- Profesor 8 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&h=500&fit=crop" alt="Roberto Silva">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>Roberto Silva</h3>
-                        <p class="profesor-cargo">Docente de Música</p>
-                        <p class="profesor-descripcion">
-                            Maestro en Música con especialización en pedagogía musical. Apasionado por desarrollar el talento musical y la apreciación artística.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Música</span>
-                            <span class="especialidad-tag">Piano</span>
-                            <span class="especialidad-tag">Teoría Musical</span>
-                        </div>
-                    </div>
-                </div>
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
 
-                <div class="profesor-divider"></div>
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
 
-                <!-- Profesor 9 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=500&h=500&fit=crop" alt="Patricia Moreno">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>Patricia Moreno</h3>
-                        <p class="profesor-cargo">Psicóloga Educativa</p>
-                        <p class="profesor-descripcion">
-                            Psicóloga con maestría en Orientación Educativa. Enfocada en el bienestar emocional y desarrollo socioemocional de los estudiantes.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Psicología</span>
-                            <span class="especialidad-tag">Orientación</span>
-                            <span class="especialidad-tag">Desarrollo</span>
-                        </div>
-                    </div>
-                </div>
+    .nav-item:last-child {
+        border-bottom: none;
+    }
 
-                <div class="profesor-divider"></div>
+    .nav-link {
+        text-align: left;
+        padding: 1rem 1.5rem !important;
+        width: 100%;
+        display: block;
+    }
 
-                <!-- Profesor 10 -->
-                <div class="profesor-item">
-                    <div class="profesor-image">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop" alt="Miguel Torres">
-                    </div>
-                    <div class="profesor-info">
-                        <h3>Miguel Torres</h3>
-                        <p class="profesor-cargo">Docente de Tecnología</p>
-                        <p class="profesor-descripcion">
-                            Ingeniero de Sistemas con pasión por la educación tecnológica. Especialista en programación, desarrollo web y pensamiento computacional.
-                        </p>
-                        <div class="profesor-especialidades">
-                            <span class="especialidad-tag">Programación</span>
-                            <span class="especialidad-tag">Web</span>
-                            <span class="especialidad-tag">Apps</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    .nav-link.dropdown-toggle-custom::after {
+        content: '\25BC';
+        float: right;
+        font-size: 0.7rem;
+        transition: transform 0.3s ease;
+    }
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        function scrollToProfesores() {
-            document.getElementById('profesores').scrollIntoView({
-                behavior: 'smooth'
+    .dropdown.show .nav-link.dropdown-toggle-custom::after {
+        transform: rotate(180deg);
+    }
+
+    .nav-indicator {
+        display: none;
+    }
+
+    /* Dropdowns en móvil */
+    .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        width: 100%;
+        min-width: 100%;
+        flex-direction: column;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .dropdown-menu.show {
+        display: flex;
+    }
+
+    .dropdown-section {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 0.75rem 0;
+        background: transparent;
+    }
+
+    .dropdown-section:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-header {
+        color: rgba(255, 255, 255, 0.7);
+        padding: 0.5rem 1.5rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .dropdown-item {
+        padding: 0.65rem 2rem;
+        color: rgba(255, 255, 255, 0.9);
+        background: transparent;
+        font-size: 0.875rem;
+    }
+
+    .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .nav-link.login-btn {
+        margin: 0.5rem 1rem 1rem;
+        display: block;
+        width: calc(100% - 2rem);
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+@media (max-width: 768px) {
+    .institutional-logo {
+        width: 100px;
+        height: 100px;
+        border-width: 3px;
+    }
+
+    .title-line-1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .title-line-2 {
+        font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    }
+
+    .title-line-3 {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary-modern,
+    .btn-secondary-modern {
+        width: 100%;
+        justify-content: center;
+        max-width: 300px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+        padding: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Ajustes adicionales para navbar en tablets */
+    .nav-link {
+        padding: 0.875rem 1.25rem !important;
+        font-size: 0.85rem;
+    }
+
+    .dropdown-item {
+        padding: 0.6rem 1.75rem;
+        font-size: 0.825rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-bar {
+        padding: 0.75rem 0;
+    }
+
+    .institutional-header {
+        padding: 0 1rem;
+    }
+
+    .institutional-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero-banner {
+        min-height: 90vh;
+    }
+
+    .stats-panel {
+        padding: 1.5rem;
+    }
+
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary-modern,
+    .btn-secondary-modern {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    /* Navbar optimizado para móviles pequeños */
+    .main-navigation .container-fluid {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .navbar-toggler {
+        padding: 0.4rem;
+    }
+
+    .navbar-toggler-icon {
+        width: 22px;
+        height: 16px;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 0.75rem 1rem !important;
+    }
+
+    .dropdown-header {
+        font-size: 0.7rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .dropdown-item {
+        font-size: 0.8rem;
+        padding: 0.55rem 1.5rem;
+    }
+
+    .nav-link.login-btn {
+        font-size: 0.8rem;
+        padding: 0.65rem 1rem !important;
+        margin: 0.5rem 0.75rem 0.75rem;
+        width: calc(100% - 1.5rem);
+    }
+}
+
+/* Pantallas extra pequeñas - 356px y menores */
+@media (max-width: 360px) {
+    .main-navigation .container-fluid {
+        padding: 0.4rem 0.5rem;
+    }
+
+    .navbar-toggler {
+        padding: 0.35rem;
+    }
+
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 14px;
+        gap: 2px;
+    }
+
+    .navbar-toggler-icon span {
+        height: 1.5px;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 0.65rem 0.875rem !important;
+    }
+
+    .dropdown-header {
+        font-size: 0.65rem;
+        padding: 0.35rem 0.875rem;
+    }
+
+    .dropdown-item {
+        font-size: 0.75rem;
+        padding: 0.5rem 1.25rem;
+    }
+
+    .nav-link.login-btn {
+        font-size: 0.75rem;
+        padding: 0.6rem 0.875rem !important;
+        margin: 0.4rem 0.5rem 0.6rem;
+        width: calc(100% - 1rem);
+    }
+
+    .institutional-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+</style>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link:not(.login-btn):not(.dropdown-toggle-custom)');
+    const indicator = document.querySelector('.nav-indicator');
+    const navbarNav = document.querySelector('.navbar-nav');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    // Funcionalidad del indicador (solo desktop)
+    if (indicator && navbarNav && window.innerWidth > 992) {
+        const currentUrl = window.location.href;
+        const currentPath = window.location.pathname.toLowerCase();
+
+        function moveIndicator(link) {
+            const rect = link.getBoundingClientRect();
+            const navRect = navbarNav.getBoundingClientRect();
+            const left = rect.left - navRect.left;
+            const width = rect.width;
+
+            indicator.style.left = left + 'px';
+            indicator.style.width = width + 'px';
+            indicator.style.opacity = '1';
+        }
+
+        function setActiveLink() {
+            let activeLink = null;
+            let bestMatch = null;
+            let bestMatchLength = 0;
+
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                const href = item.getAttribute('href');
+                if (!href || href === '#') return;
+
+                const fullHref = new URL(href, window.location.origin).href;
+
+                if (fullHref === currentUrl) {
+                    const parentNavLink = item.closest('.dropdown').querySelector('.nav-link');
+                    if (parentNavLink && href.length > bestMatchLength) {
+                        bestMatch = parentNavLink;
+                        bestMatchLength = href.length;
+                    }
+                } else if (currentPath.includes(href.toLowerCase())) {
+                    const parentNavLink = item.closest('.dropdown').querySelector('.nav-link');
+                    if (parentNavLink && href.length > bestMatchLength) {
+                        bestMatch = parentNavLink;
+                        bestMatchLength = href.length;
+                    }
+                }
             });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (!href || href === '#') return;
+
+                const fullHref = new URL(href, window.location.origin).href;
+
+                if (fullHref === currentUrl) {
+                    link.classList.add('active');
+                    activeLink = link;
+                } else if (currentPath === '/' && href === '/') {
+                    link.classList.add('active');
+                    activeLink = link;
+                } else if (href !== '/' && currentPath.includes(href.toLowerCase()) && href.length > bestMatchLength) {
+                    link.classList.add('active');
+                    activeLink = link;
+                    bestMatchLength = href.length;
+                }
+            });
+
+            if (bestMatch && !activeLink) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                bestMatch.classList.add('active');
+                activeLink = bestMatch;
+            }
+
+            return activeLink;
         }
 
-        function createParticles() {
-            const particles = document.querySelector('.hero-particles');
-            if (particles) {
-                for (let i = 0; i < 50; i++) {
-                    const particle = document.createElement('div');
-                    particle.style.position = 'absolute';
-                    particle.style.width = '4px';
-                    particle.style.height = '4px';
-                    particle.style.background = 'rgba(255, 255, 255, 0.3)';
-                    particle.style.borderRadius = '50%';
-                    particle.style.left = Math.random() * 100 + '%';
-                    particle.style.top = Math.random() * 100 + '%';
-                    particle.style.animation = `float ${Math.random() * 10 + 10}s infinite ease-in-out`;
-                    particle.style.animationDelay = Math.random() * 5 + 's';
-                    particles.appendChild(particle);
+        let activeLink = setActiveLink();
+        if (activeLink) {
+            moveIndicator(activeLink);
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                moveIndicator(this);
+            });
+        });
+
+        navbarNav.addEventListener('mouseleave', function() {
+            const activeLink = document.querySelector('.nav-link.active:not(.login-btn)');
+            if (activeLink) {
+                moveIndicator(activeLink);
+            } else {
+                const detectedActive = setActiveLink();
+                if (detectedActive) {
+                    moveIndicator(detectedActive);
                 }
             }
-        }
+        });
 
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes float {
-                0%, 100% { transform: translate(0, 0); opacity: 0; }
-                50% { opacity: 0.5; }
-                100% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 992) {
+                const activeLink = document.querySelector('.nav-link.active:not(.login-btn)');
+                if (activeLink) {
+                    moveIndicator(activeLink);
+                }
             }
-        `;
-        document.head.appendChild(style);
+        });
+    }
 
-        createParticles();
-    </script>
-</body>
-</html>
+    // Cerrar navbar al hacer click en un enlace (móvil)
+    if (navbarCollapse) {
+        const allNavLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Solo cerrar si no es un dropdown toggle y estamos en móvil
+                if (!this.classList.contains('dropdown-toggle-custom') && window.innerWidth <= 992) {
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    }
+                }
+            });
+        });
+    }
+
+    // Animación del toggler
+    if (navbarToggler) {
+        navbarToggler.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+
+        navbarCollapse.addEventListener('hidden.bs.collapse', function() {
+            navbarToggler.classList.remove('active');
+        });
+    }
+});
+</script>

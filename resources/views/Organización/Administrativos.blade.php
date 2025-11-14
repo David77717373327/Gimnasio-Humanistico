@@ -60,8 +60,8 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <div class="card-icon">
-                                <i class="fas fa-user-tie"></i>
+                            <div class="card-logo">
+                                <img src="{{ asset('images/Jefe_Administracion.png') }}" alt="Jefe Administrativo">
                             </div>
                             <h4 class="front-title">Jefe Administrativo</h4>
                             <p class="front-subtitle">Liderazgo Operativo</p>
@@ -88,8 +88,8 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <div class="card-icon">
-                                <i class="fas fa-calculator"></i>
+                            <div class="card-logo">
+                                <img src="{{ asset('images/Contador.png') }}" alt="Contador">
                             </div>
                             <h4 class="front-title">Contador</h4>
                             <p class="front-subtitle">Rigor Financiero</p>
@@ -117,8 +117,8 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <div class="card-icon">
-                                <i class="fas fa-clipboard-list"></i>
+                            <div class="card-logo">
+                                <img src="{{ asset('images/Secretaria_Academica.png') }}" alt="Secretaria Académica">
                             </div>
                             <h4 class="front-title">Secretaria Académica</h4>
                             <p class="front-subtitle">Gestión Académica</p>
@@ -145,8 +145,8 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <div class="card-icon">
-                                <i class="fas fa-money-check-alt"></i>
+                            <div class="card-logo">
+                                <img src="{{ asset('images/Pagador_Tesorero.png') }}" alt="Pagador-Tesorero">
                             </div>
                             <h4 class="front-title">Pagador - Tesorero</h4>
                             <p class="front-subtitle">Gestión Financiera</p>
@@ -172,8 +172,8 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <div class="card-icon">
-                                <i class="fas fa-hands-helping"></i>
+                            <div class="card-logo">
+                                <img src="{{ asset('images/Maestra_Apoyo.png') }}" alt="Maestra de Apoyo">
                             </div>
                             <h4 class="front-title">Maestra de Apoyo</h4>
                             <p class="front-subtitle">Inclusión Educativa</p>
@@ -202,8 +202,8 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <div class="card-icon">
-                                <i class="fas fa-broom"></i>
+                            <div class="card-logo">
+                                <img src="{{ asset('images/Servicios_Generales.png') }}" alt="Servicios Generales">
                             </div>
                             <h4 class="front-title">Servicios Generales</h4>
                             <p class="front-subtitle">Bienestar y Seguridad</p>

@@ -96,6 +96,10 @@ class RutasController extends Controller
         return view('Organización.Docentes');
     }
 
+    public function mostrarcontenidoDirectivos()
+    {
+        return view('Organización.Directivos');
+    }
 
 
 
