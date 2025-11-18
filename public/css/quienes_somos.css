@@ -204,7 +204,7 @@ h6 {
     animation: bounce 2s infinite;
     cursor: pointer;
     z-index: 10;
-    }
+}
 
 
 
@@ -345,405 +345,664 @@ h6 {
 
 
 
+/* ============================================
+   TIMELINE HISTÓRICA - OPTIMIZADA PARA MÓVIL
+============================================ */
 
-
-
-
-
-
-
-
-
-
-/* Timeline Section con fondo sutil y toques de amarillo */
+/* Timeline Section */
 .timeline-section {
     min-height: 100vh;
-    padding: 0.23rem 0;
+    padding: 1rem 0;
     position: relative;
-    background: linear-gradient(135deg, var(--bg-light) 0%, #FFFBF0 100%);
 }
 
 .timeline-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
 }
 
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(255, 193, 7, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.timeline-container::after {
-    content: '';
-    position: absolute;
-    bottom: 10%;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, rgba(255, 193, 7, 0.06) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 1;
-}
-
 .timeline {
     position: relative;
+    padding-top: 80px;
 }
 
+/* Línea central verde - COMIENZA EXACTAMENTE DONDE TERMINA LA BOLA */
 .timeline::before {
     content: '';
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 50px;
     width: 3px;
-    height: 100%;
+    height: calc(100% - 50px);
     background-color: var(--primary-green);
     transform: translateX(-50%);
-    box-shadow: 0 0 15px rgba(13, 79, 60, 0.3);
-    z-index: 0;
+    z-index: 1;
 }
 
-.timeline-item {
-    position: relative;
-    margin: 2.5rem 0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    display: flex;
-    align-items: center;
-    min-height: 250px;
-}
-
-.timeline-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.timeline-item:nth-child(even) {
-    flex-direction: row;
-}
-
-.timeline-item:nth-child(odd) {
-    flex-direction: row-reverse;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    margin-left: auto;
-    width: 45%;
-}
-
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-right: auto;
-    width: 45%;
-}
-
-.timeline-marker {
+/* Bola verde inicial - EN LA PARTE SUPERIOR */
+.timeline-start {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 18px;
-    height: 18px;
-    background: var(--primary-green);
+    top: 5px;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline-start-circle {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-green);
+    border: 4px solid #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 6px rgba(13, 79, 60, 0.15), 0 0 20px var(--primary-green);
-    z-index: 5;
-}
-
-.timeline-content {
-    background: var(--bg-white);
-    border: 1px solid rgba(13, 79, 60, 0.1);
-    
-    padding: 2.5rem;
+    box-shadow: 0 0 0 3px var(--primary-green), 0 2px 12px rgba(13, 79, 60, 0.3);
     position: relative;
-    box-shadow: var(--shadow-md);
-    transition: all 0.4s ease-out;
-    z-index: 2;
-    margin-top: 40px;
+    margin: 0;
+    display: block;
 }
 
-.timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(13, 79, 60, 0.2);
+/* Línea que conecta la bola inicial con el primer año */
+.timeline-start-circle::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 15px;
+    background-color: var(--primary-green);
 }
 
-/* ===== ESTILOS PARA LOGO Y AÑO (NO MODIFICADOS) ===== */
-.timeline-year {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: black;
-    margin-bottom: 1rem;
-    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+/* Items de timeline - SIN ANIMACIONES */
+.timeline-item {
+    position: relative;
+    margin: 0 0 5rem 0;
+    opacity: 1;
+}
+
+/* Contenedor para año + marcador */
+.timeline-year-marker {
+    position: absolute;
+    left: 50%;
+    top: -90px;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Bola del año (verde) */
+.year-circle {
+    width: 95px;
+    height: 95px;
+    background-color: var(--primary-green);
+    border: 5px solid #fff;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 1rem;
-}
-
-.timeline-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-.timeline-year span {
-    white-space: nowrap;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-/* ===== ITEMS IMPARES (Cards IZQUIERDAS) - Logo a la IZQUIERDA ===== */
-.timeline-item:nth-child(odd) .timeline-year {
-    justify-content: flex-end;
-}
-
-.timeline-item:nth-child(odd) .timeline-logo {
-    margin-right: 250px;
-}
-
-.timeline-item:nth-child(odd) .timeline-year-long .timeline-logo {
-    margin-right: 180px;
-}
-
-/* ===== ITEMS PARES (Cards DERECHAS) - Logo a la DERECHA ===== */
-.timeline-item:nth-child(even) .timeline-year {
-    justify-content: flex-start;
-}
-
-.timeline-item:nth-child(even) .timeline-logo {
-    order: 2;
-    margin-left: 250px;
-}
-
-.timeline-item:nth-child(even) .timeline-year span {
-    order: 1;
-}
-
-.timeline-item:nth-child(even) .timeline-year-long .timeline-logo {
-    margin-left: 180px;
-}
-
-/* ===== ESTILOS PARA TÍTULO Y TEXTO - JUSTIFICADOS Y SIMÉTRICOS ===== */
-.timeline-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: black;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
-    text-align: left;
-}
-
-.timeline-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: black;
-    text-align: justify;
-    text-justify: inter-word;
-    hyphens: auto;
-    word-spacing: 0.05em;
-}
-
-/* Contenedor de imagen al lado del card */
-.timeline-image-side {
+    justify-content: center;
     position: relative;
-    width: 430px;
-    height: 400px;
-    margin-left: 40px;
-    margin-right: 40px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(13, 79, 60, 0.15);
-    transition: all 0.4s ease;
-    z-index: 3;
-    background: var(--bg-white);
+    box-shadow: 0 3px 15px rgba(13, 79, 60, 0.35);
+}
+
+.year-circle::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 70px;
+    background-color: var(--primary-green);
+}
+
+.year-text {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #fff;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+}
+
+/* Marcador pequeño */
+.timeline-marker {
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border: 3px solid var(--primary-green);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(13, 79, 60, 0.15);
+    position: relative;
+}
+
+.timeline-marker::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+}
+
+/* Línea que conecta marcador con el card */
+.timeline-marker::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 30px;
+    background-color: var(--primary-green);
+}
+
+/* Contenedor del contenido - SIMÉTRICO */
+.timeline-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 90px;
+    position: relative;
+}
+
+/* Items impares (izquierda) */
+.timeline-item:nth-child(odd) .timeline-content-wrapper {
+    justify-content: flex-end;
+    padding-right: calc(50% + 1.5px);
+}
+
+/* Items pares (derecha) */
+.timeline-item:nth-child(even) .timeline-content-wrapper {
+    justify-content: flex-start;
+    padding-left: calc(50% + 1.5px);
+}
+
+/* Flecha - COMPLETAMENTE SIMÉTRICA */
+.timeline-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
     flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+/* Flecha para items impares (apunta a la derecha) */
+.timeline-item:nth-child(odd) .timeline-arrow {
+    border-width: 30px 0 18px 28px;
+    border-color: transparent transparent transparent var(--primary-green);
+    order: 2;
+    margin-right: 10px;
     margin-top: 30px;
 }
 
-/* Posicionamiento para items impares (izquierda) */
-.timeline-item:nth-child(odd) .timeline-image-side {
-    margin-left: 3rem;
+/* Flecha para items pares (apunta a la izquierda) */
+.timeline-item:nth-child(even) .timeline-arrow {
+    border-width: 30px 28px 18px 0;
+    border-color: transparent var(--primary-green) transparent transparent;
+    order: 1;
+    margin-right: 0;
+    margin-top: 30px;
+    margin-left: 10px;
 }
 
-/* Posicionamiento para items pares (derecha) */
-.timeline-item:nth-child(even) .timeline-image-side {
-    margin-right: 3rem;
+/* Contenido principal */
+.timeline-content {
+    margin-top: 30px;
+    flex: 1;
+    max-width: 550px;
+    background: transparent;
+    padding: 0;
+    position: relative;
 }
 
-.timeline-image-side img {
+.timeline-item:nth-child(odd) .timeline-content {
+    order: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    order: 2;
+}
+
+/* Barra superior VERDE */
+.timeline-header-bar {
+    background-color: var(--primary-green);
+    padding: 1rem 2rem;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-year-display {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+    letter-spacing: 0.5px;
+}
+
+/* Sección de imágenes */
+.timeline-images {
+    display: flex;
+    gap: 0;
+    background-color: #e5e5e5;
+    padding: 0;
+    min-height: 170px;
+}
+
+.timeline-image-item {
+    flex: 1;
+    height: 170px;
+    overflow: hidden;
+}
+
+.timeline-image-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(15%) brightness(0.75);
-    transition: all 0.4s ease;
+    display: block;
 }
 
-/* Overlay oscuro sobre la imagen */
-.timeline-image-side::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
-    z-index: 1;
-    transition: all 0.4s ease;
+/* Texto descriptivo */
+.timeline-text-content {
+    background-color: white;
+    margin-top: 20px;
 }
 
-/* Animación de entrada para imágenes */
-.timeline-item .timeline-image-side {
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.timeline-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #2c2c2c;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
 }
-
-.timeline-item.visible .timeline-image-side {
-    opacity: 1;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .timeline-image-side {
-        width: 350px;
-        height: 280px;
-    }
-    
-    .timeline-item:nth-child(odd) .timeline-image-side {
-        margin-left: 2rem;
-    }
-    
-    .timeline-item:nth-child(even) .timeline-image-side {
-        margin-right: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .timeline-image-side {
-        display: none;
-    }
-    
-    .timeline-title,
-    .timeline-text {
-        text-align: left;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Posicionamiento para items impares (izquierda) */
-.timeline-item:nth-child(odd) .timeline-image-side {
-    margin-left: 3rem;
-}
-
-/* Posicionamiento para items pares (derecha) */
-.timeline-item:nth-child(even) .timeline-image-side {
-    margin-right: 3rem;
-}
-
-.timeline-image-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(15%) brightness(0.75);
-    transition: all 0.4s ease;
-}
-
-/* Overlay oscuro sobre la imagen */
-.timeline-image-side::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
-    z-index: 1;
-    transition: all 0.4s ease;
-}
-
-
-
 
 /* ============================================
-   OPCIÓN 3: Sin hover (imagen estática)
-   Efecto: La imagen no cambia al pasar el cursor
-   ============================================ */
-/*
-.timeline-item:hover .timeline-image-side::before {
-    background: linear-gradient(135deg, rgba(13, 79, 60, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
-}
-
-.timeline-item:hover .timeline-image-side img {
-    filter: grayscale(15%) brightness(0.75);
-}
-*/
-
-
-
-
-
-
-
-
-
-/* Animación de entrada para imágenes */
-.timeline-item .timeline-image-side {
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.timeline-item.visible .timeline-image-side {
-    opacity: 1;
-}
-
-/* Responsive adjustments */
+   RESPONSIVE - TABLET
+============================================ */
 @media (max-width: 992px) {
-    .timeline-image-side {
-        width: 350px;
-        height: 280px;
+    .timeline-content {
+        max-width: 580px;
     }
-    
-    .timeline-item:nth-child(odd) .timeline-image-side {
-        margin-left: 2rem;
+
+    .timeline-images {
+        min-height: 160px;
     }
-    
-    .timeline-item:nth-child(even) .timeline-image-side {
-        margin-right: 2rem;
+
+    .timeline-image-item {
+        height: 160px;
+    }
+
+    .year-circle {
+        width: 75px;
+        height: 75px;
+    }
+
+    .year-text {
+        font-size: 1.5rem;
+    }
+
+    .timeline-text {
+        font-size: 1rem;
     }
 }
 
+/* ============================================
+   RESPONSIVE - MÓVIL MEJORADO
+============================================ */
 @media (max-width: 768px) {
-    .timeline-image-side {
+    .timeline-container {
+        padding: 0 1rem;
+    }
+
+    .timeline {
+        padding-top: 60px;
+    }
+    
+    /* Línea a la izquierda */
+    .timeline::before {
+        left: 30px;
+        top: 45px;
+        height: calc(100% - 45px);
+    }
+
+    /* Bola inicial a la izquierda */
+    .timeline-start {
+        left: 30px;
+        top: 5px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-start-circle {
+        width: 26px;
+        height: 26px;
+        border: 3px solid #fff;
+    }
+
+    .timeline-start-circle::after {
+        bottom: -12px;
+        height: 12px;
+        width: 3px;
+    }
+
+    /* Marcadores de año a la izquierda */
+    .timeline-year-marker {
+        left: 30px;
+        top: -60px;
+        transform: translateX(-50%);
+        gap: 30px;
+    }
+
+    .year-circle {
+        width: 60px;
+        height: 660px;
+        border: 4px solid #fff;
+    }
+
+    .year-circle::before {
+        top: -40px;
+        height: 40px;
+        width: 3px;
+    }
+
+    .year-text {
+        font-size: 1.2rem;
+    }
+
+    .timeline-marker {
+        width: 20px;
+        height: 20px;
+        border: 3px solid var(--primary-green);
+    }
+
+    .timeline-marker::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Línea conectora más larga */
+    .timeline-marker::after {
+        bottom: -40px;
+        height: 40px;
+        width: 3px;
+    }
+
+    /* Contenido a la derecha */
+    .timeline-item {
+        margin-bottom: 4rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content-wrapper,
+    .timeline-item:nth-child(even) .timeline-content-wrapper {
+        justify-content: flex-start;
+        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 70px;
+        margin-top: 80px;
+    }
+
+    /* Ocultar flechas en móvil */
+    .timeline-arrow {
         display: none;
     }
+
+    .timeline-content {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* Ajustes de contenido */
+    .timeline-header-bar {
+        padding: 0.8rem 1.2rem;
+        max-height: 45px;
+    }
+
+    .timeline-year-display {
+        font-size: 1rem;
+    }
+
+    .timeline-images {
+        min-height: 140px;
+        flex-direction: row;
+    }
+
+    .timeline-image-item {
+        height: 140px;
+        min-width: 0;
+    }
+
+    .timeline-text-content {
+        padding: 1.2rem;
+        margin-top: 15px;
+    }
+
+    .timeline-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 }
+
+/* ============================================
+   RESPONSIVE - MÓVIL PEQUEÑO
+============================================ */
+@media (max-width: 576px) {
+    .timeline-section {
+        padding: 1.5rem 0;
+    }
+
+    .timeline-container {
+        padding: 0 0.8rem;
+    }
+
+    .timeline {
+        padding-top: 50px;
+    }
+
+    /* Línea más a la izquierda */
+    .timeline::before {
+        left: 25px;
+        top: 40px;
+        height: calc(100% - 40px);
+        width: 3px;
+    }
+
+    /* Bola inicial */
+    .timeline-start {
+        left: 25px;
+        top: 10px;
+    }
+
+    .timeline-start-circle {
+        width: 24px;
+        height: 24px;
+        border: 3px solid #fff;
+    }
+
+    .timeline-start-circle::after {
+        bottom: -10px;
+        height: 10px;
+        width: 3px;
+    }
+
+    /* Marcadores de año */
+    .timeline-year-marker {
+        left: 25px;
+        top: -55px;
+        gap: 25px;
+    }
+
+    .year-circle {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #fff;
+    }
+
+    .year-circle::before {
+        top: -35px;
+        height: 35px;
+        width: 3px;
+    }
+
+    .year-text {
+        font-size: 1rem;
+        font-weight: 800;
+    }
+
+    .timeline-marker {
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--primary-green);
+    }
+
+    .timeline-marker::before {
+        width: 7px;
+        height: 7px;
+    }
+
+    .timeline-marker::after {
+        bottom: -35px;
+        height: 35px;
+        width: 3px;
+    }
+
+    /* Contenido */
+    .timeline-item {
+        margin-bottom: 3.5rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content-wrapper,
+    .timeline-item:nth-child(even) .timeline-content-wrapper {
+        margin-left: 60px;
+        margin-top: 75px;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+
+    .timeline-header-bar {
+        padding: 0.7rem 1rem;
+        max-height: 40px;
+    }
+
+    .timeline-year-display {
+        font-size: 0.9rem;
+    }
+
+    .timeline-images {
+        min-height: 120px;
+        flex-wrap: nowrap;
+    }
+
+    .timeline-image-item {
+        height: 120px;
+        flex: 1 1 50%;
+    }
+
+    .timeline-text-content {
+        padding: 1rem;
+        margin-top: 12px;
+    }
+
+    .timeline-text {
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+}
+
+/* ============================================
+   MÓVIL MUY PEQUEÑO (< 400px)
+============================================ */
+@media (max-width: 400px) {
+    .timeline-container {
+        padding: 0 0.5rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-start {
+        left: 20px;
+    }
+
+    .timeline-year-marker {
+        left: 20px;
+    }
+
+    .year-circle {
+        width: 55px;
+        height: 55px;
+    }
+
+    .year-text {
+        font-size: 0.9rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content-wrapper,
+    .timeline-item:nth-child(even) .timeline-content-wrapper {
+        margin-left: 50px;
+    }
+
+    .timeline-header-bar {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .timeline-year-display {
+        font-size: 0.85rem;
+    }
+
+    .timeline-images {
+        min-height: 110px;
+    }
+
+    .timeline-image-item {
+        height: 110px;
+    }
+
+    .timeline-text-content {
+        padding: 0.8rem;
+    }
+
+    .timeline-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -758,8 +1017,9 @@ h6 {
     margin: 0;
     width: 100%;
     overflow: hidden;
-    margin-top: 30px ;
-    border-top: 1px solid rgba(121, 120, 120, 0.5);;
+    margin-top: 30px;
+    border-top: 1px solid rgba(121, 120, 120, 0.5);
+    ;
 }
 
 .institutional-nav-container {
@@ -777,6 +1037,7 @@ h6 {
     margin: 0;
     max-height: 350px;
 }
+
 .nav-card-inst {
     filter: brightness(1.4);
 }
@@ -792,8 +1053,8 @@ h6 {
     justify-content: center;
     text-decoration: none;
     margin-top: 20px;
-    margin-bottom:100px ;
-    
+    margin-bottom: 100px;
+
 }
 
 /* Imágenes de fondo para cada card */
@@ -822,7 +1083,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);   
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
     z-index: 1;
 }
 
