@@ -19,6 +19,7 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/basica_primaria.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
 </head>
 
 <body>
@@ -27,29 +28,40 @@
 
     <body>
 
+        
+        <!-- HERO SECTION PROFESIONAL -->
+        <section class="hero-section">
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-particles"></div>
 
-
-        <!-- HERO SECTION AVANZADO -->
-        <section class="hero-advanced">
-            <div class="hero-background">
-                <div class="hero-overlay"></div>
-                <div class="hero-particles"></div>
-            </div>
             <div class="container hero-container">
-                <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-10 offset-lg-1 text-center">
-
-                        <h1 class="hero-title">
-                            <span class="title-highlight">Educación Basica</span> -
-                            <span class="title-highlight">Primaria</span>
-                        </h1>
-                        <div class="hero-scroll-indicator" onclick="scrollToTimeline()">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
+                <div class="hero-content">
+                    <h1 class="hero-title" data-title="Educación Básica Primaria">Educación Básica Primaria</h1>
+                    <div class="hero-scroll-indicator" onclick="scrollToContent()">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,217 +85,229 @@
                 </div>
 
                 <!-- SECCIÓN DE OBJETIVOS PRIMARIA -->
-<section class="objetivos-section" id="contenido-primaria">
-    <div class="container-fluid objetivos-container-custom">
+                <section class="objetivos-section" id="contenido-primaria">
+                    <div class="container-fluid objetivos-container-custom">
 
-        <!-- Navegación de Categorías -->
-<nav class="objetivos-navigation">
-    <button class="objetivo-tab active" data-categoria="formacion">
-        Formación en Valores y Ciudadanía
-    </button>
-    <button class="objetivo-tab" data-categoria="academico">
-        Desarrollo Académico y Cognitivo
-    </button>
-    <button class="objetivo-tab" data-categoria="fisico">
-        Desarrollo Físico y Artístico
-    </button>
-    <button class="objetivo-tab" data-categoria="social">
-        Habilidades Sociales y Autonomía
-    </button>
-</nav>
+                        <!-- Navegación de Categorías -->
+                        <nav class="objetivos-navigation">
+                            <button class="objetivo-tab active" data-categoria="formacion">
+                                Formación en Valores y Ciudadanía
+                            </button>
+                            <button class="objetivo-tab" data-categoria="academico">
+                                Desarrollo Académico y Cognitivo
+                            </button>
+                            <button class="objetivo-tab" data-categoria="fisico">
+                                Desarrollo Físico y Artístico
+                            </button>
+                            <button class="objetivo-tab" data-categoria="social">
+                                Habilidades Sociales y Autonomía
+                            </button>
+                        </nav>
 
 
-        <!-- Contenido de Objetivos -->
-        <div class="objetivos-content">
-            <!-- Formación en Valores y Ciudadanía -->
-            <div class="objetivo-item active" id="objetivo-formacion">
-                <div class="objetivo-grid">
-                    <div class="objetivo-card" data-bg="valores-convivencia">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Valores para la Convivencia</h3>
-                            <p class="objetivo-text">
-                                La formación de los valores fundamentales para la convivencia de una
-                                sociedad democrática, participativa y pluralista.
-                            </p>
+                        <!-- Contenido de Objetivos -->
+                        <div class="objetivos-content">
+                            <!-- Formación en Valores y Ciudadanía -->
+                            <div class="objetivo-item active" id="objetivo-formacion">
+                                <div class="objetivo-grid">
+                                    <div class="objetivo-card" data-bg="valores-convivencia">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Valores para la Convivencia</h3>
+                                            <p class="objetivo-text">
+                                                La formación de los valores fundamentales para la convivencia de una
+                                                sociedad democrática, participativa y pluralista.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="valores-civicos">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Valores Cívicos y Morales</h3>
+                                            <p class="objetivo-text">
+                                                El desarrollo de valores civiles y morales de organización social y de
+                                                convivencia humana.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="educacion-constitucional">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Educación Constitucional</h3>
+                                            <p class="objetivo-text">
+                                                La iniciación en el conocimiento de la constitución política.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="participacion-infantil">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Participación Infantil</h3>
+                                            <p class="objetivo-text">
+                                                La formación para la participación y organización infantil y la
+                                                utilización
+                                                adecuada del tiempo libre.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Desarrollo Académico y Cognitivo -->
+                            <div class="objetivo-item" id="objetivo-academico">
+                                <div class="objetivo-grid">
+                                    <div class="objetivo-card" data-bg="deseo-saber">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Deseo de Saber</h3>
+                                            <p class="objetivo-text">
+                                                El fomento del deseo del saber, de la iniciativa personal frente al
+                                                conocimiento y frente a la realidad social, así como el espíritu
+                                                crítico.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="habilidades-comunicativas">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Habilidades Comunicativas</h3>
+                                            <p class="objetivo-text">
+                                                El desarrollo de las habilidades comunicativas básicas para leer,
+                                                comprender, escribir, escuchar, hablar y expresarse correctamente en
+                                                lengua castellana,
+                                                así como el fomento de la afición por la lectura.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="expresion-estetica">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Expresión Estética</h3>
+                                            <p class="objetivo-text">
+                                                El desarrollo de la capacidad para apreciar y utilizar la lengua como
+                                                medio
+                                                de expresión estética.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="pensamiento-matematico">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Pensamiento Matemático</h3>
+                                            <p class="objetivo-text">
+                                                El desarrollo de los conocimientos matemáticos necesarios para manejar y
+                                                utilizar operaciones simples de cálculo y procedimientos lógicos
+                                                elementales en diferentes
+                                                situaciones, así como la capacidad para solucionar problemas que
+                                                impliquen conocimientos.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="comprension-medio">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Comprensión del Medio</h3>
+                                            <p class="objetivo-text">
+                                                La comprensión básica del medio físico, social y cultural en el nivel
+                                                local,
+                                                nacional y universal, de acuerdo con el desarrollo intelectual
+                                                correspondiente a su edad.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="asimilacion-conceptos">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Asimilación de Conceptos</h3>
+                                            <p class="objetivo-text">
+                                                La asimilación de conceptos en áreas del conocimiento que sean objeto de
+                                                estudio, de acuerdo con el desarrollo intelectual y la edad.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="lengua-extranjera">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Lengua Extranjera</h3>
+                                            <p class="objetivo-text">
+                                                La adquisición de elementos de conversación y de lectura al menos en una
+                                                lengua extranjera.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Desarrollo Físico y Artístico -->
+                            <div class="objetivo-item" id="objetivo-fisico">
+                                <div class="objetivo-grid">
+                                    <div class="objetivo-card" data-bg="salud-cuidado">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Salud y Cuidado Personal</h3>
+                                            <p class="objetivo-text">
+                                                La valoración de la higiene y la salud del propio cuerpo y la formación
+                                                para
+                                                la protección de la naturaleza y el ambiente.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="educacion-fisica">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Educación Física y Deportes</h3>
+                                            <p class="objetivo-text">
+                                                El conocimiento y ejercitación del propio cuerpo mediante la práctica de
+                                                la
+                                                educación física, la recreación y los deportes adecuados a su edad y
+                                                conducentes a un
+                                                desarrollo físico armónico.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="objetivo-card" data-bg="formacion-artistica">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Formación Artística</h3>
+                                            <p class="objetivo-text">
+                                                La formación artística mediante la expresión corporal, la
+                                                representación, la
+                                                música, la plástica y la literatura.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Habilidades Sociales y Autonomía -->
+                            <div class="objetivo-item" id="objetivo-social">
+                                <div class="objetivo-grid">
+                                    <div class="objetivo-card" data-bg="autonomia-personal">
+                                        <div class="objetivo-overlay"></div>
+                                        <div class="objetivo-content-wrapper">
+                                            <h3 class="objetivo-subtitle">Autonomía Personal</h3>
+                                            <p class="objetivo-text">
+                                                La adquisición de habilidades para desempeñarse con autonomía en la
+                                                sociedad.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="objetivo-card" data-bg="valores-civicos">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Valores Cívicos y Morales</h3>
-                            <p class="objetivo-text">
-                                El desarrollo de valores civiles y morales de organización social y de
-                                convivencia humana.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="educacion-constitucional">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Educación Constitucional</h3>
-                            <p class="objetivo-text">
-                                La iniciación en el conocimiento de la constitución política.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="participacion-infantil">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Participación Infantil</h3>
-                            <p class="objetivo-text">
-                                La formación para la participación y organización infantil y la utilización
-                                adecuada del tiempo libre.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Desarrollo Académico y Cognitivo -->
-            <div class="objetivo-item" id="objetivo-academico">
-                <div class="objetivo-grid">
-                    <div class="objetivo-card" data-bg="deseo-saber">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Deseo de Saber</h3>
-                            <p class="objetivo-text">
-                                El fomento del deseo del saber, de la iniciativa personal frente al
-                                conocimiento y frente a la realidad social, así como el espíritu crítico.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="habilidades-comunicativas">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Habilidades Comunicativas</h3>
-                            <p class="objetivo-text">
-                                El desarrollo de las habilidades comunicativas básicas para leer,
-                                comprender, escribir, escuchar, hablar y expresarse correctamente en lengua castellana,
-                                así como el fomento de la afición por la lectura.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="expresion-estetica">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Expresión Estética</h3>
-                            <p class="objetivo-text">
-                                El desarrollo de la capacidad para apreciar y utilizar la lengua como medio
-                                de expresión estética.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="pensamiento-matematico">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Pensamiento Matemático</h3>
-                            <p class="objetivo-text">
-                                El desarrollo de los conocimientos matemáticos necesarios para manejar y
-                                utilizar operaciones simples de cálculo y procedimientos lógicos elementales en diferentes
-                                situaciones, así como la capacidad para solucionar problemas que impliquen conocimientos.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="comprension-medio">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Comprensión del Medio</h3>
-                            <p class="objetivo-text">
-                                La comprensión básica del medio físico, social y cultural en el nivel local,
-                                nacional y universal, de acuerdo con el desarrollo intelectual correspondiente a su edad.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="asimilacion-conceptos">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Asimilación de Conceptos</h3>
-                            <p class="objetivo-text">
-                                La asimilación de conceptos en áreas del conocimiento que sean objeto de
-                                estudio, de acuerdo con el desarrollo intelectual y la edad.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="lengua-extranjera">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Lengua Extranjera</h3>
-                            <p class="objetivo-text">
-                                La adquisición de elementos de conversación y de lectura al menos en una
-                                lengua extranjera.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Desarrollo Físico y Artístico -->
-            <div class="objetivo-item" id="objetivo-fisico">
-                <div class="objetivo-grid">
-                    <div class="objetivo-card" data-bg="salud-cuidado">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Salud y Cuidado Personal</h3>
-                            <p class="objetivo-text">
-                                La valoración de la higiene y la salud del propio cuerpo y la formación para
-                                la protección de la naturaleza y el ambiente.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="educacion-fisica">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Educación Física y Deportes</h3>
-                            <p class="objetivo-text">
-                                El conocimiento y ejercitación del propio cuerpo mediante la práctica de la
-                                educación física, la recreación y los deportes adecuados a su edad y conducentes a un
-                                desarrollo físico armónico.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="objetivo-card" data-bg="formacion-artistica">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Formación Artística</h3>
-                            <p class="objetivo-text">
-                                La formación artística mediante la expresión corporal, la representación, la
-                                música, la plástica y la literatura.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Habilidades Sociales y Autonomía -->
-            <div class="objetivo-item" id="objetivo-social">
-                <div class="objetivo-grid">
-                    <div class="objetivo-card" data-bg="autonomia-personal">
-                        <div class="objetivo-overlay"></div>
-                        <div class="objetivo-content-wrapper">
-                            <h3 class="objetivo-subtitle">Autonomía Personal</h3>
-                            <p class="objetivo-text">
-                                La adquisición de habilidades para desempeñarse con autonomía en la
-                                sociedad.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                </section>
 
 
 
@@ -422,6 +446,91 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
         <script>
+            // Función para scroll suave mejorada con offset
+            function scrollToContent() {
+                const targetSection = document.getElementById('metodologia-primaria');
+
+                if (targetSection) {
+                    // Obtener la posición de la sección
+                    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+
+                    // Offset para que no baje de más (ajusta este valor según necesites)
+                    const offset = 80; // Puedes cambiar este valor: 80, 100, 120, etc.
+
+                    window.scrollTo({
+                        top: targetPosition - offset,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // Opción 2: Si no encuentra la sección, scroll por altura del hero
+                    const heroHeight = document.querySelector('.hero-section').offsetHeight;
+                    window.scrollTo({
+                        top: heroHeight - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+
+            // Auto-ajuste del tamaño según longitud del título
+            document.addEventListener('DOMContentLoaded', function() {
+                const title = document.querySelector('.hero-title');
+
+                if (title) {
+                    const titleLength = title.textContent.trim().length;
+
+                    // Eliminar clases previas
+                    title.classList.remove('title-short', 'title-medium', 'title-long', 'title-extra-long');
+
+                    // Aplicar clase según longitud
+                    if (titleLength <= 15) {
+                        title.classList.add('title-short');
+                    } else if (titleLength <= 25) {
+                        title.classList.add('title-medium');
+                    } else if (titleLength <= 35) {
+                        title.classList.add('title-long');
+                    } else {
+                        title.classList.add('title-extra-long');
+                    }
+
+                    // Remover el cursor de escritura después de la animación
+                    setTimeout(() => {
+                        title.classList.add('typing-complete');
+                    }, 300); // 3.5s de animación + 0.5s extra
+                }
+
+                // Crear partículas
+                createParticles();
+
+                // Asegurar que el scroll indicator funcione
+                const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+                if (scrollIndicator) {
+                    scrollIndicator.addEventListener('click', scrollToContent);
+                }
+            });
+
+            // Función para crear partículas animadas
+            function createParticles() {
+                const particlesContainer = document.querySelector('.hero-particles');
+                if (!particlesContainer) return;
+
+                const particleCount = 20;
+
+                // Limpiar partículas existentes
+                particlesContainer.innerHTML = '';
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+
+                    // Posición y delay aleatorios
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 15 + 's';
+                    particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+
+                    particlesContainer.appendChild(particle);
+                }
+            }
+
             // Funcionalidad de navegación de objetivos
             document.addEventListener('DOMContentLoaded', function() {
                 const tabs = document.querySelectorAll('.objetivo-tab');
@@ -456,11 +565,7 @@
                 });
             });
 
-
-
-
-
-            // Scroll suave para navegación
+            // Scroll suave para todos los enlaces con ancla
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -473,108 +578,6 @@
                     }
                 });
             });
-
-            // Animación de partículas en el hero (MODIFICADO para funcionar con ambas clases)
-            function createParticles() {
-                const particles = document.querySelector('.hero-particles') ||
-                    document.querySelector('.floating-particles');
-                if (particles) {
-                    for (let i = 0; i < 50; i++) {
-                        const particle = document.createElement('div');
-                        particle.className = 'particle';
-                        particle.style.left = Math.random() * 100 + '%';
-                        particle.style.animationDelay = Math.random() * 20 + 's';
-                        particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                        particles.appendChild(particle);
-                    }
-                }
-            }
-
-            // Inicializar partículas
-            createParticles();
-
-
-            // Scroll suave para el indicador de scroll del hero
-            document.addEventListener('DOMContentLoaded', function() {
-                const scrollIndicator = document.querySelector('.scroll-indicator');
-                if (scrollIndicator) {
-                    scrollIndicator.addEventListener('click', function() {
-                        const nextSection = document.querySelector('.historia-hero').nextElementSibling;
-                        if (nextSection) {
-                            nextSection.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        } else {
-                            window.scrollBy({
-                                top: window.innerHeight * 0.7,
-                                behavior: 'smooth'
-                            });
-                        }
-                    });
-                }
-            });
-
-
-            // Scroll suave al timeline
-            function scrollToTimeline() {
-                document.getElementById('preescolar-content').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-
-            // Scroll suave al timeline con offset
-            function scrollToTimeline() {
-                const target = document.getElementById('metodologia-primaria');
-                if (target) {
-                    const headerHeight = document.querySelector('header')?.offsetHeight || 60;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 1;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-
-
-            // Script para adaptar automáticamente el tamaño del título
-            // Agregar este script al final del body o en tu archivo JS principal
-
-            function adaptHeroTitle() {
-                const heroTitle = document.querySelector('.hero-title');
-                if (!heroTitle) return;
-
-                const titleText = heroTitle.textContent.trim();
-                const characterCount = titleText.length;
-                const wordCount = titleText.split(' ').length;
-
-                // Remover clases previas
-                heroTitle.classList.remove('auto-long', 'auto-short');
-
-                // Aplicar clase según la longitud del texto
-                if (characterCount > 35 || wordCount > 5) {
-                    // Título largo como "Componente Filosófico De Identidad"
-                    heroTitle.classList.add('auto-long');
-                } else if (characterCount < 15 || wordCount < 3) {
-                    // Título corto
-                    heroTitle.classList.add('auto-short');
-                }
-                // Si está en el rango medio, usa el estilo por defecto
-            }
-
-            // Ejecutar cuando la página cargue
-            document.addEventListener('DOMContentLoaded', function() {
-                adaptHeroTitle();
-            });
-
-            // Re-evaluar si cambia el tamaño de ventana
-            window.addEventListener('resize', function() {
-                adaptHeroTitle();
-            });
-        </script>
-
-
         </script>
     </body>
 

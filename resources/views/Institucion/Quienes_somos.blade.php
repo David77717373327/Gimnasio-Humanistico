@@ -19,6 +19,7 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/quienes_somos.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/hero.css')}}" rel="stylesheet">
 </head>
 
 <!-- Incluir el header -->
@@ -31,19 +32,21 @@
 
 
 
-    <!-- Hero Section -->
-    <section class="historia-hero">
+    <!-- HERO SECTION PROFESIONAL -->
+    <section class="hero-section">
         <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
 
-        <!-- Partículas flotantes -->
-        <div class="floating-particles"></div>
-
-        <div class="hero-content">
-            <h1 class="hero-title">Nuestra Historia</h1>
-        </div>
-
-        <div class="scroll-indicator" onclick="scrollToTimeline()">
-            <i class="fas fa-chevron-down"></i>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-title="Nuestra Historia">
+                    Nuestra Historia
+                </h1>
+                <div class="hero-scroll-indicator" onclick="scrollToContent()">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -465,91 +468,108 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
     <script>
-        // Generar partículas flotantes
+        
+         // Función para scroll suave mejorada con offset
+        function scrollToContent() {
+            const targetSection = document.getElementById('timeline');
+            
+            if (targetSection) {
+                // Obtener la posición de la sección
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+
+                // Offset para que no baje de más (ajusta este valor según necesites)
+                const offset = 60; // Puedes cambiar este valor: 80, 100, 120, etc.
+
+                window.scrollTo({
+                    top: targetPosition - offset,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Opción 2: Si no encuentra la sección, scroll por altura del hero
+                const heroHeight = document.querySelector('.hero-section').offsetHeight;
+                window.scrollTo({
+                    top: heroHeight - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Auto-ajuste del tamaño según longitud del título
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('.hero-title');
+
+            if (title) {
+                const titleLength = title.textContent.trim().length;
+
+                // Eliminar clases previas
+                title.classList.remove('title-short', 'title-medium', 'title-long', 'title-extra-long');
+
+                // Aplicar clase según longitud
+                if (titleLength <= 15) {
+                    title.classList.add('title-short');
+                } else if (titleLength <= 25) {
+                    title.classList.add('title-medium');
+                } else if (titleLength <= 35) {
+                    title.classList.add('title-long');
+                } else {
+                    title.classList.add('title-extra-long');
+                }
+
+                // Remover el cursor de escritura después de la animación
+                setTimeout(() => {
+                    title.classList.add('typing-complete');
+                }, 300); // 3.5s de animación + 0.5s extra
+            }
+
+            // Crear partículas
+            createParticles();
+
+            // Asegurar que el scroll indicator funcione
+            const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', scrollToContent);
+            }
+        });
+
+        // Función para crear partículas animadas
         function createParticles() {
-            const container = document.querySelector('.floating-particles');
-            const particleCount = 25;
+            const particlesContainer = document.querySelector('.hero-particles');
+            if (!particlesContainer) return;
+
+            const particleCount = 20;
+
+            // Limpiar partículas existentes
+            particlesContainer.innerHTML = '';
 
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
-                particle.classList.add('particle');
+                particle.className = 'particle';
 
-                const size = Math.random() * 2 + 1;
-                const startX = Math.random() * window.innerWidth;
-                const duration = Math.random() * 15 + 10;
-                const delay = Math.random() * 15;
+                // Posición y delay aleatorios
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
 
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${startX}px`;
-                particle.style.animationDuration = `${duration}s`;
-                particle.style.animationDelay = `${delay}s`;
-
-                container.appendChild(particle);
+                particlesContainer.appendChild(particle);
             }
         }
 
-        // Intersection Observer para animaciones
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -80px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+        // Scroll suave para todos los enlaces con ancla
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
-        }, observerOptions);
+        });   
 
-        // Scroll suave al timeline
-        function scrollToTimeline() {
-            document.getElementById('timeline').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // Efectos de paralaje suave
-        function parallaxEffect() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.1;
-
-            const heroBackground = document.querySelector('.hero-background');
-            if (heroBackground) {
-                heroBackground.style.transform = `translateY(${rate}px)`;
-            }
-        }
-
-        // Inicialización
-        document.addEventListener('DOMContentLoaded', function() {
-            createParticles();
-
-            document.querySelectorAll('.timeline-item').forEach(el => {
-                observer.observe(el);
-            });
-
-            window.addEventListener('scroll', parallaxEffect);
-        });
-
-        // Efecto de mouse en hero
-        document.querySelector('.historia-hero').addEventListener('mousemove', (e) => {
-            const {
-                clientX,
-                clientY
-            } = e;
-            const {
-                innerWidth,
-                innerHeight
-            } = window;
-
-            const xPercent = (clientX / innerWidth - 0.5) * 2;
-            const yPercent = (clientY / innerHeight - 0.5) * 2;
-
-            const heroContent = document.querySelector('.hero-content');
-            heroContent.style.transform = `translate(${xPercent * 3}px, ${yPercent * 3}px)`;
-        });
     </script>
 </body>
 </html>

@@ -19,6 +19,7 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/prescolar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -29,33 +30,25 @@
 
 
 
- <!-- HERO SECTION AVANZADO -->
-    <section class="hero-advanced">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-            <div class="hero-particles"></div>
-        </div>
-        <div class="container hero-container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-10 offset-lg-1 text-center">
+    <!-- HERO SECTION PROFESIONAL -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
 
-                    <h1 class="hero-title">
-                        <span class="title-highlight">Educación Inicial</span> -
-                        <span class="title-highlight">Preescolar</span>
-                    </h1>
-                    <div class="hero-scroll-indicator" onclick="scrollToTimeline()">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-title="Educación Básica Primaria">
+                    Educación Inicial - Prescolar
+                </h1>
+                <div class="hero-scroll-indicator" onclick="scrollToContent()">
+                    <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
         </div>
     </section>
 
 
-        
-    
-
-    
 
 
 
@@ -64,192 +57,290 @@
 
 
 
-<!-- Sección Principal de Contenido Preescolar -->
-<section class="preescolar-content" id="preescolar-content">
-    
 
-    <!-- Metodología Activa - Rediseño -->
-    <div class="metodologia-section">
-        <div class="container">
 
-            <!-- Header de la sección con logo -->
-<div class="admision-nav-header">
-    <div class="header-content-wrapper">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
-        <div class="header-text-content">
-            <div class="header-label">
-                <span class="label-icon">✦</span>
-                <span class="label-text">Comunícate con nosotros</span>
-            </div>
-            <h2 class="admision-nav-title">Propósitos Educación Inicial</h2>
-            <p class="admision-nav-subtitle">
-                Nuestro enfoque pedagógico se basa en los propósitos establecidos por el Ministerio de Educación Nacional de Colombia.
-            </p>
-        </div>
-    </div>
-</div>
 
-<div class="row align-items-center g-5">
-    <div class="col-lg-6 order-lg-1 order-2">
-        <div class="metodologia-image">
-            <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Educación Inicial">
-        </div>
-    </div>
-    <div class="col-lg-6 order-lg-2 order-1">
-        <div class="metodologia-content">    
-            <h2 class="section-title">Educamos desde los 3 Propósitos Fundamentales</h2>
-            <p class="section-description">
-                La educación inicial busca que los niños se reconozcan como sujetos activos de su aprendizaje, 
-                desarrollando sus capacidades mediante experiencias de exploración, comunicación, juego y convivencia.
-            </p>
-            
-            <div class="metodologia-list">
 
-                <!-- Propósito 1 -->
-                <div class="metodologia-item">
-                    <div class="metodologia-number">01</div>     
-                    <div class="metodologia-text">
-                        <h4>Construir su identidad en relación con los otros</h4>
-                        <p>
-                            Promovemos que los niños se reconozcan como personas únicas, capaces de convivir, compartir y construir vínculos afectivos 
-                            con su familia, sus compañeros y su entorno.
-                        </p>
+    <!-- Sección Principal de Contenido Preescolar -->
+    <section class="preescolar-content" id="preescolar-content">
+
+
+        <!-- Metodología Activa - Rediseño -->
+        <div class="metodologia-section">
+            <div class="container">
+
+                <!-- Header de la sección con logo -->
+                <div class="admision-nav-header">
+                    <div class="header-content-wrapper">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
+                        <div class="header-text-content">
+                            <div class="header-label">
+                                <span class="label-icon">✦</span>
+                                <span class="label-text">Comunícate con nosotros</span>
+                            </div>
+                            <h2 class="admision-nav-title">Propósitos Educación Inicial</h2>
+                            <p class="admision-nav-subtitle">
+                                Nuestro enfoque pedagógico se basa en los propósitos establecidos por el Ministerio de
+                                Educación Nacional de Colombia.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Propósito 2 -->
-                <div class="metodologia-item">
-                    <div class="metodologia-number">02</div>
-                    
-                    <div class="metodologia-text">
-                        <h4>Ser comunicadores activos de sus ideas, sentimientos y emociones</h4>
-                        <p>
-                            Fomentamos diversas formas de expresión —oral, corporal, artística y simbólica— 
-                            que les permitan comunicar su manera de ver y sentir el mundo.
-                        </p>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <div class="metodologia-image">
+                            <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Educación Inicial">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1">
+                        <div class="metodologia-content">
+                            <h2 class="section-title">Educamos desde los 3 Propósitos Fundamentales</h2>
+                            <p class="section-description">
+                                La educación inicial busca que los niños se reconozcan como sujetos activos de su
+                                aprendizaje,
+                                desarrollando sus capacidades mediante experiencias de exploración, comunicación, juego
+                                y convivencia.
+                            </p>
+
+                            <div class="metodologia-list">
+
+                                <!-- Propósito 1 -->
+                                <div class="metodologia-item">
+                                    <div class="metodologia-number">01</div>
+                                    <div class="metodologia-text">
+                                        <h4>Construir su identidad en relación con los otros</h4>
+                                        <p>
+                                            Promovemos que los niños se reconozcan como personas únicas, capaces de
+                                            convivir, compartir y construir vínculos afectivos
+                                            con su familia, sus compañeros y su entorno.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Propósito 2 -->
+                                <div class="metodologia-item">
+                                    <div class="metodologia-number">02</div>
+
+                                    <div class="metodologia-text">
+                                        <h4>Ser comunicadores activos de sus ideas, sentimientos y emociones</h4>
+                                        <p>
+                                            Fomentamos diversas formas de expresión —oral, corporal, artística y
+                                            simbólica—
+                                            que les permitan comunicar su manera de ver y sentir el mundo.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Propósito 3 -->
+                                <div class="metodologia-item">
+                                    <div class="metodologia-number">03</div>
+
+                                    <div class="metodologia-text">
+                                        <h4>Disfrutar aprender explorando y relacionándose con el mundo</h4>
+                                        <p>
+                                            A través del juego, la curiosidad y la exploración del entorno,
+                                            los niños descubren, experimentan y construyen conocimiento de forma
+                                            significativa y placentera.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Propósito 3 -->
-                <div class="metodologia-item">
-                    <div class="metodologia-number">03</div>
-                    
-                    <div class="metodologia-text">
-                        <h4>Disfrutar aprender explorando y relacionándose con el mundo</h4>
-                        <p>
-                            A través del juego, la curiosidad y la exploración del entorno, 
-                            los niños descubren, experimentan y construyen conocimiento de forma significativa y placentera.
-                        </p>
+
+
+
+
+
+
+
+
+
+
+                <!-- Horarios y Aulas - Rediseño Ultra Compacto -->
+                <div class="horarios-aulas-section">
+                    <div class="container">
+
+                        <!-- Header de la sección con logo -->
+                        <div class="admision-nav-header">
+                            <div class="header-content-wrapper">
+                                <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
+                                <div class="header-text-content">
+                                    <div class="header-label">
+                                        <span class="label-icon">✦</span>
+                                        <span class="label-text">Información Institucional</span>
+                                    </div>
+                                    <h2 class="admision-nav-title">Horarios y Aulas</h2>
+                                    <p class="admision-nav-subtitle">Ofrecemos instalaciones diseñadas específicamente
+                                        para el desarrollo integral de nuestros estudiantes de preescolar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="modalidad-badge">Lunes a Viernes • 7:00 AM - 12:00 PM</span>
+
+                        <!-- Aulas por Nivel -->
+                        <div class="aulas-grid">
+                            <div class="aula-item">
+                                <div class="aula-image">
+                                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Párvulos">
+                                    <div class="aula-overlay">
+                                        <span class="aula-nivel">Párvulos</span>
+                                    </div>
+                                </div>
+
+                                <div class="aula-info">
+                                    <h4>Párvulos</h4>
+                                    <p>Espacios amplios con áreas de juego sensorial, rincones de exploración y
+                                        mobiliario adaptado para los más pequeños.</p>
+                                </div>
+                            </div>
+
+                            <div class="aula-item">
+                                <div class="aula-image">
+                                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Prejardín">
+                                    <div class="aula-overlay">
+                                        <span class="aula-nivel">Prejardín</span>
+                                    </div>
+                                </div>
+                                <div class="aula-info">
+                                    <h4>Prejardín</h4>
+                                    <p>Ambientes coloridos diseñados para promover la creatividad, con zonas de arte,
+                                        lectura y juego dirigido.</p>
+                                </div>
+                            </div>
+
+                            <div class="aula-item">
+                                <div class="aula-image">
+                                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Jardín">
+                                    <div class="aula-overlay">
+                                        <span class="aula-nivel">Jardín</span>
+                                    </div>
+                                </div>
+                                <div class="aula-info">
+                                    <h4>Jardín</h4>
+                                    <p>Salones equipados con recursos para el desarrollo de habilidades pre-académicas
+                                        en lectoescritura y matemáticas.</p>
+                                </div>
+                            </div>
+
+                            <div class="aula-item">
+                                <div class="aula-image">
+                                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Transición">
+                                    <div class="aula-overlay">
+                                        <span class="aula-nivel">Transición</span>
+                                    </div>
+                                </div>
+                                <div class="aula-info">
+                                    <h4>Transición</h4>
+                                    <p>Aulas preparatorias con tecnología educativa, biblioteca y espacios para trabajo
+                                        individual y colaborativo.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+    </section>
 
-            </div>
-        </div>
-    </div>
-</div>
-
+    <!-- Incluir el footer -->
+    @include('layouts.footer')
 
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+        // Función para scroll suave mejorada con offset
+        function scrollToContent() {
+            const targetSection = document.getElementById('preescolar-content');
 
+            if (targetSection) {
+                // Obtener la posición de la sección
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
 
+                // Offset para que no baje de más (ajusta este valor según necesites)
+                const offset = 60; // Puedes cambiar este valor: 80, 100, 120, etc.
 
+                window.scrollTo({
+                    top: targetPosition - offset,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Opción 2: Si no encuentra la sección, scroll por altura del hero
+                const heroHeight = document.querySelector('.hero-section').offsetHeight;
+                window.scrollTo({
+                    top: heroHeight - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
 
+        // Auto-ajuste del tamaño según longitud del título
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('.hero-title');
 
+            if (title) {
+                const titleLength = title.textContent.trim().length;
 
+                // Eliminar clases previas
+                title.classList.remove('title-short', 'title-medium', 'title-long', 'title-extra-long');
 
-   <!-- Horarios y Aulas - Rediseño Ultra Compacto -->
-<div class="horarios-aulas-section">
-    <div class="container">
+                // Aplicar clase según longitud
+                if (titleLength <= 15) {
+                    title.classList.add('title-short');
+                } else if (titleLength <= 25) {
+                    title.classList.add('title-medium');
+                } else if (titleLength <= 35) {
+                    title.classList.add('title-long');
+                } else {
+                    title.classList.add('title-extra-long');
+                }
 
-        <!-- Header de la sección con logo -->
-        <div class="admision-nav-header">
-            <div class="header-content-wrapper">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
-                <div class="header-text-content">
-                    <div class="header-label">
-                        <span class="label-icon">✦</span>
-                        <span class="label-text">Información Institucional</span>
-                    </div>
-                    <h2 class="admision-nav-title">Horarios y Aulas</h2>
-                    <p class="admision-nav-subtitle">Ofrecemos instalaciones diseñadas específicamente para el desarrollo integral de nuestros estudiantes de preescolar.                                                           
-                    </p>
-                </div>
-            </div>
-        </div>
+                // Remover el cursor de escritura después de la animación
+                setTimeout(() => {
+                    title.classList.add('typing-complete');
+                }, 300); // 3.5s de animación + 0.5s extra
+            }
 
-        <span class="modalidad-badge">Lunes a Viernes • 7:00 AM - 12:00 PM</span>
+            // Crear partículas
+            createParticles();
 
-        <!-- Aulas por Nivel -->
-        <div class="aulas-grid">
-            <div class="aula-item">
-                <div class="aula-image">
-                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Párvulos">
-                    <div class="aula-overlay">
-                        <span class="aula-nivel">Párvulos</span>
-                    </div>
-                </div>
-                
-                <div class="aula-info">
-                    <h4>Párvulos</h4>
-                    <p>Espacios amplios con áreas de juego sensorial, rincones de exploración y mobiliario adaptado para los más pequeños.</p>
-                </div>
-            </div>
+            // Asegurar que el scroll indicator funcione
+            const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', scrollToContent);
+            }
+        });
 
-            <div class="aula-item">
-                <div class="aula-image">
-                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Prejardín">
-                    <div class="aula-overlay">
-                        <span class="aula-nivel">Prejardín</span>
-                    </div>
-                </div>
-                <div class="aula-info">
-                    <h4>Prejardín</h4>
-                    <p>Ambientes coloridos diseñados para promover la creatividad, con zonas de arte,
-                         lectura y juego dirigido.</p>
-                </div>
-            </div>
+        // Función para crear partículas animadas
+        function createParticles() {
+            const particlesContainer = document.querySelector('.hero-particles');
+            if (!particlesContainer) return;
 
-            <div class="aula-item">
-                <div class="aula-image">
-                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Jardín">
-                    <div class="aula-overlay">
-                        <span class="aula-nivel">Jardín</span>
-                    </div>
-                </div>
-                <div class="aula-info">
-                    <h4>Jardín</h4>
-                    <p>Salones equipados con recursos para el desarrollo de habilidades pre-académicas
-                         en lectoescritura y matemáticas.</p>
-                </div>
-            </div>
+            const particleCount = 20;
 
-            <div class="aula-item">
-                <div class="aula-image">
-                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Transición">
-                    <div class="aula-overlay">
-                        <span class="aula-nivel">Transición</span>
-                    </div>
-                </div>
-                <div class="aula-info">
-                    <h4>Transición</h4>
-                    <p>Aulas preparatorias con tecnología educativa, biblioteca y espacios para trabajo individual y colaborativo.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
+            // Limpiar partículas existentes
+            particlesContainer.innerHTML = '';
 
-<!-- Incluir el footer -->
-@include('layouts.footer')
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
 
+                // Posición y delay aleatorios
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
 
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+                particlesContainer.appendChild(particle);
+            }
+        }
 
-<script>
-        // Scroll suave para navegación
+        // Scroll suave para todos los enlaces con ancla
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -262,98 +353,8 @@
                 }
             });
         });
-
-        // Animación de partículas en el hero (MODIFICADO para funcionar con ambas clases)
-        function createParticles() {
-            const particles = document.querySelector('.hero-particles') ||
-                document.querySelector('.floating-particles');
-            if (particles) {
-                for (let i = 0; i < 50; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                    particle.style.left = Math.random() * 100 + '%';
-                    particle.style.animationDelay = Math.random() * 20 + 's';
-                    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                    particles.appendChild(particle);
-                }
-            }
-        }
-
-        // Inicializar partículas
-        createParticles();
-
-
-        // Scroll suave para el indicador de scroll del hero
-        document.addEventListener('DOMContentLoaded', function() {
-            const scrollIndicator = document.querySelector('.scroll-indicator');
-            if (scrollIndicator) {
-                scrollIndicator.addEventListener('click', function() {
-                    const nextSection = document.querySelector('.historia-hero').nextElementSibling;
-                    if (nextSection) {
-                        nextSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    } else {
-                        window.scrollBy({
-                            top: window.innerHeight * 0.7,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            }
-        });
-
-
-
-
-        
-
-        // Scroll suave al timeline
-        function scrollToTimeline() {
-            document.getElementById('preescolar-content').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-
-
-
-        // Script para adaptar automáticamente el tamaño del título
-        // Agregar este script al final del body o en tu archivo JS principal
-
-        function adaptHeroTitle() {
-            const heroTitle = document.querySelector('.hero-title');
-            if (!heroTitle) return;
-
-            const titleText = heroTitle.textContent.trim();
-            const characterCount = titleText.length;
-            const wordCount = titleText.split(' ').length;
-
-            // Remover clases previas
-            heroTitle.classList.remove('auto-long', 'auto-short');
-
-            // Aplicar clase según la longitud del texto
-            if (characterCount > 35 || wordCount > 5) {
-                // Título largo como "Componente Filosófico De Identidad"
-                heroTitle.classList.add('auto-long');
-            } else if (characterCount < 15 || wordCount < 3) {
-                // Título corto
-                heroTitle.classList.add('auto-short');
-            }
-            // Si está en el rango medio, usa el estilo por defecto
-        }
-
-        // Ejecutar cuando la página cargue
-        document.addEventListener('DOMContentLoaded', function() {
-            adaptHeroTitle();
-        });
-
-        // Re-evaluar si cambia el tamaño de ventana
-        window.addEventListener('resize', function() {
-            adaptHeroTitle();
-        });
     </script>
 
 </body>
+
 </html>
