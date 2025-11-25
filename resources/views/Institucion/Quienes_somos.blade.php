@@ -89,7 +89,7 @@
                 <div class="hero-content">
                     <h1 class="hero-title" data-title="Nuestra Historia">Nuestra Historia</h1>
                     <div class="hero-scroll-indicator" onclick="scrollToContent()" role="button" tabindex="0"
-                        aria-label="Desplazarse a la línea de tiempo histórica"
+                        aria-label="Desplazarse a la siguete sesion"
                         onkeypress="if(event.key==='Enter')scrollToContent()">
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </div>
@@ -98,7 +98,7 @@
         </section>
 
         <!-- TIMELINE HISTÓRICA -->
-        <section class="timeline-section" id="timeline" role="region" aria-labelledby="timeline-heading">
+        <section class="timeline-section" id="siguiente_sesion" role="region" aria-labelledby="timeline-heading">
             <!-- Heading invisible para accesibilidad -->
             <h2 id="timeline-heading" class="visually-hidden">Línea de tiempo histórica del Gimnasio Humanístico</h2>
 

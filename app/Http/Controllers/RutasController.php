@@ -45,7 +45,8 @@ class RutasController extends Controller
         return view('Institucion.Mision_vision');
     }
 
-    public function mostrarcontenidoprincipiosyvarolres() {
+    public function mostrarcontenidoprincipiosyvarolres() 
+    {
         return view('Institucion.Principios_y_valores');
     }
 

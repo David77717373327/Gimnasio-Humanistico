@@ -40,7 +40,7 @@ Route::get('/filosofia-institucional', [RutasController::class, 'mostrarcontenid
 //Rutas para mostrar contenido de Simbolos y idnos institucionales
 Route::get('/simbolos-institucionales', [RutasController::class, 'mostrarcontenidosimbolosinstitucionales'])->name('simbolos');
 ///Rutas para mostrar contenido de princiios y valores
-Route::get('/principos-valores', [RutasController::class, 'mostrarcontenidoprincipiosyvalores'])->name('principios-valores');
+Route::get('/principos-valores', [RutasController::class, 'mostrarcontenidoprincipiosyvarolres'])->name('principios-valores');
 Route::get('/politica-calidad', [RutasController::class, 'mostrarcontenidopoliticadecalidad'])->name('politica-calidad');
 
 
@@ -68,14 +68,8 @@ Route::get('/Mediaacademica', [RutasController::class, 'mostrarcontenidomediaaca
 
 
 
-
-
-
 //Rutas para la navegacion de vida estudantil
 Route::get('/tranporte', [RutasController::class, 'mostrarcontenidotranporte'])->name('transporte');
-
-
-
 
 
 //Rutas de admnisones

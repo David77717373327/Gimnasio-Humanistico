@@ -24,19 +24,11 @@
 
     /* Azul principal - confianza */
     --primary-blue: #1E3A5F;
-    /* Azul oscuro - elegancia */
     --dark-blue: #264653;
-    /* Azul profundo (similar al que mostraste) */
     --deep-blue: #003366;
-    /* Azul intermedio - contraste suave */
     --soft-blue: #07346e;
-    /* Azul grisáceo - texto y detalles */
     --slate-blue: #3A506B;
-    /* Complemento claro (fondos suaves) */
     --light-blue: #E0ECF7;
-
-    /* Nuevos colores para modernizar */
-    --soft-blue: #EBF8FF;
     --accent-blue: #3B82F6;
     --success-green: #10B981;
     --warm-white: #FEFEFE;
@@ -47,7 +39,6 @@
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
 
     /* Gradientes modernos */
     --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
@@ -67,12 +58,13 @@
 
     /* Transiciones */
     --transition-fast: 0.15s ease-out;
-    --transition-normal: 0.1s ease-out;
+    --transition-normal: 0.3s ease-out;
     --transition-slow: 0.5s ease-out;
 }
 
-
-
+/* ============================================
+   RESET Y BASE
+============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -89,252 +81,12 @@ body {
     scroll-behavior: smooth;
 }
 
-
-
-/* ============================================
-   HERO SECTION AVANZADO Mision-Vision
-============================================ */
-.hero-advanced {
-    position: relative;
-    height: 65vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    margin-bottom: -60px;
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
-        url('../images/Mision1.jpg') center/cover no-repeat;
-    z-index: 1;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 40%, rgba(244, 185, 66, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 60%, rgba(125, 223, 172, 0.08) 0%, transparent 50%);
-}
-
-.hero-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-}
-
-.particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(244, 185, 66, 0.6);
-    border-radius: 50%;
-    animation: float 15s infinite linear;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-100px) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-.hero-container {
-    position: relative;
-    z-index: 3;
-}
-
-/* TÍTULO MEJORADO PARA ADAPTARSE A CUALQUIER LONGITUD */
-.hero-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease-out 0.3s both;
-
-    /* Tamaño base más grande para títulos normales y cortos */
-    font-size: clamp(8rem, 7vw, 6rem);
-
-
-    /* Centrado perfecto para títulos largos */
-    text-align: center;
-    max-width: 100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-
-    /* Espacio para que respire el texto */
-    padding: 0 1rem;
-    box-sizing: border-box;
-}
-
-/* Clase automática para títulos largos */
-.hero-title.auto-long {
-    font-size: clamp(4.2rem, 4.5vw, 4.2rem);
-    line-height: 1.3;
-    /* Mejor espaciado para títulos largos */
-    letter-spacing: -0.02em;
-}
-
-/* Clase automática para títulos cortos - MÁS GRANDES */
-.hero-title.auto-short {
-    font-size: clamp(8.5rem, 8vw, 7rem);
-    line-height: 1.05;
-}
-
-.title-highlight {
-    background: #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.title-highlight::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: #FFFFFF;
-    border-radius: 2px;
-    transform: scaleX(0);
-    animation: expandLine 1s ease-out 1.5s both;
-}
-
-.hero-scroll-indicator {
-    position: absolute;
-    bottom: 140px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--white);
-    font-size: 1.5rem;
-    animation: bounce 2s infinite;
-    cursor: pointer;
-}
-
-/* Animaciones */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
-@keyframes expandLine {
-    to {
-        transform: scaleX(1);
-    }
-}
-
-/* Responsive mejorado */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: clamp(2.5rem, 7vw, 4rem);
-        max-width: 100%;
-        padding: 0 0.5rem;
-    }
-
-    .hero-title.auto-long {
-        font-size: clamp(1.8rem, 6vw, 3rem);
-        line-height: 1.4;
-    }
-
-    .hero-title.auto-short {
-        font-size: clamp(3rem, 8.5vw, 4.5rem);
-    }
-
-    .hero-scroll-indicator {
-        bottom: 15px;
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        max-width: 100%;
-        font-size: clamp(2rem, 8.5vw, 3.5rem);
-        padding: 0 0.25rem;
-    }
-
-    .hero-title.auto-long {
-        font-size: clamp(1.6rem, 7.5vw, 2.8rem);
-        line-height: 1.4;
-    }
-
-    .hero-title.auto-short {
-        font-size: clamp(2.5rem, 9vw, 4rem);
-    }
-}
-
-
-
-
-
-
 /* ============================================
    SECCIÓN HIMNO
-   ============================================ */
+============================================ */
 .himno-section {
-    margin-top: 70px;
-    padding: 55px;
+    margin-top: 30px;
+    padding: 55px 20px;
     background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
     position: relative;
 }
@@ -352,7 +104,7 @@ body {
 
 .himno-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     color: var(--primary-green);
     margin-bottom: 0.5rem;
@@ -374,12 +126,11 @@ body {
 
 .himno-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: black;
     margin-top: 1.5rem;
     font-style: italic;
 }
-
 
 /* DISEÑO DE DOS COLUMNAS */
 .himno-main-content {
@@ -404,7 +155,7 @@ body {
 
 .himno-intro-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
     font-weight: 700;
     color: var(--primary-green);
     margin-bottom: 2.5rem;
@@ -428,7 +179,7 @@ body {
 
 .himno-intro-text {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
     line-height: 1.8;
     color: black;
     margin-bottom: 1.5rem;
@@ -462,7 +213,7 @@ body {
 
 .himno-stanza-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
     font-weight: 1000;
     color: var(--primary-green);
     text-transform: uppercase;
@@ -472,156 +223,25 @@ body {
 
 .himno-verse {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.05rem;
+    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
     line-height: 1.8;
     color: black;
     margin-bottom: 0.3rem;
 }
 
-
-
 /* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
-
-/* Tablets */
-@media (max-width: 1024px) {
-    .himno-container {
-        max-width: 900px;
-        padding: 0 2rem;
-    }
-    
-    .himno-main-content {
-        gap: 2rem;
-        max-width: 100%;
-    }
-}
-
-/* Tablets pequeñas y móviles grandes */
-@media (max-width: 768px) {
-    .himno-section {
-        padding: 2.5rem 0;
-    }
-    
-    .himno-container {
-        padding: 0 1.5rem;
-    }
-    
-    .himno-title {
-        font-size: 2.2rem;
-    }
-    
-    .himno-subtitle {
-        font-size: 1rem;
-    }
-    
-    .himno-header {
-        margin-bottom: 2rem;
-    }
-    
-    /* CAMBIO A UNA COLUMNA */
-    .himno-main-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .himno-intro,
-    .himno-content {
-        padding: 1.5rem;
-    }
-    
-    .himno-intro-title {
-        font-size: 1.5rem;
-    }
-    
-    .himno-intro-text {
-        font-size: 0.95rem;
-    }
-    
-    .himno-verse {
-        font-size: 1rem;
-    }
-}
-
-/* Móviles */
-@media (max-width: 480px) {
-    .himno-section {
-        padding: 2rem 0;
-    }
-    
-    .himno-container {
-        padding: 0 1rem;
-    }
-    
-    .himno-title {
-        font-size: 1.8rem;
-    }
-    
-    .himno-subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .himno-intro,
-    .himno-content {
-        padding: 1.2rem;
-    }
-    
-    .himno-intro-title {
-        font-size: 1.3rem;
-    }
-    
-    .himno-intro-text {
-        font-size: 0.9rem;
-        line-height: 1.7;
-    }
-    
-    .himno-verse {
-        font-size: 0.95rem;
-    }
-    
-    .himno-stanza {
-        margin-bottom: 1.2rem;
-    }
-    
-    .himno-divider {
-        margin: 1rem auto;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================
-           SECCIÓN SÍMBOLOS
+   SECCIÓN SÍMBOLOS
 ============================================ */
 .simbolos-section {
-    margin-bottom: 0px;
-    padding: 0.12rem 0;
-    background: var(--white);   
+    margin-bottom: 0;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f3fcf6 0%, #f2f2f2 50%, #fafaf8 100%);
 }
 
 .simbolos-container {
-    max-width: 1400px;
-    margin-bottom: 0%;
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 0 6rem;
-     background: linear-gradient(135deg, #f3fcf6 0%, #f2f2f2 50%, #fafaf8 100%);
 }
 
 .simbolos-header {
@@ -631,7 +251,7 @@ body {
 
 .simbolos-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     color: var(--primary-green);
     margin-bottom: 1rem;
@@ -679,8 +299,6 @@ body {
     transition: transform var(--transition-normal);
 }
 
-
-
 .bandera-image {
     max-width: 100%;
     width: 100%;
@@ -693,8 +311,8 @@ body {
 }
 
 .simbolo-name {
-   font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
     color: var(--primary-green);
     margin-bottom: 1rem;
@@ -702,149 +320,477 @@ body {
 
 .simbolo-description {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
     line-height: 1.8;
     color: black;
     text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.simbolo-description:last-child {
+    margin-bottom: 0;
 }
 
 /* ============================================
-           RESPONSIVE DESIGN
-        ============================================ */
+   RESPONSIVE DESIGN - BREAKPOINTS PROGRESIVOS
+============================================ */
+
+/* Pantallas Extra Grandes (1400px - 1200px) */
+@media (max-width: 1400px) {
+    .himno-container,
+    .simbolos-container {
+        max-width: 1200px;
+        padding: 0 2.5rem;
+    }
+    
+    .himno-intro {
+        margin-left: 40px;
+        width: 90%;
+    }
+    
+    .bandera-image {
+        margin-left: 20px;
+    }
+}
+
+/* Laptops y Tablets Grandes (1200px - 992px) */
+@media (max-width: 1200px) {
+    .himno-container,
+    .simbolos-container {
+        max-width: 960px;
+        padding: 0 2rem;
+    }
+    
+    .himno-main-content {
+        gap: 2.5rem;
+    }
+    
+    .himno-intro {
+        margin-left: 20px;
+        width: 95%;
+    }
+    
+    .simbolo-row {
+        gap: 2.5rem;
+    }
+    
+    .simbolo-image {
+        width: 80%;
+    }
+}
+
+/* Tablets Landscape (992px - 768px) */
 @media (max-width: 992px) {
-    .hero-title {
-        font-size: 3.5rem;
+    .himno-section {
+        padding: 3.5rem 20px;
+        margin-top: 60px;
     }
-
-    .himno-title,
-    .simbolos-title {
-        font-size: 2.5rem;
+    
+    .simbolos-section {
+        padding: 3.5rem 0;
     }
-
-    .simbolo-name {
-        font-size: 1.8rem;
+    
+    .himno-container,
+    .simbolos-container {
+        padding: 0 1.5rem;
     }
-
+    
+    .himno-main-content {
+        gap: 2rem;
+    }
+    
+    .himno-intro {
+        margin-left: 0;
+        width: 100%;
+        padding: 1.8rem;
+    }
+    
+    .himno-content {
+        padding: 1.8rem;
+    }
+    
+    .simbolos-header {
+        margin-bottom: 3.5rem;
+    }
+    
     .simbolo-row,
     .simbolo-row.reverse {
-        flex-direction: column;
+        gap: 2rem;
     }
-
-    .simbolo-image-container {
-        flex: 1;
-        margin-bottom: 2rem;
-    }
-
-    .simbolo-content {
-        text-align: center;
-    }
-
-    .simbolo-description {
-        text-align: justify;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .himno-section,
-    .simbolos-section {
-        padding: 4rem 0;
-    }
-
-    .himno-title,
-    .simbolos-title {
-        font-size: 2rem;
-    }
-
-    .himno-content {
-        padding: 2rem 1.5rem;
-    }
-
-    .himno-verse {
-        font-size: 1rem;
-    }
-
-    .simbolo-item {
-        padding: 2rem 1.5rem;
-    }
-
+    
     .simbolo-image {
-        max-width: 250px;
+        width: 85%;
     }
-
-    .simbolo-name {
-        font-size: 1.5rem;
-    }
-
-    .simbolo-description {
-        font-size: 1rem;
+    
+    .bandera-image {
+        margin-left: 0;
     }
 }
 
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 2rem;
+/* Tablets Portrait (768px - 576px) */
+@media (max-width: 768px) {
+    .himno-section {
+        padding: 3rem 15px;
+        margin-top: 50px;
     }
-
-    .himno-container,
+    
+    .simbolos-section {
+        padding: 3rem 0;
+    }
+    
+    .himno-container {
+        padding: 0 1rem;
+    }
+    
     .simbolos-container {
         padding: 0 1rem;
     }
-
-    .himno-content {
-        padding: 1.5rem 1rem;
+    
+    .himno-header {
+        margin-bottom: 2rem;
     }
-
-    .simbolo-image {
-        max-width: 200px;
+    
+    .simbolos-header {
+        margin-bottom: 2.5rem;
     }
-
-    .bandera-image {
+    
+    /* CAMBIO A UNA COLUMNA */
+    .himno-main-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
         max-width: 100%;
+    }
+    
+    .himno-intro,
+    .himno-content {
+        padding: 1.5rem;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .himno-intro-title {
+        margin-bottom: 1.5rem;
+    }
+    
+    .himno-intro-text {
+        margin-bottom: 1rem;
+    }
+    
+    .himno-stanza {
+        margin-bottom: 1.3rem;
+    }
+    
+    /* Símbolos en columna */
+    .simbolo-row,
+    .simbolo-row.reverse {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .simbolo-image-container {
+        flex: 1 1 auto;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .simbolo-image {
+        width: 60%;
+        max-width: 300px;
+    }
+    
+    .bandera-image {
+        width: 80%;
+        max-width: 400px;
+    }
+    
+    .simbolo-content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .simbolo-description {
+        text-align: justify;
+    }
+    
+    .simbolo-item {
+        margin-bottom: 3rem;
     }
 }
 
+/* Móviles Large (576px - 480px) */
+@media (max-width: 576px) {
+    .himno-section {
+        padding: 2.5rem 10px;
+        margin-top: 40px;
+    }
+    
+    .simbolos-section {
+        padding: 2.5rem 0;
+    }
+    
+    .himno-container,
+    .simbolos-container {
+        padding: 0 0.8rem;
+    }
+    
+    .himno-header,
+    .simbolos-header {
+        margin-bottom: 1.8rem;
+    }
+    
+    .himno-title::after,
+    .simbolos-title::after {
+        width: 60px;
+        height: 3px;
+    }
+    
+    .himno-intro,
+    .himno-content {
+        padding: 1.2rem;
+    }
+    
+    .himno-intro-title {
+        margin-bottom: 1.2rem;
+    }
+    
+    .himno-intro-title::after {
+        width: 50px;
+    }
+    
+    .himno-intro-text {
+        margin-bottom: 0.9rem;
+        line-height: 1.7;
+    }
+    
+    .himno-stanza {
+        margin-bottom: 1.2rem;
+    }
+    
+    .simbolo-image {
+        width: 70%;
+        max-width: 250px;
+    }
+    
+    .bandera-image {
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    .simbolo-item {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Móviles Small (480px - 360px) */
+@media (max-width: 480px) {
+    .himno-section {
+        padding: 2rem 8px;
+        margin-top: 30px;
+    }
+    
+    .simbolos-section {
+        padding: 2rem 0;
+    }
+    
+    .himno-container,
+    .simbolos-container {
+        padding: 0 0.6rem;
+    }
+    
+    .himno-header,
+    .simbolos-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .himno-intro,
+    .himno-content {
+        padding: 1rem;
+        border-radius: var(--border-radius-md);
+    }
+    
+    .himno-intro-title {
+        margin-bottom: 1rem;
+    }
+    
+    .himno-intro-text {
+        margin-bottom: 0.8rem;
+        line-height: 1.65;
+    }
+    
+    .himno-verse {
+        line-height: 1.7;
+        margin-bottom: 0.25rem;
+    }
+    
+    .himno-stanza {
+        margin-bottom: 1rem;
+    }
+    
+    .himno-stanza-title {
+        margin-bottom: 0.8rem;
+    }
+    
+    .simbolo-image {
+        width: 75%;
+        max-width: 220px;
+    }
+    
+    .bandera-image {
+        width: 95%;
+        max-width: 300px;
+    }
+    
+    .simbolo-item {
+        margin-bottom: 2rem;
+    }
+    
+    .simbolo-name {
+        margin-bottom: 0.8rem;
+    }
+    
+    .simbolo-description {
+        line-height: 1.7;
+    }
+}
+
+/* Móviles Extra Small (360px y menores) */
+@media (max-width: 360px) {
+    .himno-section {
+        padding: 1.5rem 5px;
+        margin-top: 25px;
+    }
+    
+    .simbolos-section {
+        padding: 1.5rem 0;
+    }
+    
+    .himno-container,
+    .simbolos-container {
+        padding: 0 0.5rem;
+    }
+    
+    .himno-header,
+    .simbolos-header {
+        margin-bottom: 1.2rem;
+    }
+    
+    .himno-title::after,
+    .simbolos-title::after {
+        width: 50px;
+        height: 3px;
+    }
+    
+    .himno-intro,
+    .himno-content {
+        padding: 0.9rem;
+    }
+    
+    .himno-intro-title {
+        margin-bottom: 0.9rem;
+    }
+    
+    .himno-intro-title::after {
+        width: 40px;
+        height: 2px;
+    }
+    
+    .himno-intro-text {
+        margin-bottom: 0.7rem;
+        line-height: 1.6;
+    }
+    
+    .himno-stanza {
+        margin-bottom: 0.9rem;
+    }
+    
+    .himno-stanza-title {
+        margin-bottom: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .himno-verse {
+        line-height: 1.6;
+        margin-bottom: 0.2rem;
+    }
+    
+    .simbolo-image {
+        width: 80%;
+        max-width: 200px;
+    }
+    
+    .bandera-image {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .simbolo-item {
+        margin-bottom: 1.8rem;
+    }
+    
+    .simbolo-name {
+        margin-bottom: 0.7rem;
+    }
+    
+    .simbolo-description {
+        line-height: 1.65;
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* ============================================
+   HERO RESPONSIVE
+============================================ */
 .hero-title.auto-long {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .hero-title.auto-short {
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 7vw, 5rem);
 }
 
+/* ============================================
+   UTILIDADES ADICIONALES
+============================================ */
+
+/* Mejora de legibilidad en pantallas pequeñas */
 @media (max-width: 768px) {
-    .hero-title.auto-long {
-        font-size: 2rem;
-    }
-
-    .hero-title.auto-short {
-        font-size: 3rem;
+    .himno-intro-text,
+    .simbolo-description {
+        hyphens: auto;
+        word-wrap: break-word;
     }
 }
 
+/* Optimización de imágenes en dispositivos móviles */
+@media (max-width: 576px) {
+    .simbolo-image,
+    .bandera-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
 
+/* Accesibilidad táctil en móviles */
+@media (hover: none) and (pointer: coarse) {
+    .simbolo-image {
+        transition: none;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Modo landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .himno-section,
+    .simbolos-section {
+        padding: 2rem 10px;
+    }
+    
+    .himno-header,
+    .simbolos-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .himno-stanza,
+    .simbolo-item {
+        margin-bottom: 1rem;
+    }
+}

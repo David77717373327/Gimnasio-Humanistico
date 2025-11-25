@@ -1,6 +1,6 @@
 // Función para scroll suave mejorada con offset
 function scrollToContent() {
-    const targetSection = document.getElementById('paguina_siguiente');
+    const targetSection = document.getElementById('siguiente_sesion');
     if (targetSection) {
         const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
         const offset = 60;
