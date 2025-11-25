@@ -28,22 +28,22 @@
 
 
     <!-- HERO SECTION PROFESIONAL -->
-    <section class="hero-section">
-        <div class="hero-background"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-particles"></div>
+<section class="hero-section">
+    <div class="hero-background">
+        <img src="../images/Mision1.jpg" alt="Educación Básica Primaria">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
 
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-title="Educación Básica Primaria">
-                    Educación Media - Académica
-                </h1>
-                <div class="hero-scroll-indicator" onclick="scrollToContent()">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title" data-title="Educación Básica Primaria">Educación Media Académica</h1>
+            <div class="hero-scroll-indicator" onclick="scrollToContent()">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
@@ -459,7 +459,7 @@
             const particlesContainer = document.querySelector('.hero-particles');
             if (!particlesContainer) return;
 
-            const particleCount = 20;
+            const particleCount = 30;
 
             // Limpiar partículas existentes
             particlesContainer.innerHTML = '';
@@ -470,8 +470,8 @@
 
                 // Posición y delay aleatorios
                 particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (7 + Math.random() * 7) + 's';
 
                 particlesContainer.appendChild(particle);
             }

@@ -31,7 +31,6 @@ Route::get('/dashboard', function () {
 // Ruta pública (usuario)
 Route::get('/usuario/inicio', [RutasController::class, 'mostrarContenidoUsuario'])->name('usuario.welcome');
 
-
 //Ruta para mostrar contenido de historia
 Route::get('/Historia', [RutasController::class, 'mostrarcontenidohistoria'])->name('Historia');
 //Ruta para mostrar contenido de mision y vision

@@ -15,39 +15,54 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ asset('images/Logo.png') }}">
+
+
+    <!--Scrip para el hero --> 
+    <script src="{{ asset('js/hero.js') }}"></script>
+
     <!-- CSS personalizado -->
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/simbolos.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navegacion.css') }}" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Incluir el header -->
-    @include('layouts.header')
+
+    <header class="header-top" aria-label="Encabezado principal del sitio">
+        @include('layouts.header') <!-- AQUÍ SOLO LOGO, TITULO -->
+    </header>
 
 
-    <!-- HERO SECTION AVANZADO -->
-    <section class="hero-advanced">
-        <div class="hero-background">
+    <nav class="nav-sticky" aria-label="Navegación principal">
+        @include('layouts.navigation') <!-- AQUÍ SOLO EL MENU -->
+    </nav>
+    
+
+
+
+    <!-- HERO SECTION -->
+        <section class="hero-section" aria-label="Sección destacada de historia">
+            <div class="hero-background">
+                <img src="../images/Politica_de_calidad2.jpg"
+                    alt="Vista del Gimnasio Humanístico del Alto Magdalena, institución educativa en Neiva"
+                    width="1920" height="1080">
+            </div>
             <div class="hero-overlay"></div>
-            <div class="hero-particles"></div>
-        </div>
-        <div class="container hero-container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-8 offset-lg-2 text-center">
+            <div class="hero-particles" aria-hidden="true"></div>
 
-                    <h1 class="hero-title">
-                        <span class="title-highlight">Símbolos </span> y
-                        <span class="title-highlight">Himno </span>
-                    </h1>
-
-                    <div class="hero-scroll-indicator" onclick="scrollToTimeline()">
-                        <i class="fas fa-chevron-down"></i>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-title="Nuestra Historia">Símbolos y Himnos</h1>
+                    <div class="hero-scroll-indicator" onclick="scrollToContent()" role="button" tabindex="0"
+                        aria-label="Desplazarse a la línea de tiempo histórica"
+                        onkeypress="if(event.key==='Enter')scrollToContent()">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
 
@@ -57,7 +72,7 @@
     <!-- ============================================
      HTML - SECCIÓN HIMNO
      ============================================ -->
-<section class="himno-section"  id="himno-section">
+<section class="himno-section"  id="paguina_siguiente">
     <div class="himno-container">
         <div class="himno-header">
             <h2 class="himno-title">Himno del Colegio</h2>
@@ -204,130 +219,23 @@
 
 
 
+<!-- Navegación interna -->
+    <nav aria-label="Navegación interna del sitio">
+        @include('layouts.navegacion_Interna')
+    </nav>
+
+    <!-- Footer del sitio -->
+    <footer aria-label="Pie de página del sitio">
+        @include('layouts.footer')
+    </footer>
 
 
-
-
-
-@include('layouts.navegacion_Interna')
-
-
-
-
-
-
-
-    <!-- Incluir el footer -->
-    @include('layouts.footer')
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
 
-    <script>
-        // Scroll suave para navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Animación de partículas en el hero (MODIFICADO para funcionar con ambas clases)
-        function createParticles() {
-            const particles = document.querySelector('.hero-particles') ||
-                document.querySelector('.floating-particles');
-            if (particles) {
-                for (let i = 0; i < 50; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                    particle.style.left = Math.random() * 100 + '%';
-                    particle.style.animationDelay = Math.random() * 20 + 's';
-                    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                    particles.appendChild(particle);
-                }
-            }
-        }
-
-        // Inicializar partículas
-        createParticles();
-
-
-        // Scroll suave para el indicador de scroll del hero
-        document.addEventListener('DOMContentLoaded', function() {
-            const scrollIndicator = document.querySelector('.scroll-indicator');
-            if (scrollIndicator) {
-                scrollIndicator.addEventListener('click', function() {
-                    const nextSection = document.querySelector('.historia-hero').nextElementSibling;
-                    if (nextSection) {
-                        nextSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    } else {
-                        window.scrollBy({
-                            top: window.innerHeight * 0.7,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            }
-        });
-
-
-
-
-        
-
-        // Scroll suave al timeline
-        function scrollToTimeline() {
-            document.getElementById('himno-section').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-
-        // Script para adaptar automáticamente el tamaño del título
-        // Agregar este script al final del body o en tu archivo JS principal
-
-        function adaptHeroTitle() {
-            const heroTitle = document.querySelector('.hero-title');
-            if (!heroTitle) return;
-
-            const titleText = heroTitle.textContent.trim();
-            const characterCount = titleText.length;
-            const wordCount = titleText.split(' ').length;
-
-            // Remover clases previas
-            heroTitle.classList.remove('auto-long', 'auto-short');
-
-            // Aplicar clase según la longitud del texto
-            if (characterCount > 35 || wordCount > 5) {
-                // Título largo como "Componente Filosófico De Identidad"
-                heroTitle.classList.add('auto-long');
-            } else if (characterCount < 15 || wordCount < 3) {
-                // Título corto
-                heroTitle.classList.add('auto-short');
-            }
-            // Si está en el rango medio, usa el estilo por defecto
-        }
-
-        // Ejecutar cuando la página cargue
-        document.addEventListener('DOMContentLoaded', function() {
-            adaptHeroTitle();
-        });
-
-        // Re-evaluar si cambia el tamaño de ventana
-        window.addEventListener('resize', function() {
-            adaptHeroTitle();
-        });
-    </script>
+    
 
 </body>
 

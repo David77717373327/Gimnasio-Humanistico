@@ -7,7 +7,7 @@
     --hero-height-desktop: 70vh;
     --hero-height-tablet: 60vh;
     --hero-height-mobile: 55vh;
-    --overlay-color: rgba(0, 10, 0, 0.55);
+   --overlay-color: rgba(8, 8, 8, 0.3);
     --accent-gold: #F4B942;
     --accent-green: #7DDFAC;
 }
@@ -16,8 +16,7 @@
 .hero-section {
     position: relative;
     height: var(--hero-height-desktop);
-    min-height: 200px;
-    max-height: 400px;
+    height: 60vh;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -32,9 +31,27 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(var(--overlay-color), var(--overlay-color)),
-                url('../images/Mision1.jpg') center/cover no-repeat;
     z-index: 1;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    z-index: 1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    
 }
 
 /* Overlay con gradiente sutil */
@@ -62,9 +79,9 @@
 
 .particle {
     position: absolute;
-    width: 3px;
-    height: 3px;
-    background: rgba(244, 185, 66, 0.5);
+    width: 4px;
+    height: 4px;
+    background: rgba(250, 180, 40, 0.5);
     border-radius: 50%;
     animation: particleFloat 20s infinite linear;
 }

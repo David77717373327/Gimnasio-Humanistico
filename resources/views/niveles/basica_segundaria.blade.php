@@ -30,22 +30,22 @@
 
 
         <!-- HERO SECTION PROFESIONAL -->
-        <section class="hero-section">
-            <div class="hero-background"></div>
-            <div class="hero-overlay"></div>
-            <div class="hero-particles"></div>
+<section class="hero-section">
+    <div class="hero-background">
+        <img src="../images/Mision1.jpg" alt="Educación Básica Primaria">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
 
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title" data-title="Educación Básica Secundaria">
-                        Educación Básica Secundaria
-                    </h1>
-                    <div class="hero-scroll-indicator" onclick="scrollToContent()">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title" data-title="Educación Básica Secundaria">Educación Básica Secundaria</h1>
+            <div class="hero-scroll-indicator" onclick="scrollToContent()">
+                <i class="fas fa-chevron-down"></i>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
 
 
@@ -504,28 +504,28 @@
                 }
             });
 
-            // Función para crear partículas animadas
-            function createParticles() {
-                const particlesContainer = document.querySelector('.hero-particles');
-                if (!particlesContainer) return;
+           // Función para crear partículas animadas
+        function createParticles() {
+            const particlesContainer = document.querySelector('.hero-particles');
+            if (!particlesContainer) return;
 
-                const particleCount = 20;
+            const particleCount = 30;
 
-                // Limpiar partículas existentes
-                particlesContainer.innerHTML = '';
+            // Limpiar partículas existentes
+            particlesContainer.innerHTML = '';
 
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
 
-                    // Posición y delay aleatorios
-                    particle.style.left = Math.random() * 100 + '%';
-                    particle.style.animationDelay = Math.random() * 15 + 's';
-                    particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                // Posición y delay aleatorios
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (7 + Math.random() * 7) + 's';
 
-                    particlesContainer.appendChild(particle);
-                }
+                particlesContainer.appendChild(particle);
             }
+        }
 
             // Scroll suave para todos los enlaces con ancla
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {

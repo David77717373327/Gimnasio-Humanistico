@@ -92,10 +92,17 @@ body {
 
 
 
-
-
-
-
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
 
 
 
@@ -422,7 +429,7 @@ body {
     .timeline {
         padding-top: 60px;
     }
-    
+
     /* Línea a la izquierda */
     .timeline::before {
         left: 30px;
@@ -770,40 +777,3 @@ body {
         line-height: 1.5;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
