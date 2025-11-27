@@ -1,219 +1,156 @@
-<!DOCTYPE html>
-<html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misión y Visión - GIMNASIO HUMANÍSTICO</title>
-    <!-- Google Fonts - Tipografía moderna -->
+
+    <!-- META DESCRIPTION SEO -->
+    <meta name="description"
+        content="Grupo Humanístico S.A.S es una organización educativa en Colombia dedicada a la formación integral, valores humanísticos, excelencia académica y desarrollo personal. Conoce nuestra misión, visión y compromiso institucional.">
+
+    <!-- SEO INDEXACIÓN -->
+    <meta name="robots" content="index, follow">
+
+    <!-- COLOR PARA DISPOSITIVOS -->
+    <meta name="theme-color" content="#0d3f27">
+
+    <title>Grupo Humanístico S.A.S | Educación Integral y Valores Humanísticos en Colombia</title>
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://tusitio.com/grupo-humanistico">
+
+    <!-- OPTIMIZACIÓN DE FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- SCRIPT HERO -->
+    <script src="{{ asset('js/hero.js') }}" defer></script>
+
+    <!-- PRELOAD FUENTES -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        as="style">
+
+    <!-- GOOGLE FONTS -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- Bootstrap y Font Awesome -->
+
+    <!-- BOOTSTRAP / FONT AWESOME -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- FAVICONS -->
     <link rel="icon" type="image/x-icon" href="{{ asset('images/Logo.png') }}">
-    <!-- CSS personalizado -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/Logo.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/Logo.png') }}">
+
+    <!-- CSS -->
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/Grupohumanistico.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navegacion.css') }}" rel="stylesheet">
+
+    @verbatim
+    <!-- SCHEMA.ORG JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Grupo Humanístico S.A.S",
+      "url": "https://tusitio.com/grupo-humanistico",
+      "logo": "https://tusitio.com/images/Logo.png",
+      "description": "Organización educativa en Colombia dedicada a la formación integral, la excelencia académica y los valores humanísticos.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 13 #4-53",
+        "addressLocality": "Neiva",
+        "addressRegion": "Huila",
+        "addressCountry": "CO"
+      },
+      "foundingDate": "1983-05-15",
+      "sameAs": []
+    }
+    </script>
+    @endverbatim
+
 </head>
 
 <body>
-    <!-- Incluir el header -->
-    @include('layouts.header')
 
-    <body>
+    <!-- ENCABEZADO -->
+    <header class="header-top" aria-label="Encabezado principal">
+        @include('layouts.header')
+    </header>
 
-        <!-- HERO SECTION AVANZADO -->
-        <section class="hero-advanced">
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <nav class="nav-sticky" aria-label="Navegación principal">
+        @include('layouts.navigation')
+    </nav>
+
+    <main id="contenido-principal">
+
+        <!-- HERO -->
+        <section class="hero-section" aria-label="Sección inicial del Organigrama Institucional">
             <div class="hero-background">
-                <div class="hero-overlay"></div>
-                <div class="hero-particles"></div>
+                <img src="../images/Politica_de_calidad2.webp"
+                    alt="Instalaciones educativas del Grupo Humanístico S.A.S en Neiva"
+                    width="1920" height="1080" loading="lazy">
             </div>
-            <div class="container hero-container">
-                <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-10 offset-lg-1 text-center">
 
-                        <h1 class="hero-title">
-                            <span class="title-highlight">Grupo Humanístico</span> - 
-                            <span class="title-highlight">S.A.S</span>
-                        </h1>
-                        <div class="hero-scroll-indicator" onclick="scrollToTimeline()">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" aria-hidden="true"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-title="Compromiso Institucional">Grupo Humanístico S.A.S</h1>
+
+                     <div class="hero-scroll-indicator" onclick="scrollToContent()" role="button" tabindex="0"
+                        aria-label="Desplazarse a la siguiente sección"
+                        onkeypress="if(event.key==='Enter')scrollToContent()">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- SECCIÓN GRUPO HUMANÍSTICO S.A.S -->
+        <section class="grupo-humanistico-section" id="siguiente_sesion">
+            <div class="grupo-container">
 
+                <!-- Logo del Grupo -->
+                <div class="grupo-logo-container">
+                    <img src="{{ asset('images/Grupo-Humanistico2.png') }}"
+                        alt="Logo del Grupo Humanístico S.A.S"
+                        class="grupo-logo">
+                </div>
 
-        <!-- ============================================
-         SECCIÓN GRUPO HUMANÍSTICO S.A.S
-    ============================================ -->
-    <section class="grupo-humanistico-section" id="grupo-humanistico">
-        <div class="grupo-container">
-            
-            
-            <!-- Logo del Grupo -->
-            <div class="grupo-logo-container">
-                <img src="{{ asset('images/Grupo-Humanistico2.png') }}" 
-                     alt="Logo Grupo Humanístico S.A.S" 
-                     class="grupo-logo">
+                <!-- Descripción del Grupo -->
+                <div class="grupo-description">
+                    <p>
+                        El Grupo Humanístico S.A.S es una institución educativa en Colombia dedicada a la formación integral,
+                        la excelencia académica y el desarrollo de competencias humanas. Nuestro enfoque humanístico impulsa
+                        el pensamiento crítico, la creatividad, los valores y el liderazgo responsable en niños y jóvenes.
+                    </p>
+                    <div class="description-separator"></div>
+                    <p>
+                        Nuestro compromiso es formar ciudadanos íntegros capaces de generar impacto positivo en su comunidad
+                        y en la región del Huila. A través de metodologías innovadoras, educación de calidad y un equipo docente
+                        altamente capacitado, promovemos aprendizajes significativos que potencian el crecimiento académico,
+                        personal y social de cada estudiante.
+                    </p>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Descripción del Grupo -->
-            <div class="grupo-description">
-                <p>
-                    El Grupo Humanístico S.A.S es una organización educativa comprometida con la 
-                    excelencia académica y la formación integral de niños y jóvenes. 
-                    Fundamentamos nuestra labor en valores humanísticos que promueven el desarrollo del 
-                    pensamiento crítico, la creatividad y el liderazgo responsable.
-                </p>
-                <div class="description-separator"></div>
-                <p>
-                    Nuestra misión es formar ciudadanos íntegros capaces de transformar su entorno 
-                    con conocimiento, ética y compromiso social. A través de metodologías innovadoras y un equipo 
-                    docente altamente calificado, construimos espacios de aprendizaje significativo donde cada 
-                    estudiante desarrolla su máximo potencial humano y académico.
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-
-
-        <!-- Incluir el footer -->
+    <!-- PIE DE PÁGINA -->
+    <footer aria-label="Pie de página del sitio">
         @include('layouts.footer')
+    </footer>
 
-        <!-- Scripts -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
-        <script>
-            
+</body>
 
-
-
-
-            // Scroll suave para navegación
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Animación de partículas en el hero (MODIFICADO para funcionar con ambas clases)
-            function createParticles() {
-                const particles = document.querySelector('.hero-particles') ||
-                    document.querySelector('.floating-particles');
-                if (particles) {
-                    for (let i = 0; i < 50; i++) {
-                        const particle = document.createElement('div');
-                        particle.className = 'particle';
-                        particle.style.left = Math.random() * 100 + '%';
-                        particle.style.animationDelay = Math.random() * 20 + 's';
-                        particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                        particles.appendChild(particle);
-                    }
-                }
-            }
-
-            // Inicializar partículas
-            createParticles();
-
-
-            // Scroll suave para el indicador de scroll del hero
-            document.addEventListener('DOMContentLoaded', function() {
-                const scrollIndicator = document.querySelector('.scroll-indicator');
-                if (scrollIndicator) {
-                    scrollIndicator.addEventListener('click', function() {
-                        const nextSection = document.querySelector('.historia-hero').nextElementSibling;
-                        if (nextSection) {
-                            nextSection.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        } else {
-                            window.scrollBy({
-                                top: window.innerHeight * 0.7,
-                                behavior: 'smooth'
-                            });
-                        }
-                    });
-                }
-            });
-
-
-            // Scroll suave al timeline
-            function scrollToTimeline() {
-                document.getElementById('preescolar-content').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-
-            // Scroll suave al timeline con offset
-            function scrollToTimeline() {
-                const target = document.getElementById('grupo-humanistico');
-                if (target) {
-                    const headerHeight = document.querySelector('header')?.offsetHeight || 1;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 1;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-
-
-            // Script para adaptar automáticamente el tamaño del título
-            // Agregar este script al final del body o en tu archivo JS principal
-
-            function adaptHeroTitle() {
-                const heroTitle = document.querySelector('.hero-title');
-                if (!heroTitle) return;
-
-                const titleText = heroTitle.textContent.trim();
-                const characterCount = titleText.length;
-                const wordCount = titleText.split(' ').length;
-
-                // Remover clases previas
-                heroTitle.classList.remove('auto-long', 'auto-short');
-
-                // Aplicar clase según la longitud del texto
-                if (characterCount > 35 || wordCount > 5) {
-                    // Título largo como "Componente Filosófico De Identidad"
-                    heroTitle.classList.add('auto-long');
-                } else if (characterCount < 15 || wordCount < 3) {
-                    // Título corto
-                    heroTitle.classList.add('auto-short');
-                }
-                // Si está en el rango medio, usa el estilo por defecto
-            }
-
-            // Ejecutar cuando la página cargue
-            document.addEventListener('DOMContentLoaded', function() {
-                adaptHeroTitle();
-            });
-
-            // Re-evaluar si cambia el tamaño de ventana
-            window.addEventListener('resize', function() {
-                adaptHeroTitle();
-            });
-        </script>
-
-
-        </script>
-    </body>
 </html>

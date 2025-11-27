@@ -24,15 +24,10 @@
 
     /* Azul principal - confianza */
     --primary-blue: #1E3A5F;
-    /* Azul oscuro - elegancia */
     --dark-blue: #264653;
-    /* Azul profundo (similar al que mostraste) */
     --deep-blue: #003366;
-    /* Azul intermedio - contraste suave */
     --soft-blue: #07346e;
-    /* Azul grisáceo - texto y detalles */
     --slate-blue: #3A506B;
-    /* Complemento claro (fondos suaves) */
     --light-blue: #E0ECF7;
 
     /* Nuevos colores para modernizar */
@@ -70,9 +65,6 @@
     --transition-slow: 0.5s ease-out;
 }
 
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -89,266 +81,14 @@ body {
     scroll-behavior: smooth;
 }
 
-
-
-
-
 /* ============================================
-   HERO SECTION AVANZADO basica primaria
+   SECCIÓN GRUPO HUMANÍSTICO S.A.S - DISEÑO ORIGINAL DESKTOP
 ============================================ */
-.hero-advanced {
-    position: relative;
-    height: 65vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    margin-bottom: -60px;
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
-        url('../images/Mision1.jpg') center/cover no-repeat;
-    z-index: 1;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 40%, rgba(244, 185, 66, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 60%, rgba(125, 223, 172, 0.08) 0%, transparent 50%);
-}
-
-.hero-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-}
-
-.particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(244, 185, 66, 0.6);
-    border-radius: 50%;
-    animation: float 15s infinite linear;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-100px) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-.hero-container {
-    position: relative;
-    z-index: 3;
-}
-
-/* TÍTULO MEJORADO PARA ADAPTARSE A CUALQUIER LONGITUD */
-.hero-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease-out 0.3s both;
-
-    /* Tamaño base más grande para títulos normales y cortos */
-    font-size: clamp(8rem, 7vw, 6rem);
-
-
-    /* Centrado perfecto para títulos largos */
-    text-align: center;
-    max-width: 100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-
-    /* Espacio para que respire el texto */
-    padding: 0 1rem;
-    box-sizing: border-box;
-}
-
-/* Clase automática para títulos largos */
-.hero-title.auto-long {
-    font-size: clamp(4.2rem, 4.5vw, 4.2rem);
-    line-height: 1.3;
-    /* Mejor espaciado para títulos largos */
-    letter-spacing: -0.02em;
-}
-
-/* Clase automática para títulos cortos - MÁS GRANDES */
-.hero-title.auto-short {
-    font-size: clamp(8.5rem, 8vw, 7rem);
-    line-height: 1.05;
-}
-
-.title-highlight {
-    background: #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.title-highlight::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: #FFFFFF;
-    border-radius: 2px;
-    transform: scaleX(0);
-    animation: expandLine 1s ease-out 1.5s both;
-}
-
-.hero-scroll-indicator {
-    position: absolute;
-    bottom: 140px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--white);
-    font-size: 1.5rem;
-    animation: bounce 2s infinite;
-    cursor: pointer;
-}
-
-/* Animaciones */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
-@keyframes expandLine {
-    to {
-        transform: scaleX(1);
-    }
-}
-
-/* Responsive mejorado */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: clamp(2.5rem, 7vw, 4rem);
-        max-width: 100%;
-        padding: 0 0.5rem;
-    }
-
-    .hero-title.auto-long {
-        font-size: clamp(1.8rem, 6vw, 3rem);
-        line-height: 1.4;
-    }
-
-    .hero-title.auto-short {
-        font-size: clamp(3rem, 8.5vw, 4.5rem);
-    }
-
-    .hero-scroll-indicator {
-        bottom: 15px;
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        max-width: 100%;
-        font-size: clamp(2rem, 8.5vw, 3.5rem);
-        padding: 0 0.25rem;
-    }
-
-    .hero-title.auto-long {
-        font-size: clamp(1.6rem, 7.5vw, 2.8rem);
-        line-height: 1.4;
-    }
-
-    .hero-title.auto-short {
-        font-size: clamp(2.5rem, 9vw, 4rem);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================
-           SECCIÓN GRUPO HUMANÍSTICO S.A.S
-        ============================================ */
 .grupo-humanistico-section {
     padding: 2rem 0 3rem;
     position: relative;
     overflow: hidden;
 }
-
 
 .grupo-container {
     max-width: 1200px;
@@ -358,14 +98,11 @@ body {
     z-index: 1;
 }
 
-
 .grupo-title-highlight {
     color: var(--primary-green);
     position: relative;
     display: inline-block;
 }
-
-
 
 /* Contenedor del logo */
 .grupo-logo-container {
@@ -381,6 +118,7 @@ body {
     display: block;
     height: 300px;
     transition: transform var(--transition-normal);
+    object-fit: contain;
 }
 
 .grupo-logo:hover {
@@ -402,29 +140,22 @@ body {
     line-height: 1.8;
     color: black;
     margin-bottom: 1.5rem;
-    
     font-weight: 400;
     text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-
 }
 
 .grupo-description p:last-child {
     margin-bottom: 0;
 }
 
-
-
-
-
 /* ============================================
-           ANIMACIONES
-        ============================================ */
+   ANIMACIONES
+============================================ */
 @keyframes fadeInDown {
     from {
         opacity: 0;
         transform: translateY(-30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -436,7 +167,6 @@ body {
         opacity: 0;
         transform: scale(0.95);
     }
-
     to {
         opacity: 1;
         transform: scale(1);
@@ -448,7 +178,6 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -459,21 +188,58 @@ body {
     from {
         width: 0;
     }
-
     to {
         width: 120px;
     }
 }
 
 /* ============================================
-           RESPONSIVE DESIGN
-        ============================================ */
+   RESPONSIVE DESIGN PERFECCIONADO
+============================================ */
+
+/* Tablets grandes y laptops pequeñas (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .grupo-humanistico-section {
+        padding: 2rem 0 2.5rem;
+    }
+
+    .grupo-container {
+        max-width: 100%;
+        margin: 50px auto;
+        padding: 0 2rem;
+    }
+
+    .grupo-logo-container {
+        max-width: 600px;
+        margin: 0 auto 3rem;
+    }
+
+    .grupo-logo {
+        height: 260px;
+    }
+
+    .grupo-description {
+        max-width: 100%;
+        padding: 0 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .grupo-description p {
+        font-size: 1.1rem;
+        line-height: 1.75;
+        margin-bottom: 1.4rem;
+    }
+}
+
+/* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
     .grupo-humanistico-section {
         padding: 4rem 0 4.5rem;
     }
 
     .grupo-container {
+        margin: 40px auto;
         padding: 0 1.5rem;
     }
 
@@ -487,12 +253,26 @@ body {
     }
 
     .grupo-logo-container {
+        max-width: 500px;
         margin-bottom: 2.5rem;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .grupo-logo {
+        height: 220px;
+    }
+
+    .grupo-description {
+        padding: 0 1rem;
+        text-align: left;
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     .grupo-description p {
-        margin-bottom: 1.2rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 1.3rem;
     }
 
     .description-separator {
@@ -500,12 +280,49 @@ body {
     }
 }
 
+/* Móviles grandes (max-width: 640px) */
+@media (max-width: 640px) {
+    .grupo-humanistico-section {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .grupo-container {
+        margin: 30px auto;
+        padding: 0 1.25rem;
+    }
+
+    .grupo-logo-container {
+        max-width: 420px;
+        margin-bottom: 2.25rem;
+        padding: 0 0.75rem;
+    }
+
+    .grupo-logo {
+        height: 190px;
+    }
+
+    .grupo-description {
+        padding: 0 0.5rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .grupo-description p {
+        font-size: 1rem;
+        line-height: 1.65;
+        margin-bottom: 1.2rem;
+        text-align: left;
+    }
+}
+
+/* Móviles estándar (max-width: 480px) */
 @media (max-width: 480px) {
     .grupo-humanistico-section {
         padding: 3rem 0 3.5rem;
     }
 
     .grupo-container {
+        margin: 25px auto;
         padding: 0 1rem;
     }
 
@@ -514,6 +331,163 @@ body {
     }
 
     .grupo-logo-container {
+        max-width: 100%;
         margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+
+    .grupo-logo {
+        height: 160px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .grupo-description {
+        padding: 0;
+         text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .grupo-description p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.1rem;
+        text-align: left;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+/* Móviles pequeños (max-width: 375px) */
+@media (max-width: 375px) {
+    .grupo-humanistico-section {
+        padding: 2.5rem 0 3rem;
+    }
+
+    .grupo-container {
+        margin: 20px auto;
+        padding: 0 0.875rem;
+    }
+
+    .grupo-logo-container {
+        margin-bottom: 1.75rem;
+        padding: 0 0.25rem;
+    }
+
+    .grupo-logo {
+        height: 140px;
+        max-width: 95%;
+    }
+
+    .grupo-description {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .grupo-description p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 1rem;
+         text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+/* Móviles muy pequeños (max-width: 320px) */
+@media (max-width: 320px) {
+    .grupo-humanistico-section {
+        padding: 2rem 0 2.5rem;
+    }
+
+    .grupo-container {
+        margin: 15px auto;
+        padding: 0 0.75rem;
+    }
+
+    .grupo-logo-container {
+        margin-bottom: 1.5rem;
+        padding: 0;
+    }
+
+    .grupo-logo {
+        height: 120px;
+        max-width: 100%;
+    }
+
+    .grupo-description p {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 0.9rem;
+         text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+/* Orientación landscape en dispositivos móviles */
+@media (max-height: 600px) and (orientation: landscape) {
+    .grupo-humanistico-section {
+        padding: 2rem 0 2.5rem;
+    }
+
+    .grupo-container {
+        margin: 20px auto;
+    }
+
+    .grupo-logo-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .grupo-logo {
+        height: 120px;
+    }
+
+    .grupo-description p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* Tablets en landscape */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .grupo-container {
+        max-width: 90%;
+    }
+
+    .grupo-logo {
+        height: 200px;
+    }
+
+    .grupo-description {
+        max-width: 95%;
+    }
+}
+
+/* Accesibilidad - Movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .grupo-logo-container,
+    .grupo-description {
+        animation: none;
+    }
+
+    .grupo-logo {
+        transition: none;
+    }
+
+    .grupo-logo:hover {
+        transform: none;
+    }
+}
+
+/* Mejora de contraste */
+@media (prefers-contrast: high) {
+    .grupo-description p {
+        color: #000000;
+        text-shadow: none;
+    }
+
+    .grupo-title-highlight {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
     }
 }

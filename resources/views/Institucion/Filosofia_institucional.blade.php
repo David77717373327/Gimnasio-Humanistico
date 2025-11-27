@@ -99,7 +99,7 @@
     <!-- HERO -->
     <section class="hero-section" aria-label="Componente filosófico institucional">
         <div class="hero-background">
-            <img src="../images/Politica_de_calidad2.jpg"
+            <img src="../images/Politica_de_calidad2.webp"
                 alt="Instalaciones del Gimnasio Humanístico de Neiva en el Alto Magdalena"
                 width="1920"
                 height="1080"

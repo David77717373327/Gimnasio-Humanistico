@@ -76,7 +76,7 @@
     <!-- HERO -->
     <section class="hero-section" aria-label="Sección principal de símbolos institucionales">
         <div class="hero-background">
-            <img src="../images/Politica_de_calidad2.jpg" alt="Instalaciones del Gimnasio Humanístico de Neiva" width="1920" height="1080" loading="lazy">
+            <img src="../images/Politica_de_calidad2.webp" alt="Instalaciones del Gimnasio Humanístico de Neiva" width="1920" height="1080" loading="lazy">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-particles" aria-hidden="true"></div>

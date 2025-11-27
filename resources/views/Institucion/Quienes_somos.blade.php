@@ -78,7 +78,7 @@
         <!-- HERO SECTION -->
         <section class="hero-section" aria-label="Sección destacada de historia">
             <div class="hero-background">
-                <img src="../images/Politica_de_calidad2.jpg"
+                <img src="../images/Politica_de_calidad2.webp"
                     alt="Vista del Gimnasio Humanístico del Alto Magdalena, institución educativa en Neiva"
                     width="1920" height="1080">
             </div>

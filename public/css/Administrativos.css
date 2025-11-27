@@ -12,7 +12,6 @@
     --soft-gold: #FDF6E3;
     --dark-gold-fondo: #e7ba49;
 
-
     /* Variables de Colores Suaves por Rol */
     /* Colores suaves institucionales */
     --jefe-color: #073558;
@@ -29,9 +28,6 @@
     /* Turquesa suave */
     --docentes-color: #b8936b;
     /* Café suave */
-
-
-
 
     /* Colores neutros modernos */
     --white: #FFFFFF;
@@ -91,9 +87,6 @@
     --transition-slow: 0.5s ease-out;
 }
 
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -110,264 +103,11 @@ body {
     scroll-behavior: smooth;
 }
 
-
-
-
-
-
-/* ============================================
-   HERO SECTION AVANZADO basica primaria
-============================================ */
-.hero-advanced {
-    position: relative;
-    height: 65vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    margin-bottom: -60px;
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
-        url('../images/Mision1.jpg') center/cover no-repeat;
-    z-index: 1;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 40%, rgba(244, 185, 66, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 60%, rgba(125, 223, 172, 0.08) 0%, transparent 50%);
-}
-
-.hero-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-}
-
-.particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(244, 185, 66, 0.6);
-    border-radius: 50%;
-    animation: float 15s infinite linear;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-100px) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-.hero-container {
-    position: relative;
-    z-index: 3;
-}
-
-/* TÍTULO MEJORADO PARA ADAPTARSE A CUALQUIER LONGITUD */
-.hero-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease-out 0.3s both;
-
-    /* Tamaño base más grande para títulos normales y cortos */
-    font-size: clamp(8rem, 7vw, 6rem);
-
-
-    /* Centrado perfecto para títulos largos */
-    text-align: center;
-    max-width: 100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-
-    /* Espacio para que respire el texto */
-    padding: 0 1rem;
-    box-sizing: border-box;
-}
-
-/* Clase automática para títulos largos */
-.hero-title.auto-long {
-    font-size: clamp(4.2rem, 4.5vw, 4.2rem);
-    line-height: 1.3;
-    /* Mejor espaciado para títulos largos */
-    letter-spacing: -0.02em;
-}
-
-/* Clase automática para títulos cortos - MÁS GRANDES */
-.hero-title.auto-short {
-    font-size: clamp(8.5rem, 8vw, 7rem);
-    line-height: 1.05;
-}
-
-.title-highlight {
-    background: #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.title-highlight::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: #FFFFFF;
-    border-radius: 2px;
-    transform: scaleX(0);
-    animation: expandLine 1s ease-out 1.5s both;
-}
-
-.hero-scroll-indicator {
-    position: absolute;
-    bottom: 140px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--white);
-    font-size: 1.5rem;
-    animation: bounce 2s infinite;
-    cursor: pointer;
-}
-
-/* Animaciones */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
-@keyframes expandLine {
-    to {
-        transform: scaleX(1);
-    }
-}
-
-/* Responsive mejorado */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: clamp(2.5rem, 7vw, 4rem);
-        max-width: 100%;
-        padding: 0 0.5rem;
-    }
-
-    .hero-title.auto-long {
-        font-size: clamp(1.8rem, 6vw, 3rem);
-        line-height: 1.4;
-    }
-
-    .hero-title.auto-short {
-        font-size: clamp(3rem, 8.5vw, 4.5rem);
-    }
-
-    .hero-scroll-indicator {
-        bottom: 15px;
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        max-width: 100%;
-        font-size: clamp(2rem, 8.5vw, 3.5rem);
-        padding: 0 0.25rem;
-    }
-
-    .hero-title.auto-long {
-        font-size: clamp(1.6rem, 7.5vw, 2.8rem);
-        line-height: 1.4;
-    }
-
-    .hero-title.auto-short {
-        font-size: clamp(2.5rem, 9vw, 4rem);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Sección de Introducción */
 .intro-section {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 5rem 2rem 3rem;
+    padding: 2rem 2rem 3rem;
 }
 
 .intro-text {
@@ -620,35 +360,141 @@ body {
     flex: 1;
 }
 
-/* RESPONSIVE */
+/* =============================================
+   RESPONSIVE DESIGN - TABLETS GRANDES
+============================================= */
 @media (max-width: 1200px) {
+    .intro-section {
+        padding: 4.5rem 1.8rem 2.5rem;
+    }
+
+    .intro-text {
+        padding: 1.8rem 2.2rem;
+        margin-bottom: 3.5rem;
+    }
+
     .equipo-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 2.2rem;
+        padding: 0 1.8rem 3.5rem;
     }
 
     .equipo-column.full-width {
         grid-column: 1 / -1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .column-description {
+        min-height: 50px;
+    }
+
+    .flip-card {
+        height: 390px;
+    }
+
+    .card-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .front-title {
+        font-size: 1.65rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.98rem;
+    }
+
+    .back-title {
+        font-size: 1.3rem;
+    }
+
+    .back-description {
+        font-size: 0.88rem;
     }
 }
 
+/* =============================================
+   RESPONSIVE DESIGN - TABLETS MEDIANAS
+============================================= */
+@media (max-width: 992px) {
+    .intro-section {
+        padding: 4rem 1.6rem 2.2rem;
+    }
+
+    .intro-text {
+        padding: 1.6rem 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .equipo-grid {
+        gap: 2rem;
+        padding: 0 1.6rem 3rem;
+    }
+
+    .column-title {
+        margin-bottom: 0.7rem;
+    }
+
+    .column-description {
+        margin-bottom: 1.3rem;
+        min-height: auto;
+    }
+
+    .flip-card {
+        height: 385px;
+    }
+
+    .card-logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .front-title {
+        font-size: 1.6rem;
+    }
+
+    .hover-hint {
+        bottom: 22px;
+        font-size: 0.78rem;
+    }
+
+    .flip-card-back {
+        padding: 1.9rem 1.65rem;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - TABLETS PEQUEÑAS
+============================================= */
 @media (max-width: 768px) {
     .intro-section {
-        padding: 3rem 1.5rem 2rem;
+        padding: 3.5rem 1.4rem 2rem;
     }
 
     .intro-text {
         padding: 1.5rem 1.75rem;
+        margin-bottom: 2.5rem;
     }
 
     .equipo-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 0 1.5rem 3rem;
+        padding: 0 1.4rem 2.5rem;
+        max-width: 500px;
     }
     
     .equipo-column.full-width {
         grid-column: 1;
+    }
+
+    .column-title {
+        margin-bottom: 0.6rem;
+    }
+
+    .column-description {
+        margin-bottom: 1.2rem;
     }
 
     .flip-card {
@@ -656,8 +502,8 @@ body {
     }
 
     .card-logo {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
     }
 
     .front-title {
@@ -668,35 +514,407 @@ body {
         font-size: 0.95rem;
     }
 
+    .hover-hint {
+        bottom: 20px;
+        font-size: 0.76rem;
+    }
+
     .flip-card-back {
         padding: 1.75rem 1.5rem;
     }
 
     .back-title {
         font-size: 1.25rem;
+        margin-bottom: 1.1rem;
     }
 
     .back-description {
         font-size: 0.88rem;
+        line-height: 1.7;
     }
 }
 
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES GRANDES
+============================================= */
+@media (max-width: 640px) {
+    .intro-section {
+        padding: 3rem 1.2rem 1.8rem;
+    }
+
+    .intro-text {
+        padding: 1.3rem 1.5rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .equipo-grid {
+        gap: 1.8rem;
+        padding: 0 1.2rem 2.2rem;
+    }
+
+    .column-title {
+        margin-bottom: 0.5rem;
+    }
+
+    .column-description {
+        margin-bottom: 1rem;
+    }
+
+    .flip-card {
+        height: 370px;
+    }
+
+    .card-logo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0.9rem;
+    }
+
+    .card-logo img {
+        width: 82%;
+        height: 82%;
+    }
+
+    .front-title {
+        font-size: 1.45rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.93rem;
+    }
+
+    .hover-hint {
+        bottom: 18px;
+        font-size: 0.74rem;
+        gap: 5px;
+    }
+
+    .flip-card-back {
+        padding: 1.6rem 1.3rem;
+    }
+
+    .back-title {
+        font-size: 1.22rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.7rem;
+    }
+
+    .back-description {
+        font-size: 0.86rem;
+        line-height: 1.65;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES MEDIANOS
+============================================= */
 @media (max-width: 480px) {
+    .intro-section {
+        padding: 2.5rem 1rem 1.5rem;
+    }
+
+    .intro-text {
+        padding: 1.2rem 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .equipo-grid {
+        gap: 1.6rem;
+        padding: 0 1rem 2rem;
+    }
+
+    .column-title {
+        margin-bottom: 0.4rem;
+    }
+
+    .column-description {
+        margin-bottom: 0.9rem;
+    }
+
     .flip-card {
         height: 360px;
+    }
+
+    .flip-card-front {
+        padding: 2.2rem 1.8rem;
+    }
+
+    .card-logo {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 0.8rem;
+    }
+
+    .card-logo img {
+        width: 80%;
+        height: 80%;
+    }
+
+    .front-title {
+        font-size: 1.35rem;
+        line-height: 1.15;
+    }
+
+    .front-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hover-hint {
+        font-size: 0.72rem;
+        bottom: 16px;
+    }
+
+    .flip-card-back {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .back-title {
+        font-size: 1.18rem;
+        margin-bottom: 0.9rem;
+        padding-bottom: 0.65rem;
+    }
+
+    .back-description {
+        font-size: 0.84rem;
+        line-height: 1.6;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES PEQUEÑOS
+============================================= */
+@media (max-width: 375px) {
+    .intro-section {
+        padding: 2.2rem 0.8rem 1.3rem;
+    }
+
+    .intro-text {
+        padding: 1.1rem 1.2rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .equipo-grid {
+        gap: 1.5rem;
+        padding: 0 0.8rem 1.8rem;
+    }
+
+    .flip-card {
+        height: 350px;
+    }
+
+    .flip-card-front {
+        padding: 2rem 1.5rem;
     }
 
     .card-logo {
         width: 100px;
         height: 100px;
+        margin-bottom: 0.7rem;
     }
 
     .front-title {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.88rem;
     }
 
     .hover-hint {
-        font-size: 0.75rem;
-        bottom: 20px;
+        font-size: 0.7rem;
+        bottom: 15px;
+    }
+
+    .flip-card-back {
+        padding: 1.3rem 1.1rem;
+    }
+
+    .back-title {
+        font-size: 1.15rem;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .back-description {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES MUY PEQUEÑOS
+============================================= */
+@media (max-width: 320px) {
+    .intro-section {
+        padding: 2rem 0.6rem 1.2rem;
+    }
+
+    .intro-text {
+        padding: 1rem 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .equipo-grid {
+        gap: 1.3rem;
+        padding: 0 0.6rem 1.5rem;
+    }
+
+    .flip-card {
+        height: 340px;
+    }
+
+    .flip-card-front {
+        padding: 1.8rem 1.3rem;
+    }
+
+    .card-logo {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 0.6rem;
+    }
+
+    .card-logo img {
+        width: 78%;
+        height: 78%;
+    }
+
+    .front-title {
+        font-size: 1.25rem;
+        line-height: 1.1;
+    }
+
+    .front-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .hover-hint {
+        font-size: 0.68rem;
+        bottom: 14px;
+        gap: 4px;
+    }
+
+    .flip-card-back {
+        padding: 1.2rem 1rem;
+    }
+
+    .back-title {
+        font-size: 1.12rem;
+        margin-bottom: 0.7rem;
+        padding-bottom: 0.55rem;
+        border-bottom-width: 1.5px;
+    }
+
+    .back-description {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
+
+/* =============================================
+   MODO LANDSCAPE PARA MÓVILES
+============================================= */
+@media (max-width: 896px) and (orientation: landscape) {
+    .intro-section {
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
+
+    .intro-text {
+        padding: 1.2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .equipo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 1.5rem 2rem;
+    }
+
+    .flip-card {
+        height: 340px;
+    }
+
+    .card-logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.7rem;
+    }
+
+    .front-title {
+        font-size: 1.3rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .hover-hint {
+        bottom: 15px;
+        font-size: 0.7rem;
+    }
+
+    .flip-card-back {
+        padding: 1.3rem 1.1rem;
+    }
+
+    .back-title {
+        font-size: 1.15rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .back-description {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+}
+
+/* =============================================
+   INTERACCIÓN TÁCTIL PARA MÓVILES
+============================================= */
+@media (max-width: 768px) {
+    /* Deshabilitar hover y habilitar tap */
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+    
+    .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Mejorar área táctil */
+    .flip-card {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Optimizar scroll */
+    .flip-card-back {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Efecto hover deshabilitado en móviles */
+    .flip-card:hover .flip-card-front {
+        box-shadow: none;
+    }
+
+    .flip-card:hover .card-logo img {
+        transform: scale(1);
+    }
+}
+
+/* =============================================
+   OPTIMIZACIÓN DE RENDIMIENTO MÓVIL
+============================================= */
+@media (max-width: 768px) {
+    .flip-card-inner {
+        transition: transform 0.6s;
+    }
+
+    .card-logo,
+    .card-logo img {
+        transition: all 0.2s ease-out;
+    }
+
+    .flip-card-front {
+        transition: none;
     }
 }
