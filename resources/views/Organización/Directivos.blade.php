@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <title>Equipo Directivo | Gimnasio Humanístico</title>
+    <title>Equipo Directivo | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
     <meta name="description"
         content="Conoce al equipo directivo del Gimnasio Humanístico. Liderazgo académico, visión humanística, gestión educativa moderna y compromiso con la excelencia institucional.">
     <link rel="canonical" href="https://gimnasiohumanistico.edu/directivos">

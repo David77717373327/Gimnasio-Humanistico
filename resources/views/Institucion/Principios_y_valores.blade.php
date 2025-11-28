@@ -12,7 +12,7 @@
         content="Principios institucionales, Valores educativos, Gimnasio Humanístico, Educación humanista, Excelencia académica, Valores católicos, Democracia escolar, Formación integral">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principios y Valores - Gimnasio Humanístico del Alto Magdalena</title>
+    <title>Principios y Valores | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
 
     <!-- Open Graph -->
     <meta property="og:title" content="Principios y Valores - Gimnasio Humanístico del Alto Magdalena">

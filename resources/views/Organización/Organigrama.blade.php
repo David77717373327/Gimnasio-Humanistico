@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organigrama Institucional - GIMNASIO HUMANÍSTICO</title>
+    <title>Organigrama Institucional | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
 
     <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

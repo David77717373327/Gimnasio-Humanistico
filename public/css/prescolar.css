@@ -71,9 +71,6 @@
     --transition-slow: 0.5s ease-out;
 }
 
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -93,310 +90,9 @@ body {
 
 
 
-
-
 /* ============================================
    HEADER SECTION PREESCOLAR - DISEÑO EMPRESARIAL REFINADO
 ============================================ */
-
-.admision-nav-header {
-    text-align: center;
-   margin-top: 3rem;
-    position: relative;
-    z-index: 2;
-    animation: fadeInDown 0.6s ease-out;
-    padding: 2rem 0 1.5rem;
-    background: linear-gradient(180deg, rgba(244, 185, 66, 0.02) 0%, transparent 100%);
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Wrapper principal - Centrado vertical perfecto */
-.header-content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Logo del colegio - Posicionamiento elegante */
-.header-logo {
-    width: 95px;
-    height: 95px;
-    object-fit: contain;
-    flex-shrink: 0;
-    filter: drop-shadow(0 4px 12px rgba(13, 63, 39, 0.12));
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-logo:hover {
-    transform: translateY(-3px);
-    filter: drop-shadow(0 6px 16px rgba(13, 63, 39, 0.18));
-}
-
-/* Contenedor del texto - Centrado profesional */
-.header-text-content {
-    flex: 1;
-    text-align: center;
-    min-width: 0;
-    max-width: 750px;
-}
-
-/* Fila superior con badge */
-.header-top-row {
-    margin-bottom: 1rem;
-}
-
-/* Badge empresarial refinado */
-.header-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.45rem 1.1rem;
-    background: linear-gradient(135deg, 
-        rgba(244, 185, 66, 0.08) 0%, 
-        rgba(244, 185, 66, 0.12) 50%,
-        rgba(244, 185, 66, 0.08) 100%);
-    border-radius: 50px;
-    border: 1.5px solid rgba(244, 185, 66, 0.3);
-    box-shadow: 
-        0 2px 8px rgba(244, 185, 66, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    transition: all 0.3s ease;
-}
-
-.header-label:hover {
-    transform: translateY(-1px);
-    box-shadow: 
-        0 4px 12px rgba(244, 185, 66, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-
-.label-icon {
-    color: #f4b942;
-    font-size: 0.8rem;
-    animation: pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { 
-        opacity: 1; 
-        transform: scale(1); 
-    }
-    50% { 
-        opacity: 0.8; 
-        transform: scale(1.1); 
-    }
-}
-
-.label-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--primary-green, #0d3f27);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-/* Título principal - Elegancia serif */
-.admision-nav-title {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(1rem, 1vw, 1.6rem);
-    font-weight: 700;
-    color: var(--primary-green, #0d3f27);
-    margin-bottom: 1rem;
-    letter-spacing: -0.3px;
-    line-height: 1.25;
-    text-shadow: 0 1px 2px rgba(13, 63, 39, 0.05);
-}
-
-/* Descripción profesional */
-.admision-nav-subtitle {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    color: black;
-    font-weight: 400;
-    line-height: 1.7;
-    margin: 0;
-    opacity: 0.92;
-}
-
-/* ============================================
-   RESPONSIVE DESIGN EMPRESARIAL
-============================================ */
-
-/* Tablets landscape */
-@media (max-width: 1024px) {
-    .header-content-wrapper {
-        gap: 2.5rem;
-    }
-    
-    .header-logo {
-        width: 85px;
-        height: 85px;
-    }
-}
-
-/* Tablets portrait */
-@media (max-width: 768px) {
-    .admision-nav-header {
-        padding: 1.5rem 0 1rem;
-        margin-bottom: 2.5rem;
-    }
-    
-    .header-content-wrapper {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 0 1.5rem;
-    }
-    
-    .header-logo {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 0.5rem;
-    }
-    
-    .header-text-content {
-        max-width: 100%;
-    }
-    
-    .admision-nav-title {
-        font-size: clamp(1.75rem, 4vw, 2.2rem);
-        margin-bottom: 0.8rem;
-    }
-    
-    .admision-nav-subtitle {
-        font-size: 0.95rem;
-        line-height: 1.65;
-    }
-}
-
-/* Móviles */
-@media (max-width: 576px) {
-    .admision-nav-header {
-        padding: 1.2rem 0 0.8rem;
-        margin-bottom: 2rem;
-    }
-    
-    .header-content-wrapper {
-        gap: 1.2rem;
-        padding: 0 1rem;
-    }
-    
-    .header-logo {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .header-label {
-        padding: 0.4rem 1rem;
-    }
-    
-    .label-text {
-        font-size: 0.7rem;
-        letter-spacing: 1.2px;
-    }
-    
-    .label-icon {
-        font-size: 0.75rem;
-    }
-    
-    .admision-nav-title {
-        font-size: 1.65rem;
-        margin-bottom: 0.7rem;
-        line-height: 1.3;
-    }
-    
-    .admision-nav-subtitle {
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-}
-
-/* Móviles muy pequeños */
-@media (max-width: 400px) {
-    .header-logo {
-        width: 65px;
-        height: 65px;
-    }
-    
-    .admision-nav-title {
-        font-size: 1.5rem;
-    }
-    
-    .admision-nav-subtitle {
-        font-size: 0.88rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================
-   SECCIÓN HORARIOS Y AULAS - GRID 2x2 CUADRADO
-============================================ */
-
-.horarios-aulas-section {
-    padding: 0.45rem 0 0.45rem;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);
-}
-
-.horarios-aulas-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-.admision-nav-title {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(3rem, 5vw, 3.8rem);
-    font-weight: 700;
-    color: var(--primary-green, #0d3f27);
-    margin-bottom: 0.8rem;
-    letter-spacing: -0.5px;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.modalidad-badge {
-    display: inline-block;
-    background: var(--primary-green);
-    color: white;
-    padding: 12px 28px;
-    
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 50px;
-    margin-left: 36%;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-}
 
 .section-label {
     font-size: 0.875rem;
@@ -413,342 +109,53 @@ body {
     font-weight: 700;
     color: var(--primary-green);
     line-height: 1.2;
-    margin: 0;
+    margin: 0 0 0.5rem 0;
 }
 
-/* TÍTULO HORARIOS - SUPERIOR DERECHA */
-.horarios-title {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.5rem;
+.admision-nav-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
     font-weight: 700;
-    color: #0d3f27;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 1rem 1.5rem;
-    background: white;
-    border-left: 4px solid #0d3f27;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.section-intro {
-    font-size: 0.975rem;
-    color: #6B7280;
-    line-height: 1.6;
-    margin: 0;
-    max-width: 700px;
-}
-
-/* GRID DE AULAS - 2 FILAS x 2 COLUMNAS */
-.aulas-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-
-
-/* WRAPPER DE IMAGEN - SIN BORDES REDONDEADOS */
-.aula-image {
-    position: relative;
-    width: 100%;
-    padding-bottom: 35%; /* Reducido 50% de altura */
-    overflow: hidden;
-    background: #f0f0f0;
-    border-radius: 0; /* Eliminado completamente */
-}
-
-.aula-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 0; /* Eliminado completamente */
-}
-
-.aula-item:hover .aula-image img {
-    transform: scale(1.05);
-}
-
-/* OVERLAY CON NIVEL */
-.aula-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(13, 63, 39, 0.3) 100%);
-    display: flex;
-    align-items: flex-end;
-    padding: 1.25rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.aula-item:hover .aula-overlay {
-    opacity: 1;
-}
-
-.aula-nivel {
-    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
-    font-size: 1.375rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: white;
-}
-
-/* HORARIO GENERAL - ESQUINA SUPERIOR DERECHA */
-.horario-general {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: white;
-    padding: 1rem 1.5rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #0d3f27;
-    border-left: 4px solid #0d3f27;
-    border-bottom: 1px solid #E5E7EB;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    z-index: 10;
-}
-
-/* TAG DE HORARIO (PRIMER ITEM) */
-.horario-tag {
-    position: absolute;
-    bottom: 0.75rem;
-    left: 0.75rem;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(12px);
-    padding: 0.5rem 0.875rem;
-    border-radius: 0; /* Eliminado bordes redondeados */
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #0d3f27;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
-
-.horario-tag svg {
-    flex-shrink: 0;
-    color: #0d3f27;
-}
-
-.horario-tag-first {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.aula-item:first-child:hover .horario-tag-first {
-    opacity: 1;
-}
-
-.aula-item:first-child .horario-tag-first {
-    opacity: 1;
-    bottom: 0.5rem;
-    left: 0.5rem;
-}
-
-/* CONTENIDO DE AULA */
-.aula-info {
-    margin-top: 28px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.aula-info h4 {
-    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
-    font-size: 1.9rem;
-    font-weight: 700;
+    text-align: center;
     color: var(--primary-green);
-    margin: 0 0 0 0;
+    position: relative;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 25px;
 }
 
-.aula-info p {
-    font-size: 0.98rem;
-    color: black;
-    line-height: 1.5;
-    margin: 0;
+.admision-nav-title::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: var(--accent-gold);
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
 }
-
-/* INDICADOR DE HORARIO GENERAL */
-.horario-indicator {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 1.25rem;
-    background: white;
-    border-radius: 0; /* Eliminado bordes redondeados */
-    border-left: 3px solid #0d3f27;
-    font-size: 0.95rem;
-    color: #374151;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
-    width: fit-content;
-}
-
-.horario-indicator svg {
-    color: #0d3f27;
-    flex-shrink: 0;
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .aulas-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
-    }
-    
-    .horarios-title {
-        font-size: 1.25rem;
-        padding: 0.875rem 1.25rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .horarios-aulas-section {
-        padding: 2.5rem 0 2rem;
-    }
-
-    .horario-general {
-        position: static;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1.5rem;
-        border-left: none;
-        border-top: 4px solid #0d3f27;
-        border-bottom: none;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .section-intro {
-        font-size: 0.9rem;
-    }
-
-    .aulas-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 1.25rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .horarios-title {
-        position: static;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1.5rem;
-        font-size: 1.125rem;
-        padding: 0.75rem 1rem;
-        border-left: none;
-        border-top: 4px solid #0d3f27;
-    }
-
-    .aula-info {
-        padding: 1rem;
-    }
-
-    .aula-info h4 {
-        font-size: 1rem;
-    }
-
-    .aula-info p {
-        font-size: 0.85rem;
-    }
-
-    .horario-indicator {
-        font-size: 0.9rem;
-        padding: 0.875rem 1rem;
-    }
-}
-
-
-
-@media (max-width: 480px) {
-    .horarios-aulas-section {
-        padding: 2rem 0 1.5rem;
-    }
-
-    .section-title {
-        font-size: 1.25rem;
-    }
-
-    .section-intro {
-        font-size: 0.85rem;
-    }
-
-    .aulas-grid {
-        gap: 1rem;
-    }
-
-    .aula-image {
-        padding-bottom: 30%; /* Ajustado para móviles */
-    }
-
-    .aula-info {
-        padding: 0.875rem;
-    }
-
-    .horario-indicator {
-        width: 100%;
-        font-size: 0.85rem;
-        padding: 0.75rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ============================================
    METODOLOGÍA ACTIVA
 ============================================ */
 .metodologia-section {
-    padding: 0.45rem 0;
+    padding: 1rem 0;
     background: var(--light-gray);
 }
 
 .metodologia-content {
     padding-left: 2rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .metodologia-list {
     display: flex;
     flex-direction: column;
-    gap: 0.12rem;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .metodologia-item {
@@ -757,24 +164,17 @@ body {
     align-items: flex-start;
 }
 
-.metodologia-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1.8rem;
-    gap: 1rem;
-}
-
 .metodologia-number {
-    background-color: #0d6336; /* tono verde institucional */
+    background-color: #0d6336;
     color: #fff;
     font-weight: 700;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
     flex-shrink: 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
@@ -785,23 +185,12 @@ body {
 }
 
 .metodologia-text h4 {
-    margin: 0 0 0.3rem 0;
-    color: #0d6336;
-    font-weight: 600;
-}
-
-
-
-
-
-
-
-.metodologia-text h4 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.425rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--primary-green);
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.3rem 0;
+    line-height: 1.3;
 }
 
 .metodologia-text p {
@@ -815,15 +204,142 @@ body {
 
 .metodologia-image {
     width: 100%;
-    height: 500px;
+    height: 650px;
     overflow: hidden;
-   
+   margin-left: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .metodologia-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-left: 20px;
+}
+
+/* ============================================
+   RESPONSIVE - PANTALLAS GRANDES
+============================================ */
+@media (min-width: 992px) {
+    .admision-nav-title {
+        font-size: 3.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 2.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .metodologia-section {
+        padding: 2rem 0;
+    }
+    
+    .metodologia-content {
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
+    
+    .metodologia-image {
+        height: 600px;
+        margin-left: 2rem;
+    }
+    
+    .metodologia-list {
+        gap: 1.3rem;
+        margin-top: 1.3rem;
+    }
+    
+    .metodologia-text h4 {
+        font-size: 1.4rem;
+    }
+    
+    .metodologia-text p {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - TABLETS
+============================================ */
+@media (max-width: 991px) {
+    .admision-nav-title {
+        font-size: 2.4rem;
+        margin-bottom: 25px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .metodologia-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
+    
+    .metodologia-image {
+        height: 450px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .metodologia-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .metodologia-text p {
+        text-align: center;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MÓVILES
+============================================ */
+@media (max-width: 576px) {
+    .admision-nav-title {
+        font-size: 2rem;
+        padding-bottom: 12px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .metodologia-section {
+        padding: 1rem 0;
+    }
+    
+    .metodologia-image {
+        height: 350px;
+    }
+    
+    .metodologia-list {
+        gap: 0.9rem;
+        margin-top: 1rem;
+    }
+    
+    .metodologia-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .metodologia-text h4 {
+        font-size: 1.2rem;
+    }
+    
+    .metodologia-text p {
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -831,4 +347,207 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================
+    Galeria imágenes
+=================================*/
+
+/* Modal Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
+}
+
+.lightbox-content img {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+
+
+
+.lightbox-close {
+    position: absolute;
+    top: 40px;
+    margin-right: 20px;
+    right: 0;
+    background: white;
+    color: black;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    color: black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Header de la sección */
+.gallery-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.gallery-subtitle{
+    color: black;
+}
+
+/* Contenedor de la galería */
+.gallery-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    padding-bottom: 5rem;
+}
+
+/* Grid simétrico optimizado para 3-4-3 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:40px;
+}
+
+/* Primera fila: 3 imágenes (4 columnas cada una) */
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(3) {
+    grid-column: span 4;
+    aspect-ratio: 16/9;
+}
+
+/* Segunda fila: 4 imágenes (3 columnas cada una) */
+.gallery-item:nth-child(4),
+.gallery-item:nth-child(5),
+.gallery-item:nth-child(6),
+.gallery-item:nth-child(7) {
+    grid-column: span 3;
+    aspect-ratio: 3/2;
+}
+
+/* Tercera fila: 3 imágenes (4 columnas cada una) */
+.gallery-item:nth-child(8),
+.gallery-item:nth-child(9),
+.gallery-item:nth-child(10) {
+    grid-column: span 4;
+    aspect-ratio: 16/9;
+}
+
+/* Estilos de las tarjetas */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
 

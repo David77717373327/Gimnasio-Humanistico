@@ -12,7 +12,7 @@
     <!-- COLOR PARA DISPOSITIVOS -->
     <meta name="theme-color" content="#0d3f27">
 
-    <title>Grupo Humanístico S.A.S | Educación Integral y Valores Humanísticos en Colombia</title>
+    <title>Grupo Humanístico S.A.S | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
 
     <!-- CANONICAL -->
     <link rel="canonical" href="https://tusitio.com/grupo-humanistico">

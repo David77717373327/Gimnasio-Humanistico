@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Title optimizado -->
-    <title>Componente Filosófico | Filosofía Institucional – Gimnasio Humanístico de Neiva</title>
+    <title>Componente Filosófico | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
 
     <!-- Meta Description SEO -->
     <meta name="description" content="Conoce el componente filosófico del Gimnasio Humanístico de Neiva: principios humanísticos, cultura democrática, liderazgo, emprendimiento, valores, sostenibilidad ambiental e identidad educativa.">

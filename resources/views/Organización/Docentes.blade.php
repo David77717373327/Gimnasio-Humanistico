@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misión y Visión - GIMNASIO HUMANÍSTICO</title>
+    <title>Docentes | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
     <!-- Google Fonts - Tipografía moderna -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,6 @@
 
     <!-- Script Hero -->
     <script src="{{ asset('js/hero.js') }}" defer></script>
-
 
 </head>
 
@@ -68,7 +67,6 @@
     <section class="profesores-section" id="siguiente_sesion">
         <div class="container">
             <div class="section-intro">
-                
                 <p> Acorde con el horizonte institucional, los maestros encarnan
                      un liderazgo pedagógico inspirador.  Es un profesional con una 
                      sólida formación humanista que promueve la justicia, la inclusión

@@ -5,7 +5,7 @@
     <!-- 🧠 SEO BÁSICO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipo Administrativo | Gimnasio Humanístico</title>
+    <title>Equipo Administrativo | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
     
     <!-- 📝 META DESCRIPTION (SEO) -->
     <meta name="description"

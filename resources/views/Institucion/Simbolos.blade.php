@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misión y Visión - GIMNASIO HUMANÍSTICO | Educación Humanista en Neiva</title>
+    <title>Simbolos | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +34,7 @@
     <meta property="og:description" content="Conoce el himno institucional, escudo y bandera del Gimnasio Humanístico de Neiva. Identidad, humanismo y cultura ambiental.">
     <meta property="og:image" content="{{ asset('images/Politica_de_calidad2.jpg') }}">
     <meta property="og:type" content="website">
+
 
 
     @verbatim

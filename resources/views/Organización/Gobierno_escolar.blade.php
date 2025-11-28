@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 🔥 SEO Mejorado -->
-    <title>Gobierno Escolar | Estructura, Funciones y Consejos Institucionales</title>
+    <title>Gobierno Escolar | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
 
     <meta name="description" 
         content="Conoce la estructura del Gobierno Escolar del Gimnasio Humanístico: Rectoría, Consejo Directivo y Consejo Académico. Funciones, miembros y participación democrática en la institución.">
