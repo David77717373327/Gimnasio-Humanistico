@@ -94,26 +94,13 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ============================================
    HEADER SECTION PREESCOLAR - DISEÑO PROFESIONAL
 ============================================ */
 
 .admision-nav-header {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 0.50rem;
     position: relative;
     z-index: 2;
     animation: fadeInDown 0.6s ease-out;
@@ -121,72 +108,10 @@ body {
     background: linear-gradient(180deg, rgba(244, 185, 66, 0.02) 0%, transparent 100%);
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.header-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 1rem;
-    background: linear-gradient(135deg, rgba(244, 185, 66, 0.12) 0%, rgba(244, 185, 66, 0.08) 100%);
-    border-radius: 50px;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(244, 185, 66, 0.25);
-    box-shadow: 0 2px 8px rgba(244, 185, 66, 0.1);
-}
-
-.label-icon {
-    color: #f4b942;
-    font-size: 0.85rem;
-    animation: pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 0.75;
-        transform: scale(1.08);
-    }
-}
-
-.label-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--primary-green, #0d3f27);
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-}
-
-.admision-nav-subtitle {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.09rem;
-    color: black;
-    font-weight: 400;
-    line-height: 1.8;
-    max-width: 620px;
-    margin: 0 auto;
-}
 
 .admision-nav-title {
     font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(3rem, 5vw, 3.8rem);
+    font-size: clamp(3.5rem, 5vw, 2.5rem);
     font-weight: 700;
     color: var(--primary-green, #0d3f27);
     margin-bottom: 0.8rem;
@@ -194,161 +119,152 @@ body {
     line-height: 1.2;
 }
 
-.header-content-wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 900px;
-    margin-left: 70px;
-}
-
-.header-logo {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    flex-shrink: 0;
-    margin-top: 20px;
-    margin-right: 90px;
-}
-
-.header-text-content {
-    flex: 1;
-    text-align: center;
-    min-width: 0;
-}
-
-@media (max-width: 768px) {
-    .header-content-wrapper {
-        gap: 1rem;
-    }
-
-    .header-logo {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 576px) {
-    .header-content-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-logo {
-        margin-bottom: 0.5rem;
-    }
-}
-
-
-
-
-
 
 
 
 
 /* ============================================
-   SECCIÓN DE OBJETIVOS PRIMARIA - CON IMÁGENES DE FONDO
-   ============================================ */
+   SECCIÓN DE OBJETIVOS EDUCACIÓN INICIAL
+   TODAS LAS CLASES CON PREFIJO "objetivos-"
+   DISEÑO PROFESIONAL Y SIMÉTRICO
+============================================ */
 
-body {
-    background-color: white;
+/* Contenedor principal */
+.objetivos-split-container {
+    display: flex;
+    min-height: calc(100vh - 200px);
 }
 
-.objetivos-section {
-    padding: 1rem 0 1rem 0;
+/* ============================================
+   PANEL IZQUIERDO - NAVEGACIÓN
+============================================ */
+
+.objetivos-nav-panel {
+    width: 320px;
+    background: white;
+    border-right: 1px solid white;
+    padding: 1rem;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.objetivos-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.875rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-left: 3px solid transparent;
+}
+
+.objetivos-nav-item:hover {
+    background: #ffffff;
+    border-left-color: #065e35;
+}
+
+.objetivos-nav-item.active {
+    background: var(--primary-green);
+    color: white;
+    border: 1px solid var(--primary-green);
+    border-left: 3px solid var(--primary-green);
+}
+
+.objetivos-nav-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.objetivos-nav-item.active .objetivos-nav-number {
+    background: #ffffff;
+    color: #0d3f27;
+}
+
+.objetivos-nav-content {
+    flex: 1;
+}
+
+.objetivos-nav-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.objetivos-nav-item.active .objetivos-nav-title {
+    color: white;
+}
+
+.objetivos-nav-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: black;
+    transition: color 0.2s ease;
+}
+
+.objetivos-nav-item.active .objetivos-nav-subtitle {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ============================================
+   PANEL DERECHO - CONTENIDO CON VIDEO
+============================================ */
+
+.objetivos-content-panel {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: rgb(173, 168, 168);
     position: relative;
 }
 
-.objetivos-container-custom {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 2rem;
+/* Video completamente en el fondo */
+.objetivos-video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.40; /* Opacidad reducida para mejor contraste */
+    pointer-events: none;
 }
 
-.objetivos-header {
-    max-width: 1400px;
-    margin: 0 auto 2rem auto;
-    text-align: center;
-}
-
-.objetivos-main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 700;
-    color: var(--primary-green);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.objetivos-intro {
-    font-family: 'Open Sans', sans-serif;
-    font-size: clamp(1rem, 2vw, 1.125rem);
-    color: black;
-    line-height: 1.8;
-    text-align: justify;
-    margin: 0 auto;
-}
-
-/* Navegación de Objetivos */
-.objetivos-navigation {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 3.5rem;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.objetivo-tab {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    font-weight: 600;
-    padding: 1rem 1.5rem;
-    background: var(--white);
-    color: var(--primary-green);
-    border: 2px solid var(--primary-green);
-    border-radius: 0;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    text-align: center;
-    flex: 1 1 0;
-    min-width: 0;
-}
-
-.objetivo-tab:hover {
-    background: var(--accent-gold);
-    border-color: var(--accent-gold);
-    color: black;
-    transform: translateY(-2px);
-    border: 2px solid var(--accent-gold);
-}
-
-.objetivo-tab.active {
-    background: var(--accent-gold);
-    color: black;
-    border: 2px solid var(--accent-gold);
-}
-
-/* Contenido de Objetivos */
-.objetivos-content {
-    margin: 0 auto;
-}
-
-.objetivo-item {
+/* TODO EL CONTENIDO CON Z-INDEX ALTO */
+.objetivos-content-item {
     display: none;
-    opacity: 0;
+    animation: objetivosFadeInContent 0.3s ease;
+    position: relative;
+    z-index: 10; /* Z-index alto para estar sobre el video */
 }
 
-.objetivo-item.active {
+.objetivos-content-item.active {
     display: block;
-    animation: fadeInContent 0.5s ease-out forwards;
 }
 
-@keyframes fadeInContent {
+@keyframes objetivosFadeInContent {
     from {
         opacity: 0;
         transform: translateY(10px);
@@ -359,513 +275,958 @@ body {
     }
 }
 
-/* Grid de Objetivos */
-.objetivo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-    align-items: start;
-    max-width: 1600px;
-}
-
-.objetivo-grid:has(.objetivo-card:only-child) {
-    grid-template-columns: 1fr;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.objetivo-grid:has(.objetivo-card:nth-child(3):last-child) .objetivo-card:nth-child(3) {
-    grid-column: 1 / -1;
-    max-width: calc(50% - 1.25rem);
-    margin: 0 auto;
-}
-
-.objetivo-grid:has(.objetivo-card:nth-child(4)) {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.objetivo-grid:has(.objetivo-card:nth-child(7):last-child) .objetivo-card:nth-child(7) {
-    grid-column: 1 / -1;
-    max-width: calc(50% - 1.25rem);
-    margin: 0 auto;
-}
-
-/* Cards con Imágenes de Fondo */
-.objetivo-card {
-    position: relative;
-    min-height: 250px;
+.objetivos-content-header {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.objetivo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(13, 63, 39, 0.15);
-}
-
-
-
-
-/* Overlay oscuro para contraste */
-.objetivo-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-    rgba(0, 0, 0, 0.1) 0%,      /* más tenue arriba */
-    rgba(39, 39, 39, 0.3) 1%,   /* gris más claro al inicio */
-    rgba(0, 0, 0, 0.3) 50%      /* sombra ligera hacia el centro */
-);
-    transition: background 0.3s ease;
-}
-
-
-
-
-
-/*   
-background: linear-gradient(
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(39, 39, 39, 0.6) 1%,
-        rgba(0, 0, 0, 0.6) 50%
-    );
-*/
-
-
-
-
-
-
-/* Contenedor de texto sobre la imagen */
-.objetivo-content-wrapper {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-green);
     position: relative;
-    z-index: 2;
-    padding: 0.23rem 1.5rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    z-index: 10;
 }
 
-.objetivo-subtitle {
+.objetivos-content-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1.5rem, 2vw, 2rem);
     font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 0.23rem;
-    line-height: 1.7;
-    text-align: center;
-    text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
+    font-size: 1.25rem;
+    flex-shrink: 0;
 }
 
-.objetivo-text {
-    font-family: 'Open Sans', sans-serif;
-    font-size: clamp(1rem, 1.6vw, 1.0625rem);
-    color: #ffffff;
-    line-height: 1.4;
-    text-align: justify;
-    hyphens: auto;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+.objetivos-content-title-group h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
 }
 
-/* Imágenes de fondo por categoría - Primaria */
-.objetivo-card[data-bg="valores-convivencia"] {
-    background-image: url('../images/Mision1.jpg');
+.objetivos-content-category {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--primary-green);
 }
 
-.objetivo-card[data-bg="valores-civicos"] {
-    background-image: url('../images/Mision2.jpg');
+.objetivos-content-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000000; /* Negro sólido */
+    text-align: left;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 10;
 }
 
-.objetivo-card[data-bg="educacion-constitucional"] {
-    background-image: url('../images/Mision3.jpg');
+.objetivos-content-highlight {
+    background: transparent; /* Fondo semi-transparente */
+    padding: 1.25rem;
+    border-left: 3px solid #0d3f27;
+    margin-top: 1.25rem;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    position: relative;
+    z-index: 10;
 }
 
-.objetivo-card[data-bg="participacion-infantil"] {
-    background-image: url('../images/Mision4.jpg');
+.objetivos-content-highlight h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.75rem;
 }
 
-.objetivo-card[data-bg="deseo-saber"] {
-    background-image: url('../images/Mision1.jpg');
+.objetivos-content-highlight p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #000000; /* Negro sólido */
 }
 
-.objetivo-card[data-bg="habilidades-comunicativas"] {
-    background-image: url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800');
+/* ============================================
+   NAVEGACIÓN ENTRE OBJETIVOS
+============================================ */
+
+.objetivos-content-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    position: relative;
+    z-index: 10; /* Z-index alto para los botones */
 }
 
-.objetivo-card[data-bg="expresion-estetica"] {
-    background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800');
+.objetivos-nav-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 1 !important; /* Forzar opacidad completa */
 }
 
-.objetivo-card[data-bg="pensamiento-matematico"] {
-    background-image: url('https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800');
+.objetivos-nav-btn.objetivos-prev {
+    background: #374151;
+    color: white;
+    border: 1px solid #374151;
 }
 
-.objetivo-card[data-bg="comprension-medio"] {
-    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800');
+.objetivos-nav-btn.objetivos-next {
+    background: var(--primary-green);
+    color: white;
+    border: 1px solid var(--primary-green);
 }
 
-.objetivo-card[data-bg="asimilacion-conceptos"] {
-    background-image: url('https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800');
+.objetivos-nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.objetivo-card[data-bg="lengua-extranjera"] {
-    background-image: url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800');
+.objetivos-nav-btn.objetivos-prev:hover {
+    background: #1f2937;
+    border-color: #1f2937;
 }
 
-.objetivo-card[data-bg="salud-cuidado"] {
-    background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800');
+.objetivos-nav-btn.objetivos-next:hover {
+    background: var(--primary-green);
 }
 
-.objetivo-card[data-bg="educacion-fisica"] {
-    background-image: url('https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=800');
+.objetivos-nav-btn:disabled {
+    opacity: 0.4 !important;
+    cursor: not-allowed;
+    transform: none;
 }
 
-.objetivo-card[data-bg="formacion-artistica"] {
-    background-image: url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800');
+.objetivos-nav-btn:disabled:hover {
+    transform: none;
+    box-shadow: none;
 }
 
-.objetivo-card[data-bg="autonomia-personal"] {
-    background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800');
+.objetivos-nav-btn.objetivos-prev:disabled:hover {
+    background: #374151;
+    border-color: #374151;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .objetivos-container-custom {
-        max-width: 92%;
-        padding: 0 1.5rem;
+.objetivos-nav-btn.objetivos-next:disabled:hover {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+============================================ */
+
+@media (max-width: 1024px) {
+    .objetivos-nav-panel {
+        width: 280px;
+        padding: 0.875rem;
     }
-
-    .objetivos-navigation {
-        gap: 0.75rem;
+    
+    .objetivos-content-panel {
+        padding: 1.75rem;
     }
-
-    .objetivo-tab {
-        padding: 0.875rem 1.25rem;
-        font-size: 0.875rem;
+    
+    .objetivos-nav-item {
+        padding: 0.75rem 0.875rem;
     }
-
-    .objetivo-card {
-        min-height: 300px;
-    }
-}
-
-@media (max-width: 992px) {
-    .objetivos-section {
-        padding: 4rem 0 5rem 0;
-    }
-
-    .objetivos-container-custom {
-        max-width: 90%;
-        padding: 0 1rem;
-    }
-
-    .objetivos-header {
-        margin-bottom: 3rem;
-    }
-
-    .objetivos-navigation {
-        flex-wrap: wrap;
-        gap: 0.75rem;
-    }
-
-    .objetivo-tab {
-        flex: 1 1 calc(50% - 0.375rem);
-        min-width: 200px;
-    }
-
-    .objetivo-grid {
-        gap: 2rem;
-    }
-
-    .objetivo-card {
-        min-height: 280px;
+    
+    .objetivos-nav-number {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
     }
 }
+
+/* ============================================
+   RESPONSIVE - MOBILE
+============================================ */
 
 @media (max-width: 768px) {
-    .objetivos-section {
-        padding: 3rem 0 4rem 0;
-    }
-
-    .objetivos-container-custom {
-        max-width: 100%;
-        padding: 0 1rem;
-    }
-
-    .objetivos-header {
-        margin-bottom: 2.5rem;
-    }
-
-    .objetivos-main-title {
-        margin-bottom: 1rem;
-    }
-
-    .objetivos-navigation {
+    .objetivos-split-container {
         flex-direction: column;
-        gap: 0.75rem;
-        margin-bottom: 2rem;
     }
-
-    .objetivo-tab {
-        flex: 1 1 100%;
-        padding: 0.875rem 1.25rem;
-        min-width: 100%;
+    
+    .objetivos-nav-panel {
         width: 100%;
+        position: relative;
+        height: auto;
+        max-height: none;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 1rem;
+        gap: 0.375rem;
     }
-
-    .objetivo-grid {
-        grid-template-columns: 1fr !important;
-        gap: 2rem;
+    
+    .objetivos-nav-item {
+        padding: 0.625rem 0.75rem;
     }
-
-    .objetivo-grid:has(.objetivo-card:nth-child(3):last-child) .objetivo-card:nth-child(3),
-    .objetivo-grid:has(.objetivo-card:nth-child(7):last-child) .objetivo-card:nth-child(7) {
-        grid-column: auto;
-        max-width: 100%;
-    }
-
-    /* Forzar todas las cards a ocupar una columna */
-    .objetivo-grid .objetivo-card {
-        grid-column: auto !important;
-        max-width: 100% !important;
-    }
-
-    .objetivo-card {
-        min-height: 300px;
-    }
-
-    .objetivo-content-wrapper {
-        padding: 1.75rem 1.25rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .objetivos-section {
-        padding: 2.5rem 0 3.5rem 0;
-    }
-
-    .objetivos-intro {
-        text-align: left;
-    }
-
-    .objetivo-tab {
-        padding: 0.75rem 1rem;
+    
+    .objetivos-nav-number {
+        width: 32px;
+        height: 32px;
         font-size: 0.875rem;
     }
-
-    .objetivo-text {
-        text-align: left;
+    
+    .objetivos-nav-title {
+        font-size: 0.875rem;
     }
-
-    .objetivo-grid {
-        gap: 1.5rem;
+    
+    .objetivos-nav-subtitle {
+        font-size: 0.6875rem;
     }
-
-    .objetivo-card {
-        min-height: 280px;
+    
+    .objetivos-content-panel {
+        padding: 1.25rem;
     }
-
-    .objetivo-content-wrapper {
-        padding: 1.5rem 1rem;
+    
+    .objetivos-content-header {
+        flex-direction: row;
+        gap: 0.875rem;
+        margin-bottom: 1.25rem;
     }
-}
-
-/* Ajuste específico para pantallas muy pequeñas (356px y menores) */
-@media (max-width: 380px) {
-    .objetivos-container-custom {
-        padding: 0 0.75rem;
+    
+    .objetivos-content-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
-
-    .objetivo-card {
-        min-height: 300px;
+    
+    .objetivos-content-title-group h2 {
+        font-size: 1.25rem;
     }
-
-    .objetivo-content-wrapper {
-        padding: 1.25rem 0.875rem;
+    
+    .objetivos-content-navigation {
+        gap: 0.5rem;
+        margin-top: 1.5rem;
     }
-
-    .objetivo-subtitle {
-        font-size: 1.4rem;
-        line-height: 1.4;
-        margin-bottom: 0.5rem;
-    }
-
-    .objetivo-text {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-
-    .objetivo-tab {
-        padding: 0.7rem 0.875rem;
+    
+    .objetivos-nav-btn {
+        padding: 0.625rem 1rem;
         font-size: 0.8125rem;
     }
 }
 
-/* Ajuste extra para contenido más largo en móviles pequeños */
-@media (max-width: 380px) {
-    #objetivo-valores .objetivo-card,
-    #objetivo-conocimiento .objetivo-card,
-    #objetivo-bienestar .objetivo-card {
-        min-height: 320px;
-    }
-}
 
 
 
 
 
+/*================================
+    Galeria imágenes
+=================================*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================
-   HORARIOS Y AULAS - DISTRIBUCIÓN 2x2 + 1
-   ============================================ */
-.horarios-primaria {
-    padding: 20px 0;
-    background: white;
-}
-
-.modalidad-badge-primaria {
-    display: inline-block;
-    background: var(--primary-green);
-    color: white;
-    padding: 12px 28px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 50px;
-}
-
-/* Grid 2 columnas con última card centrada */
-.aulas-grid-primaria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Centrar la última card (quinta) */
-.aula-card-centrada {
-    grid-column: 1 / -1;
-    max-width: 550px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.aula-card-primaria {
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-
-.aula-image-primaria {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.aula-image-primaria img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.aula-card-primaria:hover .aula-image-primaria img {
-    transform: scale(1.08);
-}
-
-.aula-overlay-primaria {
-    position: absolute;
+/* Modal Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(13, 63, 39, 0.45) 100%);
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.active {
     display: flex;
-    align-items: flex-end;
-    padding: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.aula-info-primaria {
-    margin-top: 28px;
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
 }
 
-.aula-info-primaria h4 {
-    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
-    font-size: 1.65rem;
+.lightbox-content img {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 40px;
+    margin-right: 20px;
+    right: 0;
+    background: white;
+    color: black;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    color: black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Header de la sección */
+.gallery-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
     font-weight: 700;
     color: var(--primary-green);
-    margin-bottom: 1px;
-    margin-right: 70px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
-.aula-info-primaria p {
-    font-size: 0.9rem;
+.gallery-subtitle {
     color: black;
-    line-height: 1.6;
-    margin: 0;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .aulas-grid-primaria {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .aula-card-centrada {
-        grid-column: 1;
-        max-width: 100%;
-    }
+/* Contenedor de la galería */
+.gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    padding-bottom: 5rem;
 }
 
-@media (max-width: 576px) {
-    .aulas-grid-primaria {
+/* Grid optimizado para 2-3-2 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+/* Primera fila: 2 imágenes (6 columnas cada una) - Altura más reducida */
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(2) {
+    grid-column: span 6;
+    height: 220px;  /* Altura fija reducida */
+}
+
+/* Segunda fila: 3 imágenes (4 columnas cada una) - Altura más reducida */
+.gallery-item:nth-child(3),
+.gallery-item:nth-child(4),
+.gallery-item:nth-child(5) {
+    grid-column: span 4;
+    height: 220px;  /* Altura fija reducida */
+}
+
+/* Tercera fila: 2 imágenes - MISMA ALTURA FIJA para ambas */
+.gallery-item:nth-child(6) {
+    grid-column: span 7;
+    height: 220px;  /* Altura fija igual para ambas */
+}
+
+.gallery-item:nth-child(7) {
+    grid-column: span 5;
+    height: 220px;  /* Misma altura que la anterior */
+}
+
+/* Estilos de las tarjetas */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MÓVILES Y TABLETS
+   Añadir al final del archivo CSS existente
+============================================ */
+
+/* ============================================
+   TABLETS (768px - 991px)
+============================================ */
+@media (max-width: 991px) {
+    /* Títulos y encabezados */
+    .admision-nav-title {
+        font-size: 2.5rem;
+        padding: 0 1rem;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.6rem;
+        padding: 0 1rem;
+    }
+
+    .section-label {
+        font-size: 0.813rem;
+        padding: 0 1rem;
+    }
+
+    /* Metodología Section */
+    .metodologia-section {
+        padding: 1.5rem 0;
+    }
+
+    .metodologia-content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .metodologia-image {
+        height: 450px;
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .metodologia-list {
+        gap: 1rem;
+    }
+
+    .metodologia-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .metodologia-text h4 {
+        font-size: 1.25rem;
+    }
+
+    .metodologia-text p {
+        font-size: 0.938rem;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+
+    /* Galería */
+    .gallery-container {
+        padding: 0 2rem;
+        padding-bottom: 3rem;
+    }
+
+    .gallery-title {
+        font-size: 2.4rem;
+    }
+
+    .gallery-grid {
         gap: 20px;
-        padding: 0 15px;
     }
 
-    .aula-image-primaria {
+    /* Grid ajustado para tablets */
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2) {
+        height: 200px;
+    }
+
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5) {
+        height: 180px;
+    }
+
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        height: 200px;
+    }
+
+    .lightbox-close {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: 30px;
+        margin-right: 15px;
+    }
+
+    .lightbox-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+/* ============================================
+   MÓVILES GRANDES (576px - 767px)
+============================================ */
+@media (max-width: 767px) {
+    /* Espaciado general */
+    :root {
+        --section-padding: 3rem 0;
+        --container-padding: 0 1rem;
+    }
+
+    /* Títulos principales */
+    .admision-nav-title {
+        font-size: 2rem;
+        padding: 0 1rem;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+
+    .admision-nav-title::after {
+        width: 50px;
+        height: 2.5px;
+        margin: 8px auto 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .section-label {
+        font-size: 0.75rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    /* Metodología Section */
+    .metodologia-section {
+        padding: 2rem 0;
+    }
+
+    .metodologia-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .metodologia-list {
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .metodologia-item {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .metodologia-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .metodologia-text h4 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .metodologia-text p {
+        font-size: 0.938rem;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.7;
+    }
+
+    .metodologia-image {
+        width: calc(100% - 2rem);
+        height: 350px;
+        margin: 2rem 1rem 0 1rem;
+        border-radius: 12px;
+    }
+
+    .metodologia-image img {
+        margin-left: 0;
+        border-radius: 12px;
+    }
+
+    /* Galería */
+    .gallery-header {
+        margin-bottom: 40px;
+        padding: 0 1rem;
+    }
+
+    .gallery-title {
+        font-size: 2rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .gallery-container {
+        padding: 0 1rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Todas las imágenes en columna única */
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        grid-column: span 1;
+        height: 250px;
+        border-radius: 12px;
+    }
+
+    .gallery-item img {
+        border-radius: 12px;
+    }
+
+    /* Lightbox móvil */
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 85vh;
+    }
+
+    .lightbox-close {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+        top: 15px;
+        margin-right: 10px;
+    }
+
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+}
+
+/* ============================================
+   MÓVILES PEQUEÑOS (menor a 576px)
+============================================ */
+@media (max-width: 575px) {
+    /* Títulos */
+    .admision-nav-title {
+        font-size: 1.75rem;
+        padding: 0 0.75rem;
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    .admision-nav-title::after {
+        width: 40px;
+        height: 2px;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+        padding: 0 0.75rem;
+    }
+
+    .section-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.03em;
+    }
+
+    /* Metodología */
+    .metodologia-section {
+        padding: 1.5rem 0;
+    }
+
+    .metodologia-content {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .metodologia-list {
+        gap: 1.25rem;
+    }
+
+    .metodologia-item {
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+
+    .metodologia-number {
+        width: 55px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+
+    .metodologia-text h4 {
+        font-size: 1.1rem;
+    }
+
+    .metodologia-text p {
+        font-size: 0.875rem;
+        line-height: 1.65;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .metodologia-image {
+        width: calc(100% - 1.5rem);
+        height: 280px;
+        margin: 1.5rem 0.75rem 0 0.75rem;
+        border-radius: 10px;
+    }
+
+    /* Galería */
+    .gallery-title {
+        font-size: 1.75rem;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .gallery-container {
+        padding: 0 0.75rem;
+        padding-bottom: 2rem;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        height: 220px;
+        border-radius: 10px;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-4px);
+    }
+
+    /* Lightbox extra pequeño */
+    .lightbox-close {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        top: 10px;
+        margin-right: 8px;
+    }
+
+    .lightbox-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+}
+
+/* ============================================
+   MÓVILES MUY PEQUEÑOS (menor a 375px)
+============================================ */
+@media (max-width: 374px) {
+    .admision-nav-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .metodologia-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    .metodologia-text h4 {
+        font-size: 1rem;
+    }
+
+    .metodologia-text p {
+        font-size: 0.813rem;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+
+    .metodologia-image {
+        height: 240px;
+    }
+
+    .gallery-title {
+        font-size: 1.5rem;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
         height: 200px;
     }
 }
+
+/* ============================================
+   MEJORAS DE ACCESIBILIDAD Y UX MÓVIL
+============================================ */
+@media (max-width: 767px) {
+    /* Mejorar área táctil */
+    .gallery-item {
+        min-height: 200px;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Optimizar animaciones para móvil */
+    .gallery-item:hover {
+        transform: none;
+    }
+
+    .gallery-item:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+
+    /* Scroll suave */
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Prevenir zoom en inputs */
+    input, select, textarea {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   LANDSCAPE MODE (Modo horizontal en móviles)
+============================================ */
+@media (max-width: 767px) and (orientation: landscape) {
+    .metodologia-image {
+        height: 300px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        height: 220px;
+    }
+
+    .lightbox-content {
+        max-height: 90vh;
+    }
+}
+
+
