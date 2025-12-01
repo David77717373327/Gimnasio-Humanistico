@@ -15,6 +15,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ asset('images/Logo.png') }}">
+
+        <!-- Scripts -->
+    <script src="{{ asset('js/hero.js') }}" defer></script>
+
     <!-- CSS personalizado -->
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/basica_secundaria.css') }}" rel="stylesheet">
@@ -23,29 +27,46 @@
 </head>
 
 <body>
-    <!-- Incluir el header -->
-    @include('layouts.header')
+    
 
-    <body>
+<header class="header-top" aria-label="Encabezado principal del sitio">
+        @include('layouts.header')
+    </header>
 
+    <nav class="nav-sticky" aria-label="Navegación principal">
+        @include('layouts.navigation')
+    </nav>
 
-        <!-- HERO SECTION PROFESIONAL -->
-<section class="hero-section">
-    <div class="hero-background">
-        <img src="../images/Mision1.jpg" alt="Educación Básica Primaria">
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-particles"></div>
+    <main id="main" role="main">
 
-    <div class="container hero-container">
-        <div class="hero-content">
-            <h1 class="hero-title" data-title="Educación Básica Secundaria">Educación Básica Secundaria</h1>
-            <div class="hero-scroll-indicator" onclick="scrollToContent()">
-                <i class="fas fa-chevron-down"></i>
+        <!-- HERO -->
+        <section class="hero-section" aria-label="Educación Inicial y Preescolar en Neiva">
+            <div class="hero-background">
+                <img src="../images/Mision1.jpg"
+                    alt="Instalaciones del colegio en Neiva enfocadas en educación inicial y preescolar" width="1920"
+                    height="1080" loading="lazy">
             </div>
-        </div>
-    </div>
-</section>
+
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" aria-hidden="true"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-title="Nuestra Identidad Institucional">
+                        Educación Basica Segundaria
+                    </h1>
+
+                    <div class="hero-scroll-indicator" onclick="scrollToContent()" role="button" tabindex="0"
+                        aria-label="Ir a contenido principal" onkeypress="if(event.key==='Enter')scrollToContent()">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        
 
 
 
@@ -314,94 +335,11 @@
                         </div>
                     </div>
                 </section>
+            </section>
+
+                
 
 
-
-
-                <!-- Horarios y Aulas - Rediseño Ultra Compacto -->
-                <div class="horarios-aulas-section">
-                    <div class="container">
-
-                        <!-- Header de la sección con logo -->
-                        <div class="admision-nav-header">
-                            <div class="header-content-wrapper">
-                                <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
-                                <div class="header-text-content">
-                                    <div class="header-label">
-                                        <span class="label-icon">✦</span>
-                                        <span class="label-text">Información Institucional</span>
-                                    </div>
-                                    <h2 class="admision-nav-title">Horarios y Aulas</h2>
-                                    <p class="admision-nav-subtitle">Ofrecemos instalaciones diseñadas específicamente
-                                        para el desarrollo integral de nuestros estudiantes de preescolar.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <span class="modalidad-badge">Lunes a Viernes • 7:00 AM - 12:00 PM</span>
-
-                        <!-- Aulas por Nivel -->
-                        <div class="aulas-grid">
-                            <div class="aula-item">
-                                <div class="aula-image">
-                                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Párvulos">
-                                    <div class="aula-overlay">
-                                        <span class="aula-nivel">Sexto</span>
-                                    </div>
-                                </div>
-
-                                <div class="aula-info">
-                                    <h4>Párvulos</h4>
-                                    <p>Espacios amplios con áreas de juego sensorial, rincones de exploración y
-                                        mobiliario adaptado para los más pequeños.</p>
-                                </div>
-                            </div>
-
-                            <div class="aula-item">
-                                <div class="aula-image">
-                                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Prejardín">
-                                    <div class="aula-overlay">
-                                        <span class="aula-nivel">Septimo</span>
-                                    </div>
-                                </div>
-                                <div class="aula-info">
-                                    <h4>Prejardín</h4>
-                                    <p>Ambientes coloridos diseñados para promover la creatividad, con zonas de arte,
-                                        lectura y juego dirigido.</p>
-                                </div>
-                            </div>
-                            <div class="aula-item">
-                                <div class="aula-image">
-                                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Jardín">
-                                    <div class="aula-overlay">
-                                        <span class="aula-nivel">Jardín</span>
-                                    </div>
-                                </div>
-                                <div class="aula-info">
-                                    <h4>Octavo</h4>
-                                    <p>Salones equipados con recursos para el desarrollo de habilidades pre-académicas
-                                        en lectoescritura y matemáticas.</p>
-                                </div>
-                            </div>
-
-                            <div class="aula-item">
-                                <div class="aula-image">
-                                    <img src="{{ asset('images/Primariaa.jpeg') }}" alt="Aula Transición">
-                                    <div class="aula-overlay">
-                                        <span class="aula-nivel">Transición</span>
-                                    </div>
-                                </div>
-                                <div class="aula-info">
-                                    <h4>Noveno</h4>
-                                    <p>Aulas preparatorias con tecnología educativa, biblioteca y espacios para trabajo
-                                        individual y colaborativo.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
 
         <!-- Incluir el footer -->
         @include('layouts.footer')
@@ -442,104 +380,7 @@
             });
 
 
-            // Función para scroll suave mejorada con offset
-            function scrollToContent() {
-                const targetSection = document.getElementById('metodologia-secundaria');
-
-                if (targetSection) {
-                    // Obtener la posición de la sección
-                    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
-
-                    // Offset para que no baje de más (ajusta este valor según necesites)
-                    const offset = 70; // Puedes cambiar este valor: 80, 100, 120, etc.
-
-                    window.scrollTo({
-                        top: targetPosition - offset,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    // Opción 2: Si no encuentra la sección, scroll por altura del hero
-                    const heroHeight = document.querySelector('.hero-section').offsetHeight;
-                    window.scrollTo({
-                        top: heroHeight - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-
-            // Auto-ajuste del tamaño según longitud del título
-            document.addEventListener('DOMContentLoaded', function() {
-                const title = document.querySelector('.hero-title');
-
-                if (title) {
-                    const titleLength = title.textContent.trim().length;
-
-                    // Eliminar clases previas
-                    title.classList.remove('title-short', 'title-medium', 'title-long', 'title-extra-long');
-
-                    // Aplicar clase según longitud
-                    if (titleLength <= 15) {
-                        title.classList.add('title-short');
-                    } else if (titleLength <= 25) {
-                        title.classList.add('title-medium');
-                    } else if (titleLength <= 35) {
-                        title.classList.add('title-long');
-                    } else {
-                        title.classList.add('title-extra-long');
-                    }
-
-                    // Remover el cursor de escritura después de la animación
-                    setTimeout(() => {
-                        title.classList.add('typing-complete');
-                    }, 300); // 3.5s de animación + 0.5s extra
-                }
-
-                // Crear partículas
-                createParticles();
-
-                // Asegurar que el scroll indicator funcione
-                const scrollIndicator = document.querySelector('.hero-scroll-indicator');
-                if (scrollIndicator) {
-                    scrollIndicator.addEventListener('click', scrollToContent);
-                }
-            });
-
-           // Función para crear partículas animadas
-        function createParticles() {
-            const particlesContainer = document.querySelector('.hero-particles');
-            if (!particlesContainer) return;
-
-            const particleCount = 30;
-
-            // Limpiar partículas existentes
-            particlesContainer.innerHTML = '';
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-
-                // Posición y delay aleatorios
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 5 + 's';
-                particle.style.animationDuration = (7 + Math.random() * 7) + 's';
-
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-            // Scroll suave para todos los enlaces con ancla
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
+            
         </script>
     </body>
 
