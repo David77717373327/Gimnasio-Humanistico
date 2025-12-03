@@ -168,7 +168,7 @@
             <div class="simbolo-item">
                 <div class="simbolo-row">
                     <div class="simbolo-image-container">
-                        <img src="{{ asset('images/logoo.png') }}" alt="Escudo del Gimnasio Humanístico de Neiva" class="simbolo-image" loading="lazy">
+                        <img src="{{ asset('images/logo.png') }}" alt="Escudo del Gimnasio Humanístico de Neiva" class="simbolo-image" loading="lazy">
                     </div>
                     <div class="simbolo-content">
                         <h3 class="simbolo-name">Escudo Institucional</h3>

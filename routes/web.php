@@ -68,6 +68,10 @@ Route::get('/Mediaacademica', [RutasController::class, 'mostrarcontenidomediaaca
 
 
 
+//Rutas para la propuesta educativa
+Route::get('/enfoque-padagogico', [RutasController::class, 'mostrarcontenidoenfoquepadagogico'])->name('enfoque-padagogico');
+
+
 //Rutas para la navegacion de vida estudantil
 Route::get('/tranporte', [RutasController::class, 'mostrarcontenidotranporte'])->name('transporte');
 

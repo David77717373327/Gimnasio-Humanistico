@@ -65,15 +65,13 @@
                     </div>
                 </li>
 
+                
+
                 <!-- PROPUESTA EDUCATIVA -->
-                <li class="nav-item dropdown" role="none">
-                    <a class="nav-link" href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
-                        Propuesta Educativa
-                    </a>
-                    <div class="dropdown-menu single-column" role="menu">
-                        <a class="dropdown-item" role="menuitem" href="#enfoque">Enfoque Pedagógico</a>
-                    </div>
+                <li class="nav-item" role="none">
+                    <a class="nav-link" href="{{ route('enfoque-padagogico') }}" role="menuitem">Propuesta Educativa</a>
                 </li>
+
 
                 <!-- NIVELES -->
                 <li class="nav-item dropdown" role="none">
@@ -99,10 +97,8 @@
                         Vida Estudiantil
                     </a>
                     <div class="dropdown-menu single-column" role="menu">
-                        <a class="dropdown-item" role="menuitem" href="#actividades">Actividades Extracurriculares</a>
                         <a class="dropdown-item" role="menuitem" href="#eventos">Eventos y Celebraciones</a>
                         <a class="dropdown-item" role="menuitem" href="{{ route('transporte') }}">Transporte Escolar</a>
-                        <a class="dropdown-item" role="menuitem" href="#pastoral">Pastoral Estudiantil</a>
                     </div>
                 </li>
 

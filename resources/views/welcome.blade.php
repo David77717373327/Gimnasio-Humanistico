@@ -318,7 +318,7 @@
                     <div class="col-lg-6">
                         <figure class="welcome-image-container" data-aos="fade-left">
                             <div class="main-image-wrapper">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                <img src="{{ asset('images/Instalaciones.jpg') }}"
                                     alt="Estudiantes del Gimnasio Humanístico en instalaciones modernas del colegio en Neiva"
                                     class="welcome-main-image" width="800" height="600" loading="lazy">
                                 <div class="image-overlay-content" aria-hidden="true">
@@ -368,7 +368,7 @@
                                         alt="Aulas inteligentes con tecnología educativa avanzada y espacios de aprendizaje colaborativo"
                                         class="gallery-image" width="400" height="300" loading="lazy">
                                     <figcaption class="gallery-title-overlay">
-                                        <h4 class="facility-title">Aulas Inteligentes</h4>
+                                        <h4 class="facility-title">Aula De Sistemas</h4>
                                     </figcaption>
                                     <div class="gallery-icon-container" aria-hidden="true">
                                         <i class="fas fa-chalkboard-teacher"></i>
@@ -697,5 +697,16 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const video = document.querySelector(".hero-bg-video");
+
+    video.addEventListener("loadeddata", () => {
+        video.classList.add("loaded");
+    });
+});
+</script>
+
 </body>
 </html>

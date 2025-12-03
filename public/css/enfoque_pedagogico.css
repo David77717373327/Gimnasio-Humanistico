@@ -1,0 +1,415 @@
+/* ============================================
+   METODOLOGÍA INTEGRADA - DISEÑO EMPRESARIAL OPTIMIZADO
+============================================ */
+
+:root {
+    --primary-green: #0d3f27;
+    --secondary-green: #1a5e3f;
+    --light-green: #2a7e4f;
+    --accent-green: #7ddfac;
+    --pure-white: #FFFFFF;
+    --off-white: #FAFAFA;
+    --light-gray: #F5F5F5;
+    --text-black: #1a1a1a;
+    --text-gray: #4a4a4a;
+    --text-light: #757575;
+    --border-light: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text-black);
+    overflow-x: hidden;
+    background: var(--pure-white);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.metodologia-section {
+    padding: 50px 0 30px;
+    background: var(--pure-white);
+}
+
+.container-wide {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* INTRODUCCIÓN - MÁS COMPACTA */
+.section-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.main-title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.main-description {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* ============================================
+   FILAS DE METODOLOGÍA - MÁS COMPACTAS
+============================================ */
+
+.metodologia-row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0;
+    align-items: stretch;
+    min-height: 550px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.metodologia-row.reverse {
+    direction: ltr;
+}
+
+
+
+/* VISUAL/IMAGEN - MÁS COMPACTO */
+.metodologia-visual {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.metodologia-visual .image-wrapper {
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* IMAGEN PRIMERA SECCIÓN (REVERSE) - REDUCIDA */
+.metodologia-row.reverse .metodologia-visual .image-wrapper {
+    height: 420px;
+}
+
+
+
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+
+/* FEATURE DEBAJO DE IMAGEN - COMPACTO */
+.feature-below-image {
+    padding: 25px;
+    background: var(--pure-white);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-below-image .feature-item {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.feature-below-image .feature-icon {
+    width: 55px;
+    height: 55px;
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 18px rgba(13, 63, 39, 0.2);
+}
+
+.feature-below-image .feature-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.feature-below-image .feature-text h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 6px;
+}
+
+.feature-below-image .feature-text p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+/* KIT DEBAJO DE IMAGEN - COMPACTO */
+.kit-below-image {
+    padding: 25px;
+    background: var(--pure-white);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kit-below-image .kit-component {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+.kit-below-image .kit-component.primary {
+    background: var(--off-white);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--border-light);
+}
+
+/* CONTENIDO - MÁS COMPACTO */
+.metodologia-content {
+    padding: 40px;
+    background: var(--pure-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--primary-green);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(13, 63, 39, 0.2);
+}
+
+.content-badge svg {
+    width: 16px;
+    height: 16px;
+}
+
+.content-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 16px;
+    letter-spacing: -1.2px;
+    line-height: 1.15;
+}
+
+.content-description {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+    margin-bottom: 28px;
+    font-weight: 400;
+}
+
+/* FEATURES GRID - MÁS COMPACTO */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.feature-item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-light);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+.feature-item:hover {
+    padding-left: 8px;
+}
+
+.feature-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--off-white);
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    background: var(--primary-green);
+    color: white;
+    transform: scale(1.05);
+}
+
+.feature-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.feature-text h4 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 4px;
+}
+
+.feature-text p {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+/* KIT BREAKDOWN - MÁS COMPACTO */
+.kit-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.kit-component {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-light);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.kit-component:last-child {
+    border-bottom: none;
+}
+
+.kit-component:hover {
+    padding-left: 8px;
+}
+
+.kit-component.primary {
+    background: var(--off-white);
+    padding: 20px;
+    margin: 0 -8px 16px -8px;
+    border-bottom: none;
+    border-radius: 10px;
+    border: 2px solid var(--border-light);
+}
+
+.component-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.component-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    background: var(--primary-green);
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(13, 63, 39, 0.18);
+}
+
+.component-header h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.kit-component > p {
+    font-size: 0.96rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* SUBJECTS - MÁS COMPACTO */
+.subjects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.subject-tag {
+    padding: 6px 14px;
+    background: var(--pure-white);
+    border: 1.5px solid var(--primary-green);
+    color: var(--primary-green);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.subject-tag:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(13, 63, 39, 0.18);
+}
+
+
+
+

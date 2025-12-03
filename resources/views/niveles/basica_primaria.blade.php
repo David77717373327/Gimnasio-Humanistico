@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación Básica Primaria</title>
+    <title>Educación Básica Primaria | Gimnasio Humanístico del Alto Magdalena - Neiva </title>
     <!-- Google Fonts - Tipografía moderna -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +24,8 @@
     <link href="{{ asset('css/basica_primaria.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
       <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/Galeria.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -117,7 +119,7 @@
     <div class="objetivos-content-panel">
 
          <!-- VIDEO DE FONDO -->
-    <video class="objetivos-video-fondo" autoplay muted loop>
+    <video class="objetivos-video-fondo" autoplay muted loop aria-hidden="true">
         <source src="{{ asset('videos/hero-background4.mp4') }}" type="video/mp4">
     </video>
         

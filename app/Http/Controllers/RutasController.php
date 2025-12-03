@@ -65,6 +65,13 @@ class RutasController extends Controller
 
 
 
+    //Rutas para mostrar contenido enfoque pedagodico
+    public function mostrarcontenidoenfoquepadagogico ()
+
+    {
+        return view('Propuesta_Educativa.enfoque_pedagojico');
+    }
+
 
 
 

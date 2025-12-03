@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objetivos Básica Primaria - Carrusel 3D</title>
+    <title>Proceso de Admisiones - Carrusel 3D</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, #0d3f27 0%, #065e35 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -49,7 +49,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 1rem;
             font-weight: 600;
-            color: #F4B942;
+            color: #ffffff;
             margin-bottom: 2rem;
         }
 
@@ -127,7 +127,7 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             padding: 0.5rem 1rem;
-            background: linear-gradient(135deg, #F4B942, #E6A835);
+            background: #000000;
             color: white;
             border-radius: 50px;
             margin-bottom: 1.5rem;
@@ -137,7 +137,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 5rem;
             font-weight: 900;
-            color: rgba(13, 63, 39, 0.1);
+            color: rgba(0, 0, 0, 0.05);
             position: absolute;
             top: 1rem;
             right: 2rem;
@@ -148,7 +148,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             font-weight: 700;
-            color: #0d3f27;
+            color: #000000;
             margin-bottom: 1.5rem;
             line-height: 1.3;
             position: relative;
@@ -158,23 +158,9 @@
         .card-text {
             font-size: 1.0625rem;
             line-height: 1.8;
-            color: #374151;
+            color: #4a4a4a;
             text-align: justify;
             margin-bottom: 2rem;
-        }
-
-        .card-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #0d3f27, #065e35);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 8px 25px rgba(13, 63, 39, 0.3);
         }
 
         /* Controles de navegación */
@@ -192,20 +178,20 @@
             width: 60px;
             height: 60px;
             background: white;
-            border: none;
+            border: 2px solid #000000;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            color: #0d3f27;
+            color: #000000;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .control-btn:hover {
-            background: #F4B942;
+            background: #000000;
             color: white;
             transform: scale(1.1);
         }
@@ -245,7 +231,7 @@
         }
 
         .indicator.active {
-            background: #F4B942;
+            background: #ffffff;
             width: 30px;
             border-radius: 6px;
             border-color: white;
@@ -283,7 +269,7 @@
             }
         }
 
-        @media (max-width: 768px) {
+                    @media (max-width: 768px) {
             .carousel-container {
                 height: 500px;
             }
@@ -316,12 +302,6 @@
                 font-size: 0.9375rem;
             }
 
-            .card-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 2rem;
-            }
-
             .carousel-controls {
                 bottom: -60px;
             }
@@ -340,149 +320,54 @@
 </head>
 <body>
     <div class="header-section">
-        <h1 class="main-title">Objetivos Básica Primaria</h1>
-        <p class="subtitle">Explora cada objetivo de formación integral</p>
+        <h1 class="main-title">Proceso de Admisiones</h1>
+        <p class="subtitle">Sigue estos pasos para unirte a nuestra comunidad educativa</p>
     </div>
 
     <div class="progress-counter">
-        <span id="currentNum">1</span> / <span id="totalNum">15</span>
+        Paso <span id="currentNum">1</span> de <span id="totalNum">5</span>
     </div>
 
     <div class="carousel-container">
         <div class="carousel-track" id="carouselTrack">
             <!-- Tarjeta 1 -->
             <div class="carousel-card active">
-                <div class="card-icon">🎓</div>
                 <div class="card-number">01</div>
-                <span class="card-category-badge">Valores y Ciudadanía</span>
-                <h3 class="card-title">Valores para la Convivencia</h3>
-                <p class="card-text">La formación de los valores fundamentales para la convivencia de una sociedad democrática, participativa y pluralista.</p>
+                <span class="card-category-badge">Inicio del Proceso</span>
+                <h3 class="card-title">Compra del Formulario</h3>
+                <p class="card-text">El primer paso es adquirir el formulario de inscripción en la secretaría del colegio o a través de nuestra plataforma virtual. Este documento es necesario para iniciar tu proceso de admisión y contiene toda la información que necesitamos conocer sobre el estudiante.</p>
             </div>
 
             <!-- Tarjeta 2 -->
             <div class="carousel-card next">
-                <div class="card-icon">🤝</div>
                 <div class="card-number">02</div>
-                <span class="card-category-badge">Valores y Ciudadanía</span>
-                <h3 class="card-title">Valores Cívicos y Morales</h3>
-                <p class="card-text">El desarrollo de valores civiles y morales de organización social y de convivencia humana.</p>
+                <span class="card-category-badge">Documentación</span>
+                <h3 class="card-title">Anexar Documentos</h3>
+                <p class="card-text">Completa el formulario y anexa los documentos pertinentes: fotocopia del documento de identidad del estudiante, registro civil, certificados de estudios anteriores, certificado médico, dos fotos recientes y fotocopia de los documentos de identidad de los padres o acudientes.</p>
             </div>
 
             <!-- Tarjeta 3 -->
             <div class="carousel-card hidden">
-                <div class="card-icon">📜</div>
                 <div class="card-number">03</div>
-                <span class="card-category-badge">Valores y Ciudadanía</span>
-                <h3 class="card-title">Educación Constitucional</h3>
-                <p class="card-text">La iniciación en el conocimiento de la constitución política.</p>
+                <span class="card-category-badge">Evaluación Personal</span>
+                <h3 class="card-title">Entrevista con la Rectora</h3>
+                <p class="card-text">Una vez revisada la documentación, se programará una entrevista personal con la rectora del colegio. Este encuentro permite conocer mejor al estudiante y su familia, compartir la filosofía institucional y resolver cualquier inquietud sobre nuestro proyecto educativo.</p>
             </div>
 
             <!-- Tarjeta 4 -->
             <div class="carousel-card hidden">
-                <div class="card-icon">👥</div>
                 <div class="card-number">04</div>
-                <span class="card-category-badge">Valores y Ciudadanía</span>
-                <h3 class="card-title">Participación Infantil</h3>
-                <p class="card-text">La formación para la participación y organización infantil y la utilización adecuada del tiempo libre.</p>
+                <span class="card-category-badge">Evaluación Académica</span>
+                <h3 class="card-title">Prueba de Admisión</h3>
+                <p class="card-text">El estudiante presentará una evaluación diagnóstica que nos permitirá conocer su nivel académico actual. Esta prueba abarca las áreas fundamentales según el grado al que aspira ingresar y nos ayuda a diseñar un plan de acompañamiento personalizado.</p>
             </div>
 
             <!-- Tarjeta 5 -->
             <div class="carousel-card hidden">
-                <div class="card-icon">💡</div>
                 <div class="card-number">05</div>
-                <span class="card-category-badge">Desarrollo Académico</span>
-                <h3 class="card-title">Deseo de Saber</h3>
-                <p class="card-text">El fomento del deseo del saber, de la iniciativa personal frente al conocimiento y frente a la realidad social, así como el espíritu crítico.</p>
-            </div>
-
-            <!-- Tarjeta 6 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">✍️</div>
-                <div class="card-number">06</div>
-                <span class="card-category-badge">Desarrollo Académico</span>
-                <h3 class="card-title">Habilidades Comunicativas</h3>
-                <p class="card-text">El desarrollo de las habilidades comunicativas básicas para leer, comprender, escribir, escuchar, hablar y expresarse correctamente en lengua castellana, así como el fomento de la afición por la lectura.</p>
-            </div>
-
-            <!-- Tarjeta 7 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">🎨</div>
-                <div class="card-number">07</div>
-                <span class="card-category-badge">Desarrollo Académico</span>
-                <h3 class="card-title">Expresión Estética</h3>
-                <p class="card-text">El desarrollo de la capacidad para apreciar y utilizar la lengua como medio de expresión estética.</p>
-            </div>
-
-            <!-- Tarjeta 8 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">🔢</div>
-                <div class="card-number">08</div>
-                <span class="card-category-badge">Desarrollo Académico</span>
-                <h3 class="card-title">Pensamiento Matemático</h3>
-                <p class="card-text">El desarrollo de los conocimientos matemáticos necesarios para manejar y utilizar operaciones simples de cálculo y procedimientos lógicos elementales en diferentes situaciones.</p>
-            </div>
-
-            <!-- Tarjeta 9 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">🌍</div>
-                <div class="card-number">09</div>
-                <span class="card-category-badge">Desarrollo Académico</span>
-                <h3 class="card-title">Comprensión del Medio</h3>
-                <p class="card-text">La comprensión básica del medio físico, social y cultural en el nivel local, nacional y universal, de acuerdo con el desarrollo intelectual correspondiente a su edad.</p>
-            </div>
-
-            <!-- Tarjeta 10 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">📚</div>
-                <div class="card-number">10</div>
-                <span class="card-category-badge">Desarrollo Académico</span>
-                <h3 class="card-title">Asimilación de Conceptos</h3>
-                <p class="card-text">La asimilación de conceptos en áreas del conocimiento que sean objeto de estudio, de acuerdo con el desarrollo intelectual y la edad.</p>
-            </div>
-
-            <!-- Tarjeta 11 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">🌐</div>
-                <div class="card-number">11</div>
-                <span class="card-category-badge">Desarrollo Académico</span>
-                <h3 class="card-title">Lengua Extranjera</h3>
-                <p class="card-text">La adquisición de elementos de conversación y de lectura al menos en una lengua extranjera.</p>
-            </div>
-
-            <!-- Tarjeta 12 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">🏥</div>
-                <div class="card-number">12</div>
-                <span class="card-category-badge">Desarrollo Físico</span>
-                <h3 class="card-title">Salud y Cuidado Personal</h3>
-                <p class="card-text">La valoración de la higiene y la salud del propio cuerpo y la formación para la protección de la naturaleza y el ambiente.</p>
-            </div>
-
-            <!-- Tarjeta 13 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">⚽</div>
-                <div class="card-number">13</div>
-                <span class="card-category-badge">Desarrollo Físico</span>
-                <h3 class="card-title">Educación Física y Deportes</h3>
-                <p class="card-text">El conocimiento y ejercitación del propio cuerpo mediante la práctica de la educación física, la recreación y los deportes adecuados a su edad.</p>
-            </div>
-
-            <!-- Tarjeta 14 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">🎭</div>
-                <div class="card-number">14</div>
-                <span class="card-category-badge">Desarrollo Físico</span>
-                <h3 class="card-title">Formación Artística</h3>
-                <p class="card-text">La formación artística mediante la expresión corporal, la representación, la música, la plástica y la literatura.</p>
-            </div>
-
-            <!-- Tarjeta 15 -->
-            <div class="carousel-card hidden">
-                <div class="card-icon">🎯</div>
-                <div class="card-number">15</div>
-                <span class="card-category-badge">Habilidades Sociales</span>
-                <h3 class="card-title">Autonomía Personal</h3>
-                <p class="card-text">La adquisición de habilidades para desempeñarse con autonomía en la sociedad.</p>
+                <span class="card-category-badge">Finalización</span>
+                <h3 class="card-title">Matrícula y Bienvenida</h3>
+                <p class="card-text">¡Felicitaciones! Una vez aprobado el proceso, recibirás la carta de aceptación y podrás proceder con la matrícula oficial. Te daremos la bienvenida a nuestra familia educativa y te entregaremos toda la información sobre el inicio de clases, uniformes y materiales necesarios.</p>
             </div>
         </div>
 
