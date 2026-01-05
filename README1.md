@@ -1,3 +1,173 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('grados', function (Blueprint $table) {
+        $table->id();
+        $table->string('nombre'); // Ejemplo: 10A, 9B
+        $table->timestamps();
+    });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('grados');
+    }
+};
+
+
+
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->nullable(); // si no usas name, puedes poner nullable
+            $table->string('document')->unique(); // 👈 campo documento
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->string('role')->default('student');
+            $table->boolean('is_approved')->default(false);
+            // relación con grados
+            $table->foreignId('grado_id')->nullable()->constrained('grados')->onDelete('set null');
+            $table->rememberToken();
+            $table->softDeletes(); // 👈 para soft deletes
+            $table->foreignId('current_team_id')->nullable();
+            $table->string('profile_photo_path', 2048)->nullable();
+            $table->timestamps();
+        });
+
+        Schema::create('password_reset_tokens', function (Blueprint $table) {
+            $table->string('email')->primary();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
+        });
+
+        Schema::create('sessions', function (Blueprint $table) {
+            $table->string('id')->primary();
+            $table->foreignId('user_id')->nullable()->index();
+            $table->string('ip_address', 45)->nullable();
+            $table->text('user_agent')->nullable();
+            $table->longText('payload');
+            $table->integer('last_activity')->index();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('users');
+        Schema::dropIfExists('password_reset_tokens');
+        Schema::dropIfExists('sessions');
+    }
+
+    
+};
+
+
+
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('asignaturas', function (Blueprint $table) {
+        $table->id();
+        $table->string('nombre'); // Ejemplo: Matemáticas, Español
+        $table->timestamps();
+    });
+    
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('asignaturas');
+    }
+};
+
+
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('horarios', function (Blueprint $table) {
+            $table->id();
+
+            // Llaves foráneas explícitas
+            $table->unsignedBigInteger('grado_id');
+            $table->unsignedBigInteger('asignatura_id');
+            $table->unsignedBigInteger('user_id'); // Profesor
+
+            // Datos del horario
+            $table->string('dia'); 
+            $table->time('hora_inicio');
+            $table->time('hora_fin');
+
+            $table->timestamps();
+
+            // Definición de claves foráneas
+            $table->foreign('grado_id')->references('id')->on('grados')->onDelete('cascade');
+            $table->foreign('asignatura_id')->references('id')->on('asignaturas')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('horarios');
+    }
+};
 
 
 
@@ -16,108 +186,155 @@
 
 
 
-<!-- HORARIOS Y AULAS -->
-        <section class="horarios-primaria">
-            <div class="container">
-                <!-- Header de la sección con logo -->
-                <div class="admision-nav-header">
-                    <div class="header-content-wrapper">
-                        <img src="{{ asset('images/logo.png') }}" alt="Logo Colegio" class="header-logo">
-                        <div class="header-text-content">
-                            <div class="header-label">
-                                <span class="label-icon">✦</span>
-                                <span class="label-text">Comunicate con nosotros</span>
-                            </div>
-                            <h2 class="admision-nav-title">Horarios y Aulas</h2>
-                            <p class="admision-nav-subtitle">Conoce nuestras instalaciones y espacios de aprendizaje.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <span class="modalidad-badge-primaria">
-                        <i class="far fa-clock"></i> Lunes a Viernes • 7:00 AM - 2:30 PM
-                    </span>
-                </div>
-
-                <div class="aulas-grid-primaria">
-                    <!-- Aula 1 -->
-                    <div class="aula-card-primaria">
-                        <div class="aula-image-primaria">
-                            <img src="images/Primariaa.jpeg" alt="Aula 1">                            
-                        </div>
-                        <div class="aula-info-primaria">
-                            <h4>Aula de Primero</h4>
-                            <p>
-                                Espacio equipado con materiales didácticos para el aprendizaje
-                                inicial de lectoescritura y matemáticas básicas.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Aula 2 -->
-                    <div class="aula-card-primaria">
-                        <div class="aula-image-primaria">
-                            <img src="images/Primariaa.jpeg" alt="Aula 2">
-                            
-                        </div>
-                        <div class="aula-info-primaria">
-                            <h4>Aula de Segundo</h4>
-                            <p>
-                                Ambiente diseñado para fortalecer procesos de lectura,
-                                escritura y operaciones matemáticas fundamentales.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Aula 3 -->
-                    <div class="aula-card-primaria">
-                        <div class="aula-image-primaria">
-                            <img src="images/Primariaa.jpeg" alt="Aula 3">
-                            
-                        </div>
-                        <div class="aula-info-primaria">
-                            <h4>Aula de Tercero</h4>
-                            <p>
-                                Salón equipado con recursos para el desarrollo del pensamiento
-                                analítico y la investigación científica básica.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Aula 4 -->
-                    <div class="aula-card-primaria">
-                        <div class="aula-image-primaria">
-                            <img src="images/Primariaa.jpeg" alt="Aula 4">
-                            
-                        </div>
-                        <div class="aula-info-primaria">
-                            <h4>Aula de Cuarto</h4>
-                            <p>
-                                Espacio especializado para competencias científicas, históricas
-                                y resolución de problemas matemáticos avanzados.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Aula 5 -->
-                    <div class="aula-card-primaria aula-card-centrada">
-                        <div class="aula-image-primaria">
-                            <img src="images/Primariaa.jpeg" alt="Aula 5">
-                        </div>
-                        <div class="aula-info-primaria">
-                            <h4>Aula de Quinto</h4>
-                            <p>
-                                Salón preparado para estudiantes en transición hacia secundaria,
-                                enfocado en autonomía y liderazgo estudiantil.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
 
 
 
+
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up()
+    {
+        Schema::create('niveles', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre'); // Preescolar, Primaria, Secundaria, Media
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('niveles');
+    }
+};
+
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up()
+    {
+        Schema::create('grados', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre'); // 1A, 5B, 9A
+            $table->foreignId('nivel_id')->constrained('niveles')->onDelete('cascade');
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('grados');
+    }
+};
+
+
+
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up()
+    {
+        Schema::create('asignaturas', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('asignaturas');
+    }
+};
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up()
+    {
+        Schema::create('horarios', function (Blueprint $table) {
+            $table->id();
+
+            $table->foreignId('grado_id')->constrained('grados')->onDelete('cascade');
+            $table->foreignId('asignatura_id')->constrained('asignaturas')->onDelete('cascade');
+            $table->foreignId('profesor_id')->constrained('users')->onDelete('cascade');
+
+            $table->enum('dia', ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']);
+            $table->time('hora_inicio');
+            $table->time('hora_fin');
+
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('horarios');
+    }
+};
+
+
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up()
+    {
+        Schema::create('descansos', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('grado_id')->constrained('grados')->onDelete('cascade');
+            $table->time('hora_inicio');
+            $table->time('hora_fin');
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('descansos');
+    }
+};

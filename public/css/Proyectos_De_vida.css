@@ -1,0 +1,512 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    --dark-blue: #264653;
+    --deep-blue: #003366;
+    --soft-blue: #07346e;
+    --slate-blue: #3A506B;
+    --light-blue: #E0ECF7;
+
+    /* Nuevos colores para modernizar */
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+
+
+
+
+
+
+/* ============================================
+   SECCIÓN INTRODUCCIÓN - NUEVO
+============================================ */
+
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+============================================ */
+.proyectos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px 80px;
+}
+
+/* ============================================
+   PROYECTO ITEM
+============================================ */
+.proyecto-item {
+    background: var(--white);
+    border-radius: 0;
+    overflow: hidden;
+    margin-bottom: 60px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.proyecto-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.proyecto-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Encabezado - PADDING REDUCIDO */
+.proyecto-header {
+    background:  rgb(219, 217, 217);
+    padding: 15px 48px; /* REDUCIDO de 32px a 20px */
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.proyecto-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem; /* REDUCIDO de 2rem a 1.75rem */
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenido - Layout Grid */
+.proyecto-content {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: auto;
+}
+
+/* ============================================
+   CARRUSEL - ALTURA REDUCIDA
+============================================ */
+.proyecto-carrusel {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+    height: 350px; /* REDUCIDO de 400px a 350px */
+}
+
+.carrusel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.carrusel-image.active {
+    opacity: 1;
+}
+
+.carrusel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Controles del carrusel */
+.carrusel-controls {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.carrusel-btn {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carrusel-btn:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+.carrusel-btn i {
+    font-size: 1.2rem;
+}
+
+/* Indicadores */
+.carrusel-indicators {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--white);
+    width: 30px;
+    border-radius: 5px;
+}
+
+/* Contador */
+.carrusel-counter {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: white;
+    backdrop-filter: blur(10px);
+    color: black;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   INFORMACIÓN
+============================================ */
+.proyecto-info {
+    padding: 40px 45px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom right, #ffffff 0%, #f8fafb 100%);
+}
+
+.proyecto-descripcion {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-weight: 480;
+    color: black;
+    text-align: justify;
+    margin: 0;
+}
+
+/* ============================================
+   MODAL
+============================================ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px 20px;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: calc(100vh - 120px);
+    object-fit: contain;
+}
+
+/* BOTÓN CERRAR */
+.modal-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    transition: all 0.3s ease;
+    
+    z-index: 10000;
+}
+
+
+/* Botones de navegación del modal */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 9998;
+}
+
+.modal-nav.prev {
+    left: 20px;
+}
+
+.modal-nav.next {
+    right: 20px;
+}
+
+.modal-nav i {
+    font-size: 1.4rem;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 1024px) {
+    
+        .proyectos-container {
+        padding: 50px 30px 70px;
+    }
+  
+    .proyecto-content {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto-carrusel {
+        height: 320px;
+    }
+
+    .proyecto-info {
+        padding: 40px 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+
+    .proyectos-container {
+        padding: 50px 30px 70px;
+    }
+
+    
+
+
+    .proyecto-header {
+        padding: 18px 30px; /* REDUCIDO para móviles */
+    }
+
+    .proyecto-titulo {
+        font-size: 1.4rem; /* REDUCIDO para móviles */
+    }
+
+    .proyecto-carrusel {
+        height: 280px;
+    }
+
+    .proyecto-info {
+        padding: 35px 25px;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+
+    .modal-nav {
+        width: 45px;
+        height: 45px;
+    }
+
+    .modal-nav.prev {
+        left: 10px;
+    }
+
+    .modal-nav.next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+
+    .proyecto-carrusel {
+        height: 250px;
+    }
+
+    .carrusel-counter {
+        top: 15px;
+        left: 15px;
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .carrusel-controls {
+        gap: 12px;
+        bottom: 20px;
+    }
+
+    .carrusel-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .carrusel-btn i {
+        font-size: 1rem;
+    }
+
+    .proyecto-info {
+        padding: 30px 20px;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.95rem;
+    }
+
+    .modal-close {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .modal-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .modal-nav i {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mejoras adicionales de accesibilidad */
+.carrusel-btn:focus,
+.modal-close:focus,
+.modal-nav:focus {
+    outline: 3px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+/* Animación suave para las cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.proyecto-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Prevenir selección de texto en elementos interactivos */
+.carrusel-btn,
+.modal-close,
+.modal-nav,
+.indicator {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}

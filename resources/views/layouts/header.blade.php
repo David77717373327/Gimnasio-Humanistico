@@ -29,6 +29,16 @@
 </header>
 
 
+
+<!-- Incluye el botón de WhatsApp -->
+    <script src="{{ asset('js/whatsapp-button.js') }}"></script>
+
+
+
+
+
+
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 

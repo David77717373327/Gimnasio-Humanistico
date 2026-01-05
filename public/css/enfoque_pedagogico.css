@@ -1,5 +1,7 @@
 /* ============================================
-   METODOLOGÍA INTEGRADA - DISEÑO EMPRESARIAL OPTIMIZADO
+   METODOLOGÍA ARQUITECTÓNICA - DISEÑO COMPACTO
+   Versión optimizada con espaciado reducido
+   Archivo: enfoque_pedagogico.css
 ============================================ */
 
 :root {
@@ -16,400 +18,588 @@
     --border-light: #e0e0e0;
 }
 
-* {
-    margin: 0;
+/* ============================================
+   RESET Y BASE
+============================================ */
+
+.metodologia-arquitectura {
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    background: #ffffff;
+    position: relative;
 }
 
-body {
-    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: var(--text-black);
-    overflow-x: hidden;
-    background: var(--pure-white);
+/* ============================================
+   INTRODUCCIÓN ARQUITECTÓNICA - MEJORADA
+============================================ */
+
+.arquitectura-intro {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 40px 40px;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
 }
 
-/* CONTENEDOR PRINCIPAL */
-.metodologia-section {
-    padding: 50px 0 30px;
-    background: var(--pure-white);
+.intro-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--primary-green) 50%, transparent 100%);
 }
 
-.container-wide {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-/* INTRODUCCIÓN - MÁS COMPACTA */
-.section-intro {
+.intro-content {
     text-align: center;
-    margin-bottom: 50px;
+    max-width: 700px;
 }
 
-.section-tag {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 2.5px;
+.intro-micro {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--primary-green);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.main-title {
-    font-size: 3.2rem;
-    font-weight: 600;
+.intro-macro {
+    font-size: 3rem;
+    font-weight: 700;
     color: var(--primary-green);
-    margin-bottom: 15px;
-    letter-spacing: -1.5px;
-    line-height: 1.1;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.main-description {
-    font-size: 1.2rem;
-    color: var(--text-gray);
-    max-width: 750px;
-    margin: 0 auto;
-    line-height: 1.6;
+.intro-texto {
+    font-size: 1.05rem;
+    color: black;
+    line-height: 1.7;
     font-weight: 400;
 }
 
 /* ============================================
-   FILAS DE METODOLOGÍA - MÁS COMPACTAS
+   GRID SIMÉTRICO - LAYOUT MEJORADO
 ============================================ */
 
-.metodologia-row {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 0;
-    align-items: stretch;
-    min-height: 550px;
-    overflow: hidden;
-    margin-bottom: 60px;
-}
-
-.metodologia-row.reverse {
-    direction: ltr;
-}
-
-
-
-/* VISUAL/IMAGEN - MÁS COMPACTO */
-.metodologia-visual {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.grid-simetrico {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px 80px;
     display: flex;
     flex-direction: column;
-    background: transparent;
+    gap: 0;
 }
 
-.metodologia-visual .image-wrapper {
-    height: 350px;
+/* ============================================
+   MÓDULO EDUCATIVO - ESTRUCTURA MEJORADA
+============================================ */
+
+.modulo-educativo {
+    width: 100%;
+    padding: 60px 0;
+    border-top: 1px solid #a1a1a1;
     position: relative;
+}
+
+.modulo-educativo[data-modulo="01"] {
+    padding-top: 30px;
+}
+
+/* Header del Módulo - Sin número grande */
+.modulo-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.modulo-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary-green);
+    padding: 8px 20px;
+    background: rgba(var(--primary-green-rgb, 46, 125, 50), 0.08);
+    border-radius: 2px;
+    margin-bottom: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modulo-titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-right {
+    display: none;
+}
+
+.numero-grande {
+    display: none;
+}
+
+/* ============================================
+   GRID DEL MÓDULO - 55/45 MEJORADO SIMÉTRICO
+============================================ */
+
+.modulo-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* ============================================
+   IMAGEN - FRAME MEJORADO Y MÁS GRANDE
+============================================ */
+
+.modulo-imagen {
+    position: relative;
+    width: 100%;
+}
+
+.imagen-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
     overflow: hidden;
+    background: #f8f9fa;
 }
 
-/* IMAGEN PRIMERA SECCIÓN (REVERSE) - REDUCIDA */
-.metodologia-row.reverse .metodologia-visual .image-wrapper {
-    height: 420px;
+.imagen-frame::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #807f7f;
+    z-index: 2;
 }
 
-
-
-
-.image-wrapper img {
+.imagen-frame img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    z-index: 1;
 }
 
+/* ============================================
+   CONTENIDO DEL MÓDULO - MEJORADO Y COMPACTO
+============================================ */
 
-
-
-
-/* FEATURE DEBAJO DE IMAGEN - COMPACTO */
-.feature-below-image {
-    padding: 25px;
-    background: var(--pure-white);
-    flex: 1;
+.modulo-contenido {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 28px;
 }
 
-.feature-below-image .feature-item {
-    border: none;
-    padding: 0;
+.contenido-descripcion {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #1f2937;
+    font-weight: 400;
     margin: 0;
-    background: transparent;
-    display: flex;
-    gap: 16px;
-    align-items: center;
+    padding-left: 28px;
+    border-left: 4px solid var(--primary-green);
 }
 
-.feature-below-image .feature-icon {
-    width: 55px;
-    height: 55px;
+/* ============================================
+   CARACTERÍSTICAS - GRID 2X2 MEJORADO Y COMPACTO
+============================================ */
+
+.caracteristicas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.caracteristica {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.caracteristica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.caracteristica::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+
+/* Colores estáticos por característica */
+.caracteristica:nth-child(1) {
+    border-top-color: var(--primary-green);
+}
+
+.caracteristica:nth-child(1)::before {
     background: var(--primary-green);
-    color: white;
-    border: none;
-    border-radius: 10px;
+}
+
+.caracteristica:nth-child(1) .caracteristica-icono {
+    color: var(--primary-green);
+}
+
+.caracteristica:nth-child(1) .caracteristica-texto h4 {
+    color: var(--primary-green);
+}
+
+.caracteristica:nth-child(2) {
+    border-top-color: var(--primary-green);
+}
+
+.caracteristica:nth-child(2)::before {
+    background: var(--primary-green);
+}
+
+.caracteristica:nth-child(2) .caracteristica-icono {
+    color: var(--primary-green);
+}
+
+.caracteristica:nth-child(2) .caracteristica-texto h4 {
+    color: var(--primary-green);
+}
+
+.caracteristica:nth-child(3) {
+    border-top-color: var(--primary-green);
+}
+
+.caracteristica:nth-child(3)::before {
+    background: var(--primary-green);
+}
+
+.caracteristica:nth-child(3) .caracteristica-icono {
+    color: var(--primary-green);
+}
+
+.caracteristica:nth-child(3) .caracteristica-texto h4 {
+    color: var(--primary-green);
+}
+
+.caracteristica:nth-child(4) {
+    border-top-color: var(--primary-green);
+}
+
+.caracteristica:nth-child(4)::before {
+    background: var(--primary-green);
+}
+
+.caracteristica:nth-child(4) .caracteristica-icono {
+    color: var(--primary-green);
+}
+
+.caracteristica:nth-child(4) .caracteristica-texto h4 {
+    color: var(--primary-green);
+}
+
+.caracteristica-icono {
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    box-shadow: 0 6px 18px rgba(13, 63, 39, 0.2);
 }
 
-.feature-below-image .feature-icon svg {
-    width: 26px;
-    height: 26px;
+.caracteristica-icono svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 2;
 }
 
-.feature-below-image .feature-text h4 {
-    font-size: 1.2rem;
+.caracteristica-texto h4 {
+    font-size: 0.95rem;
     font-weight: 600;
-    color: var(--primary-green);
-    margin-bottom: 6px;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.3px;
 }
 
-.feature-below-image .feature-text p {
-    font-size: 1rem;
+.caracteristica-texto p {
+    font-size: 0.9rem;
     color: var(--text-gray);
     line-height: 1.5;
-}
-
-/* KIT DEBAJO DE IMAGEN - COMPACTO */
-.kit-below-image {
-    padding: 25px;
-    background: var(--pure-white);
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.kit-below-image .kit-component {
-    padding: 0;
-    border: none;
     margin: 0;
-}
-
-.kit-below-image .kit-component.primary {
-    background: var(--off-white);
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid var(--border-light);
-}
-
-/* CONTENIDO - MÁS COMPACTO */
-.metodologia-content {
-    padding: 40px;
-    background: var(--pure-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.content-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
-    background: var(--primary-green);
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    width: fit-content;
-    box-shadow: 0 4px 12px rgba(13, 63, 39, 0.2);
-}
-
-.content-badge svg {
-    width: 16px;
-    height: 16px;
-}
-
-.content-title {
-    font-size: 2.6rem;
-    font-weight: 700;
-    color: var(--primary-green);
-    margin-bottom: 16px;
-    letter-spacing: -1.2px;
-    line-height: 1.15;
-}
-
-.content-description {
-    font-size: 1.08rem;
-    line-height: 1.7;
-    color: var(--text-gray);
-    margin-bottom: 28px;
     font-weight: 400;
 }
 
-/* FEATURES GRID - MÁS COMPACTO */
-.features-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-}
+/* ============================================
+   COMPONENTES DEL KIT - LISTA MEJORADA Y COMPACTA
+============================================ */
 
-.feature-item {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--border-light);
-    background: transparent;
-    transition: all 0.3s ease;
-}
-
-.feature-item:last-child {
-    border-bottom: none;
-}
-
-.feature-item:hover {
-    padding-left: 8px;
-}
-
-.feature-icon {
-    width: 46px;
-    height: 46px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--off-white);
-    border: 2px solid var(--primary-green);
-    color: var(--primary-green);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.feature-item:hover .feature-icon {
-    background: var(--primary-green);
-    color: white;
-    transform: scale(1.05);
-}
-
-.feature-icon svg {
-    width: 22px;
-    height: 22px;
-}
-
-.feature-text h4 {
-    font-size: 1.08rem;
-    font-weight: 600;
-    color: var(--primary-green);
-    margin-bottom: 4px;
-}
-
-.feature-text p {
-    font-size: 0.95rem;
-    color: var(--text-gray);
-    line-height: 1.5;
-}
-
-/* KIT BREAKDOWN - MÁS COMPACTO */
-.kit-breakdown {
+.componentes-lista {
     display: flex;
     flex-direction: column;
     gap: 0;
 }
 
-.kit-component {
-    padding: 16px 0;
-    border-bottom: 1px solid var(--border-light);
-    background: transparent;
+.componente {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid #8b8b8b;
     transition: all 0.3s ease;
 }
 
-.kit-component:last-child {
-    border-bottom: none;
-}
 
-.kit-component:hover {
-    padding-left: 8px;
-}
-
-.kit-component.primary {
-    background: var(--off-white);
-    padding: 20px;
-    margin: 0 -8px 16px -8px;
-    border-bottom: none;
-    border-radius: 10px;
-    border: 2px solid var(--border-light);
-}
-
-.component-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 10px;
-}
-
-.component-number {
-    width: 40px;
-    height: 40px;
+.componente-numero {
+    width: 65px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: white;
+    border: 2px solid var(--primary-green);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+}
+
+.componente:hover .componente-numero {
     background: var(--primary-green);
-    border-radius: 8px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(13, 63, 39, 0.18);
+    transform: scale(1.05);
 }
 
-.component-header h4 {
-    font-size: 1.15rem;
-    font-weight: 600;
+.componente-numero span {
+    font-size: 1.9rem;
+    font-weight: 700;
     color: var(--primary-green);
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
 }
 
-.kit-component > p {
-    font-size: 0.96rem;
-    color: var(--text-gray);
-    line-height: 1.6;
-    margin-bottom: 12px;
+.componente:hover .componente-numero span {
+    color: white;
 }
 
-/* SUBJECTS - MÁS COMPACTO */
-.subjects-container {
+.componente-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.componente-info h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.componente-info p {
+    font-size: 0.95rem;
+    color: black;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ============================================
+   ETIQUETAS DE MATERIAS - MEJORADAS Y COMPACTAS
+============================================ */
+
+.materias-etiquetas {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
+    gap: 12px;
+    padding-top: 15px;
 }
 
-.subject-tag {
-    padding: 6px 14px;
-    background: var(--pure-white);
-    border: 1.5px solid var(--primary-green);
-    color: var(--primary-green);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    border-radius: 18px;
+.etiqueta {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 9px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    border-radius: 4px;
     transition: all 0.3s ease;
-    cursor: default;
 }
 
-.subject-tag:hover {
-    background: var(--primary-green);
-    color: white;
-    transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(13, 63, 39, 0.18);
+.etiqueta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Colores profesionales por materia */
+.etiqueta:nth-child(1) {
+    background: rgba(37, 99, 235, 0.1);
+    color: #1e40af;
+    border: 2px solid rgba(12, 63, 172, 0.5);
+}
 
+.etiqueta:nth-child(2) {
+    background: rgba(220, 38, 38, 0.1);
+    color: #b91c1c;
+    border: 2px solid rgba(220, 38, 38, 0.5);
+}
 
+.etiqueta:nth-child(3) {
+    background: rgba(5, 150, 105, 0.1);
+    color: #047857;
+    border: 2px solid rgba(5, 150, 105, 0.5);
+}
 
+.etiqueta:nth-child(4) {
+    background: rgba(147, 51, 234, 0.1);
+    color: #7e22ce;
+    border: 2px solid rgba(147, 51, 234, 0.5);
+}
+
+.etiqueta:nth-child(5) {
+    background: rgba(234, 88, 12, 0.1);
+    color: #c2410c;
+    border: 2px solid rgba(234, 88, 12, 0.5);
+}
+
+/* ============================================
+   RESPONSIVE - TABLETS
+============================================ */
+
+@media (max-width: 1024px) {
+    .arquitectura-intro {
+        padding: 60px 40px 50px;
+        gap: 30px;
+    }
+    
+    .intro-macro {
+        font-size: 3rem;
+    }
+    
+    .grid-simetrico {
+        padding: 0 40px 60px;
+    }
+    
+    .modulo-grid {
+        gap: 50px;
+    }
+    
+    .modulo-titulo {
+        font-size: 2.4rem;
+    }
+    
+    .numero-grande {
+        width: 90px;
+        height: 90px;
+        font-size: 3.5rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MÓVILES
+============================================ */
+
+@media (max-width: 768px) {
+    .arquitectura-intro {
+        grid-template-columns: 1fr;
+        padding: 50px 20px 40px;
+        gap: 20px;
+    }
+    
+    .intro-line {
+        display: none;
+    }
+    
+    .intro-macro {
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+    
+    .intro-texto {
+        font-size: 1rem;
+    }
+    
+    .grid-simetrico {
+        padding: 0 20px 50px;
+    }
+    
+    .modulo-educativo {
+        padding: 45px 0;
+    }
+    
+    .modulo-header {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+    
+    .modulo-titulo {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    
+    .numero-grande {
+        width: 75px;
+        height: 75px;
+        font-size: 3rem;
+    }
+    
+    .modulo-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .caracteristicas-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    
+    .componente {
+        grid-template-columns: 70px 1fr;
+        gap: 24px;
+        padding: 24px 0;
+    }
+    
+    .componente-numero {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .componente-numero span {
+        font-size: 1.7rem;
+    }
+    
+    .componente-info h4 {
+        font-size: 1.1rem;
+    }
+    
+    .materias-etiquetas {
+        gap: 10px;
+    }
+    
+    .etiqueta {
+        padding: 10px 18px;
+        font-size: 0.8rem;
+    }
+}

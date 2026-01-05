@@ -44,7 +44,7 @@
         <!-- HERO -->
         <section class="hero-section" aria-label="Educación Inicial y Preescolar en Neiva">
             <div class="hero-background">
-                <img src="../images/Mision1.jpg"
+                <img src="../images/Educacion Inicial/Imagen5.jpg"
                     alt="Instalaciones del colegio en Neiva enfocadas en educación inicial y preescolar" width="1920"
                     height="1080" loading="lazy">
             </div>
@@ -85,7 +85,7 @@
                     <div class="col-lg-6 order-lg-1 order-2">
                         <article>
                             <div class="metodologia-image">
-                                <img src="{{ asset('images/Primariaa.jpeg') }}"
+                                <img src="{{ asset('images/Educacion Inicial/Imagen9.jpg') }}"
                                     alt="Niños en actividades de educación inicial y preescolar en Neiva"
                                     loading="lazy">
                             </div>
@@ -196,36 +196,36 @@
                 <div class="gallery-grid">
 
                     <article class="gallery-item" onclick="openLightbox(0)">
-                        <img src="images/Primariaa.jpeg" alt="Niños jugando en el aula del preescolar"
+                        <img src="images/Pescolarr1.jpg" alt="Niños jugando en el aula del preescolar"
                             loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(1)">
-                        <img src="images/Dansas.jpg" alt="Actividades creativas para primera infancia"
+                        <img src="images/Educacion Inicial/Imagen2.jpg" alt="Actividades creativas para primera infancia"
                             loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(2)">
-                        <img src="images/Educacion_Inicila.jpg" alt="Aprendizaje colaborativo en preescolar"
+                        <img src="images/Educacion Inicial/Imagen3.jpg" alt="Aprendizaje colaborativo en preescolar"
                             loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(3)">
-                        <img src="images/Educacion_Primaria.webp" alt="Exploración educativa al aire libre"
+                        <img src="images/Educacion Inicial/Imagen6.jpg" alt="Exploración educativa al aire libre"
                             loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(4)">
-                        <img src="images/iniciooo2.jpeg" alt="Juego libre y diversión en el colegio" loading="lazy">
+                        <img src="images/Educacion Inicial/Imagen7.jpg" alt="Juego libre y diversión en el colegio" loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(5)">
-                        <img src="images/Mision1.jpg" alt="Desarrollo integral y acompañamiento docente"
+                        <img src="images/Educacion Inicial/Imagen5.jpg" alt="Desarrollo integral y acompañamiento docente"
                             loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(6)">
-                        <img src="images/Primariaa.jpeg" alt="Momentos de aprendizaje diario" loading="lazy">
+                        <img src="images/Educacion Inicial/Imagen8.jpg" alt="Momentos de aprendizaje diario" loading="lazy">
                     </article>
                 </div>
             </div>
@@ -242,31 +242,31 @@
             <script>
                 // Array con todas las imágenes de la galería (7 imágenes)
                 const galleryImages = [{
-                        src: 'images/Primariaa.jpeg',
+                        src: 'images/Pescolarr1.jpg',
                         alt: 'Niños jugando en el aula'
                     },
                     {
-                        src: 'images/Dansas.jpg',
+                        src: 'images/Educacion Inicial/Imagen2.jpg',
                         alt: 'Actividades creativas'
                     },
                     {
-                        src: 'images/Educacion_Inicila.jpg',
+                        src: 'images/Educacion Inicial/Imagen3.jpg',
                         alt: 'Aprendizaje en grupo'
                     },
                     {
-                        src: 'images/Educacion_Primaria.webp',
+                        src: 'images/Educacion Inicial/Imagen6.jpg',
                         alt: 'Exploración educativa'
                     },
                     {
-                        src: 'images/iniciooo2.jpeg',
+                        src: 'images/Educacion Inicial/Imagen7.jpg',
                         alt: 'Tiempo de juego y diversión'
                     },
                     {
-                        src: 'images/Mision1.jpg',
+                        src: 'images/Educacion Inicial/Imagen5.jpg',
                         alt: 'Desarrollo integral'
                     },
                     {
-                        src: 'images/Primariaa.jpeg',
+                        src: 'images/Educacion Inicial/Imagen8.jpg',
                         alt: 'Momentos de aprendizaje'
                     }
                 ];
@@ -352,7 +352,5 @@
                 // Transición suave
                 document.getElementById('lightbox-img').style.transition = 'opacity 0.3s ease';
             </script>
-
 </body>
-
 </html>

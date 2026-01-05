@@ -97,8 +97,9 @@
                         Vida Estudiantil
                     </a>
                     <div class="dropdown-menu single-column" role="menu">
-                        <a class="dropdown-item" role="menuitem" href="#eventos">Eventos y Celebraciones</a>
+                        <a class="dropdown-item" role="menuitem" href="{{ route('eventos_celebraciones') }}">Eventos y Celebraciones</a>
                         <a class="dropdown-item" role="menuitem" href="{{ route('transporte') }}">Transporte Escolar</a>
+                        <a class="dropdown-item" role="menuitem" href="{{ route('proyectos_institucionales') }}">Proyectos Institucionales</a>
                     </div>
                 </li>
 

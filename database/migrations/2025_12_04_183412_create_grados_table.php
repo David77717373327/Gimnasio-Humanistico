@@ -9,19 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('grados', function (Blueprint $table) {
-        $table->id();
-        $table->string('nombre'); // Ejemplo: 10A, 9B
-        $table->timestamps();
-    });
+            $table->id();
+            $table->string('nombre'); // 1A, 5B, 9A
+            $table->foreignId('nivel_id')->constrained('niveles')->onDelete('cascade');
+            $table->timestamps();
+        });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('grados');
     }

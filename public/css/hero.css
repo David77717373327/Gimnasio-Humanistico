@@ -7,6 +7,10 @@
     --hero-height-desktop: 70vh;
     --hero-height-tablet: 60vh;
     --hero-height-mobile: 55vh;
+
+/* Colores de overlay sutiles 
+--overlay-color: rgba(0, 120, 0, 0.2);
+*/
    --overlay-color: rgba(8, 8, 8, 0.3);
     --accent-gold: #F4B942;
     --accent-green: #7DDFAC;

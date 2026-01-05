@@ -161,3 +161,109 @@
     font-weight: 600;
 }
 
+/* ============================================================
+   RESPONSIVE GLOBAL - Gimnasio Humanístico 2024
+   Adaptación profesional para móviles y tablets
+============================================================ */
+
+/* -------- TABLETS (hasta 1024px) -------- */
+@media (max-width: 1024px) {
+
+    .transport-hero {
+        height: 5vh;
+    }
+
+    .description-wrapper {
+        padding: 0 1.5rem;
+    }
+
+    .description-title {
+        font-size: clamp(2.4rem, 3vw, 2rem);
+    }
+
+    .description-content {
+        font-size: clamp(1rem, 1.4vw, 1.1rem);
+        line-height: 1.8;
+    }
+}
+
+
+/* -------- MÓVILES GRANDES (hasta 768px) -------- */
+@media (max-width: 768px) {
+
+    .transport-hero {
+        height: 45vh;
+        min-height: 280px;
+    }
+
+    .transport-hero-image {
+        object-position: center center;
+    }
+
+    .description-wrapper {
+        padding: 0 1rem;
+    }
+
+    .description-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1.8rem;
+    }
+
+    .description-content {
+        font-size: 1rem;
+        text-align: left; /* Se adapta mejor en vertical */
+        line-height: 1.7;
+    }
+
+    .description-content p {
+        margin-bottom: 1.2rem;
+    }
+}
+
+
+
+/* -------- MÓVILES PEQUEÑOS (hasta 480px) -------- */
+@media (max-width: 480px) {
+
+    .transport-hero {
+        height: 38vh;
+        min-height: 220px;
+    }
+
+    .description-wrapper {
+        padding: 0 0.8rem;
+    }
+
+    .description-title {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .description-content {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .description-content p {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+/* -------- MICRO PANTALLAS (menos de 360px) -------- */
+@media (max-width: 360px) {
+
+    .transport-hero {
+        height: 32vh;
+    }
+
+    .description-title {
+        font-size: 1.5rem;
+    }
+
+    .description-content {
+        font-size: 0.9rem;
+    }
+}

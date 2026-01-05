@@ -1,0 +1,76 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+
+/* Variables CSS modernizadas */
+:root {
+    /* Paleta de colores profesional y equilibrada */
+    --primary-blue: #1E3A5F;
+    --secondary-blue: #2C5282;
+    --accent-blue: #3182CE;
+    --light-blue: #E6F3FF;
+
+    --text-primary: #1A202C;
+    --text-secondary: #4A5568;
+    --text-muted: #718096;
+    --text-white: #FFFFFF;
+
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.3s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+
+
+

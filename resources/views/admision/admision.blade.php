@@ -679,6 +679,11 @@
         <!-- Incluir el footer -->
         @include('layouts.footer')
 
+
+
+        <!-- Incluye el botón de WhatsApp -->
+    <script src="{{ asset('js/whatsapp-button.js') }}"></script>
+
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
         </script>

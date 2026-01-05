@@ -3,23 +3,28 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
 class Grado extends Model
 {
-    protected $fillable = ['nombre'];
+    protected $fillable = ['nombre','nivel_id'];
 
-    public function horarios()
+    public function nivel()
     {
-        return $this->hasMany(Horario::class);
+        return $this->belongsTo(Nivel::class);
     }
+
     public function estudiantes()
     {
         return $this->hasMany(User::class);
     }
 
-    public function users()
+    public function horarios()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(Horario::class);
+    }
+
+    public function descansos()
+    {
+        return $this->hasMany(Descanso::class);
     }
 }
 

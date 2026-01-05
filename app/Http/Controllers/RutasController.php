@@ -69,7 +69,7 @@ class RutasController extends Controller
     public function mostrarcontenidoenfoquepadagogico ()
 
     {
-        return view('Propuesta_Educativa.enfoque_pedagojico');
+        return view('Propuesta_Educativa.enfoque_pedagogico');
     }
 
 
@@ -151,6 +151,13 @@ class RutasController extends Controller
             return view('Vida_Estudiantil.transporte');
         }
 
+        public function mostrarcontenidoproyectosinstitucionales ()
+        {
+            return view('Vida_Estudiantil.proyectos_institucionales');
+        }
 
-
+        public function mostrarcontenidoeventoscelebraciones ()
+        {
+            return view('Vida_Estudiantil.Eventos_Celebraciones');
+        }
 }

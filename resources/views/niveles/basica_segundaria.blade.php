@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misión y Visión - GIMNASIO HUMANÍSTICO</title>
+    <title>Educación Básica Secundaria | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
     <!-- Google Fonts - Tipografía moderna -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +28,6 @@
 
 <body>
 
-
     <header class="header-top" aria-label="Encabezado principal del sitio">
         @include('layouts.header')
     </header>
@@ -41,11 +39,13 @@
     <main id="main" role="main">
 
         <!-- HERO -->
-        <section class="hero-section" aria-label="Educación Inicial y Preescolar en Neiva">
+        <section class="hero-section" aria-label="Educación Básica Secundaria en Neiva">
             <div class="hero-background">
                 <img src="../images/Mision1.jpg"
-                    alt="Instalaciones del colegio en Neiva enfocadas en educación inicial y preescolar" width="1920"
-                    height="1080" loading="lazy">
+                    alt="Instalaciones del colegio en Neiva enfocadas en educación básica secundaria" 
+                    width="1920"
+                    height="1080" 
+                    loading="lazy">
             </div>
 
             <div class="hero-overlay"></div>
@@ -54,7 +54,7 @@
             <div class="container hero-container">
                 <div class="hero-content">
                     <h1 class="hero-title" data-title="Nuestra Identidad Institucional">
-                        Educación Basica Segundaria
+                        Educación Básica Secundaria
                     </h1>
 
                     <div class="hero-scroll-indicator" onclick="scrollToContent()" role="button" tabindex="0"
@@ -65,19 +65,12 @@
             </div>
         </section>
 
-
-
-
-
-
-
-
-
-
+        
         <!-- Título SEO -->
         <header class="admision-nav-header" id="siguiente_sesion">
-            <h2 class="admision-nav-title">Objetivos Educación Básica Secundaria</h2>
+            <h2 class="admision-nav-title">Objetivos Básica Secundaria</h2>
         </header>
+
 
         <div class="objetivos-split-container">
             <!-- Panel de Navegación -->
@@ -123,11 +116,6 @@
             <!-- Panel de Contenido -->
             <div class="objetivos-content-panel">
 
-                <!-- VIDEO DE FONDO -->
-                <video class="objetivos-video-fondo" autoplay muted loop>
-                    <source src="{{ asset('videos/hero-background4.mp4') }}" type="video/mp4">
-                </video>
-
                 <!-- COMUNICACIÓN Y EXPRESIÓN -->
                 <!-- Objetivo 1 -->
                 <div class="objetivos-content-item active" data-category="comunicacion" data-index="0">
@@ -139,14 +127,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        El desarrollo de la capacidad para comprender textos y expresar correctamente mensajes
-                        complejos, orales y escritos en lengua castellana, así como para entender mediante un estudio
-                        sistemático los diferentes elementos constitutivos de la lengua.
+                        El desarrollo de la capacidad para comprender textos y expresar correctamente mensajes complejos, orales y escritos en lengua castellana, así como para entender mediante un estudio sistemático los diferentes elementos constitutivos de la lengua.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>La competencia comunicativa es fundamental para el pensamiento crítico y la expresión
-                            efectiva de ideas complejas, habilidades esenciales en la vida académica y profesional.</p>
+                        <p>La competencia comunicativa es fundamental para el pensamiento crítico y la expresión efectiva de ideas complejas, habilidades esenciales en la vida académica y profesional.</p>
                     </div>
                 </div>
 
@@ -160,14 +145,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        La valoración de la lengua castellana como medio de expresión literaria y el estudio de la
-                        creación literaria en el país y en el mundo.
+                        La valoración de la lengua castellana como medio de expresión literaria y el estudio de la creación literaria en el país y en el mundo.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>La apreciación literaria desarrolla la sensibilidad cultural, el pensamiento analítico y la
-                            capacidad de expresión creativa, conectando a los estudiantes con su patrimonio cultural y
-                            el legado literario universal.</p>
+                        <p>La apreciación literaria desarrolla la sensibilidad cultural, el pensamiento analítico y la capacidad de expresión creativa, conectando a los estudiantes con su patrimonio cultural y el legado literario universal.</p>
                     </div>
                 </div>
 
@@ -185,8 +167,7 @@
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>El dominio de una lengua extranjera abre oportunidades educativas y profesionales globales,
-                            además de desarrollar habilidades cognitivas avanzadas y comprensión intercultural.</p>
+                        <p>El dominio de una lengua extranjera abre oportunidades educativas y profesionales globales, además de desarrollar habilidades cognitivas avanzadas y comprensión intercultural.</p>
                     </div>
                 </div>
 
@@ -201,15 +182,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        El desarrollo de las capacidades para el razonamiento lógico, mediante el dominio de los
-                        sistemas numéricos, geométricos, métricos, lógicos, analíticos, de conjuntos, de operaciones y
-                        relaciones, así como para su utilización en la solución de los problemas de la ciencia, de la
-                        tecnología y de la vida cotidiana.
+                        El desarrollo de las capacidades para el razonamiento lógico, mediante el dominio de los sistemas numéricos, geométricos, métricos, lógicos, analíticos, de conjuntos, de operaciones y relaciones, así como para su utilización en la solución de los problemas de la ciencia, de la tecnología y de la vida cotidiana.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>El razonamiento lógico-matemático es la base del pensamiento científico y tecnológico,
-                            permitiendo resolver problemas complejos de manera sistemática y eficiente.</p>
+                        <p>El razonamiento lógico-matemático es la base del pensamiento científico y tecnológico, permitiendo resolver problemas complejos de manera sistemática y eficiente.</p>
                     </div>
                 </div>
 
@@ -223,15 +200,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        El avance en el conocimiento científico de los fenómenos físicos, químicos y biológicos,
-                        mediante la comprensión de las leyes, el planteamiento de los problemas y la observación
-                        experimental.
+                        El avance en el conocimiento científico de los fenómenos físicos, químicos y biológicos, mediante la comprensión de las leyes, el planteamiento de los problemas y la observación experimental.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>La comprensión científica desarrolla el pensamiento crítico y la capacidad de analizar el
-                            mundo natural mediante el método científico, fundamental para la innovación y el progreso.
-                        </p>
+                        <p>La comprensión científica desarrolla el pensamiento crítico y la capacidad de analizar el mundo natural mediante el método científico, fundamental para la innovación y el progreso.</p>
                     </div>
                 </div>
 
@@ -245,14 +218,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        La iniciativa en los campos más avanzados de la tecnología moderna y el entrenamiento en
-                        disciplinas, procesos y técnicas que les permitan el ejercicio de una función socialmente útil.
+                        La iniciativa en los campos más avanzados de la tecnología moderna y el entrenamiento en disciplinas, procesos y técnicas que les permitan el ejercicio de una función socialmente útil.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>La formación tecnológica prepara a los estudiantes para un mundo en constante cambio,
-                            desarrollando habilidades prácticas que les permiten contribuir significativamente a la
-                            sociedad.</p>
+                        <p>La formación tecnológica prepara a los estudiantes para un mundo en constante cambio, desarrollando habilidades prácticas que les permiten contribuir significativamente a la sociedad.</p>
                     </div>
                 </div>
 
@@ -266,13 +236,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        La comprensión de la dimensión práctica de los conocimientos teóricos, así como la dimensión
-                        teórica del conocimiento práctico y la capacidad para utilizarla en la solución de problemas.
+                        La comprensión de la dimensión práctica de los conocimientos teóricos, así como la dimensión teórica del conocimiento práctico y la capacidad para utilizarla en la solución de problemas.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>La integración entre teoría y práctica asegura que el aprendizaje sea significativo y
-                            aplicable, desarrollando competencias para resolver problemas reales.</p>
+                        <p>La integración entre teoría y práctica asegura que el aprendizaje sea significativo y aplicable, desarrollando competencias para resolver problemas reales.</p>
                     </div>
                 </div>
 
@@ -286,13 +254,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        La utilización con sentido crítico de los distintos contenidos y formas de información y la
-                        búsqueda de nuevos conocimientos con su propio esfuerzo.
+                        La utilización con sentido crítico de los distintos contenidos y formas de información y la búsqueda de nuevos conocimientos con su propio esfuerzo.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>Fomenta el aprendizaje autónomo y permanente, desarrollando la capacidad de investigar,
-                            evaluar fuentes y construir conocimiento de manera independiente.</p>
+                        <p>Fomenta el aprendizaje autónomo y permanente, desarrollando la capacidad de investigar, evaluar fuentes y construir conocimiento de manera independiente.</p>
                     </div>
                 </div>
 
@@ -307,15 +273,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        El estudio científico de la historia nacional y mundial dirigida a comprender el desarrollo de
-                        la sociedad y el estudio de las ciencias sociales, con miras al análisis de las condiciones
-                        actuales de la realidad social.
+                        El estudio científico de la historia nacional y mundial dirigida a comprender el desarrollo de la sociedad y el estudio de las ciencias sociales, con miras al análisis de las condiciones actuales de la realidad social.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>Comprender la historia permite entender el presente y tomar decisiones informadas sobre el
-                            futuro, desarrollando consciencia social y pensamiento crítico sobre la realidad
-                            contemporánea.</p>
+                        <p>Comprender la historia permite entender el presente y tomar decisiones informadas sobre el futuro, desarrollando consciencia social y pensamiento crítico sobre la realidad contemporánea.</p>
                     </div>
                 </div>
 
@@ -329,14 +291,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        El estudio científico del universo, de la tierra, de su estructura física, de su división y
-                        organización política, del desarrollo económico de los países y de las diferentes
-                        manifestaciones culturales de los pueblos.
+                        El estudio científico del universo, de la tierra, de su estructura física, de su división y organización política, del desarrollo económico de los países y de las diferentes manifestaciones culturales de los pueblos.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>El conocimiento geográfico y cultural desarrolla una visión global del mundo, promoviendo el
-                            respeto intercultural y la comprensión de la interdependencia entre naciones.</p>
+                        <p>El conocimiento geográfico y cultural desarrolla una visión global del mundo, promoviendo el respeto intercultural y la comprensión de la interdependencia entre naciones.</p>
                     </div>
                 </div>
 
@@ -350,13 +309,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        La formación en el ejercicio de sus deberes y derechos, el conocimiento de la constitución
-                        política y de las relaciones internacionales.
+                        La formación en el ejercicio de sus deberes y derechos, el conocimiento de la constitución política y de las relaciones internacionales.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>Formar ciudadanos conscientes de sus derechos y deberes es fundamental para fortalecer la
-                            democracia y promover una participación activa y responsable en la sociedad.</p>
+                        <p>Formar ciudadanos conscientes de sus derechos y deberes es fundamental para fortalecer la democracia y promover una participación activa y responsable en la sociedad.</p>
                     </div>
                 </div>
 
@@ -370,13 +327,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        El desarrollo de actitudes favorables al conocimiento, valoración y conservación de la
-                        naturaleza y el ambiente.
+                        El desarrollo de actitudes favorables al conocimiento, valoración y conservación de la naturaleza y el ambiente.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>La consciencia ambiental es crucial para la sostenibilidad del planeta, formando ciudadanos
-                            responsables con el medio ambiente y comprometidos con su preservación.</p>
+                        <p>La consciencia ambiental es crucial para la sostenibilidad del planeta, formando ciudadanos responsables con el medio ambiente y comprometidos con su preservación.</p>
                     </div>
                 </div>
 
@@ -391,14 +346,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        La apreciación artística, la comprensión estética, la creatividad, la familiarización con los
-                        diferentes medios de expresión artística y el conocimiento, valoración y respeto por los bienes
-                        artísticos y culturales.
+                        La apreciación artística, la comprensión estética, la creatividad, la familiarización con los diferentes medios de expresión artística y el conocimiento, valoración y respeto por los bienes artísticos y culturales.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>La formación artística desarrolla la sensibilidad, la creatividad y la expresión personal,
-                            enriqueciendo la vida emocional y cultural de los estudiantes.</p>
+                        <p>La formación artística desarrolla la sensibilidad, la creatividad y la expresión personal, enriqueciendo la vida emocional y cultural de los estudiantes.</p>
                     </div>
                 </div>
 
@@ -416,8 +368,7 @@
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>La valoración de la salud establece las bases para un estilo de vida saludable y el bienestar
-                            integral a lo largo de toda la vida.</p>
+                        <p>La valoración de la salud establece las bases para un estilo de vida saludable y el bienestar integral a lo largo de toda la vida.</p>
                     </div>
                 </div>
 
@@ -431,14 +382,11 @@
                         </div>
                     </div>
                     <p class="objetivos-content-text">
-                        La educación física y la práctica de la recreación y los deportes, la participación y
-                        organización juvenil y la utilización adecuada del tiempo libre.
+                        La educación física y la práctica de la recreación y los deportes, la participación y organización juvenil y la utilización adecuada del tiempo libre.
                     </p>
                     <div class="objetivos-content-highlight">
                         <h3>¿Por qué es importante?</h3>
-                        <p>El desarrollo físico y la recreación promueven hábitos saludables, trabajo en equipo,
-                            disciplina y el aprovechamiento constructivo del tiempo libre, contribuyendo al desarrollo
-                            integral de la personalidad.</p>
+                        <p>El desarrollo físico y la recreación promueven hábitos saludables, trabajo en equipo, disciplina y el aprovechamiento constructivo del tiempo libre, contribuyendo al desarrollo integral de la personalidad.</p>
                     </div>
                 </div>
 
@@ -456,248 +404,122 @@
 
 
 
-        <!-- GALERÍA -->
-        <section aria-label="Galería de momentos especiales en el preescolar de Neiva">
-            <header class="gallery-header">
-                <h2 class="gallery-title">Momentos Especiales</h2>
-                <p class="gallery-subtitle">
-                    Actividades, juegos y aprendizajes que viven nuestros estudiantes de educación inicial y preescolar.
-                </p>
-            </header>
-
-            <!-- Modal Lightbox -->
-            <div class="lightbox" id="lightbox">
-                <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar galería">&times;</button>
-                <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)"
-                    aria-label="Imagen anterior">&#10094;</button>
-
-                <div class="lightbox-content">
-                    <img id="lightbox-img" src="" alt="Imagen ampliada">
-                </div>
-
-                <button class="lightbox-nav lightbox-next" onclick="changeImage(1)"
-                    aria-label="Siguiente imagen">&#10095;</button>
-            </div>
-
-            <!-- GRID -->
-            <div class="gallery-container">
-                <div class="gallery-grid">
-
-                    <article class="gallery-item" onclick="openLightbox(0)">
-                        <img src="images/Primariaa.jpeg" alt="Niños jugando en el aula del preescolar"
-                            loading="lazy">
-                    </article>
-
-                    <article class="gallery-item" onclick="openLightbox(1)">
-                        <img src="images/Dansas.jpg" alt="Actividades creativas para primera infancia"
-                            loading="lazy">
-                    </article>
-
-                    <article class="gallery-item" onclick="openLightbox(2)">
-                        <img src="images/Educacion_Inicila.jpg" alt="Aprendizaje colaborativo en preescolar"
-                            loading="lazy">
-                    </article>
-
-                    <article class="gallery-item" onclick="openLightbox(3)">
-                        <img src="images/Educacion_Primaria.webp" alt="Exploración educativa al aire libre"
-                            loading="lazy">
-                    </article>
-
-                    <article class="gallery-item" onclick="openLightbox(4)">
-                        <img src="images/iniciooo2.jpeg" alt="Juego libre y diversión en el colegio" loading="lazy">
-                    </article>
-
-                    <article class="gallery-item" onclick="openLightbox(5)">
-                        <img src="images/Mision1.jpg" alt="Desarrollo integral y acompañamiento docente"
-                            loading="lazy">
-                    </article>
-
-                    <article class="gallery-item" onclick="openLightbox(6)">
-                        <img src="images/Primariaa.jpeg" alt="Momentos de aprendizaje diario" loading="lazy">
-                    </article>
-
-                </div>
-            </div>
-        </section>
 
 
 
-        <!-- Incluir el footer -->
-        @include('layouts.footer')
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const navItems = document.querySelectorAll('.objetivos-nav-item');
-                const contentItems = document.querySelectorAll('.objetivos-content-item');
-                const prevBtn = document.getElementById('objetivosPrevBtn');
-                const nextBtn = document.getElementById('objetivosNextBtn');
+        document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.objetivos-nav-item');
+    const contentItems = document.querySelectorAll('.objetivos-content-item');
+    const prevBtn = document.getElementById('objetivosPrevBtn');
+    const nextBtn = document.getElementById('objetivosNextBtn');
+    
+    let currentCategory = 'comunicacion'; // ✅ CORREGIDO: era 'valores'
+    let currentIndex = 0;
+    let isTransitioning = false;
 
-                let currentCategory = 'comunicacion';
-                let currentIndex = 0;
+    function getObjectivesByCategory(category) {
+        return Array.from(contentItems).filter(item => 
+            item.getAttribute('data-category') === category
+        );
+    }
 
-                // Obtener objetivos de una categoría
-                function getObjectivesByCategory(category) {
-                    return Array.from(contentItems).filter(item =>
-                        item.getAttribute('data-category') === category
-                    );
-                }
+    function showContent(category, index) {
+        if (isTransitioning) return;
+        isTransitioning = true;
 
-                // Mostrar contenido
-                function showContent(category, index) {
-                    const categoryObjectives = getObjectivesByCategory(category);
+        const categoryObjectives = getObjectivesByCategory(category);
+        
+        // Paso 1: Agregar clase fade-out al contenido actual
+        contentItems.forEach(item => {
+            if (item.classList.contains('active')) {
+                item.classList.add('fade-out');
+            }
+        });
+        
+        // Paso 2: Esperar que termine la animación de salida (300ms)
+        setTimeout(() => {
+            // Remover todas las clases active y fade-out
+            contentItems.forEach(item => {
+                item.classList.remove('active');
+                item.classList.remove('fade-out');
+            });
+            
+            // Paso 3: Mostrar el nuevo contenido
+            if (categoryObjectives[index]) {
+                categoryObjectives[index].classList.add('active');
+            }
 
-                    // Ocultar todos los contenidos
-                    contentItems.forEach(item => item.classList.remove('active'));
+            // Actualizar botones
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === categoryObjectives.length - 1;
 
-                    // Mostrar el contenido actual
-                    if (categoryObjectives[index]) {
-                        categoryObjectives[index].classList.add('active');
-                    }
-
-                    // Actualizar botones de navegación
-                    prevBtn.disabled = index === 0;
-                    nextBtn.disabled = index === categoryObjectives.length - 1;
-
-                    // Scroll al top del contenido
-                    document.querySelector('.objetivos-content-panel').scrollTo(0, 0);
-
-                    currentCategory = category;
-                    currentIndex = index;
-                }
-
-                // Click en items de navegación (categorías)
-                navItems.forEach((item) => {
-                    item.addEventListener('click', function() {
-                        const category = this.getAttribute('data-category');
-
-                        // Remover active de todos los nav items
-                        navItems.forEach(nav => nav.classList.remove('active'));
-
-                        // Agregar active al item clickeado
-                        this.classList.add('active');
-
-                        // Mostrar primer objetivo de la categoría
-                        showContent(category, 0);
-                    });
-                });
-
-                // Botón anterior
-                prevBtn.addEventListener('click', function() {
-                    if (currentIndex > 0) {
-                        showContent(currentCategory, currentIndex - 1);
-                    }
-                });
-
-                // Botón siguiente
-                nextBtn.addEventListener('click', function() {
-                    const categoryObjectives = getObjectivesByCategory(currentCategory);
-                    if (currentIndex < categoryObjectives.length - 1) {
-                        showContent(currentCategory, currentIndex + 1);
-                    }
-                });
-
-                // Inicializar - Comenzar con la primera categoría (Comunicación)
-                showContent('comunicacion', 0);
+            // Scroll suave al inicio
+            document.querySelector('.objetivos-content-panel').scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
 
-
-
-
+            // Actualizar variables
+            currentCategory = category;
+            currentIndex = index;
             
-// Array con todas las imágenes de la galería (7 imágenes)
-    const galleryImages = [
-        { src: 'images/Primariaa.jpeg', alt: 'Niños jugando en el aula' },
-        { src: 'images/Dansas.jpg', alt: 'Actividades creativas' },
-        { src: 'images/Educacion_Inicila.jpg', alt: 'Aprendizaje en grupo' },
-        { src: 'images/Educacion_Primaria.webp', alt: 'Exploración educativa' },
-        { src: 'images/iniciooo2.jpeg', alt: 'Tiempo de juego y diversión' },
-        { src: 'images/Mision1.jpg', alt: 'Desarrollo integral' },
-        { src: 'images/Primariaa.jpeg', alt: 'Momentos de aprendizaje' }
-    ];
-
-    let currentImageIndex = 0;
-
-    // Mostrar u ocultar flechas según posición
-    function updateArrows() {
-        const prevBtn = document.querySelector('.lightbox-prev');
-        const nextBtn = document.querySelector('.lightbox-next');
-
-        // Primera imagen → esconder flecha izquierda
-        prevBtn.style.display = currentImageIndex === 0 ? "none" : "block";
-
-        // Última imagen → esconder flecha derecha
-        nextBtn.style.display = currentImageIndex === galleryImages.length - 1 ? "none" : "block";
+            // Permitir nuevas transiciones después de que termine la animación de entrada
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 400);
+            
+        }, 300);
     }
 
-    // Abrir lightbox
-    function openLightbox(index) {
-        currentImageIndex = index;
+    navItems.forEach((item) => {
+        item.addEventListener('click', function() {
+            if (isTransitioning) return;
+            
+            const category = this.getAttribute('data-category');
+            
+            navItems.forEach(nav => nav.classList.remove('active'));
+            this.classList.add('active');
+            
+            showContent(category, 0);
+        });
+    });
 
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-
-        lightboxImg.src = galleryImages[index].src;
-        lightboxImg.alt = galleryImages[index].alt;
-        lightbox.classList.add('active');
-
-        updateArrows(); // Actualizar flechas al abrir
-
-        document.body.style.overflow = 'hidden';
-    }
-
-    // Cerrar lightbox
-    function closeLightbox() {
-        document.getElementById('lightbox').classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-
-    // Cambiar imagen sin bucle infinito
-    function changeImage(direction) {
-        currentImageIndex += direction;
-
-        // Limitar índices
-        if (currentImageIndex < 0) currentImageIndex = 0;
-        if (currentImageIndex >= galleryImages.length)
-            currentImageIndex = galleryImages.length - 1;
-
-        const lightboxImg = document.getElementById('lightbox-img');
-
-        lightboxImg.style.opacity = '0';
-
-        setTimeout(() => {
-            lightboxImg.src = galleryImages[currentImageIndex].src;
-            lightboxImg.alt = galleryImages[currentImageIndex].alt;
-            lightboxImg.style.opacity = '1';
-        }, 200);
-
-        updateArrows(); // Actualizar flechas cada vez que cambias imagen
-    }
-
-    // Cerrar con tecla ESC y navegar con flechas
-    document.addEventListener('keydown', function(e) {
-        const lightbox = document.getElementById('lightbox');
-
-        if (e.key === 'Escape') closeLightbox();
-
-        if (lightbox.classList.contains('active')) {
-            if (e.key === 'ArrowLeft') changeImage(-1);
-            if (e.key === 'ArrowRight') changeImage(1);
+    prevBtn.addEventListener('click', function() {
+        if (currentIndex > 0 && !isTransitioning) {
+            showContent(currentCategory, currentIndex - 1);
         }
     });
 
-    // Cerrar al hacer clic fuera de la imagen
-    document.getElementById('lightbox').addEventListener('click', function(e) {
-        if (e.target === this) closeLightbox();
+    nextBtn.addEventListener('click', function() {
+        const categoryObjectives = getObjectivesByCategory(currentCategory);
+        if (currentIndex < categoryObjectives.length - 1 && !isTransitioning) {
+            showContent(currentCategory, currentIndex + 1);
+        }
     });
 
-    // Prevenir cierres al hacer clic en botones
-    document.querySelector('.lightbox-close').addEventListener('click', e => e.stopPropagation());
-    document.querySelector('.lightbox-prev').addEventListener('click', e => e.stopPropagation());
-    document.querySelector('.lightbox-next').addEventListener('click', e => e.stopPropagation());
+    // ✅ CORREGIDO: Inicializar con 'comunicacion' en lugar de 'valores'
+    showContent('comunicacion', 0);
+});
 
-    // Transición suave
-    document.getElementById('lightbox-img').style.transition = 'opacity 0.3s ease';
+function scrollToContent() {
+    document.getElementById('siguiente_sesion').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+}
+
+
+        
+
         </script>
-</body>
 
+    </main>
+
+    <!-- Incluir el footer -->
+    @include('layouts.footer')
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-CO">
+
 <head>
     <!-- Meta etiquetas esenciales -->
     <meta charset="UTF-8">
@@ -7,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- SEO Meta Tags -->
-    <title>Gimnasio Humanístico del Alto Magdalena | Colegio Bilingüe en Neiva - Educación de Excelencia</title>
+    <title>Inicio | Colegio Gimnasio Humanístico del Alto Magdalena - Neiva</title>
     <meta name="description"
         content="Colegio Gimnasio Humanístico del Alto Magdalena en Neiva. Más de 40 años de excelencia educativa con formación bilingüe, valores cristianos y metodología innovadora. Solicita admisión hoy.">
     <meta name="keywords"
@@ -15,6 +16,9 @@
     <meta name="author" content="Gimnasio Humanístico del Alto Magdalena">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
+
+
+    <link rel="preload" as="video" href="{{ asset('videos/hero-background4.mp4') }}">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.gimnasiohumanistico.edu.co/">
@@ -76,9 +80,9 @@
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-   
 
-    <!--Scrip para esta vista --> 
+
+    <!--Scrip para esta vista -->
     <script src="{{ asset('js/welcome.js') }}" defer></script>
 
 
@@ -296,13 +300,13 @@
                                     <div class="feature-point-icon" aria-hidden="true">
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                    <span>Metodología innovadora basada en competencias</span>
+                                    <span>Metodología Innovadora: Pensamiento de Diseño (Design Thinking)</span>
                                 </li>
                                 <li class="feature-point" data-aos="fade-up" data-aos-delay="200">
                                     <div class="feature-point-icon" aria-hidden="true">
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                    <span>Formación bilingüe certificada español-inglés</span>
+                                    <span>Enfoque creativo, interactivo y empático</span>
                                 </li>
                                 <li class="feature-point" data-aos="fade-up" data-aos-delay="300">
                                     <div class="feature-point-icon" aria-hidden="true">
@@ -318,7 +322,7 @@
                     <div class="col-lg-6">
                         <figure class="welcome-image-container" data-aos="fade-left">
                             <div class="main-image-wrapper">
-                                <img src="{{ asset('images/Instalaciones.jpg') }}"
+                                <img src="{{ asset('images/Instalaciones/Imagen1.jpg') }}"
                                     alt="Estudiantes del Gimnasio Humanístico en instalaciones modernas del colegio en Neiva"
                                     class="welcome-main-image" width="800" height="600" loading="lazy">
                                 <div class="image-overlay-content" aria-hidden="true">
@@ -332,84 +336,96 @@
                     </div>
                 </div>
 
-                <!-- Galería de Instalaciones -->
-                <div class="facilities-gallery" data-aos="fade-up">
-                    <header class="gallery-header text-center mb-4">
+
+
+                <!-- ============================
+     Sección de Instalaciones
+============================== -->
+
+                <div class="facilities-gallery">
+                    <header class="gallery-header">
                         <h3 class="gallery-title">
                             <span class="title-decorator" aria-hidden="true"></span>
                             Nuestras Instalaciones
                             <span class="title-decorator" aria-hidden="true"></span>
                         </h3>
-                        <p class="gallery-subtitle">Espacios diseñados para potenciar el aprendizaje y el desarrollo
-                            integral</p>
+                        <p class="gallery-subtitle">Espacios diseñados para potenciar el aprendizaje y el desarrollo.
+                        </p>
                     </header>
 
-                    <div class="row g-4">
-                        <div class="col-lg-3 col-md-6">
-                            <article class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                                <figure class="gallery-image-wrapper">
-                                    <img src="{{ asset('images/iniciooo2.jpeg') }}"
-                                        alt="Laboratorios de ciencias equipados con tecnología moderna para experimentos en el Gimnasio Humanístico"
-                                        class="gallery-image" width="400" height="300" loading="lazy">
-                                    <figcaption class="gallery-title-overlay">
-                                        <h4 class="facility-title">Laboratorios de Ciencias</h4>
-                                    </figcaption>
-                                    <div class="gallery-icon-container" aria-hidden="true">
-                                        <i class="fas fa-flask"></i>
-                                    </div>
-                                </figure>
-                            </article>
+                    <div class="gallery-grid">
+                        <article class="gallery-item" data-index="0">
+                            <figure class="gallery-image-wrapper">
+                                <img src="{{ asset('images/Dansas.jpg') }}"
+                                    alt="Laboratorios de ciencias equipados con tecnología moderna"
+                                    class="gallery-image" loading="lazy">
+                            </figure>
+                            <figcaption class="gallery-title-overlay">
+                                <h4 class="facility-title">Laboratorios de Ciencias</h4>
+                            </figcaption>
+                        </article>
+
+                        <article class="gallery-item" data-index="1">
+                            <figure class="gallery-image-wrapper">
+                                <img src="{{ asset('images/Instalaciones/Imagen2.jpg') }}"
+                                    alt="Aulas inteligentes con tecnología educativa avanzada" class="gallery-image"
+                                    loading="lazy">
+                            </figure>
+                            <figcaption class="gallery-title-overlay">
+                                <h4 class="facility-title">Aula De Sistemas</h4>
+                            </figcaption>
+                        </article>
+
+                        <article class="gallery-item" data-index="2">
+                            <figure class="gallery-image-wrapper">
+                                <img src="{{ asset('images/Instalaciones/Imagen3.jpg') }}"
+                                    alt="Biblioteca digital con recursos multimedia" class="gallery-image"
+                                    loading="lazy">
+                            </figure>
+                            <figcaption class="gallery-title-overlay">
+                                <h4 class="facility-title">Espacios Culturales</h4>
+                            </figcaption>
+                        </article>
+
+                        <article class="gallery-item" data-index="3">
+                            <figure class="gallery-image-wrapper">
+                                <img src="{{ asset('images/Pescolarr1.jpg') }}"
+                                    alt="Espacios deportivos y recreativos" class="gallery-image" loading="lazy">
+                            </figure>
+                            <figcaption class="gallery-title-overlay">
+                                <h4 class="facility-title">Espacios Deportivos</h4>
+                            </figcaption>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal-overlay" id="modalOverlay">
+                    <div class="modal-content">
+                        <button class="modal-close" id="modalClose" aria-label="Cerrar modal">
+                            <i class="fas fa-times"></i>
+                        </button>
+
+                        <button class="modal-nav modal-prev" id="modalPrev" aria-label="Imagen anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+
+                        <button class="modal-nav modal-next" id="modalNext" aria-label="Imagen siguiente">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <div class="modal-image-container">
+                            <img src="" alt="" class="modal-image" id="modalImage">
                         </div>
 
-                        <div class="col-lg-3 col-md-6">
-                            <article class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                                <figure class="gallery-image-wrapper">
-                                    <img src="{{ asset('images/Mision3.jpg') }}"
-                                        alt="Aulas inteligentes con tecnología educativa avanzada y espacios de aprendizaje colaborativo"
-                                        class="gallery-image" width="400" height="300" loading="lazy">
-                                    <figcaption class="gallery-title-overlay">
-                                        <h4 class="facility-title">Aula De Sistemas</h4>
-                                    </figcaption>
-                                    <div class="gallery-icon-container" aria-hidden="true">
-                                        <i class="fas fa-chalkboard-teacher"></i>
-                                    </div>
-                                </figure>
-                            </article>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6">
-                            <article class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                                <figure class="gallery-image-wrapper">
-                                    <img src="{{ asset('images/Mision1.jpg') }}"
-                                        alt="Biblioteca digital con recursos multimedia y espacios de lectura modernos"
-                                        class="gallery-image" width="400" height="300" loading="lazy">
-                                    <figcaption class="gallery-title-overlay">
-                                        <h4 class="facility-title">Biblioteca Digital</h4>
-                                    </figcaption>
-                                    <div class="gallery-icon-container" aria-hidden="true">
-                                        <i class="fas fa-book-open"></i>
-                                    </div>
-                                </figure>
-                            </article>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6">
-                            <article class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                                <figure class="gallery-image-wrapper">
-                                    <img src="{{ asset('images/Mision1.jpg') }}"
-                                        alt="Espacios deportivos y recreativos para desarrollo físico y formación integral de estudiantes"
-                                        class="gallery-image" width="400" height="300" loading="lazy">
-                                    <figcaption class="gallery-title-overlay">
-                                        <h4 class="facility-title">Espacios Deportivos</h4>
-                                    </figcaption>
-                                    <div class="gallery-icon-container" aria-hidden="true">
-                                        <i class="fas fa-running"></i>
-                                    </div>
-                                </figure>
-                            </article>
+                        <div class="modal-info">
+                            <h3 class="modal-title" id="modalTitle"></h3>
+                            <p class="modal-description" id="modalDescription"></p>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </section>
 
@@ -421,10 +437,7 @@
                     <h2 id="about-title" class="about-main-title" data-aos="fade-up" data-aos-delay="200">
                         ¿Quiénes Somos?
                     </h2>
-                    <p class="about-main-subtitle" data-aos="fade-up" data-aos-delay="400">
-                        Más de 40 años forjando el futuro de Colombia a través de una educación
-                        innovadora, fundamentada en valores humanísticos y cristianos que transforman vidas.
-                    </p>
+
                 </header>
 
                 <!-- Grid de Cards Profesional -->
@@ -432,7 +445,7 @@
                     <!-- Misión -->
                     <article class="about-card mission-card" data-aos="fade-up" data-aos-delay="100">
                         <header class="card-header">
-                            <h3>Misión</h3>
+                            <h3>MISIÓN</h3>
                         </header>
                         <div class="educational-icons" aria-hidden="true"></div>
                         <div class="card-body">
@@ -446,7 +459,7 @@
                                 científico, crítico y ambiental; basados en un enfoque humanístico, inclusivo y
                                 emprendedor,
                                 e impulsados por un equipo docente altamente cualificado y apasionado,
-                                para preparar ciudadanos capaces de innovar, liderar y contribuir a una sociedad más
+                                para preparar ciudadanos capaces de innovar y contribuir a una sociedad más
                                 digna y
                                 sostenible.
                             </p>
@@ -456,7 +469,7 @@
                     <!-- Visión -->
                     <article class="about-card vision-card" data-aos="fade-up" data-aos-delay="200">
                         <header class="card-header">
-                            <h3>Visión</h3>
+                            <h3>VISIÓN</h3>
                         </header>
                         <div class="card-body">
                             <p class="card-description">
@@ -470,225 +483,544 @@
                             </p>
                         </div>
                     </article>
-
-                    <!-- Historia -->
-                    <article class="about-card history-card" data-aos="fade-up" data-aos-delay="300">
-                        <header class="card-header">
-                            <h3>Historia</h3>
-                        </header>
-                        <div class="card-body">
-                            <p class="card-description">
-                                El Gimnasio Humanístico del Alto Magdalena, fundado en 1983 en Neiva como Colegio
-                                Bilingüe
-                                de la Sagrada Eucaristía, se destacó desde sus inicios por su calidad educativa.
-                                En 1991 fue adquirido por la Dra. Diana Patricia Cristancho de Iriarte, quien impulsó un
-                                nuevo enfoque pedagógico humanístico y regional.
-                                El colegio adoptó su nombre actual, propuesto por el Magíster Antonio Iriarte Cadena,
-                                reflejando valores humanos e identidad local.
-                                Se modernizó con innovaciones pedagógicas y tecnológicas inspiradas en pensadores como
-                                Gramsci, Piaget, Freinet y Dewey.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- Filosofía Educativa -->
-                    <article class="about-card philosophy-card" data-aos="fade-up" data-aos-delay="400">
-                        <header class="card-header">
-                            <h3>Filosofía Educativa</h3>
-                        </header>
-                        <div class="card-body">
-                            <p class="card-description">
-                                El Gimnasio Humanístico del Alto Magdalena fundamenta su filosofía en el humanismo,
-                                promoviendo la autodisciplina intelectual y la autonomía moral para formar seres
-                                críticos y
-                                responsables.
-                                Fomenta una cultura de democracia, creatividad e investigación, donde los estudiantes
-                                son
-                                protagonistas de su aprendizaje.
-                                Da prioridad al emprendimiento y la autodeterminación, impulsando a los jóvenes a
-                                liderar
-                                sus proyectos de vida y aportar a la sociedad.
-                                Además, asume un compromiso con la sostenibilidad ambiental y los valores del
-                                catolicismo,
-                                buscando una formación integral que trascienda lo académico.
-                            </p>
-                        </div>
-                    </article>
                 </div>
             </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <!-- Sección Oferta Académica - Niveles Educativos -->
-        <section class="academic-levels-section" id="niveles-educativos" aria-labelledby="academic-title">
-            <div class="container">
-                <!-- Header de la Sección -->
-                <header class="levels-header text-center mb-5">
-                    <h2 id="academic-title" class="levels-main-title" data-aos="fade-up">
-                        Oferta Académica
-                    </h2>
-                    <p class="levels-main-subtitle" data-aos="fade-up" data-aos-delay="200">
-                        Formación académica y humanística desde los primeros años hasta la preparación universitaria,
-                        con metodologías innovadoras y enfoque en el desarrollo de competencias para el siglo XXI.
-                    </p>
-                </header>
+<section class="academic-levels-section" id="niveles-educativos" aria-labelledby="academic-title">
+    <div class="academic-container">
+        <!-- Header de la Sección -->
+        <header class="academic-levels-header text-center mb-5">
+            <h2 id="academic-title" class="academic-levels-main-title" data-aos="fade-up">
+                Oferta Académica
+            </h2>
+            <p class="academic-levels-main-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Formación académica y humanística desde los primeros años hasta la preparación universitaria,
+                con metodologías innovadoras y enfoque en el desarrollo de competencias para el siglo XXI.
+            </p>
+        </header>
 
-                <!-- Grid de Niveles Educativos -->
-                <div class="row g-4">
-                    <!-- Preescolar -->
-                    <div class="col-lg-3 col-md-6">
-                        <article class="level-card preescolar-card" data-aos="fade-up" data-aos-delay="100">
-                            <figure class="card-image-wrapper">
+        <!-- Grid de Niveles Educativos -->
+        <div class="academic-row g-4">
+            <!-- Preescolar -->
+            <div class="academic-col">
+                <article class="academic-level-card preescolar-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="academic-carousel-container" data-carousel="preescolar">
+                        <div class="academic-carousel-slides">
+                            <div class="academic-carousel-slide">
                                 <img src="{{ asset('images/Primariaa.jpeg') }}"
-                                    alt="Niños de preescolar en actividades de aprendizaje lúdico y desarrollo de habilidades fundamentales"
-                                    class="level-image" width="400" height="300" loading="lazy">
-                            </figure>
-                            <div class="card-content">
-                                <h3 class="level-title">Educación Inicial - Preescolar</h3>
-                                <p class="level-description">
-                                    Desarrollamos las habilidades fundamentales a través del juego,
-                                    la exploración y actividades que estimulan la creatividad y el pensamiento crítico.
-                                </p>
-                                <a href="{{ route('prescolar') }}" class="level-link"
-                                    aria-label="Ver información completa sobre educación preescolar">
-                                    <span>Ver más información</span>
-                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                </a>
+                                    alt="Niños de preescolar en actividades de aprendizaje lúdico"
+                                    class="academic-level-image" loading="lazy">
                             </div>
-                            <div class="card-decoration preescolar-decoration" aria-hidden="true"></div>
-                        </article>
-                    </div>
-
-                    <!-- Primaria -->
-                    <div class="col-lg-3 col-md-6">
-                        <article class="level-card primaria-card" data-aos="fade-up" data-aos-delay="200">
-                            <figure class="card-image-wrapper">
-                                <img src="{{ asset('images/segundariaaa.jpeg') }}"
-                                    alt="Estudiantes de primaria en aulas bilingües desarrollando competencias STEM y habilidades comunicativas"
-                                    class="level-image" width="400" height="300" loading="lazy">
-                                <div class="card-overlay" aria-hidden="true">
-                                    <div class="overlay-content">
-                                        <div class="overlay-icon">
-                                            <i class="fas fa-book"></i>
-                                        </div>
-                                        <h4 class="overlay-title">Primaria</h4>
-                                        <p class="overlay-description">
-                                            Consolidación de competencias básicas con enfoque bilingüe y tecnológico
-                                        </p>
-                                        <ul class="overlay-features" role="list">
-                                            <li class="feature-item"><i class="fas fa-check"></i> Grados 1° a 5°</li>
-                                            <li class="feature-item"><i class="fas fa-check"></i> Educación bilingüe
-                                            </li>
-                                            <li class="feature-item"><i class="fas fa-check"></i> Competencias STEM
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </figure>
-                            <div class="card-content">
-                                <h3 class="level-title">Educación Básica Primaria</h3>
-                                <p class="level-description">
-                                    Fortalecemos las competencias comunicativas, matemáticas y científicas
-                                    con metodologías activas y enfoque en el aprendizaje colaborativo.
-                                </p>
-                                <a href="{{ route('basica_primaria') }}" class="level-link"
-                                    aria-label="Ver información completa sobre educación básica primaria">
-                                    <span>Ver más información</span>
-                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                </a>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/Primariaa.jpeg') }}"
+                                    alt="Desarrollo de habilidades fundamentales en preescolar"
+                                    class="academic-level-image" loading="lazy">
                             </div>
-                            <div class="card-decoration primaria-decoration" aria-hidden="true"></div>
-                        </article>
-                    </div>
-
-                    <!-- Secundaria -->
-                    <div class="col-lg-3 col-md-6">
-                        <article class="level-card secundaria-card" data-aos="fade-up" data-aos-delay="300">
-                            <figure class="card-image-wrapper">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
-                                    alt="Estudiantes de secundaria en proyectos de investigación y desarrollo de pensamiento crítico"
-                                    class="level-image" width="400" height="300" loading="lazy">
-                                <div class="card-overlay" aria-hidden="true">
-                                    <div class="overlay-content">
-                                        <div class="overlay-icon">
-                                            <i class="fas fa-users"></i>
-                                        </div>
-                                        <h4 class="overlay-title">Secundaria</h4>
-                                        <p class="overlay-description">
-                                            Fortalecimiento del pensamiento crítico y preparación para la media
-                                            académica
-                                        </p>
-                                        <ul class="overlay-features" role="list">
-                                            <li class="feature-item"><i class="fas fa-check"></i> Grados 6° a 9°</li>
-                                            <li class="feature-item"><i class="fas fa-check"></i> Proyectos de
-                                                investigación</li>
-                                            <li class="feature-item"><i class="fas fa-check"></i> Liderazgo
-                                                estudiantil</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </figure>
-                            <div class="card-content">
-                                <h3 class="level-title">Educación Básica Secundaria</h3>
-                                <p class="level-description">
-                                    Desarrollo del pensamiento crítico y analítico a través de proyectos
-                                    interdisciplinarios que preparan para los desafíos de la educación media.
-                                </p>
-                                <a href="#secundaria-detalle" class="level-link"
-                                    aria-label="Ver información completa sobre educación básica secundaria">
-                                    <span>Ver más información</span>
-                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                </a>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/Primariaa.jpeg') }}"
+                                    alt="Exploración y creatividad en educación inicial"
+                                    class="academic-level-image" loading="lazy">
                             </div>
-                            <div class="card-decoration secundaria-decoration" aria-hidden="true"></div>
-                        </article>
-                    </div>
-
-                    <!-- Media -->
-                    <div class="col-lg-3 col-md-6">
-                        <article class="level-card media-card" data-aos="fade-up" data-aos-delay="400">
-                            <figure class="card-image-wrapper">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
-                                    alt="Estudiantes de media académica en preparación universitaria y orientación vocacional para el proyecto de vida"
-                                    class="level-image" width="400" height="300" loading="lazy">
-                                <div class="card-overlay" aria-hidden="true">
-                                    <div class="overlay-content">
-                                        <div class="overlay-icon">
-                                            <i class="fas fa-graduation-cap"></i>
-                                        </div>
-                                        <h4 class="overlay-title">Media Académica</h4>
-                                        <p class="overlay-description">
-                                            Preparación integral para la educación superior y el proyecto de vida
-                                        </p>
-                                        <ul class="overlay-features" role="list">
-                                            <li class="feature-item"><i class="fas fa-check"></i> Grados 10° y 11°
-                                            </li>
-                                            <li class="feature-item"><i class="fas fa-check"></i> Orientación
-                                                vocacional</li>
-                                            <li class="feature-item"><i class="fas fa-check"></i> Preparación ICFES
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </figure>
-                            <div class="card-content">
-                                <h3 class="level-title">Educación Media Académica</h3>
-                                <p class="level-description">
-                                    Preparación integral para la educación superior con énfasis en el desarrollo
-                                    del proyecto de vida y competencias para el siglo XXI.
-                                </p>
-                                <a href="#media-detalle" class="level-link"
-                                    aria-label="Ver información completa sobre educación media académica">
-                                    <span>Ver más información</span>
-                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                </a>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/Primariaa.jpeg') }}"
+                                    alt="Pensamiento crítico en preescolar"
+                                    class="academic-level-image" loading="lazy">
                             </div>
-                            <div class="card-decoration media-decoration" aria-hidden="true"></div>
-                        </article>
+                        </div>
+                        <button class="academic-carousel-nav academic-carousel-prev" aria-label="Imagen anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="academic-carousel-nav academic-carousel-next" aria-label="Siguiente imagen">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="academic-carousel-counter">
+                            <span class="academic-counter-current">1</span> / <span class="academic-counter-total">4</span>
+                        </div>
+                        <div class="academic-carousel-controls"></div>
                     </div>
-                </div>
+                    <div class="academic-card-content">
+                        <h3 class="academic-level-title">Educación Inicial - Preescolar</h3>
+                        <p class="academic-level-description">
+                            Desarrollamos las habilidades fundamentales a través del juego,
+                            la exploración y actividades que estimulan la creatividad y el pensamiento crítico.
+                        </p>
+                        <a href="{{ route('prescolar') }}" class="academic-level-link"
+                            aria-label="Ver información completa sobre educación preescolar">
+                            <span>Ver más información</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
             </div>
-        </section>
+
+            <!-- Primaria -->
+            <div class="academic-col">
+                <article class="academic-level-card primaria-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="academic-carousel-container" data-carousel="primaria">
+                        <div class="academic-carousel-slides">
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/segundariaaa.jpeg') }}"
+                                    alt="Estudiantes de primaria en aulas bilingües"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/segundariaaa.jpeg') }}"
+                                    alt="Desarrollo de competencias STEM en primaria"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/segundariaaa.jpeg') }}"
+                                    alt="Habilidades comunicativas en educación primaria"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/segundariaaa.jpeg') }}"
+                                    alt="Aprendizaje colaborativo en primaria"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                        </div>
+                        <button class="academic-carousel-nav academic-carousel-prev" aria-label="Imagen anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="academic-carousel-nav academic-carousel-next" aria-label="Siguiente imagen">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="academic-carousel-counter">
+                            <span class="academic-counter-current">1</span> / <span class="academic-counter-total">4</span>
+                        </div>
+                        <div class="academic-carousel-controls"></div>
+                    </div>
+                    <div class="academic-card-content">
+                        <h3 class="academic-level-title">Educación Básica Primaria</h3>
+                        <p class="academic-level-description">
+                            Fortalecemos las competencias comunicativas, matemáticas y científicas
+                            con metodologías activas y enfoque en el aprendizaje colaborativo.
+                        </p>
+                        <a href="{{ route('basica_primaria') }}" class="academic-level-link"
+                            aria-label="Ver información completa sobre educación básica primaria">
+                            <span>Ver más información</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Secundaria -->
+            <div class="academic-col">
+                <article class="academic-level-card secundaria-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="academic-carousel-container" data-carousel="secundaria">
+                        <div class="academic-carousel-slides">
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                    alt="Estudiantes de secundaria en proyectos de investigación"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                    alt="Desarrollo de pensamiento crítico en secundaria"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                    alt="Liderazgo estudiantil en educación secundaria"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                    alt="Proyectos interdisciplinarios en secundaria"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                        </div>
+                        <button class="academic-carousel-nav academic-carousel-prev" aria-label="Imagen anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="academic-carousel-nav academic-carousel-next" aria-label="Siguiente imagen">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="academic-carousel-counter">
+                            <span class="academic-counter-current">1</span> / <span class="academic-counter-total">4</span>
+                        </div>
+                        <div class="academic-carousel-controls"></div>
+                    </div>
+                    <div class="academic-card-content">
+                        <h3 class="academic-level-title">Educación Básica Secundaria</h3>
+                        <p class="academic-level-description">
+                            Desarrollo del pensamiento crítico y analítico a través de proyectos
+                            interdisciplinarios que preparan para los desafíos de la educación media.
+                        </p>
+                        <a href="{{ route('basica_segundaria') }}" class="academic-level-link"
+                            aria-label="Ver información completa sobre educación básica secundaria">
+                            <span>Ver más información</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Media -->
+            <div class="academic-col">
+                <article class="academic-level-card media-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="academic-carousel-container" data-carousel="media">
+                        <div class="academic-carousel-slides">
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                    alt="Estudiantes de media académica en preparación universitaria"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                    alt="Orientación vocacional para el proyecto de vida"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                    alt="Preparación ICFES en educación media"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                            <div class="academic-carousel-slide">
+                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                    alt="Competencias para el siglo XXI"
+                                    class="academic-level-image" loading="lazy">
+                            </div>
+                        </div>
+                        <button class="academic-carousel-nav academic-carousel-prev" aria-label="Imagen anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="academic-carousel-nav academic-carousel-next" aria-label="Siguiente imagen">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="academic-carousel-counter">
+                            <span class="academic-counter-current">1</span> / <span class="academic-counter-total">4</span>
+                        </div>
+                        <div class="academic-carousel-controls"></div>
+                    </div>
+                    <div class="academic-card-content">
+                        <h3 class="academic-level-title">Educación Media Académica</h3>
+                        <p class="academic-level-description">
+                            Preparación integral para la educación superior con énfasis en el desarrollo
+                            del proyecto de vida y competencias para el siglo XXI.
+                        </p>
+                        <a href="{{ route('media_academica') }}" class="academic-level-link"
+                            aria-label="Ver información completa sobre educación media académica">
+                            <span>Ver más información</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+    /**
+ * Carrusel para Sección de Oferta Académica
+ * Todas las funciones y variables tienen prefijo "Academic" para evitar conflictos
+ */
+
+class AcademicCarousel {
+    constructor(container) {
+        this.container = container;
+        this.slides = container.querySelector('.academic-carousel-slides');
+        this.slideElements = container.querySelectorAll('.academic-carousel-slide');
+        this.totalSlides = this.slideElements.length;
+        this.currentIndex = 0;
+        this.isTransitioning = false;
+        
+        // Elementos de control
+        this.prevBtn = container.querySelector('.academic-carousel-prev');
+        this.nextBtn = container.querySelector('.academic-carousel-next');
+        this.controlsContainer = container.querySelector('.academic-carousel-controls');
+        this.counterCurrent = container.querySelector('.academic-counter-current');
+        this.counterTotal = container.querySelector('.academic-counter-total');
+        
+        // Configuración de autoplay
+        this.autoplayInterval = null;
+        this.autoplayDelay = 4000; // 4 segundos
+        
+        // Variables para touch
+        this.touchStartX = 0;
+        this.touchEndX = 0;
+        this.touchThreshold = 50;
+        
+        this.init();
+    }
+    
+    /**
+     * Inicializar el carrusel
+     */
+    init() {
+        this.createDots();
+        this.updateCounter();
+        this.attachEvents();
+        this.startAutoplay();
+    }
+    
+    /**
+     * Crear los dots de navegación
+     */
+    createDots() {
+        for (let i = 0; i < this.totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('academic-carousel-dot');
+            dot.setAttribute('aria-label', `Ir a imagen ${i + 1}`);
+            dot.setAttribute('type', 'button');
+            
+            if (i === 0) {
+                dot.classList.add('active');
+            }
+            
+            dot.addEventListener('click', () => {
+                this.goToSlide(i);
+                this.resetAutoplay();
+            });
+            
+            this.controlsContainer.appendChild(dot);
+        }
+    }
+    
+    /**
+     * Adjuntar eventos
+     */
+    attachEvents() {
+        // Eventos de botones
+        this.prevBtn.addEventListener('click', () => {
+            this.prev();
+            this.resetAutoplay();
+        });
+        
+        this.nextBtn.addEventListener('click', () => {
+            this.next();
+            this.resetAutoplay();
+        });
+        
+        // Eventos de hover para autoplay
+        this.container.addEventListener('mouseenter', () => {
+            this.stopAutoplay();
+        });
+        
+        this.container.addEventListener('mouseleave', () => {
+            this.startAutoplay();
+        });
+        
+        // Eventos táctiles para móvil
+        this.container.addEventListener('touchstart', (e) => {
+            this.touchStartX = e.changedTouches[0].screenX;
+            this.stopAutoplay();
+        }, { passive: true });
+        
+        this.container.addEventListener('touchend', (e) => {
+            this.touchEndX = e.changedTouches[0].screenX;
+            this.handleSwipe();
+            this.startAutoplay();
+        }, { passive: true });
+        
+        // Eventos de teclado para accesibilidad
+        this.container.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                this.prev();
+                this.resetAutoplay();
+            } else if (e.key === 'ArrowRight') {
+                this.next();
+                this.resetAutoplay();
+            }
+        });
+    }
+    
+    /**
+     * Manejar gestos de swipe
+     */
+    handleSwipe() {
+        const diff = this.touchStartX - this.touchEndX;
+        
+        if (Math.abs(diff) > this.touchThreshold) {
+            if (diff > 0) {
+                // Swipe left - siguiente
+                this.next();
+            } else {
+                // Swipe right - anterior
+                this.prev();
+            }
+        }
+    }
+    
+    /**
+     * Ir a una slide específica
+     */
+    goToSlide(index) {
+        if (this.isTransitioning) return;
+        
+        this.isTransitioning = true;
+        this.currentIndex = index;
+        
+        const offset = -index * 100;
+        this.slides.style.transform = `translateX(${offset}%)`;
+        
+        this.updateDots();
+        this.updateCounter();
+        
+        setTimeout(() => {
+            this.isTransitioning = false;
+        }, 600);
+    }
+    
+    /**
+     * Ir a la siguiente slide
+     */
+    next() {
+        const nextIndex = (this.currentIndex + 1) % this.totalSlides;
+        this.goToSlide(nextIndex);
+    }
+    
+    /**
+     * Ir a la slide anterior
+     */
+    prev() {
+        const prevIndex = (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
+        this.goToSlide(prevIndex);
+    }
+    
+    /**
+     * Actualizar los dots activos
+     */
+    updateDots() {
+        const dots = this.controlsContainer.querySelectorAll('.academic-carousel-dot');
+        dots.forEach((dot, index) => {
+            if (index === this.currentIndex) {
+                dot.classList.add('active');
+                dot.setAttribute('aria-current', 'true');
+            } else {
+                dot.classList.remove('active');
+                dot.removeAttribute('aria-current');
+            }
+        });
+    }
+    
+    /**
+     * Actualizar el contador
+     */
+    updateCounter() {
+        this.counterCurrent.textContent = this.currentIndex + 1;
+        this.counterTotal.textContent = this.totalSlides;
+    }
+    
+    /**
+     * Iniciar autoplay
+     */
+    startAutoplay() {
+        this.stopAutoplay();
+        this.autoplayInterval = setInterval(() => {
+            this.next();
+        }, this.autoplayDelay);
+    }
+    
+    /**
+     * Detener autoplay
+     */
+    stopAutoplay() {
+        if (this.autoplayInterval) {
+            clearInterval(this.autoplayInterval);
+            this.autoplayInterval = null;
+        }
+    }
+    
+    /**
+     * Reiniciar autoplay
+     */
+    resetAutoplay() {
+        this.stopAutoplay();
+        this.startAutoplay();
+    }
+    
+    /**
+     * Destruir el carrusel (limpieza)
+     */
+    destroy() {
+        this.stopAutoplay();
+        // Remover eventos si es necesario
+    }
+}
+
+/**
+ * Inicializar todos los carruseles cuando el DOM esté listo
+ */
+(function() {
+    // Variable global para almacenar las instancias
+    window.academicCarousels = [];
+    
+    function initAcademicCarousels() {
+        const carouselContainers = document.querySelectorAll('.academic-carousel-container');
+        
+        carouselContainers.forEach((container, index) => {
+            try {
+                const carousel = new AcademicCarousel(container);
+                window.academicCarousels.push(carousel);
+                console.log(`Carrusel académico ${index + 1} inicializado correctamente`);
+            } catch (error) {
+                console.error(`Error al inicializar carrusel académico ${index + 1}:`, error);
+            }
+        });
+    }
+    
+    // Esperar a que el DOM esté completamente cargado
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAcademicCarousels);
+    } else {
+        // DOM ya está listo
+        initAcademicCarousels();
+    }
+    
+    // Limpiar cuando se cierre la página
+    window.addEventListener('beforeunload', function() {
+        if (window.academicCarousels) {
+            window.academicCarousels.forEach(carousel => {
+                if (carousel && typeof carousel.destroy === 'function') {
+                    carousel.destroy();
+                }
+            });
+        }
+    });
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
 
     <!-- Footer -->
@@ -698,15 +1030,126 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const video = document.querySelector(".hero-bg-video");
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById("heroVideo");
+            const videoLoader = document.getElementById("videoLoader");
 
-    video.addEventListener("loadeddata", () => {
-        video.classList.add("loaded");
-    });
-});
-</script>
+            // Cuando el video puede reproducirse sin parar
+            video.addEventListener("canplaythrough", () => {
+                videoLoader.classList.add("hidden");
+                video.classList.add("loaded");
+            }, {
+                once: true
+            });
+
+            // Fallback: mostrar video después de 3 segundos
+            setTimeout(() => {
+                if (!video.classList.contains("loaded")) {
+                    videoLoader.classList.add("hidden");
+                    video.classList.add("loaded");
+                }
+            }, 3000);
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Datos de las instalaciones
+            const facilities = [{
+                    title: "Laboratorios de Ciencias",
+                    description: "Laboratorios de ciencias equipados con tecnología moderna para experimentos. Espacios diseñados para fomentar la investigación y el descubrimiento científico.",
+                    image: "images/Dansas.jpg",
+                    alt: "Laboratorios de ciencias equipados con tecnología moderna"
+                },
+                {
+                    title: "Aula De Sistemas",
+                    description: "Aulas inteligentes con tecnología educativa avanzada y espacios de aprendizaje colaborativo equipadas con computadoras de última generación.",
+                    image: "images/Instalaciones/Imagen2.jpg",
+                    alt: "Aulas inteligentes con tecnología educativa avanzada"
+                },
+                {
+                    title: "Espacios Culturales",
+                    description: "Biblioteca digital con recursos multimedia y espacios de lectura modernos. Un ambiente tranquilo y estimulante para el desarrollo intelectual.",
+                    image: "images/Instalaciones/Imagen3.jpg",
+                    alt: "Biblioteca digital con recursos multimedia"
+                },
+                {
+                    title: "Espacios Deportivos",
+                    description: "Espacios deportivos y recreativos para desarrollo físico y formación integral. Instalaciones modernas que promueven la vida saludable.",
+                    image: "images/Pescolarr1.jpg",
+                    alt: "Espacios deportivos y recreativos"
+                }
+            ];
+
+            let currentIndex = 0;
+            const modalOverlay = document.getElementById('modalOverlay');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalClose = document.getElementById('modalClose');
+            const modalPrev = document.getElementById('modalPrev');
+            const modalNext = document.getElementById('modalNext');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            // Abrir modal al hacer clic en las imágenes
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    currentIndex = index;
+                    openModal();
+                });
+            });
+
+            function openModal() {
+                const facility = facilities[currentIndex];
+                modalImage.src = facility.image;
+                modalImage.alt = facility.alt;
+                modalTitle.textContent = facility.title;
+                modalDescription.textContent = facility.description;
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // Eventos de cierre
+            modalClose.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    closeModal();
+                }
+            });
+
+            // Navegación entre imágenes
+            modalPrev.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + facilities.length) % facilities.length;
+                openModal();
+            });
+
+            modalNext.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % facilities.length;
+                openModal();
+            });
+
+            // Control con teclado
+            document.addEventListener('keydown', (e) => {
+                if (!modalOverlay.classList.contains('active')) return;
+
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + facilities.length) % facilities.length;
+                    openModal();
+                }
+                if (e.key === 'ArrowRight') {
+                    currentIndex = (currentIndex + 1) % facilities.length;
+                    openModal();
+                }
+            });
+        });
+    </script>
 
 </body>
+
 </html>
