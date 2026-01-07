@@ -389,7 +389,7 @@
 
                         <article class="gallery-item" data-index="3">
                             <figure class="gallery-image-wrapper">
-                                <img src="{{ asset('images/Pescolarr1.jpg') }}"
+                                <img src="{{ asset('images/Educacion-Primaria/Imagen6.jpg') }}"
                                     alt="Espacios deportivos y recreativos" class="gallery-image" loading="lazy">
                             </figure>
                             <figcaption class="gallery-title-overlay">
@@ -529,22 +529,22 @@
                     <div class="academic-carousel-container" data-carousel="preescolar">
                         <div class="academic-carousel-slides">
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/Primariaa.jpeg') }}"
+                                <img src="{{ asset('images/Educacion Inicial/Imagen5.jpg') }}"
                                     alt="Niños de preescolar en actividades de aprendizaje lúdico"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/Primariaa.jpeg') }}"
+                                <img src="{{ asset('images/Educacion Inicial/Imagen4.jpg') }}"
                                     alt="Desarrollo de habilidades fundamentales en preescolar"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/Primariaa.jpeg') }}"
+                                <img src="{{ asset('images/Educacion Inicial/Sanpedrito.jpg') }}"
                                     alt="Exploración y creatividad en educación inicial"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/Primariaa.jpeg') }}"
+                                <img src="{{ asset('images/Educacion Inicial/Imagen1.jpg') }}"
                                     alt="Pensamiento crítico en preescolar"
                                     class="academic-level-image" loading="lazy">
                             </div>
@@ -581,22 +581,22 @@
                     <div class="academic-carousel-container" data-carousel="primaria">
                         <div class="academic-carousel-slides">
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/segundariaaa.jpeg') }}"
+                                <img src="{{ asset('images/Educacion-Primaria/Imagen3.jpg') }}"
                                     alt="Estudiantes de primaria en aulas bilingües"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/segundariaaa.jpeg') }}"
+                                <img src="{{ asset('images/Educacion-Primaria/Imagen1.jpg') }}"
                                     alt="Desarrollo de competencias STEM en primaria"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/segundariaaa.jpeg') }}"
+                                <img src="{{ asset('images/Educacion-Primaria/Imagen5.jpg') }}"
                                     alt="Habilidades comunicativas en educación primaria"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/segundariaaa.jpeg') }}"
+                                <img src="{{ asset('images/Educacion-Primaria/Imagen4.jpg') }}"
                                     alt="Aprendizaje colaborativo en primaria"
                                     class="academic-level-image" loading="lazy">
                             </div>
@@ -633,22 +633,22 @@
                     <div class="academic-carousel-container" data-carousel="secundaria">
                         <div class="academic-carousel-slides">
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                <img src="{{ asset('images/Educacion Secundaria/Imagen1.jpg') }}"
                                     alt="Estudiantes de secundaria en proyectos de investigación"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                <img src="{{ asset('images/Educacion Secundaria/Imagen2.jpg') }}"
                                     alt="Desarrollo de pensamiento crítico en secundaria"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                <img src="{{ asset('images/Educacion Secundaria/Imagen3.jpg') }}"
                                     alt="Liderazgo estudiantil en educación secundaria"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                <img src="{{ asset('images/Educacion Secundaria/Imagen4.jpg') }}"
                                     alt="Proyectos interdisciplinarios en secundaria"
                                     class="academic-level-image" loading="lazy">
                             </div>
@@ -1076,7 +1076,7 @@ class AcademicCarousel {
                 {
                     title: "Espacios Deportivos",
                     description: "Espacios deportivos y recreativos para desarrollo físico y formación integral. Instalaciones modernas que promueven la vida saludable.",
-                    image: "images/Pescolarr1.jpg",
+                    image: "images/Educacion-Primaria/Imagen6.jpg",
                     alt: "Espacios deportivos y recreativos"
                 }
             ];

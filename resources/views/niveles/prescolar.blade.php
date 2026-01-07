@@ -44,7 +44,7 @@
         <!-- HERO -->
         <section class="hero-section" aria-label="Educación Inicial y Preescolar en Neiva">
             <div class="hero-background">
-                <img src="../images/Educacion Inicial/Imagen5.jpg"
+                <img src="../images/Educacion Inicial/Sanpedrito.jpg"
                     alt="Instalaciones del colegio en Neiva enfocadas en educación inicial y preescolar" width="1920"
                     height="1080" loading="lazy">
             </div>
@@ -85,7 +85,7 @@
                     <div class="col-lg-6 order-lg-1 order-2">
                         <article>
                             <div class="metodologia-image">
-                                <img src="{{ asset('images/Educacion Inicial/Imagen9.jpg') }}"
+                                <img src="{{ asset('images/Educacion Inicial/Imagen1.jpg') }}"
                                     alt="Niños en actividades de educación inicial y preescolar en Neiva"
                                     loading="lazy">
                             </div>
@@ -196,7 +196,7 @@
                 <div class="gallery-grid">
 
                     <article class="gallery-item" onclick="openLightbox(0)">
-                        <img src="images/Pescolarr1.jpg" alt="Niños jugando en el aula del preescolar"
+                        <img src="images/Educacion Inicial/Imagen11.jpg" alt="Niños jugando en el aula del preescolar"
                             loading="lazy">
                     </article>
 

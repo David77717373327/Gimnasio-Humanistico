@@ -50,21 +50,21 @@
 
 /* Imágenes de fondo para cada card */
 .nav-card-inst {
-    background-image: url('../images/Mision1.jpg');
+    background-image: url('../images/Educacion\ secundaria/Imagen1.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .nav-card-inst.filosofia {
-    background-image: url('../images/Mision1.jpg');
+    background-image: url('../images/Educacion\ secundaria/Imagen2.jpg');
 }
 
 .nav-card-inst.principios {
-    background-image: url('../images/Mision1.jpg');
+    background-image: url('../images/Educacion\ Inicial/Imagen.jpg');
 }
 
 .nav-card-inst.simbolos {
-    background-image: url('../images/Mision1.jpg');
+    background-image: url('../images/bandera.png');
 }
 
 /* Overlay con degradado OSCURO (verde a negro) */

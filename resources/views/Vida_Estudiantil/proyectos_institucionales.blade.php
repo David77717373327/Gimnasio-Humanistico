@@ -53,7 +53,7 @@
         <!-- HERO SECTION -->
         <section class="hero-section" aria-label="Sección destacada de historia">
             <div class="hero-background">
-                <img src="../images/Mision1.jpg"
+                <img src="../images/Educacion Secundaria/Imagen1.jpg"
                     alt="Vista del Gimnasio Humanístico del Alto Magdalena, institución educativa en Neiva"
                     width="1920" height="1080">
             </div>
@@ -307,9 +307,9 @@
                 '../images/Dansas.jpg',
             ],
             danzas: [
-                '../images/Dansas.jpg', 
-                '../images/Educacion_Inicila.jpg',
-               '../images/Dansas.jpg',
+                '../images/Proyecto/Imagen1.jpg', 
+                '../images/Proyecto/Imagen2.jpg',
+               '../images/Proyecto/Imagen3.jpg',
             ]
         };
 

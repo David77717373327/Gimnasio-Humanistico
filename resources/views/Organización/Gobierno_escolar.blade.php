@@ -111,7 +111,7 @@
 
                         <div class="flip-card-front">
                             <div class="card-icon">
-                                <img src="{{ asset('images/Grupo-Humanistico2.png') }}" alt="Rectoría">
+                                <img src="{{ asset('images/Logo.png') }}" alt="Rectoría">
                             </div>
                             <h4 class="front-title">Rectoría</h4>
                             <p class="front-subtitle">Representación Legal</p>
@@ -158,7 +158,7 @@
 
                         <div class="flip-card-front">
                             <div class="card-icon">
-                                <img src="{{ asset('images/Logo.png') }}" alt="Consejo Directivo">
+                                <img src="{{ asset('images/Grupo-Humanistico2.png') }}" alt="Consejo Directivo">
                             </div>
                             <h4 class="front-title">Consejo Directivo</h4>
                             <p class="front-subtitle">Órgano de Decisión</p>
@@ -196,7 +196,7 @@
 
                         <div class="flip-card-front">
                             <div class="card-icon">
-                                <img src="{{ asset('images/Mision1.jpg') }}" alt="Consejo Académico">
+                                <img src="{{ asset('images/Consejo_Directivo.jpg') }}" alt="Consejo Académico">
                             </div>
                             <h4 class="front-title">Consejo Académico</h4>
                             <p class="front-subtitle">Órgano Asesor</p>

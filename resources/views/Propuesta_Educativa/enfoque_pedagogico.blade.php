@@ -41,7 +41,7 @@
         <!-- HERO -->
         <section class="hero-section" aria-label="Educación Inicial y Preescolar en Neiva">
             <div class="hero-background">
-                <img src="../images/Mision1.jpg"
+                <img src="../images/Educacion Secundaria/Imagen1.jpg"
                     alt="Instalaciones del colegio en Neiva enfocadas en educación inicial y preescolar" width="1920"
                     height="1080" loading="lazy">
             </div>
