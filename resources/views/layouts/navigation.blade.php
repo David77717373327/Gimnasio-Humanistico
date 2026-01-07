@@ -76,7 +76,7 @@
                 <!-- NIVELES -->
                 <li class="nav-item dropdown" role="none">
                     <a class="nav-link" href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
-                        Niveles
+                        Niveles Educativos
                     </a>
                     <div class="dropdown-menu single-column" role="menu">
                         <a class="dropdown-item" role="menuitem" href="{{ route('prescolar') }}">Educación Inicial Prescolar</a>
@@ -99,19 +99,14 @@
                     <div class="dropdown-menu single-column" role="menu">
                         <a class="dropdown-item" role="menuitem" href="{{ route('eventos_celebraciones') }}">Eventos y Celebraciones</a>
                         <a class="dropdown-item" role="menuitem" href="{{ route('transporte') }}">Transporte Escolar</a>
-                        <a class="dropdown-item" role="menuitem" href="{{ route('proyectos_institucionales') }}">Proyectos Institucionales</a>
                     </div>
                 </li>
 
-                <!-- Contacto -->
+                <!-- Proyectos -->
                 <li class="nav-item" role="none">
-                    <a class="nav-link" href="#contacto" role="menuitem">Contacto</a>
+                    <a class="nav-link" href="{{ route('proyectos_institucionales') }}" role="menuitem">Proyectos</a>
                 </li>
 
-                <!-- Login -->
-                <li class="nav-item" role="none">
-                    <a class="nav-link login-btn" href="{{ route('login') }}" role="menuitem">Acceder</a>
-                </li>
             </ul>
 
             <!-- Indicador -->

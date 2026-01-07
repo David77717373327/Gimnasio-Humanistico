@@ -408,6 +408,213 @@
 
 
 
+
+
+
+
+
+
+
+
+        <!-- GALERÍA -->
+        <section aria-label="Galería de momentos especiales en el preescolar de Neiva">
+            <header class="gallery-header">
+                <h2 class="gallery-title">Momentos Especiales</h2>
+                <p class="gallery-subtitle">
+                    Actividades, juegos y aprendizajes que viven nuestros estudiantes de educación inicial y preescolar.
+                </p>
+            </header>
+
+            <!-- Modal Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar galería">&times;</button>
+                <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)"
+                    aria-label="Imagen anterior">&#10094;</button>
+
+                <div class="lightbox-content">
+                    <img id="lightbox-img" src="" alt="Imagen ampliada">
+                </div>
+
+                <button class="lightbox-nav lightbox-next" onclick="changeImage(1)"
+                    aria-label="Siguiente imagen">&#10095;</button>
+            </div>
+
+            <!-- GRID -->
+            <div class="gallery-container">
+                <div class="gallery-grid">
+
+                    <article class="gallery-item" onclick="openLightbox(0)">
+                        <img src="images/Media_Academica.jpg" alt="Niños jugando en el aula del preescolar"
+                            loading="lazy">
+                    </article>
+
+                    <article class="gallery-item" onclick="openLightbox(1)">
+                        <img src="images/Dansas.jpg" alt="Actividades creativas para primera infancia"
+                            loading="lazy">
+                    </article>
+
+                    <article class="gallery-item" onclick="openLightbox(2)">
+                        <img src="images/Dansas.jpg" alt="Aprendizaje colaborativo en preescolar"
+                            loading="lazy">
+                    </article>
+
+                    <article class="gallery-item" onclick="openLightbox(3)">
+                        <img src="images/Mision1.jpg" alt="Exploración educativa al aire libre"
+                            loading="lazy">
+                    </article>
+
+                    <article class="gallery-item" onclick="openLightbox(4)">
+                        <img src="images/iniciooo2.jpeg" alt="Juego libre y diversión en el colegio" loading="lazy">
+                    </article>
+
+                    <article class="gallery-item" onclick="openLightbox(5)">
+                        <img src="images/Mision1.jpg" alt="Desarrollo integral y acompañamiento docente"
+                            loading="lazy">
+                    </article>
+
+                    <article class="gallery-item" onclick="openLightbox(6)">
+                        <img src="images/Primariaa.jpeg" alt="Momentos de aprendizaje diario" loading="lazy">
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+
+
+
+
+
+// Array con todas las imágenes de la galería (7 imágenes)
+    const galleryImages = [
+        { src: 'images/Media_Academica.jpg', alt: 'Niños jugando en el aula' },
+        { src: 'images/Dansas.jpg', alt: 'Actividades creativas' },
+        { src: 'images/Dansas.jpg', alt: 'Aprendizaje en grupo' },
+        { src: 'images/Mision1.jpg', alt: 'Exploración educativa' },
+        { src: 'images/iniciooo2.jpeg', alt: 'Tiempo de juego y diversión' },
+        { src: 'images/Mision1.jpg', alt: 'Desarrollo integral' },
+        { src: 'images/Primariaa.jpeg', alt: 'Momentos de aprendizaje' }
+    ];
+
+    let currentImageIndex = 0;
+
+    // Mostrar u ocultar flechas según posición
+    function updateArrows() {
+        const prevBtn = document.querySelector('.lightbox-prev');
+        const nextBtn = document.querySelector('.lightbox-next');
+
+        // Primera imagen → esconder flecha izquierda
+        prevBtn.style.display = currentImageIndex === 0 ? "none" : "block";
+
+        // Última imagen → esconder flecha derecha
+        nextBtn.style.display = currentImageIndex === galleryImages.length - 1 ? "none" : "block";
+    }
+
+    // Abrir lightbox
+    function openLightbox(index) {
+        currentImageIndex = index;
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        lightboxImg.src = galleryImages[index].src;
+        lightboxImg.alt = galleryImages[index].alt;
+        lightbox.classList.add('active');
+
+        updateArrows(); // Actualizar flechas al abrir
+
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Cerrar lightbox
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Cambiar imagen sin bucle infinito
+    function changeImage(direction) {
+        currentImageIndex += direction;
+
+        // Limitar índices
+        if (currentImageIndex < 0) currentImageIndex = 0;
+        if (currentImageIndex >= galleryImages.length)
+            currentImageIndex = galleryImages.length - 1;
+
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        lightboxImg.style.opacity = '0';
+
+        setTimeout(() => {
+            lightboxImg.src = galleryImages[currentImageIndex].src;
+            lightboxImg.alt = galleryImages[currentImageIndex].alt;
+            lightboxImg.style.opacity = '1';
+        }, 200);
+
+        updateArrows(); // Actualizar flechas cada vez que cambias imagen
+    }
+
+    // Cerrar con tecla ESC y navegar con flechas
+    document.addEventListener('keydown', function(e) {
+        const lightbox = document.getElementById('lightbox');
+
+        if (e.key === 'Escape') closeLightbox();
+
+        if (lightbox.classList.contains('active')) {
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'ArrowRight') changeImage(1);
+        }
+    });
+
+    // Cerrar al hacer clic fuera de la imagen
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) closeLightbox();
+    });
+
+    // Prevenir cierres al hacer clic en botones
+    document.querySelector('.lightbox-close').addEventListener('click', e => e.stopPropagation());
+    document.querySelector('.lightbox-prev').addEventListener('click', e => e.stopPropagation());
+    document.querySelector('.lightbox-next').addEventListener('click', e => e.stopPropagation());
+
+    // Transición suave
+    document.getElementById('lightbox-img').style.transition = 'opacity 0.3s ease';
+
+
+
+
+
+
+
+
+
         <script>
         document.addEventListener('DOMContentLoaded', function() {
     const navItems = document.querySelectorAll('.objetivos-nav-item');

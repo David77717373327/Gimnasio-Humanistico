@@ -387,12 +387,12 @@
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(2)">
-                        <img src="images/Educacion_Inicila.jpg" alt="Aprendizaje colaborativo en preescolar"
+                        <img src="images/Dansas.jpg" alt="Aprendizaje colaborativo en preescolar"
                             loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(3)">
-                        <img src="images/Educacion_Primaria.webp" alt="Exploración educativa al aire libre"
+                        <img src="images/Mision1.jpg" alt="Exploración educativa al aire libre"
                             loading="lazy">
                     </article>
 
@@ -524,8 +524,8 @@ function scrollToContent() {
     const galleryImages = [
         { src: 'images/Media_Academica.jpg', alt: 'Niños jugando en el aula' },
         { src: 'images/Dansas.jpg', alt: 'Actividades creativas' },
-        { src: 'images/Educacion_Inicila.jpg', alt: 'Aprendizaje en grupo' },
-        { src: 'images/Educacion_Primaria.webp', alt: 'Exploración educativa' },
+        { src: 'images/Dansas.jpg', alt: 'Aprendizaje en grupo' },
+        { src: 'images/Mision1.jpg', alt: 'Exploración educativa' },
         { src: 'images/iniciooo2.jpeg', alt: 'Tiempo de juego y diversión' },
         { src: 'images/Mision1.jpg', alt: 'Desarrollo integral' },
         { src: 'images/Primariaa.jpeg', alt: 'Momentos de aprendizaje' }
