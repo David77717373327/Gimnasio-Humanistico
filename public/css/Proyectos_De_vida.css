@@ -209,20 +209,6 @@
     z-index: 10;
 }
 
-.indicator {
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.indicator.active {
-    background: var(--white);
-    width: 30px;
-    border-radius: 5px;
-}
 
 /* Contador */
 .carrusel-counter {

@@ -183,84 +183,136 @@
     <!-- Contenido Principal -->
     <main id="main-content" role="main">
 
-        <!-- Hero Section -->
-        <section class="hero-banner" id="inicio" aria-labelledby="hero-title">
-            <!-- Fondo con video y overlays profesionales -->
-            <div class="hero-background" aria-hidden="true">
-                <!-- Video de fondo -->
-                <div class="hero-video-container">
-                    <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata"
-                        poster="{{ asset('images/video-poster.jpg') }}"
-                        aria-label="Video de presentación del colegio">
-                        <source src="{{ asset('videos/hero-background4.mp4') }}" type="video/mp4">
-                        <source src="{{ asset('videos/hero-background.webm') }}" type="video/webm">
-                        <img src="{{ asset('images/iniciooo2.jpeg') }}"
-                            alt="Vista panorámica de las instalaciones del Gimnasio Humanístico del Alto Magdalena en Neiva"
-                            class="hero-fallback-image" width="1920" height="1080" loading="eager">
-                    </video>
-                </div>
 
-                <!-- Overlays para mejor legibilidad -->
-                <div class="hero-video-overlay" aria-hidden="true"></div>
-                <div class="hero-gradient-overlay" aria-hidden="true"></div>
-            </div>
 
-            <!-- Contenido del Hero -->
-            <div class="hero-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-10 col-xl-9">
-                            <!-- Título principal -->
-                            <div class="hero-title-section">
-                                <h1 id="hero-title" class="hero-title">
-                                    Nos educamos en el trabajo humanizante para un nuevo país
-                                </h1>
-                            </div>
 
-                            <!-- Subtítulo y botones -->
-                            <div class="hero-bottom-section">
-                                <!-- Subtítulo -->
-                                <div class="hero-subtitle-wrapper">
-                                    <p class="hero-subtitle">
-                                        En nuestras aulas se fortalece el vuelo de la creatividad, la imaginación,
-                                        el humanismo y el conocimiento.<br>
-                                        ¡Ven y alza el vuelo con nosotros; el futuro nos inspira!
-                                    </p>
-                                </div>
 
-                                <!-- Botones de acción -->
-                                <div class="hero-buttons-wrapper">
-                                    <a href="{{ route('admision') }}" class="btn-primary-modern"
-                                        aria-label="Solicitar admisión al Gimnasio Humanístico">
-                                        <i class="fas fa-rocket" aria-hidden="true"></i>
-                                        Solicitar Admisión
-                                    </a>
-                                    <a href="#virtual-tour" class="btn-secondary-modern"
-                                        aria-label="Ver tour virtual del colegio">
-                                        <i class="fas fa-play" aria-hidden="true"></i>
-                                        Tour Virtual
-                                    </a>
-                                </div>
-                            </div>
+
+
+        
+
+       <!-- Hero Section -->
+<section class="hero-banner" id="inicio" aria-labelledby="hero-title">
+    <!-- Fondo con video y overlays profesionales -->
+    <div class="hero-background" aria-hidden="true">
+        <!-- Video de fondo -->
+        <video class="hero-bg-video" id="heroVideo" autoplay muted loop playsinline preload="auto"
+            poster="{{ asset('images/video-poster.jpg') }}"
+            aria-label="Video de presentación del colegio">
+            <source src="{{ asset('videos/hero-background1.mp4') }}" type="video/mp4">
+            <source src="{{ asset('videos/hero-background.webm') }}" type="video/webm">
+        </video>
+
+        <!-- Imagen de fallback -->
+        <img src="{{ asset('images/iniciooo2.jpeg') }}"
+            alt="Vista panorámica de las instalaciones del Gimnasio Humanístico del Alto Magdalena en Neiva"
+            class="hero-fallback-image" width="1920" height="1080" loading="eager">
+
+        <!-- Overlays para mejor legibilidad -->
+        <div class="hero-video-overlay" aria-hidden="true"></div>
+        <div class="hero-gradient-overlay" aria-hidden="true"></div>
+    </div>
+
+    <!-- Contenido del Hero -->
+    <div class="hero-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-10 col-xl-9">
+                    <!-- Título principal -->
+                    <div class="hero-title-section">
+                        <h1 id="hero-title" class="hero-title">
+                            Nos educamos en el trabajo humanizante para un nuevo país
+                        </h1>
+                    </div>
+
+                    <!-- Subtítulo y botones -->
+                    <div class="hero-bottom-section">
+                        <!-- Subtítulo -->
+                        <div class="hero-subtitle-wrapper">
+                            <p class="hero-subtitle">
+                                En nuestras aulas se fortalece el vuelo de la creatividad, la imaginación,
+                                el humanismo y el conocimiento.<br>
+                                ¡Ven y alza el vuelo con nosotros; el futuro nos inspira!
+                            </p>
+                        </div>
+
+                        <!-- Botones de acción -->
+                        <div class="hero-buttons-wrapper">
+                            <a href="{{ route('admision') }}" class="btn-primary-modern"
+                                aria-label="Solicitar admisión al Gimnasio Humanístico">
+                                <i class="fas fa-rocket" aria-hidden="true"></i>
+                                Solicitar Admisión
+                            </a>
+                            <a href="#virtual-tour" class="btn-secondary-modern"
+                                aria-label="Ver tour virtual del colegio">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                                Tour Virtual
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Control de reproducción -->
-            <button class="video-control-btn" id="videoControl" aria-label="Pausar video de fondo"
-                aria-pressed="false">
-                <i class="fas fa-pause" aria-hidden="true"></i>
-            </button>
+    <!-- Control de reproducción -->
+    <button class="video-control-btn" id="videoControl" aria-label="Pausar video de fondo"
+        aria-pressed="false">
+        <i class="fas fa-pause" aria-hidden="true"></i>
+    </button>
 
-            <!-- Scroll indicator -->
-            <div class="scroll-indicator" aria-hidden="true">
-                <span class="scroll-text">Descubre más</span>
-                <div class="scroll-arrow">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-        </section>
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-text">Descubre más</span>
+        <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById("heroVideo");
+            const videoLoader = document.getElementById("videoLoader");
+
+            // Cuando el video puede reproducirse sin parar
+            video.addEventListener("canplaythrough", () => {
+                videoLoader.classList.add("hidden");
+                video.classList.add("loaded");
+            }, {
+                once: true
+            });
+
+            // Fallback: mostrar video después de 3 segundos
+            setTimeout(() => {
+                if (!video.classList.contains("loaded")) {
+                    videoLoader.classList.add("hidden");
+                    video.classList.add("loaded");
+                }
+            }, 3000);
+        });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Sección de Bienvenida -->
         <section class="welcome-section" id="bienvenida" aria-labelledby="welcome-title">
@@ -737,6 +789,27 @@
 
 <script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /**
  * Carrusel para Sección de Oferta Académica
  * Todas las funciones y variables tienen prefijo "Academic" para evitar conflictos
@@ -965,6 +1038,9 @@ class AcademicCarousel {
     }
 }
 
+
+
+
 /**
  * Inicializar todos los carruseles cuando el DOM esté listo
  */
@@ -1031,26 +1107,13 @@ class AcademicCarousel {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const video = document.getElementById("heroVideo");
-            const videoLoader = document.getElementById("videoLoader");
 
-            // Cuando el video puede reproducirse sin parar
-            video.addEventListener("canplaythrough", () => {
-                videoLoader.classList.add("hidden");
-                video.classList.add("loaded");
-            }, {
-                once: true
-            });
 
-            // Fallback: mostrar video después de 3 segundos
-            setTimeout(() => {
-                if (!video.classList.contains("loaded")) {
-                    videoLoader.classList.add("hidden");
-                    video.classList.add("loaded");
-                }
-            }, 3000);
-        });
+
+        
+
+
+
 
 
         document.addEventListener('DOMContentLoaded', function() {

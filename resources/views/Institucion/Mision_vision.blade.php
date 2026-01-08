@@ -107,7 +107,7 @@
     <!-- HERO -->
     <section class="hero-section" aria-label="Misión y Visión del Gimnasio Humanístico del Alto Magdalena">
         <div class="hero-background">
-            <img src="../images/Politica_de_calidad2.webp" alt="Instalaciones del Gimnasio Humanístico del Alto Magdalena en Neiva"
+            <img src="../images/Educacion Secundaria/imagen1.jpg" alt="Instalaciones del Gimnasio Humanístico del Alto Magdalena en Neiva"
                 width="1920" height="1080" loading="lazy">
         </div>
         <div class="hero-overlay"></div>

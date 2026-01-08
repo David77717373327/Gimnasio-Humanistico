@@ -127,7 +127,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="{{ asset('images/Historiaa2.jpeg') }}"
+                                        <img src="{{ asset('images/Historia/imagen1.jpg') }}"
                                             alt="Fundación del Gimnasio Humanístico en 1983 por la familia Cristancho Higuera en Neiva"
                                             width="400" height="250" loading="lazy">
                                     </div>
@@ -167,7 +167,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="{{ asset('images/Mision1.jpg') }}"
+                                        <img src="{{ asset('images/Historia/imagen10.jpg') }}"
                                             alt="Período de transición institucional entre 1989 y 1991" width="400"
                                             height="250" loading="lazy">
                                     </div>
@@ -207,7 +207,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="{{ asset('images/Historiaa2.jpeg') }}"
+                                        <img src="{{ asset('images/Historia/imagen9.jpg') }}"
                                             alt="Renacimiento del colegio en 1991 con nueva dirección y nombre Gimnasio Humanístico"
                                             width="400" height="250" loading="lazy">
                                     </div>
@@ -246,7 +246,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="{{ asset('images/Prueba_1.jpeg') }}"
+                                        <img src="{{ asset('images/Historia/imagen5.jpg') }}"
                                             alt="Modernización pedagógica y tecnológica del Gimnasio Humanístico entre 1991 y 1996"
                                             width="400" height="250" loading="lazy">
                                     </div>
@@ -288,7 +288,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="{{ asset('images/Prueba_1.jpeg') }}"
+                                        <img src="{{ asset('images/Historia/imagen4.jpg') }}"
                                             alt="Implementación de la Ley General de Educación y proyectos innovadores 1994-1996"
                                             width="400" height="250" loading="lazy">
                                     </div>
@@ -334,7 +334,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="{{ asset('images/Mision1.jpg') }}"
+                                        <img src="{{ asset('images/Historia/imagen3.jpg') }}"
                                             alt="Consolidación de infraestructura educativa entre 1997 y 2011"
                                             width="400" height="250" loading="lazy">
                                     </div>
@@ -378,7 +378,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="{{ asset('images/Historiaa2.jpeg') }}"
+                                        <img src="{{ asset('images/Historia/imagen2.jpg') }}"
                                             alt="Adopción del modelo de calidad EFQM en el Gimnasio Humanístico 2007-2009"
                                             width="400" height="250" loading="lazy">
                                     </div>
@@ -423,7 +423,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="{{ asset('images/Prueba_1.jpeg') }}"
+                                        <img src="{{ asset('images/Historia/imagen7.jpg') }}"
                                             alt="Inauguración de nueva sede propia del Gimnasio Humanístico en 2012"
                                             width="400" height="250" loading="lazy">
                                     </div>
@@ -468,7 +468,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=400&q=80"
+                                        <img src="{{ asset('images/Historia/imagen8.jpg') }}"
                                             alt="Transformación digital educativa durante la pandemia COVID-19 en 2020-2021"
                                             width="400" height="250" loading="lazy">
                                     </div>
@@ -516,7 +516,7 @@
                                 </div>
                                 <div class="timeline-images">
                                     <div class="timeline-image-item">
-                                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80"
+                                        <img src="{{ asset('images/Historia/imagen6.jpg') }}"
                                             alt="Actualización del Proyecto Educativo Institucional PEI 2023-2024"
                                             width="400" height="250" loading="lazy">
                                     </div>

@@ -62,7 +62,7 @@
 
             <div class="container hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title" data-title="Proyectos de Vida">Proyectos de Vida</h1>
+                    <h1 class="hero-title" data-title="Proyectos de Vida">Proyectos Institucionales</h1>
                     <div class="hero-scroll-indicator" onclick="scrollToContent()" role="button" tabindex="0"
                         aria-label="Desplazarse a la siguete sesion"
                         onkeypress="if(event.key==='Enter')scrollToContent()">
@@ -106,6 +106,11 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+            
 
             <!-- PROYECTO 2: FÚTBOL -->
             <div class="proyecto-item" data-proyecto="futbol">
@@ -283,8 +288,8 @@
         const proyectosData = {
             natacion: [
                 '../images/Dansas.jpg', 
-                '../images/Educacion_Inicila.jpg',
-               '../images/Dansas.jpg',
+                '../images/Celebraciones/sanpedro1.jpg',
+               '../images/Celebraciones/sanpedro2.jpg',
             ],
             futbol: [
                '../images/Dansas.jpg',

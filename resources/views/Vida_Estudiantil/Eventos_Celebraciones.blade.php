@@ -107,8 +107,12 @@
 </div>
 
     </main>
-
     <script>
+
+
+
+
+
         const eventos = [
     {
         id: 'sanpedrito',
@@ -118,11 +122,27 @@
         description: 'Celebración tradicional donde nuestros estudiantes más pequeños comparten su alegría y talento en un ambiente festivo y educativo que fortalece su desarrollo integral.',
         date: 'Junio',
         images: [
-            '../images/Educacion Secundaria/Imagen1.jpg',
-            '../images/Educacion Secundaria/Imagen2.jpg',
-            '../images/Educacion Secundaria/Imagen3.jpg'
+            '../images/Celebraciones/sanpedro1.jpg',
+            '../images/Celebraciones/sanpedro2.jpg',
+            '../images/Celebraciones/sanpedro3.jpg'
         ]
     },
+
+    {
+        id: 'confirmaciones',
+        category: 'Espiritual',
+        title: 'Confirmaciones',
+        icon: 'fa-dove',
+        description: 'Sacramento de la Confirmación donde nuestros jóvenes fortalecen su compromiso con la fe y los valores cristianos que guían nuestra institución educativa.',
+        date: 'Octubre',
+        images: [
+            '../images/iniciooo2.jpeg',
+            '../images/iniciooo2.jpeg',
+            '../images/iniciooo2.jpeg'
+        ]
+    },
+
+
     {
         id: 'englishday',
         category: 'Académico',
@@ -170,22 +190,22 @@
         description: 'Sacramento de la Confirmación donde nuestros jóvenes fortalecen su compromiso con la fe y los valores cristianos que guían nuestra institución educativa.',
         date: 'Octubre',
         images: [
-            '../images/Educacion Secundaria/Imagen1.jpg',
-            '../images/Educacion Secundaria/Imagen1.jpg',
-            '../images/Educacion Secundaria/Imagen1.jpg'
+            '../images/iniciooo2.jpeg',
+            '../images/iniciooo2.jpeg',
+            '../images/iniciooo2.jpeg'
         ]
     },
     {
         id: 'deportivo',
         category: 'Deportivo',
-        title: 'Festival Deportivo',
+        title: 'Eventos Deportivos',
         icon: 'fa-medal',
         description: 'Competencia deportiva anual que promueve el trabajo en equipo, el espíritu deportivo y la vida saludable entre todos nuestros estudiantes.',
         date: 'Agosto',
         images: [
-            '../images/Educacion Secundaria/Imagen1.jpg',
-            '../images/Educacion Secundaria/Imagen1.jpg',
-            '../images/Educacion Secundaria/Imagen1.jpg'
+            '../images/Media Academica/Imagen6.jpg',
+            '../images/Media Academica/Imagen6.jpg',
+            '../images/Media Academica/Imagen6.jpg'
         ]
     }
 ];

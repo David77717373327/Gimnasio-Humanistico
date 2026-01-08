@@ -168,7 +168,7 @@
 
 
                         <!-- Modalidades -->
-                        <a href="#modalidades" class="nav-card-featured">
+                        <a href="{{ route('prescolar')}}" class="nav-card-featured">
                             <div class="featured-header">
                                 <div class="featured-icon">
                                     <i class="fas fa-graduation-cap"></i>
@@ -207,8 +207,8 @@
 
 
         <!-- ============================================
-     CÓDIGO HTML - SECCIÓN HORARIOS DE ATENCIÓN
-============================================ -->
+                CÓDIGO HTML - SECCIÓN HORARIOS DE ATENCIÓN
+        ============================================ -->
 
         <!-- SECCIÓN HORARIOS DE ATENCIÓN -->
         <section class="horarios-atencion-section" id="horarios-atencion">
@@ -239,10 +239,7 @@
                                 <span class="horario-label">Mañana</span>
                                 <span class="horario-time">6:00 AM - 12:00 PM</span>
                             </div>
-                            <div class="horario-item">
-                                <span class="horario-label">Tarde</span>
-                                <span class="horario-time">2:00 PM - 6:00 PM</span>
-                            </div>
+                            
                             <div class="horario-item">
                                 <span class="horario-label">Días de atención</span>
                                 <span class="horario-time">Lunes a Viernes</span>
@@ -271,11 +268,11 @@
                         <div class="horario-card-body">
                             <div class="horario-item">
                                 <span class="horario-label">Mañana</span>
-                                <span class="horario-time">6:00 AM - 12:00 PM</span>
+                                <span class="horario-time">7:00 AM - 12:00 PM</span>
                             </div>
                             <div class="horario-item">
                                 <span class="horario-label">Tarde</span>
-                                <span class="horario-time">2:00 PM - 6:00 PM</span>
+                                <span class="horario-time">2:00 PM - 5:00 PM</span>
                             </div>
                             <div class="horario-item">
                                 <span class="horario-label">Días de atención</span>
@@ -303,11 +300,11 @@
                         <div class="horario-card-body">
                             <div class="horario-item">
                                 <span class="horario-label">Mañana</span>
-                                <span class="horario-time">6:00 AM - 12:00 PM</span>
+                                <span class="horario-time">7:00 AM - 12:00 PM</span>
                             </div>
                             <div class="horario-item">
                                 <span class="horario-label">Tarde</span>
-                                <span class="horario-time">2:00 PM - 6:00 PM</span>
+                                <span class="horario-time">2:00 PM - 5:00 PM</span>
                             </div>
                             <div class="horario-item">
                                 <span class="horario-label">Días de atención</span>
@@ -334,7 +331,7 @@
                         <i class="fas fa-envelope"></i>
                         <div class="info-content">
                             <h4>Correo Electrónico</h4>
-                            <p>gimnasiohumanistico@gmail.com</p>
+                            <p>gimnasiohumanistico@homt.com</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -593,87 +590,77 @@
 
 
 
+        
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
 
         <!-- SECCIÓN PROCESO DE ADMISIONES -->
-        <section class="admisiones-carousel-section" id="ruta-admision">
-            <div class="header-section">
-                <h1 class="main-title">Ruta Proceso De Admision</h1>
+<section class="admisiones-carousel-section" id="ruta-admision">
+    <div class="header-section">
+        <h1 class="main-title">Ruta Proceso De Admisión</h1>
+    </div>
+
+    <div class="progress-counter">
+        Paso <span id="currentNum">1</span> de <span id="totalNum">4</span>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+            <!-- Tarjeta 1 -->
+            <div class="carousel-card active">
+                <div class="card-number">01</div>
+                <span class="card-category-badge">Inicio del Proceso</span>
+                <h3 class="card-title">Compra del Formulario</h3>
+                <p class="card-text">El primer paso es adquirir el formulario de inscripción en la secretaría del colegio. Este cuadernillo es el documento oficial que da inicio a tu proceso de admisión y contiene toda la información que necesitamos conocer sobre el estudiante y su familia.</p>
             </div>
 
-            <div class="progress-counter">
-                Paso <span id="currentNum">1</span> de <span id="totalNum">5</span>
+            <!-- Tarjeta 2 -->
+            <div class="carousel-card next">
+                <div class="card-number">02</div>
+                <span class="card-category-badge">Documentación</span>
+                <h3 class="card-title">Diligenciamiento y Entrega de Documentos</h3>
+                <p class="card-text">Completa cuidadosamente el formulario con los datos personales del estudiante. Asegúrate de diligenciar toda la información solicitada de manera clara y precisa. Este paso es fundamental para continuar con el proceso de admisión.</p>
             </div>
 
-            <div class="carousel-container">
-                <div class="carousel-track" id="carouselTrack">
-                    <!-- Tarjeta 1 -->
-                    <div class="carousel-card active">
-                        <div class="card-number">01</div>
-                        <span class="card-category-badge">Inicio del Proceso</span>
-                        <h3 class="card-title">Compra del Formulario</h3>
-                        <p class="card-text">El primer paso es adquirir el formulario de inscripción en la secretaría
-                            del colegio o a través de nuestra plataforma virtual. Este documento es necesario para
-                            iniciar tu proceso de admisión y contiene toda la información que necesitamos conocer sobre
-                            el estudiante.</p>
-                    </div>
-
-                    <!-- Tarjeta 2 -->
-                    <div class="carousel-card next">
-                        <div class="card-number">02</div>
-                        <span class="card-category-badge">Documentación</span>
-                        <h3 class="card-title">Anexar Documentos</h3>
-                        <p class="card-text">Completa el formulario y anexa los documentos pertinentes: fotocopia del
-                            documento de identidad del estudiante, registro civil, certificados de estudios anteriores,
-                            certificado médico, dos fotos recientes y fotocopia de los documentos de identidad de los
-                            padres o acudientes.</p>
-                    </div>
-
-                    <!-- Tarjeta 3 -->
-                    <div class="carousel-card hidden">
-                        <div class="card-number">03</div>
-                        <span class="card-category-badge">Evaluación Personal</span>
-                        <h3 class="card-title">Entrevista con la Rectora</h3>
-                        <p class="card-text">Una vez revisada la documentación, se programará una entrevista personal
-                            con la rectora del colegio. Este encuentro permite conocer mejor al estudiante y su familia,
-                            compartir la filosofía institucional y resolver cualquier inquietud sobre nuestro proyecto
-                            educativo.</p>
-                    </div>
-
-                    <!-- Tarjeta 4 -->
-                    <div class="carousel-card hidden">
-                        <div class="card-number">04</div>
-                        <span class="card-category-badge">Evaluación Académica</span>
-                        <h3 class="card-title">Prueba de Admisión</h3>
-                        <p class="card-text">El estudiante presentará una evaluación diagnóstica que nos permitirá
-                            conocer su nivel académico actual. Esta prueba abarca las áreas fundamentales según el grado
-                            al que aspira ingresar y nos ayuda a diseñar un plan de acompañamiento personalizado.</p>
-                    </div>
-
-                    <!-- Tarjeta 5 -->
-                    <div class="carousel-card hidden">
-                        <div class="card-number">05</div>
-                        <span class="card-category-badge">Finalización</span>
-                        <h3 class="card-title">Matrícula y Bienvenida</h3>
-                        <p class="card-text">¡Felicitaciones! Una vez aprobado el proceso, recibirás la carta de
-                            aceptación y podrás proceder con la matrícula oficial. Te daremos la bienvenida a nuestra
-                            familia educativa y te entregaremos toda la información sobre el inicio de clases, uniformes
-                            y materiales necesarios.</p>
-                    </div>
-                </div>
-
-                <!-- Controles -->
-                <div class="carousel-controls">
-                    <button class="control-btn" id="prevBtn">←</button>
-                    <button class="control-btn" id="nextBtn">→</button>
-                </div>
-
-                <!-- Indicadores -->
-                <div class="carousel-indicators" id="indicators"></div>
+            <!-- Tarjeta 3 -->
+            <div class="carousel-card hidden">
+                <div class="card-number">03</div>
+                <span class="card-category-badge">Evaluación Personal</span>
+                <h3 class="card-title">Entrevista con la Rectora</h3>
+                <p class="card-text">Una vez entregado el formulario completo, se agendará una cita para la entrevista con la rectora del colegio. En este encuentro participarán el estudiante y los padres de familia para conocer nuestra filosofía institucional, compartir expectativas y resolver todas las inquietudes sobre nuestro proyecto educativo.</p>
             </div>
-        </section>
 
+            <!-- Tarjeta 4 -->
+            <div class="carousel-card hidden">
+                <div class="card-number">04</div>
+                <span class="card-category-badge">Finalización</span>
+                <h3 class="card-title">Matrícula y Bienvenida</h3>
+                <p class="card-text">¡Felicitaciones! Después de aprobar exitosamente la entrevista, podrás proceder con el pago de la matrícula. Con este paso final quedas oficialmente admitido al Gimnasio Humanístico Del Alto Magdalena. ¡Bienvenido a nuestra familia educativa! Recibirás toda la información necesaria para iniciar clases.</p>
+            </div>
+        </div>
 
+        <!-- Controles -->
+        <div class="carousel-controls">
+            <button class="control-btn" id="prevBtn">←</button>
+            <button class="control-btn" id="nextBtn">→</button>
+        </div>
 
+        <!-- Indicadores -->
+        <div class="carousel-indicators" id="indicators"></div>
+    </div>
+</section>
 
 
         <!-- Incluir el footer -->

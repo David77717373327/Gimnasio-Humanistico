@@ -726,6 +726,9 @@
 
 
 
+
+
+
 /* ============================================
    SECCIÓN COSTOS EDUCATIVOS
    Diseño simple, profesional y simétrico
@@ -977,7 +980,7 @@ Estilos del Carrusel 3D - Admisiones
 
 
 .admisiones-carousel-section {
-    background: url("../images/Dansas.jpg") no-repeat center center/cover;
+    background: url("../images/Instalaciones/Imagen1.jpg") no-repeat center center/cover;
     padding: 20px 20px 120px;
     min-height: 50vh;
     display: flex;
@@ -993,6 +996,7 @@ Estilos del Carrusel 3D - Admisiones
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 60px;
 }
 
 .header-section {
@@ -1002,6 +1006,7 @@ Estilos del Carrusel 3D - Admisiones
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .main-title {
@@ -1219,7 +1224,7 @@ Estilos del Carrusel 3D - Admisiones
 .indicator {
     width: 10px;
     height: 10px;
-    background: #d4d4d4;
+    background: transparent;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1228,17 +1233,6 @@ Estilos del Carrusel 3D - Admisiones
     outline: none;
 }
 
-.indicator:hover {
-    background: #0d3f27;
-    transform: scale(1.2);
-}
-
-.indicator.active {
-    background: #0d3f27;
-    width: 40px;
-    height: 10px;
-    border-radius: 5px;
-}
 
 @keyframes fadeInDown {
     from {
