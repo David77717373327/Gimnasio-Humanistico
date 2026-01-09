@@ -274,7 +274,6 @@
         </div>
     </div>
     
-
         <!-- Footer del sitio -->
     <footer aria-label="Pie de página del sitio">
         @include('layouts.footer')
@@ -292,7 +291,7 @@
                '../images/Celebraciones/sanpedro2.jpg',
             ],
             futbol: [
-               '../images/Dansas.jpg',
+               '../images/Proyecto/Imagen4.jpg',
                 '../images/Primariaa.jpeg',
                 '../images/Dansas.jpg',
             ],

@@ -77,19 +77,23 @@
     <!-- HERO -->
     <section class="hero-section" aria-label="Sección principal de símbolos institucionales">
         <div class="hero-background">
-            <img src="../images/Politica_de_calidad2.webp" alt="Instalaciones del Gimnasio Humanístico de Neiva" width="1920" height="1080" loading="lazy">
+            <img src="../images/Simbolos.jpg" alt="Instalaciones del Gimnasio Humanístico de Neiva" width="1920" height="1080" loading="lazy">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-particles" aria-hidden="true"></div>
 
+
+        
         <div class="container hero-container">
             <div class="hero-content">
-                <h1 class="hero-title" data-title="Nuestra Identidad Institucional">Símbolos y Himno Institucional</h1>
+                <h1 class="hero-title" data-title="Nuestra Identidad Institucional">Símbolos Institucionales</h1>
                 <div class="hero-scroll-indicator" onclick="scrollToContent()" role="button" tabindex="0" aria-label="Desplazarse a la siguiente sección" onkeypress="if(event.key==='Enter')scrollToContent()">
                     <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
+
+
     </section>
 
 

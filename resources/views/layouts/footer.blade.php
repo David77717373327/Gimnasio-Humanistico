@@ -28,20 +28,31 @@
 
                         <!-- Redes sociales con SEO -->
                         <div class="social-links" aria-label="Redes sociales">
-                            <a href="#" class="social-link facebook" aria-label="Facebook del Colegio">
+                            <a href="https://web.facebook.com/profile.php?id=100041995064524" class="social-link facebook" aria-label="Facebook del Colegio">
                                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
                             </a>
-                            <a href="#" class="social-link instagram" aria-label="Instagram del Colegio">
+                            <a href="https://www.instagram.com/gimnasiohumanistico03?utm_source=qr&igsh=YTV3aGt3ajVyZjRw" class="social-link instagram" aria-label="Instagram del Colegio">
                                 <i class="fab fa-instagram" aria-hidden="true"></i>
                             </a>
-                            <a href="#" class="social-link youtube" aria-label="YouTube del Colegio">
+
+                            <!-- Nueva red social TikTok -->
+                            
+                            <a href="https://www.tiktok.com/@humanisticoneiva" class="social-link tiktok" aria-label="TikTok del Colegio">
+                                <i class="fab fa-tiktok" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/@silviacristinaruiz2435" class="social-link youtube" aria-label="YouTube del Colegio">
                                 <i class="fab fa-youtube" aria-hidden="true"></i>
                             </a>
-                            <a href="#" class="social-link whatsapp" aria-label="WhatsApp del Colegio">
+                            <a href="https://wa.me/573152296832" class="social-link whatsapp" aria-label="WhatsApp del Colegio">
                                 <i class="fab fa-whatsapp" aria-hidden="true"></i>
                             </a>
-                        </div>
 
+                            
+
+
+
+                        </div>
                     </div>
                 </div>
 
@@ -52,10 +63,10 @@
                         <h5 class="footer-title">Enlaces Rápidos</h5>
 
                         <ul class="footer-links" role="list">
-                            <li><a href="#inicio" class="footer-link" aria-label="Ir a la sección Inicio"><i class="fas fa-chevron-right" aria-hidden="true"></i> Inicio</a></li>
-                            <li><a href="#quienes-somos" class="footer-link" aria-label="Ir a la sección Quiénes Somos"><i class="fas fa-chevron-right" aria-hidden="true"></i> Quiénes Somos</a></li>
-                            <li><a href="#niveles-educativos" class="footer-link" aria-label="Ir a Oferta Académica"><i class="fas fa-chevron-right" aria-hidden="true"></i> Oferta Académica</a></li>
-                            <li><a href="{{ 'admision' }}" class="footer-link" aria-label="Ir a Admisiones"><i class="fas fa-chevron-right" aria-hidden="true"></i> Admisiones</a></li>
+                            <li><a href="{{ url('/') }}" class="footer-link" aria-label="Ir a la sección Inicio"><i class="fas fa-chevron-right" aria-hidden="true"></i> Inicio</a></li>
+                            <li><a href="{{ route('Historia') }}" class="footer-link" aria-label="Ir a la sección Quiénes Somos"><i class="fas fa-chevron-right" aria-hidden="true"></i> Quiénes Somos</a></li>
+                            <li><a href="{{ route('prescolar') }}" class="footer-link" aria-label="Ir a Oferta Académica"><i class="fas fa-chevron-right" aria-hidden="true"></i> Oferta Académica</a></li>
+                            <li><a href="{{ route('admision') }}" class="footer-link" aria-label="Ir a Admisiones"><i class="fas fa-chevron-right" aria-hidden="true"></i> Admisiones</a></li>
                         </ul>
 
                     </div>
@@ -68,7 +79,7 @@
                         <h5 class="footer-title">Servicios</h5>
 
                         <ul class="footer-links" role="list">
-                            <li><a href="#" class="footer-link" aria-label="Educación Preescolar"><i class="fas fa-chevron-right" aria-hidden="true"></i> Educación Preescolar</a></li>
+                            <li><a href="{{ route('prescolar') }}" class="footer-link" aria-label="Educación Preescolar"><i class="fas fa-chevron-right" aria-hidden="true"></i> Educación Preescolar</a></li>
                             <li><a href="#" class="footer-link" aria-label="Básica Primaria"><i class="fas fa-chevron-right" aria-hidden="true"></i> Básica Primaria</a></li>
                             <li><a href="#" class="footer-link" aria-label="Básica Secundaria"><i class="fas fa-chevron-right" aria-hidden="true"></i> Básica Secundaria</a></li>
                             <li><a href="#" class="footer-link" aria-label="Media Académica"><i class="fas fa-chevron-right" aria-hidden="true"></i> Media Académica</a></li>

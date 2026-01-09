@@ -34,6 +34,12 @@ Route::get('/dashboard', function () {
 // Ruta pública (usuario)
 Route::get('/usuario/inicio', [RutasController::class, 'mostrarContenidoUsuario'])->name('usuario.welcome');
 
+
+//Ruta para el video de bienvenida
+Route::get('/video-bienvenida', [RutasController::class, 'mostrarcontenidovideobienvenida'])->name('video-bienvenida');
+
+
+
 //Ruta para mostrar contenido de historia
 Route::get('/Historia', [RutasController::class, 'mostrarcontenidohistoria'])->name('Historia');
 //Ruta para mostrar contenido de mision y vision

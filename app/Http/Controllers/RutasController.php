@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class RutasController extends Controller
 {
+
+        public function mostrarcontenidovideobienvenida()
+        {
+            return view('Video.video');
+        }
+
+
     public function mostrarContenidoUsuario()
     {
         return view('usuario.welcome');

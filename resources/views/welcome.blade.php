@@ -199,7 +199,7 @@
         <video class="hero-bg-video" id="heroVideo" autoplay muted loop playsinline preload="auto"
             poster="{{ asset('images/video-poster.jpg') }}"
             aria-label="Video de presentación del colegio">
-            <source src="{{ asset('videos/hero-background1.mp4') }}" type="video/mp4">
+            <source src="{{ asset('videos/hero-background8.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/hero-background.webm') }}" type="video/webm">
         </video>
 
@@ -243,7 +243,7 @@
                                 <i class="fas fa-rocket" aria-hidden="true"></i>
                                 Solicitar Admisión
                             </a>
-                            <a href="#virtual-tour" class="btn-secondary-modern"
+                            <a href="{{ route('video-bienvenida') }}" class="btn-secondary-modern"
                                 aria-label="Ver tour virtual del colegio">
                                 <i class="fas fa-play" aria-hidden="true"></i>
                                 Tour Virtual
@@ -441,11 +441,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <article class="gallery-item" data-index="3">
                             <figure class="gallery-image-wrapper">
-                                <img src="{{ asset('images/Educacion-Primaria/Imagen6.jpg') }}"
+                                <img src="{{ asset('images/Instalaciones/Imagen4.jpg') }}"
                                     alt="Espacios deportivos y recreativos" class="gallery-image" loading="lazy">
                             </figure>
                             <figcaption class="gallery-title-overlay">
-                                <h4 class="facility-title">Espacios Deportivos</h4>
+                                <h4 class="facility-title">Espacios Recreativos</h4>
                             </figcaption>
                         </article>
                     </div>
@@ -737,17 +737,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="academic-carousel-container" data-carousel="media">
                         <div class="academic-carousel-slides">
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                <img src="{{ asset('images/Media Academica/Imagen9.jpg') }}"
                                     alt="Estudiantes de media académica en preparación universitaria"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                <img src="{{ asset('images/Media Academica/Imagen7.jpg') }}"
                                     alt="Orientación vocacional para el proyecto de vida"
                                     class="academic-level-image" loading="lazy">
                             </div>
                             <div class="academic-carousel-slide">
-                                <img src="{{ asset('images/iniciooo2.jpeg') }}"
+                                <img src="{{ asset('images/Media Academica/Imagen8.jpg') }}"
                                     alt="Preparación ICFES en educación media"
                                     class="academic-level-image" loading="lazy">
                             </div>
@@ -1137,9 +1137,9 @@ class AcademicCarousel {
                     alt: "Biblioteca digital con recursos multimedia"
                 },
                 {
-                    title: "Espacios Deportivos",
+                    title: "Espacios Recreativos",
                     description: "Espacios deportivos y recreativos para desarrollo físico y formación integral. Instalaciones modernas que promueven la vida saludable.",
-                    image: "images/Educacion-Primaria/Imagen6.jpg",
+                    image: "images/Instalaciones/Imagen4.jpg",
                     alt: "Espacios deportivos y recreativos"
                 }
             ];

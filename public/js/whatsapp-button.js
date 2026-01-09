@@ -167,7 +167,7 @@ class WhatsAppButton {
 // Uso: Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
   new WhatsAppButton({
-    phoneNumber: '573227220215', // Cambia por tu número
+    phoneNumber: '573152296832', // Cambia por tu número
     message: '¡Hola! Vengo desde la página web',
     delay: 7000, // 7 segundos
     position: 'bottom-right' // o 'bottom-left'

@@ -401,7 +401,7 @@
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(5)">
-                        <img src="images/Media Academica/Imagen6.jpg" alt="Desarrollo integral y acompañamiento docente"
+                        <img src="images/Media Academica/Imagen9.jpg" alt="Desarrollo integral y acompañamiento docente"
                             loading="lazy">
                     </article>
 
