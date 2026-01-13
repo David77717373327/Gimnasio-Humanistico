@@ -55,7 +55,7 @@
         <!-- HERO -->
         <section class="hero-section" aria-label="Introducción a la Política de Calidad">
             <div class="hero-background">
-                <img src="../images/Politica_de_calidad2.webp"
+                <img src="../images/Politica_de_calidad77.jpg"
                     alt="Instalaciones del Gimnasio Humanístico del Alto Magdalena en Neiva, Colombia"
                     width="1920" height="1080" loading="lazy">
             </div>
@@ -108,7 +108,7 @@
 
                     <!-- IMAGEN -->
                     <figure class="policy-image-container">
-                        <img src="{{ asset('images/politica_de_calidad2.webp') }}" alt="Representación visual de la Política de Calidad institucional"
+                        <img src="{{ asset('images/Educacion Secundaria/Imagen2.jpg') }}" alt="Representación visual de la Política de Calidad institucional"
                             class="policy-image" loading="lazy">
                     </figure>
                 </div>

@@ -522,13 +522,13 @@ function scrollToContent() {
 
         // Array con todas las imágenes de la galería (7 imágenes)
     const galleryImages = [
-        { src: 'images/Media_Academica.jpg', alt: 'Niños jugando en el aula' },
-        { src: 'images/Dansas.jpg', alt: 'Actividades creativas' },
-        { src: 'images/Dansas.jpg', alt: 'Aprendizaje en grupo' },
-        { src: 'images/Mision1.jpg', alt: 'Exploración educativa' },
-        { src: 'images/iniciooo2.jpeg', alt: 'Tiempo de juego y diversión' },
-        { src: 'images/Mision1.jpg', alt: 'Desarrollo integral' },
-        { src: 'images/Primariaa.jpeg', alt: 'Momentos de aprendizaje' }
+        { src: 'images/Media Academica/imagen1.jpg', alt: 'Niños jugando en el aula' },
+        { src: 'images/Media Academica/imagen2.jpg', alt: 'Actividades creativas' },
+        { src: 'images/Media Academica/imagen3.jpg', alt: 'Aprendizaje en grupo' },
+        { src: 'images/Media Academica/imagen4.jpg', alt: 'Exploración educativa' },
+        { src: 'images/Media Academica/imagen5.jpg', alt: 'Tiempo de juego y diversión' },
+        { src: 'images/Media Academica/imagen9.jpg', alt: 'Desarrollo integral' },
+        { src: 'images/Media Academica/imagen7.jpg', alt: 'Momentos de aprendizaje' }
     ];
 
     let currentImageIndex = 0;

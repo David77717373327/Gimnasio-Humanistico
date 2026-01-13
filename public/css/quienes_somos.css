@@ -382,8 +382,9 @@ body {
 .timeline-text {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.05rem;
+    font-weight: 510;
     line-height: 1.5;
-    color: #2c2c2c;
+    color: #0f0f0f;
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;

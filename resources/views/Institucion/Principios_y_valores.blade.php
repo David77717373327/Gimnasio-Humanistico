@@ -121,7 +121,7 @@
             <h2 class="visually-hidden">Principios y valores institucionales del Gimnasio Humanístico</h2>
 
             <div class="hero-background">
-                <img src="../images/Politica_de_calidad2.webp"
+                <img src="../images/Educacion Secundaria/imagen2.jpg"
                     alt="Instalaciones del Gimnasio Humanístico del Alto Magdalena, institución educativa ubicada en Neiva, Colombia"
                     width="1920" height="1080"
                     fetchpriority="high"

@@ -81,6 +81,7 @@ body {
     scroll-behavior: smooth;
 }
 
+
 /* ============================================
    SECCIÓN HIMNO
 ============================================ */
@@ -135,8 +136,8 @@ body {
 /* DISEÑO DE DOS COLUMNAS */
 .himno-main-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
     align-items: start;
     margin-bottom: 2rem;
     max-width: 1200px;
@@ -144,21 +145,43 @@ body {
     margin-right: auto;
 }
 
-/* COLUMNA IZQUIERDA: Introducción */
+/* COLUMNA IZQUIERDA: Video + Introducción */
 .himno-intro {
     padding: 2rem;
     border-radius: var(--border-radius-lg);
     height: 100%;
-    width: 85%;
-    margin-left: 70px;
+    width: 100%;
+    margin-left: 50px;
+}
+
+/* Contenedor del Video - SIN BORDES NEGROS */
+.himno-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-bottom: 2.5rem;
+    
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: var(--primary-green);
+}
+
+.himno-video {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    border: none;
+    border-radius: 12px;
 }
 
 .himno-intro-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
     font-weight: 700;
     color: var(--primary-green);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     text-align: center;
     position: relative;
     display: inline-block;
@@ -179,8 +202,8 @@ body {
 
 .himno-intro-text {
     font-family: 'Open Sans', sans-serif;
-    font-size: clamp(0.95rem, 1.5vw, 1rem);
-    line-height: 1.8;
+    font-size: clamp(0.9rem, 1.5vw, 0.98rem);
+    line-height: 1.7;
     color: black;
     margin-bottom: 1.5rem;
     text-align: justify;
@@ -195,16 +218,16 @@ body {
     font-weight: 600;
 }
 
-/* COLUMNA DERECHA: Himno */
+/* COLUMNA DERECHA: Himno - REDUCIDA Y COMPACTA */
 .himno-content {
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: var(--border-radius-lg);
     position: relative;
 }
 
 .himno-stanza {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .himno-stanza:last-child {
@@ -213,21 +236,73 @@ body {
 
 .himno-stanza-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-size: clamp(0.95rem, 1.8vw, 1rem);
     font-weight: 1000;
     color: var(--primary-green);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
 }
 
 .himno-verse {
     font-family: 'Open Sans', sans-serif;
-    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-    line-height: 1.8;
+    font-size: clamp(0.88rem, 1.6vw, 0.95rem);
+    line-height: 1.6;
     color: black;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
 }
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+    .himno-main-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .himno-intro {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .himno-video-wrapper {
+        margin-bottom: 2rem;
+        padding-bottom: 56.25%;
+    }
+    
+    .himno-video {
+        top: -3%;
+        left: -3%;
+        width: 106%;
+        height: 106%;
+    }
+}
+
+@media (max-width: 768px) {
+    .himno-container {
+        padding: 0 1.5rem;
+    }
+    
+    .himno-intro {
+        padding: 1.5rem;
+    }
+    
+    .himno-content {
+        padding: 1.5rem;
+    }
+    
+    .himno-verse {
+        font-size: clamp(0.9rem, 2vw, 0.98rem);
+        line-height: 1.7;
+    }
+}
+
+
+
+
+
+
+
+
 
 /* ============================================
    SECCIÓN SÍMBOLOS

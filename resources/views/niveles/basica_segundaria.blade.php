@@ -41,7 +41,7 @@
         <!-- HERO -->
         <section class="hero-section" aria-label="Educación Básica Secundaria en Neiva">
             <div class="hero-background">
-                <img src="../images/Media Academica/Imagen1.jpg"
+                <img src="../images/Educacion Secundaria/Imagen11.jpg"
                     alt="Instalaciones del colegio en Neiva enfocadas en educación básica secundaria" 
                     width="1920"
                     height="1080" 
@@ -459,7 +459,7 @@
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(3)">
-                        <img src="images/Educacion Secundaria/Imagen4.jpg" alt="Exploración educativa al aire libre"
+                        <img src="images/Educacion Secundaria/Imagen11.jpg" alt="Exploración educativa al aire libre"
                             loading="lazy">
                     </article>
 
@@ -473,9 +473,8 @@
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(6)">
-                        <img src="images/Educacion Secundaria/Imagen2.jpg" alt="Momentos de aprendizaje diario" loading="lazy">
+                        <img src="images/Educacion Secundaria/Imagen10.jpg" alt="Momentos de aprendizaje diario" loading="lazy">
                     </article>
-
                 </div>
             </div>
         </section>
@@ -501,10 +500,10 @@
         { src: 'images/Educacion Secundaria/Imagen5.jpg', alt: 'Niños jugando en el aula' },
         { src: 'images/Educacion Secundaria/Imagen3.jpg', alt: 'Actividades creativas' },
         { src: 'images/Educacion Secundaria/Imagen2.jpg', alt: 'Aprendizaje en grupo' },
-        { src: 'images/Educacion Secundaria/Imagen4.jpg', alt: 'Exploración educativa' },
+        { src: 'images/Educacion Secundaria/Imagen11.jpg', alt: 'Exploración educativa' },
         { src: 'images/Educacion Secundaria/Imagen1.jpg', alt: 'Tiempo de juego y diversión' },
         { src: 'images/Educacion Secundaria/Imagen6.jpg', alt: 'Desarrollo integral' },
-        { src: 'images/Educacion Secundaria/Imagen2.jpg', alt: 'Momentos de aprendizaje' }
+        { src: 'images/Educacion Secundaria/Imagen10.jpg', alt: 'Momentos de aprendizaje' }
     ];
 
     let currentImageIndex = 0;

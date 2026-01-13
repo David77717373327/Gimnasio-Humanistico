@@ -30,7 +30,6 @@
 <body>
 
 
-
     <header class="header-top" aria-label="Encabezado principal del sitio">
         @include('layouts.header')
     </header>
@@ -98,8 +97,6 @@
                             </div>
                         </a>
 
-                        
-                    
 
                     <!-- Ruta de Admision -->
                         <a href="#ruta-admision" class="nav-card-featured">
@@ -145,25 +142,7 @@
 
                         
 
-                        <!-- Costos educativos -->
-                        <a href="#costos-educativos" class="nav-card-featured nav-card-featured--gold">
-                            <div class="featured-header">
-                                <div class="featured-icon featured-icon--gold">
-                                    <i class="fas fa-hand-holding-usd"></i>
-                                </div>
-                            </div>
-                            <div class="featured-content">
-                                <h3 class="featured-title">Costos Educativos</h3>
-                                <p class="featured-description">Inversión educativa, planes de pago y opciones de
-                                    financiamiento.</p>
-                                <div class="featured-action">
-                                    <span class="action-text">Ver información</span>
-                                    <div class="action-arrow">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        
                     </div>
 
 
@@ -359,238 +338,139 @@
 
 
 
-        <!-- SECCIÓN COSTOS EDUCATIVOS -->
-        <section class="costos-educativos-section" id="costos-educativos">
-            <div class="container">
-                 <!-- Header de la sección con logo -->
-                <div class="admision-nav-header">
-                    <div class="header-content-wrapper">
-                        <div class="header-text-content">
-                            <h2 class="admision-nav-title">Costos y Requisitos De Admnision</h2>
-                        </div>
-                    </div>
+        <!-- SECCIÓN REQUISITOS DE ADMISIÓN -->
+<section class="requisitos-admision-section" id="costos-educativos">
+    <div class="container">
+        <!-- Header de la sección -->
+        <div class="admision-nav-header">
+            <div class="header-content-wrapper">
+                <div class="header-text-content">
+                    <h2 class="admision-nav-title">Requisitos de Admisión</h2>
                 </div>
+            </div>
+        </div>
 
-                <!-- PREESCOLAR -->
-                <div class="modalidad-container">
-                    <div class="modalidad-header">
-                        <div class="modalidad-icon">
-                            <img src="{{ asset('images/logo.png') }}" alt="Logo Gimnasio Humanístico">
-                        </div>
-                        <h3 class="modalidad-title">PRESCOLAR</h3>
-                        <span class="modalidad-badge">Pre-jardín, Jardín y Transición</span>
-                    </div>
-
-                    <div class="modalidad-content">
-                        <!-- Tabla de costos -->
-                        <div class="costos-table-wrapper">
-                            <table class="costos-table">
-                                <thead>
-                                    <tr>
-                                        <th>Concepto</th>
-                                        <th>Valor</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Matrícula</td>
-                                        <td class="precio">$536.500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pensión Mensual</td>
-                                        <td class="precio">$335.250</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Card de información -->
-                        <div class="info-card">
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <i class="far fa-clock"></i>
-                                    <h4>Horario</h4>
-                                </div>
-                                <p class="info-detail">7:00 a.m. - 11:30 a.m.</p>
-                            </div>
-
-                            <div class="info-section" id="costos-educativos">
-                                <div class="info-header">
-                                    <i class="fas fa-file-alt"></i>
-                                    <h4>Requisitos de Matrícula</h4>
-                                </div>
-                                <ul class="requisitos-list">
-                                    <li>Fotocopia documento de identidad ampliado</li>
-                                    <li>Boletín final</li>
-                                    <li>Paz y salvo</li>
-                                    <li>Retiro del Simat</li>
-                                    <li>1 carpeta azul colgante</li>
-                                    <li>Fotocopia cédula de los padres o acudiente</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+        <!-- PREESCOLAR -->
+        <div class="modalidad-container style-table">
+            <div class="modalidad-header">
+                <div class="modalidad-icon">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Gimnasio Humanístico">
                 </div>
+                <h3 class="modalidad-title">PREESCOLAR</h3>
+                <span class="modalidad-badge">Pre-jardín, Jardín y Transición</span>
+            </div>
 
-                <!-- PRIMARIA -->
-                <div class="modalidad-container">
-                    <div class="modalidad-header">
-                        <div class="modalidad-icon">
-                            <img src="{{ asset('images/logo.png') }}" alt="Logo Gimnasio Humanístico">
+            <div class="modalidad-content">
+                <!-- Card de información -->
+                <div class="info-card">
+                    <div class="info-section">
+                        <div class="info-header">
+                            <i class="far fa-clock"></i>
+                            <h4>Horario</h4>
                         </div>
-                        <h3 class="modalidad-title">PRIMARIA</h3>
-                        <span class="modalidad-badge">Grados 1° a 5°</span>
+                        <p class="info-detail">7:00 a.m. - 11:30 a.m.</p>
                     </div>
 
-                    <div class="modalidad-content">
-                        <!-- Tabla de costos -->
-                        <div class="costos-table-wrapper">
-                            <table class="costos-table">
-                                <thead>
-                                    <tr>
-                                        <th>Concepto</th>
-                                        <th>Grado 1°</th>
-                                        <th>Grados 2° y 3°</th>
-                                        <th>Grado 4°</th>
-                                        <th>Grado 5°</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Matrícula</td>
-                                        <td class="precio">$536.500</td>
-                                        <td class="precio">$536.100</td>
-                                        <td class="precio">$532.900</td>
-                                        <td class="precio">$531.500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pensión Mensual</td>
-                                        <td class="precio">$335.250</td>
-                                        <td class="precio">$334.900</td>
-                                        <td class="precio">$332.000</td>
-                                        <td class="precio">$330.800</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Textos (Anual)</td>
-                                        <td class="precio">$700.000</td>
-                                        <td class="precio">$700.000</td>
-                                        <td class="precio">$700.000</td>
-                                        <td class="precio">$700.000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="info-section">
+                        <div class="info-header">
+                            <i class="fas fa-file-alt"></i>
+                            <h4>Requisitos de Matrícula</h4>
                         </div>
-
-                        <!-- Card de información -->
-                        <div class="info-card">
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <i class="far fa-clock"></i>
-                                    <h4>Horario</h4>
-                                </div>
-                                <p class="info-detail">6:00 a.m. - 12:00 p.m.</p>
-                            </div>
-
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <i class="fas fa-file-alt"></i>
-                                    <h4>Requisitos de Matrícula</h4>
-                                </div>
-                                <ul class="requisitos-list">
-                                    <li>Fotocopia documento de identidad ampliado</li>
-                                    <li>Certificados de estudio del grado anterior</li>
-                                    <li>Paz y salvo</li>
-                                    <li>Retiro del Simat</li>
-                                    <li>1 carpeta azul colgante</li>
-                                    <li>Fotocopia cédula de los padres o acudiente</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECUNDARIA -->
-                <div class="modalidad-container">
-                    <div class="modalidad-header">
-                        <div class="modalidad-icon">
-                            <img src="{{ asset('images/logo.png') }}" alt="Logo Gimnasio Humanístico">
-                        </div>
-                        <h3 class="modalidad-title">SEGUNDARIA</h3>
-                        <span class="modalidad-badge">Grados 6° a 11°</span>
-                    </div>
-
-                    <div class="modalidad-content">
-                        <!-- Tabla de costos -->
-                        <div class="costos-table-wrapper">
-                            <table class="costos-table">
-                                <thead>
-                                    <tr>
-                                        <th>Concepto</th>
-                                        <th>Grado 6°</th>
-                                        <th>Grados 7° y 8°</th>
-                                        <th>Grado 9°</th>
-                                        <th>Grados 10° y 11°</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Matrícula</td>
-                                        <td class="precio">$532.200</td>
-                                        <td class="precio">$528.400</td>
-                                        <td class="precio">$510.600</td>
-                                        <td class="precio">$502.450</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pensión Mensual</td>
-                                        <td class="precio">$331.400</td>
-                                        <td class="precio">$327.900</td>
-                                        <td class="precio">$312.000</td>
-                                        <td class="precio">$304.600</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Textos (Anual)</td>
-                                        <td class="precio">$700.000</td>
-                                        <td class="precio">$700.000</td>
-                                        <td class="precio">$700.000</td>
-                                        <td class="precio">$700.000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Card de información -->
-                        <div class="info-card">
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <i class="far fa-clock"></i>
-                                    <h4>Horario</h4>
-                                </div>
-                                <p class="info-detail">6:00 a.m. - 12:30 p.m.</p>
-                            </div>
-
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <i class="fas fa-file-alt"></i>
-                                    <h4>Requisitos de Matrícula</h4>
-                                </div>
-                                <ul class="requisitos-list">
-                                    <li>Fotocopia documento de identidad ampliado</li>
-                                    <li>Certificados de estudio de los grados anteriores</li>
-                                    <li>Paz y salvo</li>
-                                    <li>Retiro del Simat</li>
-                                    <li>1 carpeta azul colgante</li>
-                                    <li>Fotocopia cédula de los padres o acudiente</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="requisitos-list">
+                            <li>Fotocopia documento de identidad ampliado</li>
+                            <li>Boletín final</li>
+                            <li>Paz y salvo</li>
+                            <li>Retiro del Simat</li>
+                            <li>1 carpeta azul colgante</li>
+                            <li>Fotocopia cédula de los padres o acudiente</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
+        <!-- PRIMARIA -->
+        <div class="modalidad-container style-table">
+            <div class="modalidad-header">
+                <div class="modalidad-icon">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Gimnasio Humanístico">
+                </div>
+                <h3 class="modalidad-title">PRIMARIA</h3>
+                <span class="modalidad-badge">Grados 1° a 5°</span>
+            </div>
 
+            <div class="modalidad-content">
+                <!-- Card de información -->
+                <div class="info-card">
+                    <div class="info-section">
+                        <div class="info-header">
+                            <i class="far fa-clock"></i>
+                            <h4>Horario</h4>
+                        </div>
+                        <p class="info-detail">6:00 a.m. - 12:00 p.m.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <div class="info-header">
+                            <i class="fas fa-file-alt"></i>
+                            <h4>Requisitos de Matrícula</h4>
+                        </div>
+                        <ul class="requisitos-list">
+                            <li>Fotocopia documento de identidad ampliado</li>
+                            <li>Certificados de estudio del grado anterior</li>
+                            <li>Paz y salvo</li>
+                            <li>Retiro del Simat</li>
+                            <li>1 carpeta azul colgante</li>
+                            <li>Fotocopia cédula de los padres o acudiente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECUNDARIA -->
+        <div class="modalidad-container style-table">
+            <div class="modalidad-header">
+                <div class="modalidad-icon">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo Gimnasio Humanístico">
+                </div>
+                <h3 class="modalidad-title">SECUNDARIA</h3>
+                <span class="modalidad-badge">Grados 6° a 11°</span>
+            </div>
+
+            <div class="modalidad-content">
+                <!-- Card de información -->
+                <div class="info-card">
+                    <div class="info-section">
+                        <div class="info-header">
+                            <i class="far fa-clock"></i>
+                            <h4>Horario</h4>
+                        </div>
+                        <p class="info-detail">6:00 a.m. - 12:30 p.m.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <div class="info-header">
+                            <i class="fas fa-file-alt"></i>
+                            <h4>Requisitos de Matrícula</h4>
+                        </div>
+                        <ul class="requisitos-list">
+                            <li>Fotocopia documento de identidad ampliado</li>
+                            <li>Certificados de estudio de los grados anteriores</li>
+                            <li>Paz y salvo</li>
+                            <li>Retiro del Simat</li>
+                            <li>1 carpeta azul colgante</li>
+                            <li>Fotocopia cédula de los padres o acudiente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         
+    </div>
+</section>
+
 
 
 

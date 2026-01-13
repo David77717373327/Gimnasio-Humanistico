@@ -286,9 +286,9 @@
         // CONFIGURACIÓN DE IMÁGENES (3 por proyecto)
         const proyectosData = {
             natacion: [
-                '../images/Dansas.jpg', 
-                '../images/Celebraciones/sanpedro1.jpg',
-               '../images/Celebraciones/sanpedro2.jpg',
+                '../images/Proyecto/Imagen5.jpg', 
+                '../images/Proyecto/Imagen6.jpg', 
+               '../images/Proyecto/Imagen7.jpg'
             ],
             futbol: [
                '../images/Proyecto/Imagen4.jpg',
@@ -301,9 +301,9 @@
               '../images/Dansas.jpg',
             ],
             voleibol: [
-               '../images/Dansas.jpg',
-               '../images/Educacion_Inicila.jpg',
-              '../images/Dansas.jpg',
+               '../images/Proyecto/Imagen8.jpg',
+               '../images/Proyecto/Imagen9.jpg',
+              '../images/Proyecto/Imagen10.jpg'
             ],
             artes: [
                 '../images/Educacion_Inicila.jpg',

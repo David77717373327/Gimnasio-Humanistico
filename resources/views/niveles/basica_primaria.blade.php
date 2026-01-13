@@ -457,7 +457,7 @@
                 <div class="gallery-grid">
 
                     <article class="gallery-item" onclick="openLightbox(0)">
-                        <img src="images/Educacion-Primaria/Imagen5.jpg" alt="Niños jugando en el aula del preescolar"
+                        <img src="images/Educacion-Primaria/Imagen7.jpg" alt="Niños jugando en el aula del preescolar"
                             loading="lazy">
                     </article>
 
@@ -467,21 +467,21 @@
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(2)">
-                        <img src="images/Educacion-Primaria/Imagen3.jpg" alt="Aprendizaje colaborativo en preescolar"
+                        <img src="images/Educacion-Primaria/Imagen1.jpg" alt="Aprendizaje colaborativo en preescolar"
                             loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(3)">
-                        <img src="images/Educacion-Primaria/Imagen6.jpg" alt="Exploración educativa al aire libre"
+                        <img src="images/Educacion-Primaria/Imagen8.jpg" alt="Exploración educativa al aire libre"
                             loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(4)">
-                        <img src="images/Educacion-Primaria/Imagen1.jpg" alt="Juego libre y diversión en el colegio" loading="lazy">
+                        <img src="images/Educacion-Primaria/Imagen4.jpg" alt="Juego libre y diversión en el colegio" loading="lazy">
                     </article>
 
                     <article class="gallery-item" onclick="openLightbox(5)">
-                        <img src="images/Educacion-Primaria/Imagen5.jpg" alt="Desarrollo integral y acompañamiento docente"
+                        <img src="images/Educacion-Primaria/Imagen9.jpg" alt="Desarrollo integral y acompañamiento docente"
                             loading="lazy">
                     </article>
 
@@ -528,12 +528,12 @@
 
 // Array con todas las imágenes de la galería (7 imágenes)
     const galleryImages = [
-        { src: 'images/Educacion-Primaria/Imagen5.jpg', alt: 'Niños jugando en el aula' },
+        { src: 'images/Educacion-Primaria/Imagen7.jpg', alt: 'Niños jugando en el aula' },
         { src: 'images/Educacion-Primaria/Imagen2.jpg', alt: 'Actividades creativas' },
-        { src: 'images/Educacion-Primaria/Imagen3.jpg', alt: 'Aprendizaje en grupo' },
-        { src: 'images/Educacion-Primaria/Imagen4.jpg', alt: 'Exploración educativa' },
-        { src: 'images/Educacion-Primaria/Imagen1.jpg', alt: 'Tiempo de juego y diversión' },
-        { src: 'images/Educacion-Primaria/Imagen5.jpg', alt: 'Desarrollo integral' },
+        { src: 'images/Educacion-Primaria/Imagen1.jpg', alt: 'Aprendizaje en grupo' },
+        { src: 'images/Educacion-Primaria/Imagen8.jpg', alt: 'Exploración educativa' },
+        { src: 'images/Educacion-Primaria/Imagen4.jpg', alt: 'Tiempo de juego y diversión' },
+        { src: 'images/Educacion-Primaria/Imagen9.jpg', alt: 'Desarrollo integral' },
         { src: 'images/Educacion-Primaria/Imagen3.jpg', alt: 'Momentos de aprendizaje' }
     ];
 

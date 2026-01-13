@@ -242,7 +242,7 @@
             <script>
                 // Array con todas las imágenes de la galería (7 imágenes)
                 const galleryImages = [{
-                        src: 'images/Pescolarr1.jpg',
+                        src: 'images/Educacion Inicial/Imagen7.jpg',
                         alt: 'Niños jugando en el aula'
                     },
                     {

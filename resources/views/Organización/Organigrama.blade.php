@@ -46,7 +46,7 @@
         <!-- HERO -->
         <section class="hero-section" aria-label="Sección inicial del Organigrama Institucional">
             <div class="hero-background">
-                <img src="../images/Politica_de_calidad2.webp"
+                <img src="../images/Politica_de_calidad4.webp"
                     alt="Instalaciones del Gimnasio Humanístico"
                     width="1920" height="1080" loading="lazy">
             </div>

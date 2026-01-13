@@ -128,19 +128,7 @@
         ]
     },
 
-    {
-        id: 'confirmaciones',
-        category: 'Espiritual',
-        title: 'Confirmaciones',
-        icon: 'fa-dove',
-        description: 'Sacramento de la Confirmación donde nuestros jóvenes fortalecen su compromiso con la fe y los valores cristianos que guían nuestra institución educativa.',
-        date: 'Octubre',
-        images: [
-            '../images/iniciooo2.jpeg',
-            '../images/iniciooo2.jpeg',
-            '../images/iniciooo2.jpeg'
-        ]
-    },
+    
 
 
     {
@@ -151,9 +139,11 @@
         description: 'Jornada dedicada a la celebración del idioma inglés con actividades interactivas, presentaciones culturales y dinámicas que fortalecen el aprendizaje del idioma.',
         date: 'Septiembre',
         images: [
-            '../images/Educacion Secundaria/Imagen1.jpg',
-            '../images/Educacion Secundaria/Imagen1.jpg',
-            '../images/Educacion Secundaria/Imagen1.jpg'
+
+        '../images/Celebraciones/english day2.jpg',
+            '../images/Celebraciones/english day1.jpg',
+            
+            '../images/Celebraciones/english day3.jpg'
         ]
     },
     {
@@ -177,11 +167,12 @@
         description: 'Ceremonia religiosa significativa donde nuestros estudiantes reciben el sacramento de la Eucaristía, acompañados por sus familias y comunidad educativa.',
         date: 'Mayo',
         images: [
-            '../images/Educacion Secundaria/Imagen1.jpg',
+            '../images/Celebraciones/comuniones1.jpg',
             '../images/Educacion Secundaria/Imagen1.jpg',
             '../images/Educacion Secundaria/Imagen1.jpg'
         ]
     },
+
     {
         id: 'confirmaciones',
         category: 'Espiritual',
@@ -195,6 +186,8 @@
             '../images/iniciooo2.jpeg'
         ]
     },
+
+
     {
         id: 'deportivo',
         category: 'Deportivo',

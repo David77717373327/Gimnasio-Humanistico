@@ -159,7 +159,7 @@
 .gallery-item:nth-child(1),
 .gallery-item:nth-child(2) {
     grid-column: span 6;
-    height: 280px;  /* Altura aumentada de 220px a 280px */
+    height: 300px;  /* Altura aumentada de 220px a 280px */
     border-radius: 16px;  /* Bordes redondeados profesionales */
 }
 
@@ -168,20 +168,20 @@
 .gallery-item:nth-child(4),
 .gallery-item:nth-child(5) {
     grid-column: span 4;
-    height: 240px;  /* Altura aumentada de 220px a 240px */
+    height: 280px;  /* Altura aumentada de 220px a 240px */
     border-radius: 12px;  /* Bordes más suaves */
 }
 
 /* Tercera fila: 2 imágenes - ALTURA BALANCEADA + BORDE DIFERENCIADO */
 .gallery-item:nth-child(6) {
     grid-column: span 7;
-    height: 260px;  /* Altura aumentada de 220px a 260px */
+    height: 300px;  /* Altura aumentada de 220px a 260px */
     border-radius: 14px 14px 14px 40px;  /* Borde asimétrico elegante */
 }
 
 .gallery-item:nth-child(7) {
     grid-column: span 5;
-    height: 260px;  /* Misma altura que la anterior */
+    height: 300px;  /* Misma altura que la anterior */
     border-radius: 40px 14px 14px 14px;  /* Borde asimétrico opuesto */
 }
 
